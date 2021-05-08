@@ -1,11 +1,12 @@
 import os.path
-from flask import Flask, send_from_directory, render_template
+from flask import Flask, render_template
 
-app = Flask(__name__, static_url_path='/assets')
+app = Flask(__name__, static_url_path='/static', static_folder='static',
+            template_folder='templates')
 
 @app.route('/')
 def index():
-    return render_template('/pages/index.html')
+    return render_template('index.html')
 
 if __name__ == "__main__":
     app.run(Debug=True)
