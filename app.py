@@ -11,9 +11,9 @@ def index():
 def indexed():
     return render_template('index.html')
 
-@app.route('/home')
-def home():
-    return render_template('home.html')
+@app.route('/alphabet')
+def alphabet():
+    return render_template('alphabet.html')
 
 if __name__ == "__main__":
     app.run(Debug=True)
