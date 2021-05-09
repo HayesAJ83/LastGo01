@@ -19,6 +19,10 @@ def alphabet():
 def cat():
     return render_template('categories.html')
 
+@app.route('/diseases')
+def cat():
+    return render_template('diseases.html')
+
 
 if __name__ == "__main__":
     app.run(Debug=True)
