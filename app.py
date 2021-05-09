@@ -15,5 +15,10 @@ def indexed():
 def alphabet():
     return render_template('alphabet.html')
 
+@app.route('/categories')
+def cat():
+    return render_template('categories.html')
+
+
 if __name__ == "__main__":
     app.run(Debug=True)
