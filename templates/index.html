@@ -20,7 +20,8 @@
         <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700" rel="stylesheet">
         <link href="/static/assets/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
         <link href="/static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-        <link href="/static/assets/vendor/aos/dist/aos.css" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- <link href="/static/assets/vendor/aos/dist/aos.css" rel="stylesheet"> ->>
 
         <!-- Theme Stylesheets -->
         <link href="/static/assets/css/theme.css" rel="stylesheet">
@@ -573,7 +574,11 @@
 
         <!-- Vendor Javascripts -->
         <script src="/static/assets/vendor/rellax/rellax.min.js"></script>
-        <script src="/static/assets/vendor/aos/dist/aos.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+          </script>
+        <!-- <script src="/static/assets/vendor/aos/dist/aos.js"></script> -->
 
         <!-- Theme Javascripts -->
         <script src="/static/assets/js/theme.js"></script>
