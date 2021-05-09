@@ -94,7 +94,7 @@
                                             <li class="dropdown-menu-item"><a href="/templates/blog-single.html" class="dropdown-menu-link">Blog single</a></li>
                                             <li class="dropdown-menu-item"><a href="/templates/portfolio.html" class="dropdown-menu-link">Portfolio</a></li>
                                             <li class="dropdown-menu-item"><a href="/templates/about.html" class="dropdown-menu-link">About</a></li>
-                                            <li class="dropdown-menu-item"><a href="/template/contact.html" class="dropdown-menu-link">Contact</a></li>
+                                            <li class="dropdown-menu-item"><a href="/templates/contact.html" class="dropdown-menu-link">Contact</a></li>
                                             <li class="dropdown-menu-item"><a href="/templates/team.html" class="dropdown-menu-link">Team</a></li>
                                             <li class="dropdown-menu-item"><a href="/templates/faq.html" class="dropdown-menu-link">Faq</a></li>
                                             <li class="dropdown-menu-item"><a href="/templates/pricing.html" class="dropdown-menu-link">Pricing</a></li>
@@ -573,7 +573,13 @@
         <script src="/static/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 
         <!-- Vendor Javascripts -->
-        <script src="/static/assets/vendor/rellax/rellax.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+        <script>
+            // Accepts any class name
+            var rellax = new Rellax('.rellax');
+          </script>
+        <!-- <script src="/static/assets/vendor/rellax/rellax.min.js"></script>  -->
+
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
