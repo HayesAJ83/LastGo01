@@ -23,6 +23,10 @@ def cat():
 def dis():
     return render_template('diseases.html')
 
+@app.route('/journal')
+def journal():
+    return render_template('journal.html')
+
 
 if __name__ == "__main__":
     app.run(Debug=True)
