@@ -27,6 +27,14 @@ def dis():
 def journal():
     return render_template('journal.html')
 
+@app.route('/operations')
+def ops():
+    return render_template('ops.html')
+
+@app.route('/maps')
+def maps():
+    return render_template('maps.html')
+
 
 if __name__ == "__main__":
     app.run(Debug=True)
