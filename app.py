@@ -20,7 +20,7 @@ def cat():
     return render_template('categories.html')
 
 @app.route('/diseases')
-def cat():
+def dis():
     return render_template('diseases.html')
 
 
