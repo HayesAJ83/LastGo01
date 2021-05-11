@@ -21,7 +21,13 @@
         <link href="/static/assets/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
         <link href="/static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <!-- <link href="/static/assets/vendor/aos/dist/aos.css" rel="stylesheet"> ->>
+
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+        <!-- MDB -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet"/>
 
         <!-- Theme Stylesheets -->
         <link href="/static/assets/css/theme.css" rel="stylesheet">
@@ -73,6 +79,7 @@
                     <div class="row h-100vh align-items-center">
                         <div class="col">
                             <h1 class="text-white text-uppercase fs-4 fs-lg-6" data-aos="zoom-in" data-aos-duration="1000">Categories</h1>
+                            <p class="mb-5 fs-lg-1 text-white" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500">of eponyms</p>
                         </div>
                     </div>
                 </div>
@@ -82,158 +89,29 @@
             <!-- Section -->
             <section>
                 <div class="container">
-                    <div class="card-deck d-block d-lg-flex">
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <h2 class="mb-4 fs-1 fw-medium text-primary text-uppercase"><i class="zmdi zmdi-spinner mr-2"></i>Strategy</h2>
-                                <p class="fs--1">Suspendisse amitino.</p>
+                    <div class="col">
+                        <h1 class="text-black mb-4 fs-4 fs-lg-3">Specialties</h1>
+                            <div class="col-lg-5">
+                                <form class="form">
+                                    <div class="input-group input-group-lg">
+                                        <input type="text" class="form-control border-1" placeholder="Select from list">
+                                        <div class="input-group-append">
+                                            <button type="button" class="btn btn-primary btn-block px-3"><i class="zmdi zmdi-search fs-2"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <h2 class="mb-4 fs-1 fw-medium text-primary text-uppercase"><i class="zmdi zmdi-wrench mr-2"></i>Development</h2>
-                                <p class="fs--1">Suspendisse amitino.</p>
-                            </div>
-                        </div>
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <h2 class="mb-4 fs-1 fw-medium text-primary text-uppercase"><i class="zmdi zmdi-male-female mr-2"></i>Consulting</h2>
-                                <p class="fs--1">Suspendisse amitino.</p>
-                            </div>
-                        </div>
+                        <br> </br>
+               
+                    <div class="col">
+                        <h1 class="text-black mb-4 fs-4 fs-lg-3">Time window</h1>
+                            <form class="multi-range-field my-5 pb-5"><input id="multi1" class="multi-range" type="range" /></form>
                     </div>
                 </div>
             </section>
             <!-- End of Section -->
 
-            <!-- Section -->
-            <section class="py-0">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-lg-6 col-xl-5">
-                            <h2 class="mb-5 text-uppercase">Advisory Consulting</h2>
-                            <p class="text-500">Aliquam dui vehicula.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container mt-5 mt-md-14 overflow-x-hidden overflow-md-visible">
-                    <div class="row">
-                        <div class="ml-md-neg-15 d-md-flex text-center">
-                            <div class="d-md-flex flex-column">
-                                <img src="/static/assets/img/img-16.jpg" class="my-3 my-md-4 mx-md-4" alt="" width="400" height="400" />
-                                
-                                <img src="/static/assets/img/pattern-01.png" alt="" width="94" class="d-none d-md-block zindex--1 my-7 ml-13" />
-                            </div>
-    
-                            <div class="mt-md-neg-10 d-md-flex">
-                                <div class="d-md-flex flex-column">
-                                    <img src="/static/assets/img/pattern-02.png" alt="" width="670" class="d-none d-md-block position-absolute zindex--1 mt-neg-3 ml-8" />
-    
-                                    <img src="/static/assets/img/img-17.jpg" class="my-3 my-md-4 mx-md-4" alt="" width="400" height="400" />
-                                    <img src="/static/assets/img/img-18.jpg" class="my-3 my-md-4 mx-md-4" alt="" width="400" height="400" />
-                                </div>
-    
-                                <div class="mt-md-neg-15 d-md-flex">
-                                    <div class="d-md-flex flex-column">
-                                        <img src="/static/assets/img/img-19.jpg" class="my-3 my-md-4 mx-md-4" alt="" width="400" height="400" />
-                                        <img src="/static/assets/img/img-20.jpg" class="my-3 my-md-4 mx-md-4" alt="" width="400" height="400" />
-                                    </div>
-    
-                                    <div class="mt-md-10">
-                                        <img src="/static/assets/img/img-21.jpg" class="my-3 my-md-4 mx-md-4" alt="" width="400" height="400" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- End of Section -->
-
-            <!-- Section -->
-            <section>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-10">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-6 mb-5">
-                                    <div class="d-flex flex-row" data-aos="fade-right">
-                                        <div>
-                                            <i class="zmdi zmdi-spinner zmdi-hc-fw zmdi-hc-3x mr-1"></i>
-                                        </div>
-                                        <div class="flex-shrink-1">
-                                            <h2 class="mb-4 fs-1 fw-medium text-uppercase">Strategy</h2>
-                                            <p class="fs--1">Suspendisse et rutrum mi.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-5">
-                                    <div class="d-flex flex-row" data-aos="fade-left">
-                                        <div>
-                                            <i class="zmdi zmdi-hourglass-alt zmdi-hc-fw zmdi-hc-3x mr-1"></i>
-                                        </div>
-                                        <div class="flex-shrink-1">
-                                            <h2 class="mb-4 fs-1 fw-medium text-uppercase">Architecture</h2>
-                                            <p class="fs--1">Pellentesque aucibus sapien eu suscipit ultricies.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-5">
-                                    <div class="d-flex flex-row" data-aos="fade-right">
-                                        <div>
-                                            <i class="zmdi zmdi-layers zmdi-hc-fw zmdi-hc-3x mr-1"></i>
-                                        </div>
-                                        <div class="flex-shrink-1">
-                                            <h2 class="mb-4 fs-1 fw-medium text-uppercase">Operations</h2>
-                                            <p class="fs--1">Praesent lectus ultrices lacinia. Nulla eu lobortis ipsum.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-5">
-                                    <div class="d-flex flex-row" data-aos="fade-left">
-                                        <div>
-                                            <i class="zmdi zmdi-money zmdi-hc-fw zmdi-hc-3x mr-1"></i>
-                                        </div>
-                                        <div class="flex-shrink-1">
-                                            <h2 class="mb-4 fs-1 fw-medium text-uppercase">Finance</h2>
-                                            <p class="fs--1">Vestibulum un ante. Interdum et malesuada fames.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-5 mb-lg-0">
-                                    <div class="d-flex flex-row" data-aos="fade-right">
-                                        <div>
-                                            <i class="zmdi zmdi-male-female zmdi-hc-fw zmdi-hc-3x mr-1"></i>
-                                        </div>
-                                        <div class="flex-shrink-1">
-                                            <h2 class="mb-4 fs-1 fw-medium text-uppercase">Consulting</h2>
-                                            <p class="fs--1">Nam eros eu pellentesque scelerisque, neque ante placerat ligula, at maximus dolor sem sed nisi.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex flex-row" data-aos="fade-left">
-                                        <div>
-                                            <i class="zmdi zmdi-wrench zmdi-hc-fw zmdi-hc-3x mr-1"></i>
-                                        </div>
-                                        <div class="flex-shrink-1">
-                                            <h2 class="mb-4 fs-1 fw-medium text-uppercase">Development</h2>
-                                            <p class="fs--1">Morbi Nunc libero, bibendum ut felis.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-8 col-lg-4">
-                                    <a href="#" class="btn btn-primary btn-lg btn-block mt-6">Request a quote<i class="zmdi zmdi-email-open ml-3"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </section>
-            <!-- End of Section -->
 
             <!-- Section -->
             <section class="py-0">
@@ -247,7 +125,7 @@
                                 <div class="col px-5 px-lg-8 px-xl-10">
                                     <h3 class="my-0 fs-1 fw-medium text-secondary text-uppercase">Planning</h3>
                                     <h2 class="mb-4 fw-medium text-primary text-uppercase">Roadmaps</h2>
-                                    <p class="mb-0 fs--1">Sed purus sagittis. mauris leo, ac pretium justo viverra in. In sit amet malesuada purus.</p>
+                                    <p class="mb-0 fs--1">Text</p>
                                 </div>
                             </div>
                         </div>
@@ -263,16 +141,16 @@
                         <div class="col-md-7">
                             <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase">Subscribe</h3>
                             <h2 class="mb-5 fw-medium text-secondary text-uppercase">Newsletter</h2>
-                            <p class="mb-4">Cras ut.</p>
+                            <p class="mb-4">Cras ut</p>
             
                             <form class="form">
                                 <div class="form-group mb-1">
                                     <div class="row justify-content-center">
                                         <div class="col-lg-8">
-                                            <input type="text" class="form-control mb-3 mb-lg-2" placeholder="Email address">
+                                            <input type="text" class="form-control mb-3 mb-lg-2" placeholder="Select specialties">
                                         </div>
                                         <div class="col-8 col-lg-4">
-                                            <button type="button" class="btn btn-primary btn-block">Subscribe<i class="zmdi zmdi-mail-send ml-2"></i></button>
+                                            <button type="button" class="btn btn-primary btn-block">Submit<i class="zmdi zmdi-mail-send ml-2"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -287,7 +165,7 @@
 
 
         <!-- Footer -->
-        <footer class="footer text-white" style="background-image: url(../assets/img/footer-bg.jpg)">
+        <footer class="footer text-white" style="background-image: url(/static/assets/img/backgrounds/iStock-1272573682.jpg)">
             <div class="container d-flex h-100">
                 <div class="row flex-grow-1">
                     <div class="col-lg-3 pt-3 ext-l bg-secondary text-center text-lg-left">
@@ -322,9 +200,6 @@
                                 <h6 class="mb-1 mb-lg-4 text-uppercase">Services</h6>
                                 <ul class="pt-2 mb-5 fw-light list-unstyled">
                                     <li class="my-1"><a href="#" class="text-white">Design</a></li>
-                                    <li class="my-1"><a href="#" class="text-white">Development</a></li>
-                                    <li class="my-1"><a href="#" class="text-white">Themes</a></li>
-                                    <li class="my-1"><a href="#" class="text-white">CMS</a></li>
                                     <li class="my-1"><a href="#" class="text-white">Mobile</a></li>
                                 </ul>
                             </div>
@@ -360,6 +235,9 @@
         <script src="/static/assets/vendor/jquery/dist/jquery.min.js"></script>
         <script src="/static/assets/vendor/popper.js/dist/umd/popper.min.js"></script>
         <script src="/static/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- MDB -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>  
 
         <!-- Vendor Javascripts -->
         <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
