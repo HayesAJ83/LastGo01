@@ -32,6 +32,10 @@
         <!-- Theme Stylesheets -->
         <link href="/static/assets/css/theme.css" rel="stylesheet">
 
+        <!--Plugin CSS file with desired skin-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+
+ 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129313359-1"></script>
         <script>
@@ -79,7 +83,7 @@
                     <div class="row h-100vh align-items-center">
                         <div class="col">
                             <h1 class="mb-5 fs-lg-1 text-white" data-aos="fade-down" data-aos-duration="1500">Eponym</h1>
-                            <p class="text-white text-uppercase fs-4 fs-lg-6" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1500">Categories</p
+                            <p class="text-white text-uppercase fs-4 fs-lg-6" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1500">Categories</p>
                         </div>
                     </div>
                 </div>
@@ -90,7 +94,7 @@
             <section>
                 <div class="container">
                     <div class="col">
-                        <h1 class="text-black mb-4 fs-4 fs-lg-1">1) Choose specialties</h1>
+                        <h1 class="text-black mb-4 fs-1 ">1) Choose specialties</h1>
                             <div class="col-lg-5">
                                 <form class="form">
                                     <div class="input-group input-group-lg">
@@ -105,64 +109,14 @@
                         <br> </br>
                
                     <div class="col">
-                        <h1 class="text-black mb-4 fs-4 fs-lg-1">2) Define time window</h1>
-                        <div class="range">
-                        <input type="range" class="form-range" id="customRange1"  min="0" max="2030"/>
-                    </div>
-            
-                    <b></b>
-                </div>
-            </section>
-            <!-- End of Section -->
-
-
-            <!-- Section -->
-            <section class="py-0">
-                <div class="container-fluid px-0">
-                    <div class="row no-gutters">
-                        <div class="col-md-6 py-8">
-                            <div class="bg-container" style="background-image: url(/static/assets/img/backgrounds/iStock-1272573682.jpg);"></div>
-                        </div>
-                        <div class="col-md-6 py-6 py-lg-8 bg-blue-light overflow-hidden">
-                            <div class="row h-100 align-items-center">
-                                <div class="col px-5 px-lg-8 px-xl-10">
-                                    <h3 class="my-0 fs-1 fw-medium text-secondary text-uppercase">Planning</h3>
-                                    <h2 class="mb-4 fw-medium text-primary text-uppercase">Roadmaps</h2>
-                                    <p class="mb-0 fs--1">Text</p>
-                                </div>
-                            </div>
-                        </div>
+                        <h1 class="text-black mb-4 fs-1">2) Year - time travel</h1>
+                        <input type="text" id="range_02" name="example_name" value="" />
                     </div>
                 </div>
             </section>
             <!-- End of Section -->
 
-            <!-- Section -->
-            <section class="text-center">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-7">
-                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase">Subscribe</h3>
-                            <h2 class="mb-5 fw-medium text-secondary text-uppercase">Newsletter</h2>
-                            <p class="mb-4">Cras ut</p>
-            
-                            <form class="form">
-                                <div class="form-group mb-1">
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-8">
-                                            <input type="text" class="form-control mb-3 mb-lg-2" placeholder="Select specialties">
-                                        </div>
-                                        <div class="col-8 col-lg-4">
-                                            <button type="button" class="btn btn-primary btn-block">Submit<i class="zmdi zmdi-mail-send ml-2"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- End of Section -->
+
         </main>
         <!-- End of Main Content -->
 
@@ -203,7 +157,6 @@
                                 <h6 class="mb-1 mb-lg-4 text-uppercase">Services</h6>
                                 <ul class="pt-2 mb-5 fw-light list-unstyled">
                                     <li class="my-1"><a href="#" class="text-white">Design</a></li>
-                                    <li class="my-1"><a href="#" class="text-white">Mobile</a></li>
                                 </ul>
                             </div>
                             <div class="col-6 col-lg-3">
@@ -258,6 +211,24 @@
 
         <!-- Theme Javascripts -->
         <script src="/static/assets/js/theme.js"></script>
+
+        <!--jQuery-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!--Plugin JavaScript file-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>   
+       
+        <script>
+            $('#range_02').ionRangeSlider({
+              grid: true,
+              min: 1000,
+              max: 2100,
+              from: 2021,
+              prefix: 'Year : ',
+              prettify_separator: '',
+              hide_min_max: true,
+            });
+          </script>
 
     </body>
 </html>
