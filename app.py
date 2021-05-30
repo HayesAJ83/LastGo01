@@ -25,7 +25,7 @@ def dis():
 
 @app.route('/journal')
 def journal():
-    return render_template('journal.html')
+    return render_template('journals.html')
 
 @app.route('/operations')
 def ops():
