@@ -94,28 +94,51 @@
             <section>
                 <div class="container">
                     <div class="col">
-                        <h1 class="text-black mb-4 fs-1 ">1) Choose specialties</h1>
-                            <select class="select" multiple>
-                                <optgroup label="Anaesthetics">
-                                    <option value="1">Anaesthetics</option>
-                                </optgroup>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+                        Choose Specialties
+                        </button>
 
-                                <optgroup label="Cardiothoracic Surgery">
-                                </optgroup>
-
-                                <optgroup label="General Surgery">
-                                    <option value="3">Colorectal</option>
-                                    <option value="4">Emergency Surgery</option>
-                                </optgroup>
-                            </select>
-                            
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                              <button type="button" class="close" data-mdb-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <form action="" method="post">
+                              <div class="modal-body">
+                                <select
+                                  class="select" multiple
+                                  data-mdb-container="#exampleModal"
+                                  data-mdb-filter="true"
+                                >
+                                  <option value="1">Academic</option>
+                                  <option value="2">Anaesthetics</option>
+                                  <option value="3">Breast</option>
+                                  <option value="4">Colorectal</option>
+                                  <option value="5">Plastics</option>
+                                  <option value="6">Vascular</option>
+                         
+                                </select>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                                  Close
+                                </button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                              </div>
+                            </form>
+                          </div>
                         </div>
-                        <br> </br>
+                        </div>
+                        
+                 
                
-                    <div class="col">
-                        <h1 class="text-black mb-4 fs-1">2) Year - time travel</h1>
-                        <input type="text" id="range_02" name="example_name" value="" />
-                    </div>
+                 
                 </div>
             </section>
             <!-- End of Section -->
