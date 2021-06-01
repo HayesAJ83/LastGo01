@@ -65,6 +65,11 @@
         <!-- </div> -->
         <!-- End of Preloader -->
 
+        <style>
+            .mul-select {
+                width: 100%
+            }
+        </style>
 
         <!-- Header -->
         <header class="spyre-navbar navbar navbar-expand-lg bg-secondary navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff">
@@ -105,7 +110,7 @@
                     <div class="col">
                         <h1 class="text-black mb-4 fs-1 ">1) Choose specialties</h1>
                             <div class="col-lg-5">
-                                <select class="selectpicker" multiple data-actions-box="true">
+                                <select class="mul-select" multiple="true">
                                     <option value="01">Academic</option>
                                     <option value="02">Anaesthetics</option>
                                     <option value="03">Bariatrics</option>
@@ -210,6 +215,16 @@
           prefix: 'Year : ',
           prettify_separator: '',
           hide_min_max: true,
+        });
+      </script>
+    
+    <script>
+        $(document).ready(function(){
+            $(".mul-select").select2({
+            placeholder: "select", //placeholder
+            tags: true,
+            tokenSeparators: ['/',',',','," "]
+            })
         });
       </script>
 
