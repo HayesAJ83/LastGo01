@@ -14,4 +14,4 @@ matplotlib
 plotly
 requests
 gulp
-bootstrap-select
+
