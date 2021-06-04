@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Page Title -->
+        <title>Surgical Names</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tail.select@0.5.15/css/bootstrap4/tail.select-default.css">
+
+    </head>
+
+    <body>
+        <!-- Main Content -->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6 text-right">
+                    <select id="select1">
+                        <option selected="selected">Atari 2600</option>
+                        <option>Atari 5200</option>
+                        <option>Atari 7800</option>
+                        <option disabled="">Atari Panther</option>
+                        <option>Atari Jaguar</option>
+                        <option>Anaesthetics</option>
+                        <option>Breast</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <select multiple id="select2">
+                        <option value="1">Academic</option>
+                        <option value="2">Anaesthetics</option>
+                        <option value="3">Bariatrics</option>
+                        <option value="4">Breast</option>
+                        <option value="5">Cardiothoracics</option>
+                        <option value="6">Colorectal</option>
+                        <option value="7">Emergency Surgery</option>
+                        <option value="8">Endocrine</option>
+                        <option value="9">ENT</option>
+                        <option value="10">General Surgery</option>
+                        <option value="11">Gynaecology</option>
+                        <option value="12">HPB</option>
+                        <option value="13">Laparoscopic Surgery</option>
+                        <option value="14">Maxillofacial</option>
+                        <option value="15">Neurosurgery</option>
+                        <option value="16">Obstetrics</option>
+                        <option value="17">Paediatrics</option>
+                        <option value="18">Radiology</option>
+                        <option value="19">Transplant</option>
+                        <option value="20">Trauma</option>
+                        <option value="21">Urology</option>
+                        <option value="22">Vascular</option>
+                    </select>
+
+                </div>
+            </div>
+        </main>
+        <!-- End of Main Content -->
+
+
+        <!-- Javascripts -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="undefined" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/tail.select@0.5.15/js/tail.select-full.min.js"></script>
+
+
+
+
+        <script>
+            tail.select('#select1', {
+                search: true,
+                descriptions: true,
+        
+            });
+            tail.select('#select2', {
+                search: true,
+                descriptions: true,
+           
+            });
+        </script>
+
+    </body>
+</html>
