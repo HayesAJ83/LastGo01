@@ -32,8 +32,12 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/boostrap.min.css"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css">
  
+        <link href="tail.select-bootstrap4.css" rel="stylesheet">
+
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+        <link href="https://stackpath.bootstrapcdn.com/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
 
         <!-- Theme Stylesheets -->
         <link href="/static/assets/css/theme.css" rel="stylesheet">
@@ -145,6 +149,41 @@
                 </div>
             </section>
             <!-- End of Section -->
+            
+            <!-- Section - test -->
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-6 text-right">
+                        <select id="select1">
+                            <option selected="selected">Atari 2600</option>
+                            <option>Atari 5200</option>
+                            <option>Atari 7800</option>
+                            <option disabled="">Atari Panther</option>
+                            <option>Atari Jaguar</option>
+                            <option>Anaesthetics</option>
+                            <option>Breast</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <select multiple id="select2">
+                            <option selected="selected">Atari 2600</option>
+                            <option>Atari 5200</option>
+                            <option>Atari 7800</option>
+                            <option disabled="">Atari Panther</option>
+                            <option>Atari Jaguar</option>
+                            <option>Anaesthetics</option>
+                            <option>Breast</option>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- End of Section -->
+
+
+
         </main>
         <!-- End of Main Content -->
 
@@ -178,6 +217,11 @@
         <script src="/static/assets/vendor/jquery/dist/jquery.min.js"></script>
         <script src="/static/assets/vendor/popper.js/dist/umd/popper.min.js"></script>
         <script src="/static/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="tail.select-full.min.js"></script>
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
@@ -223,6 +267,15 @@
             prefix: 'Year : ',
             prettify_separator: '',
             hide_min_max: true,
+            });
+        </script>
+
+        <script>
+            tail.select('#select1', {
+
+            });
+            tail.select('#select2', {
+
             });
         </script>
 
