@@ -13,7 +13,7 @@ def indexed():
 
 @app.route('/alphabet')
 def alphabet():
-    return render_template('alphabet_test.html')
+    return render_template('alphab.html')
 
 @app.route('/categories')
 def cat():
