@@ -79,8 +79,6 @@
             </section>
             <!-- End of Section -->
 
-  
-
             <!-- Section -->
             <section>
                 <div class="container">
@@ -119,23 +117,32 @@
                                 <option selected="selected">Vascular</option>
                             </select>
                             <br></br>
-                            <br></br>
                         </div>
                     </div>
-
                     <div class="container">
                         <div class="row align-items-center text-center">
                             <div class="col">
                                 <h1 class="text-black mb-2 fs-1 ">Time Traveller</h1>
-                                <input type="checkbox" data-width="70" data-height="20" checked data-toggle="toggle" 
-                                data-on="On" data-off="Off" 
-                                data-onstyle="light" data-offstyle="light">
                                     <br></br>
                         <div class="row align-items-center text-center">
                             <div class="col">
                                 <input type="text" id="range_02" name="example_name" value="" />
                         </div>
                     </div>
+                    <br></br>
+                    <div class="container">
+                        <div class="row align-items-center text-center">
+                            <div class="col">
+                                <h1 class="text-black mb-2 fs-1 ">Eponyms</h1>
+                                <select id="select1">
+                                    <option>Result1</option>
+                                    <option>Result2</option>
+                                    <option>Result3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <br></br>
                 </div>
             </section>
             <!-- End of Section -->
@@ -204,6 +211,11 @@
                 multiple: true,
                 multiContainer: true,
                 multiSelectAll: true,
+            });
+        </script>
+
+        <script>
+            tail.select('#select1', {
             });
         </script>
 
