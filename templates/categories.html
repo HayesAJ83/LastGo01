@@ -117,11 +117,10 @@
                                 <option selected="selected">Urology</option>
                                 <option selected="selected">Vascular</option>
                             </select>
-                            <br></br>
-                            <br></br>
                         </div>
                     </div>
-
+                    <br></br>
+                    <br></br>
                     <div class="container">
                         <div class="row align-items-center text-center">
                             <div class="col">
@@ -133,6 +132,24 @@
                         <div class="row align-items-center text-center">
                             <div class="col">
                                 <input type="text" id="range_02" name="example_name" value="" />
+                        </div>
+                    </div>
+                    <br></br>
+                    <br></br>
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <h1 class="text-black mb-2 fs-1 ">Categories</h1>
+                            <select id="select1" width="500">
+                                <option>Anatomy</option>
+                                <option>Pathology</option>
+                                <option>Scores</option>
+                                <option>Operations</option>
+                                <option>Pathology</option>
+                                <option>Pathology</option>
+                                <option>Scores</option>
+                            </select>
+                            <br></br>
+                            <br></br>
                         </div>
                     </div>
                 </div>
@@ -198,6 +215,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>   
         <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
+
+        <script>
+            tail.select1('#select', {
+                multiple: false,
+                multiContainer: true,
+                multiSelectAll: true,
+            });
+        </script>
 
         <script>
             tail.select('#select', {
