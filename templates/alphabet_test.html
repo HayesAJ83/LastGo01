@@ -17,27 +17,36 @@
         <meta name="theme-color" content="#ffffff">
 
         <!-- Vendor Stylesheets -->
-        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700" rel="stylesheet">
         <link href="/static/assets/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
         <link href="/static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
         <!-- Font Awesome -->
-        <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
         <!-- Google Fonts -->
-        <link
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
         <!-- MDB -->
-        <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet"/>
 
         <!-- Theme Stylesheets -->
         <link href="/static/assets/css/theme.css" rel="stylesheet">
 
+        <!--Plugin CSS file with desired skin-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tail.select@0.5.15/css/bootstrap4/tail.select-default.css">
-
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129313359-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-129313359-1');
+        </script>
+    
     </head>
 
     <body>
@@ -45,13 +54,9 @@
         <header class="spyre-navbar navbar navbar-expand-lg bg-secondary navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff">
             <div class="container">
                 <a class="navbar-brand mr-lg-5 mr-xl-7" href="/#section-4">
-                    <img src="/static/assets/img/EponymExplorer.png" class="d-none d-lg-block" alt="Eponym Explorer" width="183" />
-                    <img src="/static/assets/img/EponymExplorer.png" class="d-block d-lg-none" alt="Eponym Explorer" width="150" />
+                    <img src="/static/assets/img/EponymExplorer.png" class="d-none d-lg-block" alt="Spyre" width="183" />
+                    <img src="/static/assets/img/EponymExplorer.png" class="d-block d-lg-none" alt="Spyre" width="150" />
                 </a>
-                <!-- <div class="search d-none d-lg-flex justify-content-end ml-auto mr-2"> -->
-                <!--    <input class="form-control mr-2" type="text"> -->
-                <!--    <i class="zmdi zmdi-search"></i> -->
-                <!-- </div> -->
             </div>
         </header>
         <!-- End of Header -->
@@ -73,39 +78,51 @@
             </section>
             <!-- End of Section -->
 
- 
-            <div class="container mt-5">
-                <div class="row">
-                    <div class="col-md-6">
-                        <select multiple id="select">
-                            <option value="1">Academic</option>
-                            <option value="2">Anaesthetics</option>
-                            <option value="3">Bariatrics</option>
-                            <option value="4">Breast</option>
-                            <option value="5">Cardiothoracics</option>
-                            <option value="6">Colorectal</option>
-                            <option value="7">Emergency Surgery</option>
-                            <option value="8">Endocrine</option>
-                            <option value="9">ENT</option>
-                            <option value="10">General Surgery</option>
-                            <option value="11">Gynaecology</option>
-                            <option value="12">HPB</option>
-                            <option value="13">Laparoscopic Surgery</option>
-                            <option value="14">Maxillofacial</option>
-                            <option value="15">Neurosurgery</option>
-                            <option value="16">Obstetrics</option>
-                            <option value="17">Paediatrics</option>
-                            <option value="18">Radiology</option>
-                            <option value="19">Transplant</option>
-                            <option value="20">Trauma</option>
-                            <option value="21">Urology</option>
-                            <option value="22">Vascular</option>
-                        </select>
-                        <br></br>
+  
+
+            <!-- Section -->
+            <section>
+                <div class="container">
+                    <div class="col">
+                        <h1 class="text-black mb-4 fs-3 ">1) Choose specialties</h1>
+                            <div class="col-lg-5">
+                                <select multiple id="select">
+                                    <option value="1">Academic</option>
+                                    <option value="2">Anaesthetics</option>
+                                    <option value="3">Bariatrics</option>
+                                    <option value="4">Breast</option>
+                                    <option value="5">Cardiothoracics</option>
+                                    <option value="6">Colorectal</option>
+                                    <option value="7">Emergency Surgery</option>
+                                    <option value="8">Endocrine</option>
+                                    <option value="9">ENT</option>
+                                    <option value="10">General Surgery</option>
+                                    <option value="11">Gynaecology</option>
+                                    <option value="12">HPB</option>
+                                    <option value="13">Laparoscopic Surgery</option>
+                                    <option value="14">Maxillofacial</option>
+                                    <option value="15">Neurosurgery</option>
+                                    <option value="16">Obstetrics</option>
+                                    <option value="17">Orthopaedics</option>
+                                    <option value="18">Paediatrics</option>
+                                    <option value="19">Radiology</option>
+                                    <option value="20">Transplant</option>
+                                    <option value="21">Trauma</option>
+                                    <option value="22">Urology</option>
+                                    <option value="23">Vascular</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br> </br>
+                    <div class="col">
+                        <h1 class="text-black mb-4 fs-3">2) Year - time travel</h1>
+                        <input type="text" id="range_02" name="example_name" value="" />
                     </div>
                 </div>
-                <br></br>
-            </div>
+            </section>
+            <!-- End of Section -->
+  
+
         </main>
         <!-- End of Main Content -->
 
@@ -161,12 +178,28 @@
         <!-- Theme Javascripts -->
         <script src="/static/assets/js/theme.js"></script>
 
+        <!--Plugin JavaScript file-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>   
+       
+
         <script>
             tail.select('#select', {
-                width: 280,
+                width: 300,
                 multiple: true,
                 multiContainer: true,
                 multiSelectAll: true,
+            });
+        </script>
+
+        <script>
+            $('#range_02').ionRangeSlider({
+            grid: true,
+            min: 1000,
+            max: 2100,
+            from: 2021,
+            prefix: 'Year : ',
+            prettify_separator: '',
+            hide_min_max: true,
             });
         </script>
 
