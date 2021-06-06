@@ -1,4 +1,5 @@
 import os.path
+import pandas as pd
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -13,7 +14,10 @@ def indexed():
 
 @app.route('/alphabet')
 def alphabet():
-    return render_template('alphabet.html')
+    df = pd.read_csv('/static/database/Eps4SN.csv')
+    df1 = df['Eponym']
+
+    return render_template('alphabet.html', df1=df1)
 
 @app.route('/categories')
 def cat():
