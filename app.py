@@ -14,10 +14,12 @@ def indexed():
 
 @app.route('/alphabet')
 def alphabet():
-    #df = pd.read_csv('/static/database/Eps4SN.csv')
+    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+    c=pd.read_csv(url)
+    d=c['Eponym']
     #names = df['Eponym']
     names = ["John", "Mary", "Wes", "Sally"]
-    return render_template('alphabet.html', names=names)
+    return render_template('alphabet.html', names=d)
 
 @app.route('/categories')
 def cat():
