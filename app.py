@@ -14,8 +14,9 @@ def indexed():
 
 @app.route('/alphabet')
 def alphabet():
-    df = pd.read_csv('/static/database/Eps4SN.csv')
-    names = df['Eponym']
+    #df = pd.read_csv('/static/database/Eps4SN.csv')
+    #names = df['Eponym']
+    names = ["John", "Mary", "Wes", "Sally"]
     return render_template('alphabet.html', names=names)
 
 @app.route('/categories')
