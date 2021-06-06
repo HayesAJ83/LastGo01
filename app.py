@@ -25,7 +25,8 @@ def cat():
 
 @app.route('/diseases')
 def dis():
-    return render_template('diseases.html')
+    names = ["Barrett's oesophagus", "Babcock forceps", "Crohn's disease", "DeBakey forceps"]
+    return render_template('diseases.html', names=names)
 
 @app.route('/journal')
 def journal():
