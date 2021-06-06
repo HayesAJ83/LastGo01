@@ -87,7 +87,11 @@
                             checked data-toggle="toggle" data-on="All" data-off="Selected" 
                             data-onstyle="light" data-offstyle="dark">
                         </div>
-                        <p>{{ df1 }}</p>
+                        <p>
+                            {% for name in names %}
+                             <li>{{ name }}</li>
+                            {% endfor %}
+                        </p>
                     </div>
                     <br></br>
                     <div class="row align-items-center text-center">
