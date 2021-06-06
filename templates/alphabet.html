@@ -87,11 +87,6 @@
                             checked data-toggle="toggle" data-on="All" data-off="Selected" 
                             data-onstyle="light" data-offstyle="dark">
                         </div>
-                        <p>
-                            {% for name in names %}
-                             <li>{{ name }}</li>
-                            {% endfor %}
-                        </p>
                     </div>
                     <br></br>
                     <div class="row align-items-center text-center">
@@ -153,10 +148,14 @@
                                 <option>Result3</option>
                                 <option>Result4</option>
                                 <option>Result5</option>
-                                <option>Result6</option>
                             </select>
                         </div>
                     </div>
+                    <p>
+                        {% for name in names %}
+                         <li>{{ name }}</li>
+                        {% endfor %}
+                    </p>
                 </div>
                 <br></br>
             </section>
