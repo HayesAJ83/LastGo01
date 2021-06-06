@@ -10,37 +10,52 @@ def index():
 
 @app.route('/index')
 def indexed():
-    return render_template('index.html')
+    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+    c=pd.read_csv(url)
+    d=c['Eponym']
+    return render_template('index.html', names=d)
 
 @app.route('/alphabet')
 def alphabet():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     c=pd.read_csv(url)
     d=c['Eponym']
-    #names = df['Eponym']
-    names = ["John", "Mary", "Wes", "Sally"]
     return render_template('alphabet.html', names=d)
 
 @app.route('/categories')
 def cat():
-    return render_template('categories.html')
+    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+    c=pd.read_csv(url)
+    d=c['Eponym']
+    return render_template('categories.html', names=d)
 
 @app.route('/diseases')
 def dis():
-    names = ["Barrett's oesophagus", "Babcock forceps", "Crohn's disease", "DeBakey forceps"]
-    return render_template('diseases.html', names=names)
+    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+    c=pd.read_csv(url)
+    d=c['Eponym']
+    return render_template('diseases.html', names=d)
 
 @app.route('/journal')
 def journal():
-    return render_template('journals.html')
+    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+    c=pd.read_csv(url)
+    d=c['Eponym']
+    return render_template('journals.html', names=d)
 
 @app.route('/operations')
 def ops():
-    return render_template('ops.html')
+    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+    c=pd.read_csv(url)
+    d=c['Eponym']
+    return render_template('ops.html', names=d)
 
 @app.route('/maps')
 def maps():
-    return render_template('maps.html')
+    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+    c=pd.read_csv(url)
+    d=c['Eponym']
+    return render_template('maps.html', names=d)
 
 
 if __name__ == "__main__":
