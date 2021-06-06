@@ -143,11 +143,9 @@
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Eponyms</h1>
                             <select id="select1">
-                                <option>Result1</option>
-                                <option>Result2</option>
-                                <option>Result3</option>
-                                <option>Result4</option>
-                                <option>Result5</option>
+                            {% for name in names %}
+                                <option> '<li>{{ name }}</li>' </option>
+                            {% endfor %}
                             </select>
                         </div>
                     </div>
