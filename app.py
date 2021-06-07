@@ -11,50 +11,57 @@ def index():
 @app.route('/index')
 def indexed():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
-    c=pd.read_csv(url)
-    d=c['Eponym']
+    df1=pd.read_csv(url)
+    df2=df1.sort_values(by=['Eponym'], ascending=True)
+    d=df2['Eponym_easy']
     return render_template('index.html', names=d)
 
 @app.route('/alphabet')
 def alphabet():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
-    c=pd.read_csv(url)
-    d=c['Eponym']
+    df1=pd.read_csv(url)
+    df2=df1.sort_values(by=['Eponym'], ascending=True)
+    d=df2['Eponym_easy']
     return render_template('alphabet.html', names=d)
 
 @app.route('/categories')
 def cat():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
-    c=pd.read_csv(url)
-    d=c['Eponym']
+    df1=pd.read_csv(url)
+    df2=df1.sort_values(by=['Eponym'], ascending=True)
+    d=df2['Eponym_easy']
     return render_template('categories.html', names=d)
 
 @app.route('/diseases')
 def dis():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
-    c=pd.read_csv(url)
-    d=c['Eponym']
+    df1=pd.read_csv(url)
+    df2=df1.sort_values(by=['Eponym'], ascending=True)
+    d=df2['Eponym_easy']
     return render_template('diseases.html', names=d)
 
 @app.route('/journal')
 def journal():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
-    c=pd.read_csv(url)
-    d=c['Eponym']
+    df1=pd.read_csv(url)
+    df2=df1.sort_values(by=['Eponym'], ascending=True)
+    d=df2['Eponym_easy']
     return render_template('journals.html', names=d)
 
 @app.route('/operations')
 def ops():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
-    c=pd.read_csv(url)
-    d=c['Eponym']
+    df1=pd.read_csv(url)
+    df2=df1.sort_values(by=['Eponym'], ascending=True)
+    d=df2['Eponym_easy']
     return render_template('ops.html', names=d)
 
 @app.route('/maps')
 def maps():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
-    c=pd.read_csv(url)
-    d=c['Eponym']
+    df1=pd.read_csv(url)
+    df2=df1.sort_values(by=['Eponym'], ascending=True)
+    d=df2['Eponym_easy']
     return render_template('maps.html', names=d)
 
 
