@@ -56,13 +56,15 @@ def ops():
     df3=df2['Operation'].dropna()
     string = df3.str.cat(sep=',')
     splits = string.split(",")
+    splits = string.split(",")
     S = set(splits)
     T = np.array(list(S)).astype(object)
     U = np.sort(T)
     V = list(U)
     W = pd.Series(V)
     W.name = 'Operation'
-    d = W.iloc[1:]
+    X = W.iloc[1:]
+    d = X.reset_index(drop=True)
 
     return render_template('ops.html', names=d)
 
