@@ -66,7 +66,7 @@ def ops():
     X = W.iloc[1:]
     d = X.reset_index(drop=True)
 
-    return render_template('ops.html', names=d)
+    return render_template('ops.html', seq=d)
 
 @app.route('/maps')
 def maps():
