@@ -52,7 +52,7 @@ def journal():
 def ops():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     df1=pd.read_csv(url)
-    df2=df1.sort_values(by=['Operation'], ascending=True)
+    df2=df1.sort_values(by=['Eponym'], ascending=True)
     #df3=df2['Operation'].dropna()
     #string = df3.str.cat(sep=',')
     #splits = string.split(",")
