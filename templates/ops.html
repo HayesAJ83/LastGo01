@@ -154,6 +154,20 @@
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
+                            <h1 class="text-black mb-2 fs-1 ">Operations</h1>
+                            <select id="select1">
+                            {% for op in ops %}
+                                <option> <li>{{ op }}</li> </option>
+                            {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br></br>
+                <br></br>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Eponyms</h1>
                             <select id="select1">
                             {% for name in names %}
