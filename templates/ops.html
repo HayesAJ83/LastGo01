@@ -87,7 +87,7 @@
                             data-onstyle="light" data-offstyle="dark">
                         </div>
                     </div>
-                 
+                    <hr style="height:1px; visibility:hidden">
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <select multiple id="select">
@@ -156,8 +156,8 @@
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Eponyms</h1>
                             <select id="select1">
-                            {% for name in names %}
-                                <option> <li>{{ name }}</li> </option>
+                            {% for item in seq %}
+                                <option> <li>{{ item }}</li> </option>
                             {% endfor %}
                             </select>
                         </div>
