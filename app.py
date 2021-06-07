@@ -52,9 +52,17 @@ def journal():
 def ops():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     df1=pd.read_csv(url)
-    df2=df1.sort_values(by=['Eponym'], ascending=True)
-    d=df2['Eponym_easy']
-    return render_template('ops.html', names=d)
+    df2=df1.sort_values(by=['Operation'], ascending=True)
+    df3=df2['Operation'].dropna()
+    string = df3.str.cat(sep=',')
+    splits = string.split(",")
+    S = set(splits)
+    T = np.array(list(S)).astype(object)
+    U = np.sort(T)
+    ops = list(U)
+
+    d=df1['Eponym_easy']
+    return render_template('ops.html', ops=ops, names=d)
 
 @app.route('/maps')
 def maps():
