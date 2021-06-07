@@ -60,10 +60,11 @@ def ops():
     T = np.array(list(S)).astype(object)
     U = np.sort(T)
     V = list(U)
-    ops = pd.Series(V)
+    W = pd.Series(V)
+    names = W[1:]
 
-    names=df1['Eponym_easy']
-    return render_template('ops.html', ops=ops, names=names)
+    #names=df1['Eponym_easy']
+    return render_template('ops.html', names=names)
 
 @app.route('/maps')
 def maps():
