@@ -60,9 +60,10 @@ def ops():
     T = np.array(list(S)).astype(object)
     U = np.sort(T)
     V = list(U)
-    W = pd.Series(V).unique()
-    d = W[1:]
-    
+    W = pd.Series(V)
+    W.name = 'Operation'
+    d = W.iloc[1:]
+
     return render_template('ops.html', names=d)
 
 @app.route('/maps')
