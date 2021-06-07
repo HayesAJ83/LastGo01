@@ -64,8 +64,8 @@ def ops():
     #W.name = 'Operation'
     #X = W.iloc[1:]
     #d = X.reset_index(drop=True)
-    seq=df2['Eponym_easy']
-    return render_template('ops.html', seq=d)
+    names=df2['Eponym_easy']
+    return render_template('ops.html', names=d)
 
 @app.route('/maps')
 def maps():
