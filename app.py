@@ -59,10 +59,11 @@ def ops():
     S = set(splits)
     T = np.array(list(S)).astype(object)
     U = np.sort(T)
-    ops = list(U)
+    V = list(U)
+    ops = pd.Series(V)
 
-    d=df1['Eponym_easy']
-    return render_template('ops.html', ops=ops, names=d)
+    names=df1['Eponym_easy']
+    return render_template('ops.html', ops=ops, names=names)
 
 @app.route('/maps')
 def maps():
