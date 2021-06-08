@@ -63,11 +63,8 @@ def ops():
     W = pd.Series(V).rename('Operation')
     X = W[1:]
     Y = pd.Series(X)
-    Y.reset_index(inplace=True, drop=True)
     Z = pd.DataFrame(Y)
     d = Z['Operation']
-
-    
 
     #W = pd.DataFrame(V) #maybe you need DataFrame
     #W.name = 'Operation'
