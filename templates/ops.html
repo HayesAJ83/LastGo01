@@ -142,9 +142,9 @@
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Operations</h1>
                             <select id="select1">
-                                <option>Adrenalectomy</option>
-                                <option>Appendicectomy</option>
-                                <option>Cholecystectomy</option>
+                            {% for op in ops %}
+                                <option> <li>{{ op }}</li> </option>
+                            {% endfor %}
                             </select>
                         </div>
                     </div>
