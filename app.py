@@ -52,20 +52,27 @@ def journal():
 def ops():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     df1=pd.read_csv(url)
-    df2=df1.sort_values(by=['Eponym'], ascending=True)
-    #df3=df2['Operation'].dropna()
-    #string = df3.str.cat(sep=',')
-    #splits = string.split(",")
-    #S = set(splits)
-    #T = np.array(list(S)).astype(object)
-    #U = np.sort(T)
-    #V = list(U)
-    #W = pd.Series(V)
+    df2=df1.sort_values(by=['Operation'], ascending=True)
+    df3=df2['Operation'].dropna()
+    string = df3.str.cat(sep=',')
+    splits = string.split(",")
+    S = set(splits)
+    T = np.array(list(S)).astype(object)
+    U = np.sort(T)
+    V = list(U)
+    W = pd.Series(V).rename('Operation')
+    X = W[1:]
+    Y = pd.Series(X)
+    Z = Y.reset_index(inplace=True, drop=True)
+
+    
+
+    #W = pd.DataFrame(V) #maybe you need DataFrame
     #W.name = 'Operation'
     #X = W.iloc[1:]
     #d = X.reset_index(drop=True)
-    d=df2['Eponym_easy']
-    return render_template('ops.html', names=d)
+    #d=df2['Eponym_easy']
+    return render_template('ops.html', names=Z)
 
 @app.route('/maps')
 def maps():
