@@ -63,7 +63,9 @@ def ops():
     W = pd.Series(V).rename('Operation')
     X = W[1:]
     Y = pd.Series(X)
-    Z = Y.reset_index(inplace=True, drop=True)
+    Y.reset_index(inplace=True, drop=True)
+    Z = pd.DataFrame(Y)
+    d = Z['Operation']
 
     
 
@@ -72,7 +74,7 @@ def ops():
     #X = W.iloc[1:]
     #d = X.reset_index(drop=True)
     #d=df2['Eponym_easy']
-    return render_template('ops.html', names=Z)
+    return render_template('ops.html', names=d)
 
 @app.route('/maps')
 def maps():
