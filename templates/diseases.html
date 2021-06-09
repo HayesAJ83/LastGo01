@@ -142,9 +142,9 @@
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Diseases & Symptoms</h1>
                             <select id="select1">
-                                <option>Cancer</option>
-                                <option>Haemorrhage</option>
-                                <option>Inflammation</option>
+                            {% for disease in diseases %}
+                                <option> <li>{{ disease }}</li> </option>
+                            {% endfor %}
                             </select>
                         </div>
                     </div>
