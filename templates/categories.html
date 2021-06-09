@@ -143,31 +143,6 @@
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Categories</h1>
                             <select id="select1">
-                                <option>Anatomy</option>
-                                <option>Concepts</option>
-                                <option>Incisions</option>
-                                <option>Instruments</option>
-                                <option>IV Fluids</option>
-                                <option>Operations</option>
-                                <option>Pathology</option>
-                                <option>Positions</option>
-                                <option>Scores</option>
-                                <option>Signs</option>
-                                <option>Statistics</option>
-                                <option>Syndromes</option>
-                                <option>Techniques</option>
-                                <option>Trials</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <br></br>
-                <br></br>
-                <div class="container">
-                    <div class="row align-items-center text-center">
-                        <div class="col">
-                            <h1 class="text-black mb-2 fs-1 ">Categories</h1>
-                            <select id="select1">
                             {% for cat in cats %}
                                 <option> <li>{{ cat }}</li> </option>
                             {% endfor %}
@@ -181,7 +156,7 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Eponyms</h1>
-                            <select id="select1">
+                            <select id="select2">
                             {% for name in names %}
                                 <option> <li>{{ name }}</li> </option>
                             {% endfor %}
@@ -254,6 +229,12 @@
 
         <script>
             tail.select('#select1', {
+                width: 200,
+            });
+        </script>
+
+        <script>
+            tail.select('#select2', {
                 width: 300,
             });
         </script>
