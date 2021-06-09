@@ -82,7 +82,25 @@ def journal():
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
-    return render_template('journals.html', names=d)
+
+    jn1=pd.read_csv(url)
+    jn2=jn1.sort_values(by=['Journal'], ascending=True)
+    jn3=jn2['Journal'].dropna()
+    Jn_string = jn3.str.cat(sep=',')
+    Jn_splits = Jn_string.split(",")
+    Jn_S = set(Jn_splits)
+    Jn_T = np.array(list(Jn_S)).astype(object)
+    Jn_U = np.sort(Jn_T)
+    Jn_V = list(Jn_U)
+    Jn_W = pd.Series(Jn_V).rename('Journal')
+    Jn_X = Jn_W[1:]
+    Jn_Y = pd.Series(Jn_X)
+    Jn_Y.reset_index(inplace=True, drop=True)
+    Jn_Z = pd.DataFrame(Jn_Y)
+    journals = Jn_Z['Journal']
+    journals
+
+    return render_template('journals.html', names=d, journals=journals)
 
 @app.route('/operations')
 def ops():
