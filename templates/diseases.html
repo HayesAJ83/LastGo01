@@ -141,7 +141,7 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Diseases & Symptoms</h1>
-                            <select id="select1">
+                            <select id="select2">
                             {% for disease in diseases %}
                                 <option> <li>{{ disease }}</li> </option>
                             {% endfor %}
@@ -237,6 +237,13 @@
         <script>
             tail.select('#select1', {
                 width: 300,
+            });
+        </script>
+        
+        <script>
+            tail.select('#select2', {
+                width: 350,
+                search: true,
             });
         </script>
 
