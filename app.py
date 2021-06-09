@@ -56,7 +56,25 @@ def dis():
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
-    return render_template('diseases.html', names=d)
+
+    ds1=pd.read_csv(url)
+    ds2=ds1.sort_values(by=['Disease'], ascending=True)
+    ds3=ds2['Disease'].dropna()
+    Ds_string = ds3.str.cat(sep=',')
+    Ds_splits = Ds_string.split(",")
+    Ds_S = set(Ds_splits)
+    Ds_T = np.array(list(Ds_S)).astype(object)
+    Ds_U = np.sort(Ds_T)
+    Ds_V = list(Ds_U)
+    Ds_W = pd.Series(Ds_V).rename('Disease')
+    Ds_X = Ds_W[1:]
+    Ds_Y = pd.Series(Ds_X)
+    Ds_Y.reset_index(inplace=True, drop=True)
+    Ds_Z = pd.DataFrame(Ds_Y)
+    diseases = Ds_Z['Disease']
+    diseases
+    
+    return render_template('diseases.html', names=d, diseases=diseases)
 
 @app.route('/journal')
 def journal():
