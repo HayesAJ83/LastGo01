@@ -141,7 +141,7 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Journals</h1>
-                            <select id="select1">
+                            <select id="select2">
                             {% for journal in journals %}
                                 <option> <li>{{ journal }}</li> </option>
                             {% endfor %}
@@ -237,6 +237,13 @@
         <script>
             tail.select('#select1', {
                 width: 300,
+            });
+        </script>
+
+        <script>
+            tail.select('#select2', {
+                width: 330,
+                search: true,
             });
         </script>
 
