@@ -142,9 +142,9 @@
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Journals</h1>
                             <select id="select1">
-                                <option>BJS</option>
-                                <option>JAMA</option>
-                                <option>Lancet</option>
+                            {% for journal in journals %}
+                                <option> <li>{{ journal }}</li> </option>
+                            {% endfor %}
                             </select>
                         </div>
                     </div>
