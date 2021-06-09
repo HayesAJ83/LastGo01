@@ -1,6 +1,9 @@
 import numpy as np
 import os.path
 import pandas as pd
+import matplotlib.pyplot as plt      #[v 3.2.1]
+import plotly.express as px          #[v 0.4.1]
+import plotly.graph_objects as go    #[v 4.8.1]
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -25,7 +28,7 @@ def alphabet():
     d=df2['Eponym_easy']
     return render_template('alphabet.html', names=d)
 
-@app.route('/categories')
+@app.route('/categories', methods=["POST", "GET"])
 def cat():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     df1=pd.read_csv(url)
@@ -53,9 +56,6 @@ def cat():
 @app.route('/diseases')
 def dis():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
-    df1=pd.read_csv(url)
-    df2=df1.sort_values(by=['Eponym'], ascending=True)
-    d=df2['Eponym_easy']
 
     ds1=pd.read_csv(url)
     ds2=ds1.sort_values(by=['Disease'], ascending=True)
@@ -73,6 +73,11 @@ def dis():
     Ds_Z = pd.DataFrame(Ds_Y)
     diseases = Ds_Z['Disease']
     diseases
+
+
+    df1=pd.read_csv(url)
+    df2=df1.sort_values(by=['Eponym'], ascending=True)
+    d=df2['Eponym_easy']
     
     return render_template('diseases.html', names=d, diseases=diseases)
 
