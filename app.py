@@ -43,11 +43,10 @@ def cat():
     Tp_U = np.sort(Tp_T)
     Tp_V = list(Tp_U)
     Tp_W = pd.Series(Tp_V).rename('Type')
-    Tp_X = Tp_W[1:]
-    Tp_Y = pd.Series(Tp_X)
-    Tp_Y.reset_index(inplace=True, drop=True)
-    Tp_Z = pd.DataFrame(Tp_Y)
-    cats = Tp_Z['Type']
+    Tp_X = pd.Series(Tp_W)
+    Tp_X.reset_index(inplace=True, drop=True)
+    Tp_Y = pd.DataFrame(Tp_X)
+    cats = Tp_Y['Type']
 
     return render_template('categories.html', names=d, cats=cats)
 
