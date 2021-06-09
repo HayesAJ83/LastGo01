@@ -31,7 +31,25 @@ def cat():
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
-    return render_template('categories.html', names=d)
+
+    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+    tp1=pd.read_csv(url)
+    tp2=tp1.sort_values(by=['Type'], ascending=True)
+    tp3=tp2['Type'].dropna()
+    Tp_string = tp3.str.cat(sep=',')
+    Tp_splits = Tp_string.split(",")
+    Tp_S = set(Tp_splits)
+    Tp_T = np.array(list(Tp_S)).astype(object)
+    Tp_U = np.sort(Tp_T)
+    Tp_V = list(Tp_U)
+    Tp_W = pd.Series(Tp_V).rename('Type')
+    Tp_X = Tp_W[1:]
+    Tp_Y = pd.Series(Tp_X)
+    Tp_Y.reset_index(inplace=True, drop=True)
+    Tp_Z = pd.DataFrame(Tp_Y)
+    cats = Tp_Z['Type']
+
+    return render_template('categories.html', names=d, cats=cats)
 
 @app.route('/diseases')
 def dis():
