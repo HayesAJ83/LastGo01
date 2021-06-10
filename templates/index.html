@@ -40,6 +40,7 @@
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+
             gtag('config', 'UA-129313359-1');
         </script>
     </head>
@@ -53,15 +54,125 @@
                     <img src="/static/assets/img/SurgicalNames.png" class="d-block d-lg-none" alt="SurgicalNames" width="150" />
                 </a>
 
-                <!-- <div class="search d-none d-lg-flex justify-content-end ml-auto mr-2"> -->
-                <!--    <input class="form-control mr-2" type="text"> -->
-                <!--    <i class="zmdi zmdi-search"></i> -->
-                <!-- </div> -->
+                <span class="navbar-text flex-fill d-none d-md-inline-block text-white">
+                    Contact us: <a href="#" class="pl-2 text-white">info@spyre.com</a><a href="#" class="pl-5 text-white">+1-202-555-0149</a>
+                </span>
+
+                <div class="search d-none d-lg-flex justify-content-end ml-auto mr-2">
+                    <input class="form-control mr-2" type="text">
+                    <i class="zmdi zmdi-search"></i>
+                </div>
+
+                <div class="menu-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="cross">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
             </div>
+
+            <!-- Spyrenav Overlay -->
+            <div class="spyre-navbar-overlay overlay-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="spyre-navbar-nav-container col-md-6 col-lg-5 col-xl-4 bg-white ext-l">
+                            <nav class="spyre-navbar-nav">
+                                <ul class="spyre-nav">
+                                    <li class="spyre-nav-item"><a href="#section-4" class="spyre-nav-link">Overview</a></li>
+                                    <li class="spyre-nav-item dropdown">
+                                        <a href="#" class="spyre-nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li class="dropdown-menu-item"><a href="#section-4" class="dropdown-menu-link">Test</a></li>
+                                            <li class="dropdown-menu-item"><a href="#section-4" class="dropdown-menu-link">Recover account</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="col-lg-7 col-xl-8 d-none d-md-block">
+                            <div class="d-flex flex-column h-100">
+                                <div class="d-flex h-100">
+                                    <div class="align-self-center">
+                                        <div class="text-uppercase"
+                                            data-background-text="communication"
+                                            data-color="#7079a2"
+                                            data-opacity="0.02"
+                                            data-font-size="85px"
+                                            data-font-weight="500"
+                                            data-offset-x="-5%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="planning"
+                                            data-color="#7079a2"
+                                            data-opacity="0.04"
+                                            data-font-size="175px"
+                                            data-font-weight="500"
+                                            data-offset-x="29%"
+                                            data-padding="7vh 0 2vh 0"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="delivering"
+                                            data-color="#7079a2"
+                                            data-opacity="0.03"
+                                            data-font-size="140px"
+                                            data-font-weight="500"
+                                            data-offset-x="15%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-auto">
+                                    <ul class="nav flex-nowrap float-right">
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2" href="#" target="_blank">
+                                                <i class="zmdi zmdi-twitter text-white"></i>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2" href="#" target="_blank">
+                                                <i class="zmdi zmdi-instagram text-white"></i>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2" href="#" target="_blank">
+                                                <i class="zmdi zmdi-facebook-box text-white"></i>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2" href="#" target="_blank">
+                                                <i class="zmdi zmdi-pinterest text-white"></i>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2" href="#" target="_blank">
+                                                <i class="zmdi zmdi-flickr text-white"></i>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2" href="#" target="_blank">
+                                                <i class="zmdi zmdi-youtube text-white"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Spyrenav Overlay -->
         </header>
         <!-- End of Header -->
-
- 
 
 
         <!-- Main Content -->
@@ -242,8 +353,7 @@
                     <br></br>
                     <div class="row justify-content-center">
                         <div class="col-auto">
-                            <a href="https://www.justgiving.com" target="_blank" class="btn btn-light px-5 mx-2" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">Donate</a>
-                            <a href="hhttps://www.justgiving.com" target="_blank" class="btn bg-white text-primary mb-4 px-4" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">Donate<i class="zmdi zmdi-shopping-car ml-2"></i></a>
+                            <a href="https://www.justgiving.com" target="_blank" class="btn bg-white text-primary mb-4 px-4" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">Donate<i class="zmdi zmdi-shopping-car ml-2"></i></a>
                         </div>
                     </div>
                 </div>
