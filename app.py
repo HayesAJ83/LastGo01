@@ -12,14 +12,6 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/index')
-def indexed():
-    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
-    df1=pd.read_csv(url)
-    df2=df1.sort_values(by=['Eponym'], ascending=True)
-    d=df2['Eponym_easy']
-    return render_template('index.html', names=d)
-
 @app.route('/alphabet')
 def alphabet():
 
@@ -34,19 +26,41 @@ def alphabet():
     Sp_U = np.sort(Sp_T)
     Sp_V = list(Sp_U)
     Sp_W = pd.Series(Sp_V).rename('Topic')
-    Sp_X = pd.Series(Sp_W)
-    Sp_X.reset_index(inplace=True, drop=True)
-    Sp_Y = pd.DataFrame(Sp_X)
-    specs = Sp_Y['Topic']
+    Sp_X = Sp_W[1:]
+    Sp_Y = pd.Series(Sp_X)
+    Sp_Y.reset_index(inplace=True, drop=True)
+    Sp_Z = pd.DataFrame(Sp_Y)
+    specs = Sp_Z['Topic']
+    specs
 
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
-    return render_template('alphabet.html', names=d, specs=specs)
+    return render_template('alphabet.html', specs=specs, names=d)
+
 
 @app.route('/categories', methods=["POST", "GET"])
 def cat():
+
+    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+    sp1=pd.read_csv(url)
+    sp2=sp1.sort_values(by=['Topic'], ascending=True)
+    sp3=sp2['Topic'].dropna()
+    Sp_string = sp3.str.cat(sep=',')
+    Sp_splits = Sp_string.split(",")
+    Sp_S = set(Sp_splits)
+    Sp_T = np.array(list(Sp_S)).astype(object)
+    Sp_U = np.sort(Sp_T)
+    Sp_V = list(Sp_U)
+    Sp_W = pd.Series(Sp_V).rename('Topic')
+    Sp_X = Sp_W[1:]
+    Sp_Y = pd.Series(Sp_X)
+    Sp_Y.reset_index(inplace=True, drop=True)
+    Sp_Z = pd.DataFrame(Sp_Y)
+    specs = Sp_Z['Topic']
+    specs
+    
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
@@ -68,10 +82,30 @@ def cat():
     Tp_Y = pd.DataFrame(Tp_X)
     cats = Tp_Y['Type']
 
-    return render_template('categories.html', names=d, cats=cats)
+    return render_template('categories.html', specs=specs, names=d, cats=cats)
+
 
 @app.route('/diseases')
 def dis():
+
+    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+    sp1=pd.read_csv(url)
+    sp2=sp1.sort_values(by=['Topic'], ascending=True)
+    sp3=sp2['Topic'].dropna()
+    Sp_string = sp3.str.cat(sep=',')
+    Sp_splits = Sp_string.split(",")
+    Sp_S = set(Sp_splits)
+    Sp_T = np.array(list(Sp_S)).astype(object)
+    Sp_U = np.sort(Sp_T)
+    Sp_V = list(Sp_U)
+    Sp_W = pd.Series(Sp_V).rename('Topic')
+    Sp_X = Sp_W[1:]
+    Sp_Y = pd.Series(Sp_X)
+    Sp_Y.reset_index(inplace=True, drop=True)
+    Sp_Z = pd.DataFrame(Sp_Y)
+    specs = Sp_Z['Topic']
+    specs
+    
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
 
     ds1=pd.read_csv(url)
@@ -91,15 +125,32 @@ def dis():
     diseases = Ds_Z['Disease']
     diseases
 
-
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
     
-    return render_template('diseases.html', names=d, diseases=diseases)
+    return render_template('diseases.html', specs=specs, names=d, diseases=diseases)
 
 @app.route('/journal')
 def journal():
+    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+    sp1=pd.read_csv(url)
+    sp2=sp1.sort_values(by=['Topic'], ascending=True)
+    sp3=sp2['Topic'].dropna()
+    Sp_string = sp3.str.cat(sep=',')
+    Sp_splits = Sp_string.split(",")
+    Sp_S = set(Sp_splits)
+    Sp_T = np.array(list(Sp_S)).astype(object)
+    Sp_U = np.sort(Sp_T)
+    Sp_V = list(Sp_U)
+    Sp_W = pd.Series(Sp_V).rename('Topic')
+    Sp_X = Sp_W[1:]
+    Sp_Y = pd.Series(Sp_X)
+    Sp_Y.reset_index(inplace=True, drop=True)
+    Sp_Z = pd.DataFrame(Sp_Y)
+    specs = Sp_Z['Topic']
+    specs
+    
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
@@ -122,10 +173,28 @@ def journal():
     journals = Jn_Z['Journal']
     journals
 
-    return render_template('journals.html', names=d, journals=journals)
+    return render_template('journals.html', specs=specs, names=d, journals=journals)
 
 @app.route('/operations')
 def ops():
+    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+    sp1=pd.read_csv(url)
+    sp2=sp1.sort_values(by=['Topic'], ascending=True)
+    sp3=sp2['Topic'].dropna()
+    Sp_string = sp3.str.cat(sep=',')
+    Sp_splits = Sp_string.split(",")
+    Sp_S = set(Sp_splits)
+    Sp_T = np.array(list(Sp_S)).astype(object)
+    Sp_U = np.sort(Sp_T)
+    Sp_V = list(Sp_U)
+    Sp_W = pd.Series(Sp_V).rename('Topic')
+    Sp_X = Sp_W[1:]
+    Sp_Y = pd.Series(Sp_X)
+    Sp_Y.reset_index(inplace=True, drop=True)
+    Sp_Z = pd.DataFrame(Sp_Y)
+    specs = Sp_Z['Topic']
+    specs
+    
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     op1=pd.read_csv(url)
     op2=op1.sort_values(by=['Operation'], ascending=True)
@@ -146,15 +215,33 @@ def ops():
     ns2=op1.sort_values(by=['Eponym'], ascending=True)
     names=ns2['Eponym_easy']
     
-    return render_template('ops.html', ops=ops, names=names)
+    return render_template('ops.html', specs=specs, ops=ops, names=names)
 
 @app.route('/maps')
 def maps():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+    sp1=pd.read_csv(url)
+    sp2=sp1.sort_values(by=['Topic'], ascending=True)
+    sp3=sp2['Topic'].dropna()
+    Sp_string = sp3.str.cat(sep=',')
+    Sp_splits = Sp_string.split(",")
+    Sp_S = set(Sp_splits)
+    Sp_T = np.array(list(Sp_S)).astype(object)
+    Sp_U = np.sort(Sp_T)
+    Sp_V = list(Sp_U)
+    Sp_W = pd.Series(Sp_V).rename('Topic')
+    Sp_X = Sp_W[1:]
+    Sp_Y = pd.Series(Sp_X)
+    Sp_Y.reset_index(inplace=True, drop=True)
+    Sp_Z = pd.DataFrame(Sp_Y)
+    specs = Sp_Z['Topic']
+    specs
+    
+    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
-    return render_template('maps.html', names=d)
+    return render_template('maps.html', specs=specs, names=d)
 
 
 if __name__ == "__main__":
