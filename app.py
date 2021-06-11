@@ -22,11 +22,28 @@ def indexed():
 
 @app.route('/alphabet')
 def alphabet():
+
+    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+    sp1=pd.read_csv(url)
+    sp2=sp1.sort_values(by=['Topic'], ascending=True)
+    sp3=sp2['Topic'].dropna()
+    Sp_string = sp3.str.cat(sep=',')
+    Sp_splits = Sp_string.split(",")
+    Sp_S = set(Sp_splits)
+    Sp_T = np.array(list(Sp_S)).astype(object)
+    Sp_U = np.sort(Sp_T)
+    Sp_V = list(Sp_U)
+    Sp_W = pd.Series(Sp_V).rename('Topic')
+    Sp_X = pd.Series(Sp_W)
+    Sp_X.reset_index(inplace=True, drop=True)
+    Sp_Y = pd.DataFrame(Sp_X)
+    specs = Sp_Y['Topic']
+
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
-    return render_template('alphabet.html', names=d)
+    return render_template('alphabet.html', names=d, specs=specs)
 
 @app.route('/categories', methods=["POST", "GET"])
 def cat():
