@@ -103,52 +103,8 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <select multiple id="select">
-                                <option selected="selected">Academic</option>
-                                <option selected="selected">Anaesthetics</option>
-                                <option selected="selected">Bariatrics</option>
-                                <option selected="selected">Breast</option>
-                                <option selected="selected">Cardiothoracics</option>
-                                <option selected="selected">Colorectal</option>
-                                <option selected="selected">Emergency</option>
-                                <option selected="selected">Endocrine</option>
-                                <option selected="selected">ENT</option>
-                                <option selected="selected">General Surgery</option>
-                                <option selected="selected">Gynaecology</option>
-                                <option selected="selected">HPB</option>
-                                <option selected="selected">Laparoscopic</option>
-                                <option selected="selected">Maxillofacial</option>
-                                <option selected="selected">Neurosurgery</option>
-                                <option selected="selected">Obstetrics</option>
-                                <option selected="selected">Oesophagogastric</option>
-                                <option selected="selected">Ophthalmology</option>
-                                <option selected="selected">Orthopaedics</option>
-                                <option selected="selected">Paediatrics</option>
-                                <option selected="selected">Plastics</option>
-                                <option selected="selected">Radiology</option>
-                                <option selected="selected">Transplant</option>
-                                <option selected="selected">Trauma</option>
-                                <option selected="selected">Urology</option>
-                                <option selected="selected">Vascular</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <br></br>
-                <div class="container">
-                    <div class="row align-items-center text-center">
-                        <div class="col">
-                            <h1 class="text-black mb-2 fs-1 ">Specialties</h1>
-                            <input type="checkbox" data-width="120" data-height="10" 
-                            checked data-toggle="toggle" data-on="All" data-off="Selected" 
-                            data-onstyle="light" data-offstyle="dark">
-                        </div>
-                    </div>
-                    <hr style="height:1px; visibility:hidden">
-                    <div class="row align-items-center text-center">
-                        <div class="col">
-                            <select multiple id="select">
                             {% for spec in specs %}
-                                <option> <li>{{ spec }}</li> </option>
+                                <option selected="selected"> <li>{{ spec }}</li> </option>
                             {% endfor %}
                             </select>
                         </div>
