@@ -113,11 +113,11 @@
                 <br></br>
                 <div class="row align-items-center text-center">
                     <div class="col">
-                        {% block content %}
-                        <p class="mb-0"> {{ SelectValue }} </p>
-                        {% endblock %}
-                        
-            
+                        <form method="POST">
+                            {% block content %}
+                                <p class="mb-0"> {{ SelectValue }} </p>
+                            {% endblock %}
+                        </form>
                     </div>
                 </div>
                 <br></br>
@@ -148,9 +148,6 @@
                         </div>
                     </div>
                 </div>
-                <form action='#' method="post">
-                    <input type="submit" value=""/>
-                </form>
                 <br></br>
                 <br></br>
                 <div class="container">
