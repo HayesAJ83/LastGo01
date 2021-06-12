@@ -7,13 +7,17 @@ import plotly.graph_objects as go    #[v 4.8.1]
 from flask import Flask, render_template
 
 app = Flask(__name__)
+    
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/alphabet')
+@app.route('/alphabet', methods=["POST", "GET"])
 def alphabet():
+
+    form = Form()
+    form.country.choices 
 
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     sp1=pd.read_csv(url)
@@ -60,13 +64,14 @@ def cat():
     Sp_Z = pd.DataFrame(Sp_Y)
     specs = Sp_Z['Topic']
     specs
-    
-    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+
+    SV = request.form.get('select1')
+    selectvalue = str(SV)
+
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
 
-    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     tp1=pd.read_csv(url)
     tp2=tp1.sort_values(by=['Type'], ascending=True)
     tp3=tp2['Type'].dropna()
@@ -82,7 +87,8 @@ def cat():
     Tp_Y = pd.DataFrame(Tp_X)
     cats = Tp_Y['Type']
 
-    return render_template('categories.html', specs=specs, names=d, cats=cats)
+
+    return render_template('categories.html', specs=specs, names=d, cats=cats, selectValue=selectValue)
 
 
 @app.route('/diseases')
@@ -106,8 +112,6 @@ def dis():
     specs = Sp_Z['Topic']
     specs
     
-    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
-
     ds1=pd.read_csv(url)
     ds2=ds1.sort_values(by=['Disease'], ascending=True)
     ds3=ds2['Disease'].dropna()
@@ -151,7 +155,6 @@ def journal():
     specs = Sp_Z['Topic']
     specs
     
-    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
