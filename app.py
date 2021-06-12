@@ -4,20 +4,16 @@ import pandas as pd
 import matplotlib.pyplot as plt      #[v 3.2.1]
 import plotly.express as px          #[v 0.4.1]
 import plotly.graph_objects as go    #[v 4.8.1]
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
     
-
 @app.route('/')
 def index():
     return render_template('index.html')
 
 @app.route('/alphabet', methods=["POST", "GET"])
-def alphabet():
-
-    form = Form()
-    form.country.choices 
+def alphabet(): 
 
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     sp1=pd.read_csv(url)
@@ -41,6 +37,7 @@ def alphabet():
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
+    
     return render_template('alphabet.html', specs=specs, names=d)
 
 
@@ -87,8 +84,8 @@ def cat():
     Tp_Y = pd.DataFrame(Tp_X)
     cats = Tp_Y['Type']
 
-
-    return render_template('categories.html', specs=specs, names=d, cats=cats, selectValue=selectValue)
+    return render_template('categories.html', specs=specs,
+                           names=d, cats=cats, selectValue=selectValue)
 
 
 @app.route('/diseases')
