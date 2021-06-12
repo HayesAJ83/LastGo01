@@ -12,7 +12,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/alphabet', methods=["POST", "GET"])
+@app.route('/alphabet', methods=["POST"])
 def alphabet(): 
 
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
@@ -41,7 +41,7 @@ def alphabet():
     return render_template('alphabet.html', specs=specs, names=d)
 
 
-@app.route('/categories', methods=["POST", "GET"])
+@app.route('/categories')
 def cat():
 
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
@@ -62,8 +62,7 @@ def cat():
     specs = Sp_Z['Topic']
     specs
 
-    SV = request.form.get('select')
-    selectvalue = str(SV)
+    selectvalue = request.form.get('select')
 
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
@@ -87,6 +86,10 @@ def cat():
     return render_template('categories.html', specs=specs,
                            names=d, cats=cats, selectValue=selectValue)
 
+@app.route('/categories/specialties', methods=['GET', 'POST'])
+def catSpec():
+    selectvalue = request.form.get('select')
+    return(str(selectValue))
 
 @app.route('/diseases')
 def dis():
