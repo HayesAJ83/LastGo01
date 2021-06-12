@@ -65,7 +65,7 @@ def cat():
     specs = Sp_Z['Topic']
     specs
 
-    SV = request.form.get('select1')
+    SV = request.form.get('select')
     selectvalue = str(SV)
 
     df1=pd.read_csv(url)
