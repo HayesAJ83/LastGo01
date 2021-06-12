@@ -84,10 +84,10 @@ def cat():
     return render_template('categories.html', specs=specs,
                            names=d, cats=cats)
 
-#@app.route('/categories/specialties', methods=['GET', 'POST'])
-#def catSpec():
-#    selectvalue = request.form.get('select')
-#    return(str(selectValue))
+@app.route('/categories/specialties', methods=['GET', 'POST'])
+def catSpec():
+    selectvalue = request.form.get('select')
+    return(str(selectValue))
 
 @app.route('/diseases')
 def dis():
