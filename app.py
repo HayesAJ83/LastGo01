@@ -41,7 +41,7 @@ def alphabet():
     return render_template('alphabet.html', specs=specs, names=d)
 
 
-@app.route('/categories')
+@app.route('/categories', methods=['GET', 'POST'])
 def cat():
 
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
