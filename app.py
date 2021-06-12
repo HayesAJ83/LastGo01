@@ -12,7 +12,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/alphabet', methods=["POST"])
+@app.route('/alphabet', methods=['GET', 'POST'])
 def alphabet(): 
 
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
