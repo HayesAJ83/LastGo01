@@ -62,8 +62,6 @@ def cat():
     specs = Sp_Z['Topic']
     specs
 
-    selectvalue = request.form.get('select')
-
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
@@ -84,7 +82,7 @@ def cat():
     cats = Tp_Y['Type']
 
     return render_template('categories.html', specs=specs,
-                           names=d, cats=cats, selectValue=selectValue)
+                           names=d, cats=cats)
 
 @app.route('/categories/specialties', methods=['GET', 'POST'])
 def catSpec():
