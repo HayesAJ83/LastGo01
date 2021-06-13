@@ -40,9 +40,52 @@ def alphabet():
     
     return render_template('alphabet.html', specs=specs, names=d)
 
+@app.route('/categories')
+def cat():
+
+    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+    sp1=pd.read_csv(url)
+    sp2=sp1.sort_values(by=['Topic'], ascending=True)
+    sp3=sp2['Topic'].dropna()
+    Sp_string = sp3.str.cat(sep=',')
+    Sp_splits = Sp_string.split(",")
+    Sp_S = set(Sp_splits)
+    Sp_T = np.array(list(Sp_S)).astype(object)
+    Sp_U = np.sort(Sp_T)
+    Sp_V = list(Sp_U)
+    Sp_W = pd.Series(Sp_V).rename('Topic')
+    Sp_X = Sp_W[1:]
+    Sp_Y = pd.Series(Sp_X)
+    Sp_Y.reset_index(inplace=True, drop=True)
+    Sp_Z = pd.DataFrame(Sp_Y)
+    specs = Sp_Z['Topic']
+    specs
+
+    df1=pd.read_csv(url)
+    df2=df1.sort_values(by=['Eponym'], ascending=True)
+    d=df2['Eponym_easy']
+
+    tp1=pd.read_csv(url)
+    tp2=tp1.sort_values(by=['Type'], ascending=True)
+    tp3=tp2['Type'].dropna()
+    Tp_string = tp3.str.cat(sep=',')
+    Tp_splits = Tp_string.split(",")
+    Tp_S = set(Tp_splits)
+    Tp_T = np.array(list(Tp_S)).astype(object)
+    Tp_U = np.sort(Tp_T)
+    Tp_V = list(Tp_U)
+    Tp_W = pd.Series(Tp_V).rename('Type')
+    Tp_X = pd.Series(Tp_W)
+    Tp_X.reset_index(inplace=True, drop=True)
+    Tp_Y = pd.DataFrame(Tp_X)
+    cats = Tp_Y['Type']
+
+    return render_template('categories.html', specs=specs,
+                           names=d, cats=cats)
+
 
 @app.route('/categories', methods=['GET', 'POST'])
-def cat():
+def catSpec():
 
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     sp1=pd.read_csv(url)
@@ -86,10 +129,6 @@ def cat():
     return render_template('categories.html', specs=specs,
                            names=d, cats=cats, SelectValue=SelectValue)
 
-@app.route('/categories/specialties', methods=['GET', 'POST'])
-def catSpec():
-    selectvalue = request.form.get('select')
-    return(str(selectValue))
 
 @app.route('/diseases')
 def dis():
