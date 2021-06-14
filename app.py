@@ -9,7 +9,7 @@ def index():
         )
 
 @app.route("/specialties" , methods=['GET', 'POST'])
-def test():
+def specialties():
     select = request.form.get('comp_select')
     return(str(select)) # just to see what select is
 
