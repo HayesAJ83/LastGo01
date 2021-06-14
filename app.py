@@ -69,7 +69,7 @@ def alphabet():
     return render_template('alphabet.html', specs=specs, names=d)
 
 @app.route('/categories')
-def cat():
+def categories():
 
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     sp1=pd.read_csv(url)
@@ -89,7 +89,7 @@ def cat():
     specs = Sp_Z['Topic']
     specs
 
-    data=[{'name':'red'}, {'name':'green'}, {'name':'blue'}]
+    #data=[{'name':'red'}, {'name':'green'}, {'name':'blue'}]
 
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
@@ -110,15 +110,15 @@ def cat():
     Tp_Y = pd.DataFrame(Tp_X)
     cats = Tp_Y['Type']
 
-    select_specs = request.form.get('select')
+    #select_specs = request.form.get('select')
 
     return render_template('categories.html', specs=specs,
-                           names=d, cats=cats, select_specs=select_specs)
-
+                           names=d, cats=cats)
+    #, select_specs=select_specs)
 
 
 @app.route('/diseases')
-def dis():
+def diseases():
 
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     sp1=pd.read_csv(url)
