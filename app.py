@@ -31,7 +31,6 @@ def alphabet():
     Sp_Y.reset_index(inplace=True, drop=True)
     Sp_Z = pd.DataFrame(Sp_Y)
     specs = Sp_Z['Topic']
-    specs
 
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     df1=pd.read_csv(url)
@@ -40,35 +39,7 @@ def alphabet():
     
     return render_template('alphabet.html', specs=specs, names=d)
 
-@app.route('/alphabet', methods=['GET', 'POST'])
-def alphabet(): 
-
-    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
-    sp1=pd.read_csv(url)
-    sp2=sp1.sort_values(by=['Topic'], ascending=True)
-    sp3=sp2['Topic'].dropna()
-    Sp_string = sp3.str.cat(sep=',')
-    Sp_splits = Sp_string.split(",")
-    Sp_S = set(Sp_splits)
-    Sp_T = np.array(list(Sp_S)).astype(object)
-    Sp_U = np.sort(Sp_T)
-    Sp_V = list(Sp_U)
-    Sp_W = pd.Series(Sp_V).rename('Topic')
-    Sp_X = Sp_W[1:]
-    Sp_Y = pd.Series(Sp_X)
-    Sp_Y.reset_index(inplace=True, drop=True)
-    Sp_Z = pd.DataFrame(Sp_Y)
-    specs = Sp_Z['Topic']
-    specs
-
-    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
-    df1=pd.read_csv(url)
-    df2=df1.sort_values(by=['Eponym'], ascending=True)
-    d=df2['Eponym_easy']
-    
-    return render_template('alphabet.html', specs=specs, names=d)
-
-@app.route('/categories')
+@app.route('/categories', methods=['GET', 'POST'])
 def categories():
 
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
@@ -87,9 +58,6 @@ def categories():
     Sp_Y.reset_index(inplace=True, drop=True)
     Sp_Z = pd.DataFrame(Sp_Y)
     specs = Sp_Z['Topic']
-    specs
-
-    #data=[{'name':'red'}, {'name':'green'}, {'name':'blue'}]
 
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
@@ -110,11 +78,7 @@ def categories():
     Tp_Y = pd.DataFrame(Tp_X)
     cats = Tp_Y['Type']
 
-    #select_specs = request.form.get('select')
-
-    return render_template('categories.html', specs=specs,
-                           names=d, cats=cats)
-    #, select_specs=select_specs)
+    return render_template('categories.html', specs=specs, names=d, cats=cats)
 
 
 @app.route('/diseases')
@@ -136,7 +100,6 @@ def diseases():
     Sp_Y.reset_index(inplace=True, drop=True)
     Sp_Z = pd.DataFrame(Sp_Y)
     specs = Sp_Z['Topic']
-    specs
     
     ds1=pd.read_csv(url)
     ds2=ds1.sort_values(by=['Disease'], ascending=True)
@@ -153,7 +116,6 @@ def diseases():
     Ds_Y.reset_index(inplace=True, drop=True)
     Ds_Z = pd.DataFrame(Ds_Y)
     diseases = Ds_Z['Disease']
-    diseases
 
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
