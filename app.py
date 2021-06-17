@@ -40,7 +40,7 @@ def alphabet():
     if request.method == "POST":
         selected_specs = request.form.getlist['select']
 
-    return render_template('alphabet.html', specs=specs, names=d)
+    return render_template('alphabet.html', specs=specs, names=d, selected_specs=selected_specs)
 
     #if request.form.get('toggle') == 'ALL'
     #        return render_template('alphabet.html')
@@ -95,6 +95,9 @@ def categories():
     Tp_X.reset_index(inplace=True, drop=True)
     Tp_Y = pd.DataFrame(Tp_X)
     cats = Tp_Y['Type']
+
+    if request.method == "POST":
+        selected_specs = request.form.getlist['select']
 
     return render_template('categories.html', specs=specs, names=d, cats=cats)
 
