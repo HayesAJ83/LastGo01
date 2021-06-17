@@ -40,7 +40,7 @@ def alphabet():
     if request.method == "POST":
         selected_specs = request.form.getlist['select']
 
-    return render_template('alphabet.html', specs=specs, names=d, selected_specs=selected_specs)
+    return render_template('alphabet.html', specs=specs, names=d)
 
     #if request.form.get('toggle') == 'ALL'
     #        return render_template('alphabet.html')
