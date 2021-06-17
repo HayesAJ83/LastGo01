@@ -94,51 +94,15 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Specialties</h1>
-                            <input type="checkbox" data-width="120" data-height="10" 
-                            checked data-toggle="toggle" data-on="All" data-off="Selected" 
-                            data-onstyle="light" data-offstyle="dark">
+                            <form method="POST" action="/">
+                                <input type="checkbox" data-width="120" data-height="10" 
+                                checked data-toggle="toggle" data-on="All" data-off="Selected" 
+                                data-onstyle="light" data-offstyle="dark">
+                            </form>
                         </div>
                     </div>
-                    <hr style="height:1px; visibility:hidden">
-                    <div class="row align-items-center text-center">
-                        <div class="col">
-                            <select multiple id="select">
-                                {% for spec in specs %}
-                                    <option selected="selected"> <li>{{ spec }}</li> </option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <br></br>
-                <br></br>
-                <div class="container">
-                    <div class="row align-items-center text-center">
-                        <div class="col">
-                            <h1 class="text-black mb-2 fs-1 ">Time Traveller</h1>
-                        </div>
-                    </div>
-                    <div class="row align-items-center text-center">
-                        <div class="col">
-                            <input type="text" id="range_02" name="example_name" value="" />
-                        </div>
-                    </div>
-                </div>
-                <br></br>
-                <br></br>
-                <div class="container">
-                    <div class="row align-items-center text-center">
-                        <div class="col">
-                            <h1 class="text-black mb-2 fs-1 ">Eponyms</h1>
-                            <select id="select1">
-                            {% for name in names %}
-                                <option> <li>{{ name }}</li> </option>
-                            {% endfor %}
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <br></br>
+          
+            
             </section>
             <!-- End of Section -->
         </main>
