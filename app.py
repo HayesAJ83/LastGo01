@@ -15,7 +15,6 @@ def index():
 @app.route('/alphabet', methods=['GET', 'POST'])
 def alphabet():
 
-
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     sp1=pd.read_csv(url)
     sp2=sp1.sort_values(by=['Topic'], ascending=True)
@@ -47,6 +46,15 @@ def alphabet():
     
     return render_template('alphabet.html', specs=specs, names=d)
 
+
+@app.route('/alphabet-specialities-select', methods=['GET', 'POST'])
+def alphabet_spec():
+
+    if request.form.get('spec_select') == 'OFF'
+
+    return render_template('alphabet_select.html')
+    
+    
 
 @app.route('/categories', methods=['GET', 'POST'])
 def categories():
