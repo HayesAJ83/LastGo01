@@ -37,11 +37,6 @@ def alphabet():
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
 
-#    if request.method == "POST"
-#        if request.form['checkbox'] == 'SELECTED':
-#            return redirect(url_for('alphabet_selectedspec'))
-
-#    elif request.method == "GET"
     return render_template('alphabet.html', specs=specs, names=d)
 
     #if request.form.get('toggle') == 'ALL'
@@ -52,12 +47,12 @@ def alphabet():
     
 
 
-@app.route('/alphabet-specialities-select', methods=['GET', 'POST'])
-def alphabet_spec():
-
-    if request.form.get('spec_select') == 'OFF'
-
-    return render_template('alphabet_selectspec.html')
+#@app.route('/alphabet-specialities-select', methods=['GET', 'POST'])
+#def alphabet_spec():
+#
+#    if request.form.get('spec_select') == 'OFF'
+#
+#    return render_template('alphabet_selectspec.html')
     
     
 
@@ -103,7 +98,7 @@ def categories():
     return render_template('categories.html', specs=specs, names=d, cats=cats)
 
 
-@app.route('/diseases')
+@app.route('/diseases', methods=['GET', 'POST'])
 def diseases():
 
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
@@ -142,7 +137,10 @@ def diseases():
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
-    
+
+    if request.method == "GET":
+        selected_specs = request.form.getlist['select']
+
     return render_template('diseases.html', specs=specs, names=d, diseases=diseases)
 
 @app.route('/journal')
