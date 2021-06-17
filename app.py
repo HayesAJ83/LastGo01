@@ -52,7 +52,7 @@ def alphabet_spec():
 
     if request.form.get('spec_select') == 'OFF'
 
-    return render_template('alphabet_select.html')
+    return render_template('alphabet_selectspec.html')
     
     
 
