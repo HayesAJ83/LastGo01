@@ -45,7 +45,8 @@ def alphabet():
 
     if request.method == "POST"
         print(request.form.getlist('specs[]'))
-            return render_template('alphabet.html', specs=specs, names=d)
+
+    return render_template('alphabet.html', specs=specs, names=d)
 
 
 @app.route('/categories', methods=['GET', 'POST'])
