@@ -39,7 +39,7 @@ def alphabet():
 
     if request.method == "POST"
         if request.form['checkbox'] == 'SELECTED':
-            return redirect(url_for('alphabet_selectedspec.html'))
+            return redirect(url_for('alphabet_selectedspec'))
 
     elif request.method == "GET"
         return render_template('alphabet.html', specs=specs, names=d)
