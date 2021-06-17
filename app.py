@@ -37,12 +37,12 @@ def alphabet():
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
 
-    if request.method == "POST"
-        if request.form['checkbox'] == 'SELECTED':
-            return redirect(url_for('alphabet_selectedspec'))
+#    if request.method == "POST"
+#        if request.form['checkbox'] == 'SELECTED':
+#            return redirect(url_for('alphabet_selectedspec'))
 
-    elif request.method == "GET"
-        return render_template('alphabet.html', specs=specs, names=d)
+#    elif request.method == "GET"
+    return render_template('alphabet.html', specs=specs, names=d)
 
     #if request.form.get('toggle') == 'ALL'
     #        return render_template('alphabet.html')
