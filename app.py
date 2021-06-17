@@ -44,8 +44,6 @@ def alphabet():
 
     if request.method == "POST"
         return render_template('alphabet.html', specs=specs, names=d)
-    else:
-        return render_template('alphabet_working.html', specs=specs, names=d)
 
 
 @app.route('/categories', methods=['GET', 'POST'])
