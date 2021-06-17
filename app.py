@@ -37,6 +37,9 @@ def alphabet():
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
 
+    #if request.method == "POST":
+    #    selected_specs = request.form.getlist['select']
+
     return render_template('alphabet.html', specs=specs, names=d)
 
     #if request.form.get('toggle') == 'ALL'
@@ -44,8 +47,6 @@ def alphabet():
     #    if request.form.get('toggle') == 'OFF'
     #        return render_template('alphabet_select.html')
     
-    
-
 
 #@app.route('/alphabet-specialities-select', methods=['GET', 'POST'])
 #def alphabet_spec():
@@ -137,9 +138,6 @@ def diseases():
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
-
-    if request.method == "GET":
-        selected_specs = request.form.getlist['select']
 
     return render_template('diseases.html', specs=specs, names=d, diseases=diseases)
 
