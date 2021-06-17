@@ -102,11 +102,15 @@
                     <hr style="height:1px; visibility:hidden">
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <select multiple id="select">
-                            {% for spec in specs %}
-                                <option selected="selected"> <li>{{ spec }}</li> </option>
-                            {% endfor %}
-                            </select>
+                            <form method="POST" action="/specialties" name="spec_options">
+                                <select multiple id="specs[]" multiple class="chosen-select">
+                                    {% for spec in specs %}
+                                        <option selected="selected"> <li>{{ spec }}</li> </option>
+                                    {% endfor %}
+                                    </select>
+                                <script> $(".chosen-select").chosen(); </script>
+                                <input type="submit" value="Submit">
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -192,7 +196,7 @@
         <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
         <script>
-            tail.select('#select', {
+            tail.select('#specs[]', {
                 multiple: true,
                 multiContainer: true,
                 multiSelectAll: true,
