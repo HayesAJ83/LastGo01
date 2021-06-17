@@ -21,11 +21,6 @@ def alphabet():
     #    if flask.request.form.get('toggle') == 'OFF'
     #        return render_template('alphabet_select.html')
 
-    if request.method == "POST"
-        print(request.form.getlist('specs[]'))
-            return 'Done'
-        return render_template('alphabet.html')
-    
 
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     sp1=pd.read_csv(url)
@@ -48,8 +43,12 @@ def alphabet():
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
-    
-    return render_template('alphabet.html', specs=specs, names=d)
+
+    if request.method == "POST"
+        print(request.form.getlist('specs[]'))
+            return 'Done'
+        return render_template('alphabet.html', specs=specs, names=d)
+
 
 @app.route('/categories', methods=['GET', 'POST'])
 def categories():
