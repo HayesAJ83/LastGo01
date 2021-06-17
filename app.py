@@ -13,7 +13,16 @@ def index():
     return render_template('index.html')
 
 @app.route('/alphabet', methods=['GET', 'POST'])
-def alphabet(): 
+def alphabet():
+
+    #if flask.request.method == 'POST':
+    #    if flask.request.form.get('toggle') == 'ON'
+    #        return render_template('alphabet_all.html')
+    #    if flask.request.form.get('toggle') == 'OFF'
+    #        return render_template('alphabet_select.html')
+
+    target_specs = request.form.getlist('specs[]')
+    
 
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     sp1=pd.read_csv(url)
