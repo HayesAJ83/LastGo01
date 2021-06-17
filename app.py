@@ -14,8 +14,7 @@ def index():
 
 @app.route('/alphabet', methods=['GET', 'POST'])
 def alphabet():
-
-    #if flask.request.method == 'POST':
+        
     #    if flask.request.form.get('toggle') == 'ON'
     #        return render_template('alphabet_all.html')
     #    if flask.request.form.get('toggle') == 'OFF'
@@ -43,10 +42,10 @@ def alphabet():
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
 
-    #if request.method == "POST"
-    #    print(request.form.getlist('specs[]'))
-
-    return render_template('alphabet.html', specs=specs, names=d)
+    if request.method == "POST"
+        return render_template('alphabet.html', specs=specs, names=d)
+    else:
+        return render_template('alphabet.html', specs=specs, names=d)
 
 
 @app.route('/categories', methods=['GET', 'POST'])
