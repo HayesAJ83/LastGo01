@@ -21,7 +21,6 @@ def alphabet():
     #    if flask.request.form.get('toggle') == 'OFF'
     #        return render_template('alphabet_select.html')
 
-
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     sp1=pd.read_csv(url)
     sp2=sp1.sort_values(by=['Topic'], ascending=True)
@@ -46,8 +45,7 @@ def alphabet():
 
     if request.method == "POST"
         print(request.form.getlist('specs[]'))
-            return 'Done'
-        return render_template('alphabet.html', specs=specs, names=d)
+            return render_template('alphabet.html', specs=specs, names=d)
 
 
 @app.route('/categories', methods=['GET', 'POST'])
