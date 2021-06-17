@@ -102,12 +102,12 @@
                     <hr style="height:1px; visibility:hidden">
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <form method="POST" action="/specialties" name="spec_options">
+                            <form method="POST" action="/" name="spec_options">
                                 <select multiple id="specs[]" multiple class="chosen-select">
                                     {% for spec in specs %}
                                         <option selected="selected"> <li>{{ spec }}</li> </option>
                                     {% endfor %}
-                                    </select>
+                                </select>
                                 <script> $(".chosen-select").chosen(); </script>
                                 <input type="submit" value="Submit">
                             </form>
