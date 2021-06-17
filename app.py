@@ -37,8 +37,8 @@ def alphabet():
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
 
-    #if request.method == "POST":
-    #    selected_specs = request.form.getlist['select']
+    if request.method == "POST":
+        selected_specs = request.form.getlist['select']
 
     return render_template('alphabet.html', specs=specs, names=d)
 
