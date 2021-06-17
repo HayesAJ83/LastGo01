@@ -14,11 +14,7 @@ def index():
 
 @app.route('/alphabet', methods=['GET', 'POST'])
 def alphabet():
-        
-    #    if flask.request.form.get('toggle') == 'ON'
-    #        return render_template('alphabet_all.html')
-    #    if flask.request.form.get('toggle') == 'OFF'
-    #        return render_template('alphabet_select.html')
+
 
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     sp1=pd.read_csv(url)
@@ -43,6 +39,12 @@ def alphabet():
     d=df2['Eponym_easy']
 
     #if request.method == "POST"
+
+    #if request.form.get('toggle') == 'ALL'
+    #        return render_template('alphabet.html')
+    #    if request.form.get('toggle') == 'OFF'
+    #        return render_template('alphabet_select.html')
+    
     return render_template('alphabet.html', specs=specs, names=d)
 
 
