@@ -21,6 +21,7 @@
         <link href="/static/assets/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
         <link href="/static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="https://rawgithub.com/indrimuska/jquery-editable-select/master/dist/jquery-editable-select.min.css" rel="stylesheet">
 
         <!-- Font Awesome -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
@@ -102,15 +103,12 @@
                     <hr style="height:1px; visibility:hidden">
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <form method="POST" action="/" name="spec_options">
-                                <select multiple id="specs[]" multiple class="chosen-select">
-                                    {% for spec in specs %}
-                                        <option selected="selected"> <li>{{ spec }}</li> </option>
-                                    {% endfor %}
-                                </select>
-                                <script> $(".chosen-select").chosen(); </script>
-                                <input type="submit" value="Submit">
-                            </form>
+                            <select multiple id="specs[]">
+                                {% for spec in specs %}
+                                    <option selected="selected"> <li>{{ spec }}</li> </option>
+                                {% endfor %}
+                            </select>
+                            <input type="submit" value="Submit">
                         </div>
                     </div>
                 </div>
@@ -180,6 +178,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="undefined" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/tail.select@0.5.15/js/tail.select-full.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://rawgithub.com/indrimuska/jquery-editable-select/master/dist/jquery-editable-select.min.js"></script>
 
         <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
         <script>
@@ -195,6 +194,14 @@
         <!--Plugin JavaScript file-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>   
         <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+
+
+        <!-- <script>
+            $("#specs[]").editableSelect({
+                effects: 'slide',
+                duration: 300
+            }); 
+        </script> -->
 
         <script>
             tail.select('#specs[]', {
