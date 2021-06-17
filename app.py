@@ -42,7 +42,7 @@ def alphabet():
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
 
-    if request.method == "GET"
+    if request.method == "POST"
         return render_template('alphabet.html', specs=specs, names=d)
     else:
         return render_template('alphabet_working.html', specs=specs, names=d)
