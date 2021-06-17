@@ -142,6 +142,9 @@ def diseases():
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
 
+    if request.method == "POST":
+        selected_specs = request.form.getlist['select']
+
     return render_template('diseases.html', specs=specs, names=d, diseases=diseases)
 
 @app.route('/journal')
@@ -185,6 +188,9 @@ def journal():
     journals = Jn_Z['Journal']
     journals
 
+    if request.method == "POST":
+        selected_specs = request.form.getlist['select']
+
     return render_template('journals.html', specs=specs, names=d, journals=journals)
 
 @app.route('/operations')
@@ -226,6 +232,9 @@ def ops():
 
     ns2=op1.sort_values(by=['Eponym'], ascending=True)
     names=ns2['Eponym_easy']
+
+    if request.method == "POST":
+        selected_specs = request.form.getlist['select']
     
     return render_template('ops.html', specs=specs, ops=ops, names=names)
 
@@ -253,6 +262,10 @@ def maps():
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
+
+    if request.method == "POST":
+        selected_specs = request.form.getlist['select']
+    
     return render_template('maps.html', specs=specs, names=d)
 
 
