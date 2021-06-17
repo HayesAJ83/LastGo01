@@ -94,9 +94,14 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Specialties</h1>
-                            <input type="checkbox" data-width="120" data-height="10" 
-                            checked data-toggle="toggle" data-on="All" data-off="Selected" 
-                            data-onstyle="light" data-offstyle="dark">
+                                <form action="/categories" method="POST">
+                                    <input 
+                                    type="checkbox" data-width="120" data-height="10" 
+                                    checked data-toggle="toggle" data-on="All" data-off="Selected" 
+                                    data-onstyle="light" data-offstyle="dark"
+                                    onclick="this.form.submit()" 
+                                    id='activate-toggle'>
+                                </form>
                         </div>
                     </div>
                     <hr style="height:1px; visibility:hidden">
