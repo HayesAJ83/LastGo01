@@ -15,6 +15,9 @@ def index():
 @app.route('/alphabet', methods=['GET', 'POST'])
 def alphabet():
 
+    if request.form['activate-toggle'] == "ON":
+        return render_template('alphabet.html')
+
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     sp1=pd.read_csv(url)
     sp2=sp1.sort_values(by=['Topic'], ascending=True)
@@ -32,6 +35,7 @@ def alphabet():
     Sp_Z = pd.DataFrame(Sp_Y)
     specs = Sp_Z['Topic']
 
+
     if request.method == "POST":
         selected_specs = request.form.getlist['select']
         url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
@@ -44,7 +48,7 @@ def alphabet():
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
         
-    return render_template('alphabet.html', specs=specs, names=d)
+    return render_template('alphabet_allspec.html', specs=specs, names=d)
 
     #if request.form.get('toggle') == 'ALL'
     #        return render_template('alphabet.html')
