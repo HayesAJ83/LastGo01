@@ -38,19 +38,19 @@ def alphabet():
     d=df2['Eponym_easy']
 
     if request.method == "POST":
-        if request.form.get['activate-toggle'] == 'ON':
-            return print("ON")
-        elif request.form.get['activate-toggle'] == 'OFF':
-            return print("OFF")
+        if request.form.get('activate-toggle') == 'ON':
+            print("ON")
+        elif request.form.get('activate-toggle') == 'OFF':
+            print("OFF")
         else:
             return render_template('alphabet.html', specs=specs, names=d)
             
             
-    elif request.method == "GET":
-        if request.form.get['activate-toggle'] == 'ON':
-            return print("ON")
-        elif request.form.get['activate-toggle'] == 'OFF':
-            return print("OFF")
+    if request.method == "GET":
+        if request.form.get('activate-toggle') == 'ON':
+            print("ON")
+        elif request.form.get('activate-toggle') == 'OFF':
+            print("OFF")
         else:
             return render_template('alphabet_selectspec.html', specs=specs, names=d)
 
