@@ -15,40 +15,46 @@ def index():
 @app.route('/alphabet', methods=['GET', 'POST'])
 def alphabet():
 
-    if request.form['activate-toggle'] == "ON":
-        return render_template('alphabet.html')
-
-    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
-    sp1=pd.read_csv(url)
-    sp2=sp1.sort_values(by=['Topic'], ascending=True)
-    sp3=sp2['Topic'].dropna()
-    Sp_string = sp3.str.cat(sep=',')
-    Sp_splits = Sp_string.split(",")
-    Sp_S = set(Sp_splits)
-    Sp_T = np.array(list(Sp_S)).astype(object)
-    Sp_U = np.sort(Sp_T)
-    Sp_V = list(Sp_U)
-    Sp_W = pd.Series(Sp_V).rename('Topic')
-    Sp_X = Sp_W[1:]
-    Sp_Y = pd.Series(Sp_X)
-    Sp_Y.reset_index(inplace=True, drop=True)
-    Sp_Z = pd.DataFrame(Sp_Y)
-    specs = Sp_Z['Topic']
-
-
     if request.method == "POST":
-        selected_specs = request.form.getlist['select']
+        if request.form['activate-toggle'] == 'OFF':
+
+        url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+        sp1=pd.read_csv(url)
+        sp2=sp1.sort_values(by=['Topic'], ascending=True)
+        sp3=sp2['Topic'].dropna()
+        Sp_string = sp3.str.cat(sep=',')
+        Sp_splits = Sp_string.split(",")
+        Sp_S = set(Sp_splits)
+        Sp_T = np.array(list(Sp_S)).astype(object)
+        Sp_U = np.sort(Sp_T)
+        Sp_V = list(Sp_U)
+        Sp_W = pd.Series(Sp_V).rename('Topic')
+        Sp_X = Sp_W[1:]
+        Sp_Y = pd.Series(Sp_X)
+        Sp_Y.reset_index(inplace=True, drop=True)
+        Sp_Z = pd.DataFrame(Sp_Y)
+        specs = Sp_Z['Topic']
+
         url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
         df1=pd.read_csv(url)
         df2=df1.sort_values(by=['Eponym'], ascending=True)
         d=df2['Eponym_easy']
 
-    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
-    df1=pd.read_csv(url)
-    df2=df1.sort_values(by=['Eponym'], ascending=True)
-    d=df2['Eponym_easy']
+        return render_template('alphabet.html', specs=specs, names=d)
+
+    
+
+
+#    if request.method == "POST":
+#        selected_specs = request.form.getlist['select']
+#        url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+#        df1=pd.read_csv(url)
+#        df2=df1.sort_values(by=['Eponym'], ascending=True)
+#        d=df2['Eponym_easy']
+
+
         
-    return render_template('alphabet_allspec.html', specs=specs, names=d)
+#    return render_template('alphabet_allspec.html')
 
     #if request.form.get('toggle') == 'ALL'
     #        return render_template('alphabet.html')
