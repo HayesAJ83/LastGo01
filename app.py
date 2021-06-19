@@ -47,7 +47,8 @@ def alphabet():
     if request.method == "GET":     #This is what its doing#
         
         if request.form.get('activate-toggle') == 'ON':
-            print("ON")
+            return render_template('alphabet_selectspec.html', specs=specs, names=d)
+        
         elif request.form.get('activate-toggle') == 'OFF':
             print("OFF")
         else:
