@@ -52,7 +52,7 @@ def alphabet():
         elif request.form.get['activate-toggle'] == 'OFF':
             return print("OFF")
         else:
-            return render_template('alphabet_select.html', specs=specs, names=d)
+            return render_template('alphabet_selectspec.html', specs=specs, names=d)
 
         
 
