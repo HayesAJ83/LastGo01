@@ -37,21 +37,19 @@ def alphabet():
     d=df2['Eponym_easy']
 
     if request.method == "POST":
-        button = bool(flask.request.form.get('activate-toggle', False))
-        return "Toggle value: %r" % (button,)
-        #if request.values.get('activate-toggle') == 'ON':
-        #    print("ON")
-        #elif request.values.get('activate-toggle') == 'OFF':
-        #    print("OFF")
-        #else:
-        #    return render_template('alphabet_selectspec.html', specs=specs, names=d)
+        if request.values.get('activate-toggle') == 'true':
+            print("ON")
+        elif request.values.get('activate-toggle') == 'false':
+            print("OFF")
+        else:
+            return render_template('alphabet_selectspec.html', specs=specs, names=d)
             
     if request.method == "GET":     #This is what its doing#
         
-        if request.form.get('activate-toggle') == 'ON':
+        if request.form.get('activate-toggle') == 'true':
             return render_template('alphabet_selectspec.html', specs=specs, names=d)
         
-        elif request.values.get('activate-toggle') == 'OFF':
+        elif request.values.get('activate-toggle') == 'false':
             print("OFF")
         else:
             return render_template('alphabet.html', specs=specs, names=d)
