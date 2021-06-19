@@ -37,9 +37,10 @@ def alphabet():
     d=df2['Eponym_easy']
 
     if request.method == "POST":
-        if request.values.get('activate-toggle') == "on":
-            print("ON")
-        elif request.values.get('activate-toggle') == "off":
+        if request.form.get('activate-toggle') == "on":
+            return render_template('alphabet_selectspec.html', specs=specs, names=d)
+        
+        elif request.form.get('activate-toggle') == "off":
             print("OFF")
         else:
             return render_template('alphabet_selectspec.html', specs=specs, names=d)
@@ -49,7 +50,7 @@ def alphabet():
         if request.form.get('activate-toggle') == "on":
             return render_template('alphabet_selectspec.html', specs=specs, names=d)
         
-        elif request.values.get('activate-toggle') == "off":
+        elif request.form.get('activate-toggle') == "off":
             print("OFF")
         else:
             return render_template('alphabet.html', specs=specs, names=d)
