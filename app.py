@@ -36,53 +36,8 @@ def alphabet():
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
 
-    if request.method == "POST":
-        if request.form.get('activate-toggle') == "ON":
-            return render_template('alphabet_selectspec.html', specs=specs, names=d)
-        
-        elif request.form.get('activate-toggle') == "OFF":
-            print("OFF")
-        else:
-            return render_template('alphabet_selectspec.html', specs=specs, names=d)
-            
-    if request.method == "GET":     #This is what its doing#
-        if request.form.get('activate-toggle') == "ON":
-            return render_template('alphabet_selectspec.html', specs=specs, names=d)
-        
-        elif request.form.get('activate-toggle') == "OFF":
-            print("OFF")
-        else:
-            return render_template('alphabet.html', specs=specs, names=d)
+    return render_template('alphabet.html', specs=specs, names=d)
 
-        
-
-    
-
-
-#    if request.method == "POST":
-#        selected_specs = request.form.getlist['select']
-#        url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
-#        df1=pd.read_csv(url)
-#        df2=df1.sort_values(by=['Eponym'], ascending=True)
-#        d=df2['Eponym_easy']
-
-
-        
-#    return render_template('alphabet_allspec.html')
-
-    #if request.form.get('toggle') == 'ALL'
-    #        return render_template('alphabet.html')
-    #    if request.form.get('toggle') == 'OFF'
-    #        return render_template('alphabet_select.html')
-    
-
-#@app.route('/alphabet-specialities-select', methods=['GET', 'POST'])
-#def alphabet_spec():
-#
-#    if request.form.get('spec_select') == 'OFF'
-#
-#    return render_template('alphabet_selectspec.html')
-    
 
 @app.route('/alphabet/specialties', methods=['GET', 'POST'])
 def alphabet_specs():
@@ -151,10 +106,59 @@ def categories():
     Tp_Y = pd.DataFrame(Tp_X)
     cats = Tp_Y['Type']
 
-    if request.method == "POST":
-        selected_specs = request.form.getlist['select']
+#    if request.method == "POST":
+#        selected_specs = request.form.getlist['select']
 
     return render_template('categories.html', specs=specs, names=d, cats=cats)
+
+
+@app.route('/categories/specialties', methods=['GET', 'POST'])
+def categories_specs():
+
+    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+    sp1=pd.read_csv(url)
+    sp2=sp1.sort_values(by=['Topic'], ascending=True)
+    sp3=sp2['Topic'].dropna()
+    Sp_string = sp3.str.cat(sep=',')
+    Sp_splits = Sp_string.split(",")
+    Sp_S = set(Sp_splits)
+    Sp_T = np.array(list(Sp_S)).astype(object)
+    Sp_U = np.sort(Sp_T)
+    Sp_V = list(Sp_U)
+    Sp_W = pd.Series(Sp_V).rename('Topic')
+    Sp_X = Sp_W[1:]
+    Sp_Y = pd.Series(Sp_X)
+    Sp_Y.reset_index(inplace=True, drop=True)
+    Sp_Z = pd.DataFrame(Sp_Y)
+    specs = Sp_Z['Topic']
+
+    df1=pd.read_csv(url)
+    df2=df1.sort_values(by=['Eponym'], ascending=True)
+    d=df2['Eponym_easy']
+
+    tp1=pd.read_csv(url)
+    tp2=tp1.sort_values(by=['Type'], ascending=True)
+    tp3=tp2['Type'].dropna()
+    Tp_string = tp3.str.cat(sep=',')
+    Tp_splits = Tp_string.split(",")
+    Tp_S = set(Tp_splits)
+    Tp_T = np.array(list(Tp_S)).astype(object)
+    Tp_U = np.sort(Tp_T)
+    Tp_V = list(Tp_U)
+    Tp_W = pd.Series(Tp_V).rename('Type')
+    Tp_X = pd.Series(Tp_W)
+    Tp_X.reset_index(inplace=True, drop=True)
+    Tp_Y = pd.DataFrame(Tp_X)
+    cats = Tp_Y['Type']
+
+#    if request.method == "POST":
+#        selected_specs = request.form.getlist['select']
+
+    return render_template('categories_selectspec.html', specs=specs, names=d, cats=cats)
+
+
+
+
 
 
 @app.route('/diseases', methods=['GET', 'POST'])
