@@ -84,7 +84,7 @@ def alphabet():
 #    return render_template('alphabet_selectspec.html')
     
 
-@app.route('/alphabet_specs', methods=['GET', 'POST'])
+@app.route('/alphabet/specialties', methods=['GET', 'POST'])
 def alphabet_specs():
 
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
