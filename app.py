@@ -195,7 +195,7 @@ def diseases():
 
 
 @app.route('/diseases/specialties', methods=['GET', 'POST'])
-def diseases():
+def diseases_specs():
 
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     sp1=pd.read_csv(url)
