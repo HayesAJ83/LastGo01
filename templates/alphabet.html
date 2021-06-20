@@ -93,12 +93,14 @@
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <h1 class="text-black mb-2 fs-1 ">Specialties</h1>    
-                            <input type="checkbox" data-width="120" data-height="10" 
-                            checked data-toggle="toggle" data-on="ON" data-off="OFF" 
-                            data-onstyle="light" data-offstyle="dark"
-                            onclick="this.form.submit()"
-                            id='activate-toggle' name='activate-toggle'>
+                            <h1 class="text-black mb-2 fs-1 ">Specialties</h1>
+                            <form method="POST" action="{{url_for('alphabet_specs')}}">
+                                <input type="checkbox" data-width="120" data-height="10" 
+                                checked data-toggle="toggle" data-on="ON" data-off="OFF" 
+                                data-onstyle="light" data-offstyle="dark"
+                                onclick="this.form.submit()"
+                                id='activate-toggle' name='activate-toggle'>
+                            </form>    
                         </div>
                     </div>
                 <br></br>
