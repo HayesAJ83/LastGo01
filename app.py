@@ -66,7 +66,6 @@ def alphabet_specs():
     return render_template('alphabet_selectspec.html', specs=specs, names=d)
 
 
-
 @app.route('/categories', methods=['GET', 'POST'])
 def categories():
 
@@ -105,9 +104,6 @@ def categories():
     Tp_X.reset_index(inplace=True, drop=True)
     Tp_Y = pd.DataFrame(Tp_X)
     cats = Tp_Y['Type']
-
-#    if request.method == "POST":
-#        selected_specs = request.form.getlist['select']
 
     return render_template('categories.html', specs=specs, names=d, cats=cats)
 
@@ -151,14 +147,7 @@ def categories_specs():
     Tp_Y = pd.DataFrame(Tp_X)
     cats = Tp_Y['Type']
 
-#    if request.method == "POST":
-#        selected_specs = request.form.getlist['select']
-
     return render_template('categories_selectspec.html', specs=specs, names=d, cats=cats)
-
-
-
-
 
 
 @app.route('/diseases', methods=['GET', 'POST'])
@@ -201,10 +190,53 @@ def diseases():
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
 
-    if request.method == "POST":
-        selected_specs = request.form.getlist['select']
-
     return render_template('diseases.html', specs=specs, names=d, diseases=diseases)
+
+
+
+@app.route('/diseases/specialties', methods=['GET', 'POST'])
+def diseases():
+
+    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+    sp1=pd.read_csv(url)
+    sp2=sp1.sort_values(by=['Topic'], ascending=True)
+    sp3=sp2['Topic'].dropna()
+    Sp_string = sp3.str.cat(sep=',')
+    Sp_splits = Sp_string.split(",")
+    Sp_S = set(Sp_splits)
+    Sp_T = np.array(list(Sp_S)).astype(object)
+    Sp_U = np.sort(Sp_T)
+    Sp_V = list(Sp_U)
+    Sp_W = pd.Series(Sp_V).rename('Topic')
+    Sp_X = Sp_W[1:]
+    Sp_Y = pd.Series(Sp_X)
+    Sp_Y.reset_index(inplace=True, drop=True)
+    Sp_Z = pd.DataFrame(Sp_Y)
+    specs = Sp_Z['Topic']
+    
+    ds1=pd.read_csv(url)
+    ds2=ds1.sort_values(by=['Disease'], ascending=True)
+    ds3=ds2['Disease'].dropna()
+    Ds_string = ds3.str.cat(sep=',')
+    Ds_splits = Ds_string.split(",")
+    Ds_S = set(Ds_splits)
+    Ds_T = np.array(list(Ds_S)).astype(object)
+    Ds_U = np.sort(Ds_T)
+    Ds_V = list(Ds_U)
+    Ds_W = pd.Series(Ds_V).rename('Disease')
+    Ds_X = Ds_W[1:]
+    Ds_Y = pd.Series(Ds_X)
+    Ds_Y.reset_index(inplace=True, drop=True)
+    Ds_Z = pd.DataFrame(Ds_Y)
+    diseases = Ds_Z['Disease']
+
+    df1=pd.read_csv(url)
+    df2=df1.sort_values(by=['Eponym'], ascending=True)
+    d=df2['Eponym_easy']
+
+    return render_template('diseases_selectspec.html', specs=specs, names=d, diseases=diseases)
+
+
 
 @app.route('/journal')
 def journal():
