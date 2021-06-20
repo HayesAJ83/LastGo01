@@ -108,8 +108,7 @@ def alphabet_specs():
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
 
-
-    return redirect(url_for('alphabet_select'))
+    return render_template('alphabet_select.html', specs=specs, names=d)
 
 
 
