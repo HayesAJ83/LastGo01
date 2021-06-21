@@ -58,10 +58,10 @@
                     <img src="/static/assets/img/SurgicalNames.png" class="d-block d-lg-none" alt="SurgicalNames" width="150" />
                 </a>
 
-                <div class="search d-none d-lg-flex justify-content-end ml-auto mr-2">
-                    <input class="form-control mr-2" type="text">
-                    <i class="zmdi zmdi-search"></i>
-                </div>
+                <a class="navbar-brand mr-lg-5 mr-xl-7" href="{{ url_for('.index', _anchor='section-4') }}">
+                    <img src="/static/assets/img/EponymExplorer.png" class="d-none d-lg-block" alt="EponymExplorer" width="183" />
+                    <img src="/static/assets/img/EponymExplorer.png" class="d-block d-lg-none" alt="EponymExplorer" width="150" />
+                </a>
             </div>
         </header>
         <!-- End of Header -->
@@ -77,12 +77,6 @@
                             <h1 class="mb-5 fs-lg-1 text-white" data-aos="fade-down" data-aos-duration="1500">Search</h1>
                             <p class="text-white text-uppercase fs-4 fs-lg-6" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1500">Operations</p>
                         </div>
-                    
-                        <div class="move d-none d-lg-block">
-                            <a href="#/operations/section-2" class="text-white" data-smooth-scroll data-smooth-scroll-hash="false">
-                                <i class="zmdi zmdi-long-arrow-down zmdi-hc-2x"></i>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -93,11 +87,10 @@
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <h1 class="text-black mb-2 fs-1 ">Specialties</h1>
-                            <input type="checkbox" data-width="120" data-height="10" 
-                            checked data-toggle="toggle" data-on="All" data-off="Selected" 
-                            data-onstyle="light" data-offstyle="dark">
-                        </div>
+                            <a class="btn btn-primary active"   role="button" aria-pressed="true">All</a>
+                            <a href="{{ url_for('.ops_specs', _anchor='section-2') }}"
+                               class="btn btn-light" role="button" aria-pressed="true">Options
+                            </a>
                     </div>
                     <hr style="height:1px; visibility:hidden">
                     <div class="row align-items-center text-center">
