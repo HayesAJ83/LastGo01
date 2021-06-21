@@ -104,7 +104,7 @@
                         </div>
                         <p>
                             {% block content %} 
-                                {{ time_stop }}
+                                {{ SomeValue }}
                             {% endblock %}
                         </p>
                     </div>
@@ -208,6 +208,10 @@
             prefix: 'Year : ',
             prettify_separator: '',
             hide_min_max: true,
+            onFinish: function(data){
+                var value = data.fromNumber;
+                $("#SomeValue").val(value);
+                }
             });
         </script>
         
