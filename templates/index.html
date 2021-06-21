@@ -300,6 +300,12 @@
             AOS.init();
           </script>
 
+        <script>
+            $(window).on('load', function() {
+                $('#mdb-preloader').delay(1000).fadeOut(300);
+            });
+        </script>
+
         <!-- Theme Javascripts -->
         <script src="/static/assets/js/theme.js"></script>
     </body>
