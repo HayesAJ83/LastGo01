@@ -83,10 +83,19 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Specialties</h1>
-                            <a class="btn btn-primary active"   role="button" aria-pressed="true">All</a>
-                            <a href="{{ url_for('.journals_specs', _anchor='section-2') }}"
-                               class="btn btn-light" role="button" aria-pressed="true">Options
-                            </a>
+                            <a href="{{ url_for('.journals', _anchor='section-2') }}"
+                               class="btn btn-light"          role="button" aria-pressed="true">All</a>
+                            <a class="btn btn-primary active" role="button" aria-pressed="true">Options</a>
+                        </div>
+                    </div>
+                    <hr style="height:1px; visibility:hidden">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <select multiple id="select">
+                                {% for spec in specs %}
+                                    <option selected="selected"> <li>{{ spec }}</li> </option>
+                                {% endfor %}
+                            </select>
                         </div>
                     </div>
                 </div>
