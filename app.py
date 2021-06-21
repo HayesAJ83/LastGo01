@@ -237,8 +237,8 @@ def diseases_specs():
     return render_template('diseases_selectspec.html', specs=specs, names=d, diseases=diseases)
 
 
-@app.route('/journal', methods=['GET', 'POST'])
-def journal():
+@app.route('/journals', methods=['GET', 'POST'])
+def journals():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     sp1=pd.read_csv(url)
     sp2=sp1.sort_values(by=['Topic'], ascending=True)
@@ -280,8 +280,8 @@ def journal():
     return render_template('journals.html', specs=specs, names=d, journals=journals)
 
 
-@app.route('/journal/specialties', methods=['GET', 'POST'])
-def journal_specs():
+@app.route('/journals/specialties', methods=['GET', 'POST'])
+def journals_specs():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     sp1=pd.read_csv(url)
     sp2=sp1.sort_values(by=['Topic'], ascending=True)
@@ -318,7 +318,6 @@ def journal_specs():
     Jn_Y.reset_index(inplace=True, drop=True)
     Jn_Z = pd.DataFrame(Jn_Y)
     journals = Jn_Z['Journal']
-    journals
 
     return render_template('journals_selectspec.html', specs=specs, names=d, journals=journals)
 
