@@ -32,11 +32,15 @@ def alphabet():
     Sp_Z = pd.DataFrame(Sp_Y)
     specs = Sp_Z['Topic']
 
+    time_stop = request.form.get('time')
+
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
+    
 
-    return render_template('alphabet.html', specs=specs, names=d)
+    return render_template('alphabet.html', specs=specs,
+                           time_stop=time_stop, names=d)
 
 
 @app.route('/alphabet/specialties', methods=['GET', 'POST'])
