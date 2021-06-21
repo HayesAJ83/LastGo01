@@ -237,8 +237,7 @@ def diseases_specs():
     return render_template('diseases_selectspec.html', specs=specs, names=d, diseases=diseases)
 
 
-
-@app.route('/journal')
+@app.route('/journal', methods=['GET', 'POST'])
 def journal():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     sp1=pd.read_csv(url)
@@ -256,7 +255,6 @@ def journal():
     Sp_Y.reset_index(inplace=True, drop=True)
     Sp_Z = pd.DataFrame(Sp_Y)
     specs = Sp_Z['Topic']
-    specs
     
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
@@ -279,12 +277,53 @@ def journal():
     journals = Jn_Z['Journal']
     journals
 
-    if request.method == "POST":
-        selected_specs = request.form.getlist['select']
-
     return render_template('journals.html', specs=specs, names=d, journals=journals)
 
-@app.route('/operations')
+
+@app.route('/journal/specialties', methods=['GET', 'POST'])
+def journal_specs():
+    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+    sp1=pd.read_csv(url)
+    sp2=sp1.sort_values(by=['Topic'], ascending=True)
+    sp3=sp2['Topic'].dropna()
+    Sp_string = sp3.str.cat(sep=',')
+    Sp_splits = Sp_string.split(",")
+    Sp_S = set(Sp_splits)
+    Sp_T = np.array(list(Sp_S)).astype(object)
+    Sp_U = np.sort(Sp_T)
+    Sp_V = list(Sp_U)
+    Sp_W = pd.Series(Sp_V).rename('Topic')
+    Sp_X = Sp_W[1:]
+    Sp_Y = pd.Series(Sp_X)
+    Sp_Y.reset_index(inplace=True, drop=True)
+    Sp_Z = pd.DataFrame(Sp_Y)
+    specs = Sp_Z['Topic']
+    
+    df1=pd.read_csv(url)
+    df2=df1.sort_values(by=['Eponym'], ascending=True)
+    d=df2['Eponym_easy']
+
+    jn1=pd.read_csv(url)
+    jn2=jn1.sort_values(by=['Journal'], ascending=True)
+    jn3=jn2['Journal'].dropna()
+    Jn_string = jn3.str.cat(sep=',')
+    Jn_splits = Jn_string.split(",")
+    Jn_S = set(Jn_splits)
+    Jn_T = np.array(list(Jn_S)).astype(object)
+    Jn_U = np.sort(Jn_T)
+    Jn_V = list(Jn_U)
+    Jn_W = pd.Series(Jn_V).rename('Journal')
+    Jn_X = Jn_W[1:]
+    Jn_Y = pd.Series(Jn_X)
+    Jn_Y.reset_index(inplace=True, drop=True)
+    Jn_Z = pd.DataFrame(Jn_Y)
+    journals = Jn_Z['Journal']
+    journals
+
+    return render_template('journals_selectspec.html', specs=specs, names=d, journals=journals)
+
+
+@app.route('/operations', methods=['GET', 'POST'])
 def ops():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     sp1=pd.read_csv(url)
@@ -325,7 +364,7 @@ def ops():
     return render_template('ops.html', specs=specs, ops=ops, names=names)
 
 
-@app.route('/operations/specialties')
+@app.route('/operations/specialties', methods=['GET', 'POST'])
 def ops_specs():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     sp1=pd.read_csv(url)
@@ -366,8 +405,7 @@ def ops_specs():
     return render_template('ops_selectspec.html', specs=specs, ops=ops, names=names)
 
 
-
-@app.route('/maps')
+@app.route('/maps', methods=['GET', 'POST'])
 def maps():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     sp1=pd.read_csv(url)
@@ -391,13 +429,11 @@ def maps():
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
-
-    if request.method == "POST":
-        selected_specs = request.form.getlist['select']
     
     return render_template('maps.html', specs=specs, names=d)
 
-@app.route('/maps/specialties')
+
+@app.route('/maps/specialties', methods=['GET', 'POST'])
 def maps_specs():
     url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     sp1=pd.read_csv(url)
@@ -421,9 +457,6 @@ def maps_specs():
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
-
-    if request.method == "POST":
-        selected_specs = request.form.getlist['select']
     
     return render_template('maps_selectspec.html', specs=specs, names=d)
 
