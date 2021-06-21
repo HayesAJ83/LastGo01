@@ -302,9 +302,7 @@ def ops():
     Sp_Y.reset_index(inplace=True, drop=True)
     Sp_Z = pd.DataFrame(Sp_Y)
     specs = Sp_Z['Topic']
-    specs
     
-    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
     op1=pd.read_csv(url)
     op2=op1.sort_values(by=['Operation'], ascending=True)
     op3=op2['Operation'].dropna()
@@ -323,11 +321,51 @@ def ops():
 
     ns2=op1.sort_values(by=['Eponym'], ascending=True)
     names=ns2['Eponym_easy']
-
-    if request.method == "POST":
-        selected_specs = request.form.getlist['select']
     
     return render_template('ops.html', specs=specs, ops=ops, names=names)
+
+
+@app.route('/operations/specialties')
+def ops_specs():
+    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+    sp1=pd.read_csv(url)
+    sp2=sp1.sort_values(by=['Topic'], ascending=True)
+    sp3=sp2['Topic'].dropna()
+    Sp_string = sp3.str.cat(sep=',')
+    Sp_splits = Sp_string.split(",")
+    Sp_S = set(Sp_splits)
+    Sp_T = np.array(list(Sp_S)).astype(object)
+    Sp_U = np.sort(Sp_T)
+    Sp_V = list(Sp_U)
+    Sp_W = pd.Series(Sp_V).rename('Topic')
+    Sp_X = Sp_W[1:]
+    Sp_Y = pd.Series(Sp_X)
+    Sp_Y.reset_index(inplace=True, drop=True)
+    Sp_Z = pd.DataFrame(Sp_Y)
+    specs = Sp_Z['Topic']
+    
+    op1=pd.read_csv(url)
+    op2=op1.sort_values(by=['Operation'], ascending=True)
+    op3=op2['Operation'].dropna()
+    Op_string = op3.str.cat(sep=',')
+    Op_splits = Op_string.split(",")
+    Op_S = set(Op_splits)
+    Op_T = np.array(list(Op_S)).astype(object)
+    Op_U = np.sort(Op_T)
+    Op_V = list(Op_U)
+    Op_W = pd.Series(Op_V).rename('Operation')
+    Op_X = Op_W[1:]
+    Op_Y = pd.Series(Op_X)
+    Op_Y.reset_index(inplace=True, drop=True)
+    Op_Z = pd.DataFrame(Op_Y)
+    ops = Op_Z['Operation']
+
+    ns2=op1.sort_values(by=['Eponym'], ascending=True)
+    names=ns2['Eponym_easy']
+    
+    return render_template('ops_selectspec.html', specs=specs, ops=ops, names=names)
+
+
 
 @app.route('/maps')
 def maps():
