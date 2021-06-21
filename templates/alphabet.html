@@ -100,8 +100,13 @@
                     </div>
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <input type="text" id="range_02" name="example_name" value="" />
+                            <input type="text" id="range_02" name="time" value="" />
                         </div>
+                        <p>
+                            {% block content %} 
+                                {{ time_stop }}
+                            {% endblock %}
+                        </p>
                     </div>
                 </div>
                 <br></br>
