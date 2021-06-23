@@ -89,17 +89,19 @@
                         </div>
                     </div>
                     <hr style="height:1px; visibility:hidden">
-                    <form method="POST">
-                        <div class="row align-items-center text-center">
-                            <div class="col">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <form method="POST" action="/selected" name="specs_options">
                                 <select multiple id="specs_options[]" name="specs_options[]">
                                     {% for spec in specs %}
                                         <option> <li>{{ spec }}</li> </option>
                                     {% endfor %}
                                 </select>
-                            </div>
+                            <script> $(".chosen-select").chosen(); </script>
+                            <input type="submit" value="Submit">
+                            </form>
                         </div>
-                    </form>
+                    </div>
                 </div>
                 <br></br>
                 <div class="container">
