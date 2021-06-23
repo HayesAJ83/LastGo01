@@ -89,17 +89,17 @@
                         </div>
                     </div>
                     <hr style="height:1px; visibility:hidden">
-                    <form method="POST">
-                        <div class="row align-items-center text-center">
-                            <div class="col">
-                                <select multiple id="select">
-                                    {% for spec in specs %}
-                                        <option> <li>{{ spec }}</li> </option>
-                                    {% endfor %}
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <form method="POST" action="/selected" name="chart_options">
+                                <select multiple id="specs_options[]" name="specs_options[]">
+                                {% for spec in specs %}
+                                    <option> <li>{{ spec }}</li> </option>
+                                {% endfor %}
                                 </select>
-                            </div>
+                            </form>
                         </div>
-                    </form>
+                    </div>
                 </div>
                 <br></br>
                 <div class="container">
@@ -184,7 +184,7 @@
         <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
         <script>
-            tail.select('#select', {
+            tail.select('#specs_options[]', {
                 multiple: true,
                 multiContainer: true,
                 multiSelectAll: true,
