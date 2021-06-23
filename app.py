@@ -32,13 +32,12 @@ def alphabet():
     Sp_Z = pd.DataFrame(Sp_Y)
     specs = Sp_Z['Topic']
 
- #   if request.method == "POST":
- #       SomeValue = request.form.get('SomeValue')
+    if request.method == "POST":
+        select_specs = request.form.getlist('specs_options[]')
 
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
-    
 
     return render_template('alphabet.html', specs=specs, names=d)
 
@@ -62,6 +61,8 @@ def alphabet_specs():
     Sp_Y.reset_index(inplace=True, drop=True)
     Sp_Z = pd.DataFrame(Sp_Y)
     specs = Sp_Z['Topic']
+
+
 
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
