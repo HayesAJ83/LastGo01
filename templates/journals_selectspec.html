@@ -89,18 +89,20 @@
                         </div>
                     </div>
                     <hr style="height:1px; visibility:hidden">
-                    <div class="row align-items-center text-center">
-                        <div class="col">
-                            <select multiple id="select">
-                                {% for spec in specs %}
-                                    <option> <li>{{ spec }}</li> </option>
-                                {% endfor %}
-                            </select>
+                    <form method="POST">
+                        <div class="row align-items-center text-center">
+                            <div class="col">
+                                <select multiple id="select">
+                                    {% for spec in specs %}
+                                        <option> <li>{{ spec }}</li> </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
                 <br></br>
-                <br></br>
+                
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
