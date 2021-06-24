@@ -66,7 +66,7 @@ def alphabet_specs():
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
 
-    return render_template('alphabet_selectspec.html', specs=specs, select_specs=select_specs, names=d)
+    return render_template('alphabet_selectspec.html', specs=specs, names=d)
 
 
 @app.route('/categories', methods=['GET', 'POST'])
