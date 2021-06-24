@@ -8,7 +8,7 @@ from flask import Flask, render_template, request, url_for, flash, redirect
 
 app = Flask(__name__)
     
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
     return render_template('index.html')
 
@@ -39,7 +39,7 @@ def alphabet():
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
 
-    return render_template('alphabet.html', specs=specs, names=d)
+    return render_template('alphabet.html', specs=specs, names=d, select_specs=select_specs)
 
 
 @app.route('/alphabet/specialties', methods=['GET', 'POST'])
@@ -61,8 +61,6 @@ def alphabet_specs():
     Sp_Y.reset_index(inplace=True, drop=True)
     Sp_Z = pd.DataFrame(Sp_Y)
     specs = Sp_Z['Topic']
-
-
 
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
