@@ -226,14 +226,11 @@
             $(function() {
 
                 $('#btn_all').on('click', function() {
-                    $('#btn_all').fadeOut(20).fadeIn(20).fadeOut(20).fadeIn(20).fadeOut(20).fadeIn(20);
+                    $('#btn_all').fadeOut(30).fadeIn(30).fadeOut(30).fadeIn(30);
                 });
 
                 $('#btn_select').on('click', function() {
-                    $('#select').fadeIn(200);
-                });
-                $('#btn_select').on('click', function() {
-                    $('#select').fadeOut(200);
+                    $('#select').slideToggle(200);
                 });
 
             });
