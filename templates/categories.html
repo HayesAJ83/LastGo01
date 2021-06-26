@@ -235,11 +235,19 @@
             $(function() {
 
                 $('#btn_all').on('click', function() {
+                    $('#btn_all').removeClass("btn btn-light");
+                    $('#btn_all').addClass("btn btn-primary");
                     $('#btn_all').fadeOut(20).fadeIn(20);
                     $('#selector').fadeOut(400);
+                    $('#btn_select').removeClass("btn btn-primary");
+                    $('#btn_select').addClass("btn btn-light");
                 });
 
                 $('#btn_select').on('click', function() {
+                    $('#btn_all').removeClass("btn btn-primary");
+                    $('#btn_all').addClass("btn btn-light");
+                    $('#btn_select').removeClass("btn btn-light");
+                    $('#btn_select').addClass("btn btn-primary");
                     $('#btn_select').fadeOut(20).fadeIn(20);
                     $('#selector').fadeIn(400);
                 });
