@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt      #[v 3.2.1]
 import plotly.express as px          #[v 0.4.1]
 import plotly.graph_objects as go    #[v 4.8.1]
-from flask import Flask, render_template, request, url_for, flash, redirect
+from flask import Flask, render_template, request, url_for, flash, redirect, jsonify
 
 app = Flask(__name__)
     
