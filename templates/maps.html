@@ -83,110 +83,120 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Specialties</h1>
-                            <a class="btn btn-primary active" id="btn_all" role="button" aria-pressed="true">All</a>
-                            <a href="{{ url_for('.maps_specs', _anchor='section-2') }}"
-                               class="btn btn-light" role="button" aria-pressed="true">Options
-                            </a>
+                            <a class="btn btn-primary active"   id="btn_all"    role="button" aria-pressed="true">All</a>
+                            <a class="btn btn-light" id="btn_select" role="button" aria-pressed="true">Options</a>
+                        </div>
+                    </div>
+                    <hr style="height:1px; visibility:hidden">
+                    <form method="POST">
+                        <div class="row align-items-center text-center">
+                            <div class="col" id="selector" style="display:none">
+                                <select multiple id="select">
+                                    {% for spec in specs %}
+                                        <option> <li>{{ spec }}</li> </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <br></br>
+
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <h1 class="text-black mb-2 fs-1 ">Time Traveller</h1>
+                        </div>
+                    </div>
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <input type="text" id="range_02" name="example_name" value="" />
                         </div>
                     </div>
                 </div>
-            </div>
-            <br></br>
-            <br></br>
-            <div class="container">
-                <div class="row align-items-center text-center">
-                    <div class="col">
-                        <h1 class="text-black mb-2 fs-1 ">Time Traveller</h1>
+                <br></br>
+                <br></br>
+
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <h1 class="text-black mb-2 fs-1 ">Location</h1>
+                            <select id="select1">
+                                <option>World</option>
+
+                                <optgroup label="Europe">
+                                    <option>Austria</option>
+                                    <option>Belgium</option>
+                                    <option>Czech Republic</option>
+                                    <option>Denmark</option>
+                                    <option>France</option>
+                                    <option>Finland</option>
+                                    <option>Germany</option>
+                                    <option>Greece</option>
+                                    <option>Hungary</option>
+                                    <option>Ireland</option>
+                                    <option>Italy</option>
+                                    <option>Netherlands</option>
+                                    <option>Poland</option>
+                                    <option>Spain</option>
+                                    <option>Switzerland</option>
+                                    <option>UK</option>
+                                </optgroup>
+
+                                <optgroup label="North America">
+                                    <option>Canada</option>
+                                    <option>USA</option>
+                                </optgroup>
+
+                                <optgroup label="Africa">
+                                    <option>South Africa</option>
+                                    <option>Uganda</option>
+                                </optgroup>
+
+                                <optgroup label="Asia">
+                                    <option>India</option>
+                                    <option>Japan</option>
+                                </optgroup>
+
+                                <optgroup label="Oceania">
+                                    <option>Australia</option>
+                                </optgroup>
+
+                                <optgroup label="South America">
+                                    <option>Argentina</option>
+                                    <option>Brazil</option>
+                                </optgroup>
+                                
+                            </select>
+                        </div>
                     </div>
                 </div>
-                <div class="row align-items-center text-center">
-                    <div class="col">
-                        <input type="text" id="range_02" name="example_name" value="" />
+                <br></br>
+                <br></br>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" 
+                            src="https://plotly.com/~chris/1638.embed" height="525" width=100%>
+                            </iframe>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <br></br>
-            <br></br>
-            <div class="container">
-                <div class="row align-items-center text-center">
-                    <div class="col">
-                        <h1 class="text-black mb-2 fs-1 ">Location</h1>
-                        <select id="select1">
-                            <option>World</option>
-
-                            <optgroup label="Europe">
-                                <option>Austria</option>
-                                <option>Belgium</option>
-                                <option>Czech Republic</option>
-                                <option>Denmark</option>
-                                <option>France</option>
-                                <option>Finland</option>
-                                <option>Germany</option>
-                                <option>Greece</option>
-                                <option>Hungary</option>
-                                <option>Ireland</option>
-                                <option>Italy</option>
-                                <option>Netherlands</option>
-                                <option>Poland</option>
-                                <option>Spain</option>
-                                <option>Switzerland</option>
-                                <option>UK</option>
-                            </optgroup>
-
-                            <optgroup label="North America">
-                                <option>Canada</option>
-                                <option>USA</option>
-                            </optgroup>
-
-                            <optgroup label="Africa">
-                                <option>South Africa</option>
-                                <option>Uganda</option>
-                            </optgroup>
-
-                            <optgroup label="Asia">
-                                <option>India</option>
-                                <option>Japan</option>
-                            </optgroup>
-
-                            <optgroup label="Oceania">
-                                <option>Australia</option>
-                            </optgroup>
-
-                            <optgroup label="South America">
-                                <option>Argentina</option>
-                                <option>Brazil</option>
-                            </optgroup>
-                            
-                        </select>
+                <br></br>
+                <br></br>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <h1 class="text-black mb-2 fs-1 ">Eponyms</h1>
+                            <select id="select1">
+                            {% for name in names %}
+                                <option> <li>{{ name }}</li> </option>
+                            {% endfor %}
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <br></br>
-            <br></br>
-            <div class="container">
-                <div class="row align-items-center text-center">
-                    <div class="col">
-                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" 
-                        src="https://plotly.com/~chris/1638.embed" height="525" width=100%>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-            <br></br>
-            <br></br>
-            <div class="container">
-                <div class="row align-items-center text-center">
-                    <div class="col">
-                        <h1 class="text-black mb-2 fs-1 ">Eponyms</h1>
-                        <select id="select1">
-                        {% for name in names %}
-                            <option> <li>{{ name }}</li> </option>
-                        {% endfor %}
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <br></br>
+                <br></br>
             </section>
             <!-- End of Section -->
         </main>
@@ -277,7 +287,20 @@
             $(function() {
 
                 $('#btn_all').on('click', function() {
-                    $('#btn_all').fadeOut(50).fadeIn(50).fadeOut(50).fadeIn(50);
+                    $('#btn_all').removeClass("btn btn-light");
+                    $('#btn_all').addClass("btn btn-primary active");
+                    $('#selector').fadeOut(400);
+                    $('#btn_select').removeClass("btn btn-primary active");
+                    $('#btn_select').addClass("btn btn-light");
+                });
+
+                $('#btn_select').on('click', function() {
+                    $('#btn_all').removeClass("btn btn-primary active");
+                    $('#btn_all').addClass("btn btn-light");
+                    $('#btn_select').removeClass("btn btn-light");
+                    $('#btn_select').addClass("btn btn-primary active");
+            
+                    $('#selector').fadeIn(400);
                 });
 
             });
