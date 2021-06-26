@@ -83,7 +83,7 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Specialties</h1>
-                            <a class="btn btn-primary active" id="test_btn_all" role="button" aria-pressed="true">All</a>
+                            <a class="btn btn-primary active" id="btn_all" role="button" aria-pressed="true">All</a>
                             <a href="{{ url_for('.alphabet_specs', _anchor='section-2') }}"
                                class="btn btn-light" id="test_btn" role="button" aria-pressed="true">Options
                                
@@ -215,8 +215,8 @@
         <script>
             $(function() {
 
-                $('#test_btn_all').on('click', function() {
-                    $('#test_btn_all').fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+                $('#btn_all').on('click', function() {
+                    $('#btn_all').fadeOut(50).fadeIn(50).fadeOut(50).fadeIn(50);
                 });
 
             });

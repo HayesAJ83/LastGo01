@@ -83,7 +83,7 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Specialties</h1>
-                            <a class="btn btn-primary active"   role="button" aria-pressed="true">All</a>
+                            <a class="btn btn-primary active" id="btn_all" role="button" aria-pressed="true">All</a>
                             <a href="{{ url_for('.categories_specs', _anchor='section-2') }}"
                                class="btn btn-light" role="button" aria-pressed="true">Options</a>
                         </div>
@@ -216,6 +216,16 @@
             prefix: 'Year : ',
             prettify_separator: '',
             hide_min_max: true,
+            });
+        </script>
+
+        <script>
+            $(function() {
+
+                $('#btn_all').on('click', function() {
+                    $('#btn_all').fadeOut(50).fadeIn(50).fadeOut(50).fadeIn(50);
+                });
+
             });
         </script>
         
