@@ -84,8 +84,8 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Specialties</h1>
-                            <a class="btn btn-light"   id="btn_all"    role="button" aria-pressed="true">All</a>
-                            <a class="btn btn-primary" id="btn_select" role="button" aria-pressed="true">Options</a>
+                            <a class="btn btn-primary active"   id="btn_all"    role="button" aria-pressed="true">All</a>
+                            <a class="btn btn-light" id="btn_select" role="button" aria-pressed="true">Options</a>
                         </div>
                     </div>
                     <hr style="height:1px; visibility:hidden">
@@ -236,19 +236,17 @@
 
                 $('#btn_all').on('click', function() {
                     $('#btn_all').removeClass("btn btn-light");
-                    $('#btn_all').addClass("btn btn-primary");
-                    $('#btn_all').fadeOut(20).fadeIn(20);
+                    $('#btn_all').addClass("btn btn-primary active");
                     $('#selector').fadeOut(400);
-                    $('#btn_select').removeClass("btn btn-primary");
+                    $('#btn_select').removeClass("btn btn-primary active");
                     $('#btn_select').addClass("btn btn-light");
                 });
 
                 $('#btn_select').on('click', function() {
-                    $('#btn_all').removeClass("btn btn-primary");
+                    $('#btn_all').removeClass("btn btn-primary active");
                     $('#btn_all').addClass("btn btn-light");
                     $('#btn_select').removeClass("btn btn-light");
-                    $('#btn_select').addClass("btn btn-primary");
-                    $('#btn_select').fadeOut(20).fadeIn(20);
+                    $('#btn_select').addClass("btn btn-primary active");
                     $('#selector').fadeIn(400);
                 });
 
