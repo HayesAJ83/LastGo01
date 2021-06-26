@@ -83,15 +83,25 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Specialties</h1>
-                            <a class="btn btn-primary active" id="btn_all" role="button" aria-pressed="true">All</a>
-                            <a href="{{ url_for('.journals_specs', _anchor='section-2') }}"
-                               class="btn btn-light" role="button" aria-pressed="true">Options
-                            </a>
+                            <a class="btn btn-light"   id="btn_all"    role="button" aria-pressed="true">All</a>
+                            <a class="btn btn-primary" id="btn_select" role="button" aria-pressed="true">Options</a>
                         </div>
                     </div>
+                    <hr style="height:1px; visibility:hidden">
+                    <form method="POST">
+                        <div class="row align-items-center text-center">
+                            <div class="col" id="selector" style="display:none">
+                                <select multiple id="select">
+                                    {% for spec in specs %}
+                                        <option> <li>{{ spec }}</li> </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <br></br>
-                <br></br>
+
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
@@ -224,7 +234,13 @@
             $(function() {
 
                 $('#btn_all').on('click', function() {
-                    $('#btn_all').fadeOut(50).fadeIn(50).fadeOut(50).fadeIn(50);
+                    $('#btn_all').fadeOut(20).fadeIn(20);
+                    $('#selector').fadeOut(400);
+                });
+
+                $('#btn_select').on('click', function() {
+                    $('#btn_select').fadeOut(20).fadeIn(20);
+                    $('#selector').fadeIn(400);
                 });
 
             });
