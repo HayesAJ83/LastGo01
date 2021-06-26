@@ -115,6 +115,17 @@
                     </div>
                 </div>
                 <br></br>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <h1 class="text-black mb-2 fs-1 ">Test</h1>
+                            {% block content %}
+                                {{ value }}
+                            {% endblock %}
+                            </select>
+                        </div>
+                    </div>
+                </div>
                 <br></br>
                 <div class="container">
                     <div class="row align-items-center text-center">
@@ -215,11 +226,15 @@
             hide_min_max: true,
             onFinish: function(data){
                 var value = data.fromNumber;
-                $("#SomeValue").val(value);
+                $("#range_02").val(value);
                 }
             });
+            $.ajax({
+                type: 'POST',
+                url: "{{url_for('alphabet')}}",
+                data: {'data':value}
+            })
         </script>
-
 
         <script>
             $(function() {
