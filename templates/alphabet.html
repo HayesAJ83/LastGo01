@@ -91,7 +91,7 @@
                     <hr style="height:1px; visibility:hidden">
                     <form method="POST">
                         <div class="row align-items-center text-center">
-                            <div class="col">
+                            <div class="col" id="selector">
                                 <select multiple id="select">
                                     {% for spec in specs %}
                                         <option> <li>{{ spec }}</li> </option>
@@ -225,16 +225,15 @@
         <script>
             $(function() {
 
+
                 $('#btn_all').on('click', function() {
                     $('#btn_all').fadeOut(30).fadeIn(30).fadeOut(30).fadeIn(30);
-                    $('#select').hide();
+                    $('#selector').hide();
                 });
 
-                $('#select').hide() {
-                });
 
                 $('#btn_select').on('click', function() {
-                    $('#select').slideToggle(200);
+                    $('#selector').slideToggle(200);
                 });
 
             });
