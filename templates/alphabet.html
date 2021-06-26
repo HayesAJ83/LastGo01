@@ -115,17 +115,6 @@
                     </div>
                 </div>
                 <br></br>
-                <div class="container">
-                    <div class="row align-items-center text-center">
-                        <div class="col">
-                            <h1 class="text-black mb-2 fs-1 ">Test</h1>
-                            {% block content %}
-                                {{ value }}
-                            {% endblock %}
-                            </select>
-                        </div>
-                    </div>
-                </div>
                 <br></br>
                 <div class="container">
                     <div class="row align-items-center text-center">
@@ -229,16 +218,10 @@
                 $("#range_02").val(value);
                 }
             });
-            $.ajax({
-                type: 'POST',
-                url: "{{url_for('alphabet')}}",
-                data: {'data':value}
-            })
         </script>
 
         <script>
             $(function() {
-
                 $('#btn_all').on('click', function() {
                     $('#btn_all').removeClass("btn btn-light");
                     $('#btn_all').addClass("btn btn-primary active");
@@ -254,7 +237,6 @@
                     $('#btn_select').addClass("btn btn-primary active");
                     $('#selector').fadeIn(400);
                 });
-
             });
         </script>
         
