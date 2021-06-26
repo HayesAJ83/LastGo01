@@ -37,7 +37,10 @@ def alphabet():
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
 
-    return render_template('alphabet.html', specs=specs, names=d)
+    if request.method == 'POST':
+        value=request.json['data']
+
+    return render_template('alphabet.html', specs=specs, names=d, value=value)
 
 
 @app.route('/categories', methods=['GET', 'POST'])
