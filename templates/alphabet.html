@@ -225,15 +225,14 @@
         <script>
             $(function() {
 
-
                 $('#btn_all').on('click', function() {
                     $('#btn_all').fadeOut(30).fadeIn(30).fadeOut(30).fadeIn(30);
                     $('#selector').hide();
                 });
 
-
                 $('#btn_select').on('click', function() {
-                    $('#selector').fadeIn(200);
+                    $('#btn_select').fadeOut(30).fadeIn(30).fadeOut(30).fadeIn(30);
+                    $('#selector').fadeIn(500);
                 });
 
             });
