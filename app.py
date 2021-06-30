@@ -65,12 +65,12 @@ def alphabet():
     d=df2['Eponym_easy']
 
     if request.method == "POST":
-        selected_specs = request.form.getlist('selector')
+        selected_specs = request.form.getlist('selected')
 
         return render_template('alphabet.html', specs=specs, names=d, selected_specs=selected_specs)
 
     else:
-        return render_template('alphabet.html', specs=specs, names=d)
+        return render_template('alphabet.html', specs=specs)
 
 
 
