@@ -213,14 +213,9 @@
         </script>
 
         <script>
-            $(document).ready(function() {
-                $('#select').change(function() {
-                    var zzz = $(this).find('option:selected').text();
-                });
-            });
-    
+ 
             // JQuery example
-            var $jqName = zzz
+            var $jqName = $('.name');
             var $jqValue = $('.jqValue');
 
             $jqName.on('input', function(event){
