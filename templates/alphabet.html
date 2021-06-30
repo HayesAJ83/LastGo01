@@ -117,17 +117,14 @@
                 </div>
                 <br></br>
                 <br></br>
-                <div class="container">
-                    <div class="row align-items-center text-center">
-                        <div class="col">
-                            <h1 class="text-black mb-2 fs-1 ">Test</h1>
-                            <!-- This <input> field is where I'm getting the name from -->
-                            <label>Specialties: <input class="name" type="text" value="Wor"/></label>
-                            <!-- jQuery Example -->
-                            <h1>t</h1>Choices <span class="jqValue">General Surgery</span>
-                        </div>
-                    </div>
-                </div>
+  
+                <!-- This <input> field is where I'm getting the name from -->
+                <label>Enter your name: <input class="name" type="text" value="World"/></label>
+  
+                <!-- jQuery Example -->
+                <h1>jQuery Example</h1>Hello <span class="jqValue">World</span>
+                   
+                 
                 <br></br>
                 <br></br>
                 <div class="container">
@@ -216,17 +213,18 @@
         </script>
 
         <script>
+            $(document).ready(function() {
+                $('#select').change(function() {
+                    var zzz = $(this).find('option:selected').text();
+                });
+            });
+    
             // JQuery example
-            var $jqName = $('.name');
-            var $jqValue = function(jqValue){
-                                $('#select').change(function() {
-                                    var selected = $(this).find('option:selected').text();
-                                });
-                            };
-            // $('.jqValue');
+            var $jqName = zzz
+            var $jqValue = $('.jqValue');
 
             $jqName.on('input', function(event){
-                $jqValue.html($jqName.val());
+            $jqValue.html($jqName.val());
             });
         </script>
        
