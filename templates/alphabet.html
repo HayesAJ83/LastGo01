@@ -103,9 +103,9 @@
                 </div>
                 <br></br>
                 <!-- This <input> field is where I'm getting the name from -->
-                <label>Specialties: <input class="name" type="text" value="World"/></label>
+                <label>Specialties: <input class="name" type="text" value="Wor"/></label>
                 <!-- jQuery Example -->
-                <h1>test</h1>Choices <span class="jqValue">General Surgery</span>
+                <h1>t</h1>Choices <span class="jqValue">General Surgery</span>
                 <br></br>
 
                 <div class="container">
@@ -220,9 +220,11 @@
         <script>
             // JQuery example
             var $jqName = $('.name');
-            var $jqValue = $('#select').change(function() {
-                var selected = $(this).find('option:selected').text()
-                });
+            var $jqValue = $(document).ready(function() {
+                                $('#select').change(function() {
+                                    var selected = $(this).find('option:selected').text();
+                                });
+                            });
             // $('.jqValue');
 
             $jqName.on('input', function(event){
