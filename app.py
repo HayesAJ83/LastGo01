@@ -4,13 +4,40 @@ import pandas as pd
 import matplotlib.pyplot as plt      #[v 3.2.1]
 import plotly.express as px          #[v 0.4.1]
 import plotly.graph_objects as go    #[v 4.8.1]
-from flask import Flask, render_template, request, url_for, flash, redirect, json, jsonify
+from flask import Flask, render_template, request, url_for, flash, redirect, json, jsonify, session
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'surgicalnames'
     
 @app.route('/')
 def index():
     return render_template('index.html')
+
+#@app.route('/alphabet/<mode>', methods=['GET', 'POST'])
+#def alphabet_mode(mode):
+#    session['mode'] = mode
+#    return redirect(url_for('index'))
+#
+#    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
+#    sp1=pd.read_csv(url)
+#    sp2=sp1.sort_values(by=['Topic'], ascending=True)
+#    sp3=sp2['Topic'].dropna()
+#    Sp_string = sp3.str.cat(sep=',')
+#    Sp_splits = Sp_string.split(",")
+#    Sp_S = set(Sp_splits)
+#    Sp_T = np.array(list(Sp_S)).astype(object)
+#    Sp_U = np.sort(Sp_T)
+#    Sp_V = list(Sp_U)
+#    Sp_W = pd.Series(Sp_V).rename('Topic')
+#    Sp_X = Sp_W[1:]
+#    Sp_Y = pd.Series(Sp_X)
+#    Sp_Y.reset_index(inplace=True, drop=True)
+#    Sp_Z = pd.DataFrame(Sp_Y)
+#    specs = Sp_Z['Topic']
+#    df1=pd.read_csv(url)
+#    df2=df1.sort_values(by=['Eponym'], ascending=True)
+#    d=df2['Eponym_easy']
+#    return render_template('alphabet.html', specs=specs, names=d)
 
 
 @app.route('/alphabet', methods=['GET', 'POST'])
@@ -37,40 +64,25 @@ def alphabet():
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
 
-    #if request.method == 'POST':
-    #    value=request.json['data']
+    if request.method == "POST":
+        
+        req = request.form
+        
+        username = req.get('username')
+        password = req.get('password')
 
-    return render_template('alphabet.html', specs=specs, names=d)
+        return render_template('alphabet.html', specs=specs, names=d)
+
+    else:
+        return render_template('alphabet.html')
 
 
-@app.route('/alphabet/time', methods=['GET', 'POST'])
-def alphabet_time():
 
-    url="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv"
-    sp1=pd.read_csv(url)
-    sp2=sp1.sort_values(by=['Topic'], ascending=True)
-    sp3=sp2['Topic'].dropna()
-    Sp_string = sp3.str.cat(sep=',')
-    Sp_splits = Sp_string.split(",")
-    Sp_S = set(Sp_splits)
-    Sp_T = np.array(list(Sp_S)).astype(object)
-    Sp_U = np.sort(Sp_T)
-    Sp_V = list(Sp_U)
-    Sp_W = pd.Series(Sp_V).rename('Topic')
-    Sp_X = Sp_W[1:]
-    Sp_Y = pd.Series(Sp_X)
-    Sp_Y.reset_index(inplace=True, drop=True)
-    Sp_Z = pd.DataFrame(Sp_Y)
-    specs = Sp_Z['Topic']
-    
-    end_yr = request.args.get('end_yr')
 
-    df1=pd.read_csv(url)
-    df2=df1.sort_values(by=['Eponym'], ascending=True)
-    d=df2['Eponym_easy']
-
-    return render_template('alphabet_time.html', specs=specs, end_yr=end_yr, names=d,)
-
+#@app.route('/alphabet/<mode>')
+#def alphabet_specs():
+#    session['mode'] = mode
+#    return redirect(url_for("alphabet"))
 
 
 @app.route('/categories', methods=['GET', 'POST'])
