@@ -108,15 +108,9 @@
                             <h1 class="text-black mb-2 fs-1 ">Time Traveller</h1>
                         </div>
                     </div>
-                    <!-- <div class="row align-items-center text-center">
-                        <div class="col">
-                            <input type="text" id="range_02" name="time" value="" />
-                        </div>
-                    </div>
-                    <br></br> -->
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <input type="text" id="demo_3" name="demo_3" value="" />
+                            <input type="text" id="range_02" name="time" value="" />
                         </div>
                     </div>
                 </div>
@@ -152,7 +146,6 @@
                             <ul class="pt-2 mb-5 fw-light list-unstyled">
                                 <li class="my-1"><a href="#" class="text-white">Design Team</a></li>
                                 <li class="my-1"><a href="#" class="text-white">Contact Us</a></li>
-                  
                             </ul>
                         </div>
                         <div class="mt-auto d-flex justify-content-between">
@@ -212,9 +205,9 @@
 
         <script>
             $('#range_02').ionRangeSlider({
-            grid: true,
-            min: 1700,
-            max: 2100,
+            grid: false,
+            min: 1500,
+            max: 2035,
             from: 2021,
             prefix: 'Year : ',
             prettify_separator: '',
@@ -222,8 +215,8 @@
             onFinish: function(data){
                 var value = data.fromNumber;
                 $("#range_02").val(value);
-            }
-        });
+                }
+            });
         </script>
 
         <script>
@@ -246,27 +239,7 @@
             });
         </script>
 
-        <script>
-            var $d3 = $("#demo_3");
-            $d3.ionRangeSlider({
-                skin: "square",
-                prefix: 'Year : ',
-                min: 0,
-                max: 2030,
-                from: 2021,
-                hide_min_max: true,
-                grid_snap: true,
-                prettify_separator: '',
-            });
-            
-            $d3.on("finish", function () {
-                var $inp = $(this);
-                var from = $inp.prop("value"); // reading input value
-                var from2 = $inp.data("from"); // reading input data-from attribute
-            
-                console.log(from, from2); // FROM value
-            });
-        </script>
+    
         
         <!-- Theme Javascripts -->
         <script src="/static/assets/js/theme.js"></script>
