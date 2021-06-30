@@ -194,7 +194,7 @@
         <script>
             $(document).ready(function() {
                 $('#select').change(function() {
-                    selected = $j("#select option:selected").html();
+                    var selected = $(this).find('option:selected').text();
                     alert(selected);
                 });
             });
