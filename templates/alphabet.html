@@ -119,6 +119,18 @@
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
+                            <h1 class="text-black mb-2 fs-1 ">Test</h1>
+                            {% block content %}
+                                {{ selected_specs }}
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+                <br></br>
+                <br></br>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Eponyms</h1>
                             <select id="select1">
                             {% for name in names %}
