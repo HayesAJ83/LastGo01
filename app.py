@@ -65,13 +65,9 @@ def alphabet():
     d=df2['Eponym_easy']
 
     if request.method == "POST":
-        
-        req = request.form
-        
-        username = req.get('username')
-        password = req.get('password')
+        selected_specs = request.form.getlist('selector')
 
-        return render_template('alphabet.html', specs=specs, names=d, username=username)
+        return render_template('alphabet.html', specs=specs, names=d, selected_specs=selected_specs)
 
     else:
         return render_template('alphabet.html', specs=specs, names=d)
