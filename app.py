@@ -71,10 +71,10 @@ def alphabet():
         username = req.get('username')
         password = req.get('password')
 
-        return render_template('alphabet.html', specs=specs, names=d)
+        return render_template('alphabet.html', specs=specs, names=d, username=username)
 
     else:
-        return render_template('alphabet.html')
+        return render_template('alphabet.html', specs=specs, names=d)
 
 
 
