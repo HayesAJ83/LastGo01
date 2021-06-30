@@ -220,7 +220,10 @@
         <script>
             // JQuery example
             var $jqName = $('.name');
-            var $jqValue = $('#select').find('option:selected').text();    // $('.jqValue');
+            var $jqValue = $('#select').change(function() {
+                var selected = $(this).find('option:selected').text()
+                });
+            // $('.jqValue');
 
             $jqName.on('input', function(event){
                 $jqValue.html($jqName.val());
