@@ -77,7 +77,6 @@
             </section>
             <!-- End of Section -->
 
-
             <!-- Section -->
             <section id="section-2">
                 <div class="container">
@@ -100,8 +99,28 @@
                             </div>
                         </div>
                     </form>
+                </div>
+                <br></br>
+                <br></br>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            
+                            <label>Output: <span class="testout"></span></label>
+                        </div>
+                    </div>
+                </div>
+                <br></br>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <!-- This <input> field is where I'm getting the name from -->
+                            <label>Input: <input class="name" type="text" value=""/></label>
+                            <br></br>
+                            <label>Output: <span class="jqValue"></span></label>
+                        </div>
+                    </div>
                 </div>            
-                
                 <br></br>
                 <div class="container">
                     <div class="row align-items-center text-center">
@@ -208,6 +227,29 @@
         </script>
 
         <script>
+            var $jqName = $('.name');
+            var $jqValue = $('.jqValue');
+
+            $jqName.on('input', function(event){
+            $jqValue.html($jqName.val());
+            });
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $('#select').change(function() {
+                    var selected = $(this).find('option:selected').text();
+                });
+            });
+        </script>
+
+        <script>
+            selected.on('input', function(event) {
+                testout.html(selected.text());
+            });
+        </script>
+
+        <script>
             tail.select('#select1', {
                 width: 270,
             });
@@ -233,7 +275,6 @@
 
         <script>
             $(function() {
-
                 $('#btn_all').on('click', function() {
                     $('#btn_all').removeClass("btn btn-light");
                     $('#btn_all').addClass("btn btn-primary active");
@@ -249,7 +290,6 @@
                     $('#btn_select').addClass("btn btn-primary active");
                     $('#selector').fadeIn(400);
                 });
-
             });
         </script>
         

@@ -122,7 +122,7 @@
                         <div class="col">
 
                             <!-- This <input> field is where I'm getting the name from -->
-                            <label>Input: <input class="name" type="text" value="type here"/></label>
+                            <label>Input: <input class="name" type="text" value=""/></label>
                             <br></br>
                             <label>Output: <span class="jqValue"></span></label>
                         </div>
@@ -210,13 +210,12 @@
             $(document).ready(function() {
                 $('#select').change(function() {
                     var selected = $(this).find('option:selected').text();
-                    alert(selected)
+                    
                 });
             });
         </script>
 
         <script>
- 
             // JQuery example
             var $jqName = $('.name');
             var $jqValue = $('.jqValue');
