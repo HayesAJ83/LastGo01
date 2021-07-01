@@ -230,21 +230,19 @@
             var $jqValue = $('.jqValue');
 
             $jqName.on('input', function(event){
-            $jqValue.html($jqName.val());
+                $jqValue.html($jqName.val());
             });
         </script>
 
         <script>
+            var testout = $('.testout');
             $(document).ready(function() {
                 $('#select').change(function() {
                     var selected = $(this).find('option:selected').text();
+                    selected.on('input', function(event) {
+                        testout.html(selected.text());
+                    });
                 });
-            });
-        </script>
-
-        <script>
-            selected.on('input', function(event) {
-                testout.html(selected.text());
             });
         </script>
 
