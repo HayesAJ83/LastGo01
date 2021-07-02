@@ -116,7 +116,18 @@
                 </div>
                 <br></br>
                 <br></br>
-
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <!-- This <input> field is where I'm getting the name from -->
+                            <label>Input: <input class="name" type="text" value=""/></label>
+                            <br></br>
+                            <label>Output: <span class="jqValue"></span></label>
+                        </div>
+                    </div>
+                </div>
+                <br></br>
+                <br></br>
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
@@ -204,6 +215,24 @@
                 multiContainer: true,
                 multiSelectAll: true,
                 width: 350,
+            });
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $('#select').change(function() {
+                    var selected = $(this).find('option:selected').text();
+                    
+                });
+            });
+        </script>
+
+        <script>
+            let $jqName = selected;
+            var $jqValue = $('.jqValue');
+
+            $jqName.on('input', function(event){
+                $jqValue.html($jqName.val());
             });
         </script>
 
