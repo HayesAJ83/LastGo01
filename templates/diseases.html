@@ -119,6 +119,16 @@
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
+                            <script>
+                                $(document).ready(function displayVals() {
+                                    var multipleValues = $( "#select" ).val();
+                                    $( "p" ).html(" <b>Output:</b> " + multipleValues.join( ", " ));
+                                    });
+                                $("select").change(displayVals);
+                                displayVals();
+                            </script>
+
+
                             <!-- This <input> field is where I'm getting the name from -->
                             <label>Input: <input class="name" type="text" value=""/></label>
                             <br></br>
@@ -228,7 +238,7 @@
         </script>
 
         <script>
-            let $jqName = selected;
+            var $jqName = $('.name');
             var $jqValue = $('.jqValue');
 
             $jqName.on('input', function(event){
