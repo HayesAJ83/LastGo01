@@ -121,11 +121,11 @@
                         <div class="col">
                             <p></p>
                             <script>
-                                $(document).ready(function displayVals() {
+                                function displayVals() {
                                     var multipleValues = $( "#select" ).val();
                                     $( "p" ).html(" <b>Output:</b> " + multipleValues.join( ", " ));
                                     });
-                                $("select").change(displayVals);
+                                $( "select" ).change(displayVals);
                                 displayVals();
                             </script>
 
@@ -134,6 +134,16 @@
                             <label>Input: <input class="name" type="text" value=""/></label>
                             <br></br>
                             <label>Output: <span class="jqValue"></span></label>
+                        </div>
+                    </div>
+                </div>
+                <br></br>
+                <br></br>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <input type="text" value="some text">
+                            <p1></p1>
                         </div>
                     </div>
                 </div>
@@ -269,6 +279,15 @@
             prettify_separator: '',
             hide_min_max: true,
             });
+        </script>
+
+        <script>
+            $( "input" )
+            .keyup(function() {
+                var value = $( this ).val();
+                $( "p1" ).text( value );
+            })
+            .keyup();
         </script>
         
         <script>
