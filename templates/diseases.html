@@ -243,9 +243,9 @@
         </script>
 
         <script>
-            $( "select" )
+            $( "input" )
             .keyup(function() {
-                var value = $( this ).val();
+                var value = $('#select').find('option:selected').text();
                 $( "p2" ).text( value );
             })
             .keyup();
