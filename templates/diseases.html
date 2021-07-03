@@ -227,9 +227,10 @@
                     $('#btn_select').removeClass("btn btn-light");
                     $('#btn_select').addClass("btn btn-primary active");
                     $('#selector').fadeIn(400);
-                    var value = $(this).find('option:selected').text(); 
-                    $( "p2" ).text( value.join(',') );
-
+                    $(document).ready(function() {
+                        var value = $(this).find('option:selected').text(); 
+                        $( "p2" ).text( value.join(',') );
+                    });
                 });
             });
 
@@ -240,6 +241,13 @@
                 width: 350,
             });
             
+            $(document)
+            .ready(function() {
+                var value = $.map($('#select option'), function(e)
+                    { return e.value; });
+                $( "p2" ).text( value.join(',') );
+            });
+
             //$(document)
             //.ready(function() {
             //    $('#select').change(function() {
