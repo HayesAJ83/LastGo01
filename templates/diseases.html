@@ -215,18 +215,18 @@
                     $('#selector').fadeOut(400);
                     $('#btn_select').removeClass("btn btn-primary active");
                     $('#btn_select').addClass("btn btn-light");
-                    $('#select').map(function() {
-                        var value = $(this).val();}).get()
-                        $( "p2" ).text( value );
-                });
+                    var value = $.map($('#select'), function(ele) {
+                        return ele.value;
+                        $( "p2" ).text( value ); 
+                    });
                 $('#btn_select').on('click', function() {
                     $('#btn_all').removeClass("btn btn-primary active");
                     $('#btn_all').addClass("btn btn-light");
                     $('#btn_select').removeClass("btn btn-light");
                     $('#btn_select').addClass("btn btn-primary active");
                     $('#selector').fadeIn(400);
+                    });
                 });
-            });
             tail.select('#select', {
                 multiple: true,
                 multiContainer: true,
