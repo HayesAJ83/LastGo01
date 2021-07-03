@@ -234,14 +234,14 @@
 
         <script>
             $( "input" )
-            .change(function() {
+            .keyup(function() {
                 var value = $('#select').find('option:selected').text();
                 $( "p2" ).text( value );
             })
-            .change();
+            .keyup();
         </script>
 
-
+// document.getElementById("mySelect").value
         <script>
             var $jqName = $('.name');
             var $jqValue = $('.jqValue');
