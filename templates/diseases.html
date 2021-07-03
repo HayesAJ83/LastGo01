@@ -205,25 +205,31 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>   
         <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
+
+        // Specialties
         <script>
+            $(function() {
+                $('#btn_all').on('click', function() {
+                    $('#btn_all').removeClass("btn btn-light");
+                    $('#btn_all').addClass("btn btn-primary active");
+                    $('#selector').fadeOut(400);
+                    $('#btn_select').removeClass("btn btn-primary active");
+                    $('#btn_select').addClass("btn btn-light");
+                });
+                $('#btn_select').on('click', function() {
+                    $('#btn_all').removeClass("btn btn-primary active");
+                    $('#btn_all').addClass("btn btn-light");
+                    $('#btn_select').removeClass("btn btn-light");
+                    $('#btn_select').addClass("btn btn-primary active");
+                    $('#selector').fadeIn(400);
+                });
+            });
             tail.select('#select', {
                 multiple: true,
                 multiContainer: true,
                 multiSelectAll: true,
                 width: 350,
             });
-        </script>
-
-        <script>
-            $(document).ready(function() {
-                $('#select').change(function() {
-                    var selected = $(this).find('option:selected').text();
-                });
-            });
-        </script>
-
-
-        <script>
             $(document)
             .ready(function() {
                 $('#select').change(function() {
@@ -234,27 +240,7 @@
         </script>
 
 
-        <script>
-            var $jqName = $('.name');
-            var $jqValue = $('.jqValue');
-
-            $jqName.on('input', function(event){
-                $jqValue.html($jqName.val());
-            });
-        </script>
-
-        <script>
-            tail.select('#select1', {
-                width: 270,
-            });
-        </script>
-
-        <script>
-            tail.select('#select2', {
-                width: 300,
-            });
-        </script>
-
+        // Time Traveler
         <script>
             $('#range_02').ionRangeSlider({
             grid: true,
@@ -268,28 +254,18 @@
         </script>
 
 
-        
         <script>
-            $(function() {
-
-                $('#btn_all').on('click', function() {
-                    $('#btn_all').removeClass("btn btn-light");
-                    $('#btn_all').addClass("btn btn-primary active");
-                    $('#selector').fadeOut(400);
-                    $('#btn_select').removeClass("btn btn-primary active");
-                    $('#btn_select').addClass("btn btn-light");
-                });
-
-                $('#btn_select').on('click', function() {
-                    $('#btn_all').removeClass("btn btn-primary active");
-                    $('#btn_all').addClass("btn btn-light");
-                    $('#btn_select').removeClass("btn btn-light");
-                    $('#btn_select').addClass("btn btn-primary active");
-                    $('#selector').fadeIn(400);
-                });
-
+            tail.select('#select1', {
+                width: 270,
             });
         </script>
+
+        <script>
+            tail.select('#select2', {
+                width: 300,
+            });
+        </script>
+
 
         <!-- Theme Javascripts -->
         <script src="/static/assets/js/theme.js"></script>
