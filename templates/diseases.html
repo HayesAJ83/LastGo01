@@ -233,13 +233,23 @@
         </script>
 
         <script>
+            $(document)
+            .ready(function() {
+                $('#select').change(function() {
+                var value = $(this).find('option:selected').text();
+                $( "p2" ).text( value );
+                });
+            });
+        </script>
+
+        <!-- <script>
             $( "input" )
             .keyup(function() {
                 var value = $('#select').find('option:selected').text();
                 $( "p2" ).text( value );
             })
             .keyup();
-        </script>
+        </script> -->
 
 // document.getElementById("mySelect").value
         <script>
