@@ -215,10 +215,10 @@
                     $('#selector').fadeOut(400);
                     $('#btn_select').removeClass("btn btn-primary active");
                     $('#btn_select').addClass("btn btn-light");
-                    $('#select').find('option').each(function(){
-                        var value = $(this).val();
-                        $( "p2" ).text( value );
-                    });
+                    var value = $.map($('#select'), function(e) 
+                        { return e.value; });
+                    $( "p2" ).text( value );
+                   
                 });
                 
                 $('#btn_select').on('click', function() {
