@@ -215,10 +215,9 @@
                     $('#selector').fadeOut(400);
                     $('#btn_select').removeClass("btn btn-primary active");
                     $('#btn_select').addClass("btn btn-light");
-                    var value = $.map(options, function(option) {
-                        return option.value;
-                        }
-                    $( "p2" ).text( value );
+                    $('#select').map(function() {
+                        var value = $(this).val();}).get()
+                        $( "p2" ).text( value );
                 });
                 $('#btn_select').on('click', function() {
                     $('#btn_all').removeClass("btn btn-primary active");
