@@ -215,10 +215,11 @@
                     $('#selector').fadeOut(400);
                     $('#btn_select').removeClass("btn btn-primary active");
                     $('#btn_select').addClass("btn btn-light");
-                    var value = $.map($('#select option'), function(e) 
+                    $(document).ready(function() {
+                        var value = $.map($('#select option'), function(e) 
                         { return e.value; });
-                    $( "p2" ).text( value.join(',') );
-                   
+                        $( "p2" ).text( value.join(',') );
+                    });
                 });
                 
                 $('#btn_select').on('click', function() {
@@ -227,7 +228,7 @@
                     $('#btn_select').removeClass("btn btn-light");
                     $('#btn_select').addClass("btn btn-primary active");
                     $('#selector').fadeIn(400);
-                    $(document).ready(function() {
+                    $('#select').change(function() {
                         var value = $(this).find('option:selected').text(); 
                         $( "p2" ).text( value.join(',') );
                     });
@@ -241,20 +242,20 @@
                 width: 350,
             });
             
-            $(document)
-            .ready(function() {
-                var value = $.map($('#select option'), function(e)
-                    { return e.value; });
-                $( "p2" ).text( value.join(',') );
-            });
-
             //$(document)
             //.ready(function() {
-            //    $('#select').change(function() {
-            //    var value = $(this).find('option:selected').text();
+            //    var value = $.map($('#select option'), function(e)
+            //        { return e.value; });
             //    $( "p2" ).text( value.join(',') );
-            //    });
             //});
+
+            $(document)
+            .ready(function() {
+                $('#select').change(function() {
+                var value = $(this).find('option:selected').text();
+                $( "p2" ).text( value.join(',') );
+                });
+            });
         </script>
 
 
