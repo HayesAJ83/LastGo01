@@ -101,7 +101,6 @@
                     </form>
                 </div>
                 <br></br>
-
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
@@ -119,21 +118,8 @@
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <p></p>
-                            <script>
-                                function displayVals() {
-                                    var multipleValues = $( "#select" ).val();
-                                    $( "p" ).html(" <b>Output:</b> " + multipleValues.join( ", " ));
-                                    });
-                                $( "select" ).change(displayVals);
-                                displayVals();
-                            </script>
-
-
-                            <!-- This <input> field is where I'm getting the name from -->
-                            <label>Input: <input class="name" type="text" value=""/></label>
-                            <br></br>
-                            <label>Output: <span class="jqValue"></span></label>
+                            <input type="text" value="some text">
+                            <p1></p1>
                         </div>
                     </div>
                 </div>
@@ -143,7 +129,7 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <input type="text" value="some text">
-                            <p1></p1>
+                            <p2></p2>
                         </div>
                     </div>
                 </div>
@@ -243,10 +229,28 @@
             $(document).ready(function() {
                 $('#select').change(function() {
                     var selected = $(this).find('option:selected').text();
-                    
                 });
             });
         </script>
+
+        <script>
+            $( "input" )
+            .keyup(function() {
+                var value = $( this ).val();
+                $( "p1" ).text( value );
+            })
+            .keyup();
+        </script>
+
+        <script>
+            $( "select" )
+            .keyup(function() {
+                var value = $( this ).val();
+                $( "p2" ).text( value );
+            })
+            .keyup();
+        </script>
+
 
         <script>
             var $jqName = $('.name');
@@ -281,14 +285,7 @@
             });
         </script>
 
-        <script>
-            $( "input" )
-            .keyup(function() {
-                var value = $( this ).val();
-                $( "p1" ).text( value );
-            })
-            .keyup();
-        </script>
+
         
         <script>
             $(function() {
