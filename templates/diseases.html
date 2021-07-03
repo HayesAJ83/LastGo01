@@ -234,11 +234,11 @@
 
         <script>
             $( "input" )
-            .keyup(function() {
+            .change(function() {
                 var value = $('#select').find('option:selected').text();
                 $( "p2" ).text( value );
             })
-            .keyup();
+            .change();
         </script>
 
 
