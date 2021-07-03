@@ -227,6 +227,9 @@
                     $('#btn_select').removeClass("btn btn-light");
                     $('#btn_select').addClass("btn btn-primary active");
                     $('#selector').fadeIn(400);
+                    var value = $(this).find('option:selected').text(); 
+                    $( "p2" ).text( value.join(',') );
+
                 });
             });
 
@@ -236,13 +239,14 @@
                 multiSelectAll: true,
                 width: 350,
             });
-            $(document)
-            .ready(function() {
-                $('#select').change(function() {
-                var value = $(this).find('option:selected').text();
-                $( "p2" ).text( value.join(',') );
-                });
-            });
+            
+            //$(document)
+            //.ready(function() {
+            //    $('#select').change(function() {
+            //    var value = $(this).find('option:selected').text();
+            //    $( "p2" ).text( value.join(',') );
+            //    });
+            //});
         </script>
 
 
