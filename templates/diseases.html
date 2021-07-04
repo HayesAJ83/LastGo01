@@ -155,7 +155,7 @@
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Eponyms</h1>
                             <select id="select2">
-                            {% for name in names %}
+                            {% for name in names [1:] %}
                                 <option> <li>{{ name }}</li> </option>
                             {% endfor %}
                             </select>
@@ -248,7 +248,7 @@
                     $('#btn_select').removeClass("btn btn-light");
                     $('#btn_select').addClass("btn btn-primary active");
                     $('#selector').fadeIn(200);
-                    let value = $(this).find('option:selected').text().get().join(',');
+                    let value = $(this).find('option:selected').text().join(',');
                     $( "p1" ).html( value );
                     });
             });
@@ -258,7 +258,7 @@
             $('#btn_select').on('click', function() {
                 $(document)
                 .ready(function() {
-                    let value = $('#select').find('option:selected').text().get().join(',');
+                    let value = $('#select').find('option:selected').text().join(',');
                     $( "p1" ).html( value );
                     });
             });
