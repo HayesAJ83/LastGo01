@@ -248,17 +248,17 @@
                     $('#btn_select').removeClass("btn btn-light");
                     $('#btn_select').addClass("btn btn-primary active");
                     $('#selector').fadeIn(200);
-                    let value = $(this).find('option:selected').text();
+                    let value = $(this).find('option:selected').text().get().join(',');
                     $( "p1" ).html( value );
                     });
             });
         </script>
-//let value = $.map($('#select option'), function(e) { return e.value; });
+
         <script>
             $('#btn_select').on('click', function() {
                 $(document)
                 .ready(function() {
-                    let value = $('#select').find('option:selected').text();
+                    let value = $('#select').find('option:selected').text().get().join(',');
                     $( "p1" ).html( value );
                     });
             });
@@ -273,19 +273,16 @@
             });
         </script>
      
-            //$(document)
-            //.ready(function() {
-            //    let value = $.map($('#select option'), function(e)
-            //    { return e.value; });
-            //    $( "p2" ).text( value.join(',') );
-            //});
-            //
-            //$('#replace-me').html('Anything you want')
+
 
         <script>
             $(document)
             .ready(function() {
-                let value = $.map($('#select option'), function(e) { return e.value; });
+                let value = $('#select option')
+                        .map(function() {
+                            return this.text
+                            })
+                        .get().join(',');
                     $( "p1" ).html( value );
             });
         </script>
