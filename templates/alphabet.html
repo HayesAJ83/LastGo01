@@ -101,7 +101,13 @@
                         </div>
                     </form>
                 </div>
-                <br></br>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <p1></p1>
+                        </div>
+                    </div>
+                </div>
                 <br></br>
                 <div class="container">
                     <div class="row align-items-center text-center">
@@ -111,19 +117,7 @@
                     </div>
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <input type="text" id="range_02" name="time" value="" />
-                        </div>
-                    </div>
-                </div>
-                <br></br>
-                <br></br>
-                <div class="container">
-                    <div class="row align-items-center text-center">
-                        <div class="col">
-                            <!-- This <input> field is where I'm getting the name from -->
-                            <label>Input: <input class="name" type="text" value=""/></label>
-                            <br></br>
-                            <label>Output: <span class="jqValue"></span></label>
+                            <input type="text" id="time" name="time" value="" />
                         </div>
                     </div>
                 </div>
@@ -138,6 +132,13 @@
                                 <option> <li>{{ name }}</li> </option>
                             {% endfor %}
                             </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <p3></p3>
                         </div>
                     </div>
                 </div>
@@ -195,9 +196,44 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>   
         <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
+
+
         <script>
-            tail.select('#select', 
-                {
+            $(function() {
+                $('#btn_all').on('click', function() {
+                    $('#btn_all').removeClass("btn btn-light");
+                    $('#btn_all').addClass("btn btn-primary active");
+                    $('#selector').fadeOut(200);
+                    $('#btn_select').removeClass("btn btn-primary active");
+                    $('#btn_select').addClass("btn btn-light");
+                    let value = $.map($('#select option'), function(e) { return e.value; });
+                    $( "p1" ).html( value );
+                    });
+                
+                $('#btn_select').on('click', function() {
+                    $('#btn_all').removeClass("btn btn-primary active");
+                    $('#btn_all').addClass("btn btn-light");
+                    $('#btn_select').removeClass("btn btn-light");
+                    $('#btn_select').addClass("btn btn-primary active");
+                    $('#selector').fadeIn(200);
+                    let value = $(this).find('option:selected').text();
+                    $( "p1" ).html( value );
+                    });
+            });
+        </script>
+
+        <script>
+            $('#btn_select').on('click', function() {
+                $(document)
+                .ready(function() {
+                    let value = $('#select').find('option:selected').text();
+                    $( "p1" ).html( value );
+                    });
+            });
+        </script>
+
+        <script>
+            tail.select('#select', {
                 multiple: true,
                 multiContainer: true,
                 multiSelectAll: true,
@@ -206,24 +242,48 @@
         </script>
 
         <script>
-            $(document).ready(function() {
+            $(document)
+            .ready(function() {
+                let value = $.map($('#select option'), function(e) { return e.value; });
+                    $( "p1" ).html( value );
+            });
+        </script>
+
+        <script>
+            $(document)
+            .ready(function() {
                 $('#select').change(function() {
-                    var selected = $(this).find('option:selected').text();
-                    
+                let value = $(this).find('option:selected').text();
+                $( "p1" ).html( value );
                 });
             });
         </script>
 
         <script>
-            // JQuery example
-            var $jqName = $('.name');
-            var $jqValue = $('.jqValue');
-
-            $jqName.on('input', function(event){
-            $jqValue.html($jqName.val());
+            $('#time').ionRangeSlider({
+            grid: true,
+            min: 1700,
+            max: 2100,
+            from: 2021,
+            prefix: 'Year : ',
+            prettify_separator: '',
+            hide_min_max: true,
             });
         </script>
-       
+
+        <script>
+            $(document)
+            .ready(function() {
+                $('#time').on("change", function() {
+                    var $inp = $(this);
+                    var res = $inp.data("from");
+                    $("p2").html( res );
+                });
+            });
+        </script>
+
+
+
         <script>
             tail.select('#select1', {
                 width: 270,
@@ -231,43 +291,11 @@
         </script>
 
         <script>
-            tail.select('#select2', {
-                width: 300,
-            });
-        </script>
-
-        <script>
-            $('#range_02').ionRangeSlider({
-            grid: false,
-            min: 1500,
-            max: 2035,
-            from: 2021,
-            prefix: 'Year : ',
-            prettify_separator: '',
-            hide_min_max: true,
-            onFinish: function(data){
-                var value = data.fromNumber;
-                $("#range_02").val(value);
-                }
-            });
-        </script>
-
-        <script>
-            $(function() {
-                $('#btn_all').on('click', function() {
-                    $('#btn_all').removeClass("btn btn-light");
-                    $('#btn_all').addClass("btn btn-primary active");
-                    $('#selector').fadeOut(400);
-                    $('#btn_select').removeClass("btn btn-primary active");
-                    $('#btn_select').addClass("btn btn-light");
-                });
-
-                $('#btn_select').on('click', function() {
-                    $('#btn_all').removeClass("btn btn-primary active");
-                    $('#btn_all').addClass("btn btn-light");
-                    $('#btn_select').removeClass("btn btn-light");
-                    $('#btn_select').addClass("btn btn-primary active");
-                    $('#selector').fadeIn(400);
+            $(document)
+            .ready(function() {
+                $('#select1').change(function() {
+                let value = $(this).find('option:selected').text();
+                $( "p3" ).html( value );
                 });
             });
         </script>
