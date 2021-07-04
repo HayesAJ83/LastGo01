@@ -155,10 +155,7 @@
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Eponyms</h1>
                             <select id="select2">
-                            {% for name in names [:1] %}
-                                <option selected> <li>{{ name }}</li> </option>
-                            {% endfor %}
-                            {% for name in names [1:] %}
+                            {% for name in names %}
                                 <option> <li>{{ name }}</li> </option>
                             {% endfor %}
                             </select>
@@ -351,6 +348,14 @@
         <script>
             tail.select('#select2', {
                 width: 270,
+            });
+        </script>
+
+        <script>
+            $(document)
+            .ready(function() {
+                let value = $('#select2').find('option:selected').text();
+                $( "p4" ).html( value );
             });
         </script>
 
