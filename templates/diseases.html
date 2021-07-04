@@ -277,7 +277,7 @@
                 $('#range_02').on("change", function() {
                     var $inp = $(this);
                     var res = $inp.data("from");
-                    $("p2").text($("p2").text().replace('2021', res ));
+                    $("p2").replaceWith(text( res ));
                 });
             });
         </script>
