@@ -205,8 +205,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>   
         <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
-
-        // Specialties
         <script>
             $(function() {
                 $('#btn_all').on('click', function() {
@@ -241,6 +239,8 @@
             //    { return e.value; });
             //    $( "p2" ).text( value.join(',') );
             //});
+            //
+            //$('#replace-me').html('Anything you want')
 
         </script>
 
@@ -248,13 +248,13 @@
             $(document)
             .ready(function() {
                 $('#select').change(function() {
-                var value = $(this).find('option:selected').text();
-                $( "p2" ).text( value );
+                let value = $(this).find('option:selected').text();
+                $( "p2" ).text( value.join(',') );
                 });
             });
         </script>
 
-        // Time Traveler
+
         <script>
             $('#range_02').ionRangeSlider({
             grid: true,
