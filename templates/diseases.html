@@ -242,15 +242,17 @@
             //    $( "p2" ).text( value.join(',') );
             //});
 
+        </script>
+
+        <script>
             $(document)
             .ready(function() {
                 $('#select').change(function() {
-                    var value = $(this).find('option:selected').text();
-                    $( "p2" ).text( value.join(',') );
+                var value = $(this).find('option:selected').text();
+                $( "p2" ).text( value );
                 });
             });
         </script>
-
 
         // Time Traveler
         <script>
