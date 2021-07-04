@@ -222,11 +222,11 @@
                 $('#btn_all').on('click', function() {
                     $('#btn_all').removeClass("btn btn-light");
                     $('#btn_all').addClass("btn btn-primary active");
-                    $('#selector').fadeOut(400);
+                    $('#selector').fadeOut(200);
                     $('#btn_select').removeClass("btn btn-primary active");
                     $('#btn_select').addClass("btn btn-light");
-                    //let value = $.map($('#select option'), function(e) { return e.value; });
-                    //$( "p2" ).text( value.join(',') );
+                    let value = $.map($('#select option'), function(e) { return e.value; });
+                    $( "p1" ).html( value );
                     });
                 
                 $('#btn_select').on('click', function() {
@@ -234,8 +234,12 @@
                     $('#btn_all').addClass("btn btn-light");
                     $('#btn_select').removeClass("btn btn-light");
                     $('#btn_select').addClass("btn btn-primary active");
-                    $('#selector').fadeIn(400);
-                });
+                    $('#selector').fadeIn(200);
+                    $('#select').change(function() {
+                        let value = $(this).find('option:selected').text();
+                        $( "p1" ).html( value );
+                        });
+                    });
             });
 
             tail.select('#select', {
@@ -261,7 +265,7 @@
             .ready(function() {
                 $('#select').change(function() {
                 let value = $(this).find('option:selected').text();
-                $( "p1" ).text( value );
+                $( "p1" ).html( value );
                 });
             });
         </script>
