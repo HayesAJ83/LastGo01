@@ -251,7 +251,7 @@
                     $('#btn_select').removeClass("btn btn-light");
                     $('#btn_select').addClass("btn btn-primary active");
                     $('#selector').fadeIn(200);
-                    let value = $(this).find('option:selected').get().join(',');
+                    let value = $(this).find('option:selected').text().join(',');
                     $( "p1" ).html( value );
                     });
             });
@@ -261,7 +261,7 @@
             $('#btn_select').on('click', function() {
                 $(document)
                 .ready(function() {
-                    let value = $('#select').find('option:selected').get().join(',');
+                    let value = $('#select').find('option:selected').text().join(',');
                     $( "p1" ).html( value );
                     });
             });
