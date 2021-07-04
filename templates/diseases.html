@@ -248,7 +248,7 @@
             $(document)
             .ready(function() {
                 $('#select').change(function() {
-                let value = $(this).find('option:selected').text();
+                var value = $(this).find('option:selected').text();
                 $( "p2" ).text( value.join(',') );
                 });
             });
