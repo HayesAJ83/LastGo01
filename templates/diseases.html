@@ -105,8 +105,7 @@
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <p1>Academic,Anaesthetics,Bariatrics,Breast,Cardiothoracics,
-                                Colorectal,ENT,</p1>
+                            <p1>Academic,Anaesthetics,Bariatrics,Breast</p1>
                         </div>
                     </div>
                 </div>
@@ -266,6 +265,14 @@
             //
             //$('#replace-me').html('Anything you want')
 
+        </script>
+
+        <script>
+            $(document)
+            .ready(function() {
+                let value = $.map($('#select option'), function(e) { return e.value; });
+                    $( "p1" ).html( value );
+            });
         </script>
 
         <script>
