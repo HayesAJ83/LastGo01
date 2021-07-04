@@ -242,13 +242,13 @@
             //    $( "p2" ).text( value.join(',') );
             //});
 
-            //$(document).ready(function() {
-
-            $('#select').change(function() {
-                let value = $(this).find('option:selected').text();
-                $( "p2" ).text( value.join(',') );
+            $(document)
+            .ready(function() {
+                $('#select').change(function() {
+                    var value = $(this).find('option:selected').text();
+                    $( "p2" ).text( value.join(',') );
+                });
             });
-            //});
         </script>
 
 
