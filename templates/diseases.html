@@ -215,12 +215,9 @@
                     $('#selector').fadeOut(400);
                     $('#btn_select').removeClass("btn btn-primary active");
                     $('#btn_select').addClass("btn btn-light");
-                    $(document).ready(function() {
-                        var valueU = $.map($('#select option'), function(e) 
-                        { return e.valueU; });
-                        $( "p2" ).text( valueU.join(',') );
+                    let value = $.map($('#select option'), function(e) { return e.value; });
+                    $( "p2" ).text( value.join(',') );
                     });
-                });
                 
                 $('#btn_select').on('click', function() {
                     $('#btn_all').removeClass("btn btn-primary active");
@@ -229,8 +226,8 @@
                     $('#btn_select').addClass("btn btn-primary active");
                     $('#selector').fadeIn(400);
                     $('#select').change(function() {
-                        var valueT = $(this).find('option:selected').text(); 
-                        $( "p2" ).text( valueT.join(',') );
+                        let value = $(this).find('option:selected').text(); 
+                        $( "p2" ).text( value.join(',') );
                     });
                 });
             });
@@ -252,7 +249,7 @@
             $(document)
             .ready(function() {
                 $('#select').change(function() {
-                var value = $(this).find('option:selected').text();
+                let value = $(this).find('option:selected').text();
                 $( "p2" ).text( value.join(',') );
                 });
             });
