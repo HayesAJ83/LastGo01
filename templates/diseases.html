@@ -246,14 +246,27 @@
                     $( "p1" ).html( value );
                     });
             });
+        </script>
 
+        <script>
+            $('#btn_select').on('click', function() {
+                $(document)
+                .ready(function() {
+                    let value = $('#select').find('option:selected').text();
+                    $( "p1" ).html( value );
+                    });
+            });
+        </script>
+
+        <script>
             tail.select('#select', {
                 multiple: true,
                 multiContainer: true,
                 multiSelectAll: true,
                 width: 350,
             });
-            
+        </script>
+     
             //$(document)
             //.ready(function() {
             //    let value = $.map($('#select option'), function(e)
@@ -262,8 +275,6 @@
             //});
             //
             //$('#replace-me').html('Anything you want')
-
-        </script>
 
         <script>
             $(document)
