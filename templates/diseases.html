@@ -215,8 +215,8 @@
                     $('#selector').fadeOut(400);
                     $('#btn_select').removeClass("btn btn-primary active");
                     $('#btn_select').addClass("btn btn-light");
-                    var value = $.map($('#select option'), function(e) { return e.value; });
-                    $( "p2" ).text( value.join(',') );
+                    //let value = $.map($('#select option'), function(e) { return e.value; });
+                    //$( "p2" ).text( value.join(',') );
                     });
                 
                 $('#btn_select').on('click', function() {
@@ -242,13 +242,13 @@
             //    $( "p2" ).text( value.join(',') );
             //});
 
-            $(document)
-            .ready(function() {
-                $('#select').change(function() {
-                var value = $(this).find('option:selected').text();
+            //$(document).ready(function() {
+
+            $('#select').change(function() {
+                let value = $(this).find('option:selected').text();
                 $( "p2" ).text( value.join(',') );
-                });
             });
+            //});
         </script>
 
 
