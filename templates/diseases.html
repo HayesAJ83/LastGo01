@@ -269,7 +269,7 @@
                 $(document).ready(function() {
                     var select = "";
                     $('#select').find('option:selected').each(function() {
-                        select += ","+$('#select').text();
+                        select += ","+$(this).text();
                     });
                     if(select != ""){
                         select = select.substr(1);
