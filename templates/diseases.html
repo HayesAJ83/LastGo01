@@ -269,14 +269,14 @@
             $('#btn_select').on('click', function() {
                 $('#select').ready(function() {
                     var select ="";
+                    
                     $("#select").find('option:selected').each(function() {
-                        select +=","+$(this).text();
+                        select +=","+$.trim($(this).text());
                     });
                     if(select != ""){
                         select = select.substr(1);
                     }
-                    var select1 = select.trim()
-                    $( "p1" ).html( select1 );
+                    $( "p1" ).html( select );
                     });
             });
         </script>
