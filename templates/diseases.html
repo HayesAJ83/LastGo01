@@ -267,9 +267,9 @@
         <script>
             $('#btn_select').on('click', function() {
                 $('#select').ready(function() {
-                    var select = "";
-                    $("select option:selected").each(function() {
-                        select += ","+$(this).text();
+                    var select ="";
+                    $("#select").find('option:selected').each(function() {
+                        select +=","+$(this).text();
                     });
                     if(select != ""){
                         select = select.substr(1);
