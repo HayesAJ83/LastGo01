@@ -248,8 +248,9 @@
                     $('#btn_select').removeClass("btn btn-light");
                     $('#btn_select').addClass("btn btn-primary active");
                     $('#selector').fadeIn(200);
-                    let value = $('#select').find('option:selected').text().trim();
-                    $( "p1" ).html( value );
+                    let value = $('#select').find('option:selected').text();
+                    var value1 = value.trim()
+                    $( "p1" ).html( value1 );
                     });
             });
         </script>
@@ -274,7 +275,8 @@
                     if(select != ""){
                         select = select.substr(1);
                     }
-                    $( "p1" ).html( select );
+                    var select1 = select.trim()
+                    $( "p1" ).html( select1 );
                     });
             });
         </script>
