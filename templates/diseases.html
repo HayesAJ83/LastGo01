@@ -248,7 +248,7 @@
                     $('#btn_select').removeClass("btn btn-light");
                     $('#btn_select').addClass("btn btn-primary active");
                     $('#selector').fadeIn(200);
-                    let value = $('#select').find('option:selected').text();
+                    let value = $('#select').find('option:selected').text().trim();
                     $( "p1" ).html( value );
                     });
             });
