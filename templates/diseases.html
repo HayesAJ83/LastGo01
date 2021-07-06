@@ -295,7 +295,7 @@
                             return this.text
                             })
                         .get().join(',');
-                    $( "p1" ).html( value );
+                $( "p1" ).html( value );
             });
         </script>
 
@@ -307,7 +307,7 @@
                     $("#select").find('option:selected').each(function() {
                         select +=","+$.trim($(this).text());
                         });
-                    if(select != ""){select = select.substr(1);}
+                        if(select != ""){select = select.substr(1);}
                 $( "p1" ).html( select );
                 });
             });
