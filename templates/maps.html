@@ -91,7 +91,7 @@
                     <form method="POST">
                         <div class="row align-items-center text-center">
                             <div class="col" id="selector" style="display:none">
-                                <select multiple id="select">
+                                <select multiple id="select1">
                                     {% for spec in specs %}
                                         <option> <li>{{ spec }}</li> </option>
                                     {% endfor %}
@@ -100,8 +100,14 @@
                         </div>
                     </form>
                 </div>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <p1 style="font-size: 5px;"></p1>
+                        </div>
+                    </div>
+                </div>
                 <br></br>
-
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
@@ -110,18 +116,22 @@
                     </div>
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <input type="text" id="range_02" name="example_name" value="" />
+                            <input type="text" id="time" name="time" value="" />
+                        </div>
+                    </div>
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <p2 style="font-size: 20px;">2021</p2>
                         </div>
                     </div>
                 </div>
-                <br></br>
                 <br></br>
 
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Location</h1>
-                            <select id="select1">
+                            <select id="select2">
                                 <option>World</option>
 
                                 <optgroup label="Europe">
@@ -176,23 +186,19 @@
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" 
-                            src="https://plotly.com/~chris/1638.embed" height="525" width=100%>
-                            </iframe>
-                        </div>
-                    </div>
-                </div>
-                <br></br>
-                <br></br>
-                <div class="container">
-                    <div class="row align-items-center text-center">
-                        <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Eponyms</h1>
-                            <select id="select1">
+                            <select id="select3">
                             {% for name in names %}
                                 <option> <li>{{ name }}</li> </option>
                             {% endfor %}
                             </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <p4 style="font-size: 8px;"></p4>
                         </div>
                     </div>
                 </div>
@@ -250,29 +256,84 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>   
         <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
+        
+
         <script>
-            tail.select('#select', {
+            $(document)
+            .ready(function() {
+                $('#select1').ready(function() {
+                    let value = $('#select1 option').map(function() {
+                            return this.text}).get().join(',');
+                    $( "p1" ).html( value );
+                });
+            });
+        </script>
+
+        <script>
+            $(document)
+            .ready(function() {
+                $('#select1').on('change', function() {
+                    var select ="";
+                    $("#select1").find('option:selected').each(function() 
+                        {select +=","+$.trim($(this).text());});
+                        if(select != ""){select = select.substr(1);}
+                $( "p1" ).html( select );
+                });
+            });
+        </script>
+
+        <script>
+            $(function() {
+                $('#btn_all').on('click', function() {
+                    $('#btn_all').removeClass("btn btn-light");
+                    $('#btn_all').addClass("btn btn-primary active");
+                    $('#selector').fadeOut(200);
+                    $('#btn_select').removeClass("btn btn-primary active");
+                    $('#btn_select').addClass("btn btn-light");
+                    let value = $('#select1 option')
+                        .map(function() {
+                            return this.text
+                            })
+                        .get().join(',');
+                    $( "p1" ).html( value );
+                    });
+                
+                $('#btn_select').on('click', function() {
+                    $('#btn_all').removeClass("btn btn-primary active");
+                    $('#btn_all').addClass("btn btn-light");
+                    $('#btn_select').removeClass("btn btn-light");
+                    $('#btn_select').addClass("btn btn-primary active");
+                    $('#selector').fadeIn(200);
+                });
+            });
+        </script>
+
+        <script>
+            $('#btn_select').on('click', function() {
+                $('#select1').ready(function() {
+                    var select ="";
+                    $("#select1").find('option:selected').each(function() {
+                        select +=","+$.trim($(this).text());
+                    });
+                    if(select != ""){
+                        select = select.substr(1);
+                    }
+                    $( "p1" ).html( select );
+                    });
+            });
+        </script>
+
+        <script>
+            tail.select('#select1', {
                 multiple: true,
                 multiContainer: true,
                 multiSelectAll: true,
                 width: 350,
             });
         </script>
-
+     
         <script>
-            tail.select('#select1', {
-                width: 270,
-            });
-        </script>
-
-        <script>
-            tail.select('#select2', {
-                width: 300,
-            });
-        </script>
-
-        <script>
-            $('#range_02').ionRangeSlider({
+            $('#time').ionRangeSlider({
             grid: true,
             min: 1700,
             max: 2100,
@@ -284,26 +345,65 @@
         </script>
 
         <script>
-            $(function() {
-
-                $('#btn_all').on('click', function() {
-                    $('#btn_all').removeClass("btn btn-light");
-                    $('#btn_all').addClass("btn btn-primary active");
-                    $('#selector').fadeOut(400);
-                    $('#btn_select').removeClass("btn btn-primary active");
-                    $('#btn_select').addClass("btn btn-light");
+            $(document)
+            .ready(function() {
+                $('#time').on("change", function() {
+                    var $inp = $(this);
+                    var res = $inp.data("from");
+                    $("p2").html( res );
                 });
-
-                $('#btn_select').on('click', function() {
-                    $('#btn_all').removeClass("btn btn-primary active");
-                    $('#btn_all').addClass("btn btn-light");
-                    $('#btn_select').removeClass("btn btn-light");
-                    $('#btn_select').addClass("btn btn-primary active");
-                    $('#selector').fadeIn(400);
-                });
-
             });
         </script>
+
+        <script>
+            tail.select('#select2', {
+                width: 340,
+            });
+        </script>
+
+        <script>
+            $(document)
+            .ready(function() {
+                let value = $('#select2').find('option:selected').text();
+                $( "p3" ).html( value );
+            });
+        </script>
+
+        <script>
+            $(document)
+            .ready(function() {
+                $('#select2').change(function() {
+                let value = $(this).find('option:selected').text();
+                $( "p3" ).html( value );
+                });
+            });
+        </script>
+
+        <script>
+            tail.select('#select3', {
+                width: 340,
+            });
+        </script>
+
+        <script>
+            $(document)
+            .ready(function() {
+                let value = $('#select3').find('option:selected').text();
+                $( "p4" ).html( value );
+            });
+        </script>
+
+        <script>
+            $(document)
+            .ready(function() {
+                $('#select3').change(function() {
+                let value = $(this).find('option:selected').text();
+                $( "p4" ).html( value );
+                });
+            });
+        </script>
+
+      
         
         <!-- Theme Javascripts -->
         <script src="/static/assets/js/theme.js"></script>
