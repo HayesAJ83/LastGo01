@@ -211,7 +211,7 @@
                     $('#selector').fadeOut(200);
                     $('#btn_select').removeClass("btn btn-primary active");
                     $('#btn_select').addClass("btn btn-light");
-                    let value = $.map($('#select option'), function(e) { return e.value; });
+                    let value = $.map($('#select1 option'), function(e) { return e.value; });
                     $( "p1" ).html( value );
                     });
                 
@@ -286,8 +286,6 @@
                 });
             });
         </script>
-
-
 
         <script>
             tail.select('#select2', {
