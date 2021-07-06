@@ -233,12 +233,9 @@
                             return this.text
                             })
                         .get().join(',');
-                $( "p1" ).html( value );
+            $( "p1" ).html( value );
             });
         </script>
-
-
-
 
         <script>
             $(document)
@@ -277,7 +274,6 @@
                     $('#selector').fadeOut(200);
                     $('#btn_select').removeClass("btn btn-primary active");
                     $('#btn_select').addClass("btn btn-light");
-                    //let value = $.map($('#select option'), function(e) { return e.value; });
                     let value = $('#select option')
                         .map(function() {
                             return this.text
@@ -285,7 +281,6 @@
                         .get().join(',');
                     $( "p1" ).html( value );
                     });
-        
                 
                 $('#btn_select').on('click', function() {
                     $('#btn_all').removeClass("btn btn-primary active");
