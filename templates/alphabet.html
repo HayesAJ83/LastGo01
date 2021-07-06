@@ -92,7 +92,7 @@
                     <form method="POST">
                         <div class="row align-items-center text-center">
                             <div class="col" id="selector" style="display:none">
-                                <select multiple id="select">
+                                <select multiple id="select1">
                                     {% for spec in specs %}
                                         <option> <li>{{ spec }}</li> </option>
                                     {% endfor %}
@@ -120,6 +120,11 @@
                             <input type="text" id="time" name="time" value="" />
                         </div>
                     </div>
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <p2 style="font-size: 20px;">2021</p2>
+                        </div>
+                    </div>
                 </div>
                 <br></br>
                 <br></br>
@@ -127,7 +132,7 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Eponyms</h1>
-                            <select id="select1">
+                            <select id="select2">
                             {% for name in names %}
                                 <option> <li>{{ name }}</li> </option>
                             {% endfor %}
@@ -226,14 +231,14 @@
             $('#btn_select').on('click', function() {
                 $(document)
                 .ready(function() {
-                    let value = $('#select').find('option:selected').text();
+                    let value = $('#select1').find('option:selected').text();
                     $( "p1" ).html( value );
                     });
             });
         </script>
 
         <script>
-            tail.select('#select', {
+            tail.select('#select1', {
                 multiple: true,
                 multiContainer: true,
                 multiSelectAll: true,
@@ -244,7 +249,7 @@
         <script>
             $(document)
             .ready(function() {
-                let value = $.map($('#select option'), function(e) { return e.value; });
+                let value = $.map($('#select1 option'), function(e) { return e.value; });
                     $( "p1" ).html( value );
             });
         </script>
@@ -252,7 +257,7 @@
         <script>
             $(document)
             .ready(function() {
-                $('#select').change(function() {
+                $('#select1').change(function() {
                 let value = $(this).find('option:selected').text();
                 $( "p1" ).html( value );
                 });
@@ -285,15 +290,15 @@
 
 
         <script>
-            tail.select('#select1', {
-                width: 270,
+            tail.select('#select2', {
+                width: 300,
             });
         </script>
 
         <script>
             $(document)
             .ready(function() {
-                $('#select1').change(function() {
+                $('#select2').change(function() {
                 let value = $(this).find('option:selected').text();
                 $( "p3" ).html( value );
                 });
