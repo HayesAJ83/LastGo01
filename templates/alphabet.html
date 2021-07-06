@@ -201,7 +201,29 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>   
         <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
+        <script>
+            $(document)
+            .ready(function() {
+                $('#select1').ready(function() {
+                    let value = $('#select1 option').map(function() {
+                            return this.text}).get().join(',');
+                    $( "p1" ).html( value );
+                });
+            });
+        </script>
 
+        <script>
+            $(document)
+            .ready(function() {
+                $('#select1').on('change', function() {
+                    var select ="";
+                    $("#select1").find('option:selected').each(function() 
+                        {select +=","+$.trim($(this).text());});
+                        if(select != ""){select = select.substr(1);}
+                $( "p1" ).html( select );
+                });
+            });
+        </script>
 
         <script>
             $(function() {
@@ -211,7 +233,11 @@
                     $('#selector').fadeOut(200);
                     $('#btn_select').removeClass("btn btn-primary active");
                     $('#btn_select').addClass("btn btn-light");
-                    let value = $.map($('#select1 option'), function(e) { return e.value; });
+                    let value = $('#select1 option')
+                        .map(function() {
+                            return this.text
+                            })
+                        .get().join(',');
                     $( "p1" ).html( value );
                     });
                 
@@ -221,18 +247,21 @@
                     $('#btn_select').removeClass("btn btn-light");
                     $('#btn_select').addClass("btn btn-primary active");
                     $('#selector').fadeIn(200);
-                    let value = $(this).find('option:selected').text();
-                    $( "p1" ).html( value );
-                    });
+                });
             });
         </script>
 
         <script>
             $('#btn_select').on('click', function() {
-                $(document)
-                .ready(function() {
-                    let value = $('#select1').find('option:selected').text();
-                    $( "p1" ).html( value );
+                $('#select1').ready(function() {
+                    var select ="";
+                    $("#select1").find('option:selected').each(function() {
+                        select +=","+$.trim($(this).text());
+                    });
+                    if(select != ""){
+                        select = select.substr(1);
+                    }
+                    $( "p1" ).html( select );
                     });
             });
         </script>
@@ -245,25 +274,7 @@
                 width: 350,
             });
         </script>
-
-        <script>
-            $(document)
-            .ready(function() {
-                let value = $.map($('#select1 option'), function(e) { return e.value; });
-                    $( "p1" ).html( value );
-            });
-        </script>
-
-        <script>
-            $(document)
-            .ready(function() {
-                $('#select1').change(function() {
-                let value = $(this).find('option:selected').text();
-                $( "p1" ).html( value );
-                });
-            });
-        </script>
-
+     
         <script>
             $('#time').ionRangeSlider({
             grid: true,
@@ -296,12 +307,45 @@
         <script>
             $(document)
             .ready(function() {
+                let value = $('#select2').find('option:selected').text();
+                $( "p3" ).html( value );
+            });
+        </script>
+
+        <script>
+            $(document)
+            .ready(function() {
                 $('#select2').change(function() {
                 let value = $(this).find('option:selected').text();
                 $( "p3" ).html( value );
                 });
             });
         </script>
+
+        <script>
+            tail.select('#select3', {
+                width: 300,
+            });
+        </script>
+
+        <script>
+            $(document)
+            .ready(function() {
+                let value = $('#select3').find('option:selected').text();
+                $( "p4" ).html( value );
+            });
+        </script>
+
+        <script>
+            $(document)
+            .ready(function() {
+                $('#select3').change(function() {
+                let value = $(this).find('option:selected').text();
+                $( "p4" ).html( value );
+                });
+            });
+        </script>
+
 
 
         
