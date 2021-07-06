@@ -228,12 +228,11 @@
         <script>
             $(document)
             .ready(function() {
-                let value = $('#select option')
-                        .map(function() {
-                            return this.text
-                            })
-                        .get().join(',');
-            $( "p1" ).html( value );
+                $('#select').ready(function() {
+                    let value = $('#select option').map(function() {
+                            return this.text}).get().join(',');
+                    $( "p1" ).html( value );
+                });
             });
         </script>
 
