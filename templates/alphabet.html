@@ -123,7 +123,7 @@
                     </div>
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <p2 style="font-size: 20px;">2021</p2>
+                            <p2 style="font-size: 20px;">1600</p2><p3 style="font-size: 20px;">2021</p3>
                         </div>
                     </div>
                 </div>
@@ -144,7 +144,7 @@
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <p3 style="font-size: 8px;"></p3>
+                            <p4 style="font-size: 8px;"></p4>
                         </div>
                     </div>
                 </div>
@@ -330,7 +330,8 @@
                     var $inp = $(this);
                     var frm = $inp.data("from");
                     var to = $inp.data("to");
-                    $("p2").html( to );
+                    $("p2").html( from );
+                    $("p3").html( to );
                 });
             });
         </script>
@@ -354,7 +355,7 @@
             .ready(function() {
                 $('#select2').change(function() {
                 let value = $(this).find('option:selected').text();
-                $( "p3" ).html( value );
+                $( "p4" ).html( value );
                 });
             });
         </script>
@@ -371,7 +372,7 @@
                         data: table.data,
                         dataSrc:"",
                         columns: [
-                            {title: "Eponym"},
+                            {title: "Col_1"},
                             {title: "Eponym_easy"},
                             {title: "Eponym_easy_yr"},
                             {title: "Topic"},
