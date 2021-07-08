@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Page Title -->
+        <title>Surgical Names</title>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/assets/img/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/assets/img/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/assets/img/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/static/assets/img/favicons/site.webmanifest">
+        <link rel="mask-icon" href="/static/assets/img/favicons/safari-pinned-tab.svg" color="#f23838">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Vendor Stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet"> 
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700" rel="stylesheet">
+        <!-- MDB -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet"/>
+
+        <!--Plugin CSS file with desired skin-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tail.select@0.5.15/css/bootstrap4/tail.select-default.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129313359-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-129313359-1');
+        </script>
+
+        <!-- Theme Stylesheets -->
+        <link href="/static/assets/css/theme.css" rel="stylesheet">
+
+        <script src="https://bossanova.uk/jspreadsheet/v4/jexcel.js"></script>
+        <link rel="stylesheet" href="https://bossanova.uk/jspreadsheet/v4/jexcel.css" type="text/css" />
+        <script src="https://jsuites.net/v4/jsuites.js"></script>
+        <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
+
+
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header class="spyre-navbar navbar navbar-expand-lg bg-secondary navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff">
+            <div class="container">
+                <a class="navbar-brand mr-lg-5 mr-xl-7" href="{{ url_for('.index', _anchor='section-4') }}">
+                    <img src="/static/assets/img/EponymExplorer.png" class="d-none d-lg-block" alt="EponymExplorer" width="183" />
+                    <img src="/static/assets/img/EponymExplorer.png" class="d-block d-lg-none" alt="EponymExplorer" width="150" />
+                </a>
+            </div>
+        </header>
+        <!-- End of Header -->
+
+        <!-- Main Content -->
+        <main class="main minh-100vh">
+            <!-- Section -->
+            <section class="py-0 overflow-hidden text-center" id="section-1">
+                <div class="bg-container overlay parallax" data-rellax-percentage="0.5" style="background-image: url(/static/assets/img/backgrounds/iStock-583857946_big.jpg)"></div>
+                <div class="container">
+                    <div class="row h-100vh justify-content-center align-items-center">
+                        <div class="col">
+                            <h1 class="mb-5 fs-lg-1 text-white" data-aos="fade-down" data-aos-duration="1500">Search</h1>
+                            <p class="text-white text-uppercase fs-4 fs-lg-6" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1500">A to Z</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section -->
+            <section id="section-2">
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <h1 class="text-black mb-2 fs-1 ">Specialties</h1>
+                            <a class="btn btn-primary active"   id="btn_all"    role="button" aria-pressed="true">All</a>
+                            <a class="btn btn-light" id="btn_select" role="button" aria-pressed="true">Options</a>
+                        </div>
+                    </div>
+                    <hr style="height:1px; visibility:hidden">
+                    <form method="POST">
+                        <div class="row align-items-center text-center">
+                            <div class="col" id="selector" style="display:none">
+                                <select multiple id="select1">
+                                    {% for spec in specs %}
+                                        <option> <li>{{ spec }}</li> </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <p1 style="font-size: 5px;"></p1>
+                        </div>
+                    </div>
+                </div>
+                <br></br>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <h1 class="text-black mb-2 fs-1 ">Time Traveller</h1>
+                        </div>
+                    </div>
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <input type="text" id="time" name="time" value="" />
+                        </div>
+                    </div>
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <p2 style="font-size: 16px;">1700</p2>  <p3 style="font-size:16px;">2021</p3>
+                        </div>
+                    </div>
+                </div>
+                <br></br>
+                <br></br>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <h1 class="text-black mb-2 fs-1 ">Eponyms</h1>
+                            <select id="select2">
+                            {% for name in names %}
+                                <option> <li>{{ name }}</li> </option>
+                            {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <p4 style="font-size: 8px;"></p4>
+                        </div>
+                    </div>
+                </div>
+                <br></br>
+                
+                <div id="spreadsheet1"></div>
+                <div class="displaypanel"></div>
+                 
+            </section>
+            <!-- End of Section -->
+        </main>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="footer text-white" style="background-image: url(/static/assets/img/backgrounds/iStock-532331964.jpg)">
+            <div class="container d-flex h-100">
+                <div class="row flex-grow-1">
+                    <div class="col d-flex flex-column mb-2 mt-3 pl-lg-7">
+                        <div class="col-6 col-lg-3">
+                            <br></br>
+                            <h6 class="mb-1 mb-lg-4 text-uppercase">About</h6>
+                            <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                <li class="my-1"><a href="#" class="text-white">Design Team</a></li>
+                                <li class="my-1"><a href="#" class="text-white">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="mt-auto d-flex justify-content-between">
+                            <span class="fs--3 fs-lg--2">&copy; 2021 SurgicalNames.com | Excision Ltd, Scotland, UK</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+        <!-- Javascripts -->
+        <script src="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="undefined" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/tail.select@0.5.15/js/tail.select-full.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+        <script>
+            // Accepts any class name
+            var rellax = new Rellax('.rellax');
+        </script>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <!--Plugin JavaScript file-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>   
+        <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+        <script type="test/javascript" src="https://unpkg.com/papaparse@5.3.1/papaparse.min.js"></script>
+
+        <script>
+            $(document)
+            .ready(function() {
+                $('#select1').ready(function() {
+                    let value = $('#select1 option').map(function() {
+                            return this.text}).get().join(',');
+                    $( "p1" ).html( value );
+                });
+            });
+        </script>
+
+        <script>
+            $(document)
+            .ready(function() {
+                $('#select1').on('change', function() {
+                    var select ="";
+                    $("#select1").find('option:selected').each(function() 
+                        {select +=","+$.trim($(this).text());});
+                        if(select != ""){select = select.substr(1);}
+                $( "p1" ).html( select );
+                });
+            });
+        </script>
+
+        <script>
+            $(function() {
+                $('#btn_all').on('click', function() {
+                    $('#btn_all').removeClass("btn btn-light");
+                    $('#btn_all').addClass("btn btn-primary active");
+                    $('#selector').fadeOut(200);
+                    $('#btn_select').removeClass("btn btn-primary active");
+                    $('#btn_select').addClass("btn btn-light");
+                    let value = $('#select1 option')
+                        .map(function() {
+                            return this.text
+                            })
+                        .get().join(',');
+                    $( "p1" ).html( value );
+                    });
+                
+                $('#btn_select').on('click', function() {
+                    $('#btn_all').removeClass("btn btn-primary active");
+                    $('#btn_all').addClass("btn btn-light");
+                    $('#btn_select').removeClass("btn btn-light");
+                    $('#btn_select').addClass("btn btn-primary active");
+                    $('#selector').fadeIn(200);
+                });
+            });
+        </script>
+
+        <script>
+            $('#btn_select').on('click', function() {
+                $('#select1').ready(function() {
+                    var select ="";
+                    $("#select1").find('option:selected').each(function() {
+                        select +=","+$.trim($(this).text());
+                    });
+                    if(select != ""){
+                        select = select.substr(1);
+                    }
+                    $( "p1" ).html( select );
+                    });
+            });
+        </script>
+
+        <script>
+            tail.select('#select1', {
+                multiple: true,
+                multiContainer: true,
+                multiSelectAll: true,
+                width: 340,
+            });
+        </script>
+     
+        <script>
+            $('#time').ionRangeSlider({
+            type: "double",
+            grid: true,
+            min: 1670,
+            max: 2050,
+            from: 1700,
+            to: 2021,
+            prefix: 'Year : ',
+            prettify_separator: '',
+            hide_min_max: true,
+            });
+        </script>
+
+        <script>
+            $(document)
+            .ready(function() {
+                $('#time').on("change", function() {
+                    var $inp = $(this);
+                    var frm = $inp.data("from");
+                    var to = $inp.data("to");
+                    $("p2").html( frm );
+                    $("p3").html( to );
+                });
+            });
+        </script>
+
+        <script>
+            tail.select('#select2', {
+                width: 340,
+            });
+        </script>
+
+        <script>
+            $(document)
+            .ready(function() {
+                let value = $('#select2').find('option:selected').text();
+                $( "p4" ).html( value );
+            });
+        </script>
+
+        <script>
+            $(document)
+            .ready(function() {
+                $('#select2').change(function() {
+                let value = $(this).find('option:selected').text();
+                $( "p4" ).html( value );
+                });
+            });
+        </script>
+
+
+        <script>
+            $(function() {
+            Papa.parse("https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN.csv", {
+                download: true,
+                complete: function(table) {
+                    console.log(table.data)
+                $(document).ready(function () {
+                    $('#table').DataTable({
+                        data: table.data,
+                        dataSrc:"",
+                        columns: [
+                            {title: "Col_1"},
+                            {title: "Eponym_easy"},
+                            {title: "Eponym_strip"}
+                            ]
+                        });
+                    });
+                    }
+                });
+            });
+        </script>
+        
+        <script>
+            var mySpreadsheet = jspreadsheet(document.getElementById('spreadsheet1'), {
+                csv:'/jspreadsheet/arts.csv',
+                csvHeaders:true,
+                tableOverflow:true,
+                columns: [
+                    { type:'text', width:300 },
+                    { type:'text', width:80 },
+                    { type:'dropdown', width:120, source:['England','Wales','Northern Ireland','Scotland'] },
+                    { type:'text', width:120 },
+                    { type:'text', width:120 },
+                 ]
+            });
+             
+            document.getElementById('download').onclick = function () {
+                mySpreadsheet.download();
+            }
+        </script>
+ 
+        <script src="/static/assets/js/theme.js"></script>
+    </body>
+</html>
