@@ -330,7 +330,7 @@
                     var $inp = $(this);
                     var frm = $inp.data("from");
                     var to = $inp.data("to");
-                    $("p2").html( from );
+                    $("p2").html( frm );
                     $("p3").html( to );
                 });
             });
@@ -346,7 +346,7 @@
             $(document)
             .ready(function() {
                 let value = $('#select2').find('option:selected').text();
-                $( "p3" ).html( value );
+                $( "p4" ).html( value );
             });
         </script>
 
