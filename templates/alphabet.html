@@ -49,6 +49,9 @@
         <!-- Theme Stylesheets -->
         <link href="/static/assets/css/theme.css" rel="stylesheet">
 
+        <link rel="stylesheet" href="https://bossanova.uk/jspreadsheet/v4/jexcel.css" type="text/css" />
+        <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
+
     </head>
 
     <body>
@@ -151,36 +154,8 @@
                 <br></br>
                 <div class="container">
                     <div class="row align-items-center text-center">
-                        <table id="table" style="font-size: 16px;">
-                            <thead>
-                                <tr>
-                                    <th>Col_1<th>
-                                    <th>Col_2<th>
-                                    <th>Col_3<th>
-                                    <th>Col_4<th>
-                                    <th>Col_5<th>
-                                    <th>Col_6<th>   
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Row1<td>
-                                    <td>Row1<td>
-                                    <td>Row1<td>
-                                    <td>Row1<td>
-                                    <td>Row1<td>
-                                    <td>Row1<td>
-                                </tr>
-                                <tr>
-                                    <td>Row2<td>
-                                    <td>Row2<td>
-                                    <td>Row2<td>
-                                    <td>Row2<td>
-                                    <td>Row2<td>
-                                    <td>Row2<td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div id="spreadsheet1"></div>
+                        <p><button id='download'>Export my spreadsheet as CSV</button></p>
                     </div>
                 </div>
             </section>
@@ -234,6 +209,10 @@
         <!--Plugin JavaScript file-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>   
         <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+
+        <script src="https://jsuites.net/v4/jsuites.js"></script>
+        <script src="https://bossanova.uk/jspreadsheet/v4/jexcel.js"></script>
+
 
         <script>
             $(document)
@@ -374,9 +353,6 @@
                         columns: [
                             {title: "Col_1"},
                             {title: "Eponym_easy"},
-                            {title: "Eponym_easy_yr"},
-                            {title: "Topic"},
-                            {title: "Disease"},
                             {title: "Eponym_strip"}
                             ]
                         });
@@ -384,7 +360,26 @@
                     }
                 });
             });
-        </script>  
+        </script>
+        
+        <script>
+            var mySpreadsheet = jspreadsheet(document.getElementById('spreadsheet1'), {
+                csv:'/jspreadsheet/arts.csv',
+                csvHeaders:true,
+                tableOverflow:true,
+                columns: [
+                    { type:'text', width:300 },
+                    { type:'text', width:80 },
+                    { type:'dropdown', width:120, source:['England','Wales','Northern Ireland','Scotland'] },
+                    { type:'text', width:120 },
+                    { type:'text', width:120 },
+                 ]
+            });
+             
+            document.getElementById('download').onclick = function () {
+                mySpreadsheet.download();
+            }
+        </script>
  
         <script src="/static/assets/js/theme.js"></script>
     </body>
