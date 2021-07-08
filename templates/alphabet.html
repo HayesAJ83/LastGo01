@@ -131,7 +131,7 @@
                     </div>
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <p2 style="font-size: 20px;">1570</p2> <p3 style="font-size: 20px;">2021</p3>
+                            <p2 style="font-size: 20px;">1570 to</p2> <p3 style="font-size: 20px;">2021</p3>
                         </div>
                     </div>
                 </div>
@@ -159,7 +159,6 @@
                 <br></br>
                 
                 <div id="spreadsheet1"></div>
-                <p><button id='download'>Export my ass</button></p>
                 <div class="displaypanel"></div>
                  
             </section>
@@ -191,8 +190,8 @@
 
         <!-- Javascripts -->
         <!-- <script src="/static/assets/vendor/jquery/dist/jquery.min.js"></script> -->
-        <script src="/static/assets/vendor/popper.js/dist/umd/popper.min.js"></script>
-        <script src="/static/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+        <script src="https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -309,8 +308,8 @@
                     var $inp = $(this);
                     var frm = $inp.data("from");
                     var to = $inp.data("to");
-                    $("p2").html( frm );
-                    $("p3").html("to", to );
+                    $("p2").html( frm, " to ");
+                    $("p3").html( to );
                 });
             });
         </script>
