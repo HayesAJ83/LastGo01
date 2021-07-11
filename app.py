@@ -10,15 +10,15 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'surgicalnames'
 
 from flaskext.mysql import MySQL, MySQLdb
-mysql = MySQL()
-mysql.init_app(app)
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'root'
 app.config['MYSQL_DB'] = 'eponyms'
-app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
-mysql = MySQL(app)
+#app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+#mysql = MySQL(app)
+mysql = MySQL()
+mysql.init_app(app)
 
     
 @app.route('/')
@@ -76,9 +76,9 @@ def alphabet():
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
 
-    cursor = mysql.connection.cursor()
-    cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-    result = cur.execute("SELECT * FROM eponym ORDER BY specialties")
+    #cursor = mysql.connection.cursor()
+    #cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    #result = cur.execute("SELECT * FROM eponym ORDER BY specialties")
 
 
     return render_template('alphabet.html', specs=specs, names=d, selected_specs=selected_specs)
