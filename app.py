@@ -11,14 +11,14 @@ app.config['SECRET_KEY'] = 'surgicalnames'
 
 from flaskext.mysql import MySQL, MySQLdb
 
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'root'
-app.config['MYSQL_DB'] = 'eponyms'
+#app.config['MYSQL_HOST'] = 'localhost'
+#app.config['MYSQL_USER'] = 'root'
+#app.config['MYSQL_PASSWORD'] = 'root'
+#app.config['MYSQL_DB'] = 'eponyms'
 #app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 #mysql = MySQL(app)
-mysql = MySQL()
-mysql.init_app(app)
+#mysql = MySQL()
+#mysql.init_app(app)
 
     
 @app.route('/')
