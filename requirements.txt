@@ -14,4 +14,3 @@ plotly
 requests
 gulp
 Flask
-MySQL-python
