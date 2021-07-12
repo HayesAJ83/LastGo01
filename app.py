@@ -81,7 +81,7 @@ def alphabet():
     #result = cur.execute("SELECT * FROM eponym ORDER BY specialties")
 
 
-    return render_template('alphabet.html', specs=specs, names=d, selected_specs=selected_specs)
+    return render_template('alphabet.html', specs=specs, names=d)
 
 
 
