@@ -338,56 +338,15 @@
             });
         </script>
 
-
-     
-        
-        <script>
-            var mySpreadsheet = jspreadsheet(document.getElementById('spreadsheet1'), {
-                csv:'/jspreadsheet/arts.csv',
-                csvHeaders:true,
-                tableOverflow:true,
-                columns: [
-                    { type:'text', width:300 },
-                    { type:'text', width:80 },
-                    { type:'dropdown', width:120, source:['England','Wales','Northern Ireland','Scotland'] },
-                    { type:'text', width:120 },
-                    { type:'text', width:120 },
-                 ]
-            });
-             
-            document.getElementById('download').onclick = function () {
-                mySpreadsheet.download();
-            }
-        </script>
-
         <script>
         $(document).ready(function(){
             $('#load_data').click(function(){
                 $.ajax({
                     url: "https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/employee1.csv",
                     dataType: "text",
-                    success: function(data)
-                    {
+                    success: function(data){
                         var employee_data = data.split(/\r?\n|\r/);
                         var table_data = '<table class="table table-bordered table-striped">';
-                        for(var count=0; count <employee_data.length; count++)
-                        {
-                            var cell_data = employee_data[count].split(",");
-                            table_data += '<tr>';
-                            for(var cell_count = 0; cell_count < cell_data.length;
-                                cell_count++)
-                            {
-                                if(count === 0)
-                                {
-                                    table_data += '<th>'+cell_data[cell_count]+'</th>';
-                                }
-                                else
-                                {
-                                    table_data += '<td>'+cell_data[cell_count]+'</td>';
-                                }
-                            }
-                            table_data += '</tr>';
-                        }
                         table_data += '</table>';
                         $('#employee_table').html(table_data)
                     }
