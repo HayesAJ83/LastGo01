@@ -6,9 +6,11 @@ import plotly.express as px          #[v 0.4.1]
 import plotly.graph_objects as go    #[v 4.8.1]
 from flask import Flask, render_template, request, url_for, flash, redirect, json, jsonify, session
 from flask_mysqldb import MySQL
+
 #from flaskext.mysql import MySQL
 
 app = Flask(__name__)
+mysql = MySQL(app)
 
 #app.config['SECRET_KEY'] = 'surgicalnames'
 #app.config['MYSQL_HOST'] = 'localhost'
