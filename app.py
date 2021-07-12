@@ -9,7 +9,7 @@ from flask import Flask, render_template, request, url_for, flash, redirect, jso
 #from flaskext.mysql import MySQL
 
 app = Flask(__name__)
-mysql = MySQL(app)
+#mysql = MySQL(app)
 
 #app.config['SECRET_KEY'] = 'surgicalnames'
 #app.config['MYSQL_HOST'] = 'localhost'
