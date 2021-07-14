@@ -84,7 +84,7 @@
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <h1 class="text-black mb-2 fs-1 ">Specialties!</h1>
+                            <h1 class="text-black mb-2 fs-1 ">Specialties</h1>
                             <a class="btn btn-primary active"   id="btn_all"    role="button" aria-pressed="true">All</a>
                             <a class="btn btn-light" id="btn_select" role="button" aria-pressed="true">Options</a>
                         </div>
@@ -162,6 +162,22 @@
                             <br />
                             <div class="table">
                                 <div id="employee_table">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br></br>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <!-- <hi align="center">Testing</hi> -->
+                            <!-- <br /> -->
+                            <div align="center">
+                                <button type="button" name="load_data1" id="load_data1" class="btn btn-info">Eponym</button>
+                            </div>
+                            <br />
+                            <div class="table">
+                                <div id="employee_table1">
                             </div>
                         </div>
                     </div>
@@ -339,41 +355,77 @@
             });
         </script>
 
-<script>
-    $(document).ready(function(){
-        $('#load_data').click(function(){
-            $.ajax({
-                url: "https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/eps_test.csv",
-                dataType: "text",
-                success: function(data)
-                {
-                    var employee_data = data.split(/\r?\n|\r/);
-                    var table_data = '<table class="table table-bordered table-hover thead-light">';
-                    for(var count=0; count <employee_data.length; count++)
-                    {
-                        var cell_data = employee_data[count].split(",");
-                        table_data += '<tr>';
-                        for(var cell_count = 0; cell_count < cell_data.length;
-                            cell_count++)
+        <script>
+            $(document).ready(function(){
+                $('#load_data').click(function(){
+                    $.ajax({
+                        url: "https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/eps_test.csv",
+                        dataType: "text",
+                        success: function(data)
                         {
-                            if(count === 0)
+                            var employee_data = data.split(/\r?\n|\r/);
+                            var table_data = '<table class="table table-hover thead-light">';
+                            for(var count=0; count <employee_data.length; count++)
                             {
-                                table_data += '<th>'+cell_data[cell_count]+'</th>';
+                                var cell_data = employee_data[count].split(",");
+                                table_data += '<tr>';
+                                for(var cell_count = 0; cell_count < cell_data.length;
+                                    cell_count++)
+                                {
+                                    if(count === 0)
+                                    {
+                                        table_data += '<th>'+cell_data[cell_count]+'</th>';
+                                    }
+                                    else
+                                    {
+                                        table_data += '<td>'+cell_data[cell_count]+'</td>';
+                                    }
+                                }
+                                table_data += '</tr>';
                             }
-                            else
-                            {
-                                table_data += '<td>'+cell_data[cell_count]+'</td>';
-                            }
+                            table_data += '</table>';
+                            $('#employee_table').html(table_data)
                         }
-                        table_data += '</tr>';
-                    }
-                    table_data += '</table>';
-                    $('#employee_table').html(table_data)
-                }
+                    });
+                });
             });
-        });
-    });
-    </script>
+            </script>
+
+        <script>
+            $(document).ready(function(){
+                $('#load_data1').click(function(){
+                    $.ajax({
+                        url: "https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/eps_test.csv",
+                        dataType: "text",
+                        success: function(data1)
+                        {
+                            var eps_data = d1.split(/\r?\n|\r/);
+                            var table_d1 = '<table class="table table-hover thead-light">';
+                            for(var count=0; count <eps_data.length; count++)
+                            {
+                                var cell_d1 = eps_data[count].split(",");
+                                table_d1 += '<tr>';
+                                for(var cell_count = 0; cell_count < cell_d1.length;
+                                    cell_count++)
+                                {
+                                    if(count === 0)
+                                    {
+                                        table_d1 += '<th>'+cell_d1[cell_count]+'</th>';
+                                    }
+                                    else
+                                    {
+                                        table_d1 += '<td>'+cell_d1[cell_count]+'</td>';
+                                    }
+                                }
+                                table_d1 += '</tr>';
+                            }
+                            table_d1 += '</table>';
+                            $('#employee_table1').html(table_d1)
+                        }
+                    });
+                });
+            });
+            </script>
  
         <script src="/static/assets/js/theme.js"></script>
     </body>
