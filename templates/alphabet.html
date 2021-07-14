@@ -422,8 +422,8 @@
                             table_d1 += '</table>';
                             //var table_d2 = table_d1[text = 'hernia'].parent('tr');//
                             var tableRow = $(table_d1).filter(function(){
-                                return $(this).text() == "hernia";
-                            }).closest("tr");
+                                return $(this).text() == 'hernia';
+                                }).closest('tr');
                             $('#employee_table1').html(tableRow)
                             
                         }
