@@ -154,9 +154,9 @@
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <div class="table-responsive">
-                            <hi align="center">Testing</hi>
-                            <br />
+                            <div class="table table-bordered">
+                            <!-- <hi align="center">Testing</hi> -->
+                            <!-- <br /> -->
                             <div align="center">
                                 <button type="button" name="load_data" id="load_data" class="btn btn-info">Eponyms</button>
                             </div>
@@ -347,7 +347,7 @@
                 success: function(data)
                 {
                     var employee_data = data.split(/\r?\n|\r/);
-                    var table_data = '<table class="table-responsive table-hover">';
+                    var table_data = '<table class="table table-bordered table-hover">';
                     for(var count=0; count <employee_data.length; count++)
                     {
                         var cell_data = employee_data[count].split(",");
