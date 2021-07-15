@@ -179,6 +179,12 @@
                             <div class="table">
                                 <div id="employee_table1">
                             </div>
+                            <div class="row align-items-center text-center">
+                                <div class="col">
+                                    <p7 style="font-size: 16px;">test1</p7>
+                                    <p8 style="font-size: 16px;">test2</p8>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -349,10 +355,47 @@
             $(document)
             .ready(function() {
                 $('#select2').change(function() {
-                let value = $(this).find('option:selected').text();
-                $( "p4" ).html( value );
+                    let value = $(this).find('option:selected').text();
+                    $( "p4" ).html( value );
+                    });
+                
+                    $.ajax({
+                        url: "https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/eps_test.csv",
+                        dataType: "text",
+                        success: function(data)
+                        {
+                            var employee_data = data.split(/\r?\n|\r/);
+                            var table_data = '<table class="table table-hover thead-light">';
+                            for(var count=0; count <employee_data.length; count++)
+                            {
+                                var cell_data = employee_data[count].split(",");
+                                table_data += '<tr>';
+                                for(var cell_count = 0; cell_count < cell_data.length;
+                                    cell_count++)
+                                {
+                                    if(count === 0)
+                                    {
+                                        table_data += '<th>'+cell_data[cell_count]+'</th>';
+                                    }
+                                    else
+                                    {
+                                        table_data += '<td>'+cell_data[cell_count]+'</td>';
+                                    }
+                                }
+                                table_data += '</tr>';
+                            }
+                            table_data += '</table>';
+                            
+
+                            //find content of different elements inside a row.
+                            var nameTxt = $(table_data).closest('tr').find( value ).text();
+                            //var emailTxt = $(this).closest('tr').find('.Specialties').text();
+                            //assign above variables text1,text2 values to other elements.
+                            //$('#employee_table').html(table_data)
+                            $( "p7" ).html( nameTxt );
+                        }
+                    });
                 });
-            });
         </script>
 
         <script>
@@ -419,8 +462,12 @@
                                 }
                                 table_d1 += '</tr>';
                             }
-                            table_data += '</table>';
-                            $('#employee_table1').html(table_data)
+                            table_d1 += '</table>';
+                            $('#employee_table1').html(table_d1)
+
+                         
+
+                            
                         }
                     });
                 });
