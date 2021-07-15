@@ -379,7 +379,7 @@
                                     }
                                     else
                                     {
-                                        table_data += '<td>'+cell_data[cell_count]+'</td>';
+                                        table_data += '<div id="rows"><td>'+cell_data[cell_count]+'</td>';
                                     }
                                 }
                                 table_data += '</tr>';
@@ -388,7 +388,7 @@
                             
 
                             //find content of different elements inside a row.
-                            var nameTxt = $(table_data).closest('tr').find( value ).text();
+                            var nameTxt = $('#rows').closest('tr').find( value ).text();
                             //var emailTxt = $(this).closest('tr').find('.Specialties').text();
                             //assign above variables text1,text2 values to other elements.
                             //$('#employee_table').html(table_data)
