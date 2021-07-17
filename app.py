@@ -40,7 +40,7 @@ def alphabet():
     d=df2['Eponym_easy']
     e=df2.to_html()
 
-    return render_template('alphabet.html', specs=specs, names=d, tables=e)
+    return render_template('alphabet.html', specs=specs, names=d, tables=df2)
 
 
 @app.route('/categories', methods=['GET', 'POST'])
