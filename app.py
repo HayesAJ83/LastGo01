@@ -38,8 +38,10 @@ def alphabet():
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
+    
+    e=sp1.style
 
-    return render_template('alphabet.html', specs=specs, names=d, tables=sp1)
+    return render_template('alphabet.html', specs=specs, names=d, tables=e)
 
 
 
