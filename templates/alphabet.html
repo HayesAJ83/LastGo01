@@ -111,11 +111,9 @@
                 </div>
                 <div class="container">
                     <div class="row align-items-center text-center">
-                        <table class="table-responsive table table-hover thead-light">
-                            {% for table in tables %}
-                                {{ table|safe }}
-                            {% endfor %}
-                        </table>
+                        {% for table in tables %}
+                            {{ table|safe }}
+                        {% endfor %}
                     </div>
                 </div>
                 <br></br>
