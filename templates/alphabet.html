@@ -113,7 +113,7 @@
                     <div class="row align-items-center text-center">
                         <table class="table-responsive table table-hover thead-light">
                             {% for table in tables %}
-                                {{ tables }}
+                                {{ tables|safe }}
                             {% endfor %}
                         </table>
                     </div>
