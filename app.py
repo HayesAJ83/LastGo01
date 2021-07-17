@@ -39,7 +39,7 @@ def alphabet():
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
 
-    return render_template('alphabet.html', specs=specs, names=d, tables=sp1.to_html())
+    return render_template('alphabet.html', specs=specs, names=d, tables=d.to_html())
 
 
 @app.route('/categories', methods=['GET', 'POST'])
