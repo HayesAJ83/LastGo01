@@ -77,12 +77,9 @@ def alphabet():
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
 
-    #cursor = mysql.connection.cursor()
-    #cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-    #result = cur.execute("SELECT * FROM eponym ORDER BY specialties")
 
 
-    return render_template('alphabet.html', specs=specs, names=d, tables=sp1)
+    return render_template('alphabet.html', specs=specs, names=d, tables=[sp1.to_html(classes='all')])
 
 
 
