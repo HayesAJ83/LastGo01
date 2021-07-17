@@ -5,23 +5,10 @@ import matplotlib.pyplot as plt      #[v 3.2.1]
 import plotly.express as px          #[v 0.4.1]
 import plotly.graph_objects as go    #[v 4.8.1]
 from flask import Flask, render_template, request, url_for, flash, redirect, json, jsonify, session
-#from flask_mysqldb import MySQL
-#from flaskext.mysql import MySQL
 
 app = Flask(__name__)
-#mysql = MySQL(app)
 
-#app.config['SECRET_KEY'] = 'surgicalnames'
-#app.config['MYSQL_HOST'] = 'localhost'
-#app.config['MYSQL_USER'] = 'root'
-#app.config['MYSQL_PASSWORD'] = 'root'
-#app.config['MYSQL_DB'] = 'eponyms'
-#app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
-#mysql = MySQL(app)
-#mysql = MySQL()
-#mysql.init_app(app)
 
-    
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -77,16 +64,8 @@ def alphabet():
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
 
+    return render_template('alphabet.html', specs=specs, names=d, tables=sp1)
 
-
-    return render_template('alphabet.html', specs=specs, names=d, tables=[sp1.to_html(classes='all')])
-
-
-
-#@app.route('/alphabet/<mode>')
-#def alphabet_specs():
-#    session['mode'] = mode
-#    return redirect(url_for("alphabet"))
 
 
 @app.route('/categories', methods=['GET', 'POST'])
