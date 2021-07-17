@@ -111,9 +111,11 @@
                 </div>
                 <div class="container">
                     <div class="row align-items-center text-center">
-                        {% for table in tables %}
-                            {{ table }}
-                        {% endfor %}
+                        <table class="table-responsive thead-light">
+                            {% for table in tables %}
+                                {{ table }}
+                            {% endfor %}
+                        </table>
                     </div>
                 </div>
                 <br></br>
