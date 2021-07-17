@@ -109,6 +109,15 @@
                         </div>
                     </div>
                 </div>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            {% for table in tables %}
+                                <option> {{ table|safe }} </option>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
                 <br></br>
                 <div class="container">
                     <div class="row align-items-center text-center">
@@ -124,7 +133,6 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <p2 style="font-size: 16px;">1700</p2>
-                            <p style="font-size: 16px;"> to </p>
                             <p3 style="font-size: 16px;">2021</p3>
                         </div>
                     </div>
