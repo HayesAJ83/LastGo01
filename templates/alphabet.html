@@ -113,7 +113,7 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             {% for table in tables %}
-                                <option> {{ table|safe }} </option>
+                                {{ table|safe }}
                             {% endfor %}
                         </div>
                     </div>
