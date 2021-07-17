@@ -179,12 +179,7 @@
                             <div class="table">
                                 <div id="employee_table1">
                             </div>
-                            <div class="row align-items-center text-center">
-                                <div class="col">
-                                    <p7 style="font-size: 16px;">test1</p7>
-                                    <p8 style="font-size: 16px;">test2</p8>
-                                </div>
-                            </div>
+                          
                         </div>
                     </div>
                 </div>
@@ -387,12 +382,7 @@
                             table_data += '</table>';
                             
 
-                            //find content of different elements inside a row.
-                            var nameTxt = $('#rows').closest('tr').find( value ).text();
-                            //var emailTxt = $(this).closest('tr').find('.Specialties').text();
-                            //assign above variables text1,text2 values to other elements.
-                            //$('#employee_table').html(table_data)
-                            $( "p7" ).html( nameTxt );
+        
                         }
                     });
                 });
@@ -434,46 +424,6 @@
             });
         </script>
 
-        <script>
-            $(document).ready(function(){
-                $('#load_data1').click(function(){
-                    $.ajax({
-                        url: "https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/eps_test.csv",
-                        dataType: "text",
-                        success: function(d1)
-                        {
-                            var eps_data = d1.split(/\r?\n|\r/);
-                            var table_d1 = '<table class="table table-hover thead-light">';
-                            for(var count=0; count <eps_data.length; count++)
-                            {
-                                var cell_d1 = eps_data[count].split(",");
-                                table_d1 += '<tr>';
-                                for(var cell_count = 0; cell_count < cell_d1.length;
-                                    cell_count++)
-                                {
-                                    if(count === 0)
-                                    {
-                                        table_d1 += '<th>'+cell_d1[cell_count]+'</th>';
-                                    }
-                                    else
-                                    {
-                                        table_d1 += '<td>'+cell_d1[cell_count]+'</td>';
-                                    }
-                                }
-                                table_d1 += '</tr>';
-                            }
-                            table_d1 += '</table>';
-                            $('#employee_table1').html(table_d1)
-
-                         
-
-                            
-                        }
-                    });
-                });
-            });
-        </script>
- 
         <script src="/static/assets/js/theme.js"></script>
     </body>
 </html>
