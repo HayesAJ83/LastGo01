@@ -112,9 +112,9 @@
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <table class="table-responsive thead-light">
-                            {% for table in tables %}
-                                {{ table|safe }}
-                            {% endfor %}
+                            {% block content %}
+                                {{ tables|safe }}
+                            {% endblock %}
                         </table>
                     </div>
                 </div>
