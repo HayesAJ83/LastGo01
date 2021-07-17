@@ -38,8 +38,9 @@ def alphabet():
     df1=pd.read_csv(url)
     df2=df1.sort_values(by=['Eponym'], ascending=True)
     d=df2['Eponym_easy']
+    e=d.to_html()
 
-    return render_template('alphabet.html', specs=specs, names=d, tables=d.to_html())
+    return render_template('alphabet.html', specs=specs, names=d, tables=e)
 
 
 @app.route('/categories', methods=['GET', 'POST'])
