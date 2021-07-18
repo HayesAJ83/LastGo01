@@ -171,6 +171,14 @@
                     </div>
                 </div>
                 <br></br>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <p9 style="font-size: 8px;"></p9>
+                        </div>
+                    </div>
+                </div>
+                <br></br>
             </section>
             <!-- End of Section -->
         </main>
@@ -410,8 +418,11 @@
                                 var details = '';
                                 details += $(this).find('td:nth-child(2)').html() + '\n';
                                 details += 'Who : ' + $(this).find('td:nth-child(5)').html() + '\n';
-                                details += 'Year : ' + $(this).find('td:nth-child(12)').html() + '\n';
-                                        alert(details);
+                                details += 'When : ' + $(this).find('td:nth-child(12)').html() + '\n';
+                                details += 'Where : ' + $(this).find('td:nth-child(12)').html() + '\n';
+                                        
+                            
+                            $( "p9" ).html( details );
                             }); 
                         }
                 });
