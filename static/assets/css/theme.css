@@ -25612,13 +25612,6 @@ div.code-toolbar > .toolbar .toolbar-item span:hover
     }
 }
 
-/* ===== Added by AH */
-
-table tbody tr:hover {
-    background-color: red;
-    cursor: pointer;
-}
-
 /* ==========================================================================
    Rellax - Parallax library
    ========================================================================== */
