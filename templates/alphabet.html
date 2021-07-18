@@ -408,8 +408,8 @@
                             $(table_data).find('td:eq(1),th:eq(1)').remove();
                             $('table tbody tr').click(function () {
                                 var details = '';
-                                details += 'First : ' + $(this).find('td:first-child').html() + '\n';
-                                details += 'Fourth : ' + $(this).find('td:nth-child(4)').html() + '\n';
+                                details += $(this).find('td:nth-child(2)').html() + '\n';
+                                details += 'Year : ' + $(this).find('td:nth-child(12)').html() + '\n';
                                         alert(details);
                             }); 
                         }
