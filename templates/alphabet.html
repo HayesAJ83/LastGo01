@@ -123,7 +123,7 @@
                     </div>
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <p2 style="font-size: 16px;">1700</p2>
+                            <p2 style="font-size: 16px;">1700</p2> to
                             <p3 style="font-size: 16px;">2021</p3>
                         </div>
                     </div>
@@ -405,10 +405,11 @@
                             }
                             table_data += '</table>';
                             $('#emp_table').html(table_data);
-                            $(table_data).find('td:eq(1),th:eq(1)').remove();
+                            //$(table_data).find('td:eq(1),th:eq(1)').remove();
                             $('table tbody tr').click(function () {
                                 var details = '';
                                 details += $(this).find('td:nth-child(2)').html() + '\n';
+                                details += 'Who : ' + $(this).find('td:nth-child(5)').html() + '\n';
                                 details += 'Year : ' + $(this).find('td:nth-child(12)').html() + '\n';
                                         alert(details);
                             }); 
