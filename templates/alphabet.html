@@ -405,6 +405,7 @@
                             }
                             table_data += '</table>';
                             $('#emp_table').html(table_data);
+                            $(table_data).find('td:eq(1),th:eq(1)').remove();
                             $('table tbody tr').click(function () {
                                 var details = '';
                                 details += 'Test : ' + $(this).find('td:first-child').html() + '\n';
