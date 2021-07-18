@@ -424,12 +424,17 @@
                             //$(table_data).find('td:eq(1),th:eq(1)').remove();
                             $('table tbody tr').click(function () {
                                 var details = '';
-                                details += $(this).find('td:nth-child(2)').html() +'\n';
-                                });
+                                details += $(this).find('td:nth-child(2)').html() + '\n';
+                                details += 'Who : ' + $(this).find('td:nth-child(5)').html() + '\n';
+                                details += 'When : ' + $(this).find('td:nth-child(12)').html() + '\n';
+                                details += 'Where : ' + $(this).find('td:nth-child(13)').html() + '\n';
+                                        
                             $( "p9" ).html( details );
-                            }
-                    });
+                            $( "p10" ).html( details );
+                            }); 
+                        }
                 });
+            });
         </script>
 
 
