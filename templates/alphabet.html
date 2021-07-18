@@ -175,7 +175,7 @@
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <p9 style="font-size: 20px;"></p9>
+                            <p9 style="font-size: 20px; font-weight: bold"></p9>
                         </div>
                     </div>
                 </div>
@@ -192,6 +192,14 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <p11 style="font-size: 16px;"></p11>
+                        </div>
+                    </div>
+                </div>
+                <br></br>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <p12 style="font-size: 16px;"></p12>
                         </div>
                     </div>
                 </div>
@@ -435,17 +443,16 @@
                             $('table tbody tr').click(function () {
                                 var details = '';
                                 details += $(this).find('td:nth-child(2)').html() + '\n';
-                                
+                                $( "p9" ).html( details );
                                 var details1 = '';
                                 details1 += 'Who : ' + $(this).find('td:nth-child(5)').html() + '\n';
-                                
+                                $( "p10" ).html( details1 );
                                 var details2 = '';
                                 details2 += 'When : ' + $(this).find('td:nth-child(12)').html() + '\n';
-                                
-                                        
-                            $( "p9" ).html( details );
-                            $( "p10" ).html( details1 );
-                            $( "p11" ).html( details2 );
+                                $( "p11" ).html( details2 );
+                                var details3 = '';
+                                details3 += 'Where : ' + $(this).find('td:nth-child(14)').html() + '\n';
+                                $( "p12" ).html( details3 );
                             }); 
                         }
                 });
