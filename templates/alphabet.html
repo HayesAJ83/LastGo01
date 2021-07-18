@@ -404,14 +404,19 @@
                                 table_data += '</tr>';
                             }
                             table_data += '</table>';
-                            $('#emp_table').html(table_data)
-                            $('table tbody tr').click(function(){
-                                alert($(this).text());
-                            });
+                            $('#emp_table').html(table_data);
+                            $('.emp_table tbody tr').click(function () {
+                                var details = '';
+                                details += 'Test : ' + $(this).find('td:first-child').html() + '\n';
+                                details += 'Test : ' + $(this).find('td:nth-child(2)').html() + '\n';
+                                        alert(details);
+                            }); 
                         }
                 });
             });
         </script>
+
+
 
 
         <script src="/static/assets/js/theme.js"></script>
