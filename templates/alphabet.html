@@ -423,14 +423,12 @@
                             $('#emp_table').html(table_data);
                             //$(table_data).find('td:eq(1),th:eq(1)').remove();
                             $('table tbody tr').click(function () {
-                                var details1 = '';
-                                details1 += $(this).find('td:nth-child(2)').html();
+                                var details1 += $(this).find('td:nth-child(2)').html();
                                 });
                             $( "p9" ).html( details1 );
 
                             $('table tbody tr').click(function () {
-                                var details2 = '';
-                                details2 += 'Who : ' + $(this).find('td:nth-child(5)').html();
+                                var details2 += 'Who : ' + $(this).find('td:nth-child(5)').html();
                             $( "p10" ).html( details2 );
                                 }); 
                         }
