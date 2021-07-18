@@ -161,8 +161,7 @@
                     </div>
                 </div>
                 <br></br>
-                <br></br>
-                <h1 style="text-align:left"  style="font-size: 20px; font-weight: bold"></h1>
+                <h1 style="text-align:left"  style="font-size: 18px; font-weight: bolder"> <br></br></h1>
                 <br></br>
                 <p10 style="text-align:left" style="font-size: 16px"></p10>
                 <p11 style="text-align:left" style="font-size: 16px"></p11>
@@ -404,16 +403,16 @@
                             $('table tbody tr').click(function () {
                                 var details = '';
                                 details += $(this).find('td:nth-child(2)').html() + '\n';
-                                $( "h1" ).html( details );
+                                $("h1").html( details );
                                 var details1 = '';
                                 details1 += 'Who: ' + $(this).find('td:nth-child(5)').html() + '\n';
-                                $( "p10" ).html( details1 );
+                                $("p10").html( details1 );
                                 var details2 = '';
                                 details2 += 'When: ' + $(this).find('td:nth-child(12)').html() + '\n';
-                                $( "p11" ).html( details2 );
+                                $("p11").html( details2 );
                                 var details3 = '';
                                 details3 += 'Where: ' + $(this).find('td:nth-child(14)').html() + '\n';
-                                $( "p12" ).html( details3 );
+                                $("p12").html( details3 );
                             }); 
                         }
                 });
