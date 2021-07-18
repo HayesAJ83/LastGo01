@@ -161,6 +161,16 @@
                     </div>
                 </div>
                 <br></br>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <table class="emp_table">
+                            <div class="table-responsive">
+                                <div id="emp_table">
+                            </div>
+                        <table>
+                    </div>
+                </div>
+                <br></br>
             </section>
             <!-- End of Section -->
         </main>
@@ -399,6 +409,18 @@
                 });
             });
         </script>
+
+        <script>
+            $(document).ready(function(){
+                $('table tbody tr').click(function(){
+                    alert($(this).text());
+                });
+            });
+        </script>
+
+
+    
+
 
         <script src="/static/assets/js/theme.js"></script>
     </body>
