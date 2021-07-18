@@ -162,7 +162,7 @@
                 </div>
                 <br></br>
                 
-                <p9 style="text-align:left"  style="font-size: 20px; font-weight:bold"></p9>
+                <h1 style="text-align:left"  style="font-size: 22px; font-weight: bold"></h1>
                 <p10 style="text-align:left" style="font-size: 16px"></p10>
                 <p11 style="text-align:left" style="font-size: 16px"></p11>
                 <p12 style="text-align:left" style="font-size: 16px"></p12>
@@ -403,15 +403,15 @@
                             $('table tbody tr').click(function () {
                                 var details = '';
                                 details += $(this).find('td:nth-child(2)').html() + '\n';
-                                $( "p9" ).html( details );
+                                $( "h1" ).html( details );
                                 var details1 = '';
-                                details1 += 'Who : ' + $(this).find('td:nth-child(5)').html() + '\n';
+                                details1 += 'Who: ' + $(this).find('td:nth-child(5)').html() + '\n';
                                 $( "p10" ).html( details1 );
                                 var details2 = '';
-                                details2 += 'When : ' + $(this).find('td:nth-child(12)').html() + '\n';
+                                details2 += 'When: ' + $(this).find('td:nth-child(12)').html() + '\n';
                                 $( "p11" ).html( details2 );
                                 var details3 = '';
-                                details3 += 'Where : ' + $(this).find('td:nth-child(14)').html() + '\n';
+                                details3 += 'Where: ' + $(this).find('td:nth-child(14)').html() + '\n';
                                 $( "p12" ).html( details3 );
                             }); 
                         }
