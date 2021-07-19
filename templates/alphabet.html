@@ -330,8 +330,8 @@
         <script>
             $(document)
             .ready(function() {
-                let value = $('#select2').find('option:selected').text();
-                $( "p4" ).html( value );
+                let ep_value = $('#select2').find('option:selected').text();
+                $( "p4" ).html( ep_value );
             });
         </script>
 
@@ -339,8 +339,8 @@
             $(document)
             .ready(function() {
                 $('#select2').change(function() {
-                    let value = $(this).find('option:selected').text();
-                    $( "p4" ).html( value );
+                    let ep_value = $(this).find('option:selected').text();
+                    $( "p4" ).html( ep_value );
                     });
                 
                     $.ajax({
@@ -405,9 +405,6 @@
                             $('#emp_table').html(table_data);
                             //$(table_data).find('td:eq(1),th:eq(1)').remove();
                             $('table tbody tr').click(function () {
-                                var details = '';
-                                details += $(this).find('td:nth-child(2)').html() + '\n';
-                                $("h1").html( details );
                                 var details1 = '';
                                 details1 += 'Who: ' + $(this).find('td:nth-child(5)').html() + '\n';
                                 $("p10").html( details1 );
@@ -423,6 +420,48 @@
                             }); 
                         }
                 });
+            });
+        </script>
+
+        <script>
+            $(document)
+            .ready(function() {
+                $('#select2').change(function() {
+                    $.ajax({
+                        url: "https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN_lite1.csv",
+                        dataType: "text",
+                        success: function(data)
+                        {
+                            var employee_data = data.split(/\r?\n|\r/);
+                            var table_data = '<table class="table table-hover thead-light">';
+                            for(var count=0; count <employee_data.length; count++)
+                            {
+                                var cell_data = employee_data[count].split(",");
+                                table_data += '<tr>';
+                                for(var cell_count = 0; cell_count < cell_data.length;
+                                    cell_count++)
+                                {
+                                    if(count === 0)
+                                    {
+                                        table_data += '<th>'+cell_data[cell_count]+'</th>';
+                                    }
+                                    else
+                                    {
+                                        table_data += '<td>'+cell_data[cell_count]+'</td>';
+                                    }
+                                }
+                                table_data += '</tr>';
+                            }
+                            table_data += '</table>';
+                        }
+                    });
+                    if(ep_value === $('table tbody tr').find('td:nth-child(2)'))
+                        {
+                        var details = '';
+                        details += $('table tbody tr').find('td:nth-child(2)').html() + '\n';
+                        $("h1").html( details );
+                        }
+                });             
             });
         </script>
 
