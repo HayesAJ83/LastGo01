@@ -162,9 +162,9 @@
                 <p></p>
                 <div class="container">
                     <div class="row align-items-center text-center">
-                        <table class="emp_table1">
+                        <table class="emp_table2">
                             <div class="table">
-                                <div id="emp_table1">
+                                <div id="emp_table2">
                             </div>
                         <table>
                     </div>
@@ -471,15 +471,16 @@
         </script>
 
 <script>
-    $('#select2').change(function() {
-        let ep_value = $('#select2').find('option:selected').text();
-        
-        var tableRow = $("table tbody tr").filter(function() {
-            return $('table tbody tr td:nth-child(2)').text() == ep_value;
-            }).closest("tr");
+    $(document)
+        .ready(function() {
+            let ep_value = $('#select2').find('option:selected').text();
 
-        $('#emp_table1').html( tableRow );
-    });
+            var tableRow = $("table tbody tr").filter(function() {
+                return $('table tbody tr td:nth-child(2)').text() == ep_value;
+                }).closest("tr");
+
+            $('#emp_table2').html( tableRow );
+        });
 </script>
 
     
