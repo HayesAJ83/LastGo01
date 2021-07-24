@@ -162,9 +162,9 @@
                 <p></p>
                 <div class="container">
                     <div class="row align-items-center text-center">
-                        <table class="emp_table">
+                        <table class="emp_table1">
                             <div class="table">
-                                <div id="emp_table">
+                                <div id="emp_table1">
                             </div>
                         <table>
                     </div>
@@ -411,6 +411,7 @@
                             }
                             table_data += '</table>';
                             $('#emp_table').html(table_data);
+                            $('#emp_table1').html(table_data);
                             $('table tbody tr').click(function () {
                                 var detail = '';
                                 detail += $(this).find('td:nth-child(2)').html() + '\n';
