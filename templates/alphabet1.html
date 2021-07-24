@@ -403,8 +403,10 @@
                             }
                             table_data += '</table>';
                             $('#emp_table').html(table_data);
-                            //$(table_data).find('td:eq(1),th:eq(1)').remove();
                             $('table tbody tr').click(function () {
+                                var detail = '';
+                                detail += $(this).find('td:nth-child(5)').html() + '\n';
+                                $("h1").html( detail );
                                 var details1 = '';
                                 details1 += 'Who: ' + $(this).find('td:nth-child(5)').html() + '\n';
                                 $("p10").html( details1 );
@@ -459,56 +461,7 @@
             });
         </script>
 
-        <script>
-            $(document)
-            .ready(function() {
-            
-                $('#select2').change(function() {
-                    
-                    var row += $("tr:contains(ep_value)");
-                    $('#emp_table').find('tr') === $('#select2').find('option:selected').text(); 
-
-                    $('#emp_table').val();
-                    var selection = $(this).val();
-                    var dataset = $('#emp_table').find('tr');
-                    dataset.each(function(index
-                    ) {
-                        item = $(this);
-                        item.hide();
-                        var firstTD = item.find('td:first-child');
-
-                    })
-
-                })
-            })
-           
-
-            $('#emp_table').filter(function(){
-                return $.trim($('td', this).eq(0).text()) === ep_value;
-                });
-
-        
-            $(document)
-            .ready(function() {
-                let ep_value = $('#select2').find('option:selected').text();
-                $( "p4" ).html( ep_value );
-            });
-        </script>
-
-            
-        </script>
-
-
-for (i in $('table tbody tr').find('td:nth-child(2)')
-(ep_value === $('table tbody tr').find('td:nth-child(2)'))
-    {
-    var details = '';
-    details += $('table tbody tr').find('td:nth-child(2)').html() + '\n';
-    $("h1").html( details );
-    }
-
-
-
+    
 
         <script src="/static/assets/js/theme.js"></script>
     </body>
