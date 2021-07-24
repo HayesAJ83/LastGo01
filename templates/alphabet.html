@@ -473,8 +473,8 @@
     $('#select2').change(function() {
         let ep_value = $('#select2').find('option:selected').text();
         
-        var tableRow = $("#emp_table td:nth-child(2)").filter(function() {
-            return $(this).text() == ep_value;
+        var tableRow = $("table tbody tr").filter(function() {
+            return $('table tbody tr td:nth-child(2)').text() == ep_value;
             }).closest("tr");
 
         $('#emp_table1').html( tableRow );
