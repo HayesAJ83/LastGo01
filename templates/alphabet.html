@@ -109,6 +109,8 @@
                         </div>
                     </div>
                 </div>
+                <!-- Add a svg area, empty -->
+                <svg id="dataviz_area" height=200 width=450></svg>
                 <br></br>
                 <div class="container">
                     <div class="row align-items-center text-center">
@@ -225,6 +227,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>   
         <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
         <script src="https://jsuites.net/v4/jsuites.js"></script>
+
+        <!-- Load d3.js -->
+        <script src="https://d3js.org/d3.v4.js"></script>
 
         <script>
             $(document)
@@ -475,6 +480,18 @@
                 });             
             });
         </script>
+
+        <script>
+            var svg = d3.select("#dataviz_area")
+            svg.append("circle")
+            .attr("cx", 2).attr("cy", 2).attr("r", 40).style("fill", "blue");
+            svg.append("circle")
+            .attr("cx", 140).attr("cy", 70).attr("r", 40).style("fill", "red");
+            svg.append("circle")
+            .attr("cx", 300).attr("cy", 100).attr("r", 40).style("fill", "green");
+        </script>
+
+
 
 
         <script src="/static/assets/js/theme.js"></script>
