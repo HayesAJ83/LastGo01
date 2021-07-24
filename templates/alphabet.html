@@ -162,11 +162,15 @@
                 <p></p>
                 <div class="container">
                     <div class="row align-items-center text-center">
-                        <table class="emp_table2">
-                            <div class="table">
-                                <div id="emp_table2">
-                            </div>
-                        <table>
+                        <div class="col">
+                            <h1 class="text-black mb-2 fs-1 ">Test</h1>
+                            <select id="select3">
+                            {% for key,value in df9.iterrows() %}
+                                <option value="{{ value['Topic'] }}">{{ value['Eponym_easy'] }}</option>
+            
+                            {% endfor %}
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <p></p>
@@ -438,6 +442,8 @@
             $(document)
             .ready(function() {
                 $('#select2').change(function() {
+                    let ep_value = $('#select2').find('option:selected').text();
+
                     $.ajax({
                         url: "https://raw.githubusercontent.com/HayesAJ83/LastGo01/master/static/database/Eps4SN_lite1.csv",
                         dataType: "text",
@@ -466,6 +472,12 @@
                             table_data += '</table>';
                         }
                     });
+
+                    var tableRow = $(table_data).filter(function() {
+                        return $('table tbody tr td:nth-child(2)').text() == ep_value;
+                        }).closest("tr");
+
+                    $('#emp_table2').html( tableRow );
                 });             
             });
         </script>
@@ -473,13 +485,9 @@
 <script>
     $(document)
         .ready(function() {
-            let ep_value = $('#select2').find('option:selected').text();
+   
 
-            var tableRow = $("table tbody tr").filter(function() {
-                return $('table tbody tr td:nth-child(2)').text() == ep_value;
-                }).closest("tr");
-
-            $('#emp_table2').html( tableRow );
+            
         });
 </script>
 
