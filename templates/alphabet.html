@@ -155,8 +155,10 @@
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <h1 class="text-black mb-2 fs-1 ">Testing</h1>
-                            
+                            <select id="sel" onchange="show(this.value)">
+                                <option value="">-- Select --</option>
+                            </select>
+                            <p id="msg"></p>
                         </div>
                     </div>
                 </div>
@@ -491,7 +493,51 @@
             .attr("cx", 300).attr("cy", 100).attr("r", 40).style("fill", "green");
         </script>
 
+        <script>
+            //Data
+            var eps = [
+                {ep_az: "Aaron sign",              ep_ease: "Aaron sign",              year: "1913"},
+                {ep_az: "Adamkiewicz artery of",   ep_ease: "Artery of Adamkiewicz",   year: "1881"},
+                {ep_az: "Amyand hernia",           ep_ease: "Amyand hernia",           year: "1735"},
 
+        ];
+        </script>
+
+
+        <script>
+            var birds = [
+                        {ID: 001, Bird_Name: "Eurasian Collared-Dove"},
+                        {ID: 002, Bird_Name: "Bald Eagle"},
+                        {ID: 003, Bird_Name: "Cooper's Hawk"},
+                    ];
+
+
+            function populateSelect() {
+            var ele = document.getElementById('sel');
+            birds.forEach(function(b) {
+                ele.innerHTML += '<option value="' + b.ID + '">' + b['Bird_Name'] + '</option>';
+            })
+
+            }
+
+            function show(id) {
+            // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
+            var msg = document.getElementById('msg');
+            if (!id) {
+                msg.innerHTML = 'None selected';
+
+            } else {
+                for (var i = 0; i < birds.length; i++) {
+                if (Number(id) === birds[i].ID) {
+                    msg.innerHTML = birds[i].ID + " " + birds[i].Bird_Name;
+                    break;
+                }
+                }
+            }
+            }
+
+            populateSelect()
+        </script>
 
 
         <script src="/static/assets/js/theme.js"></script>
