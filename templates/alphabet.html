@@ -321,18 +321,18 @@
 
         <script>
             var eponyms = [
-            {ID: 001, Ep_Name: "Aaron sign",              who: "Charles Dettie Aaron",          where:"Detroit, Michigan, USA (Harper Hospital)",   when:"1913"},
-            {ID: 002, Ep_Name: "Artery of Adamkiewicz",   who: "Albert Wojciech Adamkiewicz",   where:"Kraków, Poland",                             when:"1881"},
-            {ID: 003, Ep_Name: "Amyand hernia",           who: "Claudius Amyand",               where:"London, England, UK",                        when:"1735"},
-            {ID: 004, Ep_Name: "Babcock forceps",         who: "William Wayne Babcock",         where:"Philadelphia, Pennsylvania, USA",            when:"1963"},
-            {ID: 005, Ep_Name: "Zenker's diverticulum",   who: "Friedrich Albert von Zenker",   where:"Erlangen, Bavaria, Germany",                 when:"1867"},
+            {ID: 001, name: "Aaron sign",              who: "Charles Dettie Aaron",          where:"Detroit, Michigan, USA (Harper Hospital)",   when:"1913",   refs: "Aaron CD. A sign indicative of chronic appendicitis. JAMA. 1913; 60(5): 350-351",    about: "Aaron's sign, indicitive of chronic appendicitis, is demonstrated by prolonged firm pressure at McBurney's point which produces pain in the epigastric region. In Aaron's 1913 paper, he describes his findings in four patients."},
+            {ID: 002, name: "Artery of Adamkiewicz",   who: "Albert Wojciech Adamkiewicz",   where:"Kraków, Poland",                             when:"1881",   about: "The artery of Adamkiewicz is known by other terms, including arteria radicularis magna. This vessel is a major contributor to the anterior spinal artery which gives arterial supply to the lumbar and sacral cord and nerves. The artery of Adamkiewicz arises from intercostal arteries which branch from the thoraco-abdominal aorta."},
+            {ID: 003, name: "Amyand hernia",           who: "Claudius Amyand",               where:"London, England, UK",                        when:"1735",   refs: "Amyand C. 1735 VIII. Of an inguinal rupture, with a pin in the appendix coeci, incrusted with stone; and some observations on wounds in the guts. Phil Trans R Soc. 39; 329-342",    about: "Amyand's hernia refers to the finding of the appendix, not necessarily inflamed, within an inguinal hernia. Claudius Amyand (Serjent Surgeon to His Majesty, and FRS) reported on the 8th October 1735, an 11-year old boy, Hanvil Anderson, was admitted to St. George's Hospital near Hyde Park Corner. He had a filstula btween his scrotum and thigh, discharging an unkindly sort of matter. The operation was performed on 6th December 1735."},
+            {ID: 004, name: "Babcock forceps",         who: "William Wayne Babcock",         where:"Philadelphia, Pennsylvania, USA",            when:"1963",   refs: "ccc",    about: "ccc"},
+            {ID: 005, name: "Zenker's diverticulum",   who: "Friedrich Albert von Zenker",   where:"Erlangen, Bavaria, Germany",                 when:"1867",   refs: "Zenker FA and von Ziemssen HW. Krankheiten des Oesophagus. Leipzig, 1867",    about: "Zenker's report was based on 5 personal cases and 22 cases collected from the literature. Also called a pharyngeal pouch, Zenker's diverticulum affects the mucosa of the human pharynx, just above cricopharyngeal muscle. It is a pseudo diverticulum (not involving ll the layers of the oesophageal wall)."},
 
                 ];
 
             function populateSelect() {
             var ele = document.getElementById('sel');
             eponyms.forEach(function(b) {
-                ele.innerHTML += '<option value="' + b.ID + '">' + b['Ep_Name'] + '</option>';
+                ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';
             })
             }
 
@@ -346,9 +346,12 @@
                 for (var i = 0; i < eponyms.length; i++) {
                 if (Number(id) === eponyms[i].ID) {
                     msg.innerHTML = "<br> <br>" +
-                                    '<u>Who</u>'  + "  <br>" + eponyms[i].who.bold() +   "  <br> <br>" +
-                                    '<u>When</u>' + "  <br>" + eponyms[i].when.bold() +  "  <br> <br>" +
-                                    '<u>Where</u>'+ "  <br>" + eponyms[i].where.bold() + "  <br> <br>";
+                                    '<u>Who</u>'  + "<br>" + eponyms[i].who.bold() +   "<br> <br>" +
+                                    '<u>When</u>' + "<br>" + eponyms[i].when.bold() +  "<br> <br>" +
+                                    '<u>Where</u>'+ "<br>" + eponyms[i].where.bold() + "<br> <br>" +
+                                    "<br> <br>" + eponyms[i].about + "<br> <br>" +
+                                    "<br> <br>" + eponyms[i].refs  + "<br> <br>" +
+                                    "<br> <br>";
                     
                     break;
                 }
