@@ -154,6 +154,7 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Eponyms</h1>
+                            <p></p>
                             <select id="sel" onchange="show(this.value)">
                                 <option> <li> ----- Select ----- </li> </option>
                             </select>
@@ -356,7 +357,8 @@
             function populateSelect() {
             var ele = document.getElementById('sel');
             eponyms.forEach(function(b) {
-                ele.innerHTML += '<option value="' + b.ID + '">' + b['Ep_Name'] + '</option>';
+                ele.innerHTML += <option> <li>{b['Ep_Name']}</li> </option>
+                
             })
             }
 
@@ -369,7 +371,8 @@
             } else {
                 for (var i = 0; i < eponyms.length; i++) {
                 if (Number(id) === eponyms[i].ID) {
-                    msg.innerHTML = '<b>Who</b>'   + "  <br>" + eponyms[i].who +    "  <br> <br>" +
+                    msg.innerHTML = 
+                                    '<b>Who</b>'   + "  <br>" + eponyms[i].who +    "  <br> <br>" +
                                     '<b>Where</b>' + "  <br>" + eponyms[i].where +  "  <br> <br>" +
                                     '<b>When</b>'  + "  <br>" + eponyms[i].when +   "  <br> <br>";
                     
@@ -383,6 +386,7 @@
 
 <script>
 //<option value="">----- Select -----</option>
+//'<option> ="' + b.ID + '">' + b['Ep_Name'] + '</option>';
 </script>
 
         <script src="/static/assets/js/theme.js"></script>
