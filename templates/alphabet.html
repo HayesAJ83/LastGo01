@@ -498,12 +498,12 @@
 
         <script>
             var birds = [
-                        {ID: 001, Bird_Name: "Aaron sign",              test: "willy"},
-                        {ID: 002, Bird_Name: "Artery of Adamkiewicz",   test: "dick"},
-                        {ID: 003, Bird_Name: "Amyand hernia",           test: "cock"},
-                        {ID: 004, Bird_Name: "Zenker's diverticulm",    test: "johnson"},
+            {ID: 001, Bird_Name: "Aaron sign",              test: "willy"},
+            {ID: 002, Bird_Name: "Artery of Adamkiewicz",   test: "dick"},
+            {ID: 003, Bird_Name: "Amyand hernia",           test: "cock"},
+            {ID: 004, Bird_Name: "Zenker's diverticulm",    test: "johnson"},
 
-                    ];
+                ];
 
             function populateSelect() {
             var ele = document.getElementById('sel');
@@ -516,12 +516,12 @@
             // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
             var msg = document.getElementById('msg');
             if (!id) {
-                msg.innerHTML = ' ';
+                msg.innerHTML = "  ";
 
             } else {
                 for (var i = 0; i < birds.length; i++) {
                 if (Number(id) === birds[i].ID) {
-                    msg.innerHTML = "Anatomy" + " " + birds[i].ID + " " + birds[i].test;
+                    msg.innerHTML = "Anatomy" + " " + birds[i].ID + " " + birds[i].test + '\n' + "History";
                     break;
                 }
                 }
