@@ -357,7 +357,7 @@
             function populateSelect() {
             var ele = document.getElementById('sel');
             eponyms.forEach(function(b) {
-                ele.innerHTML += '<option> ="' + b.ID + '">' + b['Ep_Name'] + '</option>';
+                ele.innerHTML += '<option value="' + b.ID + '">' + b['Ep_Name'] + '</option>';
                 
             })
             }
