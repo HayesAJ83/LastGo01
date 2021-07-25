@@ -346,12 +346,12 @@
                 for (var i = 0; i < eponyms.length; i++) {
                 if (Number(id) === eponyms[i].ID) {
                     msg.innerHTML = "<br> <br>" +
-                                    '<u>Who</u>'  + "<br>" + eponyms[i].who.bold() +   "<br> <br>" +
-                                    '<u>When</u>' + "<br>" + eponyms[i].when.bold() +  "<br> <br>" +
-                                    '<u>Where</u>'+ "<br>" + eponyms[i].where.bold() + "<br> <br>" +
-                                    "<br> <br>" + eponyms[i].about + "<br> <br>" +
-                                    "<br> <br>" + eponyms[i].refs  + "<br> <br>" +
-                                    "<br> <br>";
+                                    '<u>Who</u>'       + "<br>" + eponyms[i].who.bold() +   "<br><br>" +
+                                    '<u>When</u>'      + "<br>" + eponyms[i].when.bold() +  "<br><br>" +
+                                    '<u>Where</u>'     + "<br>" + eponyms[i].where.bold() + "<br><br>" +
+                                    "<br> <br>" + eponyms[i].about + "<br><br>" +
+                                    '<u>References</u>'+ "<br>" + eponyms[i].refs  + "<br><br>" +
+                                    "<br><br>";
                     
                     break;
                 }
