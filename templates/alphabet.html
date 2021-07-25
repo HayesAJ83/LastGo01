@@ -326,7 +326,8 @@
             {ID: 001, Ep_Name: "Aaron sign",              who: "Charles Dettie Aaron",          where:"Detroit, Michigan, USA (Harper Hospital)",   when:"1913"},
             {ID: 002, Ep_Name: "Artery of Adamkiewicz",   who: "Albert Wojciech Adamkiewicz",   where:"Kraków, Poland",                             when:"1881"},
             {ID: 003, Ep_Name: "Amyand hernia",           who: "Claudius Amyand",               where:"London, England, UK",                        when:"1735"},
-            {ID: 004, Ep_Name: "Zenker's diverticulm",    who: "Friedrich Albert von Zenker",   where:"Erlangen, Bavaria, Germany",                 when:"1867"},
+            {ID: 004, Ep_Name: "Babcock forceps",         who: "William Wayne Babcock",         where:"Philadelphia, Pennsylvania, USA",            when:"1963"},
+            {ID: 005, Ep_Name: "Zenker's diverticulum",   who: "Friedrich Albert von Zenker",   where:"Erlangen, Bavaria, Germany",                 when:"1867"},
 
                 ];
 
@@ -334,7 +335,6 @@
             var ele = document.getElementById('sel');
             eponyms.forEach(function(b) {
                 ele.innerHTML += '<option value="' + b.ID + '">' + b['Ep_Name'] + '</option>';
-                
             })
             }
 
@@ -348,9 +348,9 @@
                 for (var i = 0; i < eponyms.length; i++) {
                 if (Number(id) === eponyms[i].ID) {
                     msg.innerHTML = "<br> <br>" +
-                                    '<b>Who</b>'   + "  <br>" + eponyms[i].who +    "  <br> <br>" +
-                                    '<b>Where</b>' + "  <br>" + eponyms[i].where +  "  <br> <br>" +
-                                    '<b>When</b>'  + "  <br>" + eponyms[i].when +   "  <br> <br>";
+                                    '<b>Who</b>'  + "  <br>" + eponyms[i].who +   "  <br> <br>" +
+                                    '<b>When</b>' + "  <br>" + eponyms[i].when +  "  <br> <br>" +
+                                    '<b>Where</b>'+ "  <br>" + eponyms[i].where + "  <br> <br>";
                     
                     break;
                 }
