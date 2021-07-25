@@ -135,11 +135,9 @@
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Eponyms</h1>
                             <br></br>
-                            <p></p>
                             <select id="sel" onchange="show(this.value)">
                                 <option value="">--- Select ---</option>
                             </select>
-                            <p></p>
                             <p id="msg"></p>
                         </div>
                     </div>
@@ -352,7 +350,8 @@
             } else {
                 for (var i = 0; i < eponyms.length; i++) {
                 if (Number(id) === eponyms[i].ID) {
-                    msg.innerHTML = '<b>Who</b>'   + "  <br>" + eponyms[i].who +    "  <br> <br>" +
+                    msg.innerHTML = "  <br>" +
+                                    '<b>Who</b>'   + "  <br>" + eponyms[i].who +    "  <br> <br>" +
                                     '<b>Where</b>' + "  <br>" + eponyms[i].where +  "  <br> <br>" +
                                     '<b>When</b>'  + "  <br>" + eponyms[i].when +   "  <br> <br>";
                     
