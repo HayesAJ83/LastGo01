@@ -163,25 +163,6 @@
                 </div>
                 <p></p>
                 <p></p>
-                <div class="container">
-                    <div class="row align-items-center text-center">
-                        <table class="emp_table">
-                            <div class="table">
-                                <div id="emp_table">
-                            </div>
-                        <table>
-                    </div>
-                </div>
-                <p></p>
-                <h3  style="text-align:left; text-indent: 0px"></h3>
-                <p></p>
-                <p10 style="text-align:left; text-indent: 5px"></p10>
-                <p11 style="text-align:left; text-indent: 5px"></p11>
-                <p12 style="text-align:left; text-indent: 5px"></p12>
-                <p></p>
-                <p13 style="text-align:left; text-indent: 5px"></p13>
-                <p></p>
-                <p></p>
                 <p></p>
             </section>
             <!-- End of Section -->
@@ -521,7 +502,8 @@
             } else {
                 for (var i = 0; i < birds.length; i++) {
                 if (Number(id) === birds[i].ID) {
-                    msg.innerHTML = "Anatomy" + " " + birds[i].ID + " " + birds[i].test + '\n' + "History";
+                    msg.innerHTML = '<b>Anatomy</b>:' + " " + birds[i].ID + " " + birds[i].test + '\n' + "History";
+                    
                     break;
                 }
                 }
