@@ -345,17 +345,17 @@
 
         <script>
             var eponyms = [
-            {ID: 001, Bird_Name: "Aaron sign",              test: "willy"},
-            {ID: 002, Bird_Name: "Artery of Adamkiewicz",   test: "dick"},
-            {ID: 003, Bird_Name: "Amyand hernia",           test: "cock"},
-            {ID: 004, Bird_Name: "Zenker's diverticulm",    test: "johnson"},
+            {ID: 001, Ep_Name: "Aaron sign",              test: "Charles Dettie Aaron"},
+            {ID: 002, Ep_Name: "Artery of Adamkiewicz",   test: "Albert Wojciech Adamkiewicz"},
+            {ID: 003, Ep_Name: "Amyand hernia",           test: "Claudius Amyand"},
+            {ID: 004, Ep_Name: "Zenker's diverticulm",    test: "Friedrich Albert von Zenker"},
 
                 ];
 
             function populateSelect() {
             var ele = document.getElementById('sel');
             eponyms.forEach(function(b) {
-                ele.innerHTML += '<option value="' + b.ID + '">' + b['Bird_Name'] + '</option>';
+                ele.innerHTML += '<option value="' + b.ID + '">' + b['Ep_Name'] + '</option>';
             })
             }
 
@@ -368,8 +368,8 @@
             } else {
                 for (var i = 0; i < eponyms.length; i++) {
                 if (Number(id) === eponyms[i].ID) {
-                    msg.innerHTML = '<b>Anatomy</b>:' + " " + eponyms[i].test + "  <br>" +
-                                    '<b>History</b>:';
+                    msg.innerHTML = '<b>Who</b>'   + "  <br>" + eponyms[i].test + "  <br> <br>" +
+                                    '<b>Where</b>' + "  <br>" + eponyms[i].test + "  <br> <br>";
                     
                     break;
                 }
