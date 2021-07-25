@@ -154,7 +154,7 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <select id="sel" onchange="show(this.value)">
-                                <option value="">-- Select --</option>
+                                <option value="">----- Select -----</option>
                             </select>
                             <p></p>
                             <p id="msg"></p>
@@ -368,7 +368,8 @@
             } else {
                 for (var i = 0; i < birds.length; i++) {
                 if (Number(id) === birds[i].ID) {
-                    msg.innerHTML = '<b>Anatomy</b>:' + " " + birds[i].ID + " " + birds[i].test + '\n' + "History";
+                    msg.innerHTML = '<b>Anatomy</b>:' + " " + birds[i].test <br> 
+                                    '<b>History</b>:';
                     
                     break;
                 }
