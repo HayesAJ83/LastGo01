@@ -93,7 +93,7 @@
                     <form method="POST">
                         <div class="row align-items-center text-center">
                             <div class="col" id="selector" style="display:none">
-                                <select multiple id="CuisineList">
+                                <select multiple id="demo">
         
                                 </select>
                             </div>
@@ -198,17 +198,20 @@
             {ID: 005, name:"Zenker's diverticulum", topic:"Oesophagogastric",       who:"Friedrich Albert von Zenker",   where:"Erlangen, Bavaria, Germany",                 when:"1867",   refs:"<br><br><u>Reference</u><br>Zenker FA and von Ziemssen HW. Krankheiten des Oesophagus. Leipzig, 1867",    about:"<br><br><br>Zenker's report was based on 5 personal cases and 22 cases collected from the literature. Also called a pharyngeal pouch, Zenker's diverticulum affects the mucosa of the human pharynx, just above cricopharyngeal muscle. It is a pseudo diverticulum (not involving ll the layers of the oesophageal wall).<br>"},
             ];
 
-            var unique = eponyms['topic'].filter((v, i, a) => a.indexOf(v) === i);
+            //var unique = eponyms['topic'].filter((v, i, a) => a.indexOf(v) === i);
 
-            var cuisines = ["Chinese","Indian"];     
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            let fLen = fruits.length;
 
-            var sel = document.getElementById('CuisineList');
-            for(var i = 0; i < cuisines.length; i++) {
-                var opt = document.createElement('option');
-                opt.innerHTML = cuisines[i];
-                opt.value = cuisines[i];
-                sel.appendChild(opt);
+            let text = "<ul>";
+            for (let i = 0; i < fLen; i++) {
+            text += "<li>" + fruits[i] + "</li>";
             }
+            text += "</ul>";
+
+            document.getElementById("demo").innerHTML = text;
+ 
+         
         </script>
 
         <script>
