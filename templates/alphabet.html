@@ -133,7 +133,7 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <select id="sel" onchange="show(this.value)">
-                                <option> <li> --Select-- <li> </option>
+                                <option value=""> --Select-- </option>
                             </select>
                             <p id="msg"></p>
                         </div>
@@ -336,7 +336,7 @@
             function populateSelect() {
                 var ele = document.getElementById('sel');
                 selected.forEach(function(b) {
-                    ele.innerHTML += '<option>' + '<li>' + b['name'] + '<li>' + '</option>';
+                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';
                     })
                 }
 
