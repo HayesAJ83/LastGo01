@@ -194,11 +194,6 @@
         <!-- Load d3.js -->
         <script src="https://d3js.org/d3.v4.js"></script>
 
-        <script>
-            $(document).ready(function() {
-                $('.js-example-basic-single').select2();
-            });
-        </script>
 
 
         <script>
@@ -210,11 +205,9 @@
             {ID: 005, name:"Zenker's diverticulum", topic:"Oesophagogastric",       who:"Friedrich Albert von Zenker",   where:"Erlangen, Bavaria, Germany",                 when:"1867",   refs:"<br><br><u>Reference</u><br>Zenker FA and von Ziemssen HW. Krankheiten des Oesophagus. Leipzig, 1867",    about:"<br><br><br>Zenker's report was based on 5 personal cases and 22 cases collected from the literature. Also called a pharyngeal pouch, Zenker's diverticulum affects the mucosa of the human pharynx, just above cricopharyngeal muscle. It is a pseudo diverticulum (not involving ll the layers of the oesophageal wall).<br>"},
             ];
 
-            var unique = eponyms["topic"].filter((v, i, a) => a.indexOf(v) === i);
+            //var unique = eponyms["topic"].filter((v, i, a) => a.indexOf(v) === i);
 
-            console.log(unique)
-
-         
+          
         </script>
 
         <script>
@@ -333,6 +326,10 @@
         </script>
 
         <script>
+            $(document).ready(function() {
+                $('.js-example-basic-single').select2();
+            });
+
             var eponyms = [
             {ID: 001, name:"Aaron sign",            topic:"General",                who:"Charles Dettie Aaron",          where:"Detroit, Michigan, USA",            when:"1913",   refs:"<br><br><u>Reference</u><br>Aaron CD. A sign indicative of chronic appendicitis. <i>JAMA</i>. 1913; 60(5): 350-351",    about:"<br><br><br>Aaron's sign, indicitive of chronic appendicitis, is demonstrated by prolonged firm pressure at McBurney's point which produces pain in the epigastric region. In Aaron's 1913 paper, he describes his findings in four patients.<br>"},
             {ID: 002, name:"Artery of Adamkiewicz", topic:"Vascular,Neurosurgery",  who:"Albert Wojciech Adamkiewicz",   where:"Kraków, Poland",                    when:"1881",   refs:"",   about:"<br><br><br>The artery of Adamkiewicz is known by other terms, including arteria radicularis magna. This vessel is a major contributor to the anterior spinal artery which gives arterial supply to the lumbar and sacral cord and nerves. The artery of Adamkiewicz arises from intercostal arteries which branch from the thoraco-abdominal aorta.<br>"},
@@ -349,6 +346,7 @@
                 selected.forEach(function(b) {
                     ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';
                     })
+                $('.js-example-basic-single').select2();
                 }
 
             function show(id) {
