@@ -96,11 +96,12 @@
                     <hr style="height:1px; visibility:hidden">
                     <form method="POST">
                         <div class="row align-items-center text-center">
-                            <div class="col" id="selector" style="display:none">
+                            <div class="col">
                                 <select id="select1" class="selectpicker" 
                                     multiple title="Choose specialties" 
                                     data-width="auto"
-                                    multiple data-selected-text-format="count > 2">
+                                    multiple data-selected-text-format="count > 2"
+                                    id="selector" style="display:none">
 
                                     {% for spec in specs %}
                                         <option> <li>{{ spec }}</li> </option>
