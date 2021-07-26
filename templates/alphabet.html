@@ -315,9 +315,11 @@
             {ID: 005, name:"Zenker's diverticulum", topic:"Oesophagogastric",       who:"Friedrich Albert von Zenker",   where:"Erlangen, Bavaria, Germany",                 when:"1867",   refs:"<br><br><u>Reference</u><br>Zenker FA and von Ziemssen HW. Krankheiten des Oesophagus. Leipzig, 1867",    about:"<br><br><br>Zenker's report was based on 5 personal cases and 22 cases collected from the literature. Also called a pharyngeal pouch, Zenker's diverticulum affects the mucosa of the human pharynx, just above cricopharyngeal muscle. It is a pseudo diverticulum (not involving ll the layers of the oesophageal wall).<br>"},
             ];
 
+            var selected = eponyms
+
             function populateSelect() {
                 var ele = document.getElementById('sel');
-                eponyms.forEach(function(b) {
+                selected.forEach(function(b) {
                     ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';
                     })
                 }
@@ -329,14 +331,14 @@
                     msg.innerHTML = "";
 
                 } else {
-                    for (var i = 0; i < eponyms.length; i++) {
-                    if (Number(id) === eponyms[i].ID) {
+                    for (var i = 0; i < selected.length; i++) {
+                    if (Number(id) === selected[i].ID) {
                         msg.innerHTML = "<br><br>"+
-                                        '<u>Who</u>'       +"<br>"+ eponyms[i].who.bold()   +"<br><br>"+
-                                        '<u>When</u>'      +"<br>"+ eponyms[i].when.bold()  +"<br><br>"+
-                                        '<u>Where</u>'     +"<br>"+ eponyms[i].where.bold() +
-                                        eponyms[i].about +
-                                        eponyms[i].refs;
+                                        '<u>Who</u>'       +"<br>"+ selected[i].who.bold()   +"<br><br>"+
+                                        '<u>When</u>'      +"<br>"+ selected[i].when.bold()  +"<br><br>"+
+                                        '<u>Where</u>'     +"<br>"+ selected[i].where.bold() +
+                                        selected[i].about +
+                                        selected[i].refs;
                         break;
                         }
                     }
