@@ -229,15 +229,15 @@
 
         <script> 
             $(function() {
-            $('#select1 option').on('change', function() {
-                let value = $('#select1 option')
-                    .map(function() {
-                        return this.text
-                        })
-                    .get().join(',');
-                $( "p1" ).html( value );
+                $('#select1').on('change', function() {
+                    let value = $('#select1 option')
+                        .map(function() {
+                            return this.text
+                            })
+                        .get().join(',');
+                    $( "p1" ).html( value );
+                    });
                 });
-            });
         </script>
 
         <script>
