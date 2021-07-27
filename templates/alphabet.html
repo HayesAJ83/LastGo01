@@ -98,7 +98,7 @@
                         <div class="row align-items-center text-center">
                             <div class="col" id="selector" style="display:none" >
                                 <select id="select1" class="selectpicker" 
-                                    multiple title="None selected" 
+                                    multiple title="0 items selected" 
                                     data-width="340px"
                                     multiple data-actions-box="true"
                                     data-size="4"
@@ -143,7 +143,7 @@
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Eponyms</h1>
               
-                            <select class="selectpicker show-tick" data-style="btn-danger" data-header="Select from list"" 
+                            <select class="selectpicker show-tick" data-style="btn-danger" data-header="Search list"" 
                                     data-width="340px"
                                     data-size="5"
                                     data-live-search="true"
@@ -333,47 +333,48 @@
         <script>
             $(document).ready(function() {
                 $('.js-example-basic-single').select2();
-            });
+            
 
-            var eponyms = [
-            {ID: 001, name:"Aaron sign",            topic:"General",                who:"Charles Dettie Aaron",          where:"Detroit, Michigan, USA",            when:"1913",   refs:"<br><br><u>Reference</u><br>Aaron CD. A sign indicative of chronic appendicitis. <i>JAMA</i>. 1913; 60(5): 350-351",    about:"<br><br><br>Aaron's sign, indicitive of chronic appendicitis, is demonstrated by prolonged firm pressure at McBurney's point which produces pain in the epigastric region. In Aaron's 1913 paper, he describes his findings in four patients.<br>"},
-            {ID: 002, name:"Artery of Adamkiewicz", topic:"Vascular,Neurosurgery",  who:"Albert Wojciech Adamkiewicz",   where:"Kraków, Poland",                    when:"1881",   refs:"",   about:"<br><br><br>The artery of Adamkiewicz is known by other terms, including arteria radicularis magna. This vessel is a major contributor to the anterior spinal artery which gives arterial supply to the lumbar and sacral cord and nerves. The artery of Adamkiewicz arises from intercostal arteries which branch from the thoraco-abdominal aorta.<br>"},
-            {ID: 003, name:"Amyand hernia",         topic:"General",                who:"Claudius Amyand",               where:"London, England, UK",               when:"1735",   refs:"<br><br><u>Reference</u><br>Amyand C. 1735 VIII. Of an inguinal rupture, with a pin in the appendix coeci, incrusted with stone; and some observations on wounds in the guts. <i>Phil Trans R Soc</i>. 39; 329-342",    about:"<br><br><br>Amyand's hernia refers to the finding of the appendix, not necessarily inflamed, within an inguinal hernia. Claudius Amyand (Serjent Surgeon to His Majesty, and FRS) reported on the 8th October 1735, an 11-year old boy, Hanvil Anderson, was admitted to St. George's Hospital near Hyde Park Corner. He had a filstula btween his scrotum and thigh, discharging an unkindly sort of matter. The operation was performed on 6th December 1735.<br>"},
-            {ID: 004, name:"Babcock forceps",       topic:"General",                who:"William Wayne Babcock",         where:"Philadelphia, Pennsylvania, USA",   when:"1963",   refs:"",   about:""},
-            {ID: 005, name:"Whipple's operation",   topic:"HPB",                    who:"Allen Oldfather Whipple",       where:"Manhattan, New York, USA",          when:"1934",   refs:"<br><br><u>Reference</u><br>Whipple AO, Parsons WB, Mullins CR. Treatment of carcinoma of the ampulla of Vater. <i>Ann Surg</i>. 1935; 102(4): 763-779",   about:""},
-            {ID: 006, name:"Zenker's diverticulum", topic:"Oesophagogastric",       who:"Friedrich Albert von Zenker",   where:"Erlangen, Bavaria, Germany",        when:"1867",   refs:"<br><br><u>Reference</u><br>Zenker FA and von Ziemssen HW. Krankheiten des Oesophagus. Leipzig, 1867",    about:"<br><br><br>Zenker's report was based on 5 personal cases and 22 cases collected from the literature. Also called a pharyngeal pouch, Zenker's diverticulum affects the mucosa of the human pharynx, just above cricopharyngeal muscle. It is a pseudo diverticulum (not involving ll the layers of the oesophageal wall).<br>"},
-            ];
+                var eponyms = [
+                {ID: 001, name:"Aaron sign",            topic:"General",                who:"Charles Dettie Aaron",          where:"Detroit, Michigan, USA",            when:"1913",   refs:"<br><br><u>Reference</u><br>Aaron CD. A sign indicative of chronic appendicitis. <i>JAMA</i>. 1913; 60(5): 350-351",    about:"<br><br><br>Aaron's sign, indicitive of chronic appendicitis, is demonstrated by prolonged firm pressure at McBurney's point which produces pain in the epigastric region. In Aaron's 1913 paper, he describes his findings in four patients.<br>"},
+                {ID: 002, name:"Artery of Adamkiewicz", topic:"Vascular,Neurosurgery",  who:"Albert Wojciech Adamkiewicz",   where:"Kraków, Poland",                    when:"1881",   refs:"",   about:"<br><br><br>The artery of Adamkiewicz is known by other terms, including arteria radicularis magna. This vessel is a major contributor to the anterior spinal artery which gives arterial supply to the lumbar and sacral cord and nerves. The artery of Adamkiewicz arises from intercostal arteries which branch from the thoraco-abdominal aorta.<br>"},
+                {ID: 003, name:"Amyand hernia",         topic:"General",                who:"Claudius Amyand",               where:"London, England, UK",               when:"1735",   refs:"<br><br><u>Reference</u><br>Amyand C. 1735 VIII. Of an inguinal rupture, with a pin in the appendix coeci, incrusted with stone; and some observations on wounds in the guts. <i>Phil Trans R Soc</i>. 39; 329-342",    about:"<br><br><br>Amyand's hernia refers to the finding of the appendix, not necessarily inflamed, within an inguinal hernia. Claudius Amyand (Serjent Surgeon to His Majesty, and FRS) reported on the 8th October 1735, an 11-year old boy, Hanvil Anderson, was admitted to St. George's Hospital near Hyde Park Corner. He had a filstula btween his scrotum and thigh, discharging an unkindly sort of matter. The operation was performed on 6th December 1735.<br>"},
+                {ID: 004, name:"Babcock forceps",       topic:"General",                who:"William Wayne Babcock",         where:"Philadelphia, Pennsylvania, USA",   when:"1963",   refs:"",   about:""},
+                {ID: 005, name:"Whipple's operation",   topic:"HPB",                    who:"Allen Oldfather Whipple",       where:"Manhattan, New York, USA",          when:"1934",   refs:"<br><br><u>Reference</u><br>Whipple AO, Parsons WB, Mullins CR. Treatment of carcinoma of the ampulla of Vater. <i>Ann Surg</i>. 1935; 102(4): 763-779",   about:""},
+                {ID: 006, name:"Zenker's diverticulum", topic:"Oesophagogastric",       who:"Friedrich Albert von Zenker",   where:"Erlangen, Bavaria, Germany",        when:"1867",   refs:"<br><br><u>Reference</u><br>Zenker FA and von Ziemssen HW. Krankheiten des Oesophagus. Leipzig, 1867",    about:"<br><br><br>Zenker's report was based on 5 personal cases and 22 cases collected from the literature. Also called a pharyngeal pouch, Zenker's diverticulum affects the mucosa of the human pharynx, just above cricopharyngeal muscle. It is a pseudo diverticulum (not involving ll the layers of the oesophageal wall).<br>"},
+                ];
 
-            var selected = eponyms
+                var selected = eponyms
 
-            function populateSelect() {
-                var ele = document.getElementById('sel');
-                selected.forEach(function(b) {
-                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';
-                    })
-                }
+                function populateSelect() {
+                    var ele = document.getElementById('sel');
+                    selected.forEach(function(b) {
+                        ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';
+                        })
+                    }
 
-            function show(id) {
-            // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
-                var msg = document.getElementById('msg');
-                if (!id) {
-                    msg.innerHTML = "";
+                function show(id) {
+                // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
+                    var msg = document.getElementById('msg');
+                    if (!id) {
+                        msg.innerHTML = "";
 
-                } else {
-                    for (var i = 0; i < selected.length; i++) {
-                    if (Number(id) === selected[i].ID) {
-                        msg.innerHTML = "<br>"+
-                                        'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
-                                        'When'  +":   "+ selected[i].when.bold()  +"<br>"+
-                                        'Where' +":   "+ selected[i].where.bold() +
-                                        selected[i].about +
-                                        selected[i].refs;
-                        break;
+                    } else {
+                        for (var i = 0; i < selected.length; i++) {
+                        if (Number(id) === selected[i].ID) {
+                            msg.innerHTML = "<br>"+
+                                            'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
+                                            'When'  +":   "+ selected[i].when.bold()  +"<br>"+
+                                            'Where' +":   "+ selected[i].where.bold() +
+                                            selected[i].about +
+                                            selected[i].refs;
+                            break;
+                            }
                         }
                     }
                 }
-            }
-            populateSelect()
+                populateSelect()
+            });
         </script>
 
         <script src="/static/assets/js/theme.js"></script>
