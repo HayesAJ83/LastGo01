@@ -206,12 +206,6 @@
         <script src="https://d3js.org/d3.v4.js"></script>
 
         <script>
-            $(function() {
-              $('#toggle-one').bootstrapToggle();
-            })
-        </script>
-
-        <script>
             var eponyms = [
             {ID: 001, name:"Aaron sign",            topic:"General",                who:"Charles Dettie Aaron",          where:"Detroit, Michigan, USA (Harper Hospital)",   when:"1913",   refs:"<br><br><u>Reference</u><br>Aaron CD. A sign indicative of chronic appendicitis. JAMA. 1913; 60(5): 350-351",    about:"<br><br>Aaron's sign, indicitive of chronic appendicitis, is demonstrated by prolonged firm pressure at McBurney's point which produces pain in the epigastric region. In Aaron's 1913 paper, he describes his findings in four patients.<br>"},
             {ID: 002, name:"Artery of Adamkiewicz", topic:"Vascular,Neurosurgery",  who:"Albert Wojciech Adamkiewicz",   where:"Kraków, Poland",                             when:"1881",   refs:"",   about:"<br><br>The artery of Adamkiewicz is known by other terms, including arteria radicularis magna. This vessel is a major contributor to the anterior spinal artery which gives arterial supply to the lumbar and sacral cord and nerves. The artery of Adamkiewicz arises from intercostal arteries which branch from the thoraco-abdominal aorta.<br>"},
@@ -219,9 +213,7 @@
             {ID: 004, name:"Babcock forceps",       topic:"General",                who:"William Wayne Babcock",         where:"Philadelphia, Pennsylvania, USA",            when:"1963",   refs:"",   about:""},
             {ID: 005, name:"Zenker's diverticulum", topic:"Oesophagogastric",       who:"Friedrich Albert von Zenker",   where:"Erlangen, Bavaria, Germany",                 when:"1867",   refs:"<br><br><u>Reference</u><br>Zenker FA and von Ziemssen HW. Krankheiten des Oesophagus. Leipzig, 1867",    about:"<br><br>Zenker's report was based on 5 personal cases and 22 cases collected from the literature. Also called a pharyngeal pouch, Zenker's diverticulum affects the mucosa of the human pharynx, just above cricopharyngeal muscle. It is a pseudo diverticulum (not involving ll the layers of the oesophageal wall).<br>"},
             ];
-
             //var unique = eponyms["topic"].filter((v, i, a) => a.indexOf(v) === i);
-
         </script>
 
         <script>
@@ -231,18 +223,6 @@
                     let value = $('#select1 option').map(function() {
                             return this.text}).get().join(',');
                     $( "p1" ).html( value );
-                });
-            });
-        </script>
-
-    
-        <script>
-            $(function() {
-                $('#toggle_one').change(function() {
-                    if ($(this).is("Select")) {
-                        $('#selector').fadeIn(300);
-                    }
-                    
                 });
             });
         </script>
