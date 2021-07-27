@@ -89,6 +89,7 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Specialties</h1>
+                            <input id="toggle-one" checked type="checkbox">
                             <a class="btn btn-primary active"   id="btn_all"    role="button" aria-pressed="true">All</a>
                             <a class="btn btn-light" id="btn_select" role="button" aria-pressed="true">Options</a>
                         </div>
@@ -205,6 +206,11 @@
         <!-- Load d3.js -->
         <script src="https://d3js.org/d3.v4.js"></script>
 
+        <script>
+            $(function() {
+              $('#toggle-one').bootstrapToggle();
+            })
+          </script>
 
         <script>
             var eponyms = [
