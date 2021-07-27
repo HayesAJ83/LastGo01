@@ -89,7 +89,7 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Specialties</h1>
-                            <input id="toggle-one" checked type="checkbox"
+                            <input id="toggle-one" type="checkbox" checked data-toggle=
                                    data-onstyle="default" data-on="All" data-off="Select">
                             <br>
                             <a class="btn btn-primary active"   id="btn_all"    role="button" aria-pressed="true">All</a>
@@ -114,13 +114,13 @@
                         </div>
                     </form>
                 </div>
-                <!-- <div class="container">
+                <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <p1 style="font-size: 5px;"></p1>
                         </div>
                     </div>
-                </div> -->
+                </div>
                 <br></br>
                 <div class="container">
                     <div class="row align-items-center text-center">
@@ -264,8 +264,11 @@
                     $( "p1" ).html( value );
                     });
                 
-                $('#toggle_one').on('change', function() {
-                    $('#selector').fadeIn(200);
+                $('#toggle_one').change(function() {
+                    if ($(this).is(":checked")) {
+                        $('#selector').fadeIn(200);
+                    }
+                    
                 });
             });
         </script>
