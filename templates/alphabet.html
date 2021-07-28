@@ -89,8 +89,8 @@
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1 ">Specialties</h1>
-                            <button type="button" class="btn btn-primary active btn-rounded" id="btn_all">All</button>
-                            <button type="button" class="btn btn-light btn-rounded" id="btn_select">Select</button>
+                            <button type="button" class="btn btn-danger active" id="btn_all">All</button>
+                            <button type="button" class="btn btn-light" id="btn_select">Select</button>
                         </div>
                     </div>
                     <hr style="height:1px; visibility:hidden">
@@ -148,7 +148,7 @@
                                     data-size="5"
                                     data-live-search="true"
                                     id="sel" onchange="show(this.value)">
-                                <option value=""> --- Select --- </option>
+                                <option value=""> -------- Select -------- </option>
                             </select>
                             <p id="msg"></p>
                         </div>
@@ -252,9 +252,9 @@
             $(function() {
                 $('#btn_all').on('click', function() {
                     $('#btn_all').removeClass("btn btn-light");
-                    $('#btn_all').addClass("btn btn-primary active");
+                    $('#btn_all').addClass("btn btn-danger active");
                     $('#selector').fadeOut(400);
-                    $('#btn_select').removeClass("btn btn-primary active");
+                    $('#btn_select').removeClass("btn btn-danger active");
                     $('#btn_select').addClass("btn btn-light");
                     let value = $('#select1 option')
                         .map(function() {
@@ -265,10 +265,10 @@
                     });
                 
                 $('#btn_select').on('click', function() {
-                    $('#btn_all').removeClass("btn btn-primary active");
+                    $('#btn_all').removeClass("btn btn-danger active");
                     $('#btn_all').addClass("btn btn-light");
                     $('#btn_select').removeClass("btn btn-light");
-                    $('#btn_select').addClass("btn btn-primary active");
+                    $('#btn_select').addClass("btn btn-danger active");
                     $('#selector').fadeIn(500);
                 });
             });
