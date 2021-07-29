@@ -96,7 +96,7 @@
                     <hr style="height:1px; visibility:hidden">
                     <form method="POST">
                         <div class="row align-items-center text-center">
-                            <div class="col" id="selector" style="display:none" >
+                            <div class="col" id="selector" style="visibility:hidden" >
                                 <select id="select1" class="selectpicker" 
                                     multiple title="0 items selected" 
                                     data-width="340px"
@@ -208,19 +208,6 @@
         <script src="https://d3js.org/d3.v4.js"></script>
 
         <script>
-            var eponyms = [
-            {ID: 001, name:"Aaron sign",            topic:"General",                who:"Charles Dettie Aaron",          where:"Detroit, Michigan, USA (Harper Hospital)",   when:"1913",   refs:"<br><br><u>Reference</u><br>Aaron CD. A sign indicative of chronic appendicitis. JAMA. 1913; 60(5): 350-351",    about:"<br><br>Aaron's sign, indicitive of chronic appendicitis, is demonstrated by prolonged firm pressure at McBurney's point which produces pain in the epigastric region. In Aaron's 1913 paper, he describes his findings in four patients.<br>"},
-            {ID: 002, name:"Artery of Adamkiewicz", topic:"Vascular,Neurosurgery",  who:"Albert Wojciech Adamkiewicz",   where:"Kraków, Poland",                             when:"1881",   refs:"",   about:"<br><br>The artery of Adamkiewicz is known by other terms, including arteria radicularis magna. This vessel is a major contributor to the anterior spinal artery which gives arterial supply to the lumbar and sacral cord and nerves. The artery of Adamkiewicz arises from intercostal arteries which branch from the thoraco-abdominal aorta.<br>"},
-            {ID: 003, name:"Amyand hernia",         topic:"General",                who:"Claudius Amyand",               where:"London, England, UK",                        when:"1735",   refs:"<br><br><u>Reference</u><br>Amyand C. 1735 VIII. <b>Of an inguinal rupture, with a pin in the appendix coeci, incrusted with stone; and some observations on wounds in the guts</b>. Phil Trans R Soc. 39; 329-342",    about:"<br><br>Amyand's hernia refers to the finding of the appendix, not necessarily inflamed, within an inguinal hernia. Claudius Amyand (Serjent Surgeon to His Majesty, and FRS) reported on the 8th October 1735, an 11-year old boy, Hanvil Anderson, was admitted to St. George's Hospital near Hyde Park Corner. He had a filstula btween his scrotum and thigh, discharging an unkindly sort of matter. The operation was performed on 6th December 1735.<br>"},
-            {ID: 004, name:"Babcock forceps",       topic:"General",                who:"William Wayne Babcock",         where:"Philadelphia, Pennsylvania, USA",            when:"1963",   refs:"",   about:""},
-            {ID: 005, name:"Zenker's diverticulum", topic:"Oesophagogastric",       who:"Friedrich Albert von Zenker",   where:"Erlangen, Bavaria, Germany",                 when:"1867",   refs:"<br><br><u>Reference</u><br>Zenker FA and von Ziemssen HW. Krankheiten des Oesophagus. Leipzig, 1867",    about:"<br><br>Zenker's report was based on 5 personal cases and 22 cases collected from the literature. Also called a pharyngeal pouch, Zenker's diverticulum affects the mucosa of the human pharynx, just above cricopharyngeal muscle. It is a pseudo diverticulum (not involving ll the layers of the oesophageal wall).<br>"},
-            ];
-            //var unique = eponyms["topic"].filter((v, i, a) => a.indexOf(v) === i);
-        </script>
-
-  
-
-        <script>
             $(document)
             .ready(function() {
                 $('#select1').ready(function() {
@@ -243,10 +230,6 @@
                 });
             });
         </script>
-
-
-
-
 
         <script>
             $(function() {
@@ -285,21 +268,21 @@
                         select = select.substr(1);
                     }
                     $( "p1" ).html( select );
-                    });
+                });
             });
         </script>
      
         <script>
             $('#time').ionRangeSlider({
-            type: "double",
-            grid: true,
-            min: 1670,
-            max: 2050,
-            from: 1700,
-            to: 2021,
-            prefix: 'Year : ',
-            prettify_separator: '',
-            hide_min_max: true,
+                type: "double",
+                grid: true,
+                min: 1670,
+                max: 2050,
+                from: 1700,
+                to: 2021,
+                prefix: 'Year : ',
+                prettify_separator: '',
+                hide_min_max: true,
             });
         </script>
 
@@ -358,8 +341,19 @@
             {ID: 20, name:"Zenker's diverticulum",      topic:"Oesophagogastric",       who:"Friedrich Albert von Zenker",   where:"Erlangen, Bavaria, Germany",        when:"1867",   refs:"<br><br><u>Reference</u><br>Zenker FA and von Ziemssen HW. Krankheiten des Oesophagus. Leipzig, 1867",    about:"<br><br><br>Zenker's report was based on 5 personal cases and 22 cases collected from the literature. Also called a pharyngeal pouch, Zenker's diverticulum affects the mucosa of the human pharynx, just above cricopharyngeal muscle. It is a pseudo diverticulum (not involving ll the layers of the oesophageal wall).<br>"},
             ];
 
-            
+            //time - when
+            // $('#time').on("change", function() { var $inp = $(this);
+                    //var frm = $inp.data("from");
+                    //var to = $inp.data("to");});
+                    // 
+                    // x.filter(function(obj) {
+                        //return (obj.topic === topicVar) && obj.when > .frm && obj.when < .to
 
+                    //}
+                    //)
+
+            //var unique = eponyms["topic"].filter((v, i, a) => a.indexOf(v) === i);
+ 
 
             var selected = eponyms
 
