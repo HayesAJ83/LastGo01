@@ -147,7 +147,7 @@
                                     data-width="340px"
                                     data-size="5"
                                     data-live-search="true"
-                                    id="sel" onchange="show(this.value); fadeIn(800);">
+                                    id="sel" onchange="show(this.value);">
                                 <option value=""> -- Select -- </option>
                             </select>
                             <p id="msg"></p>    
@@ -385,6 +385,13 @@
                 }
             }
             populateSelect()
+        </script>
+
+        <script>
+            $('#sel').on('change', function() {
+                $(this).fadeIn(800);
+            });
+
         </script>
 
         <script src="/static/assets/js/theme.js"></script>
