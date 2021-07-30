@@ -375,7 +375,6 @@
             {ID: 27, name:"Tubercle of Zuckerkandl",    topic:"Endocrine",              who:"Emil Zuckerkandl",               where:"Vienna, Austria",                   when:"1902",   refs:"<br><br><u>Reference</u><br>Zuckerkandl E. Die Epithelkörperchen von Didelphys azara nebst Bemerkungen über die Epithelkörperchen des Menschen. <i>Anatomische Hefte</i>. 1902; 19(1), 59-84",   about:" "},
             ]
 
-
             //time - when
             // $('#time').on("change", function() { var $inp = $(this);
                     //var frm = $inp.data("from");
@@ -383,15 +382,13 @@
                     // 
                     // x.filter(function(obj) {
                         //return (obj.topic === topicVar) && obj.when > .frm && obj.when < .to
-
                     //}
                     //)
-
             //var unique = eponyms["topic"].filter((v, i, a) => a.indexOf(v) === i);
 
-            var selected = eponyms.filter(function(ele) {
-                return ele.topic == "General";
-            });
+            //var selected = eponyms.filter(function(ele) {
+            //    return ele.topic == "General";
+            //    });
 
             function populateSelect() {
                 var ele = document.getElementById('sel');
