@@ -319,31 +319,31 @@
                 $('.js-example-basic-single').select2();
             });
 
-            $(document)
-            .ready(function() {
-                $('#select1').ready(function() {
-                    let value = $('#select1 option').map(function() {
-                            return this.text}).get().join(',');
-                    });
-                $('#select1').on('change', function() {
-                    var select ="";
-                    $("#select1").find('option:selected').each(function() 
-                        {select +=","+$.trim($(this).text());});
-                        if(select != ""){select = select.substr(1);}
-                    });
-                });
+            //$(document)
+            //.ready(function() {
+            //    $('#select1').ready(function() {
+            //        let value = $('#select1 option').map(function() {
+            //                return this.text}).get().join(',');
+            //        });
+            //    $('#select1').on('change', function() {
+            //        var select ="";
+            //        $("#select1").find('option:selected').each(function() 
+            //            {select +=","+$.trim($(this).text());});
+            //            if(select != ""){select = select.substr(1);}
+            //        });
+            //    });
 
-            $('#btn_select').on('click', function() {
-                $('#select1').ready(function() {
-                    var select ="";
-                    $("#select1").find('option:selected').each(function() {
-                        select +=","+$.trim($(this).text());
-                    });
-                    if(select != ""){
-                        select = select.substr(1);
-                    }
-                });
-            });
+            //$('#btn_select').on('click', function() {
+            //    $('#select1').ready(function() {
+            //        var select ="";
+            //        $("#select1").find('option:selected').each(function() {
+            //            select +=","+$.trim($(this).text());
+            //        });
+            //        if(select != ""){
+            //            select = select.substr(1);
+            //        }
+            //    });
+            //});
 
             var eponyms = [
             {ID:  1, name:"Aaron sign",                 topic:"General",                who:"Charles Dettie Aaron",           where:"Detroit, Michigan, USA",            when:"1913",   refs:"<br><br><u>Reference</u><br>Aaron CD. A sign indicative of chronic appendicitis. <i>JAMA</i>. 1913; 60(5): 350-351",    about:"<br><br><br>Aaron's sign, indicitive of chronic appendicitis, is demonstrated by prolonged firm pressure at McBurney's point which produces pain in the epigastric region. In Aaron's 1913 paper, he describes his findings in four patients.<br>"},
