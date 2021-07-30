@@ -346,7 +346,8 @@
             {ID: 24, name:"Whipple's operation",        topic:"HPB",                    who:"Allen Oldfather Whipple",       where:"Manhattan, New York, USA",          when:"1934",   refs:"<br><br><u>Reference</u><br>Whipple AO, Parsons WB, Mullins CR. Treatment of carcinoma of the ampulla of Vater. <i>Ann Surg</i>. 1935; 102(4): 763-779",   about:""},
             {ID: 25, name:"Zenker's diverticulum",      topic:"Oesophagogastric",       who:"Friedrich Albert von Zenker",   where:"Erlangen, Bavaria, Germany",        when:"1867",   refs:"<br><br><u>Reference</u><br>Zenker FA and von Ziemssen HW. Krankheiten des Oesophagus. Leipzig, 1867",    about:"<br><br><br>Zenker's report was based on 5 personal cases and 22 cases collected from the literature. Also called a pharyngeal pouch, Zenker's diverticulum affects the mucosa of the human pharynx, just above cricopharyngeal muscle. It is a pseudo diverticulum (not involving ll the layers of the oesophageal wall).<br>"},
             {ID: 26, name:"Tubercle of Zuckerkandl",    topic:"Endocrine",              who:"Emil Zuckerkandl",              where:"Vienna, Austria",                   when:"1902",   refs:"<br><br><u>Reference</u><br>Zuckerkandl E. Die Epithelkörperchen von Didelphys azara nebst Bemerkungen über die Epithelkörperchen des Menschen. <i>Anatomische Hefte</i>. 1902; 19(1), 59-84",   about:" "},
-                ];
+            ]
+    
 
             //time - when
             // $('#time').on("change", function() { var $inp = $(this);
@@ -361,7 +362,9 @@
 
             //var unique = eponyms["topic"].filter((v, i, a) => a.indexOf(v) === i);
 
-            var selected = eponyms
+            var selected = eponyms.filter(function(ele) {
+                return ele.topic == "General";
+            });
 
             function populateSelect() {
                 var ele = document.getElementById('sel');
