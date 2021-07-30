@@ -386,10 +386,10 @@
                     //)
             //var unique = eponyms["topic"].filter((v, i, a) => a.indexOf(v) === i);
 
-            var selected = eponyms
-            //var selected = eponyms.filter(function(ele) {
-            //    return ele.topic == "General";
-            //    });
+            //var selected = eponyms
+            var selected = eponyms.filter(function(ele) {
+                return ele.topic == "General";
+                });
 
             function populateSelect() {
                 var ele = document.getElementById('sel');
