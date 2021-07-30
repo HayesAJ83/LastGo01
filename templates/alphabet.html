@@ -112,13 +112,13 @@
                         </div>
                     </form>
                 </div>
-                <!-- <div class="container">
+                <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <p1 style="font-size: 5px;"></p1>
                         </div>
                     </div>
-                </div> -->
+                </div>
                 <div class="container" style="height:120px">
                     <div class="row align-items-center text-center">
                         <div class="col">
@@ -319,6 +319,32 @@
                 $('.js-example-basic-single').select2();
             });
 
+            $(document)
+            .ready(function() {
+                $('#select1').ready(function() {
+                    let value = $('#select1 option').map(function() {
+                            return this.text}).get().join(',');
+                    });
+                $('#select1').on('change', function() {
+                    var select ="";
+                    $("#select1").find('option:selected').each(function() 
+                        {select +=","+$.trim($(this).text());});
+                        if(select != ""){select = select.substr(1);}
+                    });
+                });
+
+            $('#btn_select').on('click', function() {
+                $('#select1').ready(function() {
+                    var select ="";
+                    $("#select1").find('option:selected').each(function() {
+                        select +=","+$.trim($(this).text());
+                    });
+                    if(select != ""){
+                        select = select.substr(1);
+                    }
+                });
+            });
+
             var eponyms = [
             {ID:  1, name:"Aaron sign",                 topic:"General",                who:"Charles Dettie Aaron",           where:"Detroit, Michigan, USA",            when:"1913",   refs:"<br><br><u>Reference</u><br>Aaron CD. A sign indicative of chronic appendicitis. <i>JAMA</i>. 1913; 60(5): 350-351",    about:"<br><br><br>Aaron's sign, indicitive of chronic appendicitis, is demonstrated by prolonged firm pressure at McBurney's point which produces pain in the epigastric region. In Aaron's 1913 paper, he describes his findings in four patients.<br>"},
             {ID:  2, name:"Artery of Adamkiewicz",      topic:"Vascular,Neurosurgery",  who:"Albert Wojciech Adamkiewicz",    where:"Kraków, Poland",                    when:"1881",   refs:"",   about:"<br><br><br>The artery of Adamkiewicz is known by other terms, including arteria radicularis magna. This vessel is a major contributor to the anterior spinal artery which gives arterial supply to the lumbar and sacral cord and nerves. The artery of Adamkiewicz arises from intercostal arteries which branch from the thoraco-abdominal aorta.<br>"},
@@ -341,7 +367,7 @@
             {ID: 19, name:"Rokitansky-Aschoff sinuses", topic:"HPB,General", who:"Karl F von Rokitansky & Karl A L Aschoff",  where:"Marburg, Germany",                  when:"1905",   refs:"<br><br><u>Reference</u><br>Aschoff L. Bemerkungen zur pathologischen Anatomie des cholelithiasis und Cholecystitis. <i>Verh Dtsch Pathol Ges</i>. 1905; 9: 41",   about:""},
             {ID: 20, name:"Sistrunk procedure",         topic:"ENT",                    who:"Walter Ellis Sistrunk",          where:"Rochester, Minnesota, USA",         when:"1920",   refs:"<br><br><u>Reference</u><br>Sistrunk WE. The surgical treatment of cysts of the thyroglossal tract. <i>Ann Surg</i>. 1920; 71(2): 121-122",   about:" "},
             {ID: 21, name:"Spigelian hernia",           topic:"General",                who:"Adriaan van den Spiegel",        where:"Padua, Veneto, Italy",              when:"1625",   refs:"",   about:""},
-            {ID: 22, name:"Valsalva maneuver",          topic:"General",                who:"Antonio Maria Valsalva",         where:"Bologna, Italy",                    when:"1704",   refs:"",   about:"Used during the check for haemostasis during neck surgery to increase venous pressures and inguinal hernia repair in conscious patients to test the integrity of the repair."},
+            {ID: 22, name:"Valsalva maneuver",          topic:"General",                who:"Antonio Maria Valsalva",         where:"Bologna, Italy",                    when:"1704",   refs:"",   about:"<br><br><br>Used during the check for haemostasis during neck surgery to increase venous pressures and inguinal hernia repair in conscious patients to test the integrity of the repair.<br>"},
             {ID: 23, name:"Ampulla of Vater",           topic:"HPB",                    who:"Abraham Vater",                  where:"Wittenberg, Saxony-Anhalt, Germany",when:"1720",   refs:"",   about:""},
             {ID: 24, name:"Warthin's tumour",           topic:"ENT,Maxillofacial",      who:"Aldred Scott Warthin",           where:"Ann Arbor, Michigan, USA",          when:"1929",   refs:"",   about:"<br><br><u>Reference</u><br>Warthin AS. Papillary cystadenoma lymphomatosum: a rare teratoid of parotid region. <i>J Cancer Res</i>. 1929; 3: 116-125"},
             {ID: 25, name:"Whipple's operation",        topic:"HPB",                    who:"Allen Oldfather Whipple",        where:"Manhattan, New York, USA",          when:"1934",   refs:"<br><br><u>Reference</u><br>Whipple AO, Parsons WB, Mullins CR. Treatment of carcinoma of the ampulla of Vater. <i>Ann Surg</i>. 1935; 102(4): 763-779",   about:""},
