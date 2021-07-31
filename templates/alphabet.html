@@ -387,8 +387,14 @@
             //var unique = eponyms["topic"].filter((v, i, a) => a.indexOf(v) === i);
 
             //var selected = eponyms
+            //this works
+            //var selected = eponyms.filter(function(ele) {
+            //    return ele.topic == "General";
+            //    });
+            // var select_str = select.split(",")
+
             var selected = eponyms.filter(function(ele) {
-                return ele.topic == "General";
+                return ele.topic == "Emergency";
                 });
 
             function populateSelect() {
