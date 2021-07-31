@@ -393,9 +393,9 @@
             //    });
             // var select_str = select.split(",")
 
-            var selected = eponyms.filter(function(ele) {
-                return ele.topic == "Emergency";
-                });
+            var selected = eponyms.filter(function(elem) {
+                return elem.topic == "General";
+            });
 
             function populateSelect() {
                 var ele = document.getElementById('sel');
@@ -427,12 +427,7 @@
             populateSelect()
         </script>
 
-        <script>
-            $('#sel').on('change', function() {
-                $(this).fadeIn(800);
-            });
-
-        </script>
+     
 
         <script src="/static/assets/js/theme.js"></script>
     </body>
