@@ -103,7 +103,8 @@
                                     data-width="340px"
                                     multiple data-actions-box="true"
                                     data-size="6"
-                                    multiple data-selected-text-format="count > 3">
+                                    multiple data-selected-text-format="count > 3"
+                                    tabindex="2">
                                     {% for spec in specs %}
                                         <option> <li>{{ spec }}</li> </option>
                                     {% endfor %}
@@ -112,13 +113,13 @@
                         </div>
                     </form>
                 </div>
-                <div class="container">
+                <!-- <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <p1 style="font-size: 5px;"></p1>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="container" style="height:120px">
                     <div class="row align-items-center text-center">
                         <div class="col">
@@ -143,7 +144,7 @@
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
               
-                            <select class="selectpicker show-tick" data-style="btn-danger" data-header="Search list:"" 
+                            <select class="selectpicker show-tick" data-style="btn-danger" data-header="Search list:" 
                                     data-width="340px"
                                     data-size="6"
                                     data-live-search="true"
@@ -391,11 +392,19 @@
             //var selected = eponyms.filter(function(ele) {
             //    return ele.topic == "General";
             //    });
-            // var select_str = select.split(",")
+            // var arrayOfSelect = select.split(",")
+            // var Iwant = arrayOfSelect.find(v => (str === v));
+            
+            //if (select.length > 0)
+           //     var arr = arr.filter(obj =>
+            //  obj.tags.some(tag => filters.includes(tag))
+            //  );
 
+            
             var selected = eponyms.filter(function(elem) {
-                return elem.topic == "General";
+                return elem.topic.includes(select.split(","))
             });
+            
 
             function populateSelect() {
                 var ele = document.getElementById('sel');
@@ -427,6 +436,20 @@
             populateSelect()
         </script>
 
+
+        <script>
+        //$(document).ready(function () {    
+            //var allOptions = $('#selectprod option')
+            //$('#selectcat').change(function () {
+            //    $('#selectprod option').remove()
+            //    var classN = $('#selectcat option:selected').prop('class');
+            //    var opts = allOptions.filter('.' + classN);
+            //    $.each(opts, function (i, j) {
+            //        $(j).appendTo('#selectprod');
+            //    });
+            //});
+        //});
+        </script>
      
 
         <script src="/static/assets/js/theme.js"></script>
