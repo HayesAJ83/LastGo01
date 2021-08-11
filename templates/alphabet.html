@@ -435,12 +435,15 @@
             $(document)
             .ready(function() {
                 $('#p1').on("change", function() {
-                    var value = $(this);    
+                    const value = $(this);    
                     });
                 });
  
              
-            log(topicFilter([value])
+            log(topicFilter([
+                'General',
+                'Endocrine',
+            ])
 
             );
 
