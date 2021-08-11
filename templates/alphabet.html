@@ -352,8 +352,8 @@
             {ID:  3, name:"Amyand hernia",              topic:"General",                who:"Claudius Amyand",                where:"London, England, UK",               when:"1735",   refs:"<br><br><u>Reference</u><br>Amyand C. 1735 VIII. Of an inguinal rupture, with a pin in the appendix coeci, incrusted with stone; and some observations on wounds in the guts. <i>Phil Trans R Soc</i>. 39; 329-342",    about:"<br><br><br>Amyand's hernia refers to the finding of the appendix, not necessarily inflamed, within an inguinal hernia. Claudius Amyand (Serjent Surgeon to His Majesty, and FRS) reported on the 8th October 1735, an 11-year old boy, Hanvil Anderson, was admitted to St. George's Hospital near Hyde Park Corner. He had a filstula btween his scrotum and thigh, discharging an unkindly sort of matter. The operation was performed on 6th December 1735.<br>"},
             {ID:  4, name:"Babcock forceps",            topic:"General",                who:"William Wayne Babcock",          where:"Philadelphia, Pennsylvania, USA",   when:"1963",   refs:"",   about:""},
             {ID:  5, name:"Calot's triangle",           topic:"HPB",                    who:"Jean-François Calot",            where:"Paris, France",                     when:"1891",   refs:"",   about:""},
-            {ID:  6, name:"DeMeester score",            topic:"Oesophagogastric",       who:"Tom R Demeester",                where:"Honolulu, Hawaii, USA",             when:"1974",   refs:"<br><br><u>Reference</u><br>Johnson LF, Demeester TR. Twenty-four-hour pH monitoring of the distal esophagus. A quantitative measure of gastroesophageal reflux. <i>>Am J Gastroenterol</i>. 1974; 62(4): 325-332",   about:""},
-            {ID:  7, name:"Eckardt score",              topic:"Oesophagogastric",       who:"Volker F Eckardt",               where:"Mainz, Germany",                    when:"1992",   refs:"<br><br><u>Reference</u><br>Eckardt VF, Aignherr C, Bernhard G. Predictors of outcome in patients with achalasia treated by pneumatic dilation. <i>>Gastroenterology</i>. 1992; 103(6): 1732-1738",   about:""},
+            {ID:  6, name:"DeMeester score",            topic:"Oesophagogastric",       who:"Tom R Demeester",                where:"Honolulu, Hawaii, USA",             when:"1974",   refs:"<br><br><u>Reference</u><br>Johnson LF, Demeester TR. Twenty-four-hour pH monitoring of the distal esophagus. A quantitative measure of gastroesophageal reflux. <i>Am J Gastroenterol</i>. 1974; 62(4): 325-332",   about:""},
+            {ID:  7, name:"Eckardt score",              topic:"Oesophagogastric",       who:"Volker F Eckardt",               where:"Mainz, Germany",                    when:"1992",   refs:"<br><br><u>Reference</u><br>Eckardt VF, Aignherr C, Bernhard G. Predictors of outcome in patients with achalasia treated by pneumatic dilation. <i>Gastroenterology</i>. 1992; 103(6): 1732-1738",   about:""},
             {ID:  8, name:"Fisher's exact test",        topic:"Academic",               who:"Ronald Fisher",                  where:"London, England, UK",               when:"1934",   refs:"",   about:""},
             {ID:  9, name:"Fournier's gangrene",        topic:"Urology,Emergency",      who:"Jean Alfred Fournier",           where:"Paris, France",                     when:"1883",   refs:"<br><br><u>Reference</u><br>Fournier JA. Gangrene foudroyante de la verge. <i>Sem Med</i>. 1883; 3: 345",   about:""},
             {ID: 10, name:"Hartmann's operation",       topic:"Colorectal,Emergency",   who:"Henri A C A Hartmann",           where:"Paris, France",                     when:"1923",   refs:"<br><br><u>Reference</u><br>Hartmann H. Note sur un procede nouveau d'extirpation des cancers de la partie terminale due colon. <i>Bull Mem Soc Chir Paris</i>. 1923; 49: 1474-1477",   about:""},
@@ -380,36 +380,7 @@
             {ID: 31, name:"Tubercle of Zuckerkandl",    topic:"Endocrine",              who:"Emil Zuckerkandl",               where:"Vienna, Austria",                   when:"1902",   refs:"<br><br><u>Reference</u><br>Zuckerkandl E. Die Epithelkörperchen von Didelphys azara nebst Bemerkungen über die Epithelkörperchen des Menschen. <i>Anatomische Hefte</i>. 1902; 19(1), 59-84",   about:" "},
             ]
 
-            //time - when
-            // $('#time').on("change", function() { var $inp = $(this);
-                    //var frm = $inp.data("from");
-                    //var to = $inp.data("to");});
-                    // 
-                    // x.filter(function(obj) {
-                        //return (obj.topic === topicVar) && obj.when > .frm && obj.when < .to
-                    //}
-                    //)
-            //var unique = eponyms["topic"].filter((v, i, a) => a.indexOf(v) === i);
-
             var selected = eponyms
-            // eponyms('[topic]:nth-child(3)')
-            //this works
-            //var selected = eponyms.filter(function(ele) {
-            //    return ele.topic == "General";
-            //    });
-            // var arrayOfSelect = select.split(",")
-            // var Iwant = arrayOfSelect.find(v => (str === v));
-            
-            //if (select.length > 0)
-           //     var arr = arr.filter(obj =>
-            //  obj.tags.some(tag => filters.includes(tag))
-            //  );
-
-            
-            //var selected = eponyms.filter(function(elem) {
-            //    return elem.topic.includes(select.split(","))
-            //});
-            
 
             function populateSelect() {
                 var ele = document.getElementById('sel');
@@ -442,19 +413,36 @@
         </script>
 
 
+            
         <script>
-        //$(document).ready(function () {    
-            //var allOptions = $('#selectprod option')
-            //$('#selectcat').change(function () {
-            //    $('#selectprod option').remove()
-            //    var classN = $('#selectcat option:selected').prop('class');
-            //    var opts = allOptions.filter('.' + classN);
-            //    $.each(opts, function (i, j) {
-            //        $(j).appendTo('#selectprod');
-            //    });
-            //});
-        //});
+            function topicFilter(taxonomy) {
+                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                return eponyms.filter(item => {
+                let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                return taxonomy.some(med => topic.includes(med));
+                });
+            }
+            
+            function log(x) {
+                console.log(x.map(y => y))
+            }
+            
+            log(topicFilter([
+                'General', 
+                'HPB',
+                'Oesophagogastric',
+                ])
+            );
+
         </script>
+
+
+
+
+
+
+
+
      
 
         <script src="/static/assets/js/theme.js"></script>
