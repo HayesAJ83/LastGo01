@@ -431,12 +431,13 @@
                 console.log(x.map(y => y))
                 }
             
-            let TOPICS = <p69></p69> 
-            
-            log(topicFilter(
-                [
-                TOPICS
-                ])
+            let value = $('#select1 option')
+                    .map(function() {
+                        return this.text
+                        })
+                    .get().join(',');
+             
+            log(topicFilter([value])
 
             );
 
