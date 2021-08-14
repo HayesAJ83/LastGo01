@@ -290,8 +290,11 @@
         </script>
 
         <script>
-            specsChosen = document.getElementsByClassName("specsCh");
-            console.log(specsChosen);
+            var elements = document.getElementsByClassName('specsCh'), elLength = elements.length;
+                for (var i = 0; i < elLength; i++) {
+                    elements.item(i).textContent = 'Tested';
+                };
+            console.log(Tested);
         </script>
 
         <script>
