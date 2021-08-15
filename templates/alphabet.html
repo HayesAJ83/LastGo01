@@ -116,7 +116,7 @@
                <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <p1 class="specsCh" style="font-size: 8px;"></p1>
+                            <p1 class="specsCh" style="font-size: 5px;"></p1>
                         </div>
                     </div>
                 </div>
@@ -270,8 +270,9 @@
             .ready(function() {
                 $('#select1').ready(function() {
                     let value = $('#select1 option').map(function() {
-                            return this.text}).get().join("''");
-                    $( "p1" ).html( value );
+                            return this.text}).get().join(',');
+                    array = value.split(',');
+                    $( "p1" ).html( array );
                 });
             });
         </script>
@@ -280,10 +281,10 @@
             $(document)
             .ready(function() {
                 $('#select1').on('change', function() {
-                    var select ='';
+                    var select ="";
                     $("#select1").find('option:selected').each(function() 
-                        {select +=" , "+$.trim($(this).text());});
-                        if(select != " , "){select = select.substr(1);}
+                        {select +=","+$.trim($(this).text());});
+                        if(select != ""){select = select.substr(1);}
                 $( "p1" ).html( select );
                 });
             });
@@ -308,7 +309,7 @@
                         .map(function() {
                             return this.text
                             })
-                        .get().join(' , ');
+                        .get().join(',');
                     $( "p1" ).html( value );
                     });
                 
@@ -325,11 +326,11 @@
         <script>
             $('#btn_select').on('click', function() {
                 $('#select1').ready(function() {
-                    var select =" , ";
+                    var select ="";
                     $("#select1").find('option:selected').each(function() {
-                        select +=" , "+$.trim($(this).text());
+                        select +=","+$.trim($(this).text());
                     });
-                    if(select != " , "){
+                    if(select != ""){
                         select = select.substr(1);
                     }
                     $( "p1" ).html( select );
