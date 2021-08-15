@@ -116,7 +116,7 @@
                <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <p1 class="specsCh" style="font-size: 5px;"></p1>
+                            <p1 class="specsCh" style="font-size: 8px;"></p1>
                         </div>
                     </div>
                 </div>
@@ -270,7 +270,7 @@
             .ready(function() {
                 $('#select1').ready(function() {
                     let value = $('#select1 option').map(function() {
-                            return this.text}).get().join(' ');
+                            return this.text}).get().join('''');
                     $( "p1" ).html( value );
                 });
             });
@@ -280,7 +280,7 @@
             $(document)
             .ready(function() {
                 $('#select1').on('change', function() {
-                    var select =' , ';
+                    var select ='';
                     $("#select1").find('option:selected').each(function() 
                         {select +=" , "+$.trim($(this).text());});
                         if(select != " , "){select = select.substr(1);}
