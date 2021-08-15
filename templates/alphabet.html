@@ -277,7 +277,8 @@
             .ready(function() {
                 $('#select1').ready(function() {
                     let value = $('#select1 option').map(function() {
-                            return this.text}).get().join(',');
+                            return this.text}).get().join('\',\'');
+                    
                     $( "p1" ).html( value );
                 });
             });
@@ -317,7 +318,7 @@
                         .map(function() {
                             return this.text
                             })
-                        .get().join(',');
+                        .get().join('\',\'');
                     $( "p1" ).html( value );
                     });
                 
