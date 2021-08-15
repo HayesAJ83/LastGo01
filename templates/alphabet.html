@@ -277,7 +277,7 @@
             .ready(function() {
                 $('#select1').ready(function() {
                     let value = $('#select1 option').map(function() {
-                            return this.text}).get().split(',');
+                            return this.text}).split(',');
                     
                     $( "p1" ).html( value );
                 });
@@ -318,7 +318,7 @@
                         .map(function() {
                             return this.text
                             })
-                        .get().split(',');
+                        .split(',');
                     $( "p1" ).html( value );
                     });
                 
