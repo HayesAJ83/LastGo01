@@ -270,7 +270,7 @@
             .ready(function() {
                 $('#select1').ready(function() {
                     let value = $('#select1 option').toArray().map(function() {
-                            return this.text}).get();
+                            return this.text}).get().join(',');
                     $( "p1" ).html( value );
                 });
             });
@@ -290,10 +290,10 @@
         </script>
 
         <script>
-            var elements = document.getElementsByClassName('specsCh'), elLength = elements.length;
-                for (var i = 0; i < elLength; i++) {
-                    elements.item(i).textContent = 'Tested';
-                };
+            //var elements = document.getElementsByClassName('specsCh'), elLength = elements.length;
+            //    for (var i = 0; i < elLength; i++) {
+            //        elements.item(i).textContent = 'Tested';
+            //    };
         </script>
 
         <script>
