@@ -277,7 +277,7 @@
             .ready(function() {
                 $('#select1').ready(function() {
                     let value = $('#select1 option').map(function() {
-                            return this.text}).get().join('\',\'');
+                            return this.text}).get().split(',');
                     
                     $( "p1" ).html( value );
                 });
@@ -318,7 +318,7 @@
                         .map(function() {
                             return this.text
                             })
-                        .get().join('\',\'');
+                        .get().split(',');
                     $( "p1" ).html( value );
                     });
                 
@@ -337,7 +337,7 @@
                 $('#select1').ready(function() {
                     var select ="";
                     $("#select1").find('option:selected').each(function() {
-                        select +='\',\''+$.trim($(this).text());
+                        select +=""+$.trim($(this).text());
                     });
                     if(select != ""){
                         select = select.substr(1);
