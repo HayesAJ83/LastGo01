@@ -277,7 +277,7 @@
             .ready(function() {
                 $('#select1').ready(function() {
                     let value = '\'' + $('#select1 option').map(function() {
-                            return this.text}).get().join('\',\'') + '\'';
+                            return this.text}).get().join('\',\'') + "\!'";
                     
                     $( "p1" ).html( value );
                 });
@@ -328,22 +328,6 @@
                     $('#btn_select').removeClass("btn btn-light");
                     $('#btn_select').addClass("btn btn-danger active");
                     $('#selector').fadeIn(400);
-                });
-            });
-        </script>
-
-        <script>
-            $('#btn_select').on('click', function() {
-                $('#select1').ready(function() {
-                    var select ="";
-                    "\'''" + $("#select1").find('option:selected').each(function() {
-                        select +='\''+$.trim($(this).text()) +  '\',\'';
-                    });
-                    if(select != ""){
-                        select = select.substr(1);
-                    }
-                    $( "p1" ).html( select );
-                    
                 });
             });
         </script>
