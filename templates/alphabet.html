@@ -234,7 +234,7 @@
                 {ID: 21, name:"Riedel's thyroiditis",       topic:["Endocrine"],                who:"Bernhard M C L Riedel",          where:"Jena, Thuringia, Germany",          when:"1896",   refs:"<br><br><u>Reference</u><br>Riedel BMCL. Die chronische, zur Bildung eisenharter Tumoren fuhrende Entzundung der Schilddruse <i>Verhandlungen der deutschen Gesellschaft für Chirurgie</i>. 1896; 25: 101-105",   about:""},
                 {ID: 22, name:"Rives-Stoppa repair",        topic:["General"],                  who:"Jean Rives & Rene Stoppa",       where:"Amiens, France",                    when:"1966",   refs:"",   about:""},
                 {ID: 23, name:"Rockall score",              topic:["Oesophagogastric"],         who:"Tim A Rockall",                  where:"London, England, UK",               when:"1996",   refs:"<br><br><u>Reference</u><br>Rockall TA, Logan RF, Devlin HB, Northfield TC. Risk assessment after acute upper gastrointestinal haemorrhage. <i>Gut</i>. 1996; 38(3): 316-321",   about:""},
-                {ID: 24, name:"Rokitansky-Aschoff sinuses", topic:["HPB","General"],            who:"Karl F von Rokitansky & Karl A L Aschoff",  where:"Marburg, Germany",                  when:"1905",   refs:"<br><br><u>Reference</u><br>Aschoff L. Bemerkungen zur pathologischen Anatomie des cholelithiasis und Cholecystitis. <i>Verh Dtsch Pathol Ges</i>. 1905; 9: 41",   about:""},
+                {ID: 24, name:"Rokitansky-Aschoff sinuses", topic:["HPB","General"],  who:"Karl F von Rokitansky & Karl A L Aschoff", where:"Marburg, Germany",       when:"1905",   refs:"<br><br><u>Reference</u><br>Aschoff L. Bemerkungen zur pathologischen Anatomie des cholelithiasis und Cholecystitis. <i>Verh Dtsch Pathol Ges</i>. 1905; 9: 41",   about:""},
                 {ID: 25, name:"Sistrunk procedure",         topic:["ENT"],                      who:"Walter Ellis Sistrunk",          where:"Rochester, Minnesota, USA",         when:"1920",   refs:"<br><br><u>Reference</u><br>Sistrunk WE. The surgical treatment of cysts of the thyroglossal tract. <i>Ann Surg</i>. 1920; 71(2): 121-122",   about:" "},
                 {ID: 26, name:"Spigelian hernia",           topic:["General"],                  who:"Adriaan van den Spiegel",        where:"Padua, Veneto, Italy",              when:"1625",   refs:"",   about:""},
                 {ID: 27, name:"Valsalva maneuver",          topic:["General"],                  who:"Antonio Maria Valsalva",         where:"Bologna, Italy",                    when:"1704",   refs:"",   about:"<br><br><br>Used during the check for haemostasis during neck surgery to increase venous pressures and inguinal hernia repair in conscious patients to test the integrity of the repair.<br>"},
@@ -336,7 +336,7 @@
             $('#btn_select').on('click', function() {
                 $('#select1').ready(function() {
                     var select ="";
-                    '\'' + $("#select1").find('option:selected').each(function() {
+                    "\'''" + $("#select1").find('option:selected').each(function() {
                         select +='\''+$.trim($(this).text()) +  '\',\'';
                     });
                     if(select != ""){
