@@ -331,7 +331,7 @@
                     $('#select1').ready(function() {
                         var select ="";
                         $("#select1").find('option:selected').each(function() {
-                            select += "\'" + $.trim($(this).text()).join("\','") + "\',";
+                            select += $.trim($(this).text());
                         });
                         if(select != ""){
                             select = select.substr(1);
