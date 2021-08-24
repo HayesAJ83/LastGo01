@@ -290,8 +290,9 @@
             .ready(function() {
                 $('#select1').on('change', function() {
                     var select =" ";
-                    $("#select1").find('option:selected').each(function() 
-                        {select += $(this).text();});
+                    $("#select1").find('option:selected').each(function() {
+                            select += "\'" + $.trim($(this).text()) + "\',";
+                            });
                         if(select != ""){select = select.substr(0);}
                 $( "p1" ).html( select );
                 });
