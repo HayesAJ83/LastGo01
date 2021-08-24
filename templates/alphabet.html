@@ -114,13 +114,6 @@
                         </div>
                     </form>
                 </div>
-               <!--<div class="container">
-                    <div class="row align-items-center text-center">
-                        <div class="col">
-                            <p1 class="specsCh" style="font-size: 6px;"></p1>
-                        </div>
-                    </div>
-                </div> -->
                 <div class="container" style="height:120px">
                     <div class="row align-items-center text-center">
                         <div class="col">
@@ -246,12 +239,15 @@
                 {ID: 32, name:"Tubercle of Zuckerkandl",    topic:["Endocrine"],                who:"Emil Zuckerkandl",               where:"Vienna, Austria",                   when:"1902",   refs:"<br><br><u>Reference</u><br>Zuckerkandl E. Die Epithelkörperchen von Didelphys azara nebst Bemerkungen über die Epithelkörperchen des Menschen. <i>Anatomische Hefte</i>. 1902; 19(1), 59-84",   about:" ", acknow:"<br><br><i>We kindly acknowledge Mr XY FRCS who contributed the above information.</i>"},
                 ]
             
-            
-            //$('#select1').ready(function() {
-            //    let value = $('#select1 option').map(function() {
-            //                return this.text}).get().join(',');
-            //        });
-           
+            $(document).ready(function() {
+                $('#select1').on('change', function() {
+                    var select =" ";
+                    $("#select1").find('option:selected').each(function() {
+                            select += "\'" + $.trim($(this).text()) + "\',";
+                            });
+                        if(select != ""){select = select.substr(0);}
+                });
+            });
 
             function topicFilter(taxonomy) {
                 taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
@@ -266,7 +262,7 @@
                 }
 
             log(topicFilter([
-                    'Endocrine','General'
+                    select
                     ])
                 );
       
