@@ -289,16 +289,16 @@
             $(document)
             .ready(function() {
                 $('#select1').on('change', function() {
-                    //var select ="";
-                    //    $("#select1").find('option:selected').each(function() {
-                    //        select += $(this).val();
-                    //            });
-                    //        if(select != ""){select = select.substr(1);}
-
                     var select ="";
-                    $('select[name="min_multi_select"]').change(function() {
-                        select += $(this).val();
-                        });
+                        $("#select1").find('option:selected').each(function() {
+                            select += $(this).val();
+                                });
+                            if(select != ""){select = select.substr(0);}
+
+                    //var select ="";
+                    //$('select[name="min_multi_select"]').change(function() {
+                    //    select += $(this).val();
+                    //    });
                     $( "p1" ).html( select );
                     });
 
