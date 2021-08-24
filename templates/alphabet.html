@@ -240,10 +240,10 @@
                 {ID: 26, name:"Spigelian hernia",           topic:["General"],                  who:"Adriaan van den Spiegel",        where:"Padua, Veneto, Italy",              when:"1625",   refs:"",   about:""},
                 {ID: 27, name:"Valsalva maneuver",          topic:["General"],                  who:"Antonio Maria Valsalva",         where:"Bologna, Italy",                    when:"1704",   refs:"",   about:"<br><br><br>Used during the check for haemostasis during neck surgery to increase venous pressures and inguinal hernia repair in conscious patients to test the integrity of the repair.<br>"},
                 {ID: 28, name:"Ampulla of Vater",           topic:["HPB"],                      who:"Abraham Vater",                  where:"Wittenberg, Saxony-Anhalt, Germany",when:"1720",   refs:"",   about:""},
-                {ID: 29, name:"Warthin's tumour",           topic:["ENT,Maxillofacial"],        who:"Aldred Scott Warthin",           where:"Ann Arbor, Michigan, USA",          when:"1929",   refs:"",   about:"<br><br><u>Reference</u><br>Warthin AS. Papillary cystadenoma lymphomatosum: a rare teratoid of parotid region. <i>J Cancer Res</i>. 1929; 3: 116-125"},
-                {ID: 30, name:"Whipple's operation",        topic:["HPB"],                      who:"Allen Oldfather Whipple",        where:"Manhattan, New York, USA",          when:"1934",   refs:"<br><br><u>Reference</u><br>Whipple AO, Parsons WB, Mullins CR. Treatment of carcinoma of the ampulla of Vater. <i>Ann Surg</i>. 1935; 102(4): 763-779",   about:""},
-                {ID: 31, name:"Zenker's diverticulum",      topic:["Oesophagogastric"],         who:"Friedrich Albert von Zenker",    where:"Erlangen, Bavaria, Germany",        when:"1867",   refs:"<br><br><u>Reference</u><br>Zenker FA and von Ziemssen HW. Krankheiten des Oesophagus. Leipzig, 1867",    about:"<br><br><br>Zenker's report was based on 5 personal cases and 22 cases collected from the literature. Also called a pharyngeal pouch, Zenker's diverticulum affects the mucosa of the human pharynx, just above cricopharyngeal muscle. It is a pseudo diverticulum (not involving ll the layers of the oesophageal wall).<br>"},
-                {ID: 32, name:"Tubercle of Zuckerkandl",    topic:["Endocrine"],                who:"Emil Zuckerkandl",               where:"Vienna, Austria",                   when:"1902",   refs:"<br><br><u>Reference</u><br>Zuckerkandl E. Die Epithelkörperchen von Didelphys azara nebst Bemerkungen über die Epithelkörperchen des Menschen. <i>Anatomische Hefte</i>. 1902; 19(1), 59-84",   about:" ", acknow:"<br><br><u>Acknowledgement</u><br>We kindly acknowledge the contributed information above by Mr X FRCS"},
+                {ID: 29, name:"Warthin's tumour",           topic:["ENT,Maxillofacial"],        who:"Aldred Scott Warthin",           where:"Ann Arbor, Michigan, USA",          when:"1929",   refs:"",   about:"<br><br><u>Reference</u><br>Warthin AS. Papillary cystadenoma lymphomatosum: a rare teratoid of parotid region. <i>J Cancer Res</i>. 1929; 3: 116-125", acknow:"<br><br><u>Acknowledgement</u><br>We kindly acknowledge Mr X FRCS who contributed the above information"},
+                {ID: 30, name:"Whipple's operation",        topic:["HPB"],                      who:"Allen Oldfather Whipple",        where:"Manhattan, New York, USA",          when:"1934",   refs:"<br><br><u>Reference</u><br>Whipple AO, Parsons WB, Mullins CR. Treatment of carcinoma of the ampulla of Vater. <i>Ann Surg</i>. 1935; 102(4): 763-779",   about:"", acknow:"<br><br><u>Acknowledgement</u><br>We kindly acknowledge Mr X FRCS who contributed the above information"},
+                {ID: 31, name:"Zenker's diverticulum",      topic:["Oesophagogastric"],         who:"Friedrich Albert von Zenker",    where:"Erlangen, Bavaria, Germany",        when:"1867",   refs:"<br><br><u>Reference</u><br>Zenker FA and von Ziemssen HW. Krankheiten des Oesophagus. Leipzig, 1867",    about:"<br><br><br>Zenker's report was based on 5 personal cases and 22 cases collected from the literature. Also called a pharyngeal pouch, Zenker's diverticulum affects the mucosa of the human pharynx, just above cricopharyngeal muscle. It is a pseudo diverticulum (not involving ll the layers of the oesophageal wall).", acknow:"<br><br><u>Acknowledgement</u><br>We kindly acknowledge Mr X FRCS who contributed the above information"},
+                {ID: 32, name:"Tubercle of Zuckerkandl",    topic:["Endocrine"],                who:"Emil Zuckerkandl",               where:"Vienna, Austria",                   when:"1902",   refs:"<br><br><u>Reference</u><br>Zuckerkandl E. Die Epithelkörperchen von Didelphys azara nebst Bemerkungen über die Epithelkörperchen des Menschen. <i>Anatomische Hefte</i>. 1902; 19(1), 59-84",   about:" ", acknow:"<br><br><u>Acknowledgement</u><br>We kindly acknowledge Mr X FRCS who contributed the above information"},
                 ]
             
             
@@ -290,17 +290,16 @@
             .ready(function() {
                 $('#select1').on('change', function() {
                     var select ="";
-                        $("#select1").find('option:selected').each(function() {
-                            select += $(this).val();
-                                });
-                            if(select != ""){select = select.substr(0);}
+                    $("#select1").find('option:selected').each(function() {
+                        select += $(this).val();});
+                        if(select != ""){select = select.substr(1);}
 
-                    //var select ="";
+                    $( "p1" ).html( select );
+                    });
+                     //var select ="";
                     //$('select[name="min_multi_select"]').change(function() {
                     //    select += $(this).val();
                     //    });
-                    $( "p1" ).html( select );
-                    });
 
                 $('select[name="min_multi_select"]').change(function() {
                         console.log($(this).val())});
