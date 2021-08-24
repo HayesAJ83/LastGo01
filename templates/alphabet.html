@@ -240,17 +240,17 @@
                 ]
             
 
-            function topicFilter(taxonomy) {
-                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                return eponyms.filter(item => {
-                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                    return taxonomy.some(med => topic.includes(med));
-                    });
-                }
+            //function topicFilter(taxonomy) {
+            //    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+            //    return eponyms.filter(item => {
+            //        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+            //        return taxonomy.some(med => topic.includes(med));
+            //        });
+            //    }
             
-            function log(x) {
-                console.log(x.map(y => y))
-                }
+            //function log(x) {
+            //    console.log(x.map(y => y))
+            //    }
             
             $('#select1').on('change', function() {
                     var select =" ";
@@ -264,11 +264,16 @@
                             let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
                             return taxonomy.some(med => topic.includes(med));
                             });
+                    function log(x) {
+                        console.log(x.map(y => y))
+                        }
+                    log(topicFilter([ select ])
+                        );
                     }  
                 });
 
-            log(topicFilter([ select ])
-                );
+            //log(topicFilter([ select ])
+            //    );
       
         </script>
 
