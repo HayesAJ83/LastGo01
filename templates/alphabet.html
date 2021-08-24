@@ -264,14 +264,13 @@
                             let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
                             return taxonomy.some(med => topic.includes(med));
                             });
-                    log(topicFilter([select]));
                     }  
                 });
 
-            //log(topicFilter([
-            //        select
-            //        ])
-            //    );
+            log(topicFilter([
+                    'General'
+                    ])
+                );
       
         </script>
 
