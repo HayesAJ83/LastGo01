@@ -255,14 +255,14 @@
                     $("#select1").find('option:selected').each(function() {
                         select += "\'" + $.trim($(this).text()) + "\',";});
                         if(select != ""){select = select.substr(0);};
-                        array = Array.from(select)
-                        console.log(array)
+                        //array = Array.from(select)
+                        //console.log(array)
                         var stringArray = (new Function("return [" + select+ "];")());
                         console.log(stringArray)
                         
-                        function log(x) {console.log(x.map(y => y))}
-                        log(topicFilter(['General'])
-                            );
+                        //function log(x) {console.log(x.map(y => y))}
+                        //log(topicFilter(['General'])
+                        //    );
                     });
 
         </script>
