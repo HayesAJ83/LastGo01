@@ -280,6 +280,14 @@
                         if(select != ""){select = select.substr(0);};
                         var stringArray3 = (new Function("return [" + select+ "];")());
                         console.log(stringArray3);
+                    $('#select1').on('change', function() {
+                        let select ="";
+                        $("#select1").find('option:selected').each(function() {
+                            select += "\'" + $.trim($(this).text()) + "\',";});
+                            if(select != ""){select = select.substr(0);};
+                            var stringArray4 = (new Function("return [" + select+ "];")());
+                            console.log(stringArray4);
+                    });
                 });
             });
         </script>
