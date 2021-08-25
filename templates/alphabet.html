@@ -251,14 +251,13 @@
             
             
             $('#select1').on('change', function() {
-                    const select ="";
+                    var select ="";
                     $("#select1").find('option:selected').each(function() {
                         select += "\'" + $.trim($(this).text()) + "\',";});
                         if(select != ""){select = select.substr(0);};
                         
                         function log(x) {console.log(x.map(y => y))}
-                        log(topicFilter(['Endocrine',
-                                ])
+                        log(topicFilter( select )
                             );
                     });
 
