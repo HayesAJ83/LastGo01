@@ -257,6 +257,8 @@
                         if(select != ""){select = select.substr(0);};
                         array = Array.from(select)
                         console.log(array)
+                        var stringArray = (new Function("return [" + select+ "];")());
+                        console.log(stringArray)
                         
                         function log(x) {console.log(x.map(y => y))}
                         log(topicFilter(['General'])
