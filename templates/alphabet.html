@@ -253,20 +253,6 @@
         </script>
 
         <script>
-            //$(document)
-            //.ready(function() {
-            //    $('#select1').on('change', function() {
-            //        let select ="";
-            //        $("#select1").find('option:selected').each(function() {
-            //            select += "\'" + $.trim($(this).text()) + "\',";});
-            //            if(select != ""){select = select.substr(0);};
-            //            var stringArray2 = (new Function("return [" + select+ "];")());
-            //            console.log(stringArray2);
-            //        });
-            //    });
-        </script>
-
-        <script>
             $(function() {
                 $('#btn_all').on('click', function() {
                     $('#btn_all').removeClass("btn btn-light");
@@ -280,11 +266,6 @@
                         var stringArray2 = (new Function("return [" + value+ "];")());
                         console.log(stringArray2);
                         });
-                    //let value = '\'' + $('#select1 option')
-                    //    .map(function() {
-                    //        return this.text
-                    //        })
-                    //    .get().join("\','") + "\'";
                     });
                 
                 $('#btn_select').on('click', function() {
@@ -293,14 +274,12 @@
                     $('#btn_select').removeClass("btn btn-light");
                     $('#btn_select').addClass("btn btn-danger active");
                     $('#selector').fadeIn(400);
-                    $('#select1').on('change', function() {
-                        let select ="";
-                        $("#select1").find('option:selected').each(function() {
-                            select += "\'" + $.trim($(this).text()) + "\',";});
-                            if(select != ""){select = select.substr(0);};
-                            var stringArray3 = (new Function("return [" + select+ "];")());
-                            console.log(stringArray3);
-                    });
+                    let select ="";
+                    $("#select1").find('option:selected').each(function() {
+                        select += "\'" + $.trim($(this).text()) + "\',";});
+                        if(select != ""){select = select.substr(0);};
+                        var stringArray3 = (new Function("return [" + select+ "];")());
+                        console.log(stringArray3);
                 });
             });
         </script>
