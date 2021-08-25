@@ -263,16 +263,7 @@
                         var stringArray = (new Function("return [" + select+ "];")());
                         console.log(stringArray)
                     });
-                //$('select[name="min_multi_select"]').change(function() {
-                //    console.log($(this).val())
-                //    });
-            });
-        </script>
-
-
-        <script>
-            //var boxes = Array.prototype.slice.call(document.getElementsByClassName('specsCh'));
-            //console.log(boxes)
+                });
         </script>
 
         <script>
@@ -288,7 +279,6 @@
                             return this.text
                             })
                         .get().join("\','") + "\'";
-                    $( "p1" ).html( value );
                     });
                 
                 $('#btn_select').on('click', function() {
@@ -305,13 +295,11 @@
                         if(select != ""){
                             select = select.substr(0);
                         }
-                        $( "p1" ).html( select );
                     });
                 });
             });
         </script>
 
-     
         <script>
             $('#time').ionRangeSlider({
                 type: "double",
@@ -333,8 +321,8 @@
                     var $inp = $(this);
                     var frm = $inp.data("from");
                     var to = $inp.data("to");
-                    $("p2").html( frm );
-                    $("p3").html( to );
+                    //$("p2").html( frm );
+                    //$("p3").html( to );
                 });
             });
         </script>
@@ -355,17 +343,15 @@
 
         <script>
             $(document).ready(function() {
-                $('.js-example-basic-single').select2();
-            });
+                $('.js-example-basic-single').select2();});
 
             var selected = eponyms
 
             function populateSelect() {
                 var ele = document.getElementById('sel');
                 selected.forEach(function(b) {
-                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';
-                    })
-                }
+                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+                    }
 
             function show(id) {
             // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
@@ -390,40 +376,6 @@
                 }
             }
             populateSelect()
-        </script>
-
-
-        <script>
-            //this works
-            //var selected = eponyms.filter(function(ele) {
-            //    return ele.topic == "General";
-            //    });
-
-        //$(document)
-                //.ready(function() {
-                //    $('#select1').ready(function() {
-                //        let value = $('#select1 option').map(function() {
-                //                return this.text}).get().join(',');
-                //        });
-                //    $('#select1').on('change', function() {
-                //        var select ="";
-                //        $("#select1").find('option:selected').each(function() 
-                //            {select +=","+$.trim($(this).text());});
-                //            if(select != ""){select = select.substr(1);}
-                //        });
-                //    });
-
-                //$('#btn_select').on('click', function() {
-                //    $('#select1').ready(function() {
-                //        var select ="";
-                //        $("#select1").find('option:selected').each(function() {
-                //            select +=","+$.trim($(this).text());
-                //        });
-                //        if(select != ""){
-                //            select = select.substr(1);
-                //        }
-                //    });
-                //});
         </script>
 
         <script src="/static/assets/js/theme.js"></script>
