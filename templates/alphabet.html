@@ -253,14 +253,14 @@
         </script>
 
         <script>
-            $('#select1').on('change', function() {
-                let select ="";
-                $("#select1").find('option:selected').each(function() {
-                    select += "\'" + $.trim($(this).text()) + "\',";});
-                    if(select != ""){select = select.substr(0);};
-                    var stringArray = (new Function("return [" + select+ "];")());
-                    console.log(stringArray);
-            });   
+            //$('#select1').on('change', function() {
+            //    let select ="";
+            //    $("#select1").find('option:selected').each(function() {
+            //        select += "\'" + $.trim($(this).text()) + "\',";});
+            //        if(select != ""){select = select.substr(0);};
+            //        var stringArray = (new Function("return [" + select+ "];")());
+            //        console.log(stringArray);
+            //});   
         </script>
 
         <script>
@@ -351,12 +351,12 @@
 
         <script>
             $('#select1').on('change', function() {
+                $('.js-example-basic-single').select2();
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
                     if(select != ""){select = select.substr(0);};
                     var stringArray = (new Function("return [" + select+ "];")());
-                    crazy = stringArray + ""
                     console.log(select);
                 });
             
@@ -371,7 +371,6 @@
             
                 var selected = topicFilter([
                         //[select]
-                        'Cardiothoracics',
                         'General',
                         ]);
             
