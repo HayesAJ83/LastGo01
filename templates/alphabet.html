@@ -368,14 +368,7 @@
                         return taxonomy.some(med => topic.includes(med));
                         });
                     };
-                var selected = topicFilter([
-                        //[select]
-                        'Cardiothoracics',
-                        'General',
-                        ]);
-                });
             
-            $('#select1').on('change', function() {
                 var selected = topicFilter([
                         //[select]
                         'Cardiothoracics',
@@ -403,8 +396,7 @@
                                             'Where' +":   "+ selected[i].where.bold() +
                                             selected[i].about +
                                             selected[i].refs +
-                                            selected[i].acknow
-                                            ;
+                                            selected[i].acknow;
                                 }
                             }
                         }
