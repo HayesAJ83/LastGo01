@@ -296,13 +296,6 @@
         </script>
 
         <script>
-            var filteredEps = eponyms.filter(function (item) {
-                return item.topic == stringArray;
-                console.log(filteredEps)
-            });
-        </script>
-
-        <script>
             $('#time').ionRangeSlider({
                 type: "double",
                 grid: true,
@@ -346,8 +339,28 @@
         <script>
             $(document).ready(function() {
                 $('.js-example-basic-single').select2();});
+            
+            //var filteredEps = eponyms.filter(function (item) {
+            //    return item.topic == stringArray;
+                //console.log(filteredEps);
+            //});
 
-            var selected = eponyms
+            function topicFilter(taxonomy) {
+                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                return eponyms.filter(item => {
+                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                    return taxonomy.some(med => topic.includes(med));
+                });
+                }
+            
+            //function log(x) {
+            //    console.log(x.map(y => y))
+            //    }
+        
+            var selected = topicFilter([
+                'HPB',
+                'Oesophagogastric',
+                ]);
 
             function populateSelect() {
                 var ele = document.getElementById('sel');
