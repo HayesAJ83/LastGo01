@@ -253,17 +253,6 @@
         </script>
 
         <script>
-            //$('#select1').on('change', function() {
-            //    let select ="";
-            //    $("#select1").find('option:selected').each(function() {
-            //        select += "\'" + $.trim($(this).text()) + "\',";});
-            //        if(select != ""){select = select.substr(0);};
-            //        var stringArray = (new Function("return [" + select+ "];")());
-            //        console.log(stringArray);
-            //});   
-        </script>
-
-        <script>
             $(function() {
                 $('#btn_all').on('click', function() {
                     $('#btn_all').removeClass("btn btn-light");
@@ -337,16 +326,16 @@
         </script>
 
         <script>
-            $(document).ready(function() {
-                $('.js-example-basic-single').select2();
-                function topicFilter(taxonomy) {
-                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                    return eponyms.filter(item => {
-                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                        return taxonomy.some(med => topic.includes(med));
-                        });
-                };
-            });
+        //    $(document).ready(function() {
+        //        $('.js-example-basic-single').select2();
+        //        function topicFilter(taxonomy) {
+        //            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+        //            return eponyms.filter(item => {
+        //                let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+        //                return taxonomy.some(med => topic.includes(med));
+        //                });
+        //        };
+        //    });
         </script>
 
         <script>
@@ -370,7 +359,7 @@
             
                     var selected = topicFilter([
                             //[select]
-                            'General',
+                            'Endocrine',
                             ]);
             
                     function populateSelect() {
