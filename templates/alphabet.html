@@ -401,6 +401,11 @@
                         }
                     }
                 populateSelect()
+                function populateSelect() {
+                    var ele = document.getElementById('sel');
+                    selected.forEach(function(b) {
+                        ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+                        }
             });
         </script>
 
