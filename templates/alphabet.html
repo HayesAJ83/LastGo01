@@ -338,25 +338,18 @@
 
         <script>
             $(document).ready(function() {
-                $('.js-example-basic-single').select2();});
-            
-            //var filteredEps = eponyms.filter(function (item) {
-            //    return item.topic == stringArray;
-                //console.log(filteredEps);
-            //});
+                $('.js-example-basic-single').select2();
+                function topicFilter(taxonomy) {
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return eponyms.filter(item => {
+                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
+                        });
+                };
+            });
+        </script>
 
-            function topicFilter(taxonomy) {
-                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                return eponyms.filter(item => {
-                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                    return taxonomy.some(med => topic.includes(med));
-                });
-                }
-            
-            //function log(x) {
-            //    console.log(x.map(y => y))
-            //    }
-
+        <script>
             $('#select1').on('change', function() {
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
@@ -367,41 +360,44 @@
                     console.log(select);
                 });
             
-            var selected = topicFilter([
-                    //[select]
-                    'Cardiothoracics',
-                    'General',
-                    ]);
+            $('#select1').on('change', function() {
+                var selected = topicFilter([
+                        //[select]
+                        'Cardiothoracics',
+                        'General',
+                        ]);
+                });
+            
+            $('#select1').on('change', function() {
+                function populateSelect() {
+                    var ele = document.getElementById('sel');
+                    selected.forEach(function(b) {
+                        ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+                        }
 
-            function populateSelect() {
-                var ele = document.getElementById('sel');
-                selected.forEach(function(b) {
-                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-                    }
+                function show(id) {
+                // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
+                    var msg = document.getElementById('msg');
+                    if (!id) {
+                        msg.innerHTML = "";
 
-            function show(id) {
-            // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
-                var msg = document.getElementById('msg');
-                if (!id) {
-                    msg.innerHTML = "";
-
-                } else {
-                    for (var i = 0; i < selected.length; i++) {
-                    if (Number(id) === selected[i].ID) {
-                        msg.innerHTML = "<br>"+
-                                        'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
-                                        'When'  +":   "+ selected[i].when.bold()  +"<br>"+
-                                        'Where' +":   "+ selected[i].where.bold() +
-                                        selected[i].about +
-                                        selected[i].refs +
-                                        selected[i].acknow
-                                        ;
-                        break;
+                    } else {
+                        for (var i = 0; i < selected.length; i++) {
+                        if (Number(id) === selected[i].ID) {
+                            msg.innerHTML = "<br>"+
+                                            'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
+                                            'When'  +":   "+ selected[i].when.bold()  +"<br>"+
+                                            'Where' +":   "+ selected[i].where.bold() +
+                                            selected[i].about +
+                                            selected[i].refs +
+                                            selected[i].acknow
+                                            ;
+                                }
+                            }
                         }
                     }
-                }
-            }
-            populateSelect()
+                populateSelect()
+            });
         </script>
 
         <script src="/static/assets/js/theme.js"></script>
