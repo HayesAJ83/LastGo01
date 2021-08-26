@@ -326,16 +326,16 @@
         </script>
 
         <script>
-        //    $(document).ready(function() {
-        //        $('.js-example-basic-single').select2();
-        //        function topicFilter(taxonomy) {
-        //            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-        //            return eponyms.filter(item => {
-        //                let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-        //                return taxonomy.some(med => topic.includes(med));
-        //                });
-        //        };
-        //    });
+            $(document).ready(function() {
+                $('.js-example-basic-single').select2();
+                function topicFilter(taxonomy) {
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return eponyms.filter(item => {
+                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
+                        });
+                };
+            });
         </script>
 
         <script>
