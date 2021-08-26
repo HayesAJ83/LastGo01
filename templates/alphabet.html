@@ -376,6 +376,12 @@
                 });
             
             $('#select1').on('change', function() {
+                var selected = topicFilter([
+                        //[select]
+                        'Cardiothoracics',
+                        'General',
+                        ]);
+            
                 function populateSelect() {
                     var ele = document.getElementById('sel');
                     selected.forEach(function(b) {
