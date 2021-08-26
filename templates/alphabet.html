@@ -357,17 +357,19 @@
             //    console.log(x.map(y => y))
             //    }
 
-            let select ="";
-            $("#select1").find('option:selected').each(function() {
-                select += "\'" + $.trim($(this).text()) + "\',";});
-                if(select != ""){select = select.substr(0);};
-                var stringArray = (new Function("return [" + select+ "];")());
-        
-            var selected = topicFilter([
-                stringArray
-                //'Endocrine',
-                //'Oesophagogastric',
-                ]);
+            $('#select1').on('change', function() {
+                let select ="";
+                $("#select1").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                    var stringArray = (new Function("return [" + select+ "];")());
+                    
+                    var selected = topicFilter([
+                        stringArray
+                        //'Endocrine',
+                        //'Oesophagogastric',
+                        ]);
+                });
 
             function populateSelect() {
                 var ele = document.getElementById('sel');
