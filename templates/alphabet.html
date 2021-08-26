@@ -358,6 +358,9 @@
                     var stringArray = (new Function("return [" + select+ "];")());
                     crazy = stringArray + ""
                     console.log(select);
+                });
+            
+            $('#select1').on('change', function() {
                 function topicFilter(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return eponyms.filter(item => {
@@ -365,9 +368,6 @@
                         return taxonomy.some(med => topic.includes(med));
                         });
                     };
-                });
-            
-            $('#select1').on('change', function() {
                 var selected = topicFilter([
                         //[select]
                         'Cardiothoracics',
