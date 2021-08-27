@@ -259,7 +259,7 @@
                     select += "\'" + $.trim($(this).val()) + "\',";});
                     if(select != ""){select = select.substr(0);};
                     var stringArray = (new Function("return [" + select+ "];")());
-                    console.log(stringArray);
+                    //console.log(stringArray);
             });   
         </script>
 
@@ -275,7 +275,7 @@
                         let value = '\'' + $('#select1 option').map(function() {
                             return this.val}).get().join('\',\'') + '\'';
                         var stringArray = (new Function("return [" + value+ "];")());
-                        //console.log(stringArray);
+                        console.log(stringArray);
                         });
                     });
                 
@@ -290,7 +290,7 @@
                         select += "\'" + $.trim($(this).val()) + "\',";});
                         if(select != ""){select = select.substr(0);};
                         var stringArray = (new Function("return [" + select+ "];")());
-                        //console.log(stringArray);
+                        console.log(stringArray);
                 });
             });
         </script>
