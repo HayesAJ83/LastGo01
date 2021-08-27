@@ -350,12 +350,12 @@
                             return taxonomy.some(med => topic.includes(med));
                             });
                         };
-                        
-                    var selected = topicFilter(
+                      
+                    var selected = eponyms;
+                    //var selected = topicFilter(
                         //[ stringArray //.toString
-                        [ "Endocrine","HPB",
-                        //'Oesophagogastric',
-                        ]);
+                    //    [ "Endocrine","HPB",
+                    //    ]);
                 
                     function populateSelect() {
                         var ele = document.getElementById('sel');
@@ -427,12 +427,13 @@
                             return taxonomy.some(med => topic.includes(med));
                             });
                         };
-                        
-                    var selected = topicFilter(
+                    
+                    var selected = eponyms;
+                    //var selected = topicFilter(
                         //[ stringArray //.toString
-                        [ "Endocrine","HPB",
+                    //    [ "Endocrine","HPB",
                         //'Oesophagogastric',
-                        ]);
+                    //    ]);
                 
                     function populateSelect() {
                         var ele = document.getElementById('sel');
