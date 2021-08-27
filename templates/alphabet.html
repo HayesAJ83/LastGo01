@@ -142,7 +142,7 @@
                                     data-width="340px"
                                     data-size="6"
                                     data-live-search="true"
-                                    id="sel" onchange="show(this.value);">
+                                    id="sel"> <!-- onchange="show(this.value);"> -->
                                 <option value=""> -- eponyms -- </option>
                             </select>
                             <p id="msg"></p>    
@@ -282,7 +282,7 @@
                     var ele = document.getElementById('sel');
                     selected.forEach(function(b) {
                         ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-                        }
+                        };
 
                 function show(id) {
                 // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
@@ -325,6 +325,15 @@
                         if(select != ""){select = select.substr(0);};
                         var stringArray = (new Function("return [" + select+ "];")());
                         console.log(stringArray);
+                        
+                    $('#select1').on('change', function() {
+                        let select ="";
+                        $("#select1").find('option:selected').each(function() {
+                            select += "\'" + $.trim($(this).text()) + "\',";});
+                            if(select != ""){select = select.substr(0);};
+                            var stringArray = (new Function("return [" + select+ "];")());
+                            console.log(stringArray);
+                        });   
 
                     $('#time').ionRangeSlider({
                         type: "double",
@@ -350,19 +359,19 @@
                             let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
                             return taxonomy.some(med => topic.includes(med));
                             });
-                        }
+                        };
                         
                     var selected = topicFilter(
-                            [ stringArray //.toString
-                            //[ "Endocrine","HPB",
-                            //'Oesophagogastric',
+                        //[ stringArray //.toString
+                        [ "Endocrine","HPB",
+                        //'Oesophagogastric',
                         ]);
                 
                     function populateSelect() {
                         var ele = document.getElementById('sel');
                         selected.forEach(function(b) {
                             ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-                            }
+                            };
 
                     function show(id) {
                     // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
@@ -465,8 +474,8 @@
                     }
                     populateSelect();
                     $("#sel").trigger('change', true);
-                    });
                 });
+            });
         </script>
 
         <script src="/static/assets/js/theme.js"></script>
