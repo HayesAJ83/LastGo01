@@ -204,6 +204,14 @@
         <script src="https://d3js.org/d3.v4.js"></script>
 
         <script>
+            $(document).ready(function() {
+                $('.js-example-basic-single').select2();});
+                tail.select('#select2', {
+                    width: 340,
+                });
+        </script>
+
+        <script>
             var eponyms = [
                 {ID:  1, name:"Aaron sign",                 topic:["General"],                  who:"Charles Dettie Aaron",           where:"Detroit, Michigan, USA",            when:"1913",   refs:"<br><br><u>Reference</u><br>Aaron CD. A sign indicative of chronic appendicitis. <i>JAMA</i>. 1913; 60(5): 350-351",    about:"<br><br><br>Aaron's sign, indicitive of chronic appendicitis, is demonstrated by prolonged firm pressure at McBurney's point which produces pain in the epigastric region. In Aaron's 1913 paper, he describes his findings in four patients.", acknow:"<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>"},
                 {ID:  2, name:"Artery of Adamkiewicz",      topic:["Vascular","Neurosurgery"],  who:"Albert Wojciech Adamkiewicz",    where:"Kraków, Poland",                    when:"1881",   refs:"",   about:"<br><br><br>The artery of Adamkiewicz is known by other terms, including arteria radicularis magna. This vessel is a major contributor to the anterior spinal artery which gives arterial supply to the lumbar and sacral cord and nerves. The artery of Adamkiewicz arises from intercostal arteries which branch from the thoraco-abdominal aorta.", acknow:"<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>"},
@@ -240,7 +248,7 @@
                 ]
         </script>
 
-        <script>
+        <script> ///////  DEFAULT_PAGE  ///////
             $(document)
             .ready(function() {
                 $('#select1').ready(function() {
@@ -249,57 +257,7 @@
                     var stringArray = (new Function("return [" + value+ "];")());
                     console.log(stringArray);
                 });
-            });
-        </script>
 
-        <script>
-            $(document)
-            .ready(function() {
-                $('#select1').on('change', function() {
-                    let select ="";
-                    $("#select1").find('option:selected').each(function() {
-                        select += "\'" + $.trim($(this).val()) + "\',";});
-                        if(select != ""){select = select.substr(0);};
-                        var stringArray = (new Function("return [" + select+ "];")());
-                        //console.log(stringArray);
-                });
-            });
-        </script>
-
-        <script>
-            $(function() {
-                $('#btn_all').on('click', function() {
-                    $('#btn_all').removeClass("btn btn-light");
-                    $('#btn_all').addClass("btn btn-danger active");
-                    $('#selector').fadeOut(400);
-                    $('#btn_select').removeClass("btn btn-danger active");
-                    $('#btn_select').addClass("btn btn-light");
-                    $('#select1').ready(function() {
-                        let value = '\'' + $('#select1 option').map(function() {
-                            return this.text}).get().join('\',\'') + '\'';
-                        var stringArray = (new Function("return [" + value+ "];")());
-                        console.log(stringArray);
-                        });
-                    });
-                
-                $('#btn_select').on('click', function() {
-                    $('#btn_all').removeClass("btn btn-danger active");
-                    $('#btn_all').addClass("btn btn-light");
-                    $('#btn_select').removeClass("btn btn-light");
-                    $('#btn_select').addClass("btn btn-danger active");
-                    $('#selector').fadeIn(400);
-                    let select ="";
-                    $("#select1").find('option:selected').each(function() {
-                        select += "\'" + $.trim($(this).val()) + "\',";});
-                        if(select != ""){select = select.substr(0);};
-                        var stringArray = (new Function("return [" + select+ "];")());
-                        console.log(stringArray);
-                });
-            });
-        </script>
-
-        <script>
-            $(document).ready(function() {
                 $('#time').ionRangeSlider({
                     type: "double",
                     grid: true,
@@ -310,111 +268,16 @@
                     prefix: 'Year : ',
                     prettify_separator: '',
                     hide_min_max: true,
-                });
-            });
-        </script>
-
-        <script>
-            $(document)
-            .ready(function() {
+                    });
+           
                 $('#time').on("change", function() {
                     var $inp = $(this);
                     var frm = $inp.data("from");
                     var to = $inp.data("to");
-                    //$("p2").html( frm );
-                    //$("p3").html( to );
-                });
-            });
-        </script>
-
-        <script>
-            tail.select('#select2', {
-                width: 340,
-            });
-        </script>
-
-        <script>
-        //    $(document)
-        //    .ready(function() {
-        //        let ep_value = $('#select2').find('option:selected').text();
-        //        $( "p4" ).html( ep_value );
-        //    });
-        </script>
-
-        <script>
-            $(document).ready(function() {
-                $('.js-example-basic-single').select2();});
-
-            function topicFilter(taxonomy) {
-                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                return eponyms.filter(item => {
-                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                    return taxonomy.some(med => topic.includes(med));
                     });
-                }
-
-            let select ="";
-
-            $("#select1").find('option:selected').each(function() {
-                select += "\'" + $.trim($(this).val()) + "\',";
-                    });
-                if(select != ""){select = select.substr(0)};
-                var stringArray = (new Function("return [" + select+ "];")());
-                console.log(stringArray); 
                 
-                var selected = topicFilter(
-                        [ stringArray //.toString
-                        //[ "Endocrine","HPB",
-                        //'Oesophagogastric',
-                    ]);
-                
-            function populateSelect() {
-                var ele = document.getElementById('sel');
-                selected.forEach(function(b) {
-                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-                    }
-
-            function show(id) {
-            // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
-                var msg = document.getElementById('msg');
-                if (!id) {
-                    msg.innerHTML = "";
-
-                } else {
-                    for (var i = 0; i < selected.length; i++) {
-                    if (Number(id) === selected[i].ID) {
-                        msg.innerHTML = "<br>"+
-                                        'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
-                                        'When'  +":   "+ selected[i].when.bold()  +"<br>"+
-                                        'Where' +":   "+ selected[i].where.bold() +
-                                        selected[i].about +
-                                        selected[i].refs +
-                                        selected[i].acknow
-                                        ;
-                        }
-                    }
-                }
-            }
-            populateSelect();
-        </script>
-
-        <script>
-            $('#select1').on('change', function() {
-                let select ="";
-
-                $("#select1").find('option:selected').each(function() {
-                    select += "\'" + $.trim($(this).val()) + "\',";
-                        });
-                    if(select != ""){select = select.substr(0)};
-                    var stringArray = (new Function("return [" + select+ "];")());
-                    console.log(stringArray); 
-                    
-                    var selected = topicFilter(
-                            [ stringArray //.toString
-                            //[ "Endocrine","HPB",
-                            //'Oesophagogastric',
-                        ]);
-                
+                var selected = eponyms;
+            
                 function populateSelect() {
                     var ele = document.getElementById('sel');
                     selected.forEach(function(b) {
@@ -443,7 +306,166 @@
                     }
                 }
                 populateSelect();
-                $("#sel").trigger('change', true);
+            });
+        </script>
+
+
+        <script>  ////////  SELECTED_SPECIALTIES  ////////
+            $(document)
+            .ready(function() {
+                $('#btn_select').on('click', function() {
+                    $('#btn_all').removeClass("btn btn-danger active");
+                    $('#btn_all').addClass("btn btn-light");
+                    $('#btn_select').removeClass("btn btn-light");
+                    $('#btn_select').addClass("btn btn-danger active");
+                    $('#selector').fadeIn(400);
+                    let select ="";
+                    $("#select1").find('option:selected').each(function() {
+                        select += "\'" + $.trim($(this).val()) + "\',";});
+                        if(select != ""){select = select.substr(0);};
+                        var stringArray = (new Function("return [" + select+ "];")());
+                        console.log(stringArray);
+
+                    $('#time').ionRangeSlider({
+                        type: "double",
+                        grid: true,
+                        min: 1670,
+                        max: 2050,
+                        from: 1700,
+                        to: 2021,
+                        prefix: 'Year : ',
+                        prettify_separator: '',
+                        hide_min_max: true,
+                        });
+           
+                    $('#time').on("change", function() {
+                        var $inp = $(this);
+                        var frm = $inp.data("from");
+                        var to = $inp.data("to");
+                        });
+
+                    function topicFilter(taxonomy) {
+                        taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                        return eponyms.filter(item => {
+                            let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                            return taxonomy.some(med => topic.includes(med));
+                            });
+                        }
+                        
+                    var selected = topicFilter(
+                            [ stringArray //.toString
+                            //[ "Endocrine","HPB",
+                            //'Oesophagogastric',
+                        ]);
+                
+                    function populateSelect() {
+                        var ele = document.getElementById('sel');
+                        selected.forEach(function(b) {
+                            ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+                            }
+
+                    function show(id) {
+                    // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
+                        var msg = document.getElementById('msg');
+                        if (!id) {
+                            msg.innerHTML = "";
+
+                        } else {
+                            for (var i = 0; i < selected.length; i++) {
+                            if (Number(id) === selected[i].ID) {
+                                msg.innerHTML = "<br>"+
+                                                'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
+                                                'When'  +":   "+ selected[i].when.bold()  +"<br>"+
+                                                'Where' +":   "+ selected[i].where.bold() +
+                                                selected[i].about +
+                                                selected[i].refs +
+                                                selected[i].acknow;
+                                }
+                            }
+                        }
+                    }
+                    populateSelect();
+                    $("#sel").trigger('change', true);
+                });
+            });
+        </script>
+
+
+
+        <script>
+            $(document)  ///////  RETURN_TO_ALL  ///////
+            .ready(function() {
+                $('#btn_all').on('click', function() {
+                    $('#btn_all').removeClass("btn btn-light");
+                    $('#btn_all').addClass("btn btn-danger active");
+                    $('#selector').fadeOut(400);
+                    $('#btn_select').removeClass("btn btn-danger active");
+                    $('#btn_select').addClass("btn btn-light");
+
+                    $('#select1').ready(function() {
+                        let value = '\'' + $('#select1 option').map(function() {
+                            return this.text}).get().join('\',\'') + '\'';
+                        var stringArray = (new Function("return [" + value+ "];")());
+                        console.log(stringArray);
+                        });
+
+                    $('#time').ionRangeSlider({
+                        type: "double",
+                        grid: true,
+                        min: 1670,
+                        max: 2050,
+                        from: 1700,
+                        to: 2021,
+                        prefix: 'Year : ',
+                        prettify_separator: '',
+                        hide_min_max: true,
+                        });
+           
+                    $('#time').on("change", function() {
+                        var $inp = $(this);
+                        var frm = $inp.data("from");
+                        var to = $inp.data("to");
+                        });
+                    
+                    function topicFilter(taxonomy) {
+                        taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                        return eponyms.filter(item => {
+                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
+                            });
+                        }
+                    
+                    var selected = eponyms;
+                
+                    function populateSelect() {
+                        var ele = document.getElementById('sel');
+                        selected.forEach(function(b) {
+                            ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+                            }
+
+                    function show(id) {
+                    // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
+                        var msg = document.getElementById('msg');
+                        if (!id) {
+                            msg.innerHTML = "";
+
+                        } else {
+                            for (var i = 0; i < selected.length; i++) {
+                            if (Number(id) === selected[i].ID) {
+                                msg.innerHTML = "<br>"+
+                                                'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
+                                                'When'  +":   "+ selected[i].when.bold()  +"<br>"+
+                                                'Where' +":   "+ selected[i].where.bold() +
+                                                selected[i].about +
+                                                selected[i].refs +
+                                                selected[i].acknow;
+                                }
+                            }
+                        }
+                    }
+                    populateSelect();
+                    $("#sel").trigger('change', true);
+                    });
                 });
         </script>
 
