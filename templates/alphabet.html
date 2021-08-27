@@ -256,7 +256,7 @@
             $('#select1').on('change', function() {
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
-                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    select += "\'" + $.trim($(this).val()) + "\',";});
                     if(select != ""){select = select.substr(0);};
                     var stringArray = (new Function("return [" + select+ "];")());
                     console.log(stringArray);
@@ -287,7 +287,7 @@
                     $('#selector').fadeIn(400);
                     let select ="";
                     $("#select1").find('option:selected').each(function() {
-                        select += "\'" + $.trim($(this).text()) + "\',";});
+                        select += "\'" + $.trim($(this).val()) + "\',";});
                         if(select != ""){select = select.substr(0);};
                         var stringArray = (new Function("return [" + select+ "];")());
                         console.log(stringArray);
@@ -360,7 +360,7 @@
             $('#select1').on('change', function() {
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
-                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    select += "\'" + $.trim($(this).val()) + "\',";});
                     if(select != ""){select = select.substr(0);};
                     var stringArray = (new Function("return [" + select+ "];")());
                     console.log(stringArray);
