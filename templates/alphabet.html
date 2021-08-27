@@ -296,16 +296,18 @@
         </script>
 
         <script>
-            $('#time').ionRangeSlider({
-                type: "double",
-                grid: true,
-                min: 1670,
-                max: 2050,
-                from: 1700,
-                to: 2021,
-                prefix: 'Year : ',
-                prettify_separator: '',
-                hide_min_max: true,
+            $(document).ready(function() {
+                $('#time').ionRangeSlider({
+                    type: "double",
+                    grid: true,
+                    min: 1670,
+                    max: 2050,
+                    from: 1700,
+                    to: 2021,
+                    prefix: 'Year : ',
+                    prettify_separator: '',
+                    hide_min_max: true,
+                });
             });
         </script>
 
@@ -370,7 +372,7 @@
                     //[stringArray //.toString
                     [ "Endocrine","HPB",
                     //'Oesophagogastric',
-                ]).trigger('change');
+                ]);
 
             function populateSelect() {
                 var ele = document.getElementById('sel');
