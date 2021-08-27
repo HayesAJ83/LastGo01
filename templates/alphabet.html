@@ -273,7 +273,7 @@
                     $('#btn_select').addClass("btn btn-light");
                     $('#select1').ready(function() {
                         let value = '\'' + $('#select1 option').map(function() {
-                            return this.val}).get().join('\',\'') + '\'';
+                            return this.text}).get().join('\',\'') + '\'';
                         var stringArray = (new Function("return [" + value+ "];")());
                         console.log(stringArray);
                         });
