@@ -275,7 +275,7 @@
                         let value = '\'' + $('#select1 option').map(function() {
                             return this.val}).get().join('\',\'') + '\'';
                         var stringArray = (new Function("return [" + value+ "];")());
-                        console.log(stringArray);
+                        //console.log(stringArray);
                         });
                     });
                 
@@ -290,7 +290,7 @@
                         select += "\'" + $.trim($(this).val()) + "\',";});
                         if(select != ""){select = select.substr(0);};
                         var stringArray = (new Function("return [" + select+ "];")());
-                        console.log(stringArray);
+                        //console.log(stringArray);
                 });
             });
         </script>
@@ -341,11 +341,6 @@
         <script>
             $(document).ready(function() {
                 $('.js-example-basic-single').select2();});
-            
-            //var filteredEps = eponyms.filter(function (item) {
-            //    return item.topic == stringArray;
-                //console.log(filteredEps);
-            //});
 
             function topicFilter(taxonomy) {
                 taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
