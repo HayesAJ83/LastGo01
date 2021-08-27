@@ -253,14 +253,17 @@
         </script>
 
         <script>
-            $('#select1').on('change', function() {
-                let select ="";
-                $("#select1").find('option:selected').each(function() {
-                    select += "\'" + $.trim($(this).val()) + "\',";});
-                    if(select != ""){select = select.substr(0);};
-                    var stringArray = (new Function("return [" + select+ "];")());
-                    //console.log(stringArray);
-            });   
+            $(document)
+            .ready(function() {
+                $('#select1').on('change', function() {
+                    let select ="";
+                    $("#select1").find('option:selected').each(function() {
+                        select += "\'" + $.trim($(this).val()) + "\',";});
+                        if(select != ""){select = select.substr(0);};
+                        var stringArray = (new Function("return [" + select+ "];")());
+                        //console.log(stringArray);
+                });
+            });
         </script>
 
         <script>
@@ -352,19 +355,22 @@
 
             $('#select1').on('change', function() {
                 let select ="";
-                $("#select1").find('option:selected').each(function() {
-                    select += "\'" + $.trim($(this).val()) + "\',";});
-                    if(select != ""){select = select.substr(0);};
-                    var stringArray = (new Function("return [" + select+ "];")());
-                    console.log(stringArray);
-                    $("#sel").trigger('change', true)});
 
-            
-            var selected = topicFilter(
-                    [ stringArray //.toString
-                    //[ "Endocrine","HPB",
-                    //'Oesophagogastric',
-                ]);
+                $("#select1").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).val()) + "\',";
+                        });
+                    if(select != ""){select = select.substr(0)};
+                    var stringArray = (new Function("return [" + select+ "];")());
+                    console.log(stringArray); 
+                    
+                    var selected = topicFilter(
+                            [ stringArray //.toString
+                            //[ "Endocrine","HPB",
+                            //'Oesophagogastric',
+                        ]);
+                $("#sel").trigger('change', true);
+                });
+                
 
             function populateSelect() {
                 var ele = document.getElementById('sel');
