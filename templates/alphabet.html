@@ -366,7 +366,8 @@
                     if(select != ""){select = select.substr(0);};
                     var stringArray = (new Function("return [" + select+ "];")());
                     console.log(stringArray);
-                }).trigger('change');
+                    $("#sel").trigger('change', true)});
+
             
             var selected = topicFilter(
                     //[stringArray //.toString
@@ -401,7 +402,7 @@
                     }
                 }
             }
-            populateSelect().trigger('change');
+            populateSelect();
         </script>
 
         <script src="/static/assets/js/theme.js"></script>
