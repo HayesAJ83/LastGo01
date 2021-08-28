@@ -242,17 +242,51 @@
         </script>
 
         <script>
-            $(document)
-            .ready(function() {
-                $('#select1').on('change', function() {
-                    let select ="";
-                    $("#select1").find('option:selected').each(function() {
-                        select += "\'" + $.trim($(this).text()) + "\',";});
-                        if(select != ""){select = select.substr(0);};
-                        var stringArray = (new Function("return [" + select+ "];")());
-                        console.log(stringArray);
-                });
-            });   
+            var selected = eponyms
+
+            function populateSelect() {
+                var ele = document.getElementById('sel');
+                selected.forEach(function(b) {
+                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+                    }
+
+            function show(id) {
+            // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
+                var msg = document.getElementById('msg');
+                if (!id) {
+                    msg.innerHTML = "";
+
+                } else {
+                    for (var i = 0; i < selected.length; i++) {
+                    if (Number(id) === selected[i].ID) {
+                        msg.innerHTML = "<br>"+
+                                        'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
+                                        'When'  +":   "+ selected[i].when.bold()  +"<br>"+
+                                        'Where' +":   "+ selected[i].where.bold() +
+                                        selected[i].about +
+                                        selected[i].refs +
+                                        selected[i].acknow
+                                        ;
+                        break;
+                        }
+                    }
+                }
+            }
+            populateSelect()
+        </script>
+
+        <script>
+        //    $(document)
+        //    .ready(function() {
+        //        $('#select1').on('change', function() {
+        //            let select ="";
+        //            $("#select1").find('option:selected').each(function() {
+        //                select += "\'" + $.trim($(this).text()) + "\',";});
+        //                if(select != ""){select = select.substr(0);};
+        //                var stringArray = (new Function("return [" + select+ "];")());
+        //                console.log(stringArray);
+        //        });
+        //    });   
         </script>
 
         <script> ///////  DEFAULT_PAGE  ///////
