@@ -397,52 +397,52 @@
         </script>
 
         <script>
-            $(document)  ///////  RETURN_TO_ALL  ///////
-            .ready(function() {
-                $('#btn_all').on('click', function() {
-                    $('#btn_all').removeClass("btn btn-light");
-                    $('#btn_all').addClass("btn btn-danger active");
-                    $('#selector').fadeOut(400);
-                    $('#btn_select').removeClass("btn btn-danger active");
-                    $('#btn_select').addClass("btn btn-light");
+        //    $(document)  ///////  RETURN_TO_ALL  ///////
+        //    .ready(function() {
+        //        $('#btn_all').on('click', function() {
+        //            $('#btn_all').removeClass("btn btn-light");
+        //            $('#btn_all').addClass("btn btn-danger active");
+        //            $('#selector').fadeOut(400);
+        //            $('#btn_select').removeClass("btn btn-danger active");
+        //            $('#btn_select').addClass("btn btn-light");
 
-                    $('#select1').ready(function() {
-                        let value = '\'' + $('#select1 option').map(function() {
-                            return this.text}).get().join('\',\'') + '\'';
-                        var stringArray = (new Function("return [" + value+ "];")());
-                        console.log(stringArray);
-                        });
+        //            $('#select1').ready(function() {
+        //                let value = '\'' + $('#select1 option').map(function() {
+        //                    return this.text}).get().join('\',\'') + '\'';
+        //                var stringArray = (new Function("return [" + value+ "];")());
+        //                console.log(stringArray);
+        //                });
                 
-                    function populateSelect() {
-                        var ele = document.getElementById('sel');
-                        eponyms.forEach(function(b) {
-                            ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-                            }
+        //            function populateSelect() {
+        //                var ele = document.getElementById('sel');
+        //                eponyms.forEach(function(b) {
+        //                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+        //                    }
 
-                    function show(id) {
-                    // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
-                        var msg = document.getElementById('msg');
-                        if (!id) {
-                            msg.innerHTML = "";
+        //            function show(id) {
+        //            // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
+        //                var msg = document.getElementById('msg');
+        //                if (!id) {
+        //                    msg.innerHTML = "";
 
-                        } else {
-                            for (var i = 0; i < eponyms.length; i++) {
-                            if (Number(id) === eponyms[i].ID) {
-                                msg.innerHTML = "<br>"+
-                                                'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
-                                                'When'  +":   "+ eponyms[i].when.bold()  +"<br>"+
-                                                'Where' +":   "+ eponyms[i].where.bold() +
-                                                eponyms[i].about +
-                                                eponyms[i].refs +
-                                                eponyms[i].acknow;
-                                }
-                            }
-                        }
-                    }
-                    populateSelect();
-                    //$("#sel").trigger('change', true);
-                });
-            });
+        //                } else {
+        //                    for (var i = 0; i < eponyms.length; i++) {
+        //                    if (Number(id) === eponyms[i].ID) {
+        //                        msg.innerHTML = "<br>"+
+        //                                        'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
+        //                                        'When'  +":   "+ eponyms[i].when.bold()  +"<br>"+
+        //                                        'Where' +":   "+ eponyms[i].where.bold() +
+        //                                        eponyms[i].about +
+        //                                        eponyms[i].refs +
+        //                                        eponyms[i].acknow;
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //            populateSelect();
+        //            //$("#sel").trigger('change', true);
+        //        });
+        //    });
         </script>
 
         <script src="/static/assets/js/theme.js"></script>
