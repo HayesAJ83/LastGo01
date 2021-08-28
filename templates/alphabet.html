@@ -329,7 +329,6 @@
                         }
                     }
                     populateSelect();
-                    $("#sel").trigger('change', true);
                 });
             });
         </script>
@@ -355,12 +354,11 @@
                             });
                         };
                     
-                    var selected = eponyms;
-                    //var selected = topicFilter(
+                    //var selected = eponyms;
+                    var selected = topicFilter(
                         //[ stringArray //.toString
-                    //    [ "Endocrine","HPB",
-                        //'Oesophagogastric',
-                    //    ]);
+                        [ "Endocrine",
+                        ]);
                 
                     function populateSelect() {
                         var ele = document.getElementById('sel');
@@ -389,7 +387,7 @@
                         }
                     }
                     populateSelect();
-                    $("#sel").trigger('change', true);
+                    //$("#sel").trigger('change', true);
                 });
             });
         </script>
@@ -438,7 +436,7 @@
                         }
                     }
                     populateSelect();
-                    $("#sel").trigger('change', true);
+                    //$("#sel").trigger('change', true);
                 });
             });
         </script>
