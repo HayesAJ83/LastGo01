@@ -230,32 +230,29 @@
         </script>
 
         <script>
-            $(document)
-            .ready(function() {
-                $('#select1').ready(function() {
-                    let value = '\'' + $('#select1 option').map(function() {
-                            return this.text}).get().join('\',\'') + '\'';
-                    var stringArray = (new Function("return [" + value+ "];")());
-                    console.log(stringArray);
-                });
-            });
+        //    $(document)
+        //    .ready(function() {
+        //        $('#select1').ready(function() {
+        //            let value = '\'' + $('#select1 option').map(function() {
+        //                    return this.text}).get().join('\',\'') + '\'';
+        //            var stringArray = (new Function("return [" + value+ "];")());
+        //            console.log(stringArray);
+        //        });
+        //    });
         </script>
 
-        <script>
+        <script> ///  DEFAULT_PAGE  ///
             var selected = eponyms
-
             function populateSelect() {
                 var ele = document.getElementById('sel');
                 selected.forEach(function(b) {
                     ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
                     }
-
             function show(id) {
             // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
                 var msg = document.getElementById('msg');
                 if (!id) {
                     msg.innerHTML = "";
-
                 } else {
                     for (var i = 0; i < selected.length; i++) {
                     if (Number(id) === selected[i].ID) {
@@ -267,7 +264,6 @@
                                         selected[i].refs +
                                         selected[i].acknow
                                         ;
-                        break;
                         }
                     }
                 }
