@@ -114,25 +114,6 @@
                         </div>
                     </form>
                 </div>
-                <div class="container" style="height:120px">
-                    <div class="row align-items-center text-center">
-                        <div class="col">
-                            <h1 class="text-black mb-2 fs-1" style="height:30px">Time Traveller</h1>
-                        </div>
-                    </div>
-                    <div class="row align-items-center text-center">
-                        <div class="col">
-                            <input type="text" id="time" name="time" value="" />
-                        </div>
-                    </div>
-                    <!-- <div class="row align-items-center text-center">
-                        <div class="col">
-                            <p2 style="font-size: 16px;">1700</p2> to 
-                            <p3 style="font-size: 16px;">2021</p3>
-                        </div>
-                    </div> -->
-                </div>
-                <br></br>
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col">
@@ -257,24 +238,6 @@
                     var stringArray = (new Function("return [" + value+ "];")());
                     console.log(stringArray);
                 });
-
-                $('#time').ionRangeSlider({
-                    type: "double",
-                    grid: true,
-                    min: 1670,
-                    max: 2050,
-                    from: 1700,
-                    to: 2021,
-                    prefix: 'Year : ',
-                    prettify_separator: '',
-                    hide_min_max: true,
-                    });
-           
-                $('#time').on("change", function() {
-                    var $inp = $(this);
-                    var frm = $inp.data("from");
-                    var to = $inp.data("to");
-                    });
                 
                 var selected = eponyms;
             
@@ -324,24 +287,6 @@
                         if(select != ""){select = select.substr(0);};
                         var stringArray = (new Function("return [" + select+ "];")());
                         console.log(stringArray);  
-
-                    $('#time').ionRangeSlider({
-                        type: "double",
-                        grid: true,
-                        min: 1670,
-                        max: 2050,
-                        from: 1700,
-                        to: 2021,
-                        prefix: 'Year : ',
-                        prettify_separator: '',
-                        hide_min_max: true,
-                        });
-           
-                    $('#time').on("change", function() {
-                        var $inp = $(this);
-                        var frm = $inp.data("from");
-                        var to = $inp.data("to");
-                        });
 
                     function topicFilter(taxonomy) {
                         taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
@@ -401,24 +346,6 @@
                         if(select != ""){select = select.substr(0);};
                         var stringArray = (new Function("return [" + select+ "];")());
                         console.log(stringArray);
-
-                    $('#time').ionRangeSlider({
-                        type: "double",
-                        grid: true,
-                        min: 1670,
-                        max: 2050,
-                        from: 1700,
-                        to: 2021,
-                        prefix: 'Year : ',
-                        prettify_separator: '',
-                        hide_min_max: true,
-                        });
-        
-                    $('#time').on("change", function() {
-                        var $inp = $(this);
-                        var frm = $inp.data("from");
-                        var to = $inp.data("to");
-                        });
 
                     function topicFilter(taxonomy) {
                         taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
@@ -483,38 +410,10 @@
                         var stringArray = (new Function("return [" + value+ "];")());
                         console.log(stringArray);
                         });
-
-                    $('#time').ionRangeSlider({
-                        type: "double",
-                        grid: true,
-                        min: 1670,
-                        max: 2050,
-                        from: 1700,
-                        to: 2021,
-                        prefix: 'Year : ',
-                        prettify_separator: '',
-                        hide_min_max: true,
-                        });
-           
-                    $('#time').on("change", function() {
-                        var $inp = $(this);
-                        var frm = $inp.data("from");
-                        var to = $inp.data("to");
-                        });
-                    
-                    function topicFilter(taxonomy) {
-                        taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                        return eponyms.filter(item => {
-                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                        return taxonomy.some(med => topic.includes(med));
-                            });
-                        }
-                    
-                    var selected = eponyms;
                 
                     function populateSelect() {
                         var ele = document.getElementById('sel');
-                        selected.forEach(function(b) {
+                        eponyms.forEach(function(b) {
                             ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
                             }
 
@@ -525,15 +424,15 @@
                             msg.innerHTML = "";
 
                         } else {
-                            for (var i = 0; i < selected.length; i++) {
-                            if (Number(id) === selected[i].ID) {
+                            for (var i = 0; i < eponyms.length; i++) {
+                            if (Number(id) === eponyms[i].ID) {
                                 msg.innerHTML = "<br>"+
-                                                'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
-                                                'When'  +":   "+ selected[i].when.bold()  +"<br>"+
-                                                'Where' +":   "+ selected[i].where.bold() +
-                                                selected[i].about +
-                                                selected[i].refs +
-                                                selected[i].acknow;
+                                                'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
+                                                'When'  +":   "+ eponyms[i].when.bold()  +"<br>"+
+                                                'Where' +":   "+ eponyms[i].where.bold() +
+                                                eponyms[i].about +
+                                                eponyms[i].refs +
+                                                eponyms[i].acknow;
                                 }
                             }
                         }
