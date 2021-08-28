@@ -263,14 +263,13 @@
                 $('#btn_select').removeClass("btn btn-light");
                 $('#btn_select').addClass("btn btn-danger active");
                 $('#selector').fadeIn(400);
-                $('#select2').fadeOut(100);
 
-        //            let select ="";
-        //            $("#select1").find('option:selected').each(function() {
-        //                select += "\'" + $.trim($(this).val()) + "\',";});
-        //                if(select != ""){select = select.substr(0);};
-        //                var stringArray = (new Function("return [" + select+ "];")());
-        //                console.log(stringArray);  
+                let select ="";
+                $("#select1").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).val()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                    var stringArray = (new Function("return [" + select+ "];")());
+                    console.log(stringArray);  
 
         //            function topicFilter(taxonomy) {
         //                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
@@ -308,10 +307,7 @@
         //                                        selected[i].about +
         //                                        selected[i].refs +
         //                                        selected[i].acknow;
-        //                        }
-        //                    }
-        //                }
-        //            }
+        //                                         }}}}
         //            populateSelect();
         //        });
             });
