@@ -238,12 +238,10 @@
                     var stringArray = (new Function("return [" + value+ "];")());
                     console.log(stringArray);
                 });
-                
-                var selected = eponyms;
             
                 function populateSelect() {
                     var ele = document.getElementById('sel');
-                    selected.forEach(function(b) {
+                    eponyms.forEach(function(b) {
                         ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
                         };
 
@@ -254,15 +252,15 @@
                         msg.innerHTML = "";
 
                     } else {
-                        for (var i = 0; i < selected.length; i++) {
-                        if (Number(id) === selected[i].ID) {
+                        for (var i = 0; i < eponyms.length; i++) {
+                        if (Number(id) === eponyms[i].ID) {
                             msg.innerHTML = "<br>"+
-                                            'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
-                                            'When'  +":   "+ selected[i].when.bold()  +"<br>"+
-                                            'Where' +":   "+ selected[i].where.bold() +
-                                            selected[i].about +
-                                            selected[i].refs +
-                                            selected[i].acknow
+                                            'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
+                                            'When'  +":   "+ eponyms[i].when.bold()  +"<br>"+
+                                            'Where' +":   "+ eponyms[i].where.bold() +
+                                            eponyms[i].about +
+                                            eponyms[i].refs +
+                                            eponyms[i].acknow
                                             ;
                             }
                         }
@@ -273,123 +271,123 @@
         </script>
 
         <script>  ////////  SELECTED_SPECIALTIES (1)  ////////
-            $(document)
-            .ready(function() {
-                $('#btn_select').on('click', function() {
-                    $('#btn_all').removeClass("btn btn-danger active");
-                    $('#btn_all').addClass("btn btn-light");
-                    $('#btn_select').removeClass("btn btn-light");
-                    $('#btn_select').addClass("btn btn-danger active");
-                    $('#selector').fadeIn(400);
-                    let select ="";
-                    $("#select1").find('option:selected').each(function() {
-                        select += "\'" + $.trim($(this).val()) + "\',";});
-                        if(select != ""){select = select.substr(0);};
-                        var stringArray = (new Function("return [" + select+ "];")());
-                        console.log(stringArray);  
+        //    $(document)
+        //    .ready(function() {
+        //        $('#btn_select').on('click', function() {
+        //            $('#btn_all').removeClass("btn btn-danger active");
+        //            $('#btn_all').addClass("btn btn-light");
+        //            $('#btn_select').removeClass("btn btn-light");
+        //            $('#btn_select').addClass("btn btn-danger active");
+        //            $('#selector').fadeIn(400);
+        //            let select ="";
+        //            $("#select1").find('option:selected').each(function() {
+        //                select += "\'" + $.trim($(this).val()) + "\',";});
+        //                if(select != ""){select = select.substr(0);};
+        //                var stringArray = (new Function("return [" + select+ "];")());
+        //                console.log(stringArray);  
 
-                    function topicFilter(taxonomy) {
-                        taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                        return eponyms.filter(item => {
-                            let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                            return taxonomy.some(med => topic.includes(med));
-                            });
-                        };
+        //            function topicFilter(taxonomy) {
+        //                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+        //                return eponyms.filter(item => {
+        //                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+        //                    return taxonomy.some(med => topic.includes(med));
+        //                    });
+        //                };
                       
-                    var selected = eponyms;
+        //            var selected = eponyms;
                     //var selected = topicFilter(
                         //[ stringArray //.toString
                     //    [ "Endocrine","HPB",
                     //    ]);
                 
-                    function populateSelect() {
-                        var ele = document.getElementById('sel');
-                        selected.forEach(function(b) {
-                            ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-                            };
+        //            function populateSelect() {
+        //                var ele = document.getElementById('sel');
+        //                selected.forEach(function(b) {
+        //                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+        //                    };
 
-                    function show(id) {
+        //            function show(id) {
                     // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
-                        var msg = document.getElementById('msg');
-                        if (!id) {
-                            msg.innerHTML = "";
+        //                var msg = document.getElementById('msg');
+        //                if (!id) {
+        //                    msg.innerHTML = "";
 
-                        } else {
-                            for (var i = 0; i < selected.length; i++) {
-                            if (Number(id) === selected[i].ID) {
-                                msg.innerHTML = "<br>"+
-                                                'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
-                                                'When'  +":   "+ selected[i].when.bold()  +"<br>"+
-                                                'Where' +":   "+ selected[i].where.bold() +
-                                                selected[i].about +
-                                                selected[i].refs +
-                                                selected[i].acknow;
-                                }
-                            }
-                        }
-                    }
-                    populateSelect();
-                });
-            });
+        //                } else {
+        //                    for (var i = 0; i < selected.length; i++) {
+        //                    if (Number(id) === selected[i].ID) {
+        //                        msg.innerHTML = "<br>"+
+        //                                        'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
+        //                                        'When'  +":   "+ selected[i].when.bold()  +"<br>"+
+        //                                        'Where' +":   "+ selected[i].where.bold() +
+        //                                        selected[i].about +
+        //                                        selected[i].refs +
+        //                                        selected[i].acknow;
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //            populateSelect();
+        //        });
+        //    });
         </script>
 
 
 
         <script>  ////////  SELECTED_SPECIALTIES (2)  ////////
-            $(document)
-            .ready(function() {
-                $('#select1').on('change', function() {
-                    let select ="";
-                    $("#select1").find('option:selected').each(function() {
-                        select += "\'" + $.trim($(this).text()) + "\',";});
-                        if(select != ""){select = select.substr(0);};
-                        var stringArray = (new Function("return [" + select+ "];")());
-                        console.log(stringArray);
+        //    $(document)
+        //    .ready(function() {
+        //        $('#select1').on('change', function() {
+        //            let select ="";
+        //            $("#select1").find('option:selected').each(function() {
+        //                select += "\'" + $.trim($(this).text()) + "\',";});
+        //                if(select != ""){select = select.substr(0);};
+        //                var stringArray = (new Function("return [" + select+ "];")());
+        //                console.log(stringArray);
 
-                    function topicFilter(taxonomy) {
-                        taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                        return eponyms.filter(item => {
-                            let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                            return taxonomy.some(med => topic.includes(med));
-                            });
-                        };
+        //            function topicFilter(taxonomy) {
+        //                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+        //                return eponyms.filter(item => {
+        //                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+        //                    return taxonomy.some(med => topic.includes(med));
+        //                    });
+        //                };
                     
                     //var selected = eponyms;
-                    var selected = topicFilter(
+        //            var selected = topicFilter(
                         //[ stringArray //.toString
-                        [ "Endocrine",
-                        ]);
+        //                [ "Endocrine",
+        //                ]);
                 
-                    function populateSelect() {
-                        var ele = document.getElementById('sel');
-                        selected.forEach(function(b) {
-                            ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-                            };
+        //            function populateSelect() {
+        //                var ele = document.getElementById('sel');
+        //                selected.forEach(function(b) {
+        //                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+        //                    };
 
-                    function show(id) {
+        //            function show(id) {
                     // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
-                        var msg = document.getElementById('msg');
-                        if (!id) {
-                            msg.innerHTML = "";
+        //                var msg = document.getElementById('msg');
+        //                if (!id) {
+        //                    msg.innerHTML = "";
 
-                        } else {
-                            for (var i = 0; i < selected.length; i++) {
-                            if (Number(id) === selected[i].ID) {
-                                msg.innerHTML = "<br>"+
-                                                'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
-                                                'When'  +":   "+ selected[i].when.bold()  +"<br>"+
-                                                'Where' +":   "+ selected[i].where.bold() +
-                                                selected[i].about +
-                                                selected[i].refs +
-                                                selected[i].acknow;
-                                }
-                            }
-                        }
-                    }
-                    populateSelect();
+        //                } else {
+        //                    for (var i = 0; i < selected.length; i++) {
+        //                    if (Number(id) === selected[i].ID) {
+        //                        msg.innerHTML = "<br>"+
+        //                                        'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
+        //                                        'When'  +":   "+ selected[i].when.bold()  +"<br>"+
+        //                                        'Where' +":   "+ selected[i].where.bold() +
+        //                                        selected[i].about +
+        //                                        selected[i].refs +
+        //                                        selected[i].acknow;
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //            populateSelect();
                     //$("#sel").trigger('change', true);
-                });
-            });
+        //        });
+        //    });
         </script>
 
         <script>
