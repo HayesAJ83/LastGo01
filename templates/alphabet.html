@@ -213,7 +213,7 @@
                 {ID: 15, name:"Mann-Whitney U test",        topic:["Academic"],                 who:"Henry B Mann & Donald R Whitney",where:"Columbus, Ohio, USA",               when:"1947",   refs:"<br><br><u>Reference</u><br>Mann HB, Whitney DR. On a test of whether one or two random variables is stochastically larger than the other. <i>Ann Math Stat</i>. 1947; 18(1): 50-60",   about:"",acknow:""},
                 {ID: 16, name:"McBurney's point",           topic:["General","Emergency"],      who:"Charles Heber McBurney",         where:"Manhattan, New York, USA",          when:"1889",   refs:"<br><br><u>Reference</u><br>McBurney C. Experience with early operative inference in cases of disease of the vermiform appendix. <i>NY Med J</i>. 1889; 50: 676-684",   about:"",acknow:""},
                 {ID: 17, name:"Mirizzi's syndrome",         topic:["HPB","General","Emergency"],who:"Pablo Luis Mirizzi",             where:"Córdoba, Argentina",                when:"1948",   refs:"<br><br><u>Reference</u><br>Mirizzi PL. Syndrome del conducto hepatico. <i>J Int Chir</i>. 1948; 8: 731-777",   about:"",acknow:""},
-                {ID: 18, name:"Monro-Kellie doctrine",      topic:["Neurosurgery","Trauma"],    who:"Kellie G & Alexander Monro",     where:"Edinburgh, Scotland, UK",           when:"1824",   refs:"<br><br><u>Reference</u><br>Kellie G &c. An Account of the Appearances Observed in the Dissection of Two of Three Individuals Presumed to Have Perished in the Storm of the 3d, and Whose Bodies Were Discovered in the Vicinity of Leith on the Morning of the 4th November 1821; with Some Reflections on the Pathology of the Brain. <i>Trans Med Chir Soc Edinb</i>. 1824;1: 84-122",   about:""},
+                {ID: 18, name:"Monro-Kellie doctrine",      topic:["Neurosurgery","Trauma"],    who:"Kellie G & Alexander Monro",     where:"Edinburgh, Scotland, UK",           when:"1824",   refs:"<br><br><u>Reference</u><br>Kellie G &c. An Account of the Appearances Observed in the Dissection of Two of Three Individuals Presumed to Have Perished in the Storm of the 3d, and Whose Bodies Were Discovered in the Vicinity of Leith on the Morning of the 4th November 1821; with Some Reflections on the Pathology of the Brain. <i>Trans Med Chir Soc Edinb</i>. 1824;1: 84-122",   about:"", acknow:""},
                 {ID: 19, name:"Murphy's sign",              topic:["HPB","Emergency"],          who:"John Benjamin Murphy",           where:"Chicago, Illinois, USA",            when:"1912",   refs:"",   about:"", acknow:""},
                 {ID: 20, name:"Oakland bleeding score",     topic:["Colorectal","Emergency"],   who:"Kathryn Oakland",                where:"Oxford, England, UK",               when:"2018",   refs:"<br><br><u>Reference</u><br>Oakland K, Guy R, Uberoi R, et al. Acute lower GI bleeding in the UK: patient characteristics, interventions and outcomes in the first nationwide audit. <i>Gut</i>. 2018; 67(4): 654-662", about:"", acknow:"<br><br><br><i>We kindly acknowledge Miss X FRCS who contributed the above information.</i>"},
                 {ID: 21, name:"Riedel's thyroiditis",       topic:["Endocrine"],                who:"Bernhard M C L Riedel",          where:"Jena, Thuringia, Germany",          when:"1896",   refs:"<br><br><u>Reference</u><br>Riedel BMCL. Die chronische, zur Bildung eisenharter Tumoren fuhrende Entzundung der Schilddruse <i>Verhandlungen der deutschen Gesellschaft für Chirurgie</i>. 1896; 25: 101-105", about:"",         acknow:"<br><br><br><i>We kindly acknowledge Miss X FRCS who contributed the above information.</i>"},
@@ -231,6 +231,7 @@
                 ]
         </script>
 
+
         <script> ///  DEFAULT_PAGE  ///
             $('#select1').ready(function() {
                 let value = '\'' + $('#select1 option').map(function() {
@@ -244,13 +245,11 @@
                 selected.forEach(function(b) {
                     ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})}
             function show(id) {
-            // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
                 var msg = document.getElementById('msg');
-                if (!id) {
-                    msg.innerHTML = "";
+                if (!id) {msg.innerHTML = "";
                 } else {
                     for (var i = 0; i < selected.length; i++) {
-                    if (Number(id) === selected[i].ID) {
+                    if  (Number(id) === selected[i].ID) {
                         msg.innerHTML = "<br><br>"+
                                         'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
                                         'When'  +":   "+ selected[i].when.bold()  +"<br>"+
@@ -262,6 +261,7 @@
             populateSelect()
         </script>
 
+
         <script>  ////////  SELECTED_SPECIALTIES (1)  ////////
             $('#btn_select').on('click', function() {
                 $('#btn_all').removeClass("btn btn-danger active");
@@ -269,7 +269,6 @@
                 $('#btn_select').removeClass("btn btn-light");
                 $('#btn_select').addClass("btn btn-danger active");
                 $('#selector').fadeIn(400);
-
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).val()) + "\',";});
@@ -278,8 +277,6 @@
                     console.log(stringArray);  
             });
         </script>
-
-
 
         <script>  ////////  SELECTED_SPECIALTIES (2)  ////////
             $('#select1').on('change', function() {
@@ -290,13 +287,13 @@
                     var stringArray = (new Function("return [" + select+ "];")());
                     console.log(stringArray);
 
-        //            function topicFilter(taxonomy) {
-        //                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-        //                return eponyms.filter(item => {
-        //                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-        //                    return taxonomy.some(med => topic.includes(med));
-        //                    });
-        //                };
+                    function topicFilter(taxonomy) {
+                        taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                        return eponyms.filter(item => {
+                            let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                            return taxonomy.some(med => topic.includes(med));
+                            });
+                        };
                     
                     //var selected = eponyms;
         //            var selected = topicFilter(
@@ -326,12 +323,9 @@
         //                                        selected[i].about +
         //                                        selected[i].refs +
         //                                        selected[i].acknow;
-        //                        }
-        //                    }
-        //                }
-        //            }
+        //                                         }}}}
         //            populateSelect();
-                    //$("#sel").trigger('change', true);
+                    //$("#select3").trigger('change', true);
         //        });
             });
         </script>
@@ -374,29 +368,12 @@
         //                                        eponyms[i].about +
         //                                        eponyms[i].refs +
         //                                        eponyms[i].acknow;
-        //                        }
-        //                    }
-        //                }
-        //            }
+        //                                          }}}}
         //            populateSelect();
-        //            //$("#sel").trigger('change', true);
+        //            //$("#select3").trigger('change', true);
         //        });
             });
         </script>
-
-<script>
-    //    $(document)
-    //    .ready(function() {
-    //        $('#select1').on('change', function() {
-    //            let select ="";
-    //            $("#select1").find('option:selected').each(function() {
-    //                select += "\'" + $.trim($(this).text()) + "\',";});
-    //                if(select != ""){select = select.substr(0);};
-    //                var stringArray = (new Function("return [" + select+ "];")());
-    //                console.log(stringArray);
-    //        });
-    //    });   
-</script>
 
         <script src="/static/assets/js/theme.js"></script>
     </body>
