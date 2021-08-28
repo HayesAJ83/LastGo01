@@ -229,18 +229,6 @@
                 ]
         </script>
 
-        <script>
-        //    $(document)
-        //    .ready(function() {
-        //        $('#select1').ready(function() {
-        //            let value = '\'' + $('#select1 option').map(function() {
-        //                    return this.text}).get().join('\',\'') + '\'';
-        //            var stringArray = (new Function("return [" + value+ "];")());
-        //            console.log(stringArray);
-        //        });
-        //    });
-        </script>
-
         <script> ///  DEFAULT_PAGE  ///
             var selected = eponyms
             function populateSelect() {
@@ -256,10 +244,10 @@
                 } else {
                     for (var i = 0; i < selected.length; i++) {
                     if (Number(id) === selected[i].ID) {
-                        msg.innerHTML = "<br>"+
+                        msg.innerHTML = "<br><br>"+
                                         'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
                                         'When'  +":   "+ selected[i].when.bold()  +"<br>"+
-                                        'Where' +":   "+ selected[i].where.bold() +
+                                        'Where' +":   "+ selected[i].where.bold() +"<br>"+
                                         selected[i].about +
                                         selected[i].refs +
                                         selected[i].acknow
