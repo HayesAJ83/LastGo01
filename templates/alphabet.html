@@ -232,12 +232,12 @@
         </script>
 
         <script> ///  DEFAULT_PAGE  ///
-            //$('#select1').ready(function() {
-            //    let value = '\'' + $('#select1 option').map(function() {
-            //        return this.text}).get().join('\',\'') + '\'';
-            //        var stringArray = (new Function("return [" + value+ "];")());
-            //        console.log(stringArray);
-            //        });
+            $('#select1').ready(function() {
+                let value = '\'' + $('#select1 option').map(function() {
+                    return this.text}).get().join('\',\'') + '\'';
+                    var stringArray = (new Function("return [" + value+ "];")());
+                    console.log(stringArray);
+                    });
             var selected = eponyms
             function populateSelect() {
                 var ele = document.getElementById('sel');
@@ -277,19 +277,19 @@
                     var stringArray = (new Function("return [" + select+ "];")());
                     console.log(stringArray);  
 
-        //            function topicFilter(taxonomy) {
-        //                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-        //                return eponyms.filter(item => {
-        //                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-        //                    return taxonomy.some(med => topic.includes(med));
-        //                    });
-        //                };
+                    function topicFilter(taxonomy) {
+                        taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                        return eponyms.filter(item => {
+                            let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                            return taxonomy.some(med => topic.includes(med));
+                            });
+                        };
                       
-        //            var selected = eponyms;
-                    //var selected = topicFilter(
+                    //var selected = eponyms;
+                    var selected = topicFilter(
                         //[ stringArray //.toString
-                    //    [ "Endocrine","HPB",
-                    //    ]);
+                        [ "Endocrine","HPB",
+                        ]);
                 
         //            function populateSelect() {
         //                var ele = document.getElementById('sel');
@@ -387,12 +387,12 @@
                 $('#btn_select').removeClass("btn btn-danger active");
                 $('#btn_select').addClass("btn btn-light");
 
-        //            $('#select1').ready(function() {
-        //                let value = '\'' + $('#select1 option').map(function() {
-        //                    return this.text}).get().join('\',\'') + '\'';
-        //                var stringArray = (new Function("return [" + value+ "];")());
-        //                console.log(stringArray);
-        //                });
+                $('#select1').ready(function() {
+                    let value = '\'' + $('#select1 option').map(function() {
+                        return this.text}).get().join('\',\'') + '\'';
+                    var stringArray = (new Function("return [" + value+ "];")());
+                    console.log(stringArray);
+                    });
                 
         //            function populateSelect() {
         //                var ele = document.getElementById('sel');
