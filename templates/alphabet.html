@@ -97,7 +97,7 @@
                     <hr style="height:1px; visibility:hidden">
                     <form method="POST">
                         <div class="row align-items-center text-center">
-                            <div class="col" id="selector"> <!--style="display:none"> -->
+                            <div class="col" id="selector" style="display:none">
                                 <select id="select1" class="selectpicker"
                                     name="min_multi_select" 
                                     multiple title=" -- specialties -- " 
@@ -288,18 +288,6 @@
                     console.log(stringArray); 
                 });
                 
-
-            //    function topicFilter(taxonomy) {
-            //        taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-            //        return eponyms.filter(item => {
-            //            let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-            //            return taxonomy.some(med => topic.includes(med));
-            //            });
-            //        };
-                //var selected = eponyms;
-
-            //    var selected = topicFilter([ "Endocrine",
-            //            ]);
                 
             //    function populateSelect() {
             //        var ele = document.getElementById('sel');
@@ -343,9 +331,7 @@
                 var stringArray = (new Function("return [" + select+ "];")());
                 console.log(stringArray);
 
-                var selected2 = topicFilter(
-                        //[ stringArray //.toString
-                        [ "Endocrine" ]);
+                var selected2 = topicFilter([ "Endocrine", "HPB" ]);
 
                 function populateSelect2() {
                     var ele2 = document.getElementById('sel2');
@@ -365,7 +351,7 @@
                                             selected2[i].refs +
                                             selected2[i].acknow
                                             ;}}}}
-                populateSelect2().trigger("change")
+                populateSelect2()
                 $('#select4').fadeIn(400);
             });
         </script>
