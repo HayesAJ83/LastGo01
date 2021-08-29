@@ -97,7 +97,7 @@
                     <hr style="height:1px; visibility:hidden">
                     <form method="POST">
                         <div class="row align-items-center text-center">
-                            <div class="col" id="selector" style="display:none">
+                            <div class="col" id="selector"> <!--style="display:none"> -->
                                 <select id="select1" class="selectpicker"
                                     name="min_multi_select" 
                                     multiple title=" -- specialties -- " 
@@ -345,7 +345,7 @@
 
                 var selected2 = topicFilter(
                         //[ stringArray //.toString
-                        [ "Endocrine" ]).trigger("change");;
+                        [ "Endocrine" ]);
 
                 function populateSelect2() {
                     var ele2 = document.getElementById('sel2');
