@@ -269,6 +269,8 @@
                 $('#btn_select').removeClass("btn btn-light");
                 $('#btn_select').addClass("btn btn-danger active");
                 $('#selector').fadeIn(400);
+                $("#sel").trigger('change', true);
+                $("#msg").trigger('change', true);
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).val()) + "\',";});
@@ -320,7 +322,6 @@
                                             selected[i].acknow
                                             ;}}}}
                 populateSelect()
-                $("#select3").trigger('change', true);
             });
         </script>
 
