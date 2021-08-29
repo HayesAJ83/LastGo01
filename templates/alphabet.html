@@ -287,46 +287,40 @@
                     var stringArray = (new Function("return [" + select+ "];")());
                     console.log(stringArray);
 
-                    function topicFilter(taxonomy) {
-                        taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                        return eponyms.filter(item => {
-                            let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                            return taxonomy.some(med => topic.includes(med));
-                            });
-                        };
+                function topicFilter(taxonomy) {
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return eponyms.filter(item => {
+                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
+                        });
+                    };
                     
-                    //var selected = eponyms;
-        //            var selected = topicFilter(
+                //var selected = eponyms;
+                var selected = topicFilter(
                         //[ stringArray //.toString
-        //                [ "Endocrine",
-        //                ]);
-                
-        //            function populateSelect() {
-        //                var ele = document.getElementById('sel');
-        //                selected.forEach(function(b) {
-        //                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-        //                    };
+                        [ "Endocrine",
+                        ]);
 
-        //            function show(id) {
-                    // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
-        //                var msg = document.getElementById('msg');
-        //                if (!id) {
-        //                    msg.innerHTML = "";
-
-        //                } else {
-        //                    for (var i = 0; i < selected.length; i++) {
-        //                    if (Number(id) === selected[i].ID) {
-        //                        msg.innerHTML = "<br>"+
-        //                                        'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
-        //                                        'When'  +":   "+ selected[i].when.bold()  +"<br>"+
-        //                                        'Where' +":   "+ selected[i].where.bold() +
-        //                                        selected[i].about +
-        //                                        selected[i].refs +
-        //                                        selected[i].acknow;
-        //                                         }}}}
-        //            populateSelect();
-                    //$("#select3").trigger('change', true);
-        //        });
+                function populateSelect() {
+                    var ele = document.getElementById('sel');
+                    selected.forEach(function(b) {
+                        ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})}
+                function show(id) {
+                    var msg = document.getElementById('msg');
+                    if (!id) {msg.innerHTML = "";
+                    } else {
+                        for (var i = 0; i < selected.length; i++) {
+                        if  (Number(id) === selected[i].ID) {
+                            msg.innerHTML = "<br><br>"+
+                                            'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
+                                            'When'  +":   "+ selected[i].when.bold()  +"<br>"+
+                                            'Where' +":   "+ selected[i].where.bold() +
+                                            selected[i].about +
+                                            selected[i].refs +
+                                            selected[i].acknow
+                                            ;}}}}
+                populateSelect()
+                //$("#select3").trigger('change', true);
             });
         </script>
 
