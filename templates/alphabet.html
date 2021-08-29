@@ -239,7 +239,20 @@
                     var stringArray = (new Function("return [" + value+ "];")());
                     console.log(stringArray);
                     });
-            var selected = eponyms
+            //var selected = eponyms
+            function topicFilter(taxonomy) {
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return eponyms.filter(item => {
+                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
+                        });
+                    };
+                    
+                //var selected = eponyms;
+            var selected = topicFilter(
+                        //[ stringArray //.toString
+                        [ "Endocrine",
+                        ]);
             function populateSelect() {
                 var ele = document.getElementById('sel');
                 selected.forEach(function(b) {
