@@ -236,9 +236,8 @@
             $('#select1').ready(function() {
                 let value = '\'' + $('#select1 option').map(function() {
                     return this.text}).get().join('\',\'') + '\'';
-                    var stringArray = (new Function("return [" + value+ "];")());
-                    console.log(stringArray);
-                    
+                var stringArray = (new Function("return [" + value+ "];")());
+                console.log(stringArray);
                 var selected = eponyms
                 function populateSelect() {
                     var ele = document.getElementById('sel');
@@ -259,7 +258,7 @@
                                             selected[i].acknow
                                             ;}}}}
                 populateSelect()
-            });
+                });
         </script>
 
 
@@ -271,7 +270,6 @@
                 $('#btn_select').addClass("btn btn-danger active");
                 $('#selector').fadeIn(400);
                 //$('#select3').empty(); //remove all child nodes       
-                
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).val()) + "\',";});
@@ -279,8 +277,12 @@
                     var stringArray = (new Function("return [" + select+ "];")());
                     console.log(stringArray); 
                 });
-                
+        </script>
 
+
+            
+                
+<script>
             //    function topicFilter(taxonomy) {
             //        taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
             //        return eponyms.filter(item => {
@@ -317,7 +319,7 @@
                 //$('#select3').append(newOption);
             //    $('#select3').trigger("chosen:updated");
             //    $('#select3').fadeIn(400);
-        </script>
+</script>
 
         <script>  ////////  SELECTED_SPECIALTIES (2)  ////////
             $('#select1').on('change', function() {
