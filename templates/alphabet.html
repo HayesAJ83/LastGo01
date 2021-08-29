@@ -238,27 +238,28 @@
                     return this.text}).get().join('\',\'') + '\'';
                     var stringArray = (new Function("return [" + value+ "];")());
                     console.log(stringArray);
-                    });
-            var selected = eponyms
-            function populateSelect() {
-                var ele = document.getElementById('sel');
-                selected.forEach(function(b) {
-                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})}
-            function show(id) {
-                var msg = document.getElementById('msg');
-                if (!id) {msg.innerHTML = "";
-                } else {
-                    for (var i = 0; i < selected.length; i++) {
-                    if  (Number(id) === selected[i].ID) {
-                        msg.innerHTML = "<br><br>"+
-                                        'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
-                                        'When'  +":   "+ selected[i].when.bold()  +"<br>"+
-                                        'Where' +":   "+ selected[i].where.bold() +
-                                        selected[i].about +
-                                        selected[i].refs +
-                                        selected[i].acknow
-                                        ;}}}}
-            populateSelect()
+                    
+                var selected = eponyms
+                function populateSelect() {
+                    var ele = document.getElementById('sel');
+                    selected.forEach(function(b) {
+                        ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})}
+                function show(id) {
+                    var msg = document.getElementById('msg');
+                    if (!id) {msg.innerHTML = "";
+                    } else {
+                        for (var i = 0; i < selected.length; i++) {
+                        if  (Number(id) === selected[i].ID) {
+                            msg.innerHTML = "<br><br>"+
+                                            'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
+                                            'When'  +":   "+ selected[i].when.bold()  +"<br>"+
+                                            'Where' +":   "+ selected[i].where.bold() +
+                                            selected[i].about +
+                                            selected[i].refs +
+                                            selected[i].acknow
+                                            ;}}}}
+                populateSelect()
+            });
         </script>
 
 
@@ -269,7 +270,7 @@
                 $('#btn_select').removeClass("btn btn-light");
                 $('#btn_select').addClass("btn btn-danger active");
                 $('#selector').fadeIn(400);
-                $('#select3').empty(); //remove all child nodes       
+                //$('#select3').empty(); //remove all child nodes       
                 
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
@@ -277,7 +278,9 @@
                     if(select != ""){select = select.substr(0);};
                     var stringArray = (new Function("return [" + select+ "];")());
                     console.log(stringArray); 
+                });
                 
+
             //    function topicFilter(taxonomy) {
             //        taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
             //        return eponyms.filter(item => {
@@ -314,8 +317,6 @@
                 //$('#select3').append(newOption);
             //    $('#select3').trigger("chosen:updated");
             //    $('#select3').fadeIn(400);
-            });
-
         </script>
 
         <script>  ////////  SELECTED_SPECIALTIES (2)  ////////
