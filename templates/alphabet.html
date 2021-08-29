@@ -268,7 +268,7 @@
                 $('#btn_select').removeClass("btn btn-light");
                 $('#btn_select').addClass("btn btn-danger active");
                 $('#selector').fadeIn(400);
-                $('#select3').empty(); //remove all child nodes       
+                //$('#select3').empty(); //remove all child nodes       
                 
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
@@ -370,7 +370,6 @@
                 $('#selector').fadeOut(400);
                 $('#btn_select').removeClass("btn btn-danger active");
                 $('#btn_select').addClass("btn btn-light");
-                $('#select3').fadeIn(400);
 
                 $('#select1').ready(function() {
                     let value = '\'' + $('#select1 option').map(function() {
