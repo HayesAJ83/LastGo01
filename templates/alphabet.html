@@ -282,8 +282,8 @@
                 
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
-                    select += "\'" + $.trim($(this).val()) + "\',";});
-                    if(select != ""){select = select.substr(0);};
+                        select += "\'" + $.trim($(this).val()) + "\',";});
+                        if(select != ""){select = select.substr(0);};
                     var stringArray = (new Function("return [" + select+ "];")());
                     console.log(stringArray); 
                 });
@@ -331,8 +331,8 @@
             $('#select1').on('change', function() {
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
-                    select += "\'" + $.trim($(this).text()) + "\',";});
-                    if(select != ""){select = select.substr(0);};
+                        select += "\'" + $.trim($(this).text()) + "\',";});
+                        if(select != ""){select = select.substr(0);};
                     var stringArray = (new Function("return [" + select+ "];")());
                     console.log(stringArray);
 
@@ -345,17 +345,17 @@
                     };
                     
                 //var selected = eponyms;
-                var selected = topicFilter(
+                var selected2 = topicFilter(
                         //[ stringArray //.toString
-                        [ "Endocrine",
+                        [ "Endocrine"
                         ]);
 
-                function populateSelect() {
-                    var ele = document.getElementById('sel2');
-                    selected.forEach(function(b) {
-                        ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})}
+                function populateSelect2() {
+                    var ele2 = document.getElementById('sel2');
+                    selected2.forEach(function(b) {
+                        ele2.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})}
                 function show(id) {
-                    var msg2 = document.getElementById('msg');
+                    var msg2 = document.getElementById('msg2');
                     if (!id) {msg2.innerHTML = "";
                     } else {
                         for (var i = 0; i < selected.length; i++) {
@@ -368,7 +368,7 @@
                                             selected[i].refs +
                                             selected[i].acknow
                                             ;}}}}
-                populateSelect()
+                populateSelect2()
                 $('#select4').fadeIn(400);
             });
         </script>
@@ -389,34 +389,23 @@
                     console.log(stringArray);
                     });
                 
-        //            function populateSelect() {
-        //                var ele = document.getElementById('sel');
-        //                eponyms.forEach(function(b) {
-        //                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-        //                    }
-
         //            function show(id) {
-        //            // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
         //                var msg = document.getElementById('msg');
         //                if (!id) {
         //                    msg.innerHTML = "";
-
         //                } else {
         //                    for (var i = 0; i < eponyms.length; i++) {
         //                    if (Number(id) === eponyms[i].ID) {
         //                        msg.innerHTML = "<br>"+
-        //                                        'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
-        //                                        'When'  +":   "+ eponyms[i].when.bold()  +"<br>"+
-        //                                        'Where' +":   "+ eponyms[i].where.bold() +
-        //                                        eponyms[i].about +
-        //                                        eponyms[i].refs +
+        //                                        'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+         
         //                                        eponyms[i].acknow;
         //                                          }}}}
         //            populateSelect();
         //            //$("#select3").trigger('change', true);
         //        });
+            
+                $('#select3').fadeIn(400);
             });
-            $('#select3').fadeIn(400);
         </script>
 
         <script src="/static/assets/js/theme.js"></script>
