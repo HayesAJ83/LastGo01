@@ -239,26 +239,26 @@
                     var stringArray = (new Function("return [" + value+ "];")());
                     console.log(stringArray);
                     });
-            //var selected = eponyms
-            //function populateSelect() {
-            //    var ele = document.getElementById('sel');
-            //    selected.forEach(function(b) {
-            //        ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})}
-            //function show(id) {
-            //    var msg = document.getElementById('msg');
-            //    if (!id) {msg.innerHTML = "";
-            //    } else {
-            //        for (var i = 0; i < selected.length; i++) {
-            //        if  (Number(id) === selected[i].ID) {
-            //            msg.innerHTML = "<br><br>"+
-            //                            'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
-            //                            'When'  +":   "+ selected[i].when.bold()  +"<br>"+
-            //                            'Where' +":   "+ selected[i].where.bold() +
-            //                            selected[i].about +
-            //                            selected[i].refs +
-            //                            selected[i].acknow
-            //                            ;}}}}
-            //populateSelect()
+            var selected = eponyms
+            function populateSelect() {
+                var ele = document.getElementById('sel');
+                selected.forEach(function(b) {
+                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})}
+            function show(id) {
+                var msg = document.getElementById('msg');
+                if (!id) {msg.innerHTML = "";
+                } else {
+                    for (var i = 0; i < selected.length; i++) {
+                    if  (Number(id) === selected[i].ID) {
+                        msg.innerHTML = "<br><br>"+
+                                        'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
+                                        'When'  +":   "+ selected[i].when.bold()  +"<br>"+
+                                        'Where' +":   "+ selected[i].where.bold() +
+                                        selected[i].about +
+                                        selected[i].refs +
+                                        selected[i].acknow
+                                        ;}}}}
+            populateSelect()
         </script>
 
 
@@ -270,6 +270,7 @@
                 $('#btn_select').addClass("btn btn-danger active");
                 $('#selector').fadeIn(400);
                 $("#select3").fadeOut(400);
+                $("#select3").fadeIn(400);
         
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
