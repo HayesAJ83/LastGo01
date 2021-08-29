@@ -328,27 +328,24 @@
         </script>
 
         <script>  ///  SELECTED_SPECIALTIES_2  ///
+            function topicFilter(taxonomy) {
+                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                return eponyms.filter(item => {
+                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                    return taxonomy.some(med => topic.includes(med));
+                    });
+                };
             $('#select1').on('change', function() {
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
                         select += "\'" + $.trim($(this).text()) + "\',";});
                         if(select != ""){select = select.substr(0);};
-                    var stringArray = (new Function("return [" + select+ "];")());
-                    console.log(stringArray);
+                var stringArray = (new Function("return [" + select+ "];")());
+                console.log(stringArray);
 
-                function topicFilter(taxonomy) {
-                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                    return eponyms.filter(item => {
-                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                        return taxonomy.some(med => topic.includes(med));
-                        });
-                    };
-                    
-                //var selected = eponyms;
                 var selected2 = topicFilter(
                         //[ stringArray //.toString
-                        [ "Endocrine"
-                        ]);
+                        [ "Endocrine" ]);
 
                 function populateSelect2() {
                     var ele2 = document.getElementById('sel2');
@@ -358,15 +355,15 @@
                     var msg2 = document.getElementById('msg2');
                     if (!id) {msg2.innerHTML = "";
                     } else {
-                        for (var i = 0; i < selected.length; i++) {
-                        if  (Number(id) === selected[i].ID) {
+                        for (var i = 0; i < selected2.length; i++) {
+                        if  (Number(id) === selected2[i].ID) {
                             msg2.innerHTML = "<br><br>"+
-                                            'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
-                                            'When'  +":   "+ selected[i].when.bold()  +"<br>"+
-                                            'Where' +":   "+ selected[i].where.bold() +
-                                            selected[i].about +
-                                            selected[i].refs +
-                                            selected[i].acknow
+                                            'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
+                                            'When'  +":   "+ selected2[i].when.bold()  +"<br>"+
+                                            'Where' +":   "+ selected2[i].where.bold() +
+                                            selected2[i].about +
+                                            selected2[i].refs +
+                                            selected2[i].acknow
                                             ;}}}}
                 populateSelect2()
                 $('#select4').fadeIn(400);
