@@ -232,15 +232,23 @@
         </script>
 
 
+
+
         <script> ///  DEFAULT_PAGE  ///
-            $('#select1').ready(function() {
-                let value = '\'' + $('#select1 option').map(function() {
-                    return this.text}).get().join('\',\'') + '\'';
-                var stringArray = (new Function("return [" + value+ "];")());
-                console.log(stringArray);
+            $(document)
+            .ready(function() {
+                $('#select1').ready(function() {
+                    let value = '\'' + $('#select1 option').map(function() {
+                            return this.text}).get().join('\',\'') + '\'';
+                    var stringArray = (new Function("return [" + value+ "];")());
+                    console.log(stringArray);
                 });
-            
-            $('#select1').ready(function() {
+            });
+        </script>
+        
+        <script>
+            $(document)
+            .ready(function() {
                 var selected = eponyms
                 function populateSelect() {
                     var ele = document.getElementById('sel');
