@@ -271,12 +271,12 @@
                 $('#selector').fadeIn(400);
                 $('#select3').empty(); //remove all child nodes       
                 
-            //    let select ="";
-            //    $("#select1").find('option:selected').each(function() {
-            //        select += "\'" + $.trim($(this).val()) + "\',";});
-            //        if(select != ""){select = select.substr(0);};
-            //        var stringArray = (new Function("return [" + select+ "];")());
-            //        console.log(stringArray); 
+                let select ="";
+                $("#select1").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).val()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                    var stringArray = (new Function("return [" + select+ "];")());
+                    console.log(stringArray); 
                 
             //    function topicFilter(taxonomy) {
             //        taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
