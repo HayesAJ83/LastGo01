@@ -318,7 +318,11 @@
                         options = `<option value="${ID}">${name}</option>`,
                         '<option value=""> -- eponyms -- </option>'
                         );
-                    console.log(el.innerHTML)
+                    tester = document.getElementById('SEL2').innerHTML += eponyms.reduce((options, {ID,name}) =>
+                        options = `<option value="${ID}">${name}</option>`,
+                        '<option value=""> -- eponyms -- </option>'
+                        );
+                    console.log(tester)
                     }
                 //selected2.forEach(function(b) {
                 //    el.innerHTML ='<option value="' + b.ID + '">' + b['name'] + '</option>';});
