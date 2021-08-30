@@ -312,10 +312,10 @@
                 console.log(selected2)
 
                 function populateSelect2() {
-                    var el = $('#sel2')[0];
+                    //var el = document.getElementById('sel2');
                     selected2.forEach(function(b) {
-                        el.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';});
-                    console.log("popSel2 functioning")
+                        document.getElementById('sel2').innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';});
+                    console.log("working?")
                     }
 
                 function show(id) {
