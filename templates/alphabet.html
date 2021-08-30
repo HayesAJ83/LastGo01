@@ -126,9 +126,9 @@
                             </select>
                             <p id="msg"></p>    
                         </div>
-                        <div class="col" id="select4"> <!-->style="display:none">-->
+                        <div class="col" id="select4"> <!--style="display:none">-->
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
-                            <select id="sel2" class="selectpicker show-tick" 
+                            <select id="SEL2" class="selectpicker show-tick" 
                                     data-style="btn-danger" data-header="Search list:" 
                                     data-width="340px" data-size="6"
                                     data-live-search="true" onchange="show(this.value);">
@@ -312,10 +312,10 @@
                 console.log(selected2)
 
                 function populateSelect2() {
-                    var el = document.getElementById('sel2');
+                    var el = document.getElementById('SEL2');
                     selected2.forEach(function(b) {
-                        el.innerHTML = '<option value="' + b.ID + '">' + b['name'] + '</option>';});
-                    console.log("working?")
+                        el.innerHTML =+ '<option value="' + b.ID + '">' + b['name'] + '</option>';});
+                    console.log(el.innerHTML)
                     }
 
                 function show(id) {
