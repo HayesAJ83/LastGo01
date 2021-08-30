@@ -312,9 +312,9 @@
                 console.log(selected2)
 
                 function populateSelect2() {
-                    //var el = document.getElementById('sel2');
+                    var el = document.getElementById('sel2');
                     selected2.forEach(function(b) {
-                        document.getElementById('sel2').innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';});
+                        el.innerHTML = '<option value="' + b.ID + '">' + b['name'] + '</option>';});
                     console.log("working?")
                     }
 
