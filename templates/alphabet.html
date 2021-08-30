@@ -305,13 +305,14 @@
                         return taxonomy.some(med => topic.includes(med));
                         });
                     }
+
                 var selected2 = topicFilter2(["General"]);
+                console.log(selected2)
 
                 function populateSelect2() {
                     var ele2 = document.getElementById('sel2');
                     selected2.forEach(function(b) {
                         ele2.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})}
-                
                 
                 function show(id) {
                     var msg2 = document.getElementById('msg2');
