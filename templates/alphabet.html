@@ -314,10 +314,14 @@
                 console.log(selected2)
 
                 function populateSelect2() {
-                    //var el = document.getElementById('SEL2');
-                    var test = selected2.forEach(function(b) {
-                        '<option value="' + b.ID + '">' + b['name'] + '</option>';});
-                    console.log(test)
+                    var el = document.getElementById('SEL2');
+                    el.innerHTML = eponyms.reduce((options, {
+                        ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`,
+                        '<option value="" selected></option>');
+                    //selected2.forEach(function(b) {
+                    //    el.innerHTML ='<option value="' + b.ID + '">' + b['name'] + '</option>';});
+                    console.log(el.innerHTML)
                     }
 
                 function show(id) {
