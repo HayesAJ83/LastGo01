@@ -290,13 +290,6 @@
         </script>
 
         <script>  ///  SELECTED_SPECIALTIES_2  ///
-            function topicFilter(taxonomy) {
-                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                return eponyms.filter(item => {
-                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                    return taxonomy.some(med => topic.includes(med));
-                    });
-                }
             $('#select1').on('change', function() {
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
@@ -304,15 +297,22 @@
                         if(select != ""){select = select.substr(0);};
                 var stringArray = (new Function("return [" + select+ "];")());
                 console.log(stringArray);
-
-                var selected2 = topicFilter(["General"]);
+                
+                function topicFilter2(taxonomy) {
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return eponyms.filter(item => {
+                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
+                        });
+                    }
+                var selected2 = topicFilter2(["General"]);
 
                 function populateSelect2() {
                     var ele2 = document.getElementById('sel2');
                     selected2.forEach(function(b) {
                         ele2.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})}
                 
-                $('#select4').fadeIn(400);
+                
                 function show(id) {
                     var msg2 = document.getElementById('msg2');
                     if (!id) {msg2.innerHTML = "";
@@ -328,6 +328,7 @@
                                             selected2[i].acknow
                                             ;}}}}
                 populateSelect2()
+                $('#select4').fadeIn(1000);
             });
         </script>
 
