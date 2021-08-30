@@ -314,13 +314,13 @@
                 console.log(selected2)
 
                 function populateSelect2() {
-                    document.getElementById('SEL2').innerHTML += eponyms.reduce((options, {ID,name}) =>
-                        options = `<option value="${ID}">${name}</option>`,
+                    document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`,
                         '<option value=""> -- eponyms -- </option>'
                         );
                     tester = document.getElementById('SEL2').innerHTML 
-                    += selected2.reduce((options, {ID,name}) =>
-                        options = `<option value="${ID}">${name}</option>`,
+                    = selected2.reduce((options, {ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`,
                         '<option value=""> -- eponyms -- </option>'
                         );
                     console.log(tester)
