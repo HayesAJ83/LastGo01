@@ -296,7 +296,7 @@
                         select += "\'" + $.trim($(this).text()) + "\',";});
                         if(select != ""){select = select.substr(0);};
                 var stringArray = (new Function("return [" + select+ "];")());
-                console.log(stringArray); //works Array [chosen]
+                console.log(stringArray); //works Array [chosen options]
                 
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
@@ -313,6 +313,7 @@
 
                 function populateSelect2() {
                     var ele2 = document.getElementById('sel2');
+                    console.log("popSel2 functioning")
                     selected2.forEach(function(b) {
                         ele2.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})}
                 
