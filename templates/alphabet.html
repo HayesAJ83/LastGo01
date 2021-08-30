@@ -306,9 +306,10 @@
                         });
                     }
                 
-                var selected2 = topicFilter2([stringArray]);
+                var selected2 = topicFilter2(["Endocrine"]); //doesn't work for stringArray
                 //console.log(eponyms) //works Array(32)
-                console.log(selected2) // **!empty Array
+                //console.log(selected2) // **!empty Array [stringArray]
+                console.log(selected2)
 
                 function populateSelect2() {
                     var ele2 = document.getElementById('sel2');
