@@ -203,7 +203,9 @@
 
         <script>
             $(document).ready(function() {
-                $('.js-example-basic-single').select2()});
+                $('.js-example-basic-single').select2(
+                    {placeholder: 'Select an option'}
+                )});
                 tail.select('#select2', {
                     width: 340,});
         </script>
@@ -335,6 +337,7 @@
                         );
                     console.log(tester)
                     $('#SEL2').select2()
+                    $('#SEL2').fadeIn(400);
                     }
                 //selected2.forEach(function(b) {
                 //    el.innerHTML ='<option value="' + b.ID + '">' + b['name'] + '</option>';});
