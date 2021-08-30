@@ -362,10 +362,11 @@
             $('#btn_all').on('click', function() {
                 $('#btn_all').removeClass("btn btn-light");
                 $('#btn_all').addClass("btn btn-danger active");
-                $('#selector').fadeOut(400);
                 $('#btn_select').removeClass("btn btn-danger active");
                 $('#btn_select').addClass("btn btn-light");
+                $('#selector').fadeOut(400);
                 $('#select9').fadeOut(1000);
+                $('#select3').fadeIn(400);
 
                 $('#select1').ready(function() {
                     let value = '\'' + $('#select1 option').map(function() {
