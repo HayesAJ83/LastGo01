@@ -252,7 +252,9 @@
             function populateSelect() {
                 var ele = document.getElementById('sel');
                 selected.forEach(function(b) {
-                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})}
+                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+                    console.log(ele.innerHTML)
+                }
             function show(id) {
                 var msg = document.getElementById('msg');
                 if (!id) {msg.innerHTML = "";
