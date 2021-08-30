@@ -146,7 +146,6 @@
                         </div> -->
                     </div>
                 </div>
-                <!-- <select id="SEL2"></select> -->
             </section>
             <!-- End of Section -->
         </main>
@@ -291,7 +290,7 @@
                 $('#btn_select').removeClass("btn btn-light");
                 $('#btn_select').addClass("btn btn-danger active");
                 $('#selector').fadeIn(400);
-                //$('#select3').fadeOut(400);      
+                    
                 
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
@@ -322,13 +321,12 @@
                 
                 var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
                 console.log(eponyms) //works Array(32)
-                //console.log(selected2) // **!empty Array [stringArray]
                 console.log(selected2)
 
                 function populateSelect2() {
                     document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
                         options += `<option value="${ID}">${name}</option>`,
-                        '<option value=""> -- eponyms -- </option>'
+                        '<option value=""> -- select -- </option>'
                         );
                     tester = document.getElementById('SEL2').innerHTML 
                     = selected2.reduce((options, {ID,name}) =>
@@ -337,11 +335,8 @@
                         );
                     console.log(tester)
                     $('#SEL2').select2()
-                    
                     }
-                //selected2.forEach(function(b) {
-                //    el.innerHTML ='<option value="' + b.ID + '">' + b['name'] + '</option>';});
-
+       
                 function show(id) {
                     var msg2 = document.getElementById('msg2');
                     if (!id) {msg2.innerHTML = "";
