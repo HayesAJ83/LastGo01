@@ -126,17 +126,18 @@
                             </select>
                             <p id="msg"></p>    
                         </div>
-                        <div class="col">
+                        <div class="col" style="display:none">
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                                 <select id="SEL2" data-width="340px"
                                 data-header="Search list:" data-live-search="true"
                                 data-style="btn-danger" data-size="6"
-                                ></select>
-                                <p id="msg2"></p>
+                                >
+                            </select>
+                            <p id="msg2"></p>
                         </div>
                         
                         <div class="col" id="select4"> <!--style="display:none">-->
-                            <select id="SEL2" class="selectpicker show-tick" 
+                            <select id="SEL3" class="selectpicker show-tick" 
                                     data-style="btn-danger" data-header="Search list:" 
                                     data-width="340px" data-size="6"
                                     data-live-search="true" onchange="show(this.value);">
@@ -333,7 +334,7 @@
                         '<option value=""> -- eponyms -- </option>'
                         );
                     console.log(tester)
-                    $('#SEL2').selectpicker()
+                    $('#SEL2').select2()
                     }
                 //selected2.forEach(function(b) {
                 //    el.innerHTML ='<option value="' + b.ID + '">' + b['name'] + '</option>';});
@@ -353,7 +354,7 @@
                                             selected2[i].acknow
                                             ;}}}}
                 populateSelect2()
-                $('#select4').fadeIn(1000);
+                //$('#select4').fadeIn(1000);
             });
         </script>
 
