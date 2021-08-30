@@ -292,8 +292,8 @@
                 $('#btn_select').addClass("btn btn-danger active");
                 $('#selector').fadeIn(400);
                 $('#select3').fadeOut(400);
+                $('#Select9').fadeIn(400);
                     
-                
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
                         select += "\'" + $.trim($(this).val()) + "\',";});
@@ -305,7 +305,6 @@
 
         <script>  ///  SELECTED_SPECIALTIES_2  ///
             $('#select1').on('change', function() {
-                $('#Select9').fadeIn(400);
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
@@ -326,8 +325,7 @@
                 function populateSelect2() {
                     document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
                         options += `<option value="${ID}">${name}</option>`,
-                        '<option value=""> -- select -- </option>'
-                        );
+                        '<option value=""> -- select -- </option>');
                     $('#SEL2').select2()
                     }
        
