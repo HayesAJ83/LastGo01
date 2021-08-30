@@ -126,7 +126,7 @@
                             </select>
                             <p id="msg"></p>    
                         </div>
-                        <div class="col" style="display:none">
+                        <div class="col" id="select9" style="display:none">
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                                 <select id="SEL2" data-width="340px"
                                 data-header="Search list:" data-live-search="true"
@@ -292,7 +292,7 @@
                 $('#btn_select').removeClass("btn btn-light");
                 $('#btn_select').addClass("btn btn-danger active");
                 $('#selector').fadeIn(400);
-                $('#select3').fadeOut(400);      
+                //$('#select3').fadeOut(400);      
                 
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
@@ -305,6 +305,7 @@
 
         <script>  ///  SELECTED_SPECIALTIES_2  ///
             $('#select1').on('change', function() {
+                $('#Select9').fadeIn(400);
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
@@ -337,7 +338,7 @@
                         );
                     console.log(tester)
                     $('#SEL2').select2()
-                    $('#SEL2').fadeIn(400);
+                    
                     }
                 //selected2.forEach(function(b) {
                 //    el.innerHTML ='<option value="' + b.ID + '">' + b['name'] + '</option>';});
@@ -357,7 +358,6 @@
                                             selected2[i].acknow
                                             ;}}}}
                 populateSelect2()
-                //$('#select4').fadeIn(1000);
             });
         </script>
 
