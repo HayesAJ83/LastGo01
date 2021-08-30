@@ -97,7 +97,7 @@
                     <hr style="height:1px; visibility:hidden">
                     <form method="POST">
                         <div class="row align-items-center text-center">
-                            <div class="col" id="selector"> <!-- style="display:none"> -->
+                            <div class="col" id="selector" style="display:none">
                                 <select id="select1" class="selectpicker"
                                     name="min_multi_select" 
                                     multiple title=" -- specialties -- " 
@@ -278,7 +278,7 @@
                 $('#btn_select').removeClass("btn btn-light");
                 $('#btn_select').addClass("btn btn-danger active");
                 $('#selector').fadeIn(400);
-                $('#select3').fadeOut(100);      
+                $('#select3').fadeOut(400);      
                 
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
@@ -287,32 +287,6 @@
                     var stringArray = (new Function("return [" + select+ "];")());
                     console.log(stringArray); 
                 });
-                
-                
-            //    function populateSelect() {
-            //        var ele = document.getElementById('sel');
-            //        selected.forEach(function(b) {
-            //            ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})}
-            //    function show(id) {
-            //        var msg = document.getElementById('msg');
-            //        if (!id) {msg.innerHTML = "";
-            //        } else {
-            //            for (var i = 0; i < selected.length; i++) {
-            //            if  (Number(id) === selected[i].ID) {
-            //                msg.innerHTML = "<br><br>"+
-            //                                'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
-            //                                'When'  +":   "+ selected[i].when.bold()  +"<br>"+
-            //                                'Where' +":   "+ selected[i].where.bold() +
-            //                                selected[i].about +
-            //                                selected[i].refs +
-            //                                selected[i].acknow
-            //                                ;}}}}
-            //    populateSelect()
-    
-                //var newOption = $('<option value="1">test</option>');
-                //$('#select3').append(newOption);
-            //    $('#select3').trigger("chosen:updated");
-            //    $('#select3').fadeIn(400);
         </script>
 
         <script>  ///  SELECTED_SPECIALTIES_2  ///
@@ -331,7 +305,7 @@
                 var stringArray = (new Function("return [" + select+ "];")());
                 console.log(stringArray);
 
-                var selected2 = topicFilter([ stringArray ]);
+                var selected2 = topicFilter([ "General" ]);
 
                 function populateSelect2() {
                     var ele2 = document.getElementById('sel2');
