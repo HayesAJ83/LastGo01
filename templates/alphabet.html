@@ -128,10 +128,11 @@
                         </div>
                         <div class="col">
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
-                                <select id="SEL2" data-width="340px" class="selectpicker show-tick"
+                                <select id="SEL2" data-width="340px"
                                 data-header="Search list:" data-live-search="true"
                                 data-style="btn-danger" data-size="6"
                                 ></select>
+                                <p id="msg2"></p>
                         </div>
                         
                         <div class="col" id="select4"> <!--style="display:none">-->
@@ -332,7 +333,7 @@
                         '<option value=""> -- eponyms -- </option>'
                         );
                     console.log(tester)
-                    $('#SEL2').select2()
+                    $('#SEL2').selectpicker()
                     }
                 //selected2.forEach(function(b) {
                 //    el.innerHTML ='<option value="' + b.ID + '">' + b['name'] + '</option>';});
