@@ -126,7 +126,7 @@
                             </select>
                             <p id="msg"></p>    
                         </div>
-                        <div class="col" id="select9" style="display:none">
+                        <div class="col" id="select9"> <!--style="display:none">-->
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                                 <select id="SEL2" data-width="340px"
                                 data-header="Search list:" data-live-search="true"
@@ -136,15 +136,14 @@
                             <p id="msg2"></p>
                         </div>
                         
-                        <div class="col" id="select4"> <!--style="display:none">-->
+                        <!--<div class="col" id="select4" style="display:none">
                             <select id="SEL3" class="selectpicker show-tick" 
                                     data-style="btn-danger" data-header="Search list:" 
                                     data-width="340px" data-size="6"
                                     data-live-search="true" onchange="show(this.value);">
-                                <!-- <option value=""> -- eponyms -- </option> -->
-                            </select>
-                            <p id="msg2"></p>    
-                        </div>
+                                
+                            </select>    
+                        </div> -->
                     </div>
                 </div>
                 <!-- <select id="SEL2"></select> -->
@@ -370,7 +369,7 @@
                 $('#selector').fadeOut(400);
                 $('#btn_select').removeClass("btn btn-danger active");
                 $('#btn_select').addClass("btn btn-light");
-                $('#select4').fadeOut(100);
+                //$('#select4').fadeOut(100);
 
                 $('#select1').ready(function() {
                     let value = '\'' + $('#select1 option').map(function() {
