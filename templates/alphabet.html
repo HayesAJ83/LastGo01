@@ -313,10 +313,11 @@
 
                 function populateSelect2() {
                     var ele2 = document.getElementById('sel2');
-                    console.log("popSel2 functioning")
                     selected2.forEach(function(b) {
-                        ele2.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})}
-                
+                        ele2.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';});
+                    console.log("popSel2 functioning")
+                    }
+
                 function show(id) {
                     var msg2 = document.getElementById('msg2');
                     if (!id) {msg2.innerHTML = "";
