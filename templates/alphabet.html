@@ -315,7 +315,7 @@
 
                 function populateSelect2() {
                     var el = document.getElementById('SEL2');
-                    selected2.forEach(function(b) {
+                    $.each(selected2, function(b) {
                         el.innerHTML ='<option value="' + b.ID + '">' + b['name'] + '</option>';});
                     console.log(el.innerHTML)
                     }
