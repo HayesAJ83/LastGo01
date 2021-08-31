@@ -99,16 +99,11 @@
                         <div class="row align-items-center text-center">
                             <div class="col" id="selector">
                                 <select id="select1" class="js-example-basic-multiple" 
-                                    multiple="multiple"
-                                    data-header="Choose specialties:"
-                                    name="min_multi_select" 
-                                    multiple title=" -- specialties -- " 
-                                    data-width="340px"
-                                    multiple data-actions-box="true"
-                                    data-size="6"
-                                    multiple data-selected-text-format="count > 3"
+                                    multiple="multiple" data-width="340px"
+                                    name="min_multi_select" data-size="10"
                                     >
                                     {% for spec in specs %}
+                                        <option value="">Select specialteez</option>
                                         <option value="{{ spec }}">{{ spec }}</option>
                                     {% endfor %}
                                 </select>
@@ -136,7 +131,7 @@
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                                 <select id="SEL2" data-width="340px"
                                 data-header="Search list:" data-live-search="true"
-                                data-style="btn-danger" data-size="6"
+                                data-style="btn-danger" data-size="10"
                                 >
                             </select>
                             <p id="msg2"></p>
@@ -199,10 +194,10 @@
         <script>
             $(document).ready(function() {
                 $('.js-example-basic-single').select2({
-                    placeholder: "Select a state",
+                    placeholder: "Eponyms",
                     allowClear: true})
                 $('.js-example-basic-multiple').select2({
-                    placeholder: "Select a state",
+                    placeholder: "Specialties",
                     allowClear: true})
             });
                 tail.select('#select2', {
