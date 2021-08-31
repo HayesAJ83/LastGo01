@@ -136,6 +136,16 @@
                         </div>
                     </div>
                 </div>
+                <div class="container" style="height:300px">
+                    <div class="row align-items-center text-center">
+                        <div class="col" id="select2">
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
+                                <select id="SEL3" data-width="340px">
+                            </select>
+                            <p id="msg3"></p>
+                        </div>
+                    </div>
+                </div>
             </section>
             <!-- End of Section -->
         </main>
@@ -198,8 +208,8 @@
                     theme: "classic", maximumSelectionLength: 3,
                     allowClear: true})
             });
-                tail.select('#select2', {
-                    width: 380,});
+                //tail.select('#select2', {
+                //    width: 380,});
         </script>
 
         <script>
@@ -322,11 +332,11 @@
                         document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
                             options += `<option value="${ID}">${name}</option>`,
                             '<option value=""> -- select -- </option>');
-                        $('#SEL2').select2()
+                        $('#SEL3').select2()
                         }
         
                     function show(id) {
-                        var msg2 = document.getElementById('msg2');
+                        var msg2 = document.getElementById('msg3');
                         if (!id) {msg2.innerHTML = "";
                         } else {
                             for (var i = 0; i < selected2.length; i++) {
@@ -352,7 +362,6 @@
                 $('#btn_select').removeClass("btn btn-danger active");
                 $('#btn_select').addClass("btn btn-light");
                 $('#selector').fadeOut(400);
-                $('#select9').fadeOut(400);
                 $('#select3').fadeIn(400);
 
                 $('#select1').ready(function() {
