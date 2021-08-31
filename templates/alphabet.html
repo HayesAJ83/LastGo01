@@ -198,8 +198,12 @@
 
         <script>
             $(document).ready(function() {
-                $('.js-example-basic-single').select2()
-                $('.js-example-basic-multiple').select2()
+                $('.js-example-basic-single').select2({
+                    placeholder: "Select a state",
+                    allowClear: true})
+                $('.js-example-basic-multiple').select2({
+                    placeholder: "Select a state",
+                    allowClear: true})
             });
                 tail.select('#select2', {
                     width: 340,});
@@ -283,14 +287,18 @@
 
         <script>  ///  SELECTED_SPECIALTIES_1  ///
             $('#btn_select').on('click', function() {
-                $('.js-example-basic-multiple').select2()
+                $('.js-example-basic-multiple').select2({
+                    placeholder: "Select a state",
+                    allowClear: true})
                 $('#btn_all').removeClass("btn btn-danger active");
                 $('#btn_all').addClass("btn btn-light");
                 $('#btn_select').removeClass("btn btn-light");
                 $('#btn_select').addClass("btn btn-danger active");
                 $('#selector').fadeIn(400);
-                $('.js-example-basic-single').select2()
-                $('#select3').fadeOut(400);
+                $('.js-example-basic-single').select2({
+                    placeholder: "Select a state",
+                    allowClear: true})
+                //$('#select3').fadeOut(400);
                 $('#Select9').fadeIn(400);
                     
                 let select ="";
