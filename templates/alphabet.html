@@ -288,7 +288,7 @@
                 $('#selector').fadeIn(400);
                 
                 //$('#select3').fadeOut(400);
-                $('#Select9').fadeIn(400);
+                
                     
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
@@ -300,49 +300,52 @@
         </script>
 
         <script>  ///  SELECTED_SPECIALTIES_2  ///
-            $('#select1').on('change', function() {
-                let select ="";
-                $("#select1").find('option:selected').each(function() {
-                    select += "\'" + $.trim($(this).text()) + "\',";});
-                    if(select != ""){select = select.substr(0);};
-                var stringArray = (new Function("return [" + select+ "];")());
-                
-                function topicFilter2(taxonomy) {
-                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                    return eponyms.filter(item => {
-                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                        return taxonomy.some(med => topic.includes(med));
-                        });
-                    }
-                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-                console.log(eponyms) //works Array(32)
-                console.log(selected2)
+            $(document)
+                .ready(function() {
+                $('#select1').on('change', function() {
+                    $('#Select9').fadeIn(400);
+                    let select ="";
+                    $("#select1").find('option:selected').each(function() {
+                        select += "\'" + $.trim($(this).text()) + "\',";});
+                        if(select != ""){select = select.substr(0);};
+                    var stringArray = (new Function("return [" + select+ "];")());
+                    
+                    function topicFilter2(taxonomy) {
+                        taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                        return eponyms.filter(item => {
+                            let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                            return taxonomy.some(med => topic.includes(med));
+                            });
+                        }
+                    var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+                    console.log(eponyms) //works Array(32)
+                    console.log(selected2)
 
-                function populateSelect2() {
-                    document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
-                        options += `<option value="${ID}">${name}</option>`,
-                        '<option value=""> -- select -- </option>');
-                    $('#SEL2').select2()
-                    }
-       
-                function show(id) {
-                    var msg2 = document.getElementById('msg2');
-                    if (!id) {msg2.innerHTML = "";
-                    } else {
-                        for (var i = 0; i < selected2.length; i++) {
-                        if  (Number(id) === selected2[i].ID) {
-                            msg2.innerHTML = "<br><br>"+
-                                            'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
-                                            'When'  +":   "+ selected2[i].when.bold()  +"<br>"+
-                                            'Where' +":   "+ selected2[i].where.bold() +
-                                            selected2[i].about +
-                                            selected2[i].refs +
-                                            selected2[i].acknow
-                                            ;}}}}
-                populateSelect2()
+                    function populateSelect2() {
+                        document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
+                            options += `<option value="${ID}">${name}</option>`,
+                            '<option value=""> -- select -- </option>');
+                        $('#SEL2').select2()
+                        }
+        
+                    function show(id) {
+                        var msg2 = document.getElementById('msg2');
+                        if (!id) {msg2.innerHTML = "";
+                        } else {
+                            for (var i = 0; i < selected2.length; i++) {
+                            if  (Number(id) === selected2[i].ID) {
+                                msg2.innerHTML = "<br><br>"+
+                                                'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
+                                                'When'  +":   "+ selected2[i].when.bold()  +"<br>"+
+                                                'Where' +":   "+ selected2[i].where.bold() +
+                                                selected2[i].about +
+                                                selected2[i].refs +
+                                                selected2[i].acknow
+                                                ;}}}}
+                    populateSelect2()
+                });
             });
         </script>
-
 
         <script>
         ///////  RETURN_TO_ALL  ///////
