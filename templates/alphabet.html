@@ -101,6 +101,7 @@
                                 <select id="select1" class="js-example-basic-multiple" 
                                     multiple="multiple" style="width: 340px; height: 120px"
                                     name="min_multi_select">
+                                        <option value=""> -- choose from specialties -- </option>
                                     {% for spec in specs %}
                                         <option value="{{ spec }}">{{ spec }}</option>
                                     {% endfor %}
