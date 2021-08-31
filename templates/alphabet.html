@@ -98,12 +98,10 @@
                     <form method="POST">
                         <div class="row align-items-center text-center">
                             <div class="col" id="selector">
-                                <label for="select1">
-                                    Select specialties
+                                <label for="select1">Choose specialties: <br>
                                     <select 
                                     id="select1" class="js-example-basic-multiple js-states form-control"  
-                                        multiple="multiple"
-                                        name="min_multi_select">
+                                        multiple="multiple" name="min_multi_select" style="width: 100%">
                                         {% for spec in specs %}
                                             <option value="{{ spec }}">{{ spec }}</option>
                                         {% endfor %}
@@ -319,8 +317,8 @@
 
                 function populateSelect2() {
                     document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
-                        options += `<option value="${ID}">${name}</option>`);
-                        //'<option value=""> -- select -- </option>');
+                        options += `<option value="${ID}">${name}</option>`,
+                        '<option value=""> -- select -- </option>');
                     $('#SEL2').select2()
                     }
        
