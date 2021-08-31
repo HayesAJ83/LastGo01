@@ -96,17 +96,20 @@
                     </div>
                     <hr style="height:1px; visibility:hidden">
                     <form method="POST">
-                        <div class="row align-items-center text-center">
-                            <div class="col" id="selector">
-                                <label for="select1">Choose specialties of interest in box: <br>
-                                    <select 
-                                    id="select1" class="js-example-basic-multiple js-states form-control"  
-                                        multiple="multiple" name="min_multi_select" style="width:120%">
-                                        {% for spec in specs %}
-                                            <option value="{{ spec }}">{{ spec }}</option>
-                                        {% endfor %}
-                                    </select>
-                                </label>
+                        <div class="container">
+                            <div class="row align-items-center text-center">
+                                <div class="col" id="selector">
+                                    <h1 class="text-black mb-2 fs-1" style="height:30px">Specialties</h1>
+                                    <label for="select1">Select specialties of interest in box: <br>
+                                        <select
+                                        id="select1" class="js-example-basic-multiple js-states form-control"  
+                                            multiple="multiple" name="min_multi_select" style="width:100%">
+                                            {% for spec in specs %}
+                                                <option value="{{ spec }}">{{ spec }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </form>
