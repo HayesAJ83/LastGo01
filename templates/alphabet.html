@@ -103,7 +103,6 @@
                                     name="min_multi_select" data-size="10"
                                     >
                                     {% for spec in specs %}
-                                        <option value="">Select specialteez</option>
                                         <option value="{{ spec }}">{{ spec }}</option>
                                     {% endfor %}
                                 </select>
@@ -194,10 +193,10 @@
         <script>
             $(document).ready(function() {
                 $('.js-example-basic-single').select2({
-                    placeholder: "Eponyms",
+                    placeholder: " -- Eponyms -- ",
                     allowClear: true})
                 $('.js-example-basic-multiple').select2({
-                    placeholder: "Specialties",
+                    placeholder: " -- Specialties -- ",
                     allowClear: true})
             });
                 tail.select('#select2', {
