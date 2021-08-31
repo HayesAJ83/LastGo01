@@ -100,6 +100,7 @@
                             <div class="col" id="selector">
                                 <select id="select1" class="js-example-basic-multiple" 
                                     multiple="multiple"
+                                    data-header="Choose specialties:"
                                     name="min_multi_select" 
                                     multiple title=" -- specialties -- " 
                                     data-width="340px"
@@ -282,11 +283,13 @@
 
         <script>  ///  SELECTED_SPECIALTIES_1  ///
             $('#btn_select').on('click', function() {
+                $('.js-example-basic-multiple').select2()
                 $('#btn_all').removeClass("btn btn-danger active");
                 $('#btn_all').addClass("btn btn-light");
                 $('#btn_select').removeClass("btn btn-light");
                 $('#btn_select').addClass("btn btn-danger active");
                 $('#selector').fadeIn(400);
+                $('.js-example-basic-single').select2()
                 $('#select3').fadeOut(400);
                 $('#Select9').fadeIn(400);
                     
