@@ -255,13 +255,13 @@
         <script> ///  DEFAULT_PAGE_2  ///
             var selected = eponyms
             function populateSelect() {
-                var ele = document.getElementById('sel');
+                var ele = document.getElementById('SEL2');
                 selected.forEach(function(b) {
                     ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
                     console.log(ele.innerHTML)
                 }
             function show(id) {
-                var msg = document.getElementById('msg');
+                var msg = document.getElementById('msg2');
                 if (!id) {msg.innerHTML = "";
                 } else {
                     for (var i = 0; i < selected.length; i++) {
@@ -280,16 +280,13 @@
 
         <script>  ///  SELECTED_SPECIALTIES_1  ///
             $('#btn_select').on('click', function() {
-                
                 $('#btn_all').removeClass("btn btn-danger active");
                 $('#btn_all').addClass("btn btn-light");
                 $('#btn_select').removeClass("btn btn-light");
                 $('#btn_select').addClass("btn btn-danger active");
                 $('#selector').fadeIn(400);
-                
                 //$('#select3').fadeOut(400);
                 
-                    
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
                         select += "\'" + $.trim($(this).val()) + "\',";});
