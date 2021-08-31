@@ -96,12 +96,12 @@
                     </div>
                     <hr style="height:1px; visibility:hidden">
                     <form method="POST">
-                        <div class="container">
+                        <div class="row align-items-center text-center">
                             <div class="col" id="selector">
-                                <label for="select1">Add specialties of interest here: <br>
+                                <label for="select1">Choose specialties of interest in box: <br>
                                     <select 
                                     id="select1" class="js-example-basic-multiple js-states form-control"  
-                                        multiple="multiple" name="min_multi_select" style="width:110%">
+                                        multiple="multiple" name="min_multi_select" style="width:120%">
                                         {% for spec in specs %}
                                             <option value="{{ spec }}">{{ spec }}</option>
                                         {% endfor %}
