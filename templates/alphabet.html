@@ -136,7 +136,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container" style="height:300px">
+                <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col" id="select2">
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
@@ -371,21 +371,20 @@
                     console.log(stringArray);
                     });
                 
-        //            function show(id) {
-        //                var msg = document.getElementById('msg');
-        //                if (!id) {
-        //                    msg.innerHTML = "";
-        //                } else {
-        //                    for (var i = 0; i < eponyms.length; i++) {
-        //                    if (Number(id) === eponyms[i].ID) {
-        //                        msg.innerHTML = "<br>"+
-        //                                        'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+         
-        //                                        eponyms[i].acknow;
-        //                                          }}}}
-        //            populateSelect();
-        //            //$("#select3").trigger('change', true);
-        //        });
-            });
+                    function show(id) {
+                        var msg = document.getElementById('msg');
+                        if (!id) {
+                            msg.innerHTML = "";
+                        } else {
+                            for (var i = 0; i < eponyms.length; i++) {
+                            if (Number(id) === eponyms[i].ID) {
+                                msg.innerHTML = "<br>"+
+                                                'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+         
+                                                eponyms[i].acknow;
+                                                  }}}}
+                    populateSelect();
+                    $("#select3").trigger('change', true);
+                });
         </script>
 
         <script src="/static/assets/js/theme.js"></script>
