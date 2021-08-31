@@ -99,9 +99,8 @@
                         <div class="row align-items-center text-center">
                             <div class="col" id="selector">
                                 <select id="select1" class="js-example-basic-multiple" 
-                                    multiple="multiple" style="height: 200px"
+                                    multiple="multiple"
                                     name="min_multi_select">
-                                        <option value=""> -- choose from specialties -- </option>
                                     {% for spec in specs %}
                                         <option value="{{ spec }}">{{ spec }}</option>
                                     {% endfor %}
@@ -118,7 +117,7 @@
                                     data-style="btn-danger" data-header="Search list:" 
                                     data-width="340px" data-size="6"
                                     data-live-search="true" onchange="show(this.value);">
-                                <option value=""> -- eponyms -- </option>
+                                
                             </select>
                             <p id="msg"></p>    
                         </div>
@@ -316,8 +315,8 @@
 
                 function populateSelect2() {
                     document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
-                        options += `<option value="${ID}">${name}</option>`,
-                        '<option value=""> -- select -- </option>');
+                        options += `<option value="${ID}">${name}</option>`);
+                        //'<option value=""> -- select -- </option>');
                     $('#SEL2').select2()
                     }
        
