@@ -347,7 +347,14 @@
                 populateSelect2()
 
                 $('#select4').fadeIn(1000);
-            });
+
+                $('.selectpicker show-tick').change(function() {
+		        alert($(this).val());
+                });
+                $('#SEL2').html(tester);
+                // here's where we actually initiate the picker plugin
+                $('.selectpicker show-tick').selectpicker('render');
+                });
         </script>
 
 
@@ -390,14 +397,12 @@
             $('.mycustompicker').change(function() {
 		        alert($(this).val());
 		     });
-
 		    // add some options
             var result = '';
 		    for (var i = 0; i < 5; i++) {
 		    result += '<option value=' + i + '>' + i + '</option>';
 		    $('#cat').html(result);
 		    }
-
 		    // here's where we actually initiate the picker plugin
 		    $('.mycustompicker').selectpicker('render');
         </script>
