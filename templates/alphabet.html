@@ -136,6 +136,8 @@
                             </select>
                             <p id="msg2"></p>    
                         </div>
+                        <select id="cat" class="mycustompicker">
+                        </select>
                     </div>
                 </div>
             </section>
@@ -343,6 +345,7 @@
                                             selected2[i].acknow
                                             ;}}}}
                 populateSelect2()
+
                 $('#select4').fadeIn(1000);
             });
         </script>
@@ -382,6 +385,21 @@
             
                 $('#select3').fadeIn(400);
             });
+        </script>
+        <script>
+            $('.mycustompicker').change(function() {
+		        alert($(this).val());
+		     });
+
+		    // add some options
+            var result = '';
+		    for (var i = 0; i < 5; i++) {
+		    result += '<option value=' + i + '>' + i + '</option>';
+		    $('#cat').html(result);
+		    }
+
+		    // here's where we actually initiate the picker plugin
+		    $('.mycustompicker').selectpicker('render');
         </script>
 
         <script src="/static/assets/js/theme.js"></script>
