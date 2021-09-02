@@ -114,7 +114,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="container">
+                <!-- <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col" id="select3">
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
@@ -127,23 +127,23 @@
                             <p id="msg"></p>    
                         </div>
                     </div>
-                </div>
-                <!-- <div class="container">
+                </div> -->
+                <div class="container">
                     <div class="row align-items-center text-center">
-                        <div class="col" id="select4" style="display:none">
+                        <div class="col" id="select4"> <!--style="display:none">-->
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                             <select id="SEL2" class="selectpicker show-tick" 
                                     data-style="btn-danger" data-header="Search list:" 
                                     data-width="340px" data-size="6"
                                     data-live-search="true" onchange="show(this.value);">
-                                <option value=""> -- eponyms -- </option>
+                                <!-- <option value=""> -- eponyms -- </option> -->
                             </select>
                             <p id="msg2"></p>    
                         </div>
                         <select id="cat" class="mycustompicker">
                         </select>
                     </div>
-                </div> -->
+                </div>
             </section>
             <!-- End of Section -->
         </main>
@@ -299,81 +299,56 @@
 
         <script>  ///  SELECTED_SPECIALTIES_2  ///
             $('#select1').on('change', function() {
-                var selected = eponyms
-                function populateSelect() {
-                    var ele = document.getElementById('sel');
-                    selected.forEach(function(b) {
-                        ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-                        console.log(ele.innerHTML)
+                let select ="";
+                $("#select1").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select+ "];")());
+                console.log(stringArray); //works Array [chosen options]
+                
+                function topicFilter2(taxonomy) {
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return eponyms.filter(item => {
+                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
+                        });
                     }
-                function show(id) {
-                    var msg = document.getElementById('msg');
-                    if (!id) {msg.innerHTML = "";
-                    } else {
-                        for (var i = 0; i < selected.length; i++) {
-                        if  (Number(id) === selected[i].ID) {
-                            msg.innerHTML = "<br><br>"+
-                                            'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
-                                            'When'  +":   "+ selected[i].when.bold()  +"<br>"+
-                                            'Where' +":   "+ selected[i].where.bold() +
-                                            selected[i].about +
-                                            selected[i].refs +
-                                            selected[i].acknow
-                                            ;}}}}
-                populateSelect()
-
-        //    $('#select1').on('change', function() {
-        //        let select ="";
-        //        $("#select1").find('option:selected').each(function() {
-        //            select += "\'" + $.trim($(this).text()) + "\',";});
-        //            if(select != ""){select = select.substr(0);};
-        //        var stringArray = (new Function("return [" + select+ "];")());
-        //        console.log(stringArray); //works Array [chosen options]
                 
-        //        function topicFilter2(taxonomy) {
-        //            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-        //            return eponyms.filter(item => {
-        //                let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-        //                return taxonomy.some(med => topic.includes(med));
-        //                });
-        //            }
-                
-        //        var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-        //        console.log(eponyms) //works Array(32)
-        //        //console.log(selected2) // **!empty Array [stringArray]
-        //        console.log(selected2)
+                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+                console.log(eponyms) //works Array(32)
+                //console.log(selected2) // **!empty Array [stringArray]
+                console.log(selected2)
 
-        //        function populateSelect2() {
-        //            document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
-        //                options += `<option value="${ID}">${name}</option>`,
-        //                '<option value=""> -- eponyms -- </option>'
-        //                );
-        //            tester = document.getElementById('SEL2').innerHTML 
-        //            = selected2.reduce((options, {ID,name}) =>
-        //                options += `<option value="${ID}">${name}</option>`,
-        //                '<option value=""> -- eponyms -- </option>'
-        //                );
-        //            console.log(tester)
-        //            }
+                function populateSelect2() {
+                    document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`,
+                        '<option value=""> -- eponyms -- </option>'
+                        );
+                    tester = document.getElementById('SEL2').innerHTML 
+                    = selected2.reduce((options, {ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`,
+                        '<option value=""> -- eponyms -- </option>'
+                        );
+                    console.log(tester)
+                    }
                 //selected2.forEach(function(b) {
                 //    el.innerHTML ='<option value="' + b.ID + '">' + b['name'] + '</option>';});
 
-                //function show(id) {
-                //    var msg2 = document.getElementById('msg2');
-                //    if (!id) {msg2.innerHTML = "";
-                //    } else {
-                //        for (var i = 0; i < selected2.length; i++) {
-                //        if  (Number(id) === selected2[i].ID) {
-                //            msg2.innerHTML = "<br><br>"+
-                //                            'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
-                //                            'When'  +":   "+ selected2[i].when.bold()  +"<br>"+
-                //                            'Where' +":   "+ selected2[i].where.bold() +
-                //                            selected2[i].about +
-                //                            selected2[i].refs +
-                //                            selected2[i].acknow
-                //                            ;}}}}
-                //populateSelect2()
-                
+                function show(id) {
+                    var msg2 = document.getElementById('msg2');
+                    if (!id) {msg2.innerHTML = "";
+                    } else {
+                        for (var i = 0; i < selected2.length; i++) {
+                        if  (Number(id) === selected2[i].ID) {
+                            msg2.innerHTML = "<br><br>"+
+                                            'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
+                                            'When'  +":   "+ selected2[i].when.bold()  +"<br>"+
+                                            'Where' +":   "+ selected2[i].where.bold() +
+                                            selected2[i].about +
+                                            selected2[i].refs +
+                                            selected2[i].acknow
+                                            ;}}}}
+                populateSelect2()
                 $('#select4').fadeIn(1000);
 
                 $('.selectpicker show-tick').change(function() {
