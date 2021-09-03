@@ -136,7 +136,7 @@
                                     data-style="btn-danger" data-header="Search list:" 
                                     data-width="340px" data-size="6"
                                     data-live-search="true" onchange="show(this.value);">
-                                <!-- <option value=""> -- eponyms -- </option> -->
+                                    <option value=""> -- eponyms -- </option>
                             </select>
                             <p id="msg2"></p>    
                         </div>
@@ -350,6 +350,10 @@
                                             ;}}}}
                 populateSelect2()
                 $('#select4').fadeIn(1000);
+                $('#SEL2').on('change', function() {
+                    $('#SEL2').selectpicker('refresh');
+                    });
+
 
                 $('.selectpicker show-tick').change(function() {
 		        alert($(this).val());
