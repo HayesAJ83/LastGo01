@@ -130,7 +130,7 @@
                 </div>
                 <div class="container">
                     <div class="row align-items-center text-center">
-                        <div class="col" id="select4" style="display:none"> <!--working?-->
+                        <div class="col" id="select4" style="display:none"> <!--works-->
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms by spec</h1>
                             <select id="SEL2" class="selectpicker show-tick" 
                                     data-style="btn-danger" data-header="Search list:" 
@@ -268,15 +268,15 @@
         </script>
 
         <script> ///  DEFAULT_PAGE_1  ///
-        //    $(document)
-        //    .ready(function() {
-        //        $('#select1').ready(function() {
-        //            let value = '\'' + $('#select1 option').map(function() {
-        //                    return this.text}).get().join('\',\'') + '\'';
-        //            var stringArray = (new Function("return [" + value+ "];")());
-        //            console.log(stringArray);
-        //        });
-        //    });
+            $(document)
+            .ready(function() {
+                $('#select1').ready(function() {
+                    let value = '\'' + $('#select1 option').map(function() {
+                            return this.text}).get().join('\',\'') + '\'';
+                    var stringArray = (new Function("return [" + value+ "];")());
+                    console.log(stringArray);
+                });
+            });
         </script>
         
         <script> ///  DEFAULT_PAGE_2  ///
