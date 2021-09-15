@@ -274,7 +274,7 @@
                     let value = '\'' + $('#select1 option').map(function() {
                             return this.text}).get().join('\',\'') + '\'';
                     var stringArray = (new Function("return [" + value+ "];")());
-                    console.log(stringArray);
+                    //console.log(stringArray);
                 });
             });
         </script>
@@ -285,7 +285,7 @@
                 var ele = document.getElementById('sel');
                 selected.forEach(function(b) {
                     ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-                    console.log(ele.innerHTML)
+                    //console.log(ele.innerHTML)
                 }
             function show(id) {
                 var msg = document.getElementById('msg');
