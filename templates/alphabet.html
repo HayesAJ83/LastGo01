@@ -274,7 +274,6 @@
                     let value = '\'' + $('#select1 option').map(function() {
                             return this.text}).get().join('\',\'') + '\'';
                     var stringArray = (new Function("return [" + value+ "];")());
-                    //console.log(stringArray);
                 });
             });
         </script>
@@ -285,7 +284,6 @@
                 var ele = document.getElementById('sel');
                 selected.forEach(function(b) {
                     ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-                    //console.log(ele.innerHTML)
                 }
             function show(id) {
                 var msg = document.getElementById('msg');
@@ -377,7 +375,7 @@
                 
                 var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
                 //console.log(eponyms) //works Array(32)
-                //console.log(selected2) // **!empty Array [stringArray]
+                //console.log(selected2) // 
                 console.log(selected2)
 
                 function populateSelect2() {
@@ -410,8 +408,8 @@
                                             selected2[i].acknow
                                             ;}}}}
                 populateSelect2()
-                $('#select4').fadeIn(1000);
-                $('#SEL2').on('change', function() {
+                $('#select4').fadeIn(2000);
+                $('#select1').on('change', function() {
                     $('#SEL2').selectpicker('refresh');
                     });
 
