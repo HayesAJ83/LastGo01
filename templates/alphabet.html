@@ -331,16 +331,21 @@
                     });
                     }
                 var select2 = topicFilter2(stringArray);
-                var push = select2.reduce((options, {ID,name}) =>
-                    options += `<option value="${ID}">${name}</option>`);
+
+                if (!select2.length) {var push = "";} 
                 
-                function populateSelect() {
-                var push = select2.reduce((options, {ID,name}) =>
+                else {
+                    var push = select2.reduce((options, {ID,name}) =>
                     options += `<option value="${ID}">${name}</option>`);
                     }
-                populateSelect()
-                $( '#sel' ).html(push);
-                    }).trigger("change")
+                    function populateSelect() {
+                    var push = select2.reduce((options, {ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`);
+                        }
+                    populateSelect()
+                    $( '#sel' ).html(push);
+                        }).trigger("change")
+                    
                 
                 //let select ="";
                 //$("#select1").find('option:selected').each(function() {
