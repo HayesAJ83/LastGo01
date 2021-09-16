@@ -374,25 +374,15 @@
                     }
                 
                 var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-                //console.log(eponyms) //works Array(32)
-                //console.log(selected2) // 
-                console.log(selected2)
+                //console.log(selected2)
 
                 function populateSelect2() {
                     document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
                         options += `<option value="${ID}">${name}</option>`,
-                        '<option value=""> -- eponymsX -- </option>'
+                        '<option value=""> -- eponyms -- </option>'
                         );
-                    tester = document.getElementById('SEL2').innerHTML 
-                    = selected2.reduce((options, {ID,name}) =>
-                        options += `<option value="${ID}">${name}</option>`,
-                        '<option value=""> -- eponymsX -- </option>'
-                        );
-                    console.log(tester)
                     }
-                //selected2.forEach(function(b) {
-                //    el.innerHTML ='<option value="' + b.ID + '">' + b['name'] + '</option>';});
-
+            
                 function show(id) {
                     var msg2 = document.getElementById('msg2');
                     if (!id) {msg2.innerHTML = "";
@@ -408,9 +398,10 @@
                                             selected2[i].acknow
                                             ;}}}}
                 populateSelect2()
-                $('#select4').fadeIn(2000);
+                $('#select4').fadeIn(500);
                 $('#select1').on('change', function() {
                     $('#SEL2').selectpicker('refresh');
+                    $('#msg2').selectpicker('refresh');
                     });
 
 
