@@ -333,17 +333,22 @@
                 var select2 = topicFilter2(stringArray);
 
                 if (!select2.length) {var push = "";} 
-                
                 else {
-                    var push = select2.reduce((options, {ID,name}) =>
-                    options += `<option value="${ID}">${name}</option>`);
-                    }
-                    function populateSelect() {
                     var push = select2.reduce((options, {ID,name}) =>
                         options += `<option value="${ID}">${name}</option>`);
                         }
-                    populateSelect()
-                    $( '#sel' ).html(push);
+                
+                function populateSelect() {
+                    if (!select2.length) {var push = "";}
+                    else {
+                        var push = select2.reduce((options, {ID,name}) =>
+                            options += `<option value="${ID}">${name}</option>`);
+                            }}
+                
+                populateSelect()
+                
+                
+                $( '#sel' ).html(push);
                         }).trigger("change")
                     
                 
