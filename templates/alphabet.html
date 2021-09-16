@@ -314,7 +314,6 @@
                 $('#selector').fadeIn(400);
                 $('#select3').fadeOut(400);
                 
-                
                 let select = "";
                 $("#select1").find('option:selected').each(function() {
                 select += "\'" + $.trim($(this).text()) + "\',";
@@ -346,8 +345,6 @@
                             }}
                 
                 populateSelect()
-                
-                
                 $( '#SEL2' ).html(push);
                         }).trigger("change")
                     
@@ -379,19 +376,19 @@
                     }
                 
                 var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-                console.log(eponyms) //works Array(32)
+                //console.log(eponyms) //works Array(32)
                 //console.log(selected2) // **!empty Array [stringArray]
                 console.log(selected2)
 
                 function populateSelect2() {
                     document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
                         options += `<option value="${ID}">${name}</option>`,
-                        '<option value=""> -- eponyms -- </option>'
+                        '<option value=""> -- eponymsX -- </option>'
                         );
                     tester = document.getElementById('SEL2').innerHTML 
                     = selected2.reduce((options, {ID,name}) =>
                         options += `<option value="${ID}">${name}</option>`,
-                        '<option value=""> -- eponyms -- </option>'
+                        '<option value=""> -- eponymsX -- </option>'
                         );
                     console.log(tester)
                     }
