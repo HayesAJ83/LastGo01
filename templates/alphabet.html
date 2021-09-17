@@ -132,7 +132,7 @@
                             <select id="SEL2" class="selectpicker show-tick" 
                                     data-style="btn-danger" data-header="Search list:" 
                                     data-width="340px" data-size="6"
-                                    data-live-search="true" onchange="show(this.value);">
+                                    data-live-search="true" onchange="show2(this.value);">
                                     <option value=""> -- select -- </option>
                             </select>
                             <p id="msg2"></p>    
@@ -367,7 +367,7 @@
                         );
                     }
             
-                function show(id) {
+                function show2(id) {
                     var msg2 = document.getElementById('msg2');
                     if (!id) {msg2.innerHTML = "";
                     } else {
