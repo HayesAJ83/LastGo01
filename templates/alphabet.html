@@ -132,7 +132,7 @@
                             <select id="SEL2" class="selectpicker show-tick" 
                                     data-style="btn-danger" data-header="Search list:" 
                                     data-width="340px" data-size="6"
-                                    data-live-search="true" onchange="show(this.value);">
+                                    data-live-search="true" onchange="show2(this.value);">
                                     <option value=""> -- select -- </option>
                             </select>
                             <p id="msg2"></p>    
@@ -259,7 +259,30 @@
                 });
             });
 
-            //$(document).ready(function() {
+            ///  DEFAULT_PAGE_2  ///
+            var selected = eponyms
+            function populateSelect() {
+                var ele = document.getElementById('sel');
+                selected.forEach(function(b) {
+                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+                }
+            function show1(id) {
+                var msg = document.getElementById('msg');
+                if (!id) {msg.innerHTML = "";
+                } else {
+                    for (var i = 0; i < selected.length; i++) {
+                    if  (Number(id) === selected[i].ID) {
+                        msg.innerHTML = "<br><br>"+
+                                        'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
+                                        'When'  +":   "+ selected[i].when.bold()  +"<br>"+
+                                        'Where' +":   "+ selected[i].where.bold() +
+                                        selected[i].about +
+                                        selected[i].refs +
+                                        selected[i].acknow
+                                        ;}}}}
+            populateSelect()
+     
+
             let select ="";
             $("#select1").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
@@ -275,7 +298,7 @@
                 }
                     
             var selected2 = topicFilter2(stringArray); 
-            function show(id) {
+            function show2(id) {
                 var msg2 = document.getElementById('msg2');
                 if (!id) {msg2.innerHTML = "";
                 } else {
