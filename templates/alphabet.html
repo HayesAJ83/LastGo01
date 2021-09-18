@@ -380,8 +380,24 @@
                 $('#select4').fadeIn(500);
                 $('#select1').on('change', function() {
                     $('#SEL2').selectpicker('refresh');
-                    show()
                     });
+
+                $('#select4').on('change', 
+                    function show(id) {
+                        var msg2 = document.getElementById('msg2');
+                        if (!id) {msg2.innerHTML = "";
+                        } else {
+                            for (var i = 0; i < selected2.length; i++) {
+                            if  (Number(id) === selected2[i].ID) {
+                                msg2.innerHTML = "<br><br>"+
+                                                'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
+                                                'When'  +":   "+ selected2[i].when.bold()  +"<br>"+
+                                                'Where' +":   "+ selected2[i].where.bold() +
+                                                selected2[i].about +
+                                                selected2[i].refs +
+                                                selected2[i].acknow;
+                                                }}}}
+                        );
 
 
                 //$('.selectpicker show-tick').change(function() {
