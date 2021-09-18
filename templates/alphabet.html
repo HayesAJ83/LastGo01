@@ -331,13 +331,7 @@
                         }).trigger("change")
                     
                 
-                //let select ="";
-                //$("#select1").find('option:selected').each(function() {
-                //        select += "\'" + $.trim($(this).val()) + "\',";});
-                //        if(select != ""){select = select.substr(0);};
-                //    var stringArray = (new Function("return [" + select+ "];")());
-                //    console.log(stringArray); 
-                //});
+              
         </script>
 
         <script>  ///  SELECTED_SPECIALTIES_2  ///
@@ -382,10 +376,11 @@
                                             selected2[i].acknow;
                                             }}}}
                 populateSelect2()
-                show()
+                
                 $('#select4').fadeIn(500);
                 $('#select1').on('change', function() {
                     $('#SEL2').selectpicker('refresh');
+                    show()
                     });
 
 
