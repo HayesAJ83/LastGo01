@@ -391,7 +391,23 @@
         </script>
 
         <script>
-            $('#SEL2').on('change', 
+            $('#SEL2').on('change', function() {
+            let select ="";
+            $("#select1").find('option:selected').each(function() {
+                select += "\'" + $.trim($(this).text()) + "\',";});
+                if(select != ""){select = select.substr(0);};
+            var stringArray = (new Function("return [" + select+ "];")());
+            console.log(stringArray); //works Array [chosen options]
+                
+            function topicFilter2(taxonomy) {
+                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                return eponyms.filter(item => {
+                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                    return taxonomy.some(med => topic.includes(med));
+                    });
+                }
+                
+            var selected2 = topicFilter2(stringArray); 
             function show(id) {
                 var msg2 = document.getElementById('msg2');
                 if (!id) {msg2.innerHTML = "";
@@ -406,7 +422,7 @@
                                         selected2[i].refs +
                                         selected2[i].acknow;
                                         }}}}
-                );
+                                    });
         </script>
 
 
