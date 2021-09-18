@@ -261,31 +261,7 @@
                 });
             });
         </script>
-        
-        <script> ///  DEFAULT_PAGE_2  ///
-            var selected = eponyms
-            function populateSelect() {
-                var ele = document.getElementById('sel');
-                selected.forEach(function(b) {
-                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-                }
-            function show1(id) {
-                var msg = document.getElementById('msg');
-                if (!id) {msg.innerHTML = "";
-                } else {
-                    for (var i = 0; i < selected.length; i++) {
-                    if  (Number(id) === selected[i].ID) {
-                        msg.innerHTML = "<br><br>"+
-                                        'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
-                                        'When'  +":   "+ selected[i].when.bold()  +"<br>"+
-                                        'Where' +":   "+ selected[i].where.bold() +
-                                        selected[i].about +
-                                        selected[i].refs +
-                                        selected[i].acknow
-                                        ;}}}}
-            populateSelect()
-        </script>
-
+      
 
         <script>  ///  SELECTED_SPECIALTIES_1  ///
             $('#btn_select').on('click', function() {
@@ -354,7 +330,7 @@
                 function populateSelect2() {
                     document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
                         options += `<option value="${ID}">${name}</option>`,
-                        '<option value=""> -- cocks -- </option>'
+                        '<option value=""> -- cockz -- </option>'
                         );
                     }
             
@@ -409,7 +385,6 @@
                                             'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
                                             'Where' +":   "+ selected2[i].where.bold() +
                                             selected2[i].about +
-                                            selected2[i].refs +
                                             selected2[i].acknow;
                                             }}}}
             }).trigger("change")
@@ -435,21 +410,6 @@
                     var stringArray = (new Function("return [" + value+ "];")());
                     console.log(stringArray);
                     });
-                
-        //            function show(id) {
-        //                var msg = document.getElementById('msg');
-        //                if (!id) {
-        //                    msg.innerHTML = "";
-        //                } else {
-        //                    for (var i = 0; i < eponyms.length; i++) {
-        //                    if (Number(id) === eponyms[i].ID) {
-        //                        msg.innerHTML = "<br>"+
-        //                                        'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+         
-        //                                        eponyms[i].acknow;
-        //                                          }}}}
-        //            populateSelect();
-        //            //$("#select3").trigger('change', true);
-        //        });
             
                 $('#select3').fadeIn(400);
             });
