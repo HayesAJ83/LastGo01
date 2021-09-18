@@ -259,36 +259,35 @@
                 });
             });
 
-            $(document)
-            .ready(function() {
+            //$(document).ready(function() {
             let select ="";
             $("#select1").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
                     if(select != ""){select = select.substr(0);};
                 var stringArray = (new Function("return [" + select+ "];")());
                 
-                function topicFilter2(taxonomy) {
-                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                    return eponyms.filter(item => {
-                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                        return taxonomy.some(med => topic.includes(med));
-                        });
-                    }
+            function topicFilter2(taxonomy) {
+                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                return eponyms.filter(item => {
+                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                    return taxonomy.some(med => topic.includes(med));
+                    });
+                }
                     
-                var selected2 = topicFilter2(stringArray); 
-                function show(id) {
-                    var msg2 = document.getElementById('msg2');
-                    if (!id) {msg2.innerHTML = "";
-                    } else {
-                        for (var i = 0; i < selected2.length; i++) {
-                        if  (Number(id) === selected2[i].ID) {
-                            msg2.innerHTML = "<br><br>"+
-                                            'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
-                                            'Where' +":   "+ selected2[i].where.bold() +
-                                            selected2[i].about +
-                                            selected2[i].acknow;
-                                            }}}}
-                });
+            var selected2 = topicFilter2(stringArray); 
+            function show(id) {
+                var msg2 = document.getElementById('msg2');
+                if (!id) {msg2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < selected2.length; i++) {
+                    if  (Number(id) === selected2[i].ID) {
+                        msg2.innerHTML = "<br><br>"+
+                                        'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
+                                        'Where' +":   "+ selected2[i].where.bold() +
+                                        selected2[i].about +
+                                        selected2[i].acknow;
+                                        }}}}
+            //});
     
 
         ///  SELECTED_SPECIALTIES_1  ///
