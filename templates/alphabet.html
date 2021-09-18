@@ -249,9 +249,7 @@
             console.log()
                 });
 
-        </script>
-
-        <script> ///  DEFAULT_PAGE_1  ///
+            ///  DEFAULT_PAGE_1  ///
             $(document)
             .ready(function() {
                 $('#select1').ready(function() {
@@ -259,11 +257,26 @@
                             return this.text}).get().join('\',\'') + '\'';
                     var stringArray = (new Function("return [" + value+ "];")());
                 });
+
+                function show2(id) {
+                    var msg2 = document.getElementById('msg2');
+                    if (!id) {msg2.innerHTML = "";
+                    } else {
+                        for (var i = 0; i < selected2.length; i++) {
+                        if  (Number(id) === selected2[i].ID) {
+                            msg2.innerHTML = "<br><br>"+
+                                            'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
+                                            'Where' +":   "+ selected2[i].where.bold() +
+                                            selected2[i].about +
+                                            selected2[i].acknow;
+                                            }}}}
             });
-        </script>
+        
       
 
-        <script>  ///  SELECTED_SPECIALTIES_1  ///
+        ///  SELECTED_SPECIALTIES_1  ///
+            $(document)
+            .ready(function() {
             $('#btn_select').on('click', function() {
                 $('#btn_all').removeClass("btn btn-danger active");
                 $('#btn_all').addClass("btn btn-light");
@@ -305,6 +318,7 @@
                 populateSelect()
                 $( '#SEL2' ).html(push);
                         }).trigger("change")
+                });
         </script>
 
         <script>  ///  SELECTED_SPECIALTIES_2  ///
