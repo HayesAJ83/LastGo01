@@ -388,6 +388,8 @@
         </script>
 
         <script>
+            $(document)
+            .ready(function() {
             $('#select4').on('change', function() {
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
@@ -419,6 +421,7 @@
                                             selected2[i].acknow;
                                             }}}}
             }).trigger("change")
+        });
         </script>
 
 
