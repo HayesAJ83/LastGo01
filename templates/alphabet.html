@@ -354,24 +354,20 @@
                 function populateSelect2() {
                     document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
                         options += `<option value="${ID}">${name}</option>`,
-                        '<option value=""> -- dicks -- </option>'
+                        '<option value=""> -- cocks -- </option>'
                         );
                     }
             
-                function show2(id) {
-                    var msg2 = document.getElementById('msg2');
-                    if (!id) {msg2.innerHTML = "";
-                    } else {
-                        for (var i = 0; i < selected2.length; i++) {
-                        if  (Number(id) === selected2[i].ID) {
-                            msg2.innerHTML = "<br><br>"+
-                                            'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
-                                            'When'  +":   "+ selected2[i].when.bold()  +"<br>"+
-                                            'Where' +":   "+ selected2[i].where.bold() +
-                                            selected2[i].about +
-                                            selected2[i].refs +
-                                            selected2[i].acknow;
-                                            }}}}
+                //function show2(id) {
+                //    var msg2 = document.getElementById('msg2');
+                //    if (!id) {msg2.innerHTML = "";
+                //    } else {
+                //        for (var i = 0; i < selected2.length; i++) {
+                //        if  (Number(id) === selected2[i].ID) {
+                //            msg2.innerHTML = "<br><br>"+
+                //                            'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
+                //                            selected2[i].acknow;
+                //                            }}}}
                 populateSelect2()
                 
                 $('#select4').fadeIn(500);
@@ -379,8 +375,7 @@
                 $('#select1').on('change', function() {
                     $('#SEL2').selectpicker('refresh');
                     });
-                $( '#msg2' ).html(msg2);
-                        }).trigger("change")
+            });
                 //$('.selectpicker show-tick').change(function() {
 		        //alert($(this).val());
                 //});
@@ -406,7 +401,7 @@
                     }
                     
                 var selected2 = topicFilter2(stringArray); 
-                function show(id) {
+                function show2(id) {
                     var msg2 = document.getElementById('msg2');
                     if (!id) {msg2.innerHTML = "";
                     } else {
@@ -420,7 +415,9 @@
                                             selected2[i].refs +
                                             selected2[i].acknow;
                                             }}}}
-            }).trigger("change")
+            //}).trigger("change")
+            $( '#msg2' ).html(msg2);
+                        }).trigger("change")
         
         </script>
 
