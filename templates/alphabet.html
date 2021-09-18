@@ -382,9 +382,7 @@
                 //$('#SEL2').html(tester);
                 // here's where we actually initiate the picker plugin
                 //$('.selectpicker show-tick').selectpicker('refresh');
-        </script>
-
-        <script>
+        
             $('#SEL2').on('change', function() {
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
@@ -409,15 +407,14 @@
                         if  (Number(id) === selected2[i].ID) {
                             msg2.innerHTML = "<br><br>"+
                                             'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
-                                            'When'  +":   "+ selected2[i].when.bold()  +"<br>"+
                                             'Where' +":   "+ selected2[i].where.bold() +
                                             selected2[i].about +
                                             selected2[i].refs +
                                             selected2[i].acknow;
                                             }}}}
-            //}).trigger("change")
-            $( '#msg2' ).html(msg2);
-                        }).trigger("change")
+            }).trigger("change")
+            //$( '#msg2' ).html(msg2);
+            //            }).trigger("change")
         
         </script>
 
