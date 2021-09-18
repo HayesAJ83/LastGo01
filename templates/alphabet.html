@@ -127,7 +127,7 @@
                 </div>
                 <div class="container">
                     <div class="row align-items-center text-center">
-                        <div class="col" id="select4"> <!--style="display:none"> works-->
+                        <div class="col" id="select4" style="display:none"> <!--works-->
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms_Select4</h1>
                             <select id="SEL2" class="selectpicker show-tick" 
                                     data-style="btn-danger" data-header="Search list:" 
@@ -354,7 +354,7 @@
                 function populateSelect2() {
                     document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
                         options += `<option value="${ID}">${name}</option>`,
-                        '<option value=""> -- select -- </option>'
+                        '<option value=""> -- dicks -- </option>'
                         );
                     }
             
@@ -375,6 +375,7 @@
                 populateSelect2()
                 
                 $('#select4').fadeIn(500);
+                $('#SEL2').selectpicker('refresh');
                 $('#select1').on('change', function() {
                     $('#SEL2').selectpicker('refresh');
                     });
@@ -388,8 +389,7 @@
         </script>
 
         <script>
-            $(document)
-            .ready(function() {
+            
             $('#SEL2').on('change', function() {
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
@@ -421,7 +421,7 @@
                                             selected2[i].acknow;
                                             }}}}
             }).trigger("change")
-        });
+        
         </script>
 
 
