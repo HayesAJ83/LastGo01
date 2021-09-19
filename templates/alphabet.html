@@ -382,7 +382,7 @@
                 function populateSelect2() {
                     document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
                         options += `<option value="${ID}">${name}</option>`,
-                        '<option value=""> -- cokz -- </option>'
+                        '<option value=""> -- select -- </option>'
                         );
                     }
             
@@ -411,7 +411,7 @@
                 // here's where we actually initiate the picker plugin
                 //$('.selectpicker show-tick').selectpicker('refresh');
         
-            $('#SEL2').on('change', function() {
+            $('#select4').on('change', function() {
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
@@ -439,9 +439,9 @@
                                             selected2[i].about +
                                             selected2[i].acknow;
                                             }}}}
+                show2()
             }).trigger("change")
-            //$( '#msg2' ).html(msg2);
-            //            }).trigger("change")
+            
         
         </script>
 
@@ -455,18 +455,14 @@
                 $('#btn_select').removeClass("btn btn-danger active");
                 $('#btn_select').addClass("btn btn-light");
                 $('#select4').fadeOut(100);
-
                 $('#select1').ready(function() {
                     let value = '\'' + $('#select1 option').map(function() {
                         return this.text}).get().join('\',\'') + '\'';
                     var stringArray = (new Function("return [" + value+ "];")());
-                    console.log(stringArray);
                     });
-            
                 $('#select3').fadeIn(400);
             });
         </script>
-    
 
         <script src="/static/assets/js/theme.js"></script>
     </body>
