@@ -429,7 +429,7 @@
                     }
                     
                 var selected2 = topicFilter2(stringArray);
-                console.log(selected2)
+                //console.log(selected2)
 
                 function show2(id) {
                 var msg2 = document.getElementById('msg2');
@@ -443,6 +443,9 @@
                                         selected2[i].about +
                                         selected2[i].acknow;
                                         }}}}
+                      $('SEL2').on('change', function() {
+                          alert( this.value );
+                      });                  
                 }).trigger("change")
             
         </script>
