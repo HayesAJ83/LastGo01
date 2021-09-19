@@ -266,6 +266,7 @@
                 selected.forEach(function(b) {
                     ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
                 }
+            console.log(selected)
             function show1(id) {
                 var msg = document.getElementById('msg');
                 if (!id) {msg.innerHTML = "";
@@ -429,7 +430,7 @@
                     }
                     
                 var selected2 = topicFilter2(stringArray);
-                //console.log(selected2)
+                console.log(selected2)
 
                 function show2(id) {
                 var msg2 = document.getElementById('msg2');
