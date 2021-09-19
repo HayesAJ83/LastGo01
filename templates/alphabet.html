@@ -280,10 +280,8 @@
                                         selected[i].refs +
                                         selected[i].acknow
                                         ;}}}}
-            console.log(msg)
             populateSelect()
      
-
             let select ="";
             $("#select1").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
@@ -311,7 +309,6 @@
                                         selected2[i].about +
                                         selected2[i].acknow;
                                         }}}}
-            console.log(msg2)
             //});
     
 
@@ -430,7 +427,7 @@
                     }
                     
                 var selected2 = topicFilter2(stringArray); 
-                function show(id) {
+                function show2(id) {
                     var msg2 = document.getElementById('msg2');
                     if (!id) {msg2.innerHTML = "";
                     } else {
