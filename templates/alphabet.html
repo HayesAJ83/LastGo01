@@ -307,7 +307,6 @@
                         msg2.innerHTML = "<br><br>"+
                                         'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
                                         'Where' +":   "+ selected2[i].where.bold() +
-                                        selected2[i].about +
                                         selected2[i].acknow;
                                         }}}}
             //});
@@ -415,6 +414,7 @@
                 
            
             $('#SEL2').change(function() {
+                alert($(this).val());
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
@@ -444,9 +444,7 @@
                                         selected2[i].about +
                                         selected2[i].acknow;
                                         }}}}
-                      $('SEL2').on('change', function() {
-                          alert( this.value );
-                      });                  
+                                       
                 }).trigger("change")
             
         </script>
