@@ -128,7 +128,7 @@
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col" id="select4" style="display:none"> <!--works-->
-                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms_select4</h1>
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms_*</h1>
                             <select id="SEL2" class="selectpicker show-tick" 
                                     data-style="btn-danger" data-header="Search list:" 
                                     data-width="340px" data-size="6"
@@ -399,6 +399,7 @@
                 populateSelect2()
                 
                 $('#select4').fadeIn(500);
+                $('#msg2').fadeIn(500);
                 $('#SEL2').selectpicker('refresh');
                 $('#select1').on('change', function() {
                     $('#SEL2').selectpicker('refresh');
@@ -413,7 +414,7 @@
                 
             $(document)
             .ready(function() {    
-            $('#select4').on('change', function() {
+            $('#SEL2').on('change', function() {
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
