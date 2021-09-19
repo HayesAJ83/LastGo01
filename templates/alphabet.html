@@ -412,9 +412,8 @@
                 // here's where we actually initiate the picker plugin
                 //$('.selectpicker show-tick').selectpicker('refresh');
                 
-            $(document)
-            .ready(function() {    
-            $('#SEL2').on('change', function() {
+           
+            $('#SEL2').change(function() {
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
@@ -429,24 +428,22 @@
                         });
                     }
                     
-                var selected2 = topicFilter2(stringArray); 
-                function show2(id) {
-                    var msg2 = document.getElementById('msg2');
-                    if (!id) {msg2.innerHTML = "";
-                    } else {
-                        for (var i = 0; i < selected2.length; i++) {
-                        if  (Number(id) === selected2[i].ID) {
-                            msg2.innerHTML = "<br><br>"+
-                                            'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
-                                            'Where' +":   "+ selected2[i].where.bold() +
-                                            selected2[i].about +
-                                            selected2[i].acknow;
-                                            }}}}
+                var selected2 = topicFilter2(stringArray);
                 console.log(selected2)
-                $( '#msg2' ).html(msg2);
-                        }).trigger("change")
+
+                function show2(id) {
+                var msg2 = document.getElementById('msg2');
+                if (!id) {msg2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < selected2.length; i++) {
+                    if  (Number(id) === selected2[i].ID) {
+                        msg2.innerHTML = "<br><br>"+
+                                        'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
+                                        'Where' +":   "+ selected2[i].where.bold() +
+                                        selected2[i].about +
+                                        selected2[i].acknow;
+                                        }}}}
                 }).trigger("change")
-            
             
         </script>
 
