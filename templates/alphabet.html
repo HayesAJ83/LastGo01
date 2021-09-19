@@ -410,7 +410,9 @@
                 //$('#SEL2').html(tester);
                 // here's where we actually initiate the picker plugin
                 //$('.selectpicker show-tick').selectpicker('refresh');
-        
+                
+            $(document)
+            .ready(function() {    
             $('#select4').on('change', function() {
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
@@ -439,12 +441,13 @@
                                             selected2[i].about +
                                             selected2[i].acknow;
                                             }}}}
-                show2()
-            }).trigger("change")
             
-        
+                $( '#msg2' ).html(msg2);
+                        }).trigger("change")
+                }).trigger("change")
+            
+            
         </script>
-
 
         <script>
         ///////  RETURN_TO_ALL  ///////
