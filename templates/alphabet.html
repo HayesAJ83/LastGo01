@@ -127,8 +127,8 @@
                 </div>
                 <div class="container">
                     <div class="row align-items-center text-center">
-                        <div class="col" id="select4" style="display:none"> <!--works-->
-                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms_*</h1>
+                        <div class="col" id="select4"> <!--style="display:none"> --works-->
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms*</h1>
                             <select id="SEL2" class="selectpicker show-tick" 
                                     data-style="btn-danger" data-header="Search list:" 
                                     data-width="340px" data-size="6"
@@ -279,20 +279,6 @@
                     ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
                 }
             console.log(selected)
-            function show1(id) {
-                var msg = document.getElementById('msg');
-                if (!id) {msg.innerHTML = "";
-                } else {
-                    for (var i = 0; i < selected.length; i++) {
-                    if  (Number(id) === selected[i].ID) {
-                        msg.innerHTML = "<br><br>"+
-                                        'Who'   +":   "+ selected[i].who.bold()   +"<br>"+
-                                        'When'  +":   "+ selected[i].when.bold()  +"<br>"+
-                                        'Where' +":   "+ selected[i].where.bold() +
-                                        selected[i].about +
-                                        selected[i].refs +
-                                        selected[i].acknow
-                                        ;}}}}
             populateSelect()
      
             let select ="";
@@ -310,18 +296,6 @@
                 }
                     
             var selected2 = topicFilter2(stringArray); 
-            function show2(id) {
-                var msg2 = document.getElementById('msg2');
-                if (!id) {msg2.innerHTML = "";
-                } else {
-                    for (var i = 0; i < selected2.length; i++) {
-                    if  (Number(id) === selected2[i].ID) {
-                        msg2.innerHTML = "<br><br>"+
-                                        'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
-                                        'Where' +":   "+ selected2[i].where.bold() +
-                                        selected2[i].acknow;
-                                        }}}}
-            //});
     
 
         ///  SELECTED_SPECIALTIES_1  ///
@@ -398,16 +372,6 @@
                         );
                     }
             
-                //function show2(id) {
-                //    var msg2 = document.getElementById('msg2');
-                //    if (!id) {msg2.innerHTML = "";
-                //    } else {
-                //        for (var i = 0; i < selected2.length; i++) {
-                //        if  (Number(id) === selected2[i].ID) {
-                //            msg2.innerHTML = "<br><br>"+
-                //                            'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
-                //                            selected2[i].acknow;
-                //                            }}}}
                 populateSelect2()
                 
                 $('#select4').fadeIn(500);
@@ -417,16 +381,9 @@
                     $('#SEL2').selectpicker('refresh');
                     });
             });
-                //$('.selectpicker show-tick').change(function() {
-		        //alert($(this).val());
-                //});
-                //$('#SEL2').html(tester);
-                // here's where we actually initiate the picker plugin
-                //$('.selectpicker show-tick').selectpicker('refresh');
                 
            
             $('#SEL2').change(function() {
-                //alert($(this).val());
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
@@ -443,19 +400,7 @@
                     
                 var selected2 = topicFilter2(stringArray);
                 console.log(selected2)
-
-                function show2(id) {
-                    var msg2 = document.getElementById('msg2');
-                    if (!id) {msg2.innerHTML = "";
-                    } else {
-                        for (var i = 0; i < selected2.length; i++) {
-                        if  (Number(id) === selected2[i].ID) {
-                            msg2.innerHTML = "<br><br>"+
-                                            'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
-                                            'Where' +":   "+ selected2[i].where.bold() +
-                                            selected2[i].about +
-                                            selected2[i].acknow;
-                                            }}}}                       
+                    
                 }).trigger("change")
             
         </script>
