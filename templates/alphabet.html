@@ -128,7 +128,7 @@
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col" id="select4"> <!--style="display:none"> --works-->
-                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms*</h1>
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                             <select id="SEL2" class="selectpicker show-tick" 
                                     data-style="btn-danger" data-header="Search list:" 
                                     data-width="340px" data-size="6"
@@ -328,7 +328,6 @@
                 
                 populateSelect()
                 $( '#SEL2' ).html(push);
-                show()
                         }).trigger("change")
                 });
         </script>
@@ -459,9 +458,12 @@
                 for (var i = 0; i < eponyms.length; i++) {
                 if  (Number(id) === eponyms[i].ID) {
                     msg.innerHTML = "<br><br>"+
-                                    'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
-                                    'Where' +":   "+ eponyms[i].where.bold() +
-                                    eponyms[i].acknow;
+                                    'Who'   +":   "+ selected2[i].who.bold()   +"<br>"+
+                                    'When'  +":   "+ selected2[i].when.bold()  +"<br>"+
+                                    'Where' +":   "+ selected2[i].where.bold() +
+                                    selected2[i].about +
+                                    selected2[i].refs +
+                                    selected2[i].acknow
                                     }}}}
             
             function show2(id) {
