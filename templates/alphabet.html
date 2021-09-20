@@ -418,17 +418,17 @@
                     
                 var selected2 = topicFilter2(stringArray);
                 console.log(selected2)
-                function show(id) {
-                    var msg = document.getElementById('msg');
-                    if (!id) {msg.innerHTML = "";
-                    } else {
-                        for (var i = 0; i < eponyms.length; i++) {
-                        if  (Number(id) === eponyms[i].ID) {
-                            msg.innerHTML = "<br><br>"+
-                                            'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
-                                            'Where' +":   "+ eponyms[i].where.bold() +
-                                            eponyms[i].acknow;
-                                            }}}}
+                //function show(id) {
+                //    var msg = document.getElementById('msg');
+                //    if (!id) {msg.innerHTML = "";
+                //    } else {
+                //        for (var i = 0; i < eponyms.length; i++) {
+                //        if  (Number(id) === eponyms[i].ID) {
+                //            msg.innerHTML = "<br><br>"+
+                //                            'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
+                //                            'Where' +":   "+ eponyms[i].where.bold() +
+                //                            eponyms[i].acknow;
+                //                            }}}}
                 }).trigger("change")
             
         </script>
