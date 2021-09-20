@@ -459,10 +459,13 @@
                 for (var i = 0; i < eponyms.length; i++) {
                 if  (Number(id) === eponyms[i].ID) {
                     msg.innerHTML = "<br><br>"+
-                                    'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
-                                    'Where' +":   "+ eponyms[i].where.bold() +
-                                    eponyms[i].acknow;
-                                    }}}}
+                                            'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
+                                            'When'  +":   "+ eponyms[i].when.bold()  +"<br>"+
+                                            'Where' +":   "+ eponyms[i].where.bold() +
+                                            eponyms[i].about +
+                                            eponyms[i].refs +
+                                            eponyms[i].acknow
+                                            ;}}}}
             
             function show2(id) {
             var msg2 = document.getElementById('msg2');
@@ -471,10 +474,13 @@
                 for (var i = 0; i < eponyms.length; i++) {
                 if  (Number(id) === eponyms[i].ID) {
                     msg2.innerHTML = "<br><br>"+
-                                    'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
-                                    'Where' +":   "+ eponyms[i].where.bold() +
-                                    eponyms[i].acknow;
-                                    }}}}
+                                            'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
+                                            'When'  +":   "+ eponyms[i].when.bold()  +"<br>"+
+                                            'Where' +":   "+ eponyms[i].where.bold() +
+                                            eponyms[i].about +
+                                            eponyms[i].refs +
+                                            eponyms[i].acknow
+                                            ;}}}}
         </script>
 
         <script src="/static/assets/js/theme.js"></script>
