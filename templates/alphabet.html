@@ -341,6 +341,7 @@
                 
                 populateSelect()
                 $( '#SEL2' ).html(push);
+                show()
                         }).trigger("change")
                 });
         </script>
@@ -375,7 +376,6 @@
                 populateSelect2()
                 
                 $('#select4').fadeIn(500);
-                $('#msg2').fadeIn(500);
                 $('#SEL2').selectpicker('refresh');
                 $('#select1').on('change', function() {
                     $('#SEL2').selectpicker('refresh');
@@ -400,7 +400,7 @@
                     
                 var selected2 = topicFilter2(stringArray);
                 console.log(selected2)
-                    
+                show()
                 }).trigger("change")
             
         </script>
