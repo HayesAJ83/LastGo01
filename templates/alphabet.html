@@ -227,20 +227,7 @@
                 {ID: 31, name:"Zenker's diverticulum",      topic:["Oesophagogastric"],         who:"Friedrich Albert von Zenker",    where:"Erlangen, Bavaria, Germany",        when:"1867",   refs:"<br><br><u>Reference</u><br>Zenker FA and von Ziemssen HW. Krankheiten des Oesophagus. Leipzig, 1867",    about:"<br><br><br><br>Zenker's report was based on 5 personal cases and 22 cases collected from the literature. Also called a pharyngeal pouch, Zenker's diverticulum affects the mucosa of the human pharynx, just above cricopharyngeal muscle. It is a pseudo diverticulum (not involving ll the layers of the oesophageal wall).", acknow:"<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>"},
                 {ID: 32, name:"Tubercle of Zuckerkandl",    topic:["Endocrine"],                who:"Emil Zuckerkandl",               where:"Vienna, Austria",                   when:"1902",   refs:"<br><br><u>Reference</u><br>Zuckerkandl E. Die Epithelkörperchen von Didelphys azara nebst Bemerkungen über die Epithelkörperchen des Menschen. <i>Anatomische Hefte</i>. 1902; 19(1), 59-84", about:"", acknow:"<br><br><br><i>We kindly acknowledge Mr XY FRCS who contributed the above information.</i>"},
                 ]
-
-                function show(id) {
-                var msg = document.getElementById('msg');
-                if (!id) {msg.innerHTML = "";
-                } else {
-                    for (var i = 0; i < eponyms.length; i++) {
-                    if  (Number(id) === eponyms[i].ID) {
-                        msg.innerHTML = "<br><br>"+
-                                        'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
-                                        'Where' +":   "+ eponyms[i].where.bold() +
-                                        eponyms[i].acknow;
-                                        }}}}
         </script>
-
 
         <script>
             $(document)
@@ -421,6 +408,20 @@
                     });
                 $('#select3').fadeIn(400);
             });
+        </script>
+
+        <script>
+            function show(id) {
+            var msg = document.getElementById('msg');
+            if (!id) {msg.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.length; i++) {
+                if  (Number(id) === eponyms[i].ID) {
+                    msg.innerHTML = "<br><br>"+
+                                    'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
+                                    'Where' +":   "+ eponyms[i].where.bold() +
+                                    eponyms[i].acknow;
+                                    }}}}
         </script>
 
         <script src="/static/assets/js/theme.js"></script>
