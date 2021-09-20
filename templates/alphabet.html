@@ -387,7 +387,48 @@
                     
                 var selected2 = topicFilter2(stringArray);
                 console.log(selected2)
-                show()
+                function show(id) {
+                    var msg = document.getElementById('msg');
+                    if (!id) {msg.innerHTML = "";
+                    } else {
+                        for (var i = 0; i < eponyms.length; i++) {
+                        if  (Number(id) === eponyms[i].ID) {
+                            msg.innerHTML = "<br><br>"+
+                                            'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
+                                            'Where' +":   "+ eponyms[i].where.bold() +
+                                            eponyms[i].acknow;
+                                            }}}}
+                }).trigger("change")
+
+
+            $('#select4').change(function() {
+                let select ="";
+                $("#select1").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select+ "];")());
+                
+                function topicFilter2(taxonomy) {
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return eponyms.filter(item => {
+                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
+                        });
+                    }
+                    
+                var selected2 = topicFilter2(stringArray);
+                console.log(selected2)
+                function show(id) {
+                    var msg = document.getElementById('msg');
+                    if (!id) {msg.innerHTML = "";
+                    } else {
+                        for (var i = 0; i < eponyms.length; i++) {
+                        if  (Number(id) === eponyms[i].ID) {
+                            msg.innerHTML = "<br><br>"+
+                                            'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
+                                            'Where' +":   "+ eponyms[i].where.bold() +
+                                            eponyms[i].acknow;
+                                            }}}}
                 }).trigger("change")
             
         </script>
