@@ -132,10 +132,10 @@
                             <select id="SEL2" class="selectpicker show-tick" 
                                     data-style="btn-danger" data-header="Search list:" 
                                     data-width="340px" data-size="6"
-                                    data-live-search="true" onchange="show(this.value);">
+                                    data-live-search="true" onchange="show2(this.value);">
                                     <option value=""> -- select -- </option>
                             </select>
-                            <p id="msg"></p>    
+                            <p id="msg2"></p>    
                         </div>
                     </div>
                 </div>
@@ -459,6 +459,18 @@
                 for (var i = 0; i < eponyms.length; i++) {
                 if  (Number(id) === eponyms[i].ID) {
                     msg.innerHTML = "<br><br>"+
+                                    'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
+                                    'Where' +":   "+ eponyms[i].where.bold() +
+                                    eponyms[i].acknow;
+                                    }}}}
+            
+            function show2(id) {
+            var msg2 = document.getElementById('msg2');
+            if (!id) {msg2.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.length; i++) {
+                if  (Number(id) === eponyms[i].ID) {
+                    msg2.innerHTML = "<br><br>"+
                                     'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
                                     'Where' +":   "+ eponyms[i].where.bold() +
                                     eponyms[i].acknow;
