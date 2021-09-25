@@ -101,8 +101,8 @@
                                     name="min_multi_select" 
                                     data-style="btn-danger" data-header="Search list:"
                                     data-width="340px" data-size="6"
-                                    data-live-search="true"
-                                    >
+                                    data-live-search="true">
+                                    <option value=""> -- select -- </option>
                                 </select>
                             </div>
                         </div>
@@ -137,16 +137,6 @@
                                     <h6 class="card-title mb-0 text-uppercase">Jerry Simmons</h6>
                                     <p class="card-text mb-3 fs--1 text-primary fw-bold">Surgeon</p>
                                     <p class="card-text fs--1">Interdum sapien.</p>
-                                </div>
-                            </div>
-                            <div class="card mt-6">
-                                <div class="px-3 mt-neg-4">
-                                    <img src="../static/assets/img/profiles/profile-05.jpg" class="card-img" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <h6 class="card-title mb-0 text-uppercase">Harold McBurney</h6>
-                                    <p class="card-text mb-3 fs--1 text-primary fw-bold">Surgeon</p>
-                                    <p class="card-text fs--1">Integer nunc.</p>
                                 </div>
                             </div>
                         </div>
@@ -210,13 +200,12 @@
         {   ID:  1, 
             name:"Aaron sign",                 
             topic:["General Surgery"],
-            type:"",                  
+            type:["Sign"],                  
             who:"Charles Dettie Aaron",           
             where:"Detroit, Michigan, USA",            
             when:"1913",
             disease:["Appendicitis","Abdominal pain",],   
-            long:"",
-            lat:"",
+            //lat:"", long:"",
             refs:"<br><br><u>Reference</u><br>Aaron CD. A sign indicative of chronic appendicitis. <i>JAMA</i>. 1913; 60(5): 350-351",    
             about:"<br><br><br>Aaron's sign, indicitive of chronic appendicitis, is demonstrated by prolonged firm pressure at McBurney's point which produces pain in the epigastric region. In Aaron's 1913 paper, he describes his findings in four patients.", 
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
@@ -242,7 +231,7 @@
         //    who:"",    
         //    where:"",                    
         //    when:"",
-        //    disease:["Appendicitis",],   
+        //    disease:["",],   
         //    long:"",
         //    lat:"", 
         //    refs:"",   
@@ -256,7 +245,7 @@
         //    who:"",    
         //    where:"",                    
         //    when:"",
-        //    disease:["Appendicitis",],  
+        //    disease:["",],  
         //    long:"",
         //    lat:"",   
         //    refs:"",   
@@ -270,7 +259,7 @@
         //    who:"",    
         //    where:"",                    
         //    when:"",
-        //    disease:["Appendicitis",],  
+        //    disease:["",],  
         //    long:"",
         //    lat:"",   
         //    refs:"",   
@@ -284,7 +273,7 @@
         //    who:"",    
         //    where:"",                    
         //    when:"",
-        //    disease:["Appendicitis",],   
+        //    disease:["",],   
         //    long:"",
         //    lat:"",  
         //    refs:"",   
@@ -298,7 +287,7 @@
         //    who:"",    
         //    where:"",                    
         //    when:"",
-        //    disease:["Appendicitis",],    
+        //    disease:["",],    
         //    long:"",
         //    lat:"", 
         //    refs:"",   
@@ -312,7 +301,7 @@
         //    who:"",    
         //    where:"",                    
         //    when:"",
-        //    disease:["Appendicitis",],  
+        //    disease:["",],  
         //    long:"",
         //    lat:"",   
         //    refs:"",   
@@ -326,7 +315,7 @@
         //    who:"",    
         //    where:"",                    
         //    when:"",
-        //    disease:["Appendicitis",],  
+        //    disease:["",],  
         //    long:"",
         //    lat:"",   
         //    refs:"",   
@@ -342,8 +331,7 @@
             where:"Kraków, Poland",                    
             when:"1881",
             disease:["Spinal cord injury",],  
-            //    long:"",
-            //    lat:"", 
+            //lat:"",    long:"", 
             refs:"",   
             about:"<br><br><br>The artery of Adamkiewicz is known by other terms, including arteria radicularis magna. This vessel is a major contributor to the anterior spinal artery which gives arterial supply to the lumbar and sacral cord and nerves. The artery of Adamkiewicz arises from intercostal arteries which branch from the thoraco-abdominal aorta.", 
             acknow:"<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
