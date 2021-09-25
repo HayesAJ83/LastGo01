@@ -3656,7 +3656,6 @@
                 function populateSelect2() {
                     document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
                         options += `<option value="${ID}">${name}</option>`,
-                        '<option value=""> -- select -- </option>'
                         );
                     }
             
