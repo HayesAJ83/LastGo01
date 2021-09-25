@@ -86,7 +86,7 @@
                 <div class="container" style="height:215px">
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <h1 class="text-black mb-2 fs-1" style="height:30px">Symptoms</h1>
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Disease & Symptoms</h1>
                         </div>
                     </div>
                     <!--<hr style="height:1px; visibility:hidden">-->
@@ -3656,6 +3656,7 @@
                 function populateSelect2() {
                     document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
                         options += `<option value="${ID}">${name}</option>`,
+                        '<option value=""> -- select -- </option>'
                         );
                     }
             
@@ -3721,24 +3722,6 @@
                 
                 }).trigger("change")
             
-        </script>
-
-        <script>
-        ///////  RETURN_TO_ALL  ///////
-            $('#btn_all').on('click', function() {
-                $('#btn_all').removeClass("btn btn-light");
-                $('#btn_all').addClass("btn btn-danger active");
-                $('#selector').fadeOut(400);
-                $('#btn_select').removeClass("btn btn-danger active");
-                $('#btn_select').addClass("btn btn-light");
-                $('#select4').fadeOut(100);
-                $('#select1').ready(function() {
-                    let value = '\'' + $('#select1 option').map(function() {
-                        return this.text}).get().join('\',\'') + '\'';
-                    var stringArray = (new Function("return [" + value+ "];")());
-                    });
-                $('#select3').fadeIn(400);
-            });
         </script>
 
         <script>
