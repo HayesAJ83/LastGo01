@@ -90,9 +90,7 @@
                 <div class="container" style="height:215px">
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <h1 class="text-black mb-2 fs-1" style="height:30px">Specialties</h1>
-                            <button type="button" class="btn btn-danger active" id="btn_all">All</button>
-                            <button type="button" class="btn btn-light" id="btn_select">Select</button>
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Symptoms</h1>
                         </div>
                     </div>
                     <hr style="height:1px; visibility:hidden">
@@ -114,21 +112,7 @@
                 </div>
                 <div class="container">
                     <div class="row align-items-center text-center">
-                        <div class="col" id="select3">
-                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
-                            <select id="sel" class="selectpicker show-tick" 
-                                    data-style="btn-danger" data-header="Search list:" 
-                                    data-width="340px" data-size="6"
-                                    data-live-search="true" onchange="show(this.value);">
-                                <option value=""> -- select -- </option>
-                            </select>
-                            <p id="msg"></p>    
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row align-items-center text-center">
-                        <div class="col" id="select4" style="display:none"> <!--works-->
+                        <div class="col" id="select4">
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                             <select id="SEL2" class="selectpicker show-tick" 
                                     data-style="btn-danger" data-header="Search list:" 
@@ -3616,31 +3600,6 @@
                 });
             });
 
-            ///  DEFAULT_PAGE_2  ///
-            var selected = eponyms
-            function populateSelect() {
-                var ele = document.getElementById('sel');
-                selected.forEach(function(b) {
-                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-                }
-            console.log(selected)
-            populateSelect()
-     
-            let select ="";
-            $("#select1").find('option:selected').each(function() {
-                    select += "\'" + $.trim($(this).text()) + "\',";});
-                    if(select != ""){select = select.substr(0);};
-                var stringArray = (new Function("return [" + select+ "];")());
-                
-            function topicFilter2(taxonomy) {
-                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                return eponyms.filter(item => {
-                    let disease = Array.isArray(item.disease) ? item.disease : [item.disease];
-                    return taxonomy.some(med => disease.includes(med));
-                    });
-                }
-                    
-            var selected2 = topicFilter2(stringArray); 
     
 
         ///  SELECTED_SPECIALTIES_1  ///
