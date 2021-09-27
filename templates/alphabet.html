@@ -121,7 +121,7 @@
                                     data-live-search="true" onchange="show(this.value);">
                                     <option value=""> -- select -- </option>
                             </select>
-                            <p id="msg" data-aos="zoom-in" data-aos-duration="600"></p>    
+                            <p id="msg"></p>    
                         </div>
                     </div>
                 </div>
@@ -4964,7 +4964,9 @@
                                             eponyms[i].about +
                                             eponyms[i].refs +
                                             eponyms[i].acknow
-                                            ;}}}}
+                                            ;}}}
+                                        $('.msg').fadeIn('slow');
+                                        }
             
             function show2(id) {
             var msg2 = document.getElementById('msg2');
@@ -4979,7 +4981,9 @@
                                             eponyms[i].about +
                                             eponyms[i].refs +
                                             eponyms[i].acknow
-                                            ;}}}}
+                                            ;}}}
+                                        $('.msg2').fadeIn('slow');
+                                        }
         </script>
 
         <script src="/static/assets/js/theme.js"></script>
