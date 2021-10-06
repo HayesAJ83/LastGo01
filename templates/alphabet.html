@@ -129,7 +129,7 @@
                                     class="card-img" alt="" style="width: 12rem;">
                                 </div>
                                 <div class="card-body">
-                                    <h6 class="card-title mb-0 text-uppercase" id="name"></h6>
+                                    <h6 class="card-title text-uppercase" id="name"></h6>
                                     <p class="card-text fs--4 text-primary fw-bold" id="whenWhere"></p>
                                     <p id="msg"></p>
                                 </div>
@@ -560,7 +560,7 @@
             refs:"<br><br><u>Reference</u><br>Amyand C. 1735 VIII. Of an inguinal rupture, with a pin in the appendix coeci, incrusted with stone; and some observations on wounds in the guts. <i>Phil Trans R Soc</i>. 39; 329-342",    
             jrnls:["Phil Trans R Soc",],
             //imgName:"",
-            about:"<br><br>Description:<b> An inguinal hernia in which the appendix is contained within the herniating sac</b>.<br><br>Claudius Amyand, Serjeant Surgeon to His Majesty George II of GB & Ireland, reported the case of an 11-year old boy, Hanvil Anderson, who was admitted to St. George's Hospital (near Hyde Park Corner at that time) on 8th October 1735.<br>The patient presented with a fistula between the scrotum and thigh, which discharged an <i>''unkindly sort of matter''</i>. The operation, which was not performed until 6th December 1735, and lasted nearly half an hour.<br>Amyand describes amputating the perforated appendix by securing a circular ligature on a healthy part of the proximal appendix and leaving a stump which was replaced into the abdomen. The hernia sac was also excised, and the fistulous tract was debrided and the skin held open with the use of a <i>''tent''</i> to allow drainage.", 
+            about:"<br>Description:<b> An inguinal hernia in which the appendix is contained within the herniating sac</b>.<br><br>Claudius Amyand, Serjeant Surgeon to His Majesty George II of GB & Ireland, reported the case of an 11-year old boy, Hanvil Anderson, who was admitted to St. George's Hospital (near Hyde Park Corner at that time) on 8th October 1735.<br>The patient presented with a fistula between the scrotum and thigh, which discharged an <i>''unkindly sort of matter''</i>. The operation, which was not performed until 6th December 1735, and lasted nearly half an hour.<br>Amyand describes amputating the perforated appendix by securing a circular ligature on a healthy part of the proximal appendix and leaving a stump which was replaced into the abdomen. The hernia sac was also excised, and the fistulous tract was debrided and the skin held open with the use of a <i>''tent''</i> to allow drainage.", 
             acknow:"<br><br><br><i>Thanks to Mr Alastair J Hayes FRCSEd who contributed the above information.</i>",
         //},{ 
         //    ID: 85, 
@@ -7469,7 +7469,7 @@
             } else {
                 for (var i = 0; i < eponyms.length; i++) {
                 if  (Number(id) === eponyms[i].ID) {
-                    name.innerHTML = eponyms[i].who
+                    name.innerHTML = eponyms[i].who.bold()
                                             ;}}}
                                         $('.name').fadeIn('slow');
             
