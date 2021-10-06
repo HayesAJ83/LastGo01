@@ -131,6 +131,7 @@
                                 <div class="card-body">
                                     <h6 class="card-title mb-0 text-uppercase" id="name"></h6>
                                     <p class="card-text mb-3 fs--1 text-primary fw-bold" id="when"></p>
+                                    <p class="card-text mb-3 fs--1 fw-bold" id="where"></p>
                                     <p id="msg"></p>
                                 </div>
                             </div>  
@@ -7469,7 +7470,7 @@
             } else {
                 for (var i = 0; i < eponyms.length; i++) {
                 if  (Number(id) === eponyms[i].ID) {
-                    name.innerHTML = eponyms[i].who.bold()
+                    name.innerHTML = eponyms[i].who
                                             ;}}}
                                         $('.name').fadeIn('slow');
             
@@ -7481,14 +7482,24 @@
                     when.innerHTML = eponyms[i].when.bold()
                                             ;}}}
                                         $('.when').fadeIn('slow');
+            
+            var where = document.getElementById('where');
+            if (!id) {where.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.length; i++) {
+                if  (Number(id) === eponyms[i].ID) {
+                    where.innerHTML = eponyms[i].where.bold()
+                                            ;}}}
+                                        $('.where').fadeIn('slow');
                                     
+            
+            
             var msg = document.getElementById('msg');
             if (!id) {msg.innerHTML = "";
             } else {
                 for (var i = 0; i < eponyms.length; i++) {
                 if  (Number(id) === eponyms[i].ID) {
-                    msg.innerHTML = eponyms[i].when.bold()  +"<br>"+
-                                    eponyms[i].where.bold() +"<br>"+
+                    msg.innerHTML = eponyms[i].where.bold() +"<br>"+
                                     eponyms[i].about +
                                     eponyms[i].refs +
                                     eponyms[i].acknow
