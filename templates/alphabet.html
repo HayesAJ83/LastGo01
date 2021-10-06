@@ -129,7 +129,7 @@
                                     class="card-img" alt="" style="width: 12rem;">
                                 </div>
                                 <div class="card-body">
-                                    <h6 class="card-title mb-0 text-uppercase" id="msg"></h6>
+                                    <h6 class="card-title mb-0 text-uppercase" id="name"></h6>
                                     <p class="card-text mb-3 fs--1 text-primary fw-bold">tester</p>
                                     <p id="msg"></p>
                                 </div>
@@ -7463,6 +7463,18 @@
         </script>
 
         <script>
+            function show(id) {
+            var name = document.getElementById('name');
+            if (!id) {name.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.length; i++) {
+                if  (Number(id) === eponyms[i].ID) {
+                    name.innerHTML = eponyms[i].who.bold()+"<br>"
+                                            ;}}}
+                                        $('.name').fadeIn('slow');
+                                        }
+
+
             function show(id) {
             var msg = document.getElementById('msg');
             if (!id) {msg.innerHTML = "";
