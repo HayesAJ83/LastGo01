@@ -130,8 +130,8 @@
                                 </div>
                                 <div class="card-body">
                                     <h6 class="card-title mb-0 text-uppercase" id="name"></h6>
-                                    <p class="card-text mb-3 fs--1 text-primary fw-bold" id="when"></p>
-                                    <p class="card-text mb-3 fs--1 fw-bold" id="where"></p>
+                                    <p class="card-text mb-3 fs--1 text-primary fw-bold" id="whenWhere"></p>
+                                    
                                     <p id="msg"></p>
                                 </div>
                             </div>  
@@ -7474,33 +7474,23 @@
                                             ;}}}
                                         $('.name').fadeIn('slow');
             
-            var when = document.getElementById('when');
-            if (!id) {when.innerHTML = "";
+            var whenWhere = document.getElementById('whenWhere');
+            if (!id) {whenWhere.innerHTML = "";
             } else {
                 for (var i = 0; i < eponyms.length; i++) {
                 if  (Number(id) === eponyms[i].ID) {
-                    when.innerHTML = eponyms[i].when.bold()
+                    whenWhere.innerHTML = eponyms[i].when +"<br>"+
+                                          eponyms[i].where
                                             ;}}}
-                                        $('.when').fadeIn('slow');
-            
-            var where = document.getElementById('where');
-            if (!id) {where.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.length; i++) {
-                if  (Number(id) === eponyms[i].ID) {
-                    where.innerHTML = eponyms[i].where.bold()
-                                            ;}}}
-                                        $('.where').fadeIn('slow');
+                                        $('.whenWhere').fadeIn('slow');
                                     
-            
             
             var msg = document.getElementById('msg');
             if (!id) {msg.innerHTML = "";
             } else {
                 for (var i = 0; i < eponyms.length; i++) {
                 if  (Number(id) === eponyms[i].ID) {
-                    msg.innerHTML = eponyms[i].where.bold() +"<br>"+
-                                    eponyms[i].about +
+                    msg.innerHTML = eponyms[i].about +
                                     eponyms[i].refs +
                                     eponyms[i].acknow
                                     ;}}}
