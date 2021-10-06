@@ -155,8 +155,8 @@
                                     class="card-img" alt="" style="width: 12rem;">
                                 </div>
                                 <div class="card-body">
-                                    <!--<h6 class="card-title mb-0 text-uppercase">Randy Dogers</h6>-->
-                                    <!--<p class="card-text mb-3 fs--1 text-primary fw-bold">Surgeon</p>-->
+                                    <h6 class="card-title text-uppercase" id="name2"></h6>
+                                    <p class="card-text fs--4 text-primary fw-bold" id="whenWhere2"></p>
                                     <p id="msg2"></p>
                                 </div>
                             </div>   
@@ -7478,12 +7478,11 @@
             } else {
                 for (var i = 0; i < eponyms.length; i++) {
                 if  (Number(id) === eponyms[i].ID) {
-                    whenWhere.innerHTML = eponyms[i].when +"<br>"+
-                                          eponyms[i].where
+                    whenWhere.innerHTML = eponyms[i].when.bold() +"<br>"+
+                                          eponyms[i].where.bold()
                                             ;}}}
                                         $('.whenWhere').fadeIn('slow');
                                     
-            
             var msg = document.getElementById('msg');
             if (!id) {msg.innerHTML = "";
             } else {
@@ -7497,6 +7496,26 @@
                                 }
             
             function show2(id) {
+
+            var name2 = document.getElementById('name2');
+            if (!id) {name2.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.length; i++) {
+                if  (Number(id) === eponyms[i].ID) {
+                    name2.innerHTML = eponyms[i].who.bold()
+                                            ;}}}
+                                        $('.name2').fadeIn('slow');
+            
+            var whenWhere2 = document.getElementById('whenWhere2');
+            if (!id) {whenWhere2.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.length; i++) {
+                if  (Number(id) === eponyms[i].ID) {
+                    whenWhere2.innerHTML = eponyms[i].when.bold() +"<br>"+
+                                           eponyms[i].where.bold()
+                                            ;}}}
+                                        $('.whenWhere2').fadeIn('slow');
+
             var msg2 = document.getElementById('msg2');
             if (!id) {msg2.innerHTML = "";
             } else {
