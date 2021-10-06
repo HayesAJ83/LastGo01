@@ -7469,13 +7469,10 @@
             } else {
                 for (var i = 0; i < eponyms.length; i++) {
                 if  (Number(id) === eponyms[i].ID) {
-                    name.innerHTML = eponyms[i].who.bold()+"<br>"
+                    name.innerHTML = eponyms[i].who.bold()
                                             ;}}}
                                         $('.name').fadeIn('slow');
-                                        }
-
-
-            function show(id) {
+                                    
             var msg = document.getElementById('msg');
             if (!id) {msg.innerHTML = "";
             } else {
