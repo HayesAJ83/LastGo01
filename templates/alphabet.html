@@ -130,7 +130,7 @@
                                 </div>
                                 <div class="card-body">
                                     <h6 class="card-title mb-0 text-uppercase" id="name"></h6>
-                                    <p class="card-text mb-3 fs--1 text-primary fw-bold">tester</p>
+                                    <p class="card-text mb-3 fs--1 text-primary fw-bold" id="when"></p>
                                     <p id="msg"></p>
                                 </div>
                             </div>  
@@ -7472,22 +7472,29 @@
                     name.innerHTML = eponyms[i].who.bold()
                                             ;}}}
                                         $('.name').fadeIn('slow');
+            
+            var when = document.getElementById('when');
+            if (!id) {when.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.length; i++) {
+                if  (Number(id) === eponyms[i].ID) {
+                    when.innerHTML = eponyms[i].when.bold()
+                                            ;}}}
+                                        $('.when').fadeIn('slow');
                                     
             var msg = document.getElementById('msg');
             if (!id) {msg.innerHTML = "";
             } else {
                 for (var i = 0; i < eponyms.length; i++) {
                 if  (Number(id) === eponyms[i].ID) {
-                    msg.innerHTML = 
-                                            eponyms[i].who.bold()   +"<br>"+
-                                            eponyms[i].when.bold()  +"<br>"+
-                                            eponyms[i].where.bold() +"<br>"+
-                                            eponyms[i].about +
-                                            eponyms[i].refs +
-                                            eponyms[i].acknow
-                                            ;}}}
-                                        $('.msg').fadeIn('slow');
-                                        }
+                    msg.innerHTML = eponyms[i].when.bold()  +"<br>"+
+                                    eponyms[i].where.bold() +"<br>"+
+                                    eponyms[i].about +
+                                    eponyms[i].refs +
+                                    eponyms[i].acknow
+                                    ;}}}
+                                $('.msg').fadeIn('slow');
+                                }
             
             function show2(id) {
             var msg2 = document.getElementById('msg2');
