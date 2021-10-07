@@ -125,8 +125,9 @@
                             <br></br>
                             <div class="card">
                                 <div class="px-3 mt-4">
-                                    <img src="../static/assets/img/profiles/profile-04.jpg" 
-                                    class="card-img" alt="" style="width: 12rem;">
+                                    <img src="../static/assets/img/profiles/profile-03.jpg" 
+                                    class="card-img" alt="" style="width: 12rem;"
+                                    id="imgName">
                                 </div>
                                 <div class="card-body">
                                     <h6 class="card-title text-uppercase" id="name"></h6>
@@ -295,8 +296,8 @@
             lat:"50.06114", long:"19.93482",
             refs:"",//  
             //jrnls:["",], 
-            //imgName:"",
-            about:"<br><br><br>The artery of Adamkiewicz is known by other terms, including arteria radicularis magna. This vessel is a major contributor to the anterior spinal artery which gives arterial supply to the lumbar and sacral cord and nerves. The artery of Adamkiewicz arises from intercostal arteries which branch from the thoraco-abdominal aorta.", 
+            imgName:"../static/assets/img/profiles/profile-04.jpg", //temporary replacement
+            about:"<br>The artery of Adamkiewicz is known by other terms, including arteria radicularis magna. This vessel is a major contributor to the anterior spinal artery which gives arterial supply to the lumbar and sacral cord and nerves. The artery of Adamkiewicz arises from intercostal arteries which branch from the thoraco-abdominal aorta.", 
             acknow:""//"<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{   
         //    ID: 15, 
@@ -3616,7 +3617,7 @@
             googlehtz:1090000, //search: "Hashimoto's thyroiditis" [05-Oct-21]
             refs:"Hashimoto H. Zur Kenntnis der lymphomatösen Veränderung der Schilddrüse (Struma lymphomatosa). <i>Archiv für klinische Chirurgie</i>. 1912; 97: 219-248",
             jrnls:["Archiv für klinische Chirurgie",],  
-            //imgName:"", 
+            imgName:"../static/assets/img/profiles/profile-04.jpg", //temporary replacement
             about:"Chronic lymphocytic thyroiditis",//<br><br><br>", 
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
@@ -3950,6 +3951,23 @@
             refs:"",   
             //jrnls:["",],
             about:"",//<br><br><br>", 
+            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        
+        },{
+            ID:1592, 
+            name:"Hürthle cell",      
+            topic:["Endocrine",], 
+            type:["Physiology",],
+            who:"Karl Hürthle",  
+            whoSearch:["Karl Hürthle",],  
+            where:"",  whereSearch:["",],                
+            when:"1898",  
+            //disease:["",],  
+            //lat:"", long:"",   
+            //googlehtz:0, //search: "Hürthle cell" OR "Hurthle cell" [02-Oct-21]
+            refs:"", //"Askanazy M. Pathologisch-anatomische Beiträge zur Kenntniss des morbus basedowii, insbesondere uber die dabei auftretende Muskelerkrankkung. <i>Deutsches Archiv für klinische Medicin, Leipzig </i>. 1898, 61:118-186"  
+            //jrnls:["",],
+            about:"Misnomer. Also called Askanazy cells, after Max Askanazy",//<br><br><br>", 
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         
 // I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I /////////
@@ -7464,6 +7482,17 @@
 
         <script>
             function show(id) {
+                
+            var imgName = document.getElementById('imgName');
+            if (!id) {imgName.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.length; i++) {
+                if  (Number(id) === eponyms[i].ID) {
+                    imgName.innerHTML = eponyms[i].imgName
+                                            ;}}}
+                                        $('.imgName').fadeIn('slow');
+            
+
             var name = document.getElementById('name');
             if (!id) {name.innerHTML = "";
             } else {
@@ -7495,6 +7524,7 @@
                                 $('.msg').fadeIn('slow');
                                 }
             
+
             function show2(id) {
 
             var name2 = document.getElementById('name2');
@@ -7521,16 +7551,12 @@
             } else {
                 for (var i = 0; i < eponyms.length; i++) {
                 if  (Number(id) === eponyms[i].ID) {
-                    msg2.innerHTML =
-                                            eponyms[i].who.bold()   +"<br>"+
-                                            eponyms[i].when.bold()  +"<br>"+
-                                            eponyms[i].where.bold() +"<br>"+
-                                            eponyms[i].about +
-                                            eponyms[i].refs +
-                                            eponyms[i].acknow
-                                            ;}}}
-                                        $('.msg2').fadeIn('slow');
-                                        }
+                    msg2.innerHTML = eponyms[i].about +
+                                     eponyms[i].refs +
+                                     eponyms[i].acknow
+                                        ;}}}
+                                    $('.msg2').fadeIn('slow');
+                                    }
         </script>
 
         <script src="/static/assets/js/theme.js"></script>
