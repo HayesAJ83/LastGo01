@@ -112,26 +112,28 @@
                     </form>
                 </div>
                 <div class="card">
-                    <div class="row align-items-center text-center">
-                        <div class="col" id="select3">
-                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
-                            <select id="sel" class="selectpicker show-tick" 
-                                    data-style="btn-primary" data-header="Search list:" 
-                                    data-width="340px" data-size="6"
-                                    data-live-search="true" onchange="show(this.value);">
-                                    <option value=""> -- select -- </option>
-                            </select>
-                            <br></br>
-                            <div class="px-3 mt-4">
-                                <div id='imgName'></div>
-                            </div>
-                            <div class="card-body">
-                                <h6 class="card-title text-uppercase" id="name"></h6>
-                                <p class="card-text fs--4 text-primary fw-bold" id="whenWhere"></p>
-                                <p id="msg"></p>
-                            </div>
-                        </div>
+                    <div class="px-3 mt-4" id="select3">
+                        <h1 class="text-black mb-2 fs-1" style="height:30px"></h1>
+                        <select id="sel" class="selectpicker show-tick" 
+                                data-style="btn-primary" data-header="Search list:" 
+                                data-width="340px" data-size="6"
+                                data-live-search="true" onchange="show(this.value);">
+                                <option value=""> -- choose from eponyms -- </option>
+                        </select>
                     </div>
+                        
+                    <br></br>
+                        
+                    <div class="px-3 mt-4">
+                        <div id='imgName'></div>
+                    </div>
+                        
+                    <div class="card-body">
+                        <h6 class="card-title text-uppercase" id="name"></h6>
+                        <p class="card-text fs--4 text-primary fw-bold" id="whenWhere"></p>
+                        <p id="msg"></p>
+                    </div>
+                    
                 </div>
                 <!--<div class="container">
                     <div class="row align-items-center text-center">
