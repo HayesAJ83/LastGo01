@@ -126,12 +126,6 @@
                             <div class="card">
                                 <div class="px-3 mt-4">
                                     <div id='imgName'></div>
-                                    <!--<img src='../static/assets/img/profiles/profile-05.jpg' 
-                                    class="card-img" alt="" style="width: 12rem;"
-                                    id="imgName">
-                                    <img id="imgName">
-                                    <p id="imgName"></p>
-                                    <img id="imgName">-->
                                 </div>
                                 <div class="card-body">
                                     <h6 class="card-title text-uppercase" id="name"></h6>
@@ -156,8 +150,7 @@
                             <br></br>
                             <div class="card">
                                 <div class="px-3 mt-4">
-                                    <img src="../static/assets/img/profiles/profile-04.jpg" 
-                                    class="card-img" alt="" style="width: 12rem;">
+                                    <div id='imgName2'></div>
                                 </div>
                                 <div class="card-body">
                                     <h6 class="card-title text-uppercase" id="name2"></h6>
@@ -263,7 +256,7 @@
             googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             refs:"<br><br><u>Reference</u><br>Aaron CD. A sign indicative of chronic appendicitis. <i>JAMA</i>. 1913; 60(5): 350-351",    
             jrnls:["JAMA",],
-            imgName:"../static/assets/img/profiles/profile-04.jpg", //temporary replacement
+            imgName:"<img src=\"../static/assets/img/profiles/profile-01.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"<br>Aaron's sign, indicitive of chronic appendicitis, is demonstrated by prolonged firm pressure at McBurney's point which produces pain in the epigastric region. In Aaron's 1913 paper, he describes his findings in four patients.", 
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{ 
@@ -300,8 +293,7 @@
             lat:"50.06114", long:"19.93482",
             refs:"",//  
             //jrnls:["",], 
-            imgName:"<img src=\"../static/assets/img/profiles/profile-04.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-
+            imgName:"<img src=\"../static/assets/img/profiles/profile-02.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"<br>The artery of Adamkiewicz is known by other terms, including arteria radicularis magna. This vessel is a major contributor to the anterior spinal artery which gives arterial supply to the lumbar and sacral cord and nerves. The artery of Adamkiewicz arises from intercostal arteries which branch from the thoraco-abdominal aorta.", 
             acknow:""//"<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{   
@@ -339,6 +331,7 @@
             refs:"", 
             //jrnls:["",], 
             //imgName:"",
+            imgName:"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"<br>Cork, Ireland (School of Anatomy at Warren's [now Parnell] Place)",//<br><br><br>", 
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{        
@@ -376,6 +369,7 @@
             //googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             refs:"",  
             //imgName:"",
+            imgName:"<img src=\"../static/assets/img/profiles/profile-04.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",//<br><br><br>", 
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{
@@ -7497,7 +7491,6 @@
                                             ;}}}
                                         $('.imgName').fadeIn('slow');
             
-
             var name = document.getElementById('name');
             if (!id) {name.innerHTML = "";
             } else {
@@ -7531,6 +7524,15 @@
             
 
             function show2(id) {
+
+            var imgName2 = document.getElementById('imgName2');
+            if (!id) {imgName2.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.length; i++) {
+                if  (Number(id) === eponyms[i].ID) {
+                    imgName2.innerHTML = eponyms[i].imgName2
+                                            ;}}}
+                                        $('.imgName2').fadeIn('slow');
 
             var name2 = document.getElementById('name2');
             if (!id) {name2.innerHTML = "";
