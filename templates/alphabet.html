@@ -97,7 +97,7 @@
                     <hr style="height:1px; visibility:hidden">
                     <form method="POST">
                         <div class="row align-items-center text-center">
-                            <div class="col" id="selector" style="display:none">
+                            <div class="col" id="selector">                      <!--style="display:none">-->
                                 <select id="select1" class="selectpicker"
                                     name="min_multi_select" 
                                     multiple title=" -- specialties -- " 
@@ -116,18 +116,17 @@
                         <div class="card">
                             <div class="card-body">
                                 <div id="select3">
-                                    <h1 class="text-black mb-2 fs-1" style="height:30px"></h1>
+                                    <h1 class="text-black mb-2 fs-1" style="height:0px"></h1>
                                     <select id="sel" class="selectpicker show-tick" 
                                             data-style="btn-primary" data-header="Search list:" 
                                             data-width="340px" data-size="6"
                                             data-live-search="true" onchange="show(this.value);">
-                                            <option value=""> -- select -- </option>
+                                            <option value=""> -- choose eponym -- </option>
                                     </select>
                                 </div>
                                 <div class="px-3 mt-4">
                                     <div id='imgName'></div>
                                 </div>
-
                                 <h6 class="card-title px-3 mt-4 text-uppercase" id="name"></h6>
                                 <p class="card-text fs--4 text-primary fw-bold" id="whenWhere"></p>
                                 <p id="msg"></p>
@@ -3162,7 +3161,7 @@
             //    googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             refs:"", 
             //    jrnls:["",], 
-            //imgName:"", 
+            imgName:"", 
             about:"",
             acknow:"",
         },{
@@ -3180,7 +3179,7 @@
             //    googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             refs:"", 
             //jrnls:["",], 
-            //imgName:"", 
+            imgName:"", 
             about:"",
             acknow:"",
         },{
@@ -3195,7 +3194,7 @@
             //    googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             refs:"br><br><u>Reference</u><br>Gambee LP. A single-layer open intestinal anastomosis applicable to the small as well as the large intestine. <i>West J Surg</i>. 1951; 59: 1-5",  
             jrnls:["West J Surg",], 
-            //imgName:"",
+            imgName:"",
             about:"",//<br><br><br>", 
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
@@ -3211,7 +3210,7 @@
             //    googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             refs:"Gardner EJ. A genetic and clinical study of intestinal polyposis, a predisposing factor for carcinoma of the colon and rectum. <i>Am J Hum Genet</i>. 1951; 3(2): 167-176",  
             jrnls:["Am J Hum Genet",],
-            //imgName:"", 
+            imgName:"", 
             about:"",//<br><br><br>", 
             acknow:"",//<br
         },{
@@ -4258,6 +4257,7 @@
         //    lat:"", 
         //    googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
         //    refs:"",   
+        //  imgName:"",
         //    about:"",//<br><br><br>", 
         //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
@@ -4272,6 +4272,7 @@
             disease:["Pilonidal disease",],  
             //googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             refs:"",   
+            imgName:"",
             about:"",//<br><br><br>", 
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{
@@ -4288,7 +4289,8 @@
         //    long:"",
         //    lat:"",  
         //    googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
-        //    refs:"",   
+        //    refs:"",
+        //      imgName:"",   
         //    about:"",//<br><br><br>", 
         //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
@@ -4305,7 +4307,7 @@
             //    googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21] 
             refs:"<br><br><u>Reference</u><br>Kierner AC, Aigner M, Burian M. The external branch of the superior laryngeal nerve: its topographical anatomy as related to surgery of the neck. <i>Arch Otolaryngol Head Neck Surg</i>. 1998; 124(3): 301-303", 
             jrnls:["Arch Otolaryngol Head Neck Surg",],
-            //imgName:"",
+            imgName:"",
             about:"", 
             acknow:"<br><br><br><i>We kindly acknowledge Miss X FRCS who contributed the above information.</i>",
         },{
@@ -4321,7 +4323,7 @@
             //googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             refs:"",//<br><br><u>Reference</u><br>",
             //jrnls:["",],   
-            //imgName:"",
+            imgName:"",
             about:"Also known as Little's area",//<br><br><br>", 
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
@@ -4338,6 +4340,7 @@
             //googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             refs:"<br><br><u>Reference</u><br>Kikuchi R, Takano M, Takagi K, et al. Management of early invasive colorectal cancer. Risk of recurrence and clinical guidelines. <i>Dis Colon Rectum</i>. 1995; 38(12): 1286-1295",   
             jrnls:["Dis Colon Rectum.",],
+            imgName:"",
             about:"",//<br><br><br>", 
         //},{
         //    ID:1760, 
@@ -4354,6 +4357,7 @@
         //    lat:"",  
         //    googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
         //    refs:"",   
+        //    imgName:"",
         //    about:"",//<br><br><br>", 
         },{
             ID:1770, 
@@ -4369,7 +4373,7 @@
             //googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             refs:"<br><br><u>Reference</u><br>Klatskin G. Adenocarcinoma of the hepatic duct at its bifurcation within the porta hepatis: an unusual tumor with distinctive clinical and pathological features. <i>Am J Med</i>. 1965; 38: 241–256.",//  
             jrnls:["Am J Med",], 
-            //imgName:"",
+            imgName:"",
             about:"",//<br><br><br>", 
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
@@ -4386,7 +4390,7 @@
         //    googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             refs:"<br><br><u>Reference</u><br>Klein W. Nonspecific mesenteric adenitis: A report of one hundred and forty cases. <i>Arch Surg</i>. 1938; 36(4): 571-585", 
             jrnls:["Arch Surg",],
-        //    imgName:"",  
+            imgName:"",  
             about:"",//<br><br><br>", 
             acknow:"",
         //},{
@@ -4422,7 +4426,7 @@
         //    googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
         //    imgName:"",
         //    refs:"",  
-        //jrnls:["",], 
+        //    jrnls:["",], 
         //    about:"",//<br><br><br>", 
         //    acknow:"",
         },{
@@ -4457,7 +4461,7 @@
             //    lat:"",  
             //    googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             //    refs:"",   
-            //    imgName:"",
+            imgName:"",
             //    about:"",//<br><br><br>",
             //    acknow:"", 
         },{
@@ -4472,7 +4476,7 @@
             //lat:"", long:"",     
             //googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             refs:"",  
-            //imgName:"", 
+            imgName:"", 
             about:"",//<br><br><br>", 
             acknow:"",
         },{
@@ -4488,7 +4492,7 @@
             //    lat:"",  
             //    googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             refs:"",   
-            //    imgName:"",
+            imgName:"",
             about:"",//<br><br><br>", 
             acknow:"",//
 
@@ -4511,7 +4515,7 @@
             //ops:["",],
             refs:"",  
             //jrnls:["",], 
-            //imgName:"",
+            imgName:"",
             about:"",//<br><br><br>", 
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
@@ -4529,7 +4533,7 @@
             //    lat:"",  
             //    googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             //    refs:"",   
-            //    imgName:"",
+            imgName:"",
             //    about:"",//<br><br><br>", 
         
         //},{
@@ -4566,7 +4570,7 @@
             //    googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             refs:"<br><br><u>Reference</u><br>Le Fort R. Étude expérimentale sur les fractures de la machoire supérieure. <i>Revue Chir De Paris</i>. 1901; 23: 208-227, 360-379, & 479-507.",   
             jrnls:["Revue Chir De Paris",],
-            //imgName:"",
+            imgName:"",
             about:"",//<br><br><br>", 
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         
@@ -4625,7 +4629,7 @@
             //    googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             refs:"<br><br><u>Reference</u><br>Li FP, Fraumeni JF Jr. Soft-tissue sarcomas, breast cancer, and other neoplasms. A familial syndrome?.<i>Ann Intern Med</i>. 1969; 71(4): 747-752",   
             //    jrnls:["",],
-          
+            imgName:"",
             about:"",//<br><br><br>", 
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
