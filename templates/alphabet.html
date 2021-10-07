@@ -7494,6 +7494,8 @@
                                             ;}}}
                                         $('.imgName').fadeIn('slow');
             
+            imgName.innerText = imgName.innerText.replace('undefined','')
+            
             var name = document.getElementById('name');
             if (!id) {name.innerHTML = "";
             } else {
@@ -7536,6 +7538,7 @@
                     imgName2.innerHTML = eponyms[i].imgName
                                             ;}}}
                                         $('.imgName2').fadeIn('slow');
+                                        imgName2.innerText = imgName2.innerText.replace('undefined','')
 
             var name2 = document.getElementById('name2');
             if (!id) {name2.innerHTML = "";
