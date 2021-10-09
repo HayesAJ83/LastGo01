@@ -7707,9 +7707,17 @@
                                     eponyms[i].acknow
                                     ;}}}
                                 $('.msg').fadeIn('slow');
-                                }
+                               
+            var imgNameX = document.getElementById('imgNameX');
+            if (!id) {imgNameX.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.length; i++) {
+                if  (Number(id) === eponyms[i].ID) {
+                    imgNameX.innerHTML = eponyms[i].imgNameX
+                                            ;}}}
+                                        $('.imgNameX').fadeIn('slow');
+                                            }
             
-
             function show2(id) {
 
             var imgName2 = document.getElementById('imgName2');
