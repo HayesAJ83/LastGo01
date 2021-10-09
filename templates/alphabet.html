@@ -131,6 +131,7 @@
                                 <p class="card-text fs--4 text-primary fw-bold" id="whenWhere"></p>
                                 <p id="msg"></p>
                                 <div id='primaryURL'></div>
+                                <p id="ack"></p>
                             </div>
                         </div>
                     </div>
@@ -7717,8 +7718,7 @@
                 for (var i = 0; i < eponyms.length; i++) {
                 if  (Number(id) === eponyms[i].ID) {
                     msg.innerHTML = eponyms[i].about +
-                                    eponyms[i].refs +
-                                    eponyms[i].acknow
+                                    eponyms[i].refs
                                     ;}}}
                                 $('.msg').fadeIn('slow');
                                
@@ -7730,8 +7730,17 @@
                     primaryURL.innerHTML = eponyms[i].primaryURL
                                             ;}}}
                                         $('.primaryURL').fadeIn('slow');
+
+            var ack = document.getElementById('ack');
+            if (!id) {ack.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.length; i++) {
+                if  (Number(id) === eponyms[i].ID) {
+                    ack.innerHTML = eponyms[i].acknow
+                                    ;}}}
+                                $('.ack').fadeIn('slow');
                                             }
-            
+                        
             function show2(id) {
 
             var imgName2 = document.getElementById('imgName2');
