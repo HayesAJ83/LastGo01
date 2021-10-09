@@ -131,6 +131,7 @@
                                 <p class="card-text fs--4 text-primary fw-bold" id="whenWhere"></p>
                                 <p id="msg"></p>
                                 <div id='primaryURL'></div>
+                                <p id="ref"></p>
                                 <p id="ack"></p>
                             </div>
                         </div>
@@ -402,7 +403,7 @@
             imgName:"<img src=\"../static/assets/img/profiles/Philip_Rowland_Allison.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"",//<br><br><br>", 
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-            primaryURL:"<br><a hrf='#' class='btn btn-outline-primary' role='button'>original paper</a><br>", //
+            primaryURL:"",//<br><a hrf='#' class='btn btn-outline-primary' role='button'>original paper</a><br>", //
         //},{ 
         //    ID: 45, 
         //    name:"",      
@@ -475,10 +476,10 @@
             ops:["Rectal surgery",],  
             lat:"39.1375", long:"-84.5035",
             //    googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
-            refs:"<br><br><u>References</u><br>Altemeier WA, Giuseffi J, Hoxworth P. Treatment of extensive prolapse of the rectum in aged or debilitated patients. <i>AMA Arch Surg</i>. 1952; 62(1): 72-80<br><br>Altemeier WA, Culbertson WR, Alexander JW. One-stage perineal repair of rectal prolapse. Twelve years' experience.<i>Arch Surg</i>. 1964; 89: 6-16",   
+            refs:"<br><br><u>References</u><br>Altemeier WA, Giuseffi J, Hoxworth P. Treatment of extensive prolapse of the rectum in aged or debilitated patients. <i>AMA Arch Surg</i>. 1952; 62(1): 72-80<br><br>Altemeier WA, Culbertson WR, Alexander JW. One-stage perineal repair of rectal prolapse. Twelve years' experience. <i>Arch Surg</i>. 1964; 89: 6-16",   
             jrnls:["AMA Arch Surg",],
             imgName:"<img src=\"../static/assets/img/profiles/William_A_Altemeier.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            about:"",//<br><br><br>", 
+            about:"",//<br><br><br>",
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
             primaryURL:"<br><a hrf='#' class='btn btn-outline-primary' role='button'>original paper</a><br>", //
         //},{ 
@@ -1833,7 +1834,7 @@
             jrnls:["J Neurosurg",], 
             imgName:"",//"<img src=\"../static/assets/img/profiles/Ralph_Cloward.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",//<br><br><br>",
-            primaryURL:"<br><a hrf='#https://thejns.org/view/journals/j-neurosurg/15/6/article-p602.xml' class='btn btn-outline-primary' role='button'>original paper</a><br>", //
+            primaryURL:"<br><a hrf='https://thejns.org/view/journals/j-neurosurg/15/6/article-p602.xml' class='btn btn-outline-primary' role='button'>original paper</a><br>", //
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             ID:620, 
@@ -7763,8 +7764,7 @@
             } else {
                 for (var i = 0; i < eponyms.length; i++) {
                 if  (Number(id) === eponyms[i].ID) {
-                    msg.innerHTML = eponyms[i].about +
-                                    eponyms[i].refs
+                    msg.innerHTML = eponyms[i].about
                                     ;}}}
                                 $('.msg').fadeIn('slow');
                                
@@ -7776,6 +7776,15 @@
                     primaryURL.innerHTML = eponyms[i].primaryURL
                                             ;}}}
                                         $('.primaryURL').fadeIn('slow');
+            
+            var ref = document.getElementById('ref');
+            if (!id) {ref.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.length; i++) {
+                if  (Number(id) === eponyms[i].ID) {
+                    ref.innerHTML = eponyms[i].refs
+                                    ;}}}
+                                $('.ref').fadeIn('slow');
 
             var ack = document.getElementById('ack');
             if (!id) {ack.innerHTML = "";
