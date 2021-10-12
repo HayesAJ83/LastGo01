@@ -149,9 +149,7 @@
                                 <br>
                                 <p class="lead" id='name2'></p>
                                 <p class="lead" id="msg2"></p>
-                                <hr class="my-4">
                                 <p id="URLs2"></p>
-                                <hr class="my-4">
                                 <p id="ack2"></p>
                             </div>  
                         </div>
@@ -7925,13 +7923,11 @@
     } else {
         for (var i = 0; i < eponyms.length; i++) {
         if  (Number(id) === eponyms[i].ID) {
-            msg2.innerHTML = "<br>"+
-                                    eponyms[i].when.bold()  +"<br>"+
-                                    eponyms[i].where.bold() +
-
-                                    eponyms[i].about +
-                                    eponyms[i].refs +
-                                    eponyms[i].acknow
+            msg2.innerHTML = eponyms[i].when.bold()  +"<br>"+
+                             eponyms[i].where.bold() +"<br><br>"+
+                             eponyms[i].about +
+                             eponyms[i].refs +
+                             eponyms[i].acknow
                                     ;}}}
                                 $('.msg2').fadeIn('slow');
                                 }
