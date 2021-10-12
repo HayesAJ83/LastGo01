@@ -115,19 +115,17 @@
                     <div class="row align-items-center text-center">
                         <div class="jumbotron">
                             <div class="col" id="select3">
-                                <h1 class="text-black mb-2 fs-1" style="height:35px">Eponyms</h1>
+                                <h1 class="text-black mb-2 fs-1" style="height:25px">Eponyms</h1>
                                 <select id="sel" class="selectpicker show-tick" 
                                     data-style="btn-primary" data-header="Search list:" 
                                     data-width="340px" data-size="6"
                                     data-live-search="true" onchange="show(this.value);">
-                                    <option value=""> -- select_dicks -- </option>
+                                    <option value=""> -- select -- </option>
                                 </select>
                                 <br>
-                                <p id='imgName'></p>
+                                <div id='imgName'></div>
                                 <p id="msg"></p>
-                                <p id="ref"></p>
-                                <p id="URLs"></p>
-                                <p id="ack"></p>
+                                
                             </div>
                         </div>
                     </div>
@@ -7902,22 +7900,14 @@
                                 ;}}}
                             $('.name2').fadeIn('slow');
     
-    var whenWhere2 = document.getElementById('whenWhere2');
-        if (!id) {whenWhere2.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.length; i++) {
-            if  (Number(id) === eponyms[i].ID) {
-                whenWhere2.innerHTML = eponyms[i].when.bold() +"<br>"+
-                                       eponyms[i].where.bold()
-                                        ;}}}
-                                    $('.whenWhere2').fadeIn('slow');
 
     var msg2 = document.getElementById('msg2');
     if (!id) {msg2.innerHTML = "";
     } else {
         for (var i = 0; i < eponyms.length; i++) {
         if  (Number(id) === eponyms[i].ID) {
-            msg2.innerHTML = 
+            msg2.innerHTML = eponyms[i].when.bold()  +"<br>"+
+                             eponyms[i].where.bold() +"<br><br>"+
                              eponyms[i].about +
                              eponyms[i].refs +
                              eponyms[i].acknow
