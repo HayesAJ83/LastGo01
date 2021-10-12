@@ -7900,15 +7900,26 @@
     //                            }
     
     function show2(id) {
+
+
+    var imgName2 = document.getElementById('imgName2');
+    if (!id) {imgName2.innerHTML = "";
+    } else {
+        for (var i = 0; i < eponyms.length; i++) {
+        if  (Number(id) === eponyms[i].ID) {
+            imgName2.innerHTML = eponyms[i].imgName
+                                    ;}}}
+                                $('.imgName2').fadeIn('slow');
+
     var msg2 = document.getElementById('msg2');
     if (!id) {msg2.innerHTML = "";
     } else {
         for (var i = 0; i < eponyms.length; i++) {
         if  (Number(id) === eponyms[i].ID) {
             msg2.innerHTML = "<br><br>"+
-                                    'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
-                                    'When'  +":   "+ eponyms[i].when.bold()  +"<br>"+
-                                    'Where' +":   "+ eponyms[i].where.bold() +
+                                    'Who_2'   +":   "+ eponyms[i].who.bold()   +"<br>"+
+                                    'When_2'  +":   "+ eponyms[i].when.bold()  +"<br>"+
+                                    'Where_2' +":   "+ eponyms[i].where.bold() +
                                     eponyms[i].about +
                                     eponyms[i].refs +
                                     eponyms[i].acknow
