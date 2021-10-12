@@ -113,19 +113,23 @@
                 </div>
                 <div class="container">
                     <div class="row align-items-center text-center">
-                        <div class="jumbotron">
-                            <div class="col" id="select3">
-                                <h1 class="text-black mb-2 fs-1" style="height:25px">Eponyms</h1>
-                                <select id="sel" class="selectpicker show-tick" 
+                        <div class="col" id="select3">
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
+                            <select id="sel" class="selectpicker show-tick" 
                                     data-style="btn-primary" data-header="Search list:" 
                                     data-width="340px" data-size="6"
                                     data-live-search="true" onchange="show(this.value);">
                                     <option value=""> -- select -- </option>
-                                </select>
-                                <br>
+                            </select>
+                            <!--<p id="msg"></p>   --> 
+                            <div class="jumbotron">
                                 <div id='imgName'></div>
-                                <p id="msg"></p>
-                                
+                                <h1 class="display-4">Hello, world!</h1>
+                                <p class="lead" id="msg"></p>
+                                <hr class="my-4">
+                                <p class="lead">
+                                  <a class="btn btn-secondary" href="#" role="button">Learn more</a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -156,7 +160,7 @@
             <div class="row align-items-center text-center">
                 <div class="jumbotron">
                     <h1 class="display-4">Hello, world!</h1>
-                    <p class="lead">Simple hero unit</p>
+                    <p class="lead">This is a simple hero unit</p>
                     <hr class="my-4">
                     <p class="lead">
                     <a class="btn btn-secondary" href="#" role="button">Learn more</a>
@@ -7876,8 +7880,22 @@
                             $('.ack').fadeIn('slow');
                                         }
             
-
-
+    //function show(id) {
+    //var msg = document.getElementById('msg');
+    //if (!id) {msg.innerHTML = "";
+    //} else {
+    //    for (var i = 0; i < eponyms.length; i++) {
+    //    if  (Number(id) === eponyms[i].ID) {
+    //        msg.innerHTML = "<br><br>"+
+    //                                'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
+    //                                'When'  +":   "+ eponyms[i].when.bold()  +"<br>"+
+    //                                'Where' +":   "+ eponyms[i].where.bold() +
+    //                                eponyms[i].about +
+    //                                eponyms[i].refs +
+    //                                eponyms[i].acknow
+    //                                ;}}}
+    //                            $('.msg').fadeIn('slow');
+    //                            }
     
     function show2(id) {
 
@@ -7899,7 +7917,6 @@
             name2.innerHTML = eponyms[i].who.bold()
                                 ;}}}
                             $('.name2').fadeIn('slow');
-    
 
     var msg2 = document.getElementById('msg2');
     if (!id) {msg2.innerHTML = "";
