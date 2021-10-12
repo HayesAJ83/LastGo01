@@ -7813,22 +7813,89 @@
 </script>
 
 <script>
-    function show(id) {
-    var msg = document.getElementById('msg');
-    if (!id) {msg.innerHTML = "";
-    } else {
-        for (var i = 0; i < eponyms.length; i++) {
-        if  (Number(id) === eponyms[i].ID) {
-            msg.innerHTML = "<br><br>"+
-                                    'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
-                                    'When'  +":   "+ eponyms[i].when.bold()  +"<br>"+
-                                    'Where' +":   "+ eponyms[i].where.bold() +
-                                    eponyms[i].about +
-                                    eponyms[i].refs +
-                                    eponyms[i].acknow
-                                    ;}}}
-                                $('.msg').fadeIn('slow');
-                                }
+
+    function show(id) {   
+        var imgName = document.getElementById('imgName');
+        if (!id) {imgName.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.length; i++) {
+            if  (Number(id) === eponyms[i].ID) {
+                imgName.innerHTML = eponyms[i].imgName
+                                        ;}}}
+                                    $('.imgName').fadeIn('slow');
+        
+        var name = document.getElementById('name');
+        if (!id) {name.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.length; i++) {
+            if  (Number(id) === eponyms[i].ID) {
+                name.innerHTML = eponyms[i].who.bold()
+                                        ;}}}
+                                    $('.name').fadeIn('slow');
+            
+        var whenWhere = document.getElementById('whenWhere');
+        if (!id) {whenWhere.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.length; i++) {
+            if  (Number(id) === eponyms[i].ID) {
+                whenWhere.innerHTML = eponyms[i].when.bold() +"<br>"+
+                                        eponyms[i].where.bold()
+                                        ;}}}
+                                    $('.whenWhere').fadeIn('slow');
+                                
+        var msg = document.getElementById('msg');
+        if (!id) {msg.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.length; i++) {
+            if  (Number(id) === eponyms[i].ID) {
+                msg.innerHTML = eponyms[i].about
+                                ;}}}
+                            $('.msg').fadeIn('slow');
+                            
+        var URLs = document.getElementById('URLs');
+        if (!id) {URLs.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.length; i++) {
+            if  (Number(id) === eponyms[i].ID) {
+                URLs.innerHTML = eponyms[i].URLs
+                                        ;}}}
+                                    $('.URLs').fadeIn('slow');
+        
+        var ref = document.getElementById('ref');
+        if (!id) {ref.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.length; i++) {
+            if  (Number(id) === eponyms[i].ID) {
+                ref.innerHTML = eponyms[i].refs
+                                ;}}}
+                            $('.ref').fadeIn('slow');
+
+        var ack = document.getElementById('ack');
+        if (!id) {ack.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.length; i++) {
+            if  (Number(id) === eponyms[i].ID) {
+                ack.innerHTML = eponyms[i].acknow
+                                ;}}}
+                            $('.ack').fadeIn('slow');
+                                        }
+            
+    //function show(id) {
+    //var msg = document.getElementById('msg');
+    //if (!id) {msg.innerHTML = "";
+    //} else {
+    //    for (var i = 0; i < eponyms.length; i++) {
+    //    if  (Number(id) === eponyms[i].ID) {
+    //        msg.innerHTML = "<br><br>"+
+    //                                'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
+    //                                'When'  +":   "+ eponyms[i].when.bold()  +"<br>"+
+    //                                'Where' +":   "+ eponyms[i].where.bold() +
+    //                                eponyms[i].about +
+    //                                eponyms[i].refs +
+    //                                eponyms[i].acknow
+    //                                ;}}}
+    //                            $('.msg').fadeIn('slow');
+    //                            }
     
     function show2(id) {
     var msg2 = document.getElementById('msg2');
