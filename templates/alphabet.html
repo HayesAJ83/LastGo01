@@ -146,6 +146,7 @@
                             </select>
                             <div class="jumbotron">
                                 <div id='imgName2'></div>
+                                <div id='name2'></div>
                                 <p class="lead" id="msg2"></p>
                                 <hr class="my-4">
                                 <p id="URLs2"></p>
@@ -7910,16 +7911,25 @@
             imgName2.innerHTML = eponyms[i].imgName
                                     ;}}}
                                 $('.imgName2').fadeIn('slow');
+    
+    var name2 = document.getElementById('name2');
+    if (!id) {name2.innerHTML = "";
+    } else {
+        for (var i = 0; i < eponyms.length; i++) {
+        if  (Number(id) === eponyms[i].ID) {
+            name2.innerHTML = eponyms[i].who.bold()
+                                ;}}}
+                            $('.name2').fadeIn('slow');
 
     var msg2 = document.getElementById('msg2');
     if (!id) {msg2.innerHTML = "";
     } else {
         for (var i = 0; i < eponyms.length; i++) {
         if  (Number(id) === eponyms[i].ID) {
-            msg2.innerHTML = "<br><br>"+
-                                    'Who_2'   +":   "+ eponyms[i].who.bold()   +"<br>"+
-                                    'When_2'  +":   "+ eponyms[i].when.bold()  +"<br>"+
-                                    'Where_2' +":   "+ eponyms[i].where.bold() +
+            msg2.innerHTML = "<br>"+
+                                    eponyms[i].when.bold()  +"<br>"+
+                                    eponyms[i].where.bold() +
+
                                     eponyms[i].about +
                                     eponyms[i].refs +
                                     eponyms[i].acknow
