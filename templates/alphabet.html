@@ -7839,29 +7839,10 @@
                                     eponyms[i].acknow
                                         ;}}}
                                     $('.info').fadeIn('slow');
-        
-        var name = document.getElementById('name');
-        if (!id) {name.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.length; i++) {
-            if  (Number(id) === eponyms[i].ID) {
-                name.innerHTML = eponyms[i].who.bold()
-                                        ;}}}
-                                    $('.name').fadeIn('slow');
-            
-        var whenWhere = document.getElementById('whenWhere');
-        if (!id) {whenWhere.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.length; i++) {
-            if  (Number(id) === eponyms[i].ID) {
-                whenWhere.innerHTML = eponyms[i].when.bold() +"<br>"+
-                                        eponyms[i].where.bold()
-                                        ;}}}
-                                    $('.whenWhere').fadeIn('slow');
                                 
-                                    }
-                            
+                                    }                           
 </script>
+
 <script>
     //function show(id) {
     //var msg = document.getElementById('msg');
@@ -7883,7 +7864,6 @@
 
     function show2(id) {
 
-
     var imgName2 = document.getElementById('imgName2');
     if (!id) {imgName2.innerHTML = "";
     } else {
@@ -7893,21 +7873,14 @@
                                     ;}}}
                                 $('.imgName2').fadeIn('slow');
     
-    var name2 = document.getElementById('name2');
-    if (!id) {name2.innerHTML = "";
-    } else {
-        for (var i = 0; i < eponyms.length; i++) {
-        if  (Number(id) === eponyms[i].ID) {
-            name2.innerHTML = eponyms[i].who.bold()
-                                ;}}}
-                            $('.name2').fadeIn('slow');
-
     var msg2 = document.getElementById('msg2');
     if (!id) {msg2.innerHTML = "";
     } else {
         for (var i = 0; i < eponyms.length; i++) {
         if  (Number(id) === eponyms[i].ID) {
-            msg2.innerHTML = eponyms[i].when.bold()  +"<br>"+
+            msg2.innerHTML = "<br>"+
+                             eponyms[i].who.bold() +"<br>"+
+                             eponyms[i].when.bold()  +"<br>"+
                              eponyms[i].where.bold() +"<br><br>"+
                              eponyms[i].about +
                              eponyms[i].refs +
