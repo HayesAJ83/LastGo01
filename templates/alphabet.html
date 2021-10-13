@@ -7822,8 +7822,12 @@
         } else {
             for (var i = 0; i < eponyms.length; i++) {
             if  (Number(id) === eponyms[i].ID) {
-                imgName.innerHTML = eponyms[i].imgName +"<br>"+
-                                    eponyms[i].who.bold()
+                imgName.innerHTML = eponyms[i].imgName +"<br><br>"+
+                                    eponyms[i].who.bold() +"<br>"+
+                                    eponyms[i].where.bold() +
+                                    eponyms[i].about +
+                                    eponyms[i].refs +
+                                    eponyms[i].acknow
                                         ;}}}
                                     $('.imgName').fadeIn('slow');
         
@@ -7846,18 +7850,6 @@
                                         ;}}}
                                     $('.whenWhere').fadeIn('slow');
                                 
-        var msg = document.getElementById('msg');
-        if (!id) {msg.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.length; i++) {
-            if  (Number(id) === eponyms[i].ID) {
-                msg.innerHTML = eponyms[i].when.bold()  +"<br>"+
-                                eponyms[i].where.bold() +"<br>"+
-                                eponyms[i].about +
-                                eponyms[i].refs +
-                                eponyms[i].acknow
-                                        ;}}}
-                                    $('.msg').fadeIn('slow');
                                     }
                             
 </script>
