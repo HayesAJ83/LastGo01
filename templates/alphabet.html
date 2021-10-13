@@ -7822,7 +7822,8 @@
         } else {
             for (var i = 0; i < eponyms.length; i++) {
             if  (Number(id) === eponyms[i].ID) {
-                imgName.innerHTML = eponyms[i].imgName
+                imgName.innerHTML = eponyms[i].imgName +"<br>"+
+                                    eponyms[i].who.bold()
                                         ;}}}
                                     $('.imgName').fadeIn('slow');
         
@@ -7850,38 +7851,17 @@
         } else {
             for (var i = 0; i < eponyms.length; i++) {
             if  (Number(id) === eponyms[i].ID) {
-                msg.innerHTML = eponyms[i].about
-                                ;}}}
-                            $('.msg').fadeIn('slow');
-                            
-        var URLs = document.getElementById('URLs');
-        if (!id) {URLs.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.length; i++) {
-            if  (Number(id) === eponyms[i].ID) {
-                URLs.innerHTML = eponyms[i].URLs
+                msg.innerHTML = eponyms[i].when.bold()  +"<br>"+
+                                eponyms[i].where.bold() +"<br>"+
+                                eponyms[i].about +
+                                eponyms[i].refs +
+                                eponyms[i].acknow
                                         ;}}}
-                                    $('.URLs').fadeIn('slow');
-        
-        var ref = document.getElementById('ref');
-        if (!id) {ref.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.length; i++) {
-            if  (Number(id) === eponyms[i].ID) {
-                ref.innerHTML = eponyms[i].refs
-                                ;}}}
-                            $('.ref').fadeIn('slow');
-
-        var ack = document.getElementById('ack');
-        if (!id) {ack.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.length; i++) {
-            if  (Number(id) === eponyms[i].ID) {
-                ack.innerHTML = eponyms[i].acknow
-                                ;}}}
-                            $('.ack').fadeIn('slow');
-                                        }
-            
+                                    $('.msg').fadeIn('slow');
+                                    }
+                            
+</script>
+<script>
     //function show(id) {
     //var msg = document.getElementById('msg');
     //if (!id) {msg.innerHTML = "";
@@ -7898,7 +7878,8 @@
     //                                ;}}}
     //                            $('.msg').fadeIn('slow');
     //                            }
-    
+
+
     function show2(id) {
 
 
