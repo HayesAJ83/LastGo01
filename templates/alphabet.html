@@ -125,7 +125,8 @@
                             <!--<p id="msg"></p>   --> 
                             <div class="jumbotron">
                                 <div id='imgName'></div>
-                                <p id="msg"></p>
+                                <p class="lead" id='info'></p>
+                                
                                                                         <!--<h1 class="display-4">Hello, world!</h1>-->
                                                                         <!--<p class="lead" id="msg"></p>-->
                                                                         <!--<hr class="my-4">-->
@@ -7822,14 +7823,22 @@
         } else {
             for (var i = 0; i < eponyms.length; i++) {
             if  (Number(id) === eponyms[i].ID) {
-                imgName.innerHTML = eponyms[i].imgName +"<br><br>"+
-                                    eponyms[i].who.bold() +"<br>"+
+                imgName.innerHTML = eponyms[i].imgName
+                                        ;}}}
+                                    $('.imgName').fadeIn('slow');
+
+        var info = document.getElementById('info');
+        if (!id) {imgName.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.length; i++) {
+            if  (Number(id) === eponyms[i].ID) {
+                info.innerHTML =    eponyms[i].who.bold() +"<br>"+
                                     eponyms[i].where.bold() +
                                     eponyms[i].about +
                                     eponyms[i].refs +
                                     eponyms[i].acknow
                                         ;}}}
-                                    $('.imgName').fadeIn('slow');
+                                    $('.info').fadeIn('slow');
         
         var name = document.getElementById('name');
         if (!id) {name.innerHTML = "";
