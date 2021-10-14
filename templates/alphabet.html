@@ -185,6 +185,8 @@
                 </div>
                 <br>
                 <br>
+                <br>
+                <br>
             </section>
         </main>
         <!-- End of Main Content -->
@@ -7616,8 +7618,8 @@
         $('#btn_all').addClass("btn btn-light");
         $('#btn_select').removeClass("btn btn-light");
         $('#btn_select').addClass("btn btn-primary active");
-        $('#selector').fadeIn(400);
-        $('#select3').fadeOut(400);
+        $('#selector').fadeIn(50);
+        $('#select3').fadeOut(50);
         
         let select = "";
         $("#select1").find('option:selected').each(function() {
@@ -7685,7 +7687,7 @@
     
         populateSelect2()
         
-        $('#select4').fadeIn(500);
+        $('#select4').fadeIn(50);
         $('#SEL2').selectpicker('refresh');
         $('#select1').on('change', function() {
             $('#select1').selectpicker('toggle'); //added to toggle open/close
@@ -7752,16 +7754,16 @@
     $('#btn_all').on('click', function() {
         $('#btn_all').removeClass("btn btn-light");
         $('#btn_all').addClass("btn btn-primary active");
-        $('#selector').fadeOut(400);
+        $('#selector').fadeOut(50);
         $('#btn_select').removeClass("btn btn-primary active");
         $('#btn_select').addClass("btn btn-light");
-        $('#select4').fadeOut(100);
+        $('#select4').fadeOut(50);
         $('#select1').ready(function() {
             let value = '\'' + $('#select1 option').map(function() {
                 return this.text}).get().join('\',\'') + '\'';
             var stringArray = (new Function("return [" + value+ "];")());
             });
-        $('#select3').fadeIn(400);
+        $('#select3').fadeIn(50);
     });
 </script>
 
@@ -7828,342 +7830,5 @@
 
 <script src="/static/assets/js/theme.js"></script>
 </body>
-
-<!--
-
-
-
-
-        <script>
-            $(document)
-            .ready(function() {
-            let result1 = eponyms
-                .flatMap(item => item.topic)
-                .filter((item, i, arr) => arr.indexOf(item) === i)
-                let resultsort1 = result1.sort()
-                var select = document.getElementById("select1");
-                var options = resultsort1;
-                for(var i = 0; i < options.length; i++) {
-                    var opt = options[i];
-                    var el = document.createElement("option");
-                    el.textContent = opt;
-                    el.value = opt;
-                    select.appendChild(el);
-	                }
-            console.log()
-                });
-
-            ///  DEFAULT_PAGE_1  ///
-            $(document)
-            .ready(function() {
-                $('#select1').ready(function() {
-                    let value = '\'' + $('#select1 option').map(function() {
-                            return this.text}).get().join('\',\'') + '\'';
-                    var stringArray = (new Function("return [" + value+ "];")());
-                });
-            });
-
-            ///  DEFAULT_PAGE_2  ///
-            var selected = eponyms
-            function populateSelect() {
-                var ele = document.getElementById('sel');
-                selected.forEach(function(b) {
-                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-                }
-            console.log(selected)
-            populateSelect()
-     
-            let select ="";
-            $("#select1").find('option:selected').each(function() {
-                    select += "\'" + $.trim($(this).text()) + "\',";});
-                    if(select != ""){select = select.substr(0);};
-                var stringArray = (new Function("return [" + select+ "];")());
-                
-            function topicFilter2(taxonomy) {
-                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                return eponyms.filter(item => {
-                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                    return taxonomy.some(med => topic.includes(med));
-                    });
-                }
-
-            var selected2 = topicFilter2(stringArray); 
-    
-
-            ///  SELECTED_SPECIALTIES_1  ///
-            $(document)
-            .ready(function() {
-            $('#btn_select').on('click', function() {
-                $('#btn_all').removeClass("btn btn-primary active");
-                $('#btn_all').addClass("btn btn-light");
-                $('#btn_select').removeClass("btn btn-light");
-                $('#btn_select').addClass("btn btn-primary active");
-                $('#selector').fadeIn(400); //selector for specialties
-                $('#select3').fadeOut(400); //Full AtoZ list
-                
-                let select = "";
-                $("#select1").find('option:selected').each(function() {
-                select += "\'" + $.trim($(this).text()) + "\',";
-                });
-                if (select != "") {
-                    select = select.substr(0);
-                }
-                var stringArray = (new Function( "return [" + select + "];")());
-                function topicFilter2(taxonomy) {
-                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                return eponyms.filter(item => {
-                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                    return taxonomy.some(med => topic.includes(med));
-                    });
-                    }
-                var select2 = topicFilter2(stringArray);
-
-                if (!select2.length) {var push = "";} 
-                else {
-                    var push = select2.reduce((options, {ID,name}) =>
-                        options += `<option value="${ID}">${name}</option>`);
-                        }
-                
-                function populateSelect() {
-                    if (!select2.length) {var push = "";}
-                    else {
-                        var push = select2.reduce((options, {ID,name}) =>
-                            options += `<option value="${ID}">${name}</option>`);
-                            }}
-                
-                populateSelect()
-                $( '#SEL2' ).html(push);
-                show()
-                        }).trigger("change")
-                });
-        </script>
-
-        <script>  ///  SELECTED_SPECIALTIES_2  ///
-            $('#select1').on('change', function() {
-                let select ="";
-                $("#select1").find('option:selected').each(function() {
-                    select += "\'" + $.trim($(this).text()) + "\',";});
-                    if(select != ""){select = select.substr(0);};
-                var stringArray = (new Function("return [" + select+ "];")());
-                console.log(stringArray); //works Array [chosen options]
-                
-                function topicFilter2(taxonomy) {
-                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                    return eponyms.filter(item => {
-                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                        return taxonomy.some(med => topic.includes(med));
-                        });
-                    }
-                
-                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-                //console.log(selected2)
-
-                function populateSelect2() {
-                    document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
-                        options += `<option value="${ID}">${name}</option>`,
-                        '<option value=""> -- select -- </option>'
-                        );
-                    }
-            
-                populateSelect2()
-                
-                $('#select4').fadeIn(500);
-                $('#SEL2').selectpicker('refresh');
-                $('#select1').on('change', function() {
-                    $('#select1').selectpicker('toggle'); //added to toggle open/close
-                    $('#SEL2').selectpicker('refresh');
-                    });
-            });
-                
-           
-            $('#SEL2').change(function() {
-                let select ="";
-                $("#select1").find('option:selected').each(function() {
-                    select += "\'" + $.trim($(this).text()) + "\',";});
-                    if(select != ""){select = select.substr(0);};
-                var stringArray = (new Function("return [" + select+ "];")());
-                
-                function topicFilter2(taxonomy) {
-                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                    return eponyms.filter(item => {
-                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                        return taxonomy.some(med => topic.includes(med));
-                        });
-                    }
-                    
-                var selected2 = topicFilter2(stringArray);
-                console.log(selected2)
-                function show(id) {
-                    var msg = document.getElementById('msg');
-                    if (!id) {msg.innerHTML = "";
-                    } else {
-                        for (var i = 0; i < eponyms.length; i++) {
-                        if  (Number(id) === eponyms[i].ID) {
-                            msg.innerHTML = "<br><br>"+
-                                            'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
-                                            'Where' +":   "+ eponyms[i].where.bold() +
-                                            eponyms[i].acknow;
-                                            }}}}
-                }).trigger("change")
-
-
-            $('#select4').change(function() {
-                let select ="";
-                $("#select1").find('option:selected').each(function() {
-                    select += "\'" + $.trim($(this).text()) + "\',";});
-                    if(select != ""){select = select.substr(0);};
-                var stringArray = (new Function("return [" + select+ "];")());
-                
-                function topicFilter2(taxonomy) {
-                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                    return eponyms.filter(item => {
-                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                        return taxonomy.some(med => topic.includes(med));
-                        });
-                    }
-                    
-                var selected2 = topicFilter2(stringArray);
-                console.log(selected2)
-                
-                }).trigger("change")
-            
-        </script>
-
-        <script>
-        ///////  RETURN_TO_ALL  ///////
-            $('#btn_all').on('click', function() {
-                $('#btn_all').removeClass("btn btn-light");
-                $('#btn_all').addClass("btn btn-primary active");
-                $('#selector').fadeOut(400);
-                $('#btn_select').removeClass("btn btn-primary active");
-                $('#btn_select').addClass("btn btn-light");
-                $('#select4').fadeOut(100);
-                $('#select1').ready(function() {
-                    let value = '\'' + $('#select1 option').map(function() {
-                        return this.text}).get().join('\',\'') + '\'';
-                    var stringArray = (new Function("return [" + value+ "];")());
-                    });
-                $('#select3').fadeIn(400);
-            });
-        </script>
-
-        <script>
-            function show(id) {   
-            var imgName = document.getElementById('imgName');
-            if (!id) {imgName.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.length; i++) {
-                if  (Number(id) === eponyms[i].ID) {
-                    imgName.innerHTML = eponyms[i].imgName
-                                            ;}}}
-                                        $('.imgName').fadeIn('slow');
-            
-            var name = document.getElementById('name');
-            if (!id) {name.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.length; i++) {
-                if  (Number(id) === eponyms[i].ID) {
-                    name.innerHTML = eponyms[i].who.bold()
-                                            ;}}}
-                                        $('.name').fadeIn('slow');
-            
-            var whenWhere = document.getElementById('whenWhere');
-            if (!id) {whenWhere.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.length; i++) {
-                if  (Number(id) === eponyms[i].ID) {
-                    whenWhere.innerHTML = eponyms[i].when.bold() +"<br>"+
-                                          eponyms[i].where.bold()
-                                            ;}}}
-                                        $('.whenWhere').fadeIn('slow');
-                                    
-            var msg = document.getElementById('msg');
-            if (!id) {msg.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.length; i++) {
-                if  (Number(id) === eponyms[i].ID) {
-                    msg.innerHTML = eponyms[i].about
-                                    ;}}}
-                                $('.msg').fadeIn('slow');
-                               
-            var URLs = document.getElementById('URLs');
-            if (!id) {URLs.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.length; i++) {
-                if  (Number(id) === eponyms[i].ID) {
-                    URLs.innerHTML = eponyms[i].URLs
-                                            ;}}}
-                                        $('.URLs').fadeIn('slow');
-            
-            var ref = document.getElementById('ref');
-            if (!id) {ref.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.length; i++) {
-                if  (Number(id) === eponyms[i].ID) {
-                    ref.innerHTML = eponyms[i].refs
-                                    ;}}}
-                                $('.ref').fadeIn('slow');
-
-            var ack = document.getElementById('ack');
-            if (!id) {ack.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.length; i++) {
-                if  (Number(id) === eponyms[i].ID) {
-                    ack.innerHTML = eponyms[i].acknow
-                                    ;}}}
-                                $('.ack').fadeIn('slow');
-                                            }
-                        
-
-            function show2(id) {
-
-            var imgName2 = document.getElementById('imgName2');
-            if (!id) {imgName2.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.length; i++) {
-                if  (Number(id) === eponyms[i].ID) {
-                    imgName2.innerHTML = eponyms[i].imgName
-                                            ;}}}
-                                        $('.imgName2').fadeIn('slow');
-    
-            var name2 = document.getElementById('name2');
-            if (!id) {name2.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.length; i++) {
-                if  (Number(id) === eponyms[i].ID) {
-                    name2.innerHTML = eponyms[i].who.bold()
-                                            ;}}}
-                                        $('.name2').fadeIn('slow');
-            
-            var whenWhere2 = document.getElementById('whenWhere2');
-            if (!id) {whenWhere2.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.length; i++) {
-                if  (Number(id) === eponyms[i].ID) {
-                    whenWhere2.innerHTML = eponyms[i].when.bold() +"<br>"+
-                                           eponyms[i].where.bold()
-                                            ;}}}
-                                        $('.whenWhere2').fadeIn('slow');
-
-            var msg2 = document.getElementById('msg2');
-            if (!id) {msg2.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.length; i++) {
-                if  (Number(id) === eponyms[i].ID) {
-                    msg2.innerHTML = eponyms[i].about +
-                                     eponyms[i].refs +
-                                     eponyms[i].acknow
-                                        ;}}}
-                                    $('.msg2').fadeIn('slow');
-                                    }
-        </script>
-
-        <script src="/static/assets/js/theme.js"></script>
-
--->
-
-
-
-
 
 </html>
