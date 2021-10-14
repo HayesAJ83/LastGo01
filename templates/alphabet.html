@@ -138,7 +138,7 @@
                     <hr style="height:1px; visibility:hidden">
                     <form method="POST">
                         <div class="row align-items-center text-center">
-                            <div class="col" id="selector" style="display:none">
+                            <div class="col" data-aos="zoom-out-up" id="selector" style="display:none">
                                 <select id="select1" class="selectpicker"
                                     name="min_multi_select" 
                                     multiple title=" -- specialties -- " 
@@ -154,7 +154,7 @@
                 </div>
                 <div class="container">
                     <div class="row align-items-center text-center">
-                        <div class="col" id="select3">
+                        <div class="col" data-aos="zoom-out-up" id="select3">
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                             <select id="sel" class="selectpicker show-tick" 
                                     data-style="btn-primary" data-header="Search list:" 
@@ -163,16 +163,19 @@
                                     <option value=""> -- select -- </option>
                             </select>
                             <br>
-                            <div class="jumbotron bg-transparent">
+                            <div class="lead" id='imgName'></div>
+                            <p class="lead" id="info"></p>
+                            
+                            <!--<div class="jumbotron bg-transparent">
                                 <div class="lead" id='imgName'></div>
-                                <p class="lead" id="info"></p>
+                                <p class="lead" id="info"></p>-->
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="container">
                     <div class="row align-items-center text-center">
-                        <div class="col" id="select4" style="display:none"> <!--works-->
+                        <div class="col" data-aos="zoom-out-up" id="select4" style="display:none"> <!--works-->
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                             <select id="SEL2" class="selectpicker show-tick" 
                                     data-style="btn-primary" data-header="Search list:" 
@@ -181,9 +184,12 @@
                                     <option value=""> -- select_specs -- </option>
                             </select>
                             <br>
-                            <div class="jumbotron bg-transparent">
+                            <div class="lead" id='imgName2'></div>
+                            <p class="lead" id="msg2"></p>
+         
+                            <!--<div class="jumbotron bg-transparent">
                                 <div class="lead" id='imgName2'></div>
-                                <p class="lead" id="msg2"></p>
+                                <p class="lead" id="msg2"></p>-->
                             </div>  
                         </div>
                     </div>
