@@ -106,7 +106,7 @@
             <!-- End of Section -->
 
 
-            <!-- 
+            <!-- Section
             <section class="py-0 overflow-hidden text-center" id="section-1">
                 <div class="bg-container overlay parallax" data-rellax-percentage="0.5" style="background-image: url(/static/assets/img/backgrounds/iStock-583857946_big.jpg)"></div>
                 <div class="container">
@@ -124,7 +124,7 @@
             <section id="section-2" class="pt-7 pb-0 bg-blue-light">
                 <div class="container" style="height:215px">
                     <div class="row align-items-center text-center">
-                        <div class="col" data-aos="zoom-in-up">
+                        <div class="col" data-aos="flip-down">
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Specialties</h1>
                             <button type="button" class="btn btn-primary active" id="btn_all">All</button>
                             <button type="button" class="btn btn-light" id="btn_select">Select</button>
@@ -149,7 +149,7 @@
                 </div>
                 <div class="container">
                     <div class="row align-items-center text-center">
-                        <div class="col" data-aos="zoom-in" id="select3">
+                        <div class="col" data-aos="fade-up" id="select3">
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                             <select id="sel" class="selectpicker show-tick" 
                                     data-style="btn-primary" data-header="Search list:" 
@@ -165,7 +165,7 @@
                 </div>
                 <div class="container">
                     <div class="row align-items-center text-center">
-                        <div class="col" data-aos="zoom-out-up" id="select4" style="display:none"> <!--works-->
+                        <div class="col" data-aos="zoom-in" id="select4" style="display:none"> <!--works-->
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                             <select id="SEL2" class="selectpicker show-tick" 
                                     data-style="btn-primary" data-header="Search list:" 
@@ -175,102 +175,10 @@
                             </select>
                             <div class="lead" id='imgName2'></div>
                             <p class="lead" id="msg2"></p>
-         
-                            <!--<div class="jumbotron bg-transparent">
-                                <div class="lead" id='imgName2'></div>
-                                <p class="lead" id="msg2"></p>
-                            </div>-->
                         </div>
                     </div>
                 </div>
             </section>
-            
-
-            <!-- Hidden Section -->
-                        <!--
-                        <section id="section-2">
-                            <div class="container" style="height:200px">
-                                <div class="row align-items-center text-center">
-                                    <div class="col">
-                                        <h1 class="text-black mb-2 fs-1" style="height:35px">Specialties</h1>
-                                        <button type="button" class="btn btn-primary active" id="btn_all">All</button>
-                                        <button type="button" class="btn btn-light" id="btn_select">Select</button>
-                                    </div>
-                                </div>
-                                <hr style="height:1px; visibility:hidden">
-                                <form method="POST">
-                                    <div class="row align-items-center text-center">
-                                        <div class="col" id="selector" style="display:none; height:80px">
-                                            <select id="select1" class="selectpicker"
-                                                name="min_multi_select" 
-                                                multiple title=" -- specialties -- " 
-                                                data-width="340px"
-                                                multiple data-actions-box="true"
-                                                data-size="6"
-                                                multiple data-selected-text-format="count > 3"
-                                                data-style="btn-primary">
-                                            </select>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="container">
-                                <div class="row align-items-center text-center">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div id="select3">
-                                                <h1 class="text-black mb-2 fs-1" style="height:30px"></h1>
-                                                <select id="sel" class="selectpicker show-tick" 
-                                                        data-style="btn-primary" data-header="Search list:" 
-                                                        data-width="340px" data-size="6"
-                                                        data-live-search="true" onchange="show(this.value);">
-                                                        <option value=""> -- choose eponym -- </option>
-                                                </select>
-                                            </div>
-                                            <div class="px-3 mt-4">
-                                                <div id='imgName'></div>
-                                            </div>
-                                            <h6 class="card-title px-3 mt-4 text-uppercase" id="name"></h6>
-                                            <p class="card-text fs--4 text-primary fw-bold" id="whenWhere"></p>
-                                            <p id="msg"></p>
-                                            <p id="ref"></p>
-                                            <p id="URLs"></p>
-                                            <p id="ack"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>  
-            
-                            <div class="container" style="display:none">
-                                <div class="row align-items-center text-center">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div id="select4">
-                                                <h1 class="text-black mb-2 fs-1" style="height:30px"></h1>
-                                                <select id="SEL2" class="selectpicker show-tick" 
-                                                    data-style="btn-primary" data-header="Search list:" 
-                                                    data-width="340px" data-size="6"
-                                                    data-live-search="true" onchange="show2(this.value);">
-                                                    <option value=""> -- select4 -- </option>
-                                                </select>
-                                            </div>
-                                            <div class="px-3 mt-4">
-                                                <div id='imgName2'></div>
-                                            </div>
-                                            <h6 class="card-title px-3 mt-4 text-uppercase" id="name2"></h6>
-                                            <p class="card-text fs--4 text-primary fw-bold" id="whenWhere2"></p>
-                                            <p id="msg2"></p>
-                                        <p id="ref2"></p>
-                                            <p id="URLs2"></p>
-                                            <p id="ack2"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>  
-                        </section>-->
-            <!-- End of Hidden Section -->
-
-
         </main>
         <!-- End of Main Content -->
 
@@ -672,8 +580,8 @@
             jrnls:["Phil Trans R Soc",],
             imgName:"<br><img src=\"../static/assets/img/profiles/Claudius_Amyand.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"<b>An inguinal hernia in which the appendix is contained within the herniating sac</b>.<br><br>Claudius Amyand, Serjeant Surgeon to King George II, reported the case of an 11-year old boy who was admitted to St. George's Hospital (near Hyde Park Corner at that time) in October 1735.<br>The patient presented with a fistula between the scrotum and thigh, which discharged an <i>''unkindly sort of matter''</i>. The operation, which was performed 8 weeks later, lasted nearly half an hour.<br><br>Amyand describes amputating the perforated appendix by securing a circular ligature on a healthy part of the proximal appendix and leaving a stump which was replaced into the abdomen. The hernia sac was also excised, and the fistulous tract was debrided and the skin held open with the use of a <i>''tent''</i> to allow drainage.<br>", 
-            acknow:"<hr class='my-4'><i>Thanks to Mr Alastair J Hayes FRCSEd who contributed the above information</i>",
-            URLs:"<br><hr class='my-4'><br>External Links<br> <a href='https://royalsocietypublishing.org/doi/pdf/10.1098/rstl.1735.0071' target='_blank' class='btn btn-info' role='button'>Original Paper</a>   <a href='https://en.wikipedia.org/wiki/Amyand%27s_hernia' target='_blank' class='btn btn-secondary' role='button'>Wikipedia</a> <br><br>",
+            acknow:"<hr class='my-4'><i>Thanks to Mr Alastair J Hayes FRCSEd who contributed the above information</i><br>",
+            URLs:"<br><hr class='my-4'>External Links<br> <a href='https://royalsocietypublishing.org/doi/pdf/10.1098/rstl.1735.0071' target='_blank' class='btn btn-info' role='button'>Original Paper</a>   <a href='https://en.wikipedia.org/wiki/Amyand%27s_hernia' target='_blank' class='btn btn-secondary' role='button'>Wikipedia</a> <br>",
         //},{ 
         //    ID: 85, 
         //    name:"Andrews procedure",      
