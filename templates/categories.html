@@ -73,13 +73,19 @@
                 <div class="container">
                     <div class="row h-100vh justify-content-center align-items-center">
                         <div class="col">
-                            <h1 class="mb-5 fs-lg-1 text-white" data-aos="fade-down" data-aos-duration="1500">Search</h1>
-                            <p class="text-white text-uppercase fs-4 fs-lg-6" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1500">Categories</p>
+                            <p class="mb-5 fs-2 text-white text-uppercase font-weight-bold" data-aos="fade-down" data-aos-duration="1500">Search the database<br>- Categories -</p>
+                            <p class="mb-5 fs-1 text-white font-weight-bold" data-aos="zoom-in" data-aos-delay="100">Filter by specialties of interest.<br><br>Find eponym definitions, historical context, photographs, references & weblinks.</p>
+                        </div>
+                        <div class="move d-none d-lg-block">
+                            <a href="#section-2" data-smooth-scroll data-smooth-scroll-hash="false">
+                                <i class="zmdi zmdi-long-arrow-down zmdi-hc-2x"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- End of Section -->
+
 
             <!-- Section -->
             <section id="section-2">
@@ -95,7 +101,7 @@
                             <div class="col" id="selector">
                                 <select id="select1" class="selectpicker show-tick"
                                     name="min_multi_select" 
-                                    data-style="btn-danger" data-header="Search list:"
+                                    data-style="btn-primary" data-header="Search list:"
                                     data-width="340px" data-size="6"
                                     data-live-search="true">
                                     <option value=""> -- select -- </option>
@@ -109,7 +115,7 @@
                         <div class="col" id="select4">
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                             <select id="SEL2" class="selectpicker show-tick" 
-                                    data-style="btn-danger" data-header="Search list:" 
+                                    data-style="btn-primary" data-header="Search list:" 
                                     data-width="340px" data-size="6"
                                     data-live-search="true" onchange="show2(this.value);">
                                     
