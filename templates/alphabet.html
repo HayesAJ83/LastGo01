@@ -52,7 +52,7 @@
         <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
 
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" rel="stylesheet"/> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" rel="stylesheet"/>
 
     </head>
 
@@ -76,15 +76,14 @@
                 <div class="container">
                     <div class="row h-100vh justify-content-center align-items-center">
                         <div class="col">
-                            <!--<h1 class="fs-3 fs-lg-5 title-underline mb-5 pb-3">Search the database from <span class="typed text-primary" data-typed-loop="false">A to Z<span class="text-secondary"></span></span> <br/></h1>-->
-                            <p class="mb-5 fs-2 text-white text-uppercase" data-aos="fade-down" data-aos-duration="1500">Search the database<br>- A to Z -</p>
-                            <p class="mb-5 fs-1 text-white" data-aos="zoom-in" data-aos-delay="100">Filter the database by specialties of interest.<br>Find definitions, historical context, photograps, references and helpful links.</p>
+                            <p class="mb-5 fs-2 text-white text-uppercase font-weight-bold" data-aos="fade-down" data-aos-duration="1500">Search the database<br>- A to Z -</p>
+                            <p class="mb-5 fs-1 text-white font-weight-bold" data-aos="zoom-in" data-aos-delay="100">Filter by specialties of interest.<br><br>Find eponym definitions, historical context, photographs, references & weblinks.</p>
                         </div>
-                    </div>
-                    <div class="move d-none d-lg-block">
-                        <a href="#section-2" data-smooth-scroll data-smooth-scroll-hash="false">
-                            <i class="zmdi zmdi-long-arrow-down zmdi-hc-2x"></i>
-                        </a>
+                        <div class="move d-none d-lg-block">
+                            <a href="#section-2" data-smooth-scroll data-smooth-scroll-hash="false">
+                                <i class="zmdi zmdi-long-arrow-down zmdi-hc-2x"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -122,7 +121,7 @@
                         <div class="col" data-aos="fade-up" id="select3">
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                             <select id="sel" class="selectpicker show-tick"
-                                    data-style="btn-white" data-header="Search list:" 
+                                    data-style="btn-primary" data-header="Search list:" 
                                     data-width="340px" data-size="6"
                                     data-aos="zoom-in"
                                     data-live-search="true" onchange="show(this.value);">
@@ -140,7 +139,7 @@
                         <div class="col" data-aos="zoom-in" id="select4" style="display:none"> <!--works-->
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                             <select id="SEL2" class="selectpicker show-tick"
-                                    data-style="btn-white" data-header="Search list:" 
+                                    data-style="btn-primary" data-header="Search list:" 
                                     data-width="340px" data-size="6"
                                     data-live-search="true" onchange="show2(this.value);">
                                     <option value=""> -- select -- </option>
@@ -241,12 +240,12 @@
             ops:["Appendicectomy",], 
             lat:"42.35211", long:"-83.0571",
             googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
-            refs:"<br><br><u>Reference</u><br>Aaron CD. A sign indicative of chronic appendicitis. <i>JAMA</i>. 1913; 60(5): 350-351",    
+            refs:"<br>Aaron CD. A sign indicative of chronic appendicitis. <i>JAMA</i>. 1913; 60(5): 350-351<br>",    
             jrnls:["JAMA",],
-            imgName:"<br><img src=\"../static/assets/img/profiles/Charles_Dettie_Aaron.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            about:"<br>Aaron's sign, indicitive of chronic appendicitis, is demonstrated by prolonged firm pressure at McBurney's point which produces pain in the epigastric region. In Aaron's 1913 paper, he describes his findings in four patients.", 
+            imgName:"<br><img src=\"../static/assets/img/profiles/Charles_Dettie_Aaron.png\" class=\"card-img\" style=\"width:12rem;\">",
+            about:"<br>Aaron's sign, indicitive of chronic appendicitis, is demonstrated by prolonged firm pressure at McBurney's point which produces pain in the epigastric region. In Aaron's 1913 paper, he describes his findings in four patients.<br><br>", 
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-            URLs:"<br><a href='https://jamanetwork.com/journals/jama/article-abstract/214191' target='_blank' class='btn btn-outline-primary' role='button'>Paper Link</a> <a href='https://en.wikipedia.org/wiki/Aaron%27s_sign' target='_blank' class='btn btn-outline-dark' role='button'>Wikipedia Link</a><br>", //
+            URLs:"<br><br><a href='https://jamanetwork.com/journals/jama/article-abstract/214191' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://en.wikipedia.org/wiki/Aaron%27s_sign' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <br><br>",       
         //},{ 
         //    ID: 5, 
         //    name:"",      
