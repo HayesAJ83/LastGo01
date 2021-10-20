@@ -128,6 +128,7 @@
                                     data-live-search="true" onchange="show2(this.value);">
                                     
                             </select>
+                            <div class="lead" id='imgName2'></div>
                             <p class="lead" id="msg2"></p>  
                         </div>
                     </div>
@@ -7810,8 +7811,20 @@
                                     eponyms[i].URLs +
                                     eponyms[i].acknow
                                     ;}}}}
-            
+        </script>
+
+        <script>
             function show2(id) {
+
+            var imgName2 = document.getElementById('imgName2');
+            if (!id) {imgName2.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.length; i++) {
+                if  (Number(id) === eponyms[i].ID) {
+                    imgName2.innerHTML = eponyms[i].imgName
+                                            ;}}}
+                                        $('.imgName2').fadeIn('slow');
+            
             var msg2 = document.getElementById('msg2');
             if (!id) {msg2.innerHTML = "";
             } else {
@@ -7820,11 +7833,14 @@
                     msg2.innerHTML = "<br>"+
                                     eponyms[i].who.bold()   +"<br>"+
                                     eponyms[i].when.bold()  +"<br>"+
-                                    eponyms[i].where.bold() +
+                                    eponyms[i].where.bold() +"<br><br>"+
                                     eponyms[i].about +
                                     eponyms[i].refs +
+                                    eponyms[i].URLs +
                                     eponyms[i].acknow
-                                    ;}}}}
+                                            ;}}}
+                                        $('.msg2').fadeIn('slow');
+                                        }
         </script>
 
         <script src="/static/assets/js/theme.js"></script>
