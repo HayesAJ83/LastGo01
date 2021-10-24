@@ -71,8 +71,8 @@
          
         <style>
             body { margin: 2; padding: 0; }
-            #map { position: absolute; top: 0; bottom: 0; width: 100%; height: 400px; }
-            .mapboxgl-popup { max-width: 150px; }
+            #map { position: absolute; top: 0; bottom: 0; width: 100%; height: 600px; }
+            .mapboxgl-popup { max-width: 200px; }
             .mapboxgl-popup-content {
                 text-align: center;
                 font-family: 'Open Sans', sans-serif;
@@ -261,7 +261,6 @@
 
         <script>
             const eponyms = {
-
                 'type': 'FeatureCollection',
                 'features': [
         {   
@@ -304,7 +303,6 @@
             ops:["Abdominal aortic aneurysm repair",],
             geometry: {type: 'Point', coordinates: [ 19.93482 , 50.06114 ]},            //lng,lat
             properties: {title:'Artery of Adamkiewicz', description:'Kraków<br>1881'},
-            lat:"50.06114", long:"19.93482",
             refs:"",//  
             imgName:"<br><img src=\"../static/assets/img/profiles/Adamkiewicz.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"<br>The artery of Adamkiewicz is known by other terms, including arteria radicularis magna. This vessel is a major contributor to the anterior spinal artery which gives arterial supply to the lumbar and sacral cord and nerves. The artery of Adamkiewicz arises from intercostal arteries which branch from the thoraco-abdominal aorta.<br>", 
@@ -312,6 +310,52 @@
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Artery_of_Adamkiewicz' target='_blank' class='btn btn-info' role='button'>Wikipedia</a><br>",    
         
     
+        },{ 
+            type: 'Feature',
+            ID:  30, 
+            name:"Allis forceps",      
+            topic:["General Surgery",],
+            subtype:["Instruments",],  
+            who:"Oscar Huntington Allis",  
+            whoSearch:["Oscar H Allis",], 
+            where:"Philadelphia - Pennsylvania - USA", 
+            whereSearch:["Philadelphia", "Pennsylvania", "USA",],                   
+            when:"1883",
+            ops:["Parathyroidectomy", "Thyroidectomy",],
+            geometry: {type: 'Point', coordinates: [ -75.199043 , 39.958329 ]},            //lng,lat
+            properties: {title:'Allis forceps', description:'Philadelphia<br>1883'},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            refs:"",  
+            imgName:"<br><img src=\"../static/assets/img/profiles/Oscar_H_Allis.png\" class=\"card-img\" style=\"width:12rem;\">",
+            about:"",//, 
+            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            URLs:"",//"<br><a href='#' class='btn btn-outline-primary' role='button'>original paper</a><br>", //
+        
+
+        },{ 
+            type: 'Feature',
+            ID: 60, 
+            name:"Altemeier procedure",      
+            topic:["Colorectal",],
+            subtype:["Operations",],  
+            who:"William Altemeier",  
+            whoSearch:["William Altemeier",], 
+            where:"Cincinnati - Ohio - USA", 
+            whereSearch:["Cincinnati, Ohio, USA", "Ohio, USA", "USA",],                   
+            when:"1952",
+            disease:["Rectal prolapse",],
+            ops:["Rectal surgery",],  
+            geometry: {type: 'Point', coordinates: [ -84.5035 , 39.1375 ]},            //lng,lat
+            properties: {title:'Altemeier procedure', description:'Cincinnati<br>1952'},
+            //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
+            refs:"<br>Altemeier WA, Giuseffi J, Hoxworth P. Treatment of extensive prolapse of the rectum in aged or debilitated patients. <i>AMA Arch Surg</i>. 1952; 62(1): 72-80<br><br>Altemeier WA, Culbertson WR, Alexander JW. One-stage perineal repair of rectal prolapse. Twelve years' experience. <i>Arch Surg</i>. 1964; 89: 6-16<br>",   
+            jrnls:["AMA Arch Surg",],
+            imgName:"<br><img src=\"../static/assets/img/profiles/William_A_Altemeier.png\" class=\"card-img\" style=\"width:12rem;\">",
+            about:"",//,
+            URLs:"<br><a href='https://jamanetwork.com/journals/jamasurgery/article-abstract/562520' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a>", //no wiki
+            acknow:"",//<i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        
+
 
         },{  
             type: 'Feature',
