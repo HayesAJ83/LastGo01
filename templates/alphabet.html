@@ -116,57 +116,7 @@
             </section>
             <!-- End of Section -->
             
-            <!-- Section -->
-            <section id="section-2" class="pt-7 pb-0 bg-blue-light">
-                <div class="container" style="height:215px">
-                    <div class="row align-items-center text-center">
-                        <div class="col" data-aos="flip-down">
-                            <h1 class="text-black mb-2 fs-1" style="height:30px">Specialties</h1>
-                            <button type="button" class="btn btn-primary active" id="btn_all">All</button>
-                            <button type="button" class="btn btn-light" id="btn_select">Select</button>
-                        </div>
-                    </div>
-                    <hr style="height:1px; visibility:hidden">
-                    <form method="POST">
-                        <div class="row align-items-center text-center">
-                            <div class="col" data-aos="zoom-in" id="selector" style="display:none">
-                                <select id="select1" class="selectpicker data-style="btn-white""
-                                    name="min_multi_select" 
-                                    multiple title=" -- specialties -- " 
-                                    data-width="340px"
-                                    multiple data-actions-box="true"
-                                    data-size="6"
-                                    multiple data-selected-text-format="count > 3"
-                                    data-style="btn-primary">
-                                </select>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="container">
-                    <div class="row align-items-center text-center">
-                        <div class="col" data-aos="fade-up" id="select3">
-                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
-                            <select id="sel" class="selectpicker show-tick"
-                                    data-style="btn-primary" data-header="Search list:" 
-                                    data-width="340px" data-size="6"
-                                    data-aos="zoom-in"
-                                    data-live-search="true" onchange="show(this.value);">
-                                    <option value=""> -- select -- </option>
-                            </select>
-                            <div class="lead" id='imgName'></div>
-                            <p class="lead" id="info"></p>
-                            <p></p>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <br>
-                <br>
-            </section>
-
+            
             <section>
                 <div id="map"></div>
                 <br>
@@ -399,8 +349,6 @@ const map = new mapboxgl.Map({
   });
   
   // add markers to map
-  $(document)
-    .ready(function() {
   for (const feature of eponyms.features) {
     // create a HTML element for each feature
     const el = document.createElement('div');
@@ -419,7 +367,6 @@ const map = new mapboxgl.Map({
       )
       .addTo(map);
   }
-});
 
 </script>
   
