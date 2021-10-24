@@ -828,7 +828,7 @@
         
         map.on('mouseleave', 'unclustered-point', (e) => {
             map.getCanvas().style.cursor = '';
-            Popup.remove()
+            new mapboxgl.Popup().remove()
         });
 
         map.on('mouseenter', 'clusters', () => {
