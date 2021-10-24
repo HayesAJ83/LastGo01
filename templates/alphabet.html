@@ -340,7 +340,7 @@
             disease:["Appendicitis", "Groin pain", "Groin hernia"], 
             ops:["Appendicectomy", "Groin hernia repair",],
             geometry: {type: 'Point', coordinates: [ -0.15272 , 51.50238 ]}, //lng,lat
-            properties: {title:'Amyand hernia', description:'London - England<br>1735'},    
+            properties: {title:'Amyand hernia', description:'London<br>1735'},    
             refs:"<br>Amyand C. 1735 VIII. Of an inguinal rupture, with a pin in the appendix coeci, incrusted with stone; and some observations on wounds in the guts. <i>Phil Trans R Soc</i>. 39; 329-342<br>",    
             jrnls:["Phil Trans R Soc",],
             imgName:"<br><img src=\"../static/assets/img/profiles/Claudius_Amyand.png\" class=\"card-img\" style=\"width:12rem;\">",
@@ -363,7 +363,7 @@
             disease:["Oesophageal cancer",], 
             ops:["Endoscopy", "Oesophagectomy",],
             geometry: {type: 'Point', coordinates: [ 51.49883 , -0.1188]},            //lng,lat
-            properties: {title:"Barrett's oesophagus", description:'London - England<br>1950'},
+            properties: {title:"Barrett's oesophagus", description:'London<br>1950'},
             lat:"-0.1188", long:"51.49883",
             refs:"<br>Barrett NR. Chronic peptic ulcerz of the oeophagus and ‘oesophagitis’. <i>Br J Surg</i>. 1950; 38(150): 175-182<br>",   
             jrnls:["Br J Surg",],
@@ -386,7 +386,7 @@
             disease:["Caustic burns",], 
             ops:["Endoscopy",],
             geometry: {type: 'Point', coordinates: [ 76.77581, 30.76453]},            //lng,lat
-            properties: {title:"Zargar's classification", description:'Chandigarh - India<br>1991'},
+            properties: {title:"Zargar's classification", description:'Chandigarh<br>1991'},
             lat:"30.76453", long:"76.77581",
             refs:"<br>Zargar SA, Kochhar R, Mehta S, Mehta SK. The role of fiberoptic endoscopy in the management of corrosive ingestion and modified endoscopic classification of burns. <i>Gastrointest Endosc</i>. 1991; 37(2): 165-169<br>",
             jrnls:["Gastrointest Endosc",],
@@ -691,6 +691,8 @@ const map = new mapboxgl.Map({
   });
   
   // add markers to map
+  $(document)
+    .ready(function() {
   for (const feature of eponyms.features) {
     // create a HTML element for each feature
     const el = document.createElement('div');
@@ -709,20 +711,10 @@ const map = new mapboxgl.Map({
       )
       .addTo(map);
   }
+});
 
 </script>
   
-
-<script>
-//    mapboxgl.accessToken = 'pk.eyJ1IjoiYWpoYXllczgzIiwiYSI6ImNrY2pqM2lvMDB4Z24ydG8zdDl0NTYwbTUifQ.2DKVfTAaE77XAXMpDeq_Pg';
-//    const map = new mapboxgl.Map({
-//        container: 'map',
-//        style: 'mapbox://styles/mapbox/dark-v10',
-//        center: [-96, 37.8],
-//        zoom: 2
-//        });
-    // code from the next step will go here!
-</script>
 
 </body>
 </html>
