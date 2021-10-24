@@ -70,7 +70,7 @@
         <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css' rel='stylesheet' />
          
         <style>
-            body { margin: 0; padding: 0; }
+            body { margin: 2; padding: 0; }
             #map { position: absolute; top: 0; bottom: 0; width: 100%; }
         </style>
 
@@ -798,7 +798,7 @@
         map.on('click', 'unclustered-point', (e) => {
             const coordinates = e.features[0].geometry.coordinates.slice();
             const mag = e.features[0].properties.title;
-            const tsunami =
+            const descript =
                 e.features[0].properties.description;
 
             // Ensure that if the map is zoomed out such that
@@ -811,7 +811,7 @@
             new mapboxgl.Popup()
                 .setLngLat(coordinates)
                 .setHTML(
-                    `name: ${mag}<br>year: ${tsunami}`
+                    `<b>${mag}<b><br>${descript}`
                 )
                 .addTo(map);
         });
