@@ -315,11 +315,33 @@
         
     
 
-
+        },{ 
+            type:'Feature',
+            ID: 60, 
+            name:"Altemeier procedure",      
+            topic:["Colorectal",],
+            type:["Operations",],  
+            who:"William Altemeier",  
+            whoSearch:["William Altemeier",], 
+            where:"Cincinnati - Ohio - USA", 
+            whereSearch:["Cincinnati, Ohio, USA", "Ohio, USA", "USA",],                   
+            when:"1952",
+            disease:["Rectal prolapse",],
+            ops:["Rectal surgery",],  
+            geometry: {type: 'Point', coordinates: [ -84.5035, 39.1375 ]},            //lng,lat
+            properties: {title:'Altemeier procedure', description:'Cincinnati - Ohio<br>1952'},
+            //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
+            refs:"<br>Altemeier WA, Giuseffi J, Hoxworth P. Treatment of extensive prolapse of the rectum in aged or debilitated patients. <i>AMA Arch Surg</i>. 1952; 62(1): 72-80<br><br>Altemeier WA, Culbertson WR, Alexander JW. One-stage perineal repair of rectal prolapse. Twelve years' experience. <i>Arch Surg</i>. 1964; 89: 6-16<br>",   
+            jrnls:["AMA Arch Surg",],
+            imgName:"<br><img src=\"../static/assets/img/profiles/William_A_Altemeier.png\" class=\"card-img\" style=\"width:12rem;\">",
+            about:"",//,
+            URLs:"<br><a href='https://jamanetwork.com/journals/jamasurgery/article-abstract/562520' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a>", //no wiki
+            acknow:"",//<i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        
 
 
         },{  
-            type: 'Feature',
+            type:'Feature',
             ID: 70, 
             name:"Alvarado score",      
             topic:["General Surgery",],
@@ -364,8 +386,53 @@
             acknow:"<hr class='my-4'><i>Thanks to Mr Alastair J Hayes FRCSEd who contributed the above information.</i>",
             URLs:"<br><br><a href='https://royalsocietypublishing.org/doi/pdf/10.1098/rstl.1735.0071' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://en.wikipedia.org/wiki/Amyand%27s_hernia' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <br><br>",
         
+        },{ 
+            type:'Feature',
+            ID:100, 
+            name:"Appleby procedure",      
+            topic:["Oesophagogastric","HPB",],
+            type:["Operations",],  
+            who:"Lyon Henry Appleby",  
+            whoSearch:["Lyon H Appleby",], 
+            where:"Vancouver - Canada", 
+            whereSearch:["Vancouver", "Canada",],                   
+            when:"1953",
+            disease:["Gastric cancer",],  
+            ops:["Gastrectomy",],
+            geometry: {type: 'Point', coordinates: [ -123.127887, 49.280431 ]},            //lng,lat
+            properties: {title:'Appleby procedure', description:'Vancouver - Canada<br>1953'},
+            //googlehtz:0, //search: " " AND "" [02-Oct-21]
+            refs:"<br>Appleby LH. The coeliac axis in the expansion of the operation for gastric carcinoma. <i>Cancer</i>. 1953; 6(4): 704-707<br>",  
+            jrnls:["Cancer",],
+            imgName:"",//"<br><img src=\"../static/assets/img/profiles/Lyon_Appleby.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            about:"",//<br><br><br>", 
+            URLs:"<br><br><a href='https://acsjournals.onlinelibrary.wiley.com/doi/10.1002/1097-0142(195307)6:4%3C704::AID-CNCR2820060410%3E3.0.CO;2-P' target='_blank' class='btn btn-secondary' role='button'>original paper</a><br>", //no wiki
+            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        
 
-
+        },{ 
+            type:'Feature',
+            ID:130, 
+            name:"Balthazar's CT severity index",      
+            topic:["General Surgery", "HPB",],  
+            type:["Scores"],
+            who:"Emil Balthazar",    
+            whoSearch:["Emil Balthazar",],
+            where:"Manhattan - New York - USA",                 
+            whereSearch:["Manhattan", "New York", "USA",],    
+            when:"1990",
+            disease:["Acute pancreatitis",],  
+            ops:["Pancreatic necrosectomy",], 
+            geometry: {type: 'Point', coordinates: [ -73.97403, 40.74219 ]},            //lng,lat
+            properties: {title:"Balthazar's CT severity index", description:'New York<br>1990'}, 
+            //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
+            refs:"<br>Balthazar EJ, Robinson DL, Megibow AJ, Ranson JH. Acute pancreatitis: value of CT in establishing prognosis. <i>Radiology</i>. 1990; 174(2): 331-336<br>",  
+            jrnls:["Radiology",], 
+            imgName:"",//"<br><img src=\"../static/assets/img/profiles/Emil_Balthazar.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            about:"",//<br><br><br>", 
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/Acute_pancreatitis#Balthazar_score' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+       
         
         
         },{
@@ -391,6 +458,28 @@
             acknow:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Barrett%27s_esophagus' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
     
+
+
+        },{
+            ID:730, 
+            name:"Crohn's disease",      
+            topic:["Colorectal","General Surgery",], type:["Pathology",], 
+            who:"Burrill Crohn", whoSearch:["Burrill Crohn",],
+            where:"Manhattan - New York - USA", whereSearch:["Manhattan, New York, USA", "New York, USA", "USA",],               
+            when:"1932",
+            disease:["Colitis", "Inflammatory bowel disease",],
+            ops:["Appendicectomy","Colonoscopy", "Colectomy", "Small bowel resection", "EUA rectum"],
+            geometry: {type: 'Point', coordinates: [ -73.953251, 40.79001]}, //lng,lat
+            properties: { title:"Crohn's disease", description:'New York<br>1932'},
+            //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
+            refs:"<br>Crohn BB, Ginzburg L, Oppenheimer GD. Regional ileitis. A pathological and clinical entity. <i>JAMA</i>. 1932; 99: 1323-1329<br>",   
+            jrnls:["JAMA",],
+            imgName:"<br><img src=\"../static/assets/img/profiles/Burrill_Bernard_Crohn.png\" class=\"card-img\" style=\"width:12rem;\">",
+            about:"", 
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/Crohn%27s_disease' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        
+
        },{
             type:'Feature',
             ID:3350, 
