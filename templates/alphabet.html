@@ -719,10 +719,7 @@
         // add the point_count property to your source data.
         map.addSource('earthquakes', {
             type: 'geojson',
-            // Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
-            // from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
             data: eponyms,
-            //'https://docs.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson',
             cluster: true,
             clusterMaxZoom: 14, // Max zoom to cluster points on
             clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
@@ -779,7 +776,7 @@
             filter: ['!', ['has', 'point_count']],
             paint: {
                 'circle-color': '#11b4da',
-                'circle-radius': 6,
+                'circle-radius': 8,
                 'circle-stroke-width': 1,
                 'circle-stroke-color': '#fff'
             }
@@ -804,6 +801,11 @@
             );
         });
 
+        var popup = new mapboxgl.Popup({
+            closeOnClick: false,
+            offset: [0, -15]
+            })
+
         // When a click event occurs on a feature in
         // the unclustered-point layer, open a popup at
         // the location of the feature, with
@@ -819,8 +821,8 @@
             while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
-            map.getCanvas().style.cursor = 'pointer';
-            new mapboxgl.Popup()
+  
+            popup
                 .setLngLat(coordinates)
                 .setHTML(`${mag}<br>${tsunami}`)
                 .addTo(map);
@@ -828,7 +830,7 @@
         
         map.on('mouseleave', 'unclustered-point', (e) => {
             map.getCanvas().style.cursor = '';
-            new mapboxgl.Popup().remove()
+            popup().remove()
         });
 
         map.on('mouseenter', 'clusters', () => {
@@ -841,6 +843,8 @@
 </script>
 
   
+
+
 
 </body>
 </html>
