@@ -158,6 +158,7 @@
                                     data-style="btn-primary" data-header="Search list:" 
                                     data-width="340px" data-size="6"
                                     data-aos="zoom-in"
+                                    data-dropup-auto="true"
                                     data-live-search="true" onchange="show(this.value);">
                                     <option value=""> -- select -- </option>
                             </select>
@@ -175,6 +176,7 @@
                             <select id="SEL2" class="selectpicker show-tick"
                                     data-style="btn-primary" data-header="Search list:" 
                                     data-width="340px" data-size="6"
+                                    data-dropup-auto="true"
                                     data-live-search="true" onchange="show2(this.value);">
                                     <option value=""> -- select -- </option>
                             </select>
@@ -795,9 +797,9 @@
         // description HTML from its properties.
         map.on('click', 'unclustered-point', (e) => {
             const coordinates = e.features[0].geometry.coordinates.slice();
-            const mag = e.features[0].properties.mag;
+            const mag = e.features[0].properties.title;
             const tsunami =
-                e.features[0].properties.tsunami === 1 ? 'yes' : 'no';
+                e.features[0].properties.description;
 
             // Ensure that if the map is zoomed out such that
             // multiple copies of the feature are visible, the
