@@ -71,7 +71,7 @@
          
         <style>
             body { margin: 0; padding: 3; }
-            #map { position: absolute; top: 0; bottom: 0; width: 95%; height: 280px; }
+            #map { position: center; top: 0; bottom: 0; width: 100%; height: 280px; }
             .mapboxgl-popup { max-width: 200px; }
             .mapboxgl-popup-content {
                 text-align: center;
@@ -200,7 +200,7 @@
             
             <!-- Section -->     
             <section class="py-6 py-lg-8 bg-primary text-white" id="section-3">
-                <div class="container" style="height:315px">
+                <div class="container" style="height:290px">
                     <div class="row align-items-center text-center">
                         <div class="col">
                             <div id="map"></div>
@@ -776,8 +776,8 @@
     const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/dark-v10',
-        center: [-53.5, 40.6],
-        zoom: 0.1
+        center: [-50, 40],
+        zoom: -0.1
     });
 
     map.on('load', () => {
@@ -846,7 +846,7 @@
             filter: ['!', ['has', 'point_count']],
             paint: {
                 'circle-color': '#11b4da',
-                'circle-radius': 4,
+                'circle-radius': 5,
                 'circle-stroke-width': 1,
                 'circle-stroke-color': '#fff'
             }
@@ -878,8 +878,7 @@
         map.on('click', 'unclustered-point', (e) => {
             const coordinates = e.features[0].geometry.coordinates.slice();
             const mag = e.features[0].properties.title;
-            const descript =
-                e.features[0].properties.description;
+            const descript = e.features[0].properties.description;
 
             // Ensure that if the map is zoomed out such that
             // multiple copies of the feature are visible, the
