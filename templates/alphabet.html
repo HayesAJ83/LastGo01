@@ -70,8 +70,8 @@
         <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css' rel='stylesheet' />
          
         <style>
-            body { margin: 0; padding: 0; }
-            #map { position: absolute; top: 0; bottom: 0; width: 100%; height: 400px; }
+            body { margin: 0; padding: 3; }
+            #map { position: absolute; top: 1; bottom: 1; width: 80%; height: 300px; }
             .mapboxgl-popup { max-width: 200px; }
             .mapboxgl-popup-content {
                 text-align: center;
@@ -200,8 +200,13 @@
             
             <!-- Section -->     
             <section class="py-6 py-lg-8 bg-primary text-white" id="section-3">
-                <div class="container" style="height:450px">
-                <div id="map"></div>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
         <!-- End of Main Content -->
@@ -385,7 +390,7 @@
             
         
         },{
-            type: 'Feature',
+            type:'Feature',
             ID: 90, 
             name:"Amyand hernia",              
             topic:["General Surgery"],  
@@ -403,6 +408,31 @@
             about:"<b>An inguinal hernia in which the appendix is contained within the herniating sac</b>.<br><br>Claudius Amyand, Serjeant Surgeon to King George II, reported the case of an 11 year old boy who presented to St. George's Hospital (near Hyde Park Corner at that time) with a discharging fistula between the scrotum and right thigh. <br><br>Amyand describes amputating the perforated appendix by securing a ligature around healthy part of the proximal appendix, and leaving a stump which was returned to the abdomen. The hernia sac was excised, and the fistulous tract was debrided and left open to drain.<br><br>", 
             acknow:"<hr class='my-4'><i>Thanks to Mr Alastair J Hayes FRCSEd who contributed the above information.</i>",
             URLs:"<br><br><a href='https://royalsocietypublishing.org/doi/pdf/10.1098/rstl.1735.0071' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://en.wikipedia.org/wiki/Amyand%27s_hernia' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <br><br>",
+        
+
+
+        },{ 
+            type:'Feature',
+            ID:100, 
+            name:"Appleby procedure",      
+            topic:["Oesophagogastric","HPB",],
+            type:["Operations",],  
+            who:"Lyon Henry Appleby",  
+            whoSearch:["Lyon H Appleby",], 
+            where:"Vancouver - Canada", 
+            whereSearch:["Vancouver", "Canada",],                   
+            when:"1953",
+            disease:["Gastric cancer",],  
+            ops:["Gastrectomy",],
+            geometry: {type: 'Point', coordinates: [ -123.127887, 49.280431 ]},            //lng,lat
+            properties: {title:'Appleby procedure', description:'Vancouver<br>1953'},
+            //googlehtz:1400, //search: " sign" AND "" [02-Oct-21]
+            refs:"<br>Appleby LH. The coeliac axis in the expansion of the operation for gastric carcinoma. <i>Cancer</i>. 1953; 6(4): 704-707<br>",  
+            jrnls:["Cancer",],
+            imgName:"",//"<br><img src=\"../static/assets/img/profiles/Lyon_Appleby.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            about:"",//<br><br><br>", 
+            URLs:"<br><br><a href='https://acsjournals.onlinelibrary.wiley.com/doi/10.1002/1097-0142(195307)6:4%3C704::AID-CNCR2820060410%3E3.0.CO;2-P' target='_blank' class='btn btn-secondary' role='button'>original paper</a><br>", //no wiki
+            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         
         
         },{
