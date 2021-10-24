@@ -381,7 +381,7 @@
             when:"1950",
             disease:["Oesophageal cancer",], 
             ops:["Endoscopy", "Oesophagectomy",],
-            geometry: {type: 'Point', coordinates: [ 51.49883 , -0.1188]},            //lng,lat
+            geometry: {type: 'Point', coordinates: [ -0.1188, 51.49883 ]},            //lng,lat
             properties: {title:"Barrett's oesophagus", description:'London<br>1950'},
             lat:"-0.1188", long:"51.49883",
             refs:"<br>Barrett NR. Chronic peptic ulcerz of the oeophagus and ‘oesophagitis’. <i>Br J Surg</i>. 1950; 38(150): 175-182<br>",   
@@ -709,7 +709,7 @@
     const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/dark-v10',
-        center: [-05, 38],
+        center: [0, 39],
         zoom: -0.5
     });
 
@@ -819,7 +819,7 @@
             while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
-
+            map.getCanvas().style.cursor = 'pointer';
             new mapboxgl.Popup()
                 .setLngLat(coordinates)
                 .setHTML(`${mag}<br>${tsunami}`)
@@ -828,7 +828,7 @@
         
         map.on('mouseleave', 'unclustered-point', (e) => {
             map.getCanvas().style.cursor = '';
-            mapboxgl.Popup().remove()
+            Popup.remove()
         });
 
         map.on('mouseenter', 'clusters', () => {
