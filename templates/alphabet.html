@@ -71,8 +71,8 @@
          
         <style>
             body { margin: 0; padding: 0; }
-            #map { position: absolute; height: 260px; width: 350px; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
-            .mapboxgl-popup { max-width: 200px; }
+            #map { position: absolute; height: 260px; width: 360px; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
+            
             .mapboxgl-popup-content {
                 text-align: center;
                 font-family: 'Open Sans', sans-serif;
@@ -199,7 +199,7 @@
             <!-- End of Section -->
             
             <!-- Section -->     
-            <section class="py-6 py-lg-8 bg-primary text-white" id="section-3">
+            <section class="py-6 py-lg-8 bg-primary" id="section-3">
                 <div class="container" style="height:140px">
                     <div class="row align-items-center text-center">
                         <div id="map"></div>
@@ -709,7 +709,7 @@
     const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/dark-v10',
-        center: [-20, 38],
+        center: [-05, 38],
         zoom: -0.5
     });
 
@@ -811,7 +811,7 @@
         map.on('click', 'unclustered-point', (e) => {
             const coordinates = e.features[0].geometry.coordinates.slice();
             const mag = e.features[0].properties.title;
-            //const tsunami = e.features[0].properties.description;
+            const tsunami = e.features[0].properties.description;
 
             // Ensure that if the map is zoomed out such that
             // multiple copies of the feature are visible, the
@@ -822,7 +822,7 @@
 
             new mapboxgl.Popup()
                 .setLngLat(coordinates)
-                .setHTML(`${mag}`)
+                .setHTML(`${mag}<br>${tsunami}`)
                 .addTo(map);
         });
 
