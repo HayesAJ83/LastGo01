@@ -314,51 +314,8 @@
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Artery_of_Adamkiewicz' target='_blank' class='btn btn-info' role='button'>Wikipedia</a><br>",    
         
     
-        },{ 
-            type:'Feature',
-            ID: 30, 
-            name:"Allis forceps",      
-            topic:["General Surgery",],
-            subtype:["Instruments",],  
-            who:"Oscar Huntington Allis",  
-            whoSearch:["Oscar H Allis",], 
-            where:"Philadelphia - Pennsylvania - USA", 
-            whereSearch:["Philadelphia", "Pennsylvania", "USA",],                   
-            when:"1883",
-            ops:["Parathyroidectomy", "Thyroidectomy",],
-            geometry: {type: 'Point', coordinates: [ -75.199043 , 39.958329 ]},            //lng,lat
-            properties: {title:'Allis forceps', description:'Philadelphia<br>1883'},
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            refs:"",  
-            imgName:"<br><img src=\"../static/assets/img/profiles/Oscar_H_Allis.png\" class=\"card-img\" style=\"width:12rem;\">",
-            about:"",//, 
-            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-            URLs:"",//"<br><a href='#' class='btn btn-outline-primary' role='button'>original paper</a><br>", //
-        
 
-        },{ 
-            type:'Feature',
-            ID: 60, 
-            name:"Altemeier procedure",      
-            topic:["Colorectal",],
-            subtype:["Operations",],  
-            who:"William Altemeier",  
-            whoSearch:["William Altemeier",], 
-            where:"Cincinnati - Ohio - USA", 
-            whereSearch:["Cincinnati, Ohio, USA", "Ohio, USA", "USA",],                   
-            when:"1952",
-            disease:["Rectal prolapse",],
-            ops:["Rectal surgery",],  
-            geometry: {type: 'Point', coordinates: [ -84.5035 , 39.1375 ]},            //lng,lat
-            properties: {title:'Altemeier procedure', description:'Cincinnati<br>1952'},
-            //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
-            refs:"<br>Altemeier WA, Giuseffi J, Hoxworth P. Treatment of extensive prolapse of the rectum in aged or debilitated patients. <i>AMA Arch Surg</i>. 1952; 62(1): 72-80<br><br>Altemeier WA, Culbertson WR, Alexander JW. One-stage perineal repair of rectal prolapse. Twelve years' experience. <i>Arch Surg</i>. 1964; 89: 6-16<br>",   
-            jrnls:["AMA Arch Surg",],
-            imgName:"<br><img src=\"../static/assets/img/profiles/William_A_Altemeier.png\" class=\"card-img\" style=\"width:12rem;\">",
-            about:"",//,
-            URLs:"<br><a href='https://jamanetwork.com/journals/jamasurgery/article-abstract/562520' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a>", //no wiki
-            acknow:"",//<i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-        
+
 
 
         },{  
@@ -409,28 +366,6 @@
         
 
 
-        },{ 
-            type:'Feature',
-            ID:100, 
-            name:"Appleby procedure",      
-            topic:["Oesophagogastric","HPB",],
-            type:["Operations",],  
-            who:"Lyon Henry Appleby",  
-            whoSearch:["Lyon H Appleby",], 
-            where:"Vancouver - Canada", 
-            whereSearch:["Vancouver", "Canada",],                   
-            when:"1953",
-            disease:["Gastric cancer",],  
-            ops:["Gastrectomy",],
-            geometry: {type: 'Point', coordinates: [ -123.127887, 49.280431 ]},            //lng,lat
-            properties: {title:'Appleby procedure', description:'Vancouver<br>1953'},
-            //googlehtz:1400, //search: " sign" AND "" [02-Oct-21]
-            refs:"<br>Appleby LH. The coeliac axis in the expansion of the operation for gastric carcinoma. <i>Cancer</i>. 1953; 6(4): 704-707<br>",  
-            jrnls:["Cancer",],
-            imgName:"",//"<br><img src=\"../static/assets/img/profiles/Lyon_Appleby.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            about:"",//<br><br><br>", 
-            URLs:"<br><br><a href='https://acsjournals.onlinelibrary.wiley.com/doi/10.1002/1097-0142(195307)6:4%3C704::AID-CNCR2820060410%3E3.0.CO;2-P' target='_blank' class='btn btn-secondary' role='button'>original paper</a><br>", //no wiki
-            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         
         
         },{
@@ -774,7 +709,7 @@
     const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/dark-v10',
-        center: [-30, 38],
+        center: [-20, 38],
         zoom: -0.5
     });
 
@@ -844,7 +779,7 @@
             filter: ['!', ['has', 'point_count']],
             paint: {
                 'circle-color': '#11b4da',
-                'circle-radius': 5,
+                'circle-radius': 6,
                 'circle-stroke-width': 1,
                 'circle-stroke-color': '#fff'
             }
@@ -876,7 +811,7 @@
         map.on('click', 'unclustered-point', (e) => {
             const coordinates = e.features[0].geometry.coordinates.slice();
             const mag = e.features[0].properties.title;
-            const tsunami = e.features[0].properties.description;
+            //const tsunami = e.features[0].properties.description;
 
             // Ensure that if the map is zoomed out such that
             // multiple copies of the feature are visible, the
@@ -887,9 +822,7 @@
 
             new mapboxgl.Popup()
                 .setLngLat(coordinates)
-                .setHTML(
-                    `magnitude: ${mag}<br>${tsunami}`
-                )
+                .setHTML(`${mag}`)
                 .addTo(map);
         });
 
