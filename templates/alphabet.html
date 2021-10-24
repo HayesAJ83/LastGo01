@@ -443,7 +443,7 @@
 <script>
     $(document)
     .ready(function() {
-    let result1 = eponyms
+    let result1 = eponyms.features
         .flatMap(item => item.topic)
         .filter((item, i, arr) => arr.indexOf(item) === i)
         let resultsort1 = result1.sort()
@@ -470,7 +470,7 @@
     });
 
     ///  DEFAULT_PAGE_2  ///
-    var selected = eponyms
+    var selected = eponyms.features
     function populateSelect() {
         var ele = document.getElementById('sel');
         selected.forEach(function(b) {
@@ -487,7 +487,7 @@
         
     function topicFilter2(taxonomy) {
         taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-        return eponyms.filter(item => {
+        return eponyms.features.filter(item => {
             let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
             return taxonomy.some(med => topic.includes(med));
             });
@@ -517,7 +517,7 @@
         var stringArray = (new Function( "return [" + select + "];")());
         function topicFilter2(taxonomy) {
             taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-        return eponyms.filter(item => {
+        return eponyms.features.filter(item => {
             let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
             return taxonomy.some(med => topic.includes(med));
             });
@@ -555,7 +555,7 @@
         
         function topicFilter2(taxonomy) {
             taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-            return eponyms.filter(item => {
+            return eponyms.features.filter(item => {
                 let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
                 return taxonomy.some(med => topic.includes(med));
                 });
@@ -591,7 +591,7 @@
         
         function topicFilter2(taxonomy) {
             taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-            return eponyms.filter(item => {
+            return eponyms.features.filter(item => {
                 let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
                 return taxonomy.some(med => topic.includes(med));
                 });
@@ -603,12 +603,12 @@
             var msg = document.getElementById('msg');
             if (!id) {msg.innerHTML = "";
             } else {
-                for (var i = 0; i < eponyms.length; i++) {
-                if  (Number(id) === eponyms[i].ID) {
+                for (var i = 0; i < eponyms.features.length; i++) {
+                if  (Number(id) === eponyms.features[i].ID) {
                     msg.innerHTML = "<br><br>"+
-                                    'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
-                                    'Where' +":   "+ eponyms[i].where.bold() +
-                                    eponyms[i].acknow;
+                                    'Who'   +":   "+ eponyms.features[i].who.bold()   +"<br>"+
+                                    'Where' +":   "+ eponyms.features[i].where.bold() +
+                                    eponyms.features[i].acknow;
                                     }}}}
         }).trigger("change")
 
@@ -622,7 +622,7 @@
         
         function topicFilter2(taxonomy) {
             taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-            return eponyms.filter(item => {
+            return eponyms.features.filter(item => {
                 let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
                 return taxonomy.some(med => topic.includes(med));
                 });
@@ -659,25 +659,25 @@
         var imgName = document.getElementById('imgName');
         if (!id) {imgName.innerHTML = "";
         } else {
-            for (var i = 0; i < eponyms.length; i++) {
-            if  (Number(id) === eponyms[i].ID) {
-                imgName.innerHTML = eponyms[i].imgName
+            for (var i = 0; i < eponyms.features.length; i++) {
+            if  (Number(id) === eponyms.features[i].ID) {
+                imgName.innerHTML = eponyms.features[i].imgName
                                         ;}}}
                                     $('.imgName').fadeIn('slow');
 
         var info = document.getElementById('info');
         if (!id) {imgName.innerHTML = "";
         } else {
-            for (var i = 0; i < eponyms.length; i++) {
-            if  (Number(id) === eponyms[i].ID) {
+            for (var i = 0; i < eponyms.features.length; i++) {
+            if  (Number(id) === eponyms.features[i].ID) {
                 info.innerHTML =    "<br>"+
-                                    eponyms[i].who.bold()   +"<br>"+
-                                    eponyms[i].when.bold()  +"<br>"+
-                                    eponyms[i].where.bold() +"<br><br>"+
-                                    eponyms[i].about +
-                                    eponyms[i].refs +
-                                    eponyms[i].URLs +
-                                    eponyms[i].acknow
+                                    eponyms.features[i].who.bold()   +"<br>"+
+                                    eponyms.features[i].when.bold()  +"<br>"+
+                                    eponyms.features[i].where.bold() +"<br><br>"+
+                                    eponyms.features[i].about +
+                                    eponyms.features[i].refs +
+                                    eponyms.features[i].URLs +
+                                    eponyms.features[i].acknow
                                         ;}}}
                                     $('.info').fadeIn('slow');
                                 
@@ -690,25 +690,25 @@
     var imgName2 = document.getElementById('imgName2');
     if (!id) {imgName2.innerHTML = "";
     } else {
-        for (var i = 0; i < eponyms.length; i++) {
-        if  (Number(id) === eponyms[i].ID) {
-            imgName2.innerHTML = eponyms[i].imgName
+        for (var i = 0; i < eponyms.features.length; i++) {
+        if  (Number(id) === eponyms.features[i].ID) {
+            imgName2.innerHTML = eponyms.features[i].imgName
                                     ;}}}
                                 $('.imgName2').fadeIn('slow');
     
     var msg2 = document.getElementById('msg2');
     if (!id) {msg2.innerHTML = "";
     } else {
-        for (var i = 0; i < eponyms.length; i++) {
-        if  (Number(id) === eponyms[i].ID) {
+        for (var i = 0; i < eponyms.features.length; i++) {
+        if  (Number(id) === eponyms.features[i].ID) {
             msg2.innerHTML = "<br>"+
-                             eponyms[i].who.bold()   +"<br>"+
-                             eponyms[i].when.bold()  +"<br>"+
-                             eponyms[i].where.bold() +"<br><br>"+
-                             eponyms[i].about +
-                             eponyms[i].refs +
-                             eponyms[i].URLs +
-                             eponyms[i].acknow
+                             eponyms.features[i].who.bold()   +"<br>"+
+                             eponyms.features[i].when.bold()  +"<br>"+
+                             eponyms.features[i].where.bold() +"<br><br>"+
+                             eponyms.features[i].about +
+                             eponyms.features[i].refs +
+                             eponyms.features[i].URLs +
+                             eponyms.features[i].acknow
                                     ;}}}
                                 $('.msg2').fadeIn('slow');
                                 }
