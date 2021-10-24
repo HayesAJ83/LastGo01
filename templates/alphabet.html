@@ -808,7 +808,7 @@
         // the unclustered-point layer, open a popup at
         // the location of the feature, with
         // description HTML from its properties.
-        map.on('mousemove', 'unclustered-point', (e) => {
+        map.on('mouseenter', 'unclustered-point', (e) => {
             const coordinates = e.features[0].geometry.coordinates.slice();
             const mag = e.features[0].properties.title;
             const tsunami = e.features[0].properties.description;
@@ -824,6 +824,11 @@
                 .setLngLat(coordinates)
                 .setHTML(`${mag}<br>${tsunami}`)
                 .addTo(map);
+            });
+        
+        map.on('mouseleave', 'unclustered-point', (e) => {
+            map.getCanvas().style.cursor = '';
+            mapboxgl.Popup().remove()
         });
 
         map.on('mouseenter', 'clusters', () => {
