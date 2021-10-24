@@ -71,7 +71,7 @@
          
         <style>
             body { margin: 0; padding: 0; }
-            #map { position: absolute; height: 200px; width: 300px; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
+            #map { position: absolute; height: 280px; width: 350px; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
             .mapboxgl-popup { max-width: 200px; }
             .mapboxgl-popup-content {
                 text-align: center;
@@ -200,7 +200,7 @@
             
             <!-- Section -->     
             <section class="py-6 py-lg-8 bg-primary text-white" id="section-3">
-                <div class="container" style="height:220px">
+                <div class="container" style="height:210px">
                     <div class="row align-items-center text-center">
                         <div id="map"></div>
                     </div>
@@ -774,8 +774,8 @@
     const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/dark-v10',
-        center: [-45, 38],
-        zoom: -0.1
+        center: [-45, 37],
+        zoom: -0.5
     });
 
     map.on('load', () => {
