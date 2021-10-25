@@ -974,7 +974,29 @@
             about:"",
             URLs:"",
             acknow:"",
-       
+
+
+        },{
+            type:'Feature',
+            ID:2940, 
+            name:"Thal fundoplication",      
+            topic:["Oesophagogastric",], 
+            subtype:["Operations"], 
+            who:"Alan Thal",    
+            whoSearch:["Alan Thal",],
+            where:"Kansas, USA",                    
+            when:"1968",   
+            disease:["Reflux",],  
+            ops:["Antireflux surgery", "Endoscopy", "Fundoplication"],
+            geometry: { type: 'Point', coordinates: [ -94.6295 , 39.0575 ]}, //lng,lat
+            properties: { title:"Thal fundoplication", description:'Kansas<br>1968'},
+            //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
+            refs:"",   
+            imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            about:"", 
+            URLs:"",
+            acknow:"",
+        
 
        },{
             type:'Feature',
@@ -1286,9 +1308,6 @@
 
 <script>
 
-	// TO MAKE THE MAP APPEAR YOU MUST
-	// ADD YOUR ACCESS TOKEN FROM
-	// https://account.mapbox.com
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYWpoYXllczgzIiwiYSI6ImNrY2pqM2lvMDB4Z24ydG8zdDl0NTYwbTUifQ.2DKVfTAaE77XAXMpDeq_Pg';
   
     const map = new mapboxgl.Map({
@@ -1297,6 +1316,8 @@
         center: [0, 39],
         zoom: -0.5
     });
+
+    map.addControl(new mapboxgl.NavigationControl());
 
     map.on('load', () => {
         // Add a new source from our GeoJSON data and
