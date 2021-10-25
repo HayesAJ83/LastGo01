@@ -1064,6 +1064,9 @@
             URLs:"",
             acknow:"",
 
+
+        
+
         },{
             type:'Feature',
             ID:3070, 
@@ -1086,6 +1089,47 @@
             about:"",
             URLs:"",
             acknow:"",
+
+
+        },{
+            type:'Feature',
+            ID:3100, 
+            name:"Ampulla of Vater",           
+            topic:["HPB"],         
+            subtype:["Anatomy",],             
+            who:"Abraham Vater", whoSearch:["Abraham Vater",],           
+            where:"Wittenberg, Saxony-Anhalt, Germany", whereSearch:["Wittenberg, Saxony-Anhalt, Germany",],
+            when:"1720",  
+            disease:["Gallstones", "Jaundice", "Pancreatic cancer",],
+            ops:["Endoscopy", "Pancreatic resection"],  
+            geometry: { type: 'Point', coordinates: [ 12.6504 , 51.8647 ]}, //long,lat
+            properties: { title:"Ampulla of Vater", description:'Wittenberg<br>1720'},
+            //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
+            refs:"",   
+            imgName:"",//"<img src=\"../static/assets/img/profiles/Vater.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            about:"",
+            URLs:"",//
+            acknow:"",
+
+        },{
+            type:'Feature',
+            ID:3110, 
+            name:"Venturi mask",           
+            topic:["Anaesthetics"],  
+            subtype:["Equipment",],                    
+            who:"Giovanni Battista Venturi", whoSearch:["Giovanni B Venturi",],                 
+            where:"Modena - Italy", whereSearch:["Modena, Italy", "Italy"],
+            when:"1797",   
+            disease:["Hypoxia",],  
+            geometry: { type: 'Point', coordinates: [ 10.927778 , 44.645 ]}, //long,lat
+            properties: { title:"Venturi mask", description:'Modena<br>1792'},
+            //googlehtz: 0, //search: "  " AND "   " [02-Oct-21]
+            refs:"", 
+            imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            about:"<br>Giovanni Battista Venturi was an Italian Physicist.<br>",
+            URLs:"",//
+            acknow:"",
+       
         
 
        },{
@@ -1435,20 +1479,20 @@
                 'circle-color': [
                     'step',
                     ['get', 'point_count'],
-                    '#51bbd6',
+                    '#51bbd6', //blue
                     10,
-                    '#f1f075',
+                    '#40ac01', //green
                     15,
-                    '#f28cb1'
+                    '#f1f075' //yellow
                 ],
                 'circle-radius': [
                     'step',
                     ['get', 'point_count'],
-                    8,   //radius 8 at 2-10  
+                    10,   //radius 10 at 2-10  
                     10,  //0-10
-                    12,  //radius 12 at 10-15
-                    15,  //10-15
-                    18,  //radius 18 at >15
+                    15,  //radius 15 at 10-20
+                    20,  //10-20
+                    20,  //radius 20 at >20
                 ]
             }
         });
