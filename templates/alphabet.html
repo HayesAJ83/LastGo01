@@ -1304,20 +1304,20 @@
                 'circle-color': [
                     'step',
                     ['get', 'point_count'],
-                    '#003153',
-                    8,
-                    '#FFFF00',
-                    12,
-                    '#FF2828'
+                    '#51bbd6',
+                    10,
+                    '#f1f075',
+                    15,
+                    '#f28cb1'
                 ],
                 'circle-radius': [
                     'step',
                     ['get', 'point_count'],
-                    20,
-                    8,
-                    30,
-                    15,
-                    40
+                    8,   //radius 8 at 2-10  
+                    10,  //0-10
+                    12,  //radius 12 at 10-15
+                    15,  //10-15
+                    18,  //radius 18 at >15
                 ]
             }
         });
@@ -1340,8 +1340,8 @@
             source: 'earthquakes',
             filter: ['!', ['has', 'point_count']],
             paint: {
-                'circle-color': '#003153',
-                'circle-radius': 5,
+                'circle-color': '#11b4da',
+                'circle-radius': 4,
                 'circle-stroke-width': 1,
                 'circle-stroke-color': '#fff'
             }
