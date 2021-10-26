@@ -981,7 +981,7 @@
             disease:["Reflux",], 
             ops:["Antireflux surgery", "Endoscopy", "Fundoplication"],  
             geometry: {type: 'Point', coordinates: [ -157.8901 , 21.3598 ]}, //lng,lat
-            properties: { title:"DeMeester score", description:'Honolulu - Hawaii<br>1974'},
+            properties: { title:"DeMeester score", description:'Honolulu<br>1974'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"<br>Johnson LF, Demeester TR. Twenty-four-hour pH monitoring of the distal esophagus. A quantitative measure of gastroesophageal reflux. <i>Am J Gastroenterol</i>. 1974; 62(4): 325-332<br>", 
             jrnls:["Am J Gastroenterol",],
@@ -990,7 +990,27 @@
             about:"", 
             acknow:"",//"<br><i>We kindly acknowledge Miss X FRCS who contributed the above information</i>",
        
-
+        },{
+            type:'Feature',
+            ID:840, 
+            name:"Dent sleeve",      
+            topic:["Oesophagogastric",],  
+            subtype:["Equipment",],
+            who:"John Dent",    
+            where:"Melbourne - Australia",   //whereSearch:["Melbourne, Australia",], 
+            when:"1976", 
+            disease:["Achalasia","Reflux",], 
+            //ops:[" ",],
+            geometry: {type: 'Point', coordinates: [ 144.97057, -37.82553 ]}, //lng,lat
+            properties: { title:"Dent sleeve", description:'Melbourne<br>1976'},
+            //googlehtz:0, //search: "  sign" AND " " [02-Oct-21]
+            refs:"<br>Dent J. A new technique for continuous sphincter pressure measurement. <i>Gastroenterology</i>. 1976; 71(2): 263-267<br>",   
+            jrnls:["Gastroenterology",],
+            URLs:"", //no wiki
+            imgName:"",//"<img src=\"../static/assets/img/profiles/Dent.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            about:"",//<br><br><br>", 
+            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        
 
         },{
             type:'Feature',
@@ -2468,12 +2488,11 @@
 
 <script>
 
-	mapboxgl.accessToken = 'pk.eyJ1IjoibWFyeXNoYWZmZXIiLCJhIjoiY2poNnkwZ3pvMDI5ZzJ4cWUyY296NnNjdCJ9.PgJCuPhDYgm8oCmsZlAeQA'
-    //'pk.eyJ1IjoiYWpoYXllczgzIiwiYSI6ImNrY2pqM2lvMDB4Z24ydG8zdDl0NTYwbTUifQ.2DKVfTAaE77XAXMpDeq_Pg';
+	mapboxgl.accessToken = 'pk.eyJ1IjoiYWpoYXllczgzIiwiYSI6ImNrY2pqM2lvMDB4Z24ydG8zdDl0NTYwbTUifQ.2DKVfTAaE77XAXMpDeq_Pg';
   
     const map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/maryshaffer/cjh6yf7c30apg2sotfzmyf2je', //'mapbox://styles/mapbox/dark-v10',//'mapbox://styles/maryshaffer/cjh6yf7c30apg2sotfzmyf2je',
+        style: 'mapbox://styles/mapbox/dark-v10',//'mapbox://styles/maryshaffer/cjh6yf7c30apg2sotfzmyf2je',
         center: [0, 39],
         zoom: -0.5
     });
