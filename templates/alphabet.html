@@ -5550,57 +5550,59 @@
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Traction_splint' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
             acknow:"",
-
-        //},{
-        //    ID:2970, 
-        //    name:"Tile classification",      
-        //    topic:["",],  
-        //    type:[],
-        //    who:"",    
-        //    whoSearch:["",],
-        //    where:"",                    
-        //    when:"",   
-        //    disease:["",],  
-        //    long:"",
-        //    lat:"", 
-        //    googlehtz:00, //search: "  " AND "  " [02-Oct-21]
-        //    refs:"", 
-        //    imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement  
-        //    about:"",//<br><br><br>", URLs:"",//
-        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-        //},{
-        //    ID:2980, 
-        //    name:"Todani classification",      
-        //    topic:["",],  
-        //    type:["Scores",],
-        //    who:"",    
-        //    whoSearch:["",],
-        //    where:"",                    
-        //    when:"",   
-        //    disease:["",],  
-        //    long:"",
-        //    lat:"", 
-        //    googlehtz:00, //search: " " AND "  " [02-Oct-21]
-        //    refs:"",   
-        //    about:"",//<br><br><br>",  URLs:"",//
-        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-        //},{
-        //    ID:2990, 
-        //    name:"Torek operation",      
-        //    topic:["",],  
-        //    types:["Operations",],
-        //    who:"",    
-        //    whoSearch:["",],
-        //    where:"",                    
-        //    when:"",   
-        //    disease:["",],  
-        //    long:"",
-        //    lat:"", 
-        //    googlehtz:00, //search: "Siewert-Stein classification" AND "Cancer" [02-Oct-21]
-        //    refs:"",  
-        //    imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement 
-        //    about:"",//<br><br><br>",  URLs:"",//
-        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        },{
+            type:'Feature',
+            ID:2970, 
+            name:"Tile classification",      
+            topic:["Orthopaedics","Trauma",],  
+            subtype:["Scores"],
+            who:"Marvin Tile", whoSearch:["Marvin Tile",],
+            where:"Toronto - Canada",                    
+            when:"1988",   
+            disease:["Fracture",],  
+            geometry: { type: 'Point', coordinates: [ -79.374697, 43.7227 ]}, //lng,lat
+            properties: { title:"Tile classification", description:'Toronto<br>1988'},
+            //googlehtz: 0, //search: "  " AND "  " [02-Oct-21]
+            refs:"<br>Tile M. Pelvic ring fractures: should they be fixed?. <i>J Bone Joint Surg</i>. 1988; 70(1): 1-12<br>", 
+            imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement  
+            about:"",//<br><br><br>", 
+            URLs:"",//  wiki-NO
+            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        },{
+            type:'Feature',
+            ID:2980, 
+            name:"Todani classification",      
+            topic:["HPB",],  
+            subtype:["Scores",],
+            who:"Takuji Todani",  //whoSearch:["Takuji Todani",],
+            where:"Okayama - Japan",                    
+            when:"1977",   
+            disease:["Jaundice",],  
+            geometry: { type: 'Point', coordinates: [ 133.920698, 34.65016 ]}, //lng,lat
+            properties: { title:"Todani classification", description:'Okayama - Japan<br>1977'},
+            //googlehtz: 0, //search: " " AND " " [02-Oct-21]
+            refs:"",   
+            about:"", 
+            URLs:"",//  wiki-NO
+            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        },{
+            type:'Feature',
+            ID:2990, 
+            name:"Torek operation",      
+            topic:["Oesophagogastric",],  
+            subtypes:["Operations",],
+            who:"Franz Torek",  //whoSearch:["",],
+            where:"Manhattan - New York - USA",                    
+            when:"1913",   
+            disease:["Oesophageal cancer",],  
+            geometry: { type: 'Point', coordinates: [ -73.9609, 40.7736 ]}, //lng,lat
+            properties: { title:"Torek operation", description:'New York<br>1913'},
+            //googlehtz: 0, //search: "  " AND "  " [02-Oct-21]
+            refs:"",  
+            imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement 
+            about:"Lenox Hill Hospital",//<br><br><br>",  
+            URLs:"",//  wiki-NO
+            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:3000, 
@@ -5868,7 +5870,7 @@
 
 
 
-            
+
 
         },{
             type:'Feature',
