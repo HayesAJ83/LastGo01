@@ -6787,7 +6787,7 @@
             $(document)
             .ready(function() {
             let result1 = eponyms.features
-                .flatMap(item => item.type)
+                .flatMap(item => item.subtype)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 let resultsort1 = result1.sort()
                 var select = document.getElementById("select1");
@@ -6837,8 +6837,8 @@
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                 return eponyms.features.filter(item => {
-                    let type = Array.isArray(item.type) ? item.type : [item.type];
-                    return taxonomy.some(med => type.includes(med));
+                    let subtype = Array.isArray(item.subtype) ? item.subtype : [item.subtype];
+                    return taxonomy.some(med => subtype.includes(med));
                     });
                     }
                 var select2 = topicFilter2(stringArray);
@@ -6875,8 +6875,8 @@
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return eponyms.features.filter(item => {
-                        let type = Array.isArray(item.type) ? item.type : [item.type];
-                        return taxonomy.some(med => type.includes(med));
+                        let subtype = Array.isArray(item.subtype) ? item.subtype : [item.subtype];
+                        return taxonomy.some(med => subtype.includes(med));
                         });
                     }
                 
@@ -6911,8 +6911,8 @@
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return eponyms.features.filter(item => {
-                        let type = Array.isArray(item.type) ? item.type : [item.type];
-                        return taxonomy.some(med => type.includes(med));
+                        let subtype = Array.isArray(item.subtype) ? item.subtype : [item.subtype];
+                        return taxonomy.some(med => subtype.includes(med));
                         });
                     }
                     
@@ -6942,8 +6942,8 @@
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return eponyms.features.filter(item => {
-                        let type = Array.isArray(item.type) ? item.type : [item.type];
-                        return taxonomy.some(med => type.includes(med));
+                        let subtype = Array.isArray(item.subtype) ? item.subtype : [item.subtype];
+                        return taxonomy.some(med => subtype.includes(med));
                         });
                     }
                     
