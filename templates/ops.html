@@ -6999,6 +6999,15 @@
                                         }
             
             function show2(id) {
+            var imgName2 = document.getElementById('imgName2');
+            if (!id) {imgName2.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.features.length; i++) {
+                if  (Number(id) === eponyms.features[i].ID) {
+                    imgName2.innerHTML = eponyms.features[i].imgName
+                                            ;}}}
+                                        $('.imgName2').fadeIn('slow');
+
             var msg2 = document.getElementById('msg2');
             if (!id) {msg2.innerHTML = "";
             } else {
