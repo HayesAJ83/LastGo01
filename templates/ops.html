@@ -7619,7 +7619,7 @@
         <script>
             $(document)
             .ready(function() {
-            let result1 = eponyms
+            let result1 = eponyms.features
                 .flatMap(item => item.ops)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 let resultsort1 = result1.sort()
@@ -7669,7 +7669,7 @@
                 var stringArray = (new Function( "return [" + select + "];")());
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                return eponyms.filter(item => {
+                return eponyms.features.filter(item => {
                     let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
                     return taxonomy.some(med => ops.includes(med));
                     });
@@ -7743,7 +7743,7 @@
                 
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                    return eponyms.filter(item => {
+                    return eponyms.features.filter(item => {
                         let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
                         return taxonomy.some(med => ops.includes(med));
                         });
@@ -7755,12 +7755,12 @@
                     var msg = document.getElementById('msg');
                     if (!id) {msg.innerHTML = "";
                     } else {
-                        for (var i = 0; i < eponyms.length; i++) {
-                        if  (Number(id) === eponyms[i].ID) {
+                        for (var i = 0; i < eponyms.features.length; i++) {
+                        if  (Number(id) === eponyms.features[i].ID) {
                             msg.innerHTML = "<br><br>"+
-                                            'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
-                                            'Where' +":   "+ eponyms[i].where.bold() +
-                                            eponyms[i].acknow;
+                                            'Who'   +":   "+ eponyms.features[i].who.bold()   +"<br>"+
+                                            'Where' +":   "+ eponyms.features[i].where.bold() +
+                                            eponyms.features[i].acknow;
                                             }}}}
                 }).trigger("change")
 
@@ -7774,7 +7774,7 @@
                 
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                    return eponyms.filter(item => {
+                    return eponyms.features.filter(item => {
                         let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
                         return taxonomy.some(med => ops.includes(med));
                         });
@@ -7792,15 +7792,15 @@
             var msg = document.getElementById('msg');
             if (!id) {msg.innerHTML = "";
             } else {
-                for (var i = 0; i < eponyms.length; i++) {
-                if  (Number(id) === eponyms[i].ID) {
+                for (var i = 0; i < eponyms.features.length; i++) {
+                if  (Number(id) === eponyms.features[i].ID) {
                     msg.innerHTML = "<br><br>"+
-                                            'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
-                                            'When'  +":   "+ eponyms[i].when.bold()  +"<br>"+
-                                            'Where' +":   "+ eponyms[i].where.bold() +
-                                            eponyms[i].about +
-                                            eponyms[i].refs +
-                                            eponyms[i].acknow
+                                            'Who'   +":   "+ eponyms.features[i].who.bold()   +"<br>"+
+                                            'When'  +":   "+ eponyms.features[i].when.bold()  +"<br>"+
+                                            'Where' +":   "+ eponyms.features[i].where.bold() +
+                                            eponyms.features[i].about +
+                                            eponyms.features[i].refs +
+                                            eponyms.features[i].acknow
                                             ;}}}
                                             $('.msg').fadeIn('slow');
                                         }
@@ -7809,15 +7809,15 @@
             var msg2 = document.getElementById('msg2');
             if (!id) {msg2.innerHTML = "";
             } else {
-                for (var i = 0; i < eponyms.length; i++) {
-                if  (Number(id) === eponyms[i].ID) {
+                for (var i = 0; i < eponyms.features.length; i++) {
+                if  (Number(id) === eponyms.features[i].ID) {
                     msg2.innerHTML = "<br><br>"+
-                                            'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
-                                            'When'  +":   "+ eponyms[i].when.bold()  +"<br>"+
-                                            'Where' +":   "+ eponyms[i].where.bold() +
-                                            eponyms[i].about +
-                                            eponyms[i].refs +
-                                            eponyms[i].acknow
+                                            'Who'   +":   "+ eponyms.features[i].who.bold()   +"<br>"+
+                                            'When'  +":   "+ eponyms.features[i].when.bold()  +"<br>"+
+                                            'Where' +":   "+ eponyms.features[i].where.bold() +
+                                            eponyms.features[i].about +
+                                            eponyms.features[i].refs +
+                                            eponyms.features[i].acknow
                                             ;}}}
                                             $('.msg2').fadeIn('slow');
                                         }
