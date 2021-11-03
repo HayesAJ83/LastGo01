@@ -7253,6 +7253,9 @@
         // the location of the feature, with
         // description HTML from its properties.
         map.on('mouseenter', 'unclustered-point', (e) => {
+
+            map.getCanvas().style.cursor = 'pointer';
+
             const coordinates = e.features[0].geometry.coordinates.slice();
             const mag = e.features[0].properties.title;
             const tsunami = e.features[0].properties.description;

@@ -7020,7 +7020,6 @@
 
 
 
-
         <script>
 
             mapboxgl.accessToken = 'pk.eyJ1IjoiYWpoYXllczgzIiwiYSI6ImNrY2pqM2lvMDB4Z24ydG8zdDl0NTYwbTUifQ.2DKVfTAaE77XAXMpDeq_Pg';
@@ -7035,7 +7034,6 @@
             map.addControl(new mapboxgl.NavigationControl());
         
             map.on('load', () => {
-                // Add a new source from our GeoJSON data and
                 // set the 'cluster' option to true. GL-JS will
                 // add the point_count property to your source data.
                 map.addSource('earthquakes', {
@@ -7043,7 +7041,7 @@
                     data: eponyms,
                     cluster: true,
                     clusterMaxZoom: 14, // Max zoom to cluster points on
-                    clusterRadius: 25 // Radius of each cluster when clustering points (defaults to 50)
+                    clusterRadius: 30 // Radius of each cluster when clustering points (defaults to 50)
                 });
         
                 map.addLayer({
@@ -7124,7 +7122,7 @@
         
                 var popup = new mapboxgl.Popup({
                     closeOnClick: false,
-                    offset: [0, -15]
+                    offset: [0, -8]
                     })
         
                 // When a click event occurs on a feature in
@@ -7132,6 +7130,9 @@
                 // the location of the feature, with
                 // description HTML from its properties.
                 map.on('mouseenter', 'unclustered-point', (e) => {
+        
+                    map.getCanvas().style.cursor = 'pointer';
+        
                     const coordinates = e.features[0].geometry.coordinates.slice();
                     const mag = e.features[0].properties.title;
                     const tsunami = e.features[0].properties.description;
@@ -7151,7 +7152,7 @@
                 
                 map.on('mouseleave', 'unclustered-point', (e) => {
                     map.getCanvas().style.cursor = '';
-                    popup().remove()
+                    popup.remove()
                 });
         
                 map.on('mouseenter', 'clusters', () => {
@@ -7164,7 +7165,6 @@
         </script>
         
           
-
 
 
 
