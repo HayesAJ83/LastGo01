@@ -183,6 +183,8 @@
                             </select>
                             <div class="lead" id='imgName2'></div>
                             <p class="lead" id="msg2"></p>
+                            <div class="lead" id="map"></div>
+                            <p class="lead" id="msg3"></p>
                             <br>
                         </div>
                     </div>
@@ -195,13 +197,13 @@
             <!-- End of Section -->
             
             <!-- Section -->     
-            <section class="py-6 py-lg-8 bg-primary" id="section-3">
+            <!--<section class="py-6 py-lg-8 bg-primary" id="section-3">
                 <div class="container" style="height:140px">
                     <div class="row align-items-center text-center">
                         <div id="map"></div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- End of Section -->
         </main>
         <!-- End of Main Content -->
@@ -7126,13 +7128,23 @@
             msg2.innerHTML = "<br>"+
                              eponyms.features[i].who.bold()   +"<br>"+
                              eponyms.features[i].when.bold()  +"<br>"+
-                             eponyms.features[i].where.bold() +"<br><br>"+
+                             eponyms.features[i].where.bold() +"<br><br>"
+                                    ;}}}
+                                $('.msg2').fadeIn('slow');
+
+    var msg3 = document.getElementById('msg3');
+    if (!id) {msg2.innerHTML = "";
+    } else {
+        for (var i = 0; i < eponyms.features.length; i++) {
+        if  (Number(id) === eponyms.features[i].ID) {
+            msg3.innerHTML = 
                              eponyms.features[i].about +
                              eponyms.features[i].refs +
                              eponyms.features[i].URLs +
                              eponyms.features[i].acknow
                                     ;}}}
-                                $('.msg2').fadeIn('slow');
+                                $('.msg3').fadeIn('slow');
+                                
                                 }
 </script>
 
