@@ -7164,7 +7164,7 @@
             data: eponyms,
             cluster: true,
             clusterMaxZoom: 14, // Max zoom to cluster points on
-            clusterRadius: 25 // Radius of each cluster when clustering points (defaults to 50)
+            clusterRadius: 30 // Radius of each cluster when clustering points (defaults to 50)
         });
 
         map.addLayer({
@@ -7245,7 +7245,7 @@
 
         var popup = new mapboxgl.Popup({
             closeOnClick: false,
-            offset: [0, -15]
+            offset: [0, -8]
             })
 
         // When a click event occurs on a feature in
