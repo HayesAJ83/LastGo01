@@ -1303,7 +1303,7 @@
             where:"Prague - Czech Republic", //whereSearch:[" ",],          
             when:"1898",   
             disease:["Liver dysfunction","Jaundice","Abdominal pain",],
-            ops:["Liver transplantation",],
+            ops:["Liver transplant",],
             geometry: {type: 'Point', coordinates: [ 14.4039, 50.0885 ]},     //lng,lat
             properties: {title:"Budd-Chiari syndrome", description:'Prague<br>1898'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21] 
@@ -5358,7 +5358,27 @@
 // Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q ///////
 // R R R R R R R R R R R R R R R R R R R R R R R R R R ///////
 
-/// Ranson score - New York
+        },{
+            type:'Feature',
+            ID:2562, 
+            name:"Ranson score",       
+            topic:["General Surgery","HPB",],           
+            subtype:["Scores"],  
+            who:"John Ranson", whoSearch:["John Ranson",],       
+            where:"Manhattan - New York - USA", //whereSearch:["Manhattan, New York, USA",],        
+            when:"1974",
+            disease:["Acute pancreatitis",],
+            //ops:["     ",],
+            geometry: { type: 'Point', coordinates: [ -73.833745, 40.911061 ]}, //long,lat
+            properties: { title:"Ranson score", description:'New York<br>1974'},
+            //googlehtz:0, //search: "   " AND " " [02-Oct-21]
+            refs:"",//"<br>", 
+            //jrnls:["",],
+            imgName:"",//"<br><img src=\"../static/assets/img/profiles/Bernhard_Riedel.png\" class=\"card-img\" style=\"width:12rem;\">",
+            about:"",       
+            URLs:"",//"<br><br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <br>",
+            acknow:"",//"<br><i>We kindly acknowledge Miss X FRCS who contributed the above information.</i>",
+
 /// Raynaud syndrome - Paris
 
         },{
@@ -7137,7 +7157,6 @@
     map.addControl(new mapboxgl.NavigationControl());
 
     map.on('load', () => {
-        // Add a new source from our GeoJSON data and
         // set the 'cluster' option to true. GL-JS will
         // add the point_count property to your source data.
         map.addSource('earthquakes', {
@@ -7253,7 +7272,7 @@
         
         map.on('mouseleave', 'unclustered-point', (e) => {
             map.getCanvas().style.cursor = '';
-            popup().remove()
+            popup.remove()
         });
 
         map.on('mouseenter', 'clusters', () => {
