@@ -7289,9 +7289,7 @@
     } else {
         for (var i = 0; i < eponyms.features.length; i++) {
         if  (Number(id) === eponyms.features[i].ID) {
-            map.innerHTML = 
-
-            mapboxgl.accessToken = 'pk.eyJ1IjoiYWpoYXllczgzIiwiYSI6ImNrY2pqM2lvMDB4Z24ydG8zdDl0NTYwbTUifQ.2DKVfTAaE77XAXMpDeq_Pg';
+            
 
 const map = new mapboxgl.Map({
 container: 'map',
@@ -7384,7 +7382,7 @@ map.addSource('dot-point', {
 'type': 'Feature',
 'geometry': {
 'type': 'Point',
-'coordinates': eponyms.features[i].geometry.coordinates // icon position [lng, lat]
+'coordinates': [ 0, 0] //eponyms.features[i].geometry.coordinates // icon position [lng, lat]
 }
 }
 ]
