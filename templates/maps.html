@@ -7593,12 +7593,12 @@
             // Add the control to the map.
             map.addControl(
                 new MapboxGeocoder({
-                    accessToken: 'pk.eyJ1IjoiYWpoYXllczgzIiwiYSI6ImNrY2pqM2lvMDB4Z24ydG8zdDl0NTYwbTUifQ.2DKVfTAaE77XAXMpDeq_Pg',
-                    mapboxgl: mapboxgl
+                    accessToken: mapboxgl.accessToken,
+                    mapboxgl: mapboxgl,
                     })
             );
         
-            map.addControl(new mapboxgl.NavigationControl());
+            //map.addControl(new mapboxgl.NavigationControl());
         
             map.on('load', () => {
                 // set the 'cluster' option to true. GL-JS will
