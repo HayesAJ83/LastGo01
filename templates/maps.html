@@ -7589,6 +7589,14 @@
                 center: [0, 39],
                 zoom: -0.5
             });
+
+            // Add the control to the map.
+            map.addControl(
+            new MapboxGeocoder({
+                accessToken: mapboxgl.accessToken,
+                mapboxgl: mapboxgl
+                })
+            );
         
             map.addControl(new mapboxgl.NavigationControl());
         
