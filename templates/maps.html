@@ -285,7 +285,6 @@
         
 
 
-
         <script>
             const eponyms = {
                 'type': 'FeatureCollection',
@@ -821,7 +820,7 @@
             who:"Charles Baxter", whoSearch:["Charles Baxter",],
             where:"Dallas - Texas - USA", whereSearch:["Dallas, Texas, USA",],         
             when:"1968",
-            disease:["Burns",],  
+            disease:["Burns","Hypovolaemia","Shock",],
             geometry: {type: 'Point', coordinates: [ -96.838889, 32.810278 ]},     //long,lat
             properties: {title:"Baxter - Parkland formula", description:'Dallas - Texas<br>1968'},   
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
@@ -856,7 +855,6 @@
             about:"",
             URLs:"",//no wiki  "<br><a href=' ' target='_blank' class='btn btn-secondary' role='button'></a><br>",
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-        
         },{
             type:'Feature',
             ID:240, 
@@ -1084,7 +1082,7 @@
             about:"<br>Czech pathologist<br>", 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Bochdalek_hernia' target='_blank' class='btn btn-info' role='button'>wikipedia</a>",
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-           },{
+        },{
             type:'Feature',
             ID:340, 
             name:"Boerhaave syndrome",            
@@ -3371,6 +3369,7 @@
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
        
        /// Goodsall rule - London
+
        /// Graafian follicles - Netherlands
        
        
@@ -3571,10 +3570,27 @@
             imgName:"<br><img src=\"../static/assets/img/profiles/Henri_Hartmann.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"",      //<br><br><br>", 
             URLs:"",       //no wiki //"<br><a href='https://en.wikipedia.org/wiki/ ' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
-            acknow:"",     //<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-       
-/// Hartmann's solution 1420  -  St. Louis, Missouri
-
+            acknow:"",     //<br><br><br><i>We kindly the above information.</i>",
+        },{
+            type:'Feature',
+            ID:1420, 
+            name:"Hartmann's solution",      
+            topic:["Anaesthetics",], 
+            subtype:["IV fluids",], 
+            who:"Alexis Hartmann",
+            whoSearch:["Alexis Hartmann",],    
+            where:"St Louis - Missouri - USA", //whereSearch:["   ",],                
+            when:"1932",   
+            disease:["Hypovolaemia","Shock",],
+            geometry: {type: 'Point', coordinates: [ -90.26419, 38.63641 ]}, //long,lat
+            properties: { title:"Hartmann's solution", description:'St Louis - Missouri<br>1932'},
+            //googlehtz:0, //search: "  sign" AND " " [02-Oct-21]
+            refs:"",  
+            //jrnls:["",], 
+            imgName:"",//"<img src=\"../static/assets/img/profiles/Hodgkin.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            about:"",
+            URLs:"",//"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-secondary' role='button'>Wikipedia</a><br>",
+            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:1430, 
@@ -3714,16 +3730,33 @@
             geometry: {type: 'Point', coordinates:[ 12.3778663, 51.3387758 ]}, //lng,lat
             properties: { title:"Heller cardiomyotomy", description:'Leipzig - Germany<br>1914'}, 
             //googlehtz: 0, //search: "   " AND " " [02-Oct-21]
-            refs:"Heller E. Extramuköse cardiaplastik bein chronischen Cardiospasmus mit dilatation des Oesophagus. <i>Mitt Grenzgeb Med Chir</i>. 1913; 27: 141-149<br>",   
+            refs:"<br>Heller E. Extramuköse cardiaplastik bein chronischen Cardiospasmus mit dilatation des Oesophagus. <i>Mitt Grenzgeb Med Chir</i>. 1913; 27: 141-149<br>",   
             jrnls:["Mitt Grenzgeb Med Chir",],
             URLs:"",
             imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",//<br><br><br>",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-       
-       /// Hesselbach's triangle - Germany
-       
+        //},{
+        //    type:'Feature',
+        //    ID:1495, 
+        //    name:"Hesselbach's triangle",      
+        //    topic:[" ",], subtype:[" ",],
+        //    who:"   ", //whoSearch:["",], 
+        //    where:"Germany", whereSearch:[" ", " ",],               
+        //    when:" ",   
+        //    disease:[" ", " "],  
+        //    ops:[" ", " ",],
+        //    geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+        //    properties: { title:" ", description:' <br>'}, 
+        //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+        //    refs:"<br>",   
+        //    jrnls:[" ",],
+        //    URLs:"",
+        //    imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+        //    about:"",//<br><br><br>",
+        //    URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:1500, 
@@ -3744,12 +3777,66 @@
             about:"",//<br><br><br>", 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Hickman_line' target='_blank' class='btn btn-secondary' role='button'>Wikipedia</a><br>",
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-       
-/// Hill repair - Washington, Seattle
-/// Hinchey - Montreal
-/// Hirschprung - Copenhagen
-
-
+        //},{
+        //    type:'Feature',
+        //    ID:1510, 
+        //    name:"Hill repair",      
+        //    topic:[" ",], subtype:[" ",],
+        //    who:"   ", //whoSearch:["",], 
+        //    where:"Washington - Seattle", whereSearch:[" ", " ",],               
+        //    when:" ",   
+        //    disease:[" ", " "],  
+        //    ops:[" ", " ",],
+        //    geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+        //    properties: { title:" ", description:' <br>'}, 
+        //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+        //    refs:"<br>",   
+        //    jrnls:[" ",],
+        //    URLs:"",
+        //    imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+        //    about:"",//<br><br><br>",
+        //    URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        //},{
+        //    type:'Feature',
+        //    ID:1520, 
+        //    name:"Hinchey ",      
+        //    topic:[" ",], subtype:[" ",],
+        //    who:"   ", //whoSearch:["",], 
+        //    where:"Montreal", whereSearch:[" ", " ",],               
+        //    when:" ",   
+        //    disease:[" ", " "],  
+        //    ops:[" ", " ",],
+        //    geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+        //    properties: { title:" ", description:' <br>'}, 
+        //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+        //    refs:"<br>",   
+        //    jrnls:[" ",],
+        //    URLs:"",
+        //    imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+        //    about:"",//<br><br><br>",
+        //    URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        //},{
+        //    type:'Feature',
+        //    ID:1530, 
+        //    name:"Hirschprung",      
+        //    topic:[" ",], subtype:[" ",],
+        //    who:"   ", //whoSearch:["",], 
+        //    where:"Copenhagen", whereSearch:[" ", " ",],               
+        //    when:" ",   
+        //    disease:[" ", " "],  
+        //    ops:[" ", " ",],
+        //    geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+        //    properties: { title:" ", description:' <br>'}, 
+        //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+        //    refs:"<br>",   
+        //    jrnls:[" ",],
+        //    URLs:"",
+        //    imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+        //    about:"",//<br><br><br>",
+        //    URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:1540, 
@@ -3813,11 +3900,46 @@
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Hodgkin_lymphoma' target='_blank' class='btn btn-secondary' role='button'>Wikipedia</a><br>",
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-       
-    /// Horner's syndome  - Zürich
-    /// Howell-Jolly body  - Paris
-
-
+        //},{
+        //    type:'Feature',
+        //    ID:1570, 
+        //    name:"Horner's syndome",      
+        //    topic:[" ",], subtype:[" ",],
+        //    who:"   ", //whoSearch:["",], 
+        //    where:"Zürich", whereSearch:[" ", " ",],               
+        //    when:" ",   
+        //    disease:[" ", " "],  
+        //    ops:[" ", " ",],
+        //    geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+        //    properties: { title:" ", description:' <br>'}, 
+        //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+        //    refs:"<br>",   
+        //    jrnls:[" ",],
+        //    URLs:"",
+        //    imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+        //    about:"",//<br><br><br>",
+        //    URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        //},{
+        //    type:'Feature',
+        //    ID:1580, 
+        //    name:"Howell-Jolly body",      
+        //    topic:[" ",], subtype:[" ",],
+        //    who:"   ", //whoSearch:["",], 
+        //    where:"Paris", whereSearch:[" ", " ",],               
+        //    when:" ",   
+        //    disease:[" ", " "],  
+        //    ops:[" ", " ",],
+        //    geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+        //    properties: { title:" ", description:' <br>'}, 
+        //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+        //    refs:"<br>",   
+        //    jrnls:[" ",],
+        //    URLs:"",
+        //    imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+        //    about:"",//<br><br><br>",
+        //    URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:1590, 
@@ -3839,9 +3961,46 @@
             about:"",//<br><br><br>", 
             URLs:"",  //no wiki
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-       
-/// Imrie score 1600 - Glasgow
-
+        //},{
+        //    type:'Feature',
+        //    ID:1595, 
+        //    name:"Hunter's canal",      
+        //    topic:[" ",], subtype:[" ",],
+        //    who:"   ", //whoSearch:["",], 
+        //    where:"London", whereSearch:[" ", " ",],               
+        //    when:" ",   
+        //    disease:[" ", " "],  
+        //    ops:[" ", " ",],
+        //    geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+        //    properties: { title:" ", description:' <br>'}, 
+        //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+        //    refs:"<br>",   
+        //    jrnls:[" ",],
+        //    URLs:"",
+        //    imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+        //    about:"",//<br><br><br>",
+        //    URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        //},{
+        //    type:'Feature',
+        //    ID:1600, 
+        //    name:"Imrie score",      
+        //    topic:[" ",], subtype:[" ",],
+        //    who:"   ", //whoSearch:["",], 
+        //    where:"Glasgow", whereSearch:[" ", " ",],               
+        //    when:" ",   
+        //    disease:[" ", " "],  
+        //    ops:[" ", " ",],
+        //    geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+        //    properties: { title:" ", description:' <br>'}, 
+        //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+        //    refs:"<br>",   
+        //    jrnls:[" ",],
+        //    URLs:"",
+        //    imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+        //    about:"",//<br><br><br>",
+        //    URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:1610, 
@@ -3884,11 +4043,66 @@
             about:"", 
             URLs:"<br><a href='https://academic.oup.com/bjs/article-abstract/34/133/18/6231219?redirectedFrom=fulltext' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://livesonline.rcseng.ac.uk/client/en_GB/lives/search/detailnonmodal/ent:$002f$002fSD_ASSET$002f0$002fSD_ASSET:378866/one?qu=%22rcs%3A+E006683%22&rt=false%7C%7C%7CIDENTIFIER%7C%7C%7CResource+Identifier' target='_blank' class='btn btn-success' role='button'>RCSEng Link</a> <br><br>",
             acknow:"",
-        
-/// Jaboulay pyloroplasty 1630  - Lyon, France
-/// Jackson-Pratt 1640 - California
-/// Jadad scale 1650 - Oxford
-
+        //},{
+        //    type:'Feature',
+        //    ID:1630, 
+        //    name:"Jaboulay pyloroplasty",      
+        //    topic:[" ",], subtype:[" ",],
+        //    who:"   ", //whoSearch:["",], 
+        //    where:"Lyon - France", whereSearch:[" ", " ",],               
+        //    when:" ",   
+        //    disease:[" ", " "],  
+        //    ops:[" ", " ",],
+        //    geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+        //    properties: { title:" ", description:' <br>'}, 
+        //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+        //    refs:"<br>",   
+        //    jrnls:[" ",],
+        //    URLs:"",
+        //    imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+        //    about:"",//<br><br><br>",
+        //    URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        //},{
+        //    type:'Feature',
+        //    ID:1640, 
+        //    name:"Jackson-Pratt drain",      
+        //    topic:[" ",], subtype:[" ",],
+        //    who:"   ", //whoSearch:["",], 
+        //    where:"California", whereSearch:[" ", " ",],               
+        //    when:" ",   
+        //    disease:[" ", " "],  
+        //    ops:[" ", " ",],
+        //    geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+        //    properties: { title:" ", description:' <br>'}, 
+        //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+        //    refs:"<br>",   
+        //    jrnls:[" ",],
+        //    URLs:"",
+        //    imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+        //    about:"",//<br><br><br>",
+        //    URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        //},{
+        //    type:'Feature',
+        //    ID:1650, 
+        //    name:"Jadad scale",      
+        //    topic:[" ",], subtype:["Scores",],
+        //    who:"   ", //whoSearch:["",], 
+        //    where:"Oxford - England - UK", whereSearch:[" ", " ",],               
+        //    when:" ",   
+        //    disease:[" ", " "],  
+        //    ops:[" ", " ",],
+        //    geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+        //    properties: { title:"Jadad scale", description:' <br>'}, 
+        //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+        //    refs:"<br>",   
+        //    jrnls:[" ",],
+        //    URLs:"",
+        //    imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+        //    about:"",//<br><br><br>",
+        //    URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:1660, 
@@ -3911,11 +4125,47 @@
             about:"", 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Jefferson_fracture' target='_blank' class='btn btn-info' role='button'>Wikipedia</a><br>",
             acknow:"",
+        //},{
+        //    type:'Feature',
+        //    ID:1670, 
+        //    name:"Joll's retractor",      
+        //    topic:[" ",], subtype:[" ",],
+        //    who:"   ", //whoSearch:["",], 
+        //    where:"London - England - UK", whereSearch:[" ", " ",],               
+        //    when:" ",   
+        //    disease:[" ", " "],  
+        //    ops:[" ", " ",],
+        //    geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+        //    properties: { title:"  ", description:' <br>'}, 
+        //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+        //    refs:"<br>",   
+        //    jrnls:[" ",],
+        //    URLs:"",
+        //    imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+        //    about:"",//<br><br><br>",
+        //    URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        //},{
+        //    type:'Feature',
+        //    ID:1680, 
+        //    name:"Joll's triangle",      
+        //    topic:[" ",], subtype:[" ",],
+        //    who:"   ", //whoSearch:["",], 
+        //    where:"London - England - UK", whereSearch:[" ", " ",],               
+        //    when:" ",   
+        //    disease:[" ", " "],  
+        //    ops:[" ", " ",],
+        //    geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+        //    properties: { title:"   ", description:' <br>'}, 
+        //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+        //    refs:"<br>",   
+        //    jrnls:[" ",],
+        //    URLs:"",
+        //    imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+        //    about:"",//<br><br><br>",
+        //    URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
        
-/// Joll's retractor 1670 - London
-/// Joll's triangle 1680
-
-
 // K K K K K K K K K K K K K K K K K K K K K K K K K K K K ///////////////////////
 
         },{
@@ -3959,9 +4209,26 @@
             about:"Memorial Hospital which has since become known as Memorial Sloan Kettering Cancer Center.",//<br><br><br>",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Performance_status' target='_blank' class='btn btn-info' role='button'>Wikipedia</a><br>",
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-
-/// Kartagener syndrome 1710 - Zürich
-
+        //},{
+        //    type:'Feature',
+        //    ID:1710, 
+        //    name:"Kartagener syndrome",      
+        //    topic:[" ",], subtype:[" ",],
+        //    who:"   ", //whoSearch:["",], 
+        //    where:"Zürich", whereSearch:[" ", " ",],               
+        //    when:" ",   
+        //    disease:[" ", " "],  
+        //    ops:[" ", " ",],
+        //    geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+        //    properties: { title:"   ", description:' <br>'}, 
+        //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+        //    refs:"<br>",   
+        //    jrnls:[" ",],
+        //    URLs:"",
+        //    imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+        //    about:"",//<br><br><br>",
+        //    URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:1720, 
@@ -4088,17 +4355,54 @@
             acknow:"",
        
 /// Klumpke's paralysis - Paris
-/// Kocherization  - Bern [trauma,  hpb, OG]
-
-
+        //},{
+        //    type:'Feature',
+        //    ID:1710, 
+        //    name:"   ",      
+        //    topic:[" ",], subtype:[" ",],
+        //    who:"   ", //whoSearch:["",], 
+        //    where:" ", whereSearch:[" ", " ",],               
+        //    when:" ",   
+        //    disease:[" ", " "],  
+        //    ops:[" ", " ",],
+        //    geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+        //    properties: { title:"   ", description:' <br>'}, 
+        //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+        //    refs:"<br>",   
+        //    jrnls:[" ",],
+        //    URLs:"",
+        //    imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+        //    about:"",//<br><br><br>",
+        //    URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        //},{
+        //    type:'Feature',
+        //    ID:1800, 
+        //    name:"Kocherization",      
+        //    topic:["HPB","Oesophagogastric","Transplant","Trauma"], subtype:["Techniques",],
+        //    who:"Emil Kocher",   
+        //    whoSearch:["Emil Kocher",], 
+        //    where:"Bern - Switzerland", whereSearch:["Bern, Switzerland",],               
+        //    when:" ",   
+        //    disease:[" ", " "],  
+        //    ops:[" ", " ",],
+        //    geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+        //    properties: { title:"   ", description:' <br>'}, 
+        //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+        //    refs:"<br>",   
+        //    jrnls:[" ",],
+        //    URLs:"",
+        //    imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+        //    about:"",//<br><br><br>",
+        //    URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:1810, 
             name:"Kocher's abdominal incision",
             topic:["General Surgery","HPB",], 
             subtype:["Incisions",],    
-            who:"Emil Theodor Kocher",   
-            whoSearch:["Emil T Kocher",], 
+            who:"Emil Kocher", whoSearch:["Emil Kocher",], 
             where:"Bern - Switzerland", whereSearch:["Bern, Switzerland",],                 
             when:"1892",  
             disease:["Cholecystitis",],  
@@ -4189,9 +4493,27 @@
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Pancreatic_islets' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-       
-/// Langer's lines. Karl Langer
-       
+        //},{
+        //    type:'Feature',
+        //    ID:1855, 
+        //    name:"Langer's lines",      
+        //    topic:["Plastics","General Surgery",], subtype:["Anatomy",],
+        //    who:"Karl Langer",   
+        //    whoSearch:["Karl Langer",], 
+        //    where:"    ", whereSearch:["  ",],               
+        //    when:" ",   
+        //    disease:[" ", " "],  
+        //    ops:[" ", " ",],
+        //    geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+        //    properties: { title:"   ", description:' <br>'}, 
+        //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+        //    refs:"<br>",   
+        //    jrnls:[" ",],
+        //    URLs:"",
+        //    imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+        //    about:"",//<br><br><br>",
+        //    URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:1860, 
@@ -4367,11 +4689,67 @@
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",//<br><br><br>", 
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-        
-/// Lloyd-Davies position - London
-/// Lockwood repair - London
-/// Lotheissen's trans-inguinal operation - Austria
-
+        },{
+            type:'Feature',
+            ID:1960, 
+            name:"Lloyd-Davies position",      
+            topic:["Colorectal",], subtype:["Patient positioning",],
+            who:"Oswald Lloyd-Davies",   
+            whoSearch:["Oswald Lloyd-Davies",], 
+            where:"London - England - UK", //whereSearch:["  ",],               
+            when:"1940",    
+            ops:["Colectomy","Rectal surgery",],
+            geometry: {type: 'Point', coordinates:[ -0.32002, 51.5759 ]}, //lng,lat
+            properties: { title:"Lloyd-Davies position", description:'London<br>1940'}, 
+            //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+            refs:"",//"<br>",   
+            //    jrnls:[" ",],
+            imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            about:"",//<br><br><br>",
+            URLs:"",//"<br><a href='https://en.wikipedia.org/wiki/ ' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        //},{
+        //    type:'Feature',
+        //    ID:1970, 
+        //    name:"Lockwood repair",      
+        //    topic:[" ","   ",], subtype:[" ",],
+        //    who:"   ",   
+        //    whoSearch:["   ",], 
+        //    where:"London", whereSearch:["  ",],               
+        //    when:" ",   
+        //    disease:[" ", " "],  
+        //    ops:[" ", " ",],
+        //    geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+        //    properties: { title:"   ", description:' <br>'}, 
+        //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+        //    refs:"<br>",   
+        //    jrnls:[" ",],
+        //    URLs:"",
+        //    imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+        //    about:"",//<br><br><br>",
+        //    URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        //},{
+        //    type:'Feature',
+        //    ID:1980, 
+        //    name:"Lotheissen's trans-inguinal operation",      
+        //    topic:[" ","   ",], subtype:[" ",],
+        //    who:"   ",   
+        //    whoSearch:["   ",], 
+        //    where:"Austria", whereSearch:["  ",],               
+        //    when:" ",   
+        //    disease:[" ", " "],  
+        //    ops:[" ", " ",],
+        //    geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+        //    properties: { title:"   ", description:' <br>'}, 
+        //    googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+        //    refs:"<br>",   
+        //    jrnls:[" ",],
+        //    URLs:"",
+        //    imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+        //    about:"",//<br><br><br>",
+        //    URLs:"<br><a href='https://en.wikipedia.org/wiki/Heller_myotomy' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:1990, 
@@ -5186,6 +5564,8 @@
 
 //////// P P P P P P P P P P P P P P P P P P P P P P P P ////////////////////////////
 
+/// Paget's disease of bone
+
         },{
             type:'Feature',
             ID:2470, 
@@ -5307,20 +5687,24 @@
         //    refs:"",   
         //    about:"",//<br><br><br>",  URLs:"",//
         //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-        //},{
-        //    type:'Feature',
-        //    ID:2520, 
-        //    name:"Penrose drain",      
-        //    topic:["",],  
-        //    subtype:["Equipment"],
-        //    who:"Charles Penrose",  //whoSearch:["",],
-        //    where:"Philadelphia - Pennsylvania - USA",   //whereSearch:["",],                 
-        //    when:"1890",     
-        //    lat:"39.947454", long:"-75.192356",
-        //    googlehtz: 0, //search: "Penrose drain" AND " " [02-Oct-21]
-        //    refs:"",   
-        //    about:"",//<br><br><br>",  URLs:"",//
-        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        },{
+            type:'Feature',
+            ID:2520, 
+            name:"Penrose drain",      
+            topic:["General Surgery",],  
+            subtype:["Equipment"],
+            who:"Charles Penrose",  //whoSearch:["",],
+            where:"Philadelphia - Pennsylvania - USA",   //whereSearch:["",],                 
+            when:"1890",
+            geometry: { type: 'Point', coordinates: [ -75.1923, 39.947454 ]}, //long,lat
+            properties: { title:"Penrose drain", description:'Philadelphia<br>1890'},
+            //googlehtz: 0, //search: "Penrose drain" AND " " [02-Oct-21]
+            refs:"",   
+            URLs:"",//wiki-Y/N
+            //jrnls:["",],  
+            imgName:"",//"<
+            about:"",
+            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{
         //    type:'Feature',
         //    ID:2530, 
@@ -6046,23 +6430,23 @@
 /// Spiegelian hernia - Padua, Veneto, Italy
 /// Starling's law - anaesthetics 1914
 
-        //},{
-        //    ID:2880, 
-        //    name:"Stewart–Treves syndrome",      
-        //    topic:["",], 
-        //    subtype:["Syndromes"], 
-        //    who:"",    
-        //    whoSearch:["",],
-        //    where:"New York",                    
-        //    when:"1948",  
-        //    disease:["",],   
-        //    long:"",
-        //    lat:"", 
-        //    googlehtz: 0, //search: "  " AND "  " [02-Oct-21]
-        //    refs:"",   
-        //    imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-        //    about:"",
-        //    acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        },{
+            ID:2880, 
+            name:"Stewart–Treves syndrome",      
+            topic:["Breast","Plastics","Vascular",], 
+            subtype:["Syndromes"], 
+            who:"Fred Stewart & Norman Treves",  //whoSearch:["",],
+            where:"Manhattan - New York - USA",                    
+            when:"1948",  
+            disease:["Sarcoma",],
+            ops:["Mastectomy",],
+            geometry: { type: 'Point', coordinates: [ -73.95684, 40.764098 ]}, //lng,lat
+            properties: { title:"Stewart–Treves syndrome", description:'New York<br>1948'},
+            googlehtz: 0, //search: "  " AND "  " [02-Oct-21]
+            refs:"",   
+            imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            about:"<br>Memorial Hospital which has since become known as Memorial Sloan Kettering Cancer Center<br>",
+            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{
         //    ID:2890, 
         //    name:"Strasberg-Bismuth classification",      
@@ -6073,9 +6457,10 @@
         //    where:"St. Louis, Missouri, USA",                    
         //    when:"1995",  
         //    disease:["Bile duct injury",],  
-        //    long:"",
-        //    lat:"",  
-        //    googlehtz:00, //search: "Siewert-Stein classification" AND "Cancer" [02-Oct-21]
+        //    ops:[" ",],  
+        //    geometry: { type: 'Point', coordinates: [  ,  ]}, //lng,lat
+        //    properties: { title:" ", description:'St Louis - Missouri<br> '},
+        //    googlehtz:00, //search: " " AND " " [02-Oct-21]
         //    refs:"",  
         //    imgName:"<img src=\"../static/assets/img/profiles/Steven_Strasberg.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement 
         //    about:"",//<br><br><br>",  
@@ -7036,6 +7421,8 @@
 
         }]}
         </script>
+
+
 
 
 
