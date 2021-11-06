@@ -7714,10 +7714,10 @@
         // add the point_count property to your source data.
         map.addSource('earthquakes', {
             type: 'geojson',
-            data: selected2,
+            data: eponyms,
             cluster: true,
-            clusterMaxZoom: 14, // Max zoom to cluster points on
-            clusterRadius: 30 // Radius of each cluster when clustering points (defaults to 50)
+            clusterMaxZoom: 12, // Max zoom to cluster points on
+            clusterRadius: 25 // Radius of each cluster when clustering points (defaults to 50)
         });
 
         map.addLayer({
