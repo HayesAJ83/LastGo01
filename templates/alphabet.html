@@ -184,7 +184,6 @@
                             </select>
                             <div class="lead" id='imgName2'></div>
                             <p class="lead" id="msg2"></p>
-                            <div id="map"></div>
                             <p class="lead" id="msg3"></p>
                             <br>
                         </div>
@@ -197,7 +196,7 @@
             </section>
             <!-- End of Section -->
             
-            <!-- Section    
+            <!-- Section -->
             <section class="py-6 py-lg-8 bg-primary" id="section-3">
                 <div class="container" style="height:140px">
                     <div class="row align-items-center text-center">
@@ -205,7 +204,7 @@
                     </div>
                 </div>
             </section>
-            End of Section -->
+            <!-- End of Section -->
         </main>
         <!-- End of Main Content -->
 
@@ -7648,163 +7647,68 @@
 <script>
     function show2(id) {
 
-    var imgName2 = document.getElementById('imgName2');
-    if (!id) {imgName2.innerHTML = "";
-    } else {
-        for (var i = 0; i < eponyms.features.length; i++) {
-        if  (Number(id) === eponyms.features[i].ID) {
-            imgName2.innerHTML = eponyms.features[i].imgName
-                                    ;}}}
-                                $('.imgName2').fadeIn('slow');
-    
-    var msg2 = document.getElementById('msg2');
-    if (!id) {msg2.innerHTML = "";
-    } else {
-        for (var i = 0; i < eponyms.features.length; i++) {
-        if  (Number(id) === eponyms.features[i].ID) {
-            msg2.innerHTML = "<br>"+
-                             eponyms.features[i].who.bold()   +"<br>"+
-                             eponyms.features[i].when.bold()  +"<br>"+
-                             eponyms.features[i].where.bold() +"<br><br>"
-                                    ;}}}
-                                $('.msg2').fadeIn('slow');
-
-
-    var map = document.getElementById('map');
-    if (!id) {map.innerHTML = "";
-    } else {
-        for (var i = 0; i < eponyms.features.length; i++) {
-        if  (Number(id) === eponyms.features[i].ID) {
-            map.innerHTML =
-
-            new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/mapbox/dark-v10',  //streets-v9'
-                center: [0, 39],
-                zoom: -0.4
-            });
-            
-            const size = 100;
-            
-            // This implements `StyleImageInterface`
-            // to draw a pulsing dot icon on the map.
-            const pulsingDot = {
-            width: size,
-            height: size,
-            data: new Uint8Array(size * size * 4),
-            
-            // When the layer is added to the map,
-            // get the rendering context for the map canvas.
-            onAdd: function () {
-            const canvas = document.createElement('canvas');
-            canvas.width = this.width;
-            canvas.height = this.height;
-            this.context = canvas.getContext('2d');
-            },
-            
-            // Call once before every frame where the icon will be used.
-            render: function () {
-            const duration = 1000;
-            const t = (performance.now() % duration) / duration;
-            
-            const radius = (size / 2) * 0.3;
-            const outerRadius = (size / 2) * 0.7 * t + radius;
-            const context = this.context;
-            
-            // Draw the outer circle.
-            context.clearRect(0, 0, this.width, this.height);
-            context.beginPath();
-            context.arc(
-            this.width / 2,
-            this.height / 2,
-            outerRadius,
-            0,
-            Math.PI * 2
-            );
-            context.fillStyle = `rgba(255, 200, 200, ${1 - t})`;
-            context.fill();
-            
-            // Draw the inner circle.
-            context.beginPath();
-            context.arc(
-            this.width / 2,
-            this.height / 2,
-            radius,
-            0,
-            Math.PI * 2
-            );
-            context.fillStyle = 'rgba(255, 100, 100, 1)';
-            context.strokeStyle = 'white';
-            context.lineWidth = 2 + 4 * (1 - t);
-            context.fill();
-            context.stroke();
-            
-            // Update this image's data with data from the canvas.
-            this.data = context.getImageData(
-            0,
-            0,
-            this.width,
-            this.height
-            ).data;
-            
-            // Continuously repaint the map, resulting
-            // in the smooth animation of the dot.
-            map.triggerRepaint();
-            
-            // Return `true` to let the map know that the image was updated.
-            return true;
-            }
-            };
-            
-            map.on('load', () => {
-            map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 2 });
-            
-            map.addSource('dot-point', {
-            'type': 'geojson',
-            'data': {
-            'type': 'FeatureCollection',
-            'features': [
-            {
-            'type': 'Feature',
-            'geometry': {
-            'type': 'Point',
-            'coordinates': [ 0, 0], //eponyms.features[i].geometry.coordinates // icon position [lng, lat]
-            }
-            }
-            ]
-            }
-            });
-            map.addLayer({
-            'id': 'layer-with-pulsing-dot',
-            'type': 'symbol',
-            'source': 'dot-point',
-            'layout': {
-            'icon-image': 'pulsing-dot'
-            }
-            });
-            });
-                                    ;}}}
-                               // $('.map').fadeIn('slow');
-
-
-    var msg3 = document.getElementById('msg3');
-    if (!id) {msg2.innerHTML = "";
-    } else {
-        for (var i = 0; i < eponyms.features.length; i++) {
-        if  (Number(id) === eponyms.features[i].ID) {
-            msg3.innerHTML = 
-                             eponyms.features[i].about +
-                             eponyms.features[i].refs +
-                             eponyms.features[i].URLs +
-                             eponyms.features[i].acknow
-                                    ;}}}
-                                $('.msg3').fadeIn('slow');
+        var imgName2 = document.getElementById('imgName2');
+        if (!id) {imgName2.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.features.length; i++) {
+            if  (Number(id) === eponyms.features[i].ID) {
+                imgName2.innerHTML = eponyms.features[i].imgName
+                                        ;}}}
+        
+        var msg2 = document.getElementById('msg2');
+        if (!id) {msg2.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.features.length; i++) {
+            if  (Number(id) === eponyms.features[i].ID) {
+                msg2.innerHTML = "<br>"+
+                                eponyms.features[i].who.bold()   +"<br>"+
+                                eponyms.features[i].when.bold()  +"<br>"+
+                                eponyms.features[i].where.bold() +"<br><br>"
+                                        ;}}}
                                 
-                                }
+        var msg3 = document.getElementById('msg3');
+        if (!id) {msg2.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.features.length; i++) {
+            if  (Number(id) === eponyms.features[i].ID) {
+                msg3.innerHTML = 
+                                eponyms.features[i].about +
+                                eponyms.features[i].refs +
+                                eponyms.features[i].URLs +
+                                eponyms.features[i].acknow
+                                        ;}}}                           
+    }
+    
 </script>
 
 <script src="/static/assets/js/theme.js"></script>
 
+
+
+<script>
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYWpoYXllczgzIiwiYSI6ImNrY2pqM2lvMDB4Z24ydG8zdDl0NTYwbTUifQ.2DKVfTAaE77XAXMpDeq_Pg';
+  
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v10', //'mapbox://styles/mapbox/satellite-v9', //'mapbox://styles/mapbox/dark-v10',//'mapbox://styles/maryshaffer/cjh6yf7c30apg2sotfzmyf2je',
+        center: [0, 39],
+        zoom: -0.5
+    });
+
+    // Add the control to the map.
+    map.addControl(
+        new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            mapboxgl: mapboxgl,
+            })
+    );
+
+    //map.addControl(new mapboxgl.NavigationControl());
+
+</script>
+
+  
 
 
 
