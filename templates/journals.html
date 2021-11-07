@@ -149,7 +149,10 @@
                                     data-width="320px" data-size="6"
                                     data-live-search="true" onchange="show2(this.value);">
                             </select>
-                            <p id="msg2"></p>    
+                            <div class="lead" id='imgName2'></div>
+                            <p class="lead" id="msg2"></p>
+                            <p class="lead" id="msg3"></p>
+                            <br> 
                         </div>
                     </div>
                 </div>
@@ -7664,37 +7667,73 @@
             
         </script>
 
-        <script>
-            function show(id) {
-            var msg = document.getElementById('msg');
-            if (!id) {msg.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.length; i++) {
-                if  (Number(id) === eponyms[i].ID) {
-                    msg.innerHTML = "<br><br>"+
-                                            'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
-                                            'When'  +":   "+ eponyms[i].when.bold()  +"<br>"+
-                                            'Where' +":   "+ eponyms[i].where.bold() +
-                                            eponyms[i].about +
-                                            eponyms[i].refs +
-                                            eponyms[i].acknow
-                                            ;}}}}
-            
-            function show2(id) {
-            var msg2 = document.getElementById('msg2');
-            if (!id) {msg2.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.length; i++) {
-                if  (Number(id) === eponyms[i].ID) {
-                    msg2.innerHTML = "<br><br>"+
-                                            'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
-                                            'When'  +":   "+ eponyms[i].when.bold()  +"<br>"+
-                                            'Where' +":   "+ eponyms[i].where.bold() +
-                                            eponyms[i].about +
-                                            eponyms[i].refs +
-                                            eponyms[i].acknow
-                                            ;}}}}
-        </script>
+<script>
+
+    function show(id) {   
+        var imgName = document.getElementById('imgName');
+        if (!id) {imgName.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.features.length; i++) {
+            if  (Number(id) === eponyms.features[i].ID) {
+                imgName.innerHTML = eponyms.features[i].imgName
+                                        ;}}}
+                                    $('.imgName').fadeIn('slow');
+
+        var info = document.getElementById('info');
+        if (!id) {imgName.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.features.length; i++) {
+            if  (Number(id) === eponyms.features[i].ID) {
+                info.innerHTML =    "<br>"+
+                                    eponyms.features[i].who.bold()   +"<br>"+
+                                    eponyms.features[i].when.bold()  +"<br>"+
+                                    eponyms.features[i].where.bold() +"<br><br>"+
+                                    eponyms.features[i].about +
+                                    eponyms.features[i].refs +
+                                    eponyms.features[i].URLs +
+                                    eponyms.features[i].acknow
+                                        ;}}}
+                                    }                           
+</script>
+
+
+<script>
+    function show2(id) {
+
+        var imgName2 = document.getElementById('imgName2');
+        if (!id) {imgName2.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.features.length; i++) {
+            if  (Number(id) === eponyms.features[i].ID) {
+                imgName2.innerHTML = eponyms.features[i].imgName
+                                        ;}}}
+        
+        var msg2 = document.getElementById('msg2');
+        if (!id) {msg2.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.features.length; i++) {
+            if  (Number(id) === eponyms.features[i].ID) {
+                msg2.innerHTML = "<br>"+
+                                eponyms.features[i].who.bold()   +"<br>"+
+                                eponyms.features[i].when.bold()  +"<br>"+
+                                eponyms.features[i].where.bold() +"<br><br>"
+                                        ;}}}
+                                
+        var msg3 = document.getElementById('msg3');
+        if (!id) {msg2.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.features.length; i++) {
+            if  (Number(id) === eponyms.features[i].ID) {
+                msg3.innerHTML = 
+                                eponyms.features[i].about +
+                                eponyms.features[i].refs +
+                                eponyms.features[i].URLs +
+                                eponyms.features[i].acknow
+                                        ;}}}                           
+    }
+
+</script>
+
 
         <script src="/static/assets/js/theme.js"></script>
     </body>
