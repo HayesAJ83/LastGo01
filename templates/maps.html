@@ -7581,7 +7581,7 @@
           
             const map = new mapboxgl.Map({
                 container: 'map',
-                style: 'mapbox://styles/mapbox/light-v10', //'mapbox://styles/mapbox/satellite-v9', //'mapbox://styles/mapbox/dark-v10',//'mapbox://styles/maryshaffer/cjh6yf7c30apg2sotfzmyf2je',
+                style: 'mapbox://styles/mapbox/navigation-night-v1', //navigation-night-v1 //light-v10 //'/satellite-v9', //'dark-v10',//'mapbox://styles/maryshaffer/cjh6yf7c30apg2sotfzmyf2je',
                 center: [10, 85],
                 zoom: -0.52
             });
@@ -7657,7 +7657,7 @@
                     source: 'earthquakes',
                     filter: ['!', ['has', 'point_count']],
                     paint: {
-                        'circle-color': '#f1f075', //blue 11b4da
+                        'circle-color': '#6B6B6B', //blue 11b4da
                         'circle-radius': 7,
                         'circle-stroke-width': 1,
                         'circle-stroke-color': '#000000'//'#fff'
