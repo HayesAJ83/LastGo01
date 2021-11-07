@@ -7594,10 +7594,10 @@
             const map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/dark-v10', //'mapbox://styles/mapbox/satellite-v9', //'mapbox://styles/mapbox/dark-v10',//'mapbox://styles/maryshaffer/cjh6yf7c30apg2sotfzmyf2je',
-                center: [0, 39],
+                center: [8, 48],
                 zoom: -0.5
             });
-
+        
             // Add the control to the map.
             map.addControl(
                 new MapboxGeocoder({
@@ -7606,7 +7606,7 @@
                     })
             );
         
-            //map.addControl(new mapboxgl.NavigationControl());
+            map.addControl(new mapboxgl.NavigationControl());
         
             map.on('load', () => {
                 // set the 'cluster' option to true. GL-JS will
@@ -7615,7 +7615,7 @@
                     type: 'geojson',
                     data: eponyms,
                     cluster: true,
-                    clusterMaxZoom: 14, // Max zoom to cluster points on
+                    clusterMaxZoom: 10, // Max zoom to cluster points on
                     clusterRadius: 30 // Radius of each cluster when clustering points (defaults to 50)
                 });
         
@@ -7739,8 +7739,7 @@
             });
         </script>
         
-          
-
+        
 
 
 
