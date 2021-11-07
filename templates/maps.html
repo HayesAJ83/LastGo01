@@ -7581,7 +7581,9 @@
           
             const map = new mapboxgl.Map({
                 container: 'map',
-                style: 'mapbox://styles/mapbox/light-v10', //navigation-night-v1 //light-v10 //'/satellite-v9', //'dark-v10',//'mapbox://styles/maryshaffer/cjh6yf7c30apg2sotfzmyf2je',
+                style: 'mapbox://styles/v1/ajhayes83/ckvpe3wu534og14p36qyp9rf9.html?title=copy&access_token=pk.eyJ1IjoiYWpoYXllczgzIiwiYSI6ImNrY2pqM2lvMDB4Z24ydG8zdDl0NTYwbTUifQ.2DKVfTAaE77XAXMpDeq_Pg&zoomwheel=true&fresh=true#5.96/51.711/-1.737',
+                //https://api.mapbox.com/styles/v1/ajhayes83/ckvpe3wu534og14p36qyp9rf9.html?title=view&access_token=pk.eyJ1IjoiYWpoYXllczgzIiwiYSI6ImNrY2pqM2lvMDB4Z24ydG8zdDl0NTYwbTUifQ.2DKVfTAaE77XAXMpDeq_Pg&zoomwheel=true&fresh=true#5.96/51.711/-1.737
+                //'mapbox://styles/mapbox/light-v10', //navigation-night-v1 //light-v10 //'/satellite-v9', //'dark-v10',//'mapbox://styles/maryshaffer/cjh6yf7c30apg2sotfzmyf2je',
                 center: [10, 90],
                 zoom: -0.52
             });
@@ -7621,11 +7623,11 @@
                         'circle-color': [
                             'step',
                             ['get', 'point_count'],
-                            '#6B6B6B', //blue 51bbd6
+                            '#f1f075', //blue 51bbd6
                             10,
-                            '#B1B1B1', //yellow #f1f075
+                            '#f1f075', //yellow #f1f075
                             15,
-                            '#6B6B6B' //red f28cb1
+                            '#f1f075' //red f28cb1
                         ],
                         'circle-radius': [
                             'step',
@@ -7657,7 +7659,7 @@
                     source: 'earthquakes',
                     filter: ['!', ['has', 'point_count']],
                     paint: {
-                        'circle-color': '#CBD2D3', //blue 11b4da
+                        'circle-color': '#f1f075', //blue 11b4da
                         'circle-radius': 7,
                         'circle-stroke-width': 1,
                         'circle-stroke-color': '#000000'//'#fff'
