@@ -7582,8 +7582,8 @@
             const map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/light-v10', //'mapbox://styles/mapbox/satellite-v9', //'mapbox://styles/mapbox/dark-v10',//'mapbox://styles/maryshaffer/cjh6yf7c30apg2sotfzmyf2je',
-                center: [10, 75],
-                zoom: -0.5
+                center: [10, 85],
+                zoom: -0.52
             });
         
             // Add the control to the map.
@@ -7621,11 +7621,11 @@
                         'circle-color': [
                             'step',
                             ['get', 'point_count'],
-                            '#f1f075', //blue 51bbd6
+                            '#6B6B6B', //blue 51bbd6
                             10,
-                            '#f1f075', //yellow
+                            '#6B6B6B', //yellow #f1f075
                             15,
-                            '#f1f075' //red f28cb1
+                            '#6B6B6B' //red f28cb1
                         ],
                         'circle-radius': [
                             'step',
