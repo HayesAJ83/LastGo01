@@ -7605,8 +7605,8 @@
                     type: 'geojson',
                     data: eponyms,
                     cluster: true,
-                    clusterMaxZoom: 10, // Max zoom to cluster points on
-                    clusterRadius: 30 // Radius of each cluster when clustering points (defaults to 50)
+                    clusterMaxZoom: 15, // Max zoom to cluster points on
+                    clusterRadius: 40 // Radius of each cluster when clustering points (defaults to 50)
                 });
         
                 map.addLayer({
@@ -7623,11 +7623,11 @@
                         'circle-color': [
                             'step',
                             ['get', 'point_count'],
-                            '#f1f075', //blue 51bbd6
+                            '#FFFF00', //blue 51bbd6
                             10,
-                            '#f1f075', //yellow #f1f075
+                            '#FFFF00', //yellow #f1f075
                             15,
-                            '#f1f075' //red f28cb1
+                            '#FFFF00' //red f28cb1// yellow f1f075
                         ],
                         'circle-radius': [
                             'step',
@@ -7659,7 +7659,7 @@
                     source: 'earthquakes',
                     filter: ['!', ['has', 'point_count']],
                     paint: {
-                        'circle-color': '#f1f075', //blue 11b4da
+                        'circle-color': '#FFFF00', //blue 11b4da
                         'circle-radius': 7,
                         'circle-stroke-width': 1,
                         'circle-stroke-color': '#000000'//'#fff'
