@@ -496,7 +496,7 @@
         //    whereSearch:["",],       
         //    when:"",
         //    disease:[" "], 
-        //    ops:[" ",],  
+        //    ops:["",],  
         //    geometry: { type: 'Point', coordinates: [ , ]}, //lng,lat
         //    properties: { title:'replace_name', description:'replace_where<br>replace_when'},
         //    googlehtz: 0, //search: " " AND " " [02-Oct-21]
@@ -759,6 +759,7 @@
             where:"Dallas - Texas - USA", whereSearch:["Dallas, Texas, USA",],         
             when:"1968",
             disease:["Burns","Hypovolaemia","Shock",],
+            ops:["",],
             geometry: {type: 'Point', coordinates: [ -96.838889, 32.810278 ]},     //long,lat
             properties: {title:"Baxter - Parkland formula", description:'Dallas - Texas<br>1968'},   
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
@@ -805,7 +806,7 @@
             whereSearch:["Bristol, England", "England", "UK",],    
             when:"1967",
             disease:["Dyspepsia","GERD","GORD","Reflux",],   
-            ops:["Antireflux surgery","Endoscopy", "Fundoplication"],
+            ops:["Antireflux surgery","Endoscopy","Fundoplication"],
             geometry: {type: 'Point', coordinates: [ -2.527, 51.4969 ]},    //long,lat
             properties: {title:"Belsey mark IV", description:'Bristol - England<br>1967'}, 
             //googlehtz:0, //search: " " AND " " [02-Oct-21] 
@@ -868,7 +869,7 @@
             where:"Manchester - England",   //whereSearch:["",],       
             when:"1980",  
             //disease:["",], 
-            //ops:[" ",],
+            //ops:["",],
             geometry: {type: 'Point', coordinates: [ -2.22455, 53.46042 ]},    //long,lat
             properties: {title:"Bianchi procedure", description:'Manchester<br>1980'}, 
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
@@ -888,7 +889,7 @@
             where:"Vienna - Austria", whereSearch:["Vienna, Austria",], 
             when:"1881",
             disease:["Peptic ulcer disease","Gastric cancer",],  
-            //ops:[" ",], 
+            //ops:["",], 
             geometry: {type: 'Point', coordinates: [ 16.359722, 48.213056 ]},    //long,lat
             properties: {title:"Billroth I procedure", description:'Vienna<br>1881'}, 
             //googlehtz:0, //search: " "  " " [02-Oct-21]
@@ -908,7 +909,7 @@
             where:"Vienna - Austria", whereSearch:["Vienna, Austria",], 
             when:"1885",
             disease:["Peptic ulcer disease","Gastric cancer",],  
-            //ops:["Gastrectomy","Endoscopy",], 
+            ops:["Gastrectomy","Endoscopy",], 
             geometry: {type: 'Point', coordinates: [ 16.359731, 48.213062 ]},    //long,lat
             properties: {title:"Billroth II procedure", description:'Vienna<br>1885'}, 
             //googlehtz:0, //search: " "  " " [02-Oct-21]
@@ -990,7 +991,7 @@
             where:"Manhattan - New York - USA", whereSearch:["Manhattan, New York, USA", "USA",],        
             when:"1998",
             disease:["Cholangiocarcinoma",],   
-            //ops:[" ",],
+            //ops:["",],
             geometry: {type: 'Point', coordinates: [ -73.95628, 40.76417 ]},  //lng,lat
             properties: {title:'lumgart staging system', description:'New York<br>1998'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -1010,7 +1011,7 @@
             where:"Prague - Czech Republic", whereSearch:["Prague, Czech Republic",],        
             when:"1848",
             disease:["Diaphragmatic hernia",],   
-            //ops:[" ",],
+            //ops:["",],
             geometry: {type: 'Point', coordinates: [ 14.42385, 50.08709 ]},    //long,lat
             properties: {title:"Bochdalek hernia", description:'Prague<br>1848'}, 
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -1051,7 +1052,7 @@
             where:"Pok Fu Lam - Hong Kong", // whereSearch:["Pok Fu Lam, Hong Kong",],              
             when:"1982", 
             disease:["Peptic ulcer disease",],  
-            //ops:["Repair perforated ulcer",],
+            ops:["Repair perforated ulcer",],
             geometry: {type: 'Point', coordinates: [ 114.13115, 22.27006 ]},    //long,lat
             properties: {title:"Boey score", description:'Hong Kong<br>1982'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -1071,6 +1072,7 @@
             where:"Paris - France", // whereSearch:[" ",],              
             when:"1823", 
             disease:["Groin hernia","Groin pain",],  
+            ops:["",],
             geometry: {type: 'Point', coordinates: [ 2.3409, 48.8513 ]},    //long,lat
             properties: {title:"Bogros' space", description:'Paris<br>1823'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -1110,7 +1112,7 @@
             where:"Lyon - France", //    whereSearch:["Lyon, France",],       
             when:"1896",
             disease:["Gastric outlet obstruction",],   
-            //ops:[" ",],
+            ops:["",],
             geometry: {type: 'Point', coordinates: [ 4.836389, 45.758333 ]},  //long,lat
             properties: {title:"Bouveret syndrome", description:'Lyon - France<br>1896'},
             //googlehtz: 0, //search: "  sign" AND " " [02-Oct-21] 
@@ -1465,7 +1467,7 @@
             where:"Paris - France", whereSearch:["Paris", "France",],              
             when:"1958", 
             disease:["Jaundice",],  
-            //ops:[" ",],
+            //ops:["",],
             geometry: {type: 'Point', coordinates: [ 2.3823, 48.848 ]}, //lng,lat
             properties: {title:"Carnett's sign", description:'Paris<br>1958'},
             lat:"48.848", long:"2.3823",   
@@ -1819,7 +1821,6 @@
             about:"",//<br><br><br>",
             URLs:"<br><a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5743240/pdf/edinbmedsurgj71941-0046.pdf' target='_blank' class='btn btn-secondary' role='button'>original paper</a> <a href='https://en.wikipedia.org/wiki/Colles%27_fracture' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-       
         },{
             type:'Feature',
             ID:640, 
@@ -7369,7 +7370,7 @@
             let result1 = eponyms.features
                 .flatMap(item => item.ops)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
-                .filter(el => {return el != null && el != "";}); //removes no operation
+                .filter(el => {return el != null && el != '' && el != "";}); //removes no operation
                 let resultsort1 = result1.sort()
                 var select = document.getElementById("select1");
                 var options = resultsort1;
