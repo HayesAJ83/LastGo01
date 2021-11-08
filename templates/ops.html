@@ -729,6 +729,7 @@
             let result1 = eponyms.features
                 .flatMap(item => item.ops)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != "";}); //added
                 let resultsort1 = result1.sort()
                 var select = document.getElementById("select1");
                 var options = resultsort1;
