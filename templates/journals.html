@@ -7417,8 +7417,9 @@
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                 return eponyms.features.filter(item => {
-                    let jrnls = Array.isArray(item.jrnls) ? item.jrnls : [item.jrnls];
-                    return taxonomy.some(med => jrnls.includes(med));
+                    
+                    let jrnls = Array.isArray(item.ops) ? item.ops : [item.ops];
+                    return taxonomy.some(med => ops.includes(med));
                     });
                     }
                 var select2 = topicFilter2(stringArray);
@@ -7505,8 +7506,8 @@
                         for (var i = 0; i < eponyms.features.length; i++) {
                         if  (Number(id) === eponyms.features[i].ID) {
                             msg.innerHTML = "<br><br>"+
-                                            'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
-                                            'Where' +":   "+ eponyms[i].where.bold() +
+                                            'Who'   +":   "+ eponyms.features[i].who.bold()   +"<br>"+
+                                            'Where' +":   "+ eponyms.features[i].where.bold() +
                                             eponyms.features[i].acknow;
                                             }}}}
                 }).trigger("change")
