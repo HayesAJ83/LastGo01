@@ -7367,7 +7367,7 @@
             let result1 = eponyms.features
                 .flatMap(item => item.jrnls)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
-                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no journal
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "[''',]" && el !="[' ',]";}); //removes no journal
                 let resultsort1 = result1.sort()
                 var select = document.getElementById("select1");
                 var options = resultsort1;
