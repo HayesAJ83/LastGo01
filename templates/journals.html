@@ -7366,7 +7366,7 @@
             $(document)
             .ready(function() {
             let result1 = eponyms.features
-                .flatMap(item => item.jrnls)
+                .flatMap(item => item.ops)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no journal
                 let resultsort1 = result1.sort()
