@@ -7365,7 +7365,7 @@
             $(document)
             .ready(function() {
             let result1 = eponyms.features
-                .flatMap(item => item.ops)
+                .flatMap(item => item.jrnls)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no operation
                 let resultsort1 = result1.sort()
@@ -7416,8 +7416,8 @@
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return eponyms.features.filter(item => {
-                    let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
-                    return taxonomy.some(med => ops.includes(med));
+                    let jrnls = Array.isArray(item.jrnls) ? item.jrnls : [item.jrnls];
+                    return taxonomy.some(med => jrnls.includes(med));
                     });
                     }
                 var select2 = topicFilter2(stringArray);
@@ -7454,8 +7454,8 @@
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return eponyms.features.filter(item => {
-                        let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
-                        return taxonomy.some(med => ops.includes(med));
+                        let jrnls = Array.isArray(item.jrnls) ? item.jrnls : [item.jrnls];
+                        return taxonomy.some(med => jrnls.includes(med));
                         });
                     }
                 
@@ -7490,8 +7490,8 @@
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return eponyms.features.filter(item => {
-                        let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
-                        return taxonomy.some(med => ops.includes(med));
+                        let jrnls = Array.isArray(item.jrnls) ? item.jrnls : [item.jrnls];
+                        return taxonomy.some(med => jrnls.includes(med));
                         });
                     }
                     
@@ -7521,8 +7521,8 @@
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return eponyms.features.filter(item => {
-                        let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
-                        return taxonomy.some(med => ops.includes(med));
+                        let jrnls = Array.isArray(item.jrnls) ? item.jrnls : [item.jrnls];
+                        return taxonomy.some(med => jrnls.includes(med));
                         });
                     }
                     
