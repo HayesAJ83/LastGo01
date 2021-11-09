@@ -7361,14 +7361,13 @@
 
 
 
-
         <script>
             $(document)
             .ready(function() {
             let result1 = eponyms.features
                 .flatMap(item => item.ops)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
-                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no journal
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no operation
                 let resultsort1 = result1.sort()
                 var select = document.getElementById("select1");
                 var options = resultsort1;
@@ -7378,7 +7377,7 @@
                     el.textContent = opt;
                     el.value = opt;
                     select.appendChild(el);
-	                }
+                    }
             console.log()
                 });
 
@@ -7393,16 +7392,16 @@
                 });
             });
 
-    
+
 
         ///  SELECTED_SPECIALTIES_1  ///
             $(document)
             .ready(function() {
             $('#btn_select').on('click', function() {
-                $('#btn_all').removeClass("btn btn-primary active");
+                $('#btn_all').removeClass("btn btn-danger active");
                 $('#btn_all').addClass("btn btn-light");
                 $('#btn_select').removeClass("btn btn-light");
-                $('#btn_select').addClass("btn btn-primary active");
+                $('#btn_select').addClass("btn btn-danger active");
                 $('#selector').fadeIn(400);
                 $('#select3').fadeOut(400);
                 
@@ -7416,9 +7415,8 @@
                 var stringArray = (new Function( "return [" + select + "];")());
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                return eponyms.features.filter(item => {
-                    
-                    let jrnls = Array.isArray(item.ops) ? item.ops : [item.ops];
+                    return eponyms.features.filter(item => {
+                    let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
                     return taxonomy.some(med => ops.includes(med));
                     });
                     }
@@ -7456,13 +7454,13 @@
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return eponyms.features.filter(item => {
-                        let jrnls = Array.isArray(item.jrnls) ? item.jrnls : [item.jrnls];
-                        return taxonomy.some(med => jrnls.includes(med));
+                        let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
+                        return taxonomy.some(med => ops.includes(med));
                         });
                     }
                 
                 var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-                //console.log(selected2)
+                console.log(selected2)
 
                 function populateSelect2() {
                     document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
@@ -7481,7 +7479,7 @@
                     });
             });
                 
-           
+        
             $('#SEL2').change(function() {
                 let select ="";
                 $("#select1").find('option:selected').each(function() {
@@ -7492,8 +7490,8 @@
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return eponyms.features.filter(item => {
-                        let jrnls = Array.isArray(item.jrnls) ? item.jrnls : [item.jrnls];
-                        return taxonomy.some(med => jrnls.includes(med));
+                        let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
+                        return taxonomy.some(med => ops.includes(med));
                         });
                     }
                     
@@ -7523,8 +7521,8 @@
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return eponyms.features.filter(item => {
-                        let jrnls = Array.isArray(item.jrnls) ? item.jrnls : [item.jrnls];
-                        return taxonomy.some(med => jrnls.includes(med));
+                        let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
+                        return taxonomy.some(med => ops.includes(med));
                         });
                     }
                     
@@ -7535,24 +7533,14 @@
             
         </script>
 
-<script>
-
-    function show(id) {   
-        var imgName = document.getElementById('imgName');
-        if (!id) {imgName.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.features.length; i++) {
-            if  (Number(id) === eponyms.features[i].ID) {
-                imgName.innerHTML = eponyms.features[i].imgName
-                                        ;}}}
-                                    $('.imgName').fadeIn('slow');
-
-        var info = document.getElementById('info');
-        if (!id) {imgName.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.features.length; i++) {
-            if  (Number(id) === eponyms.features[i].ID) {
-                info.innerHTML =    "<br>"+
+        <script>
+            function show(id) {
+            var msg = document.getElementById('msg');
+            if (!id) {msg.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.features.length; i++) {
+                if  (Number(id) === eponyms.features[i].ID) {
+                    msg.innerHTML = "<br>"+
                                     eponyms.features[i].who.bold()   +"<br>"+
                                     eponyms.features[i].when.bold()  +"<br>"+
                                     eponyms.features[i].where.bold() +"<br><br>"+
@@ -7560,47 +7548,35 @@
                                     eponyms.features[i].refs +
                                     eponyms.features[i].URLs +
                                     eponyms.features[i].acknow
-                                        ;}}}
-                                    }                           
-</script>
+                                            ;}}}
+                                        }
+            
+            function show2(id) {
+            var imgName2 = document.getElementById('imgName2');
+            if (!id) {imgName2.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.features.length; i++) {
+                if  (Number(id) === eponyms.features[i].ID) {
+                    imgName2.innerHTML = eponyms.features[i].imgName
+                                            ;}}}
 
+            var msg2 = document.getElementById('msg2');
+            if (!id) {msg2.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.features.length; i++) {
+                if  (Number(id) === eponyms.features[i].ID) {
+                    msg2.innerHTML = "<br>"+
+                                    eponyms.features[i].who.bold()   +"<br>"+
+                                    eponyms.features[i].when.bold()  +"<br>"+
+                                    eponyms.features[i].where.bold() +"<br><br>"+
+                                    eponyms.features[i].about +
+                                    eponyms.features[i].refs +
+                                    eponyms.features[i].URLs +
+                                    eponyms.features[i].acknow
+                                            ;}}}
+                                        }
+        </script>
 
-<script>
-    function show2(id) {
-
-        var imgName2 = document.getElementById('imgName2');
-        if (!id) {imgName2.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.features.length; i++) {
-            if  (Number(id) === eponyms.features[i].ID) {
-                imgName2.innerHTML = eponyms.features[i].imgName
-                                        ;}}}
-        
-        var msg2 = document.getElementById('msg2');
-        if (!id) {msg2.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.features.length; i++) {
-            if  (Number(id) === eponyms.features[i].ID) {
-                msg2.innerHTML = "<br>"+
-                                eponyms.features[i].who.bold()   +"<br>"+
-                                eponyms.features[i].when.bold()  +"<br>"+
-                                eponyms.features[i].where.bold() +"<br><br>"
-                                        ;}}}
-                                
-        var msg3 = document.getElementById('msg3');
-        if (!id) {msg2.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.features.length; i++) {
-            if  (Number(id) === eponyms.features[i].ID) {
-                msg3.innerHTML = 
-                                eponyms.features[i].about +
-                                eponyms.features[i].refs +
-                                eponyms.features[i].URLs +
-                                eponyms.features[i].acknow
-                                        ;}}}                           
-    }
-
-</script>
 
 
         <script src="/static/assets/js/theme.js"></script>
