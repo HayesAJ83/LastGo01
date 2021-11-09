@@ -7415,7 +7415,7 @@
                 var stringArray = (new Function( "return [" + select + "];")());
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                return eponyms.filter(item => {
+                return eponyms.features.filter(item => {
                     let jrnls = Array.isArray(item.jrnls) ? item.jrnls : [item.jrnls];
                     return taxonomy.some(med => jrnls.includes(med));
                     });
@@ -7453,7 +7453,7 @@
                 
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                    return eponyms.filter(item => {
+                    return eponyms.features.filter(item => {
                         let jrnls = Array.isArray(item.jrnls) ? item.jrnls : [item.jrnls];
                         return taxonomy.some(med => jrnls.includes(med));
                         });
@@ -7489,7 +7489,7 @@
                 
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                    return eponyms.filter(item => {
+                    return eponyms.features.filter(item => {
                         let jrnls = Array.isArray(item.jrnls) ? item.jrnls : [item.jrnls];
                         return taxonomy.some(med => jrnls.includes(med));
                         });
@@ -7501,12 +7501,12 @@
                     var msg = document.getElementById('msg');
                     if (!id) {msg.innerHTML = "";
                     } else {
-                        for (var i = 0; i < eponyms.length; i++) {
-                        if  (Number(id) === eponyms[i].ID) {
+                        for (var i = 0; i < eponyms.features.length; i++) {
+                        if  (Number(id) === eponyms.features[i].ID) {
                             msg.innerHTML = "<br><br>"+
                                             'Who'   +":   "+ eponyms[i].who.bold()   +"<br>"+
                                             'Where' +":   "+ eponyms[i].where.bold() +
-                                            eponyms[i].acknow;
+                                            eponyms.features[i].acknow;
                                             }}}}
                 }).trigger("change")
 
@@ -7520,7 +7520,7 @@
                 
                 function topicFilter2(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                    return eponyms.filter(item => {
+                    return eponyms.features.filter(item => {
                         let jrnls = Array.isArray(item.jrnls) ? item.jrnls : [item.jrnls];
                         return taxonomy.some(med => jrnls.includes(med));
                         });
