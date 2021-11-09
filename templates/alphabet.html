@@ -117,7 +117,7 @@
                         <div class="col">
                             <p class="mb-5 fs-3 text-white text-uppercase font-weight-bold" data-aos="fade-down" data-aos-duration="1500"><br>Search<br>- A to Z -</p>
                             <!--<p class="mb-5 fs-2 text-white font-weight-bold" data-aos="zoom-in" data-aos-delay="100">filter by specialty<br></p>-->
-                            <p class="mb-5 fs-1 text-white" data-aos="zoom-in" data-aos-delay="100">learn definitions, history, photos,<br>references & weblinks</p>
+                            <p class="mb-5 fs-1 text-white" data-aos="zoom-in" data-aos-delay="100">find eponym definitions, history, photos,<br>references & weblinks</p>
                             <a href="https://lastgospyre.herokuapp.com/alphabet" class='btn btn-light' role='button'>reload</a>
                         </div>
                     </div>
@@ -289,7 +289,7 @@
             where:"Kraków - Poland", whereSearch:["Kraków, Poland", "Poland",],                   
             when:"1881",
             disease:["Spinal cord injury", "Paralysis",],
-            ops:["Abdominal aortic aneurysm repair",],
+            ops:["AAA repair","Aortic surgery",],
             geometry: {type: 'Point', coordinates: [ 19.93482 , 50.06114 ]}, //lng,lat
             properties: {title:'Artery of Adamkiewicz', description:'Kraków<br>1881'},
             refs:"",  
@@ -513,6 +513,7 @@
             about:"",//<br><br><br>", 
             URLs:"",//"<br><a href='#www.google.co.uk' class='btn btn-outline-primary' role='button'>original paper</a><br>", //wiki-YES/NO
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+    
         //},{ 
         //    type:'Feature',
         //    ID:112, 
@@ -525,7 +526,7 @@
         //    whereSearch:["",],       
         //    when:"",
         //    disease:[" "], 
-        //    ops:[" ",],  
+        //    ops:["",],  
         //    geometry: { type: 'Point', coordinates: [ , ]}, //lng,lat
         //    properties: { title:'replace_name', description:'replace_where<br>replace_when'},
         //    googlehtz: 0, //search: " " AND " " [02-Oct-21]
@@ -788,6 +789,7 @@
             where:"Dallas - Texas - USA", whereSearch:["Dallas, Texas, USA",],         
             when:"1968",
             disease:["Burns","Hypovolaemia","Shock",],
+            ops:["",],
             geometry: {type: 'Point', coordinates: [ -96.838889, 32.810278 ]},     //long,lat
             properties: {title:"Baxter - Parkland formula", description:'Dallas - Texas<br>1968'},   
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
@@ -834,7 +836,7 @@
             whereSearch:["Bristol, England", "England", "UK",],    
             when:"1967",
             disease:["Dyspepsia","GERD","GORD","Reflux",],   
-            ops:["Antireflux surgery","Endoscopy", "Fundoplication"],
+            ops:["Antireflux surgery","Endoscopy","Fundoplication"],
             geometry: {type: 'Point', coordinates: [ -2.527, 51.4969 ]},    //long,lat
             properties: {title:"Belsey mark IV", description:'Bristol - England<br>1967'}, 
             //googlehtz:0, //search: " " AND " " [02-Oct-21] 
@@ -856,7 +858,7 @@
             whereSearch:["London, England, UK",],    
             when:"1968",
             disease:["Aortic root disease", "Marfan's syndrome",],   
-            ops:["Aortic surgery", "Heart valve surgery",],   
+            ops:["Aortic surgery", "Cardiac valve surgery",],   
             geometry: {type: 'Point', coordinates: [ -0.2369, 51.5163 ]},    //long,lat
             properties: {title:"Bentall procedure", description:'London<br>1968'}, 
             //googlehtz:0, //search: "  " AND " " [02-Oct-21]
@@ -897,7 +899,7 @@
             where:"Manchester - England",   //whereSearch:["",],       
             when:"1980",  
             //disease:["",], 
-            //ops:[" ",],
+            //ops:["",],
             geometry: {type: 'Point', coordinates: [ -2.22455, 53.46042 ]},    //long,lat
             properties: {title:"Bianchi procedure", description:'Manchester<br>1980'}, 
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
@@ -917,7 +919,7 @@
             where:"Vienna - Austria", whereSearch:["Vienna, Austria",], 
             when:"1881",
             disease:["Peptic ulcer disease","Gastric cancer",],  
-            //ops:[" ",], 
+            //ops:["",], 
             geometry: {type: 'Point', coordinates: [ 16.359722, 48.213056 ]},    //long,lat
             properties: {title:"Billroth I procedure", description:'Vienna<br>1881'}, 
             //googlehtz:0, //search: " "  " " [02-Oct-21]
@@ -937,7 +939,7 @@
             where:"Vienna - Austria", whereSearch:["Vienna, Austria",], 
             when:"1885",
             disease:["Peptic ulcer disease","Gastric cancer",],  
-            //ops:["Gastrectomy","Endoscopy",], 
+            ops:["Gastrectomy","Endoscopy",], 
             geometry: {type: 'Point', coordinates: [ 16.359731, 48.213062 ]},    //long,lat
             properties: {title:"Billroth II procedure", description:'Vienna<br>1885'}, 
             //googlehtz:0, //search: " "  " " [02-Oct-21]
@@ -1019,7 +1021,7 @@
             where:"Manhattan - New York - USA", whereSearch:["Manhattan, New York, USA", "USA",],        
             when:"1998",
             disease:["Cholangiocarcinoma",],   
-            //ops:[" ",],
+            //ops:["",],
             geometry: {type: 'Point', coordinates: [ -73.95628, 40.76417 ]},  //lng,lat
             properties: {title:'lumgart staging system', description:'New York<br>1998'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -1039,7 +1041,7 @@
             where:"Prague - Czech Republic", whereSearch:["Prague, Czech Republic",],        
             when:"1848",
             disease:["Diaphragmatic hernia",],   
-            //ops:[" ",],
+            //ops:["",],
             geometry: {type: 'Point', coordinates: [ 14.42385, 50.08709 ]},    //long,lat
             properties: {title:"Bochdalek hernia", description:'Prague<br>1848'}, 
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -1080,7 +1082,7 @@
             where:"Pok Fu Lam - Hong Kong", // whereSearch:["Pok Fu Lam, Hong Kong",],              
             when:"1982", 
             disease:["Peptic ulcer disease",],  
-            //ops:["Repair perforated ulcer",],
+            ops:["Repair perforated ulcer",],
             geometry: {type: 'Point', coordinates: [ 114.13115, 22.27006 ]},    //long,lat
             properties: {title:"Boey score", description:'Hong Kong<br>1982'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -1100,6 +1102,7 @@
             where:"Paris - France", // whereSearch:[" ",],              
             when:"1823", 
             disease:["Groin hernia","Groin pain",],  
+            ops:["",],
             geometry: {type: 'Point', coordinates: [ 2.3409, 48.8513 ]},    //long,lat
             properties: {title:"Bogros' space", description:'Paris<br>1823'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -1139,7 +1142,7 @@
             where:"Lyon - France", //    whereSearch:["Lyon, France",],       
             when:"1896",
             disease:["Gastric outlet obstruction",],   
-            //ops:[" ",],
+            ops:["",],
             geometry: {type: 'Point', coordinates: [ 4.836389, 45.758333 ]},  //long,lat
             properties: {title:"Bouveret syndrome", description:'Lyon - France<br>1896'},
             //googlehtz: 0, //search: "  sign" AND " " [02-Oct-21] 
@@ -1494,7 +1497,7 @@
             where:"Paris - France", whereSearch:["Paris", "France",],              
             when:"1958", 
             disease:["Jaundice",],  
-            //ops:[" ",],
+            //ops:["",],
             geometry: {type: 'Point', coordinates: [ 2.3823, 48.848 ]}, //lng,lat
             properties: {title:"Carnett's sign", description:'Paris<br>1958'},
             lat:"48.848", long:"2.3823",   
@@ -1514,7 +1517,7 @@
             who:"Richard Cattell & John Braasch", whoSearch:["Richard Cattell", "John Braasch",],
             where:"Burlington - Massachusetts - USA",//    whereSearch:["",],              
             when:"1960",  
-            ops:["Pancreatic surgery","Duodenal surgery","Adrenalectomy","AAA repair",],
+            ops:["Pancreatic resection","Duodenal surgery","Adrenalectomy","AAA repair","Aortic surgery",],
             geometry: {type: 'Point', coordinates: [ -71.20531, 42.48493 ]},            //lng,lat
             properties: {title:'Cattel-Braasch maneouver', description:'Burlington - Massachusetts<br>1960'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -1848,7 +1851,6 @@
             about:"",//<br><br><br>",
             URLs:"<br><a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5743240/pdf/edinbmedsurgj71941-0046.pdf' target='_blank' class='btn btn-secondary' role='button'>original paper</a> <a href='https://en.wikipedia.org/wiki/Colles%27_fracture' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-       
         },{
             type:'Feature',
             ID:640, 
@@ -2699,6 +2701,8 @@
             who:"Matthias Egger",whoSearch:["Matthias Egger",],     
             where:"Bristol - England", whereSearch:["Bristol, England, UK",],             
             when:"1997",  
+            disease:["",], 
+            ops:["",],
             geometry: {type: 'Point', coordinates: [ -2.61054, 51.46479 ]}, //lng,lat
             properties: { title:"Egger's test", description:'Bristol - England<br>1997'},
             //lat:"", long:"",   
@@ -2766,7 +2770,7 @@
             whereSearch:["Heideberg", "Germany",],               
             when:"1874", 
             disease:["Palsy", "Paralysis",], 
-            //ops:[" ",],  
+            ops:["",],  
             geometry: {type: 'Point', coordinates: [ 8.67001, 49.41931 ]}, //lng,lat
             properties: { title:"Erb's palsy", description:'Heideberg - Germany<br>1964'},     
             //googlehtz:0, //search: " " AND "" [02-Oct-21]
@@ -2785,7 +2789,8 @@
             who:"Theodor Escherich", whoSearch:["Theodor Escherich",],    
             where:"Graz - Austria", whereSearch:["Graz, Austria", "Austria",],               
             when:"1886", 
-            disease:["Sepsis","Complications",],  
+            disease:["Sepsis","Complications",],
+            ops:["",],  
             geometry: {type: 'Point', coordinates: [ 15.44989, 47.07764 ]}, //lng,lat
             properties: { title:"Escherich coli", description:'Graz - Austria<br>1886'},
             //googlehtz:00, //search: "" AND "" [02-Oct-21]    
@@ -2952,8 +2957,8 @@
             who:"John Finney",    
             where:"Baltimore - Maryland - USA", whereSearch:["Baltimore, Maryland, USA",],
             when:"1902",   
-            //disease:["",],  
-            //ops:[" ",],
+            disease:["",],  
+            ops:["",],
             geometry: {type: 'Point', coordinates: [ -76.620278, 39.328889 ]}, //lng,lat
             properties: { title:"Finney pyloroplasty", description:'Baltimore - Maryland<br>1902'},
             //long:"", lat:"", 
@@ -2994,6 +2999,7 @@
             where:"London - England",  
             whereSearch:["London, England, UK", "England, UK", "UK"],      
             when:"1922",   
+            ops:["",],
             geometry: {type: 'Point', coordinates: [ -0.133583 , 51.524778 ]}, //lng,lat
             properties: { title:"Fisher's exact test", description:'London<br>1922'},
             //googlehtz:0, //search: "   " AND " " [02-Oct-21] 
@@ -3013,6 +3019,7 @@
             where:"Philadelphia - Pennsylvania - USA", whereSearch:["Philadelphia, Pennsylvania, USA",],
             when:"1934",   
             disease:["Pelvic inflammatory disease",],  
+            ops:["",],
             geometry: {type: 'Point', coordinates: [ -75.19284, 39.94832 ]}, //lng,lat
             properties: { title:"Fitz-Hugh-Curtis syndrome", description:'Philadelphia - Pennsylvania<br>1934'},
             //googlehtz:0, //search: " " [02-Oct-21]
@@ -3054,7 +3061,7 @@
             where:"St Paul - Minnesota - USA", whereSearch:["St. Paul, Minnesota, USA",],                   
             when:"1937",   
             disease:["Urinary retention", "Haematuria", "Renal failure",],
-            //ops:["TURP",],  
+            ops:["TURP",],  
             geometry: {type: 'Point', coordinates: [ -93.094251, 44.956194 ]}, //lng,lat
             properties: { title:"Foley catheter", description:'St Paul - Minnesota<br>1937'},
             //googlehtz:0, //search: "  sign" AND " " [02-Oct-21]
@@ -3140,7 +3147,7 @@
             disease:["Acute pancreatitis",],  
             geometry: {type: 'Point', coordinates: [ -0.18133, 51.48394 ]}, //long,lat
             properties: { title:"Fox's sign", description:'London<br>1966'},   
-            //ops:[" ",],
+            ops:["",],
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"<br>Fox JA. A diagnostic sign of extraperitoneal haemorrhage. <i>Br J Surg</i>. 1966; 53(3): 193-195<br>",   
             jrnls:["Br J Surg",],
@@ -3160,7 +3167,7 @@
             whereSearch:["New York", "USA",],                  
             when:"1959",  
             //disease:["",],   
-            ops:["Pancreas resection",],
+            ops:["Pancreatic resection",],
             geometry: {type: 'Point', coordinates: [ -73.942823 , 40.842159 ]}, //long,lat
             properties: { title:"Frantz tumour", description:'New York<br>1959'}, 
             //googlehtz:0, //search: " " AND " " [02-Oct-21] 
@@ -4976,7 +4983,7 @@
             where:"Paris - France", whereSearch:["Paris", "France",],              
             when:"1896",  
             disease:["Aortic root disease",],  
-            ops:["Aortic surgery", "Cardiac valve replacement",],
+            ops:["Aortic surgery", "Cardiac valve surgery",],
             geometry: { type: 'Point', coordinates: [ 2.343333, 48.848611 ]}, //long,lat
             properties: { title:"Marfan syndrome", description:'Paris<br>1896'},
             //lat:"48.848611", long:"2.343333", 
@@ -5450,7 +5457,7 @@
             where:"Leiden - Netherlands", //whereSearch:["  ",],                 
             when:"1691",   
             //disease:["",],
-            ops:["Inguinal hernia repair - Open",],
+            ops:["Inguinal hernia repair",],
             geometry: { type: 'Point', coordinates: [ 4.489242, 52.161381 ]}, //long,lat
             properties: { title:"Canal of Nuck", description:'Leiden - Netherlands<br>1691'}, 
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -6801,7 +6808,7 @@
             where:"Bologna - Italy",  whereSearch:["Bologna, Italy", "Italy"],               
             when:"1740", 
             //disease:["",],   
-            ops:["Heart valve surgery",], 
+            ops:["Cardiac valve surgery",], 
             geometry: { type: 'Point', coordinates: [ 11.3452, 44.49165 ]}, //long,lat
             properties: { title:"Sinus of Valsalva", description:'Bologna - Italy<br>1740'},
             //googlehtz: 0, //search: "  " AND "  " [02-Oct-21]

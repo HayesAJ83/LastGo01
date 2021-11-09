@@ -216,7 +216,6 @@
         <script src="https://d3js.org/d3.v4.js"></script>
 
 
-  
 
 
         <script>
@@ -256,7 +255,7 @@
             where:"Kraków - Poland", whereSearch:["Kraków, Poland", "Poland",],                   
             when:"1881",
             disease:["Spinal cord injury", "Paralysis",],
-            ops:["Abdominal aortic aneurysm repair",],
+            ops:["AAA repair","Aortic surgery",],
             geometry: {type: 'Point', coordinates: [ 19.93482 , 50.06114 ]}, //lng,lat
             properties: {title:'Artery of Adamkiewicz', description:'Kraków<br>1881'},
             refs:"",  
@@ -823,7 +822,7 @@
             whereSearch:["London, England, UK",],    
             when:"1968",
             disease:["Aortic root disease", "Marfan's syndrome",],   
-            ops:["Aortic surgery", "Heart valve surgery",],   
+            ops:["Aortic surgery", "Cardiac valve surgery",],   
             geometry: {type: 'Point', coordinates: [ -0.2369, 51.5163 ]},    //long,lat
             properties: {title:"Bentall procedure", description:'London<br>1968'}, 
             //googlehtz:0, //search: "  " AND " " [02-Oct-21]
@@ -1481,7 +1480,7 @@
             who:"Richard Cattell & John Braasch", whoSearch:["Richard Cattell", "John Braasch",],
             where:"Burlington - Massachusetts - USA",//    whereSearch:["",],              
             when:"1960",  
-            ops:["Pancreatic surgery","Duodenal surgery","Adrenalectomy","AAA repair",],
+            ops:["Pancreatic resection","Duodenal surgery","Adrenalectomy","AAA repair","Aortic surgery",],
             geometry: {type: 'Point', coordinates: [ -71.20531, 42.48493 ]},            //lng,lat
             properties: {title:'Cattel-Braasch maneouver', description:'Burlington - Massachusetts<br>1960'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -3127,7 +3126,7 @@
             whereSearch:["New York", "USA",],                  
             when:"1959",  
             //disease:["",],   
-            ops:["Pancreas resection",],
+            ops:["Pancreatic resection",],
             geometry: {type: 'Point', coordinates: [ -73.942823 , 40.842159 ]}, //long,lat
             properties: { title:"Frantz tumour", description:'New York<br>1959'}, 
             //googlehtz:0, //search: " " AND " " [02-Oct-21] 
@@ -4943,7 +4942,7 @@
             where:"Paris - France", whereSearch:["Paris", "France",],              
             when:"1896",  
             disease:["Aortic root disease",],  
-            ops:["Aortic surgery", "Cardiac valve replacement",],
+            ops:["Aortic surgery", "Cardiac valve surgery",],
             geometry: { type: 'Point', coordinates: [ 2.343333, 48.848611 ]}, //long,lat
             properties: { title:"Marfan syndrome", description:'Paris<br>1896'},
             //lat:"48.848611", long:"2.343333", 
@@ -5417,7 +5416,7 @@
             where:"Leiden - Netherlands", //whereSearch:["  ",],                 
             when:"1691",   
             //disease:["",],
-            ops:["Inguinal hernia repair - Open",],
+            ops:["Inguinal hernia repair",],
             geometry: { type: 'Point', coordinates: [ 4.489242, 52.161381 ]}, //long,lat
             properties: { title:"Canal of Nuck", description:'Leiden - Netherlands<br>1691'}, 
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -6768,7 +6767,7 @@
             where:"Bologna - Italy",  whereSearch:["Bologna, Italy", "Italy"],               
             when:"1740", 
             //disease:["",],   
-            ops:["Heart valve surgery",], 
+            ops:["Cardiac valve surgery",], 
             geometry: { type: 'Point', coordinates: [ 11.3452, 44.49165 ]}, //long,lat
             properties: { title:"Sinus of Valsalva", description:'Bologna - Italy<br>1740'},
             //googlehtz: 0, //search: "  " AND "  " [02-Oct-21]
@@ -7365,6 +7364,7 @@
             let result1 = eponyms.features
                 .flatMap(item => item.disease)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no diseases
                 let resultsort1 = result1.sort()
                 var select = document.getElementById("select1");
                 var options = resultsort1;
