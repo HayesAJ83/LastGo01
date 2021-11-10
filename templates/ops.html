@@ -117,7 +117,35 @@
             <!-- End of Section -->
 
             <!-- Section -->
-            <section id="section-2">
+            <section id="section-2" class="pt-7 pb-0 bg-blue-light">
+                <div class="container" style="height:215px">
+                    <div class="row align-items-center text-center">
+                        <div class="col" data-aos="flip-down">
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Specialties</h1>
+                            <button type="button" class="btn btn-primary active" id="btn_all">All</button>
+                            <button type="button" class="btn btn-light" id="btn_select">Select</button>
+                        </div>
+                    </div>
+                    <hr style="height:1px; visibility:hidden">
+                    <form method="POST">
+                        <div class="row align-items-center text-center">
+                            <div class="col" data-aos="zoom-in" id="selector" style="display:none">
+                                <select id="select1" class="selectpicker data-style="btn-white""
+                                    name="min_multi_select" 
+                                    multiple title=" -- specialties -- " 
+                                    data-width="320px"
+                                    multiple data-actions-box="true"
+                                    data-size="6"
+                                    data-container="body"
+                                    multiple data-selected-text-format="count > 3"
+                                    data-style="btn-primary">
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            <section id="section-20">
                 <div class="container" style="height:215px">
                     <div class="row align-items-center text-center">
                         <div class="col">
@@ -128,7 +156,7 @@
                     <form method="POST">
                         <div class="row align-items-center text-center">
                             <div class="col" id="selector">
-                                <select id="select1" class="selectpicker show-tick"
+                                <select id="select100" class="selectpicker show-tick"
                                     name="min_multi_select" 
                                     data-style="btn-danger" data-header="Search list:"
                                     data-width="340px" data-size="6"
@@ -143,7 +171,7 @@
                     <div class="row align-items-center text-center">
                         <div class="col" data-aos="zoom-in" id="select4" style="display:none"> <!--works-->
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
-                            <select id="SEL2" class="selectpicker show-tick"
+                            <select id="SEL20" class="selectpicker show-tick"
                                     data-style="btn-primary" data-header="Search list:" 
                                     data-width="340px" data-size="6"
                                     data-container="body"
@@ -7492,13 +7520,13 @@
         <script>
             $(document)
             .ready(function() {
-            let result1 = eponyms.features
+            let result2 = eponyms.features
                 .flatMap(item => item.ops)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no operation
-                let resultsort1 = result1.sort()
-                var select = document.getElementById("select1");
-                var options = resultsort1;
+                let resultsort2 = result2.sort()
+                var select = document.getElementById("select100");
+                var options = resultsort2;
                 for(var i = 0; i < options.length; i++) {
                     var opt = options[i];
                     var el = document.createElement("option");
@@ -7513,8 +7541,8 @@
             ///  DEFAULT_PAGE_1  ///
             $(document)
             .ready(function() {
-                $('#select1').ready(function() {
-                    let value = '\'' + $('#select1 option').map(function() {
+                $('#select100').ready(function() {
+                    let value = '\'' + $('#select100 option').map(function() {
                             return this.text}).get().join('\',\'') + '\'';
                     var stringArray = (new Function("return [" + value+ "];")());
                 });
@@ -7534,52 +7562,52 @@
                 $('#select3').fadeOut(400);
                 
                 let select = "";
-                $("#select1").find('option:selected').each(function() {
+                $("#select100").find('option:selected').each(function() {
                 select += "\'" + $.trim($(this).text()) + "\',";
                 });
                 if (select != "") {
                     select = select.substr(0);
                 }
                 var stringArray = (new Function( "return [" + select + "];")());
-                function topicFilter2(taxonomy) {
+                function topicFilter20(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return eponyms.features.filter(item => {
                     let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
                     return taxonomy.some(med => ops.includes(med));
                     });
                     }
-                var select2 = topicFilter2(stringArray);
+                var select20 = topicFilter20(stringArray);
 
-                if (!select2.length) {var push = "";} 
+                if (!select20.length) {var push = "";} 
                 else {
-                    var push = select2.reduce((options, {ID,name}) =>
+                    var push = select20.reduce((options, {ID,name}) =>
                         options += `<option value="${ID}">${name}</option>`);
                         }
                 
                 function populateSelect() {
-                    if (!select2.length) {var push = "";}
+                    if (!select20.length) {var push = "";}
                     else {
-                        var push = select2.reduce((options, {ID,name}) =>
+                        var push = select20.reduce((options, {ID,name}) =>
                             options += `<option value="${ID}">${name}</option>`);
                             }}
                 
                 populateSelect()
-                $( '#SEL2' ).html(push);
+                $( '#SEL20' ).html(push);
                 show()
                         }).trigger("change")
                 });
         </script>
 
         <script>  ///  SELECTED_SPECIALTIES_2  ///
-            $('#select1').on('change', function() {
+            $('#select100').on('change', function() {
                 let select ="";
-                $("#select1").find('option:selected').each(function() {
+                $("#select100").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
                     if(select != ""){select = select.substr(0);};
                 var stringArray = (new Function("return [" + select+ "];")());
                 console.log(stringArray); //works Array [chosen options]
                 
-                function topicFilter2(taxonomy) {
+                function topicFilter20(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return eponyms.features.filter(item => {
                         let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
@@ -7587,11 +7615,11 @@
                         });
                     }
                 
-                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-                console.log(selected2)
+                var selected20 = topicFilter20(stringArray); //works for stringArray no brackets
+                console.log(selected20)
 
-                function populateSelect2() {
-                    document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
+                function populateSelect20() {
+                    document.getElementById('SEL20').innerHTML = selected20.reduce((options, {ID,name}) =>
                         options += `<option value="${ID}">${name}</option>`,
                         '<option value=""> -- select -- </option>'
                         );
@@ -7599,23 +7627,23 @@
             
                 populateSelect2()
                 
-                $('#select4').fadeIn(500);
-                $('#SEL2').selectpicker('refresh');
-                $('#select1').on('change', function() {
-                    $('#select1').selectpicker('toggle'); //added to toggle open/close
-                    $('#SEL2').selectpicker('refresh');
+                $('#select40').fadeIn(500);
+                $('#SEL20').selectpicker('refresh');
+                $('#select100').on('change', function() {
+                    $('#select100').selectpicker('toggle'); //added to toggle open/close
+                    $('#SEL20').selectpicker('refresh');
                     });
             });
                 
            
-            $('#SEL2').change(function() {
+            $('#SEL20').change(function() {
                 let select ="";
-                $("#select1").find('option:selected').each(function() {
+                $("#select100").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
                     if(select != ""){select = select.substr(0);};
                 var stringArray = (new Function("return [" + select+ "];")());
                 
-                function topicFilter2(taxonomy) {
+                function topicFilter20(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return eponyms.features.filter(item => {
                         let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
@@ -7623,7 +7651,7 @@
                         });
                     }
                     
-                var selected2 = topicFilter2(stringArray);
+                var selected2 = topicFilter20(stringArray);
                 console.log(selected2)
                 function show(id) {
                     var msg = document.getElementById('msg');
@@ -7639,14 +7667,14 @@
                 }).trigger("change")
 
 
-            $('#select4').change(function() {
+            $('#select40').change(function() {
                 let select ="";
-                $("#select1").find('option:selected').each(function() {
+                $("#select100").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
                     if(select != ""){select = select.substr(0);};
                 var stringArray = (new Function("return [" + select+ "];")());
                 
-                function topicFilter2(taxonomy) {
+                function topicFilter20(taxonomy) {
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return eponyms.features.filter(item => {
                         let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
@@ -7654,8 +7682,8 @@
                         });
                     }
                     
-                var selected2 = topicFilter2(stringArray);
-                console.log(selected2)
+                var selected20 = topicFilter20(stringArray);
+                console.log(selected20)
                 
                 }).trigger("change")
             
