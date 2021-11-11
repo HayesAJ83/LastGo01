@@ -148,14 +148,14 @@
                 <div class="container" style="height:215px">
                     <div class="row align-items-center text-center">
                         <div class="col">
-                            <h1 class="text-black mb-2 fs-1" style="height:30px">Operations_1</h1>
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Operations</h1>
                         </div>
                     </div>
                     <!--<hr style="height:1px; visibility:hidden">-->
                     <form method="POST">
                         <div class="row align-items-center text-center">
                             <div class="col" id="selector">
-                                <select id="select100" class="selectpicker show-tick"
+                                <select id="select10" class="selectpicker show-tick"
                                     name="min_multi_select" 
                                     data-style="btn-primary" data-header="Search list:"
                                     data-width="320px" data-size="6"
@@ -7518,17 +7518,35 @@
     console.log()
         });
 
-    ///  DEFAULT_PAGE_1  ///
+
+    $(document)
+    .ready(function() {
+        let result_ops = eponyms.features
+            .flatMap(item => item.ops)
+            .filter((item, i, arr) => arr.indexOf(item) === i)
+            .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no operation
+            let ops_sort = result_ops.sort()
+            var select = document.getElementById("select10");
+            var options = ops_sort;
+            for(var i = 0; i < options.length; i++) {
+                var opt = options[i];
+                var el = document.createElement("option");
+                el.textContent = opt;
+                el.value = opt;
+                select.appendChild(el);
+	                }
+            console.log()
+                });
+
     $(document)
     .ready(function() {
         $('#select1').ready(function() {
             let value = '\'' + $('#select1 option').map(function() {
                     return this.text}).get().join('\',\'') + '\'';
-            var stringArray = (new Function("return [" + value+ "];")());
+            var stringArray = (new Function("return [" + value + "];")());
         });
     });
 
-    ///  DEFAULT_PAGE_2  ///
     var selected = eponyms.features
     function populateSelect() {
         var ele = document.getElementById('sel');
@@ -7542,7 +7560,7 @@
     $("#select1").find('option:selected').each(function() {
             select += "\'" + $.trim($(this).text()) + "\',";});
             if(select != ""){select = select.substr(0);};
-        var stringArray = (new Function("return [" + select+ "];")());
+        var stringArray = (new Function("return [" + select + "];")());
         
     function topicFilter2(taxonomy) {
         taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
@@ -7740,10 +7758,10 @@
             ///  DEFAULT_PAGE_1  ///
         //    $(document)
         //    .ready(function() {
-        //        $('#select100').ready(function() {
-        //            let value = '\'' + $('#select100 option').map(function() {
+        //        $('#select1').ready(function() {
+        //            let value = '\'' + $('#select1 option').map(function() {
         //                    return this.text}).get().join('\',\'') + '\'';
-        //            var stringArray = (new Function("return [" + value+ "];")());
+        //            var stringArray = (new Function("return [" + value + "];")());
         //        });
         //    });
 
