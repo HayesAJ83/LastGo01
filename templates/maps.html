@@ -9015,7 +9015,7 @@
           
             const bounds = [
                 [-170, -64], //southwest coord
-                [178, 86]  //northeast coord
+                [179.5, 85]  //northeast coord
             ]
 
 
@@ -9037,9 +9037,9 @@
                     })
             );
         
-            map.addControl(new mapboxgl.NavigationControl());
             map.addControl(new mapboxgl.FullscreenControl());
-        
+            map.addControl(new mapboxgl.NavigationControl());
+           
             map.on('load', () => {
                 // set the 'cluster' option to true. GL-JS will
                 // add the point_count property to your source data.
