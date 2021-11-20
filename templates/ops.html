@@ -117,7 +117,77 @@
             <!-- End of Section -->
 
             <!-- Section -->
-            <!-- Section -->
+            <section id="section-2" class="pt-7 pb-0 bg-blue-light">
+                <div class="container" style="height:215px">
+                    <div class="row align-items-center text-center">
+                        <div class="col" data-aos="flip-down">
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Specialties</h1>
+                            <button type="button" class="btn btn-primary active" id="btn_all">All</button>
+                            <button type="button" class="btn btn-light" id="btn_select">Select</button>
+                        </div>
+                    </div>
+                    <hr style="height:1px; visibility:hidden">
+                    <form method="POST">
+                        <div class="row align-items-center text-center">
+                            <div class="col" data-aos="zoom-in" id="selector" style="display:none">
+                                <select id="select1" class="selectpicker data-style="btn-white""
+                                    name="min_multi_select" 
+                                    multiple title=" -- specialties -- " 
+                                    data-width="325px"
+                                    multiple data-actions-box="true"
+                                    data-size="6"
+                                    data-container="body"
+                                    multiple data-selected-text-format="count > 3"
+                                    data-style="btn-primary">
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col" data-aos="fade-up" id="select3">
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
+                            <select id="sel" class="selectpicker show-tick"
+                                    data-style="btn-primary" data-header="Search list:" 
+                                    data-width="325px" data-size="6"
+                                    data-aos="zoom-in"
+                                    data-container="body"
+                                    data-live-search="true" onchange="show(this.value);">
+                                    <option value=""> -- select -- </option>
+                            </select>
+                            <div class="lead" id='imgName'></div>
+                            <p class="lead" id="info"></p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col" data-aos="zoom-in" id="select4" style="display:none"> <!--works-->
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
+                            <select id="SEL2" class="selectpicker show-tick"
+                                    data-style="btn-primary" data-header="Search list:" 
+                                    data-width="325px" data-size="6"
+                                    data-container="body"
+                                    data-live-search="true" onchange="show2(this.value);">
+                                    <option value=""> -- select -- </option>
+                            </select>
+                            <div class="lead" id='imgName2'></div>
+                            <p class="lead" id="msg2"></p>
+                            <p class="lead" id="msg3"></p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+            </section>
+            <!-- End of Section -->
+            
+            <!-- Section
             <section id="section-2" class="pt-7 pb-0 bg-blue-light">
                 <div class="container" style="height:215px">
                     <div class="row align-items-center text-center">
@@ -151,7 +221,7 @@
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Operations</h1>
                         </div>
                     </div>
-                    <!--<hr style="height:1px; visibility:hidden">-->
+                    <!--<hr style="height:1px; visibility:hidden">
                     <form method="POST">
                         <div class="row align-items-center text-center">
                             <div class="col" id="selector">
@@ -187,7 +257,7 @@
                 </div>
                 <div class="container">
                     <div class="row align-items-center text-center">
-                        <div class="col" data-aos="zoom-in" id="select4" style="display:none"> <!--works-->
+                        <div class="col" data-aos="zoom-in" id="select4" style="display:none">
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                             <select id="SEL2" class="selectpicker show-tick"
                                     data-style="btn-primary" data-header="Search list:" 
@@ -207,7 +277,7 @@
                 <br>
                 <br>
             </section>
-            <!-- End of Section -->
+            <!-- End of Section 
 
 
   
@@ -243,7 +313,7 @@
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Operations</h1>
                         </div>
                     </div>
-                    <!--<hr style="height:1px; visibility:hidden">-->
+                    <!--<hr style="height:1px; visibility:hidden">
                     <form method="POST">
                         <div class="row align-items-center text-center">
                             <div class="col" id="selector">
@@ -260,7 +330,7 @@
                 </div>
                 <div class="container">
                     <div class="row align-items-center text-center">
-                        <div class="col" data-aos="zoom-in" id="select4" style="display:none"> <!--works-->
+                        <div class="col" data-aos="zoom-in" id="select4" style="display:none"> <!--works
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                             <select id="SEL20" class="selectpicker show-tick"
                                     data-style="btn-primary" data-header="Search list:" 
