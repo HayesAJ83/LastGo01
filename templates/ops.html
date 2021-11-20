@@ -9172,14 +9172,14 @@
     console.log()   /// This gives us array with all features
         });
 
-    //$(document)
-    //.ready(function() {
-    //    $('#select1').ready(function() {
-    //        let value = '\'' + $('#select1 option').map(function() {
-    //                return this.text}).get().join('\',\'') + '\'';
-    //        var stringArray = (new Function("return [" + value + "];")());
-    //    });
-    //});   /// Generates select1 [specialties] options
+    $(document)
+    .ready(function() {
+        $('#select1').ready(function() {
+            let value = '\'' + $('#select1 option').map(function() {
+                    return this.text}).get().join('\',\'') + '\'';
+            var stringArray = (new Function("return [" + value + "];")());
+        });
+    });   /// Generates select1 [specialties] options
 
     //var selected = eponyms.features
     //function populateSelect() {
@@ -9205,7 +9205,7 @@
         }
             
     var selected2 = topicFilter2(stringArray); 
-    console.log(selected2)
+    console.log(selected2) //gives array of specialties eg. [ "Anaesthetics", "Trauma" ]
 
 
 ///  SELECTED_SPECIALTIES_1  ///
