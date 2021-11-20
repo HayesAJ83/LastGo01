@@ -9154,30 +9154,10 @@
 
 
 <script>
-    //$(document)
-    //.ready(function() {
-    //let result1 = eponyms.features
-    //    .flatMap(item => item.topic)
-    //    .filter((item, i, arr) => arr.indexOf(item) === i)
-    //    let resultsort1 = result1.sort()
-    //    var select = document.getElementById("select1");
-    //    var options = resultsort1;
-    //    for(var i = 0; i < options.length; i++) {
-    //        var opt = options[i];
-    //        var el = document.createElement("option");
-    //        el.textContent = opt;
-    //        el.value = opt;
-    //        select.appendChild(el);
-    //        }
-    //console.log()   /// This gives us array with all features
-    //    });
-
-
-
     $(document)
     .ready(function() {
     let result1 = eponyms.features
-        .flatMap(item => item.subtype)
+        .flatMap(item => item.topic) //.topic gives us specialties
         .filter((item, i, arr) => arr.indexOf(item) === i)
         .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
         let resultsort1 = result1.sort()
@@ -9190,8 +9170,29 @@
             el.value = opt;
             select.appendChild(el);
             }
-    console.log()
-        });
+    console.log()   /// This gives us array with all features
+    });
+
+
+
+    //$(document)
+    //.ready(function() {
+    //let result1 = eponyms.features
+    //    .flatMap(item => item.subtype)
+    //    .filter((item, i, arr) => arr.indexOf(item) === i)
+    //    .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
+    //    let resultsort1 = result1.sort()
+    //    var select = document.getElementById("select1");
+    //    var options = resultsort1;
+    //    for(var i = 0; i < options.length; i++) {
+    //        var opt = options[i];
+    //        var el = document.createElement("option");
+    //        el.textContent = opt;
+    //        el.value = opt;
+    //        select.appendChild(el);
+    //        }
+    //console.log()
+    //    });
 
     $(document)
     .ready(function() {
