@@ -9297,6 +9297,44 @@
         });
 </script>
 
+<script>
+    $('#sel').on('change', function() {
+        let select ="";
+        $("#sel").find('option:selected').each(function() {
+            select += "\'" + $.trim($(this).text()) + "\',";});
+            if(select != ""){select = select.substr(0);};
+        var stringArray = (new Function("return [" + select+ "];")());
+        console.log(stringArray); //works Array [chosen options]
+        
+        function topicFilter2(taxonomy) {
+            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+            return eponyms.features.filter(item => {
+                let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                return taxonomy.some(med => topic.includes(med));
+                });
+            }
+        
+        var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+        //console.log(selected2)
+
+        function populateSelect2() {
+            document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
+                options += `<option value="${ID}">${name}</option>`,
+                '<option value=""> -- select_sel9 -- </option>'
+                );
+            }
+    
+        populateSelect2()
+        
+        $('#sel9').selectpicker('refresh');
+        $('#sel').on('change', function() {
+            $('#sel').selectpicker('toggle'); //added to toggle open/close
+            $('#sel9').selectpicker('refresh');
+            });
+    });
+
+
+</script>
 
 
 <script>  ///  SELECTED_SPECIALTIES_2  ///
