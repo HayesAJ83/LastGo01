@@ -9176,10 +9176,9 @@
     $(document)
     .ready(function() {
 
-    var returnedData = $.grep(eponyms.features, function(element, index) {
-        return (element.ops !== "");
-    });  /// DROP ANY WITHOUT OPERATIONS
-    console.log()
+    const returnedData = $.grep(eponyms.features, function(element, index) {
+        return (element.ops !== "" || element.ops === undefined);});  /// DROP ANY WITHOUT OPERATIONS
+
     let result1 = returnedData //eponyms.features
         .flatMap(item => item.topic) //"item.topic" gives us specialties
         .filter((item, i, arr) => arr.indexOf(item) === i)
