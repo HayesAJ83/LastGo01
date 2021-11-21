@@ -171,11 +171,12 @@
                                     data-width="325px" data-size="6"
                                     data-aos="zoom-in"
                                     data-container="body"
-                                    data-live-search="true";">
+                                    data-live-search="true" onchange="show2(this.value);">
                                     <option value=""> -- select_sel9 -- </option>
                             </select>
-                            <p></p>
-                            <p></p>
+                            <div class="lead" id='imgName2'></div>
+                            <p class="lead" id="msg2"></p>
+                            <p class="lead" id="msg3"></p>
                         </div>
                     </div>
                 </form>
@@ -9297,7 +9298,7 @@
         });
 </script>
 
-<script>
+<script> /// ALL - specialties
     $('#sel').on('change', function() {
         let select ="";
         $("#sel").find('option:selected').each(function() {
@@ -9320,7 +9321,6 @@
         function populateSelect2() {
             document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
                 options += `<option value="${ID}">${name}</option>`,
-                '<option value=""> -- select_sel9 -- </option>'
                 );
             }
     
