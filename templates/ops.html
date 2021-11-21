@@ -174,9 +174,6 @@
                                     data-live-search="true" onchange="show2(this.value);">
                                     <option value=""> -- select_sel9 -- </option>
                             </select>
-                            <div class="lead" id='imgName2'></div>
-                            <p class="lead" id="msg2"></p>
-                            <p class="lead" id="msg3"></p>
                         </div>
                     </div>
                 </form>
@@ -191,13 +188,13 @@
                                     data-live-search="true" onchange="show2(this.value);">
                                     <option value=""> -- select_SEL2 -- </option>
                             </select>
-                            <div class="lead" id='imgName2'></div>
-                            <p class="lead" id="msg2"></p>
-                            <p class="lead" id="msg3"></p>
                             <br>
                         </div>
                     </div>
                 </div>
+                <div class="lead" id='imgName2'></div>
+                <p class="lead" id="msg2"></p>
+                <p class="lead" id="msg3"></p>
                 <br>
                 <br>
                 <br>
@@ -9187,7 +9184,7 @@
             el.value = opt;
             select.appendChild(el);
             }
-    console.log()   /// This gives us array with all features - when select1 is changed
+    //console.log()   /// This gives us array with all features - when select1 is changed
     });
 
 
@@ -9242,7 +9239,7 @@
         }
             
     var selected2 = topicFilter2(stringArray); 
-    console.log(selected2) //gives array of specialties eg. [ "Anaesthetics", "Trauma" ]
+    console.log(selected2) //gives array of selected specialties eg. [ "Anaesthetics", "Trauma" ]
 
 
 
@@ -9250,7 +9247,7 @@
 
 
 
-///  SELECTED_SPECIALTIES_1  ///
+///  SELECTED_SPECIALTIES  ///
     $(document)
     .ready(function() {
     $('#btn_select').on('click', function() {
