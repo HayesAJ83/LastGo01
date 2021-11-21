@@ -9179,7 +9179,7 @@
     const returnedData = $.grep(eponyms.features, function(element, index) {
         return (element.ops !== "" || element.ops === undefined);});  /// DROP those WITHOUT OPERATIONS
 
-    let result1 = returnedData() //eponyms.features
+    let result1 = returnedData //eponyms.features
         .flatMap(item => item.topic) //"item.topic" gives us specialties
         .filter((item, i, arr) => arr.indexOf(item) === i)
         .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
