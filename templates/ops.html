@@ -181,7 +181,7 @@
                 <hr style="height:1px; visibility:hidden">
                 <form method="POST">
                     <div class="row align-items-center text-center">
-                        <div class="col" data-aos="fade-up" id="select3">
+                        <div class="col" data-aos="fade-up" id="select3" style="display:none"> <!--works-->
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                             <select id="sel9" class="selectpicker show-tick"
                                     data-style="btn-primary" data-header="Search list:" 
@@ -9326,6 +9326,7 @@
 
 <script> /// ALL - specialties
     $('#sel').on('change', function() {
+        $('#sel9').fadeIn(50);
         let select ="";
         $("#sel").find('option:selected').each(function() {
             select += "\'" + $.trim($(this).text()) + "\',";});
