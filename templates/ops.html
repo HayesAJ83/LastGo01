@@ -9309,13 +9309,13 @@
         function topicFilter2(taxonomy) {
             taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
             return eponyms.features.filter(item => {
-                let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                return taxonomy.some(med => topic.includes(med));
+                let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
+                return taxonomy.some(med => ops.includes(med));
                 });
             }
         
         var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-        //console.log(selected2)
+        console.log(selected2)
 
         function populateSelect2() {
             document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
