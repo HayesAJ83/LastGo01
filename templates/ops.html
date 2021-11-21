@@ -189,7 +189,7 @@
                                     data-aos="zoom-in"
                                     data-container="body"
                                     data-live-search="true" onchange="show2(this.value);">
-                                    <option value=""> -- select_sel9 -- </option>
+                                    <option value=""> -- select an operation from above -- </option>
                             </select>
                         </div>
                     </div>
@@ -9177,9 +9177,9 @@
     .ready(function() {
 
     const returnedData = $.grep(eponyms.features, function(element, index) {
-        return (element.ops !== "" || element.ops === undefined);});  /// DROP ANY WITHOUT OPERATIONS
+        return (element.ops !== "" || element.ops === undefined);});  /// DROP those WITHOUT OPERATIONS
 
-    let result1 = returnedData //eponyms.features
+    let result1 = returnedData() //eponyms.features
         .flatMap(item => item.topic) //"item.topic" gives us specialties
         .filter((item, i, arr) => arr.indexOf(item) === i)
         .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
