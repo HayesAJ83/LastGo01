@@ -9174,24 +9174,24 @@
 
 
 
-    //$(document)
-    //.ready(function() {
-    //let result1 = eponyms.features
-    //    .flatMap(item => item.subtype)
-    //    .filter((item, i, arr) => arr.indexOf(item) === i)
-    //    .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
-    //    let resultsort1 = result1.sort()
-    //    var select = document.getElementById("select1");
-    //    var options = resultsort1;
-    //    for(var i = 0; i < options.length; i++) {
-    //        var opt = options[i];
-    //        var el = document.createElement("option");
-    //        el.textContent = opt;
-    //        el.value = opt;
-    //        select.appendChild(el);
-    //        }
-    //console.log()
-    //    });
+    $(document)
+    .ready(function() {
+    let result1 = eponyms.features
+        .flatMap(item => item.ops)
+        .filter((item, i, arr) => arr.indexOf(item) === i)
+        .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
+        let resultOps = result1.sort()
+        var selectOps = document.getElementById("sel");
+        var optionS = resultOps;
+        for(var i = 0; i < optionS.length; i++) {
+            var opt1 = optionS[i];
+            var el1 = document.createElement("option");
+            el1.textContent = opt1;
+            el1.value = opt1;
+            selectOps.appendChild(el1);
+            }
+    console.log()
+        });
 
     $(document)
     .ready(function() {
