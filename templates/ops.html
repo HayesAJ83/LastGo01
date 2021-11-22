@@ -727,7 +727,7 @@
             where:"Bologna - Italy", whereSearch:["Bologna", "Italy",],                   
             when:"1579",
             //disease:["",], 
-            //ops:["",],  
+            ops:"",//["",],  
             geometry: {type: 'Point', coordinates: [ 11.35444, 44.49609 ]},   //lng,lat
             properties: {title:'Nodules of Aranzio', description:'Bologna - Italy<br>1579'}, 
             //googlehtz:0, //search: "Nodules of Aranio" [02-Oct-21]
@@ -812,7 +812,7 @@
             where:"London - England", whereSearch:["",],           
             when:"1877",   
             //disease:["",],
-            //ops:["",],
+            ops:"",//["",],
             geometry: {type: 'Point', coordinates: [ -0.1001, 51.5175 ]}, //lng,lat
             properties: { title:"Baker's cyst", description:'London<br>1877'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -1167,7 +1167,7 @@
             where:"Manchester - England",   //whereSearch:["",],       
             when:"1980",  
             //disease:["",], 
-            //ops:[" ",],
+            ops:"",//[" ",],
             geometry: {type: 'Point', coordinates: [ -2.22455, 53.46042 ]},    //long,lat
             properties: {title:"Bianchi procedure", description:'Manchester<br>1980'}, 
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
@@ -1207,7 +1207,7 @@
             where:"Vienna - Austria", whereSearch:["Vienna, Austria",], 
             when:"1881",
             disease:["Peptic ulcer disease","Gastric cancer",],  
-            //ops:[" ",], 
+            ops:["Gastrectomy","Endoscopy",], 
             geometry: {type: 'Point', coordinates: [ 16.359722, 48.213056 ]},    //long,lat
             properties: {title:"Billroth I procedure", description:'Vienna<br>1881'}, 
             //googlehtz:0, //search: " "  " " [02-Oct-21]
@@ -1227,7 +1227,7 @@
             where:"Vienna - Austria", whereSearch:["Vienna, Austria",], 
             when:"1885",
             disease:["Peptic ulcer disease","Gastric cancer",],  
-            //ops:["Gastrectomy","Endoscopy",], 
+            ops:["Gastrectomy","Endoscopy",], 
             geometry: {type: 'Point', coordinates: [ 16.359731, 48.213062 ]},    //long,lat
             properties: {title:"Billroth II procedure", description:'Vienna<br>1885'}, 
             //googlehtz:0, //search: " "  " " [02-Oct-21]
@@ -1247,7 +1247,7 @@
             where:"Paris - France", //    whereSearch:["",],         
             when:"1975", 
             //disease:["",], 
-            //ops:["",], 
+            ops:["Hepatectomy",], 
             geometry: {type: 'Point', coordinates: [ 2.36329, 48.79536 ]},    //long,lat
             properties: {title:"Bismuth types", description:'Paris<br>1975'}, 
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -9161,7 +9161,7 @@
 
     $(document)
     .ready(function() {
-    const returnedData = $.grep(eponyms.features, function(element) {
+    const returnedData = $.grep(eponyms.features, function(element, index) {
         return (element.ops !== "");
         });  /// DROP those WITHOUT OPERATIONS
     console.log(returnedData)
