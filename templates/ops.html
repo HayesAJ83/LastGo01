@@ -413,7 +413,6 @@
         <script src="https://d3js.org/d3.v4.js"></script>
 
 
- 
 
 
         <script>
@@ -435,7 +434,6 @@
             ops:["Appendicectomy",], 
             geometry: {type: 'Point', coordinates: [ -83.0571, 42.35211] },  //lng,lat
             properties: {title:'Aaron sign', description:'Detroit<br>1913'},
-            lat:"42.35211", long:"-83.0571",
             googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             refs:"<br>Aaron CD. A sign indicative of chronic appendicitis. <i>JAMA</i>. 1913; 60(5): 350-351<br>",    
             jrnls:["JAMA",],
@@ -2388,7 +2386,7 @@
             refs:"<br>Conn JW, Louis LH. Primary aldosteronism: a new clinical entity. <i>Trans Assoc Am Physicians</i>. 1955; 68: 215-231<br>",   
             jrnls:["Trans Assoc Am Physicians",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/Conn.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            about:"Primary aldosteronism.", 
+            about:"<br>Primary aldosteronism.<br>", 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Primary_aldosteronism' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
             acknow:"",//"<br><br><br><br><i>We kindly acknowledge Mr XY FRCS who contributed the above information.</i>",
         //},{
@@ -3496,7 +3494,7 @@
             properties: { title:"Ewing sarcoma", description:'New York<br>1921'}, 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Ewing's_sarcoma' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            refs:"<br>Ewing J. Diffuse endothelioma of bone. <i>Proc NY Pathol Soc</i>. 1921; 21: 17-24",   
+            refs:"<br>Ewing J. Diffuse endothelioma of bone. <i>Proc NY Pathol Soc</i>. 1921; 21: 17-24<br>",   
             jrnls:["Proc NY Pathol Soc",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/James_Ewing.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",//<br><br><br>", 
@@ -9161,16 +9159,16 @@
 
 <script>
 
-    $(document)
-    .ready(function() {
-    const returnedData = $.grep(eponyms.features, function(element, index) {
-        return (element.ops !== "" || element.ops !== " " || element.ops === undefined);
-        });  /// DROP those WITHOUT OPERATIONS
-    });
+    //$(document)
+    //.ready(function() {
+    //const returnedData = $.grep(eponyms.features, function(element, index) {
+    //    return (element.ops !== "" || element.ops !== " " || element.ops === undefined);
+    //    });  /// DROP those WITHOUT OPERATIONS
+    //});
 
     $(document)
     .ready(function() {
-    let result1 = returnedData //eponyms.features
+    let result1 = eponyms.features
         .flatMap(item => item.topic) //"item.topic" gives us specialties
         .filter((item, i, arr) => arr.indexOf(item) === i)
         .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
