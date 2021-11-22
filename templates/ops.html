@@ -9162,7 +9162,7 @@
     $(document)
     .ready(function() {
     const returnedData = $.grep(eponyms.features, function(element) {
-        return (element.ops !== "" || element.ops !== " " || element.ops === undefined);
+        return (element.ops !== "");
         });  /// DROP those WITHOUT OPERATIONS
     console.log(returnedData)
     console.log(eponyms.features)
