@@ -9159,12 +9159,13 @@
 
 <script>
 
-    //$(document)
-    //.ready(function() {
-    //const returnedData = $.grep(eponyms.features, function(element, index) {
-    //    return (element.ops !== "" || element.ops !== " " || element.ops === undefined);
-    //    });  /// DROP those WITHOUT OPERATIONS
-    //});
+    $(document)
+    .ready(function() {
+    const returnedData = $.grep(eponyms.features, function(element, index) {
+        return (element.ops !== "" || element.ops !== " " || element.ops === undefined);
+        });  /// DROP those WITHOUT OPERATIONS
+    console.log(returnedData)
+    });
 
     $(document)
     .ready(function() {
