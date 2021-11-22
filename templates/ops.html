@@ -9161,7 +9161,7 @@
 
     $(document)
     .ready(function() {
-    const returnedData = $.grep(eponyms.features, function(element, index) {
+    const returnedData = $.grep(eponyms.features, function(element) {
         return (element.ops !== "" || element.ops !== " " || element.ops === undefined);
         });  /// DROP those WITHOUT OPERATIONS
     console.log(returnedData)
