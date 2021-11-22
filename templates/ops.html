@@ -9163,14 +9163,17 @@
 
     $(document)
     .ready(function() {
-
     const returnedData = $.grep(eponyms.features, function(element, index) {
-        return (element.ops !== "" || element.ops === undefined);});  /// DROP those WITHOUT OPERATIONS
+        return (element.ops !== "" || element.ops !== " " || element.ops === undefined);
+        });  /// DROP those WITHOUT OPERATIONS
+    });
 
+    $(document)
+    .ready(function() {
     let result1 = returnedData //eponyms.features
         .flatMap(item => item.topic) //"item.topic" gives us specialties
         .filter((item, i, arr) => arr.indexOf(item) === i)
-        .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
+        .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
         let resultsort1 = result1.sort()
         var select = document.getElementById("select1");
         var options = resultsort1;
