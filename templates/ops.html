@@ -9423,9 +9423,9 @@
         console.log(selected2)
 
         function populateSelect2() {
-            document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,ops}) =>
-                options += `<option value="${ID}">${ops}</option>`,
-                '<option value=""> -- selectX -- </option>'
+            document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
+                options += `<option value="${ID}">${name}</option>`,
+                '<option value=""> -- select_sel9 -- </option>'
                 );
             }
     
@@ -9457,8 +9457,8 @@
             });  /// DROP those WITHOUT OPERATIONS
             taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
             return returnedData.filter(item => {
-                let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
-                return taxonomy.some(med => ops.includes(med));
+                let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                return taxonomy.some(med => topic.includes(med));
                 });
             }
         
@@ -9468,7 +9468,7 @@
         function populateSelect2() {
             document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
                 options += `<option value="${ID}">${name}</option>`,
-                '<option value=""> -- selectY -- </option>'
+                '<option value=""> -- select -- </option>'
                 );
             }
     
