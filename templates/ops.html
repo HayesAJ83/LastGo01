@@ -9327,6 +9327,9 @@
             select = select.substr(0);
         }
         var stringArray = (new Function( "return [" + select + "];")());
+        const returnedData = $.grep(eponyms.features, function(element, index) {
+            return (element.ops !== "");
+            });  /// DROP those WITHOUT OPERATIONS
         function topicFilter2(taxonomy) {
             taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
         return returnedData.filter(item => {
@@ -9367,8 +9370,11 @@
         console.log(stringArray); //works Array [chosen options]
         
         function topicFilter2(taxonomy) {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+            return (element.ops !== "");
+            });  /// DROP those WITHOUT OPERATIONS
             taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-            return eponyms.features.filter(item => {
+            return returnedData.filter(item => {
                 let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
                 return taxonomy.some(med => ops.includes(med));
                 });
@@ -9407,8 +9413,11 @@
         console.log(stringArray); //works Array [chosen options]
         
         function topicFilter2(taxonomy) {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+            return (element.ops !== "");
+            });  /// DROP those WITHOUT OPERATIONS
             taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-            return eponyms.features.filter(item => {
+            return returnedData.filter(item => {
                 let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
                 return taxonomy.some(med => topic.includes(med));
                 });
@@ -9474,8 +9483,11 @@
         var stringArray = (new Function("return [" + select+ "];")());
         
         function topicFilter2(taxonomy) {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+            return (element.ops !== "");
+            });  /// DROP those WITHOUT OPERATIONS
             taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-            return eponyms.features.filter(item => {
+            return returnedData.filter(item => {
                 let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
                 return taxonomy.some(med => topic.includes(med));
                 });
