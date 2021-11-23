@@ -9500,14 +9500,31 @@
         var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
         console.log(selected2)
 
-        function populateSelect2() {
-            document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
-                options += `<option value="${ID}">${name}</option>`,
-                '<option value=""> -- select -- </option>'
-                );
-            }
+        /// NOW GET THE OPERATIONS FRTOM THIS SMALL JSON
+
+        let result10 = selected2
+            .flatMap(item => item.ops)
+            .filter((item, i, arr) => arr.indexOf(item) === i)
+            .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
+            let resultOps = result10.sort()
+            var selectOps = document.getElementById("SEL2");
+            var optionS = resultOps;
+            for(var i = 0; i < optionS.length; i++) {
+                var opt1 = optionS[i];
+                var el1 = document.createElement("option");
+                el1.textContent = opt1;
+                el1.value = opt1;
+                selectOps.appendChild(el1);
+                }
+
+        //function populateSelect2() {
+        //    document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
+        //        options += `<option value="${ID}">${name}</option>`,
+        //        '<option value=""> -- select -- </option>'
+        //        );
+        //    }
     
-        populateSelect2()
+        //populateSelect2()
         
         $('#select4').fadeIn(50);
         $('#SEL2').selectpicker('refresh');
@@ -9516,6 +9533,9 @@
             $('#SEL2').selectpicker('refresh');
             });
     });
+
+
+
         
    
     //$('#SEL2').change(function() {
