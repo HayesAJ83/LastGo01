@@ -9372,7 +9372,7 @@
         function topicFilter2(taxonomy) {
             taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
         return returnedData.filter(item => {
-            let topic = Array.isArray(item.ops) ? item.ops : [item.ops];
+            let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
             return taxonomy.some(med => ops.includes(med));
             });
             }
