@@ -9437,7 +9437,7 @@
         $("#sel").find('option:selected').each(function() {
             select += "\'" + $.trim($(this).text()) + "\',";});
             if(select != ""){select = select.substr(0);};
-        var stringArray = (new Function("return [" + select+ "];")());
+        var stringArray = (new Function("return [" + select + "];")());
         console.log(stringArray); //works Array [chosen options]
         
         function topicFilter2(taxonomy) {
@@ -9478,11 +9478,12 @@
 
 <script>  ///  SELECTED_SPECIALTIES_2  ///
     $('#select1').on('change', function() {
+ 
         let select ="";
         $("#select1").find('option:selected').each(function() {
             select += "\'" + $.trim($(this).text()) + "\',";});
             if(select != ""){select = select.substr(0);};
-        var stringArray = (new Function("return [" + select+ "];")());
+        var stringArray = (new Function("return [" + select + "];")());
         console.log(stringArray); //works Array [chosen options]
         
         function topicFilter2(taxonomy) {
@@ -9497,7 +9498,7 @@
             }
         
         var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-        //console.log(selected2)
+        console.log(selected2)
 
         function populateSelect2() {
             document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
