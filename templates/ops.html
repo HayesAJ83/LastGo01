@@ -9289,6 +9289,9 @@
         var stringArray = (new Function("return [" + select + "];")());
         
     function topicFilter2(taxonomy) {
+        const returnedData = $.grep(eponyms.features, function(element, index) {
+            return (element.ops !== "");
+            });  /// DROP those WITHOUT OPERATIONS
         taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
         return returnedData.filter(item => {
             let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
