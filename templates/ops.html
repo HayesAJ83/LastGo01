@@ -9346,6 +9346,7 @@
 
 
 ///  SELECTED_SPECIALTIES  ///
+    /// THIS WORKS FINE
     $(document)
     .ready(function() {
     $('#btn_select').on('click', function() {
@@ -9360,30 +9361,37 @@
         
         let select = "";
         $("#select1").find('option:selected').each(function() {
-        select += "\'" + $.trim($(this).text()) + "\',";
-        });
+            select += "\'" + $.trim($(this).text()) + "\',";
+            });
         if (select != "") {
             select = select.substr(0);
         }
         var stringArray = (new Function( "return [" + select + "];")());
-        const returnedData = $.grep(eponyms.features, function(element, index) {
+   
+       
+
+        function topicFilter2(taxonomy) {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
             return (element.ops !== "");
             });  /// DROP those WITHOUT OPERATIONS
-        function topicFilter2(taxonomy) {
             taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-        return returnedData.filter(item => {
-            let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
-            return taxonomy.some(med => ops.includes(med));
-            });
+            return returnedData.filter(item => {
+                let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
+                return taxonomy.some(med => ops.includes(med));
+                });
             }
+
         var select2 = topicFilter2(stringArray);
 
+        /// not sure if below needed
         if (!select2.length) {var push = "";} 
         else {
             var push = select2.reduce((options, {ID,name}) =>   //name
                 options += `<option value="${ID}">${name}</option>`);
                 }
-        
+        /// not sure if above needed
+
+
         function populateSelect() {
             if (!select2.length) {var push = "";}
             else {
@@ -9397,6 +9405,10 @@
                 }).trigger("change")
         });
 </script>
+
+
+
+
 
 <script> 
     /// ALL - specialties
@@ -9432,16 +9444,18 @@
             }
     
         populateSelect2()
-        
         $('#sel9').selectpicker('refresh');
         $('#sel').on('change', function() {
             $('#sel').selectpicker('toggle'); //added to toggle open/close
             $('#sel9').selectpicker('refresh');
             });
     });
-
-
 </script>
+
+
+
+
+
 
 
 <script>  ///  SELECTED_SPECIALTIES_2  ///
