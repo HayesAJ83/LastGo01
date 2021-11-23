@@ -9423,9 +9423,9 @@
         console.log(selected2)
 
         function populateSelect2() {
-            document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
-                options += `<option value="${ID}">${name}</option>`,
-                '<option value=""> -- select -- </option>'
+            document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,ops}) =>
+                options += `<option value="${ID}">${ops}</option>`,
+                '<option value=""> -- selectX -- </option>'
                 );
             }
     
