@@ -9381,29 +9381,51 @@
                 });
             }
 
-        var select2 = topicFilter2(stringArray);
 
-        /// not sure if below needed
-        if (!select2.length) {var push = "";} 
-        else {
-            var push = select2.reduce((options, {ID,name}) =>   //name
-                options += `<option value="${ID}">${name}</option>`);
-                }
-        /// not sure if above needed
-
+        
+        
+        var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+        console.log(selected2)
 
         function populateSelect() {
-            if (!select2.length) {var push = "";}
-            else {
-                var push = select2.reduce((options, {ID,name}) =>   //name
-                    options += `<option value="${ID}">${name}</option>`);
-                    }}
-        
+            document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
+                options += `<option value="${ID}">${name}</option>`,
+                '<option value=""> -- select_SEL2 -- </option>'
+                );
+            }
+
         populateSelect()
-        $( '#SEL2' ).html(push);
-        show()
-                }).trigger("change")
+        $('#SEL2').selectpicker('refresh');
+
         });
+    });
+    
+
+        //$('#select1').on('change', function() {
+        //    $('#SEL2').selectpicker('toggle'); //added to toggle open/close
+        //    $('#sel9').selectpicker('refresh');
+        //    });
+
+        /// not sure if below needed
+        //if (!select2.length) {var push = "";} 
+        //else {
+        //    var push = select2.reduce((options, {ID,name}) =>   //name
+        //        options += `<option value="${ID}">${name}</option>`);
+        //        }
+        /// not sure if above needed
+
+        //function populateSelect() {
+        //    if (!select2.length) {var push = "";}
+        //    else {
+        //        var push = select2.reduce((options, {ID,name}) =>   //name
+        //            options += `<option value="${ID}">${name}</option>`);
+        //            }}
+        
+        //populateSelect()
+        //$( '#SEL2' ).html(push);
+        //show()
+        //        }).trigger("change")
+        //});
 </script>
 
 
