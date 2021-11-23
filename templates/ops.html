@@ -9502,8 +9502,7 @@
 
         /// NOW GET THE OPERATIONS FRTOM THIS SMALL JSON
 
-        $(document)
-        .ready(function() {
+        $(function() {
         let result10 = selected2
             .flatMap(item => item.ops)
             .filter((item, i, arr) => arr.indexOf(item) === i)
