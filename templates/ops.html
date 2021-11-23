@@ -9346,7 +9346,7 @@
 
 
 ///  SELECTED_SPECIALTIES  ///
-    /// THIS WORKS FINE
+   
     $(document)
     .ready(function() {
     $('#btn_select').on('click', function() {
@@ -9369,30 +9369,26 @@
         var stringArray = (new Function( "return [" + select + "];")());
    
        
+        //function topicFilter2(taxonomy) {
+        //    const returnedData = $.grep(eponyms.features, function(element, index) {
+        //    return (element.ops !== "");
+        //    });  /// DROP those WITHOUT OPERATIONS
+        //    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+        //    return returnedData.filter(item => {
+        //        let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
+        //        return taxonomy.some(med => ops.includes(med));
+        //        });
+        //    }
 
-        function topicFilter2(taxonomy) {
-            const returnedData = $.grep(eponyms.features, function(element, index) {
-            return (element.ops !== "");
-            });  /// DROP those WITHOUT OPERATIONS
-            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-            return returnedData.filter(item => {
-                let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
-                return taxonomy.some(med => ops.includes(med));
-                });
-            }
+        //var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+        //console.log(selected2)
 
-
-        
-        
-        var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-        console.log(selected2)
-
-        function populateSelect() {
-            document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
-                options += `<option value="${ID}">${name}</option>`,
-                '<option value=""> -- select_SEL2 -- </option>'
-                );
-            }
+        //function populateSelect() {
+        //    document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
+        //        options += `<option value="${ID}">${name}</option>`,
+        //        '<option value=""> -- select_SEL2 -- </option>'
+        //        );
+        //    }
 
         populateSelect()
         $('#SEL2').selectpicker('refresh');
