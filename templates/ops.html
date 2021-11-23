@@ -9224,7 +9224,10 @@
 
     $(document)
     .ready(function() {
-    let result1 = eponyms.features
+    const returnedData = $.grep(eponyms.features, function(element, index) {
+        return (element.ops !== "");
+        });  /// DROP those WITHOUT OPERATIONS
+    let result1 = returnedData
         .flatMap(item => item.ops)
         .filter((item, i, arr) => arr.indexOf(item) === i)
         .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
@@ -9242,7 +9245,10 @@
 
     $(document)
     .ready(function() {
-    let result1 = eponyms.features
+    const returnedData = $.grep(eponyms.features, function(element, index) {
+        return (element.ops !== "");
+        });  /// DROP those WITHOUT OPERATIONS
+    let result1 = returnedData
         .flatMap(item => item.ops)
         .filter((item, i, arr) => arr.indexOf(item) === i)
         .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
@@ -9292,8 +9298,6 @@
             
     var selected2 = topicFilter2(stringArray); 
     console.log(selected2) //gives array of selected specialties eg. [ "Anaesthetics", "Trauma" ]
-
-
 
 
 
