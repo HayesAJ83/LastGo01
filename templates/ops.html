@@ -9517,12 +9517,6 @@
                 selectOps10.appendChild(el10);
                 }
 
-        let select ="";
-        $("#SEL2").find('option:selected').each(function() {
-                select += "\'" + $.trim($(this).text()) + "\',";});
-                if(select != ""){select = select.substr(0);};
-        var stringArray10 = (new Function("return [" + select + "];")());
-        console.log(stringArray10);
 
         //function populateSelect2() {
         //    document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
