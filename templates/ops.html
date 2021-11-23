@@ -9506,16 +9506,23 @@
             .flatMap(item => item.ops)
             .filter((item, i, arr) => arr.indexOf(item) === i)
             .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
-            let resultOps = result10.sort()
-            var selectOps = document.getElementById("SEL2");
-            var optionS = resultOps;
-            for(var i = 0; i < optionS.length; i++) {
-                var opt1 = optionS[i];
-                var el1 = document.createElement("option");
-                el1.textContent = opt1;
-                el1.value = opt1;
-                selectOps.appendChild(el1);
+            let resultOps10 = result10.sort()
+            var selectOps10 = document.getElementById("SEL2");
+            var optionS10 = resultOps10;
+            for(var i = 0; i < optionS10.length; i++) {
+                var opt10 = optionS10[i];
+                var el10 = document.createElement("option");
+                el10.textContent = opt10;
+                el10.value = opt10;
+                selectOps10.appendChild(el10);
                 }
+
+        let select ="";
+        $("#SEL2").find('option:selected').each(function() {
+                select += "\'" + $.trim($(this).text()) + "\',";});
+                if(select != ""){select = select.substr(0);};
+        var stringArray10 = (new Function("return [" + select + "];")());
+        console.log(stringArray10);
 
         //function populateSelect2() {
         //    document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
