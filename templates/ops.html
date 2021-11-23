@@ -9269,7 +9269,7 @@
     let result1 = returnedData
         .flatMap(item => item.ops)
         .filter((item, i, arr) => arr.indexOf(item) === i)
-        .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
+        .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no ops
         let resultOps = result1.sort()
         var selectOps = document.getElementById("sel");
         var optionS = resultOps;
@@ -9502,10 +9502,12 @@
 
         /// NOW GET THE OPERATIONS FRTOM THIS SMALL JSON
 
+        $(document)
+        .ready(function() {
         let result10 = selected2
             .flatMap(item => item.ops)
             .filter((item, i, arr) => arr.indexOf(item) === i)
-            .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
+            //.filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
             let resultOps10 = result10.sort()
             var selectOps10 = document.getElementById("SEL2");
             var optionS10 = resultOps10;
@@ -9516,6 +9518,7 @@
                 el10.value = opt10;
                 selectOps10.appendChild(el10);
                 }
+            });
 
 
         //function populateSelect2() {
