@@ -9336,53 +9336,14 @@
             let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
             return taxonomy.some(med => topic.includes(med));
             });
-        }  
+        }
+            
     var selected2 = topicFilter2(stringArray); 
     console.log(selected2) //gives array of selected specialties eg. [ "Anaesthetics", "Trauma" ]
-</script>
-
-
-<script> 
-    /// ALL - specialties
-    /// THIS WORKS FINE
-    $('#sel').on('change', function() {
-        $('#select5').fadeIn(50);
-        let select ="";
-        $("#sel").find('option:selected').each(function() {
-            select += "\'" + $.trim($(this).text()) + "\',";});
-            if(select != ""){select = select.substr(0);};
-        var stringArray = (new Function("return [" + select+ "];")());
-        console.log(stringArray); //works Array [chosen options]
-        function topicFilter2(taxonomy) {
-            const returnedData = $.grep(eponyms.features, function(element, index) {
-            return (element.ops !== "");
-            });  /// DROP those WITHOUT OPERATIONS
-            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-            return returnedData.filter(item => {
-                let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
-                return taxonomy.some(med => ops.includes(med));
-                });
-            }
-        var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-        console.log(selected2)
-        function populateSelect2() {
-            document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
-                options += `<option value="${ID}">${name}</option>`,
-                '<option value=""> -- select_sel9 -- </option>'
-                );
-            }
-        populateSelect2()
-        $('#sel9').selectpicker('refresh');
-        $('#sel').on('change', function() {
-            $('#sel').selectpicker('toggle'); //added to toggle open/close
-            $('#sel9').selectpicker('refresh');
-            });
-    });
-</script>
 
 
 
-<script>
+
 
 ///  SELECTED_SPECIALTIES  ///
     $(document)
@@ -9437,9 +9398,50 @@
         });
 </script>
 
+<script> 
+    /// ALL - specialties
+    /// THIS WORKS FINE
+    $('#sel').on('change', function() {
+        $('#select5').fadeIn(50);
+        let select ="";
+        $("#sel").find('option:selected').each(function() {
+            select += "\'" + $.trim($(this).text()) + "\',";});
+            if(select != ""){select = select.substr(0);};
+        var stringArray = (new Function("return [" + select+ "];")());
+        console.log(stringArray); //works Array [chosen options]
+        
+        function topicFilter2(taxonomy) {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+            return (element.ops !== "");
+            });  /// DROP those WITHOUT OPERATIONS
+            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+            return returnedData.filter(item => {
+                let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
+                return taxonomy.some(med => ops.includes(med));
+                });
+            }
+        
+        var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+        console.log(selected2)
+
+        function populateSelect2() {
+            document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
+                options += `<option value="${ID}">${name}</option>`,
+                '<option value=""> -- select_sel9 -- </option>'
+                );
+            }
+    
+        populateSelect2()
+        
+        $('#sel9').selectpicker('refresh');
+        $('#sel').on('change', function() {
+            $('#sel').selectpicker('toggle'); //added to toggle open/close
+            $('#sel9').selectpicker('refresh');
+            });
+    });
 
 
-
+</script>
 
 
 <script>  ///  SELECTED_SPECIALTIES_2  ///
@@ -9468,7 +9470,7 @@
         function populateSelect2() {
             document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
                 options += `<option value="${ID}">${name}</option>`,
-                '<option value=""> -- select_sel2 -- </option>'
+                '<option value=""> -- select -- </option>'
                 );
             }
     
