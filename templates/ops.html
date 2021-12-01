@@ -183,7 +183,7 @@
                         </div>
                     </div>
                 </form>
-                <div class="row align-items-center text-center">
+                <div class="row align-items-center text-center" id='blurb'>
                     <div class="lead" id='imgName2'></div>
                     <p class="lead" id="msg2"></p>
                     <p class="lead" id="msg3"></p>
@@ -204,7 +204,7 @@
                         </div>
                     </div>
                 </form>
-                <div class="row align-items-center text-center">
+                <div class="row align-items-center text-center" id='blurb2'>
                     <div class="lead" id='imgName2'></div>
                     <p class="lead" id="msg2"></p>
                     <p class="lead" id="msg3"></p>
@@ -9563,8 +9563,7 @@
         $('#btn_select').removeClass("btn btn-light");       $('#btn_select').addClass("btn btn-primary active");
         $('#selector').fadeIn(50);     $('#select3').fadeOut(50);
         $('#SEL2').fadeIn(50);         $('#select5').fadeOut(50);
-        $('#msg2').fadeOut(50);
-        $('#imgName2').fadeOut(50);
+        $('#blurb').fadeOut(50);
 
         
         let select = "";
