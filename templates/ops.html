@@ -151,21 +151,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="row align-items-center text-center">
-                        <div class="col" data-aos="zoom-in" id="select4" style="display:none"> <!--works-->
-                            <h1 class="text-black mb-2 fs-1" style="height:30px">Operations_select4_SEL2</h1>
-                            <select id="SEL2" class="selectpicker show-tick"
-                                    data-style="btn-primary" data-header="Search list:" 
-                                    data-width="325px" data-size="6"
-                                    data-container="body"
-                                    data-live-search="true" onchange="show2(this.value);">
-                                    <option value=""> -- select_SEL2 -- </option>
-                            </select>
-                            <br>
-                        </div>
-                    </div>
-                </div>
                 <hr style="height:1px; visibility:hidden">
                 <form method="POST">
                     <div class="row align-items-center text-center">
@@ -187,6 +172,44 @@
                     <p class="lead" id="msg2"></p>
                     <p class="lead" id="msg3"></p>
                 </div>
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col" data-aos="zoom-in" id="select4" style="display:none"> <!--works-->
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Operations_select4_SEL2</h1>
+                            <select id="SEL2" class="selectpicker show-tick"
+                                    data-style="btn-primary" data-header="Search list:" 
+                                    data-width="325px" data-size="6"
+                                    data-container="body"
+                                    data-live-search="true" onchange="show2(this.value);">
+                                    <option value=""> -- select_SEL2 -- </option>
+                            </select>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <hr style="height:1px; visibility:hidden">
+                <form method="POST">
+                    <div class="row align-items-center text-center">
+                        <div class="col" data-aos="fade-up" id="select15" style="display:none"> <!--works-->
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms_select15_sel19</h1>
+                            <select id="sel19" class="selectpicker show-tick"
+                                    data-style="btn-primary" data-header="Search list:" 
+                                    data-width="325px" data-size="6"
+                                    data-aos="zoom-in"
+                                    data-container="body"
+                                    data-live-search="true" onchange="show2(this.value);">
+                                    <option value=""> -- select -- </option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+                <div class="row align-items-center text-center">
+                    <div class="lead" id='imgName2'></div>
+                    <p class="lead" id="msg2"></p>
+                    <p class="lead" id="msg3"></p>
+                </div>
+                <br>
                 <br>
                 <br>
                 <br>
@@ -9565,7 +9588,7 @@
     /// ALL - specialties
     /// THIS WORKS FINE
     $('#sel').on('change', function() {
-        $('#select5').fadeIn(50);
+        $('#select15').fadeIn(50);
         let select ="";
         $("#sel").find('option:selected').each(function() {
             select += "\'" + $.trim($(this).text()) + "\',";});
