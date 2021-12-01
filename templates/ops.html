@@ -9693,6 +9693,7 @@
 
 
     $('#select4').change(function() {
+        $('#select15').fadeIn(1500);
         let select ="";
         $("#select4").find('option:selected').each(function() {
             select += "\'" + $.trim($(this).text()) + "\',";});
