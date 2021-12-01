@@ -177,7 +177,7 @@
                                     data-aos="zoom-in"
                                     data-container="body"
                                     data-live-search="true" onchange="show2(this.value);">
-                                    <option value=""> -- select an operation from above -- </option>
+                                    <option value=""> -- select -- </option>
                             </select>
                         </div>
                     </div>
@@ -9724,7 +9724,7 @@
 
    
     $('#SEL2').change(function() {
-        $('#select5').fadeIn(50);
+        $('#select5').fadeIn(1500);
         let select ="";
         $("#SEL2").find('option:selected').each(function() {
             select += "\'" + $.trim($(this).text()) + "\',";});
