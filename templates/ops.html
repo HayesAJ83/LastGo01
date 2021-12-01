@@ -154,7 +154,7 @@
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col" data-aos="zoom-in" id="select4" style="display:none"> <!--works-->
-                            <h1 class="text-black mb-2 fs-1" style="height:30px">Operations_SEL2</h1>
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Operations</h1>
                             <select id="SEL2" class="selectpicker show-tick"
                                     data-style="btn-primary" data-header="Search list:" 
                                     data-width="325px" data-size="6"
@@ -9500,7 +9500,7 @@
                     return this.text}).get().join('\',\'') + '\'';
             var stringArray = (new Function("return [" + value + "];")());
         });
-    });   /// Generates select1 [specialties] options (eg. 'COLORECTAL')
+    });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
 
     //var selected = eponyms.features
     //function populateSelect() {
@@ -9536,14 +9536,10 @@
     $(document)
     .ready(function() {
     $('#btn_select').on('click', function() {
-        $('#btn_all').removeClass("btn btn-primary active");
-        $('#btn_all').addClass("btn btn-light");
-        $('#btn_select').removeClass("btn btn-light");
-        $('#btn_select').addClass("btn btn-primary active");
-        $('#selector').fadeIn(50);
-        $('#select3').fadeOut(50);
-        $('#SEL2').fadeIn(50); 
-        $('#select5').fadeOut(50);
+        $('#btn_all').removeClass("btn btn-primary active"); $('#btn_all').addClass("btn btn-light");
+        $('#btn_select').removeClass("btn btn-light");       $('#btn_select').addClass("btn btn-primary active");
+        $('#selector').fadeIn(50);     $('#select3').fadeOut(50);
+        $('#SEL2').fadeIn(50);         $('#select5').fadeOut(50);
         
         let select = "";
         $("#select1").find('option:selected').each(function() {
@@ -9553,61 +9549,12 @@
             select = select.substr(0);
         }
         var stringArray = (new Function( "return [" + select + "];")());
-   
-       
-        //function topicFilter2(taxonomy) {
-        //    const returnedData = $.grep(eponyms.features, function(element, index) {
-        //    return (element.ops !== "");
-        //    });  /// DROP those WITHOUT OPERATIONS
-        //    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-        //    return returnedData.filter(item => {
-        //        let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
-        //        return taxonomy.some(med => ops.includes(med));
-        //        });
-        //    }
-
-        //var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-        //console.log(selected2)
-
-        //function populateSelect() {
-        //    document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
-        //        options += `<option value="${ID}">${name}</option>`,
-        //        '<option value=""> -- select_SEL2 -- </option>'
-        //        );
-        //    }
 
         populateSelect()
         $('#SEL2').selectpicker('refresh');
 
         });
     });  // works
-    
-
-        //$('#select1').on('change', function() {
-        //    $('#SEL2').selectpicker('toggle'); //added to toggle open/close
-        //    $('#sel9').selectpicker('refresh');
-        //    });
-
-        /// not sure if below needed
-        //if (!select2.length) {var push = "";} 
-        //else {
-        //    var push = select2.reduce((options, {ID,name}) =>   //name
-        //        options += `<option value="${ID}">${name}</option>`);
-        //        }
-        /// not sure if above needed
-
-        //function populateSelect() {
-        //    if (!select2.length) {var push = "";}
-        //    else {
-        //        var push = select2.reduce((options, {ID,name}) =>   //name
-        //            options += `<option value="${ID}">${name}</option>`);
-        //            }}
-        
-        //populateSelect()
-        //$( '#SEL2' ).html(push);
-        //show()
-        //        }).trigger("change")
-        //});
 </script>
 
 
@@ -9628,8 +9575,8 @@
         
         function topicFilter2(taxonomy) {
             const returnedData = $.grep(eponyms.features, function(element, index) {
-            return (element.ops !== "");
-            });  /// DROP those WITHOUT OPERATIONS
+                return (element.ops !== "");
+                });  /// DROP those WITHOUT OPERATIONS
             taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
             return returnedData.filter(item => {
                 let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
@@ -9643,7 +9590,7 @@
         function populateSelect2() {
             document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
                 options += `<option value="${ID}">${name}</option>`,
-                '<option value=""> -- select_sel9 -- </option>'
+                '<option value=""> -- select -- </option>'
                 );
             }
     
@@ -9821,6 +9768,11 @@
     });
 </script>
 
+
+
+
+
+
 <script>
 
     function show(id) {   
@@ -9895,43 +9847,8 @@
 
 
 <script>
-//    $(document)
-//    .ready(function() {
-//    let result1 = eponyms.features
-//        .flatMap(item => item.topic)
-//        .filter((item, i, arr) => arr.indexOf(item) === i)
-//        let resultsort1 = result1.sort()
-//        var select = document.getElementById("select1");
-//        var options = resultsort1;
-//        for(var i = 0; i < options.length; i++) {
-//            var opt = options[i];
-//            var el = document.createElement("option");
-//            el.textContent = opt;
-//            el.value = opt;
-//            select.appendChild(el);
-//            }
-//    console.log()
-//        });
 
 
-//    $(document)
-//    .ready(function() {
-//        let result_ops = eponyms.features
-//            .flatMap(item => item.ops)
-//            .filter((item, i, arr) => arr.indexOf(item) === i)
-//            .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no operation
-//            let ops_sort = result_ops.sort()
-//            var select = document.getElementById("select10");
-//            var options = ops_sort;
-//            for(var i = 0; i < options.length; i++) {
-//                var opt = options[i];
-//                var el = document.createElement("option");
-//                el.textContent = opt;
-//                el.value = opt;
-//                select.appendChild(el);
-//	                }
-//            console.log()
-//                });
 
 //    $(document)
 //    .ready(function() {
@@ -10129,24 +10046,6 @@
 
 
         <script>
-        //    $(document)
-        //    .ready(function() {
-        //    let result2 = eponyms.features
-        //        .flatMap(item => item.ops)
-        //        .filter((item, i, arr) => arr.indexOf(item) === i)
-        //        .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no operation
-        //        let resultsort2 = result2.sort()
-        //        var select = document.getElementById("select100");
-        //        var options = resultsort2;
-        //        for(var i = 0; i < options.length; i++) {
-        //            var opt = options[i];
-        //            var el = document.createElement("option");
-        //            el.textContent = opt;
-        //            el.value = opt;
-        //            select.appendChild(el);
-	    //            }
-        //    console.log()
-        //        });
 
             ///  DEFAULT_PAGE_1  ///
         //    $(document)
