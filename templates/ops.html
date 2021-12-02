@@ -380,7 +380,6 @@
 
 
 
-
         <script>
             const eponyms = {
                 'type': 'FeatureCollection',
@@ -6112,7 +6111,7 @@
             properties: { title:"MacDonald trial", description:'New York<br>2001'},
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
             refs:"<br>MacDonald JS, Smalley SR, Benedetti J, et al. Chemotherapy after surgery compared with surgery alone for adenocarcinoma of the stomach or gastroesophageal junction. <i>NEJM</i>. 2001; 345: 725-730<br>",
-            jrnls:["NEJM",], 
+            jrnls:["N Engl J Med","NEJM",],
             URLs:"", //wiki-Y/N
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",//<br><br><br>", 
@@ -6823,6 +6822,26 @@
             acknow:"",
         },{
             type:'Feature',
+            ID:2385, 
+            name:"Nelson syndrome",      
+            topic:["Endocrine","Neurosurgery",], 
+            subtype:["Syndromes",], 
+            who:"Don Nelson", //whoSearch:[" ",],    
+            where:"Boston - Massachusetts - USA", //whereSearch:["",],           
+            when:"1958",   
+            disease:["Cushing's disease","Pituitary disease"],
+            ops:["Adrenalectomy","Transsphenoidal pituitary surgery",],
+            geometry: {type: 'Point', coordinates: [ -71.10448, 42.33572 ]}, //lng,lat
+            properties: { title:"Nelson syndrome", description:'Harvard Medical School - Boston<br>1958'},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            refs:"<br>Nelson DH, Meakin JW, Dealy Jr JB, Matson DD, Emerson Jr K, Thorn GW. ACTH-producing tumor of the pituitary gland. <i>N Engl J Med</i>. 1958; 259: 161-164<br>",   
+            jrnls:["N Engl J Med","NEJM",],
+            URLs:"<br><a href='https://www.nejm.org/doi/10.1056/NEJM195807242590403?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://en.wikipedia.org/wiki/Nelson%27s_syndrome' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <br>",
+            imgName:"",//<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            about:"", 
+            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
+        },{
+            type:'Feature',
             ID:2390, 
             name:"Nissen fundoplication",      
             topic:["Oesophagogastric",], 
@@ -7383,6 +7402,26 @@
             imgName:"",//"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"", 
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
+        //},{
+            //type:'Feature',
+            //ID:2569, 
+            //name:"Reed syndrome",      
+            //topic:["Endocrine"], 
+            //subtype:["Syndromes",], 
+            //who:"William Reed", //whoSearch:[" ",],    
+            //where:"Irvine - California - USA", //whereSearch:["",],           
+            //when:"1973",   
+            //disease:["Renal cell cancer",],
+            //ops:["Adrenalectomy",],
+            //geometry: {type: 'Point', coordinates: [ -117.85163, 33.64454 ]}, //lng,lat
+            //properties: { title:"Reed syndrome", description:'University of Southern California - USA<br>1973'},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            //refs:"<br>Reed WB, Walker R, Horowitz. Cutaneous leiomyomata<i>Acta Derm Venereol</i>. 1973; <br>",   
+            //jrnls:"",//["Acta Derm Venereol",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/Hereditary_leiomyomatosis_and_renal_cell_cancer_syndrome' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", ///https://www.medicaljournals.se/acta/content/abstract/10.2340/0001555553409416?ref=search
+            //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"", 
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         },{
             type:'Feature',
             ID:2570, 
@@ -9407,6 +9446,7 @@
 
         }]}
         </script>
+
 
 
 
