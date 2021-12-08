@@ -10094,12 +10094,12 @@
         
         function topicFilter2(taxonomy) {
             const returnedData = $.grep(eponyms.features, function(element, index) {
-            return (element.ops !== "");
+            return (element.opsSpec !== "");
             });  /// DROP those WITHOUT OPERATIONS
             taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
             return returnedData.filter(item => {
-                let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                return taxonomy.some(med => topic.includes(med));
+                let opsSpec = Array.isArray(item.opsSpec) ? item.opsSpec : [item.opsSpec];
+                return taxonomy.some(med => opsSpec.includes(med));
                 });
             }
             
