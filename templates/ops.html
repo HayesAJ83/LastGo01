@@ -9831,10 +9831,10 @@
     $(document)
     .ready(function() {
     const returnedData = $.grep(eponyms.features, function(element, index) {
-        return (element.ops !== "");
+        return (element.opsSpec !== "");
         });  /// DROP those WITHOUT OPERATIONS
     let result1 = returnedData
-        .flatMap(item => item.ops) //"item.ops" gives us OPERATIONS
+        .flatMap(item => item.opsSpec) //"item.ops" gives us OPERATIONS
         .filter((item, i, arr) => arr.indexOf(item) === i)
         .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no ops
         let resultOps = result1.sort()
