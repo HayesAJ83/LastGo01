@@ -2148,6 +2148,9 @@
             //about:"",//<br><br><br>",
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/Cheyne–Stokes_respiration' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
             //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+       
+/// Chiari malformation. 1891.
+       
         },{   
             type:'Feature',   
             ID:560, 
@@ -2792,6 +2795,11 @@
             imgName:"<br><img src=\"../static/assets/img/profiles/Harvey_Cushing.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+       
+/// DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD /////
+
+/// Dance's sign. wiki-Y Dance%27s_sign. Jean Dance
+
         },{
             type:'Feature',
             ID:780, 
@@ -3158,7 +3166,7 @@
             URLs:"",//"<br><a href='https:// ' target='_blank' class='btn btn-secondary' role='button'> </a><br>", //no wiki
             imgName:"",//"<img src=\"../static/assets/img/profiles/Dormia.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
-            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:920, 
@@ -4113,27 +4121,27 @@
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"", 
             acknow:"",
-        //},{
-            //type:'Feature',
-            //ID:1250, 
-            //name:"Gerota's fascia",      
-            //topic:["Endocrine","Urology","Transplant",], subtype:["Anatomy",],
-            //who:"Dimitrie Gerota", //whoSearch:["",], 
-            //where:"", whereSearch:[" ", " ",],               
-            //when:" ",   
-            //disease:[" ", " "],  
-            //ops:[" ", " ",],
-            //opsSpec:{' ': ['','', ], },
-            //geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
-            //properties: { title:"Gerota's fascia", description:' <br>'}, 
+        },{
+            type:'Feature',
+            ID:1250, 
+            name:"Gerota's fascia",      
+            topic:["Endocrine","Urology","Transplant",], subtype:["Anatomy",],
+            who:"Dimitrie Gerota", //whoSearch:["",], 
+            where:"Bucharest - Romania", //whereSearch:[" ", " ",],               
+            when:"1895",   
+            disease:"",//[" ", " "],  
+            ops:["Adrenalectomy","Nephrectomy",],
+            opsSpec:{'Endocrine': ['Adrenalectomy', ],
+                     'Urology': ['Nephrectomy',], },
+            geometry: {type: 'Point', coordinates:[ 44.43487, 26.06970 ]}, //lng,lat
+            //properties: { title:"Gerota's fascia", description:'Bucharest<br>1895'}, 
             //googlehtz: 0, //search: "   " AND " " [02-Oct-21]
-            //refs:"<br>",   
-            //jrnls:"",//["",]
-            //URLs:"",
-            //imgName:"",//"<img src=\"../static/assets/img/profiles/\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            //about:"",//
-            //URLs:"<br><a href='https://en.wikipedia.org/wiki/Renal_fascia' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
-            //acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            refs:"<br>Gerota D. Beitrage zur Kenntnis des Befestigungsapparates der Niere. Archives fur Aanatomie and Entwickelungsgeschichte. <i>Anat Abteil</i>. 1895; 19: 265-285<br>",   
+            jrnls:["Anat Abteil",],
+            imgName:"",//"<img src=\"../static/assets/img/profiles/\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            about:"",//
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/Renal_fascia' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{
             //type:'Feature',
             //ID:1255, 
@@ -6037,6 +6045,7 @@
             about:"",
             acknow:"", 
        
+/// Lhermitte's sign. Jean Lhermitte. 1920. Neurosurgery
 /// Crypts of Lieberkuhn 
        
         },{
@@ -6048,14 +6057,14 @@
             who:"Frederick Li & Joseph Fraumeni", //whoSearch:["",],   
             where:"Bethesda - Maryland - USA", //whereSearch:["",],                 
             when:"1969",   
-            disease:"",//["",], 
+            disease:["Adrenocortical Cancer", "Breast Cancer","Sarcoma",], 
             ops:["Mastectomy",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'Point', coordinates: [ -77.10775, 38.99955 ]}, //lng,lat
             properties: { title:"Li-Fraumeni syndrome", description:'Bethesda - Maryland<br>1969'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"<br>Li FP, Fraumeni JF Jr. Soft-tissue sarcomas, breast cancer, and other neoplasms. A familial syndrome? <i>Ann Intern Med</i>. 1969; 71(4): 747-752.<br>",   
-            jrnls:["Ann Intern Med",],
+            jrnls:["Ann Intern Med","Annals of Internal Medicine",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",//<br><br><br>", 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Li–Fraumeni_syndrome' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
@@ -8673,6 +8682,26 @@
             about:"",
             URLs:"",//  wiki-NO
             acknow:"",
+        //},{
+            //ID:2905, 
+            //name:"Sturge-Weber syndrome",      
+            //topic:["Endocrine","Neurosurgery",],  
+            //subtype:[""],
+            //who:"William Sturge & Frederick Weber",   //whoSearch:["",], 
+            //where:"London",                    
+            //when:"1922",  
+            //disease:["Pheochromocytoma",],  
+            //ops:["Craniotomy","Adrenalectomy",],  
+            //geometry: { type: 'Point', coordinates: [  ,  ]}, //lng,lat
+            //properties: { title:"Sturge-Weber syndrome", description:'London<br> '},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            //refs:"",  
+            //jrnls:"",//["",]
+            //imgName:"<img src=\"../static/assets/img/profiles/Steven_Strasberg.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement 
+            //about:"",//
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/Sturge–Weber_syndrome' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",   //https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1068054/?page=1
+            //acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        
 
 /// Sylvian fissure. Leiden. Franciscus S. wiki-Y Lateral_sulcus
 
@@ -9904,6 +9933,26 @@
             about:"",
             URLs:"",//
             acknow:"",//"<br><br><br><i>We kindly acknowledge Mr XY FRCS who contributed the above information.</i>",
+        //},{
+            //type:'Feature',
+            //ID:3950, 
+            //name:"Zuckerkandl's retrorenal fascia",      
+            //topic:[""], 
+            //subtype:["",], 
+            //who:"Emil & Otto Zuckerkandl", whoSearch:["Emil Zuckerkandl",],    
+            //where:"Vienna", whereSearch:["",],           
+            //when:"1883",   
+            //disease:[" ", " ",],
+            //ops:["Nephrectomy",],
+            //geometry: {type: 'Point', coordinates: [   ,  ]}, //lng,lat
+            //properties: { title:"", description:'Vienna<br> '},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            //refs:"",   
+            //jrnls:"",//["",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+            //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"<br>Anatomist, Emil, had a brother, Otto, who was a Urologist, and they discussed anatomy.<br>", 
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         //},{
             //type:'Feature',
             //ID:4000, 
