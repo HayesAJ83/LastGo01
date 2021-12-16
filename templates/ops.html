@@ -352,7 +352,7 @@
             //disease:["Thrombo-angiitis obliterans",],
             //ops:"",//["",],
             //opsSpec:"",// {'': ['',] },
-            //geometry: {type: 'Point', coordinates: [  -92.466748, 44.02240 ]}, //lng,lat
+            //geometry: {type: 'Point', coordinates: [ -92.466748, 44.02240 ]}, //lng,lat
             //properties: { title:"Allen's test", description:'Mayo Clinic - Rochester<br>1952'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             //refs:"",   
@@ -716,7 +716,7 @@
             //name:"Barnard's syndrome",      
             //topic:[" ",],  
             //subtype:[" ",],
-            //who:"",  //whoSearch:["",], 
+            //who:"Barnard",  //whoSearch:["",], 
             //where:"",  //whereSearch:["",],       
             //when:"",
             //disease:"",//[" "], 
@@ -779,7 +779,7 @@
             //name:"Bartholin duct",      
             //topic:["ENT","Maxillofacial"],  
             //subtype:["Anatomy",],
-            //who:"",  
+            //who:"Bartholin",  
             //whoSearch:["",],  
             //where:"Copenhagen, Denmark",                    
             //whereSearch:["Copenhagen", "Denmark",], 
@@ -954,7 +954,7 @@
             //name:"Beckwith-Wiedemann syndrome",      
             //topic:["Paediatrics",], 
             //subtype:["Syndromes",], 
-            //who:"", whoSearch:["   ",],    
+            //who:"John Beckwith & Hans-Rudolf Wiedemann", //whoSearch:["   ",],    
             //where:"", whereSearch:["",],           
             //when:"1964",   
             //disease:["",],
@@ -2106,6 +2106,9 @@
             //about:"",//<br><br><br>",
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/Cheyne–Stokes_respiration' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
             //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+       
+/// Chiari malformation. 1891.
+       
         },{   
             type:'Feature',   
             ID:560, 
@@ -2579,6 +2582,9 @@
             about:"",//<br><br><br>",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Cox_maze_procedure' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        
+/// Cox model. Statistics.
+        
         },{
             ID:725, 
             name:"Crigler-Najjar syndrome",      
@@ -2747,6 +2753,11 @@
             imgName:"<br><img src=\"../static/assets/img/profiles/Harvey_Cushing.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+       
+/// DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD /////
+
+/// Dance's sign. wiki-Y Dance%27s_sign. Jean Dance
+
         },{
             type:'Feature',
             ID:780, 
@@ -3113,7 +3124,7 @@
             URLs:"",//"<br><a href='https:// ' target='_blank' class='btn btn-secondary' role='button'> </a><br>", //no wiki
             imgName:"",//"<img src=\"../static/assets/img/profiles/Dormia.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
-            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:920, 
@@ -4068,27 +4079,27 @@
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"", 
             acknow:"",
-        //},{
-            //type:'Feature',
-            //ID:1250, 
-            //name:"Gerota's fascia",      
-            //topic:["Endocrine","Urology","Transplant",], subtype:["Anatomy",],
-            //who:"Dimitrie Gerota", //whoSearch:["",], 
-            //where:"", whereSearch:[" ", " ",],               
-            //when:" ",   
-            //disease:[" ", " "],  
-            //ops:[" ", " ",],
-            //opsSpec:{' ': ['','', ], },
-            //geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
-            //properties: { title:"Gerota's fascia", description:' <br>'}, 
+        },{
+            type:'Feature',
+            ID:1250, 
+            name:"Gerota's fascia",      
+            topic:["Endocrine","Urology","Transplant",], subtype:["Anatomy",],
+            who:"Dimitrie Gerota", //whoSearch:["",], 
+            where:"Bucharest - Romania", //whereSearch:[" ", " ",],               
+            when:"1895",   
+            disease:"",//[" ", " "],  
+            ops:["Adrenalectomy","Nephrectomy",],
+            opsSpec:{'Endocrine': ['Adrenalectomy', ],
+                     'Urology': ['Nephrectomy',], },
+            geometry: {type: 'Point', coordinates:[ 26.06970, 44.43487 ]}, //lng,lat
+            properties: { title:"Gerota's fascia", description:'Bucharest - Romania<br>1895'}, 
             //googlehtz: 0, //search: "   " AND " " [02-Oct-21]
-            //refs:"<br>",   
-            //jrnls:"",//["",]
-            //URLs:"",
-            //imgName:"",//"<img src=\"../static/assets/img/profiles/\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            //about:"",//
-            //URLs:"<br><a href='https://en.wikipedia.org/wiki/Renal_fascia' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
-            //acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            refs:"<br>Gerota D. Beitrage zur Kenntnis des Befestigungsapparates der Niere. Archives fur Aanatomie and Entwickelungsgeschichte. <i>Anat Abteil</i>. 1895; 19: 265-285<br>",   
+            jrnls:["Anat Abteil",],
+            imgName:"",//"<img src=\"../static/assets/img/profiles/\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            about:"",//
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/Renal_fascia' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{
             //type:'Feature',
             //ID:1255, 
@@ -5992,6 +6003,7 @@
             about:"",
             acknow:"", 
        
+/// Lhermitte's sign. Jean Lhermitte. 1920. Neurosurgery
 /// Crypts of Lieberkuhn 
        
         },{
@@ -6003,14 +6015,14 @@
             who:"Frederick Li & Joseph Fraumeni", //whoSearch:["",],   
             where:"Bethesda - Maryland - USA", //whereSearch:["",],                 
             when:"1969",   
-            disease:"",//["",], 
+            disease:["Adrenocortical Cancer", "Breast Cancer","Sarcoma",], 
             ops:["Mastectomy",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'Point', coordinates: [ -77.10775, 38.99955 ]}, //lng,lat
             properties: { title:"Li-Fraumeni syndrome", description:'Bethesda - Maryland<br>1969'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"<br>Li FP, Fraumeni JF Jr. Soft-tissue sarcomas, breast cancer, and other neoplasms. A familial syndrome? <i>Ann Intern Med</i>. 1969; 71(4): 747-752.<br>",   
-            jrnls:["Ann Intern Med",],
+            jrnls:["Ann Intern Med","Annals of Internal Medicine",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",//<br><br><br>", 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Li–Fraumeni_syndrome' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
@@ -8628,6 +8640,26 @@
             about:"",
             URLs:"",//  wiki-NO
             acknow:"",
+        //},{
+            //ID:2905, 
+            //name:"Sturge-Weber syndrome",      
+            //topic:["Endocrine","Neurosurgery",],  
+            //subtype:[""],
+            //who:"William Sturge & Frederick Weber",   //whoSearch:["",], 
+            //where:"London",                    
+            //when:"1922",  
+            //disease:["Pheochromocytoma",],  
+            //ops:["Craniotomy","Adrenalectomy",],  
+            //geometry: { type: 'Point', coordinates: [  ,  ]}, //lng,lat
+            //properties: { title:"Sturge-Weber syndrome", description:'London<br> '},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            //refs:"",  
+            //jrnls:"",//["",]
+            //imgName:"<img src=\"../static/assets/img/profiles/Steven_Strasberg.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement 
+            //about:"",//
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/Sturge–Weber_syndrome' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",   //https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1068054/?page=1
+            //acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        
 
 /// Sylvian fissure. Leiden. Franciscus S. wiki-Y Lateral_sulcus
 
@@ -8839,7 +8871,7 @@
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement 
             about:"Lenox Hill Hospital",//<br><br><br>",  
             URLs:"",//  wiki-NO
-            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:3000, 
@@ -8900,7 +8932,7 @@
             imgName:"<br><img src=\"../static/assets/img/profiles/Vaclav_Treitz.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             jrnls:"",//["",]
             about:"",
-            URLs:"",// wiki-Y   Suspensory_muscle_of_duodenum
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/Suspensory_muscle_of_duodenum' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
             acknow:"",
         },{
             type:'Feature',
@@ -8920,7 +8952,7 @@
             jrnls:"",//["",]  
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",//
-            URLs:"",// wiki-Y  Trendelenburg_position
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/Trendelenburg_position' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
@@ -8939,29 +8971,30 @@
             refs:"",   
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            about:"",//<br><br><br>", 
-            URLs:"",//  Ileocecal_fold wiki-Y
-            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-        //},{
-            //type:'Feature',
-            //ID:3045, 
-            //name:"Trojani grade",      
-            //topic:["General Surgery",],  
-            //subtype:["Scores",],
-            //who:"Monique Trojani",   //whoSearch:["",],
-            //where:"Bordeaux - France",                    
-            //when:"1984",   
-            //disease:["Sarcoma",], 
-            //ops:"",//["",],
-            //geometry: { type: 'Point', coordinates: [ , ]}, //long,lat
-            //properties: { title:"Trojani grade", description:'Bordeaux - France<br>1984'},
+            about:"",//
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/Ileocecal_fold' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        },{
+            type:'Feature',
+            ID:3045, 
+            name:"Trojani grade",      
+            topic:["General Surgery",],  
+            subtype:["Scores",],
+            who:"Monique Trojani",   //whoSearch:["",],
+            where:"Bordeaux - France",                    
+            when:"1984",   
+            disease:["Sarcoma",], 
+            ops:"",//["",],
+            geometry: { type: 'Point', coordinates: [ -0.58172, 44.82401 ]}, //long,lat
+            properties: { title:"Trojani grade", description:'Bordeaux - France<br>1984'},
             //googlehtz: 0, //search: "  " AND "   " [02-Oct-21]
-            //refs:"<br>Soft-tissue sarcomas of adults; study of pathological prognostic variables and definition of a histopathological grading system. <i>Int J Cancer</i>.<br>",  
-            //jrnls:["Int J Cancer",],
-            //imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            //about:"",// 
-            //URLs:"",//
-            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            refs:"<br>Trojani M, Contesso G, Coindre JM, et al. Soft-tissue sarcomas of adults; study of pathological prognostic variables and definition of a histopathological grading system. <i>Int J Cancer</i>. 1984; 33(1): 37-42<br>",  
+            jrnls:["Int J Cancer","International Journal of Cancer",],
+            imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            about:"",// 
+            URLs:"",//
+            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            //date: 15th January
         },{
             type:'Feature',
             ID:3050, 
@@ -9858,6 +9891,26 @@
             about:"",
             URLs:"",//
             acknow:"",//"<br><br><br><i>We kindly acknowledge Mr XY FRCS who contributed the above information.</i>",
+        //},{
+            //type:'Feature',
+            //ID:3950, 
+            //name:"Zuckerkandl's retrorenal fascia",      
+            //topic:[""], 
+            //subtype:["",], 
+            //who:"Emil & Otto Zuckerkandl", whoSearch:["Emil Zuckerkandl",],    
+            //where:"Vienna", whereSearch:["",],           
+            //when:"1883",   
+            //disease:[" ", " ",],
+            //ops:["Nephrectomy",],
+            //geometry: {type: 'Point', coordinates: [   ,  ]}, //lng,lat
+            //properties: { title:"", description:'Vienna<br> '},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            //refs:"",   
+            //jrnls:"",//["",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+            //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"<br>Anatomist, Emil, had a brother, Otto, who was a Urologist, and they discussed anatomy.<br>", 
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         //},{
             //type:'Feature',
             //ID:4000, 
