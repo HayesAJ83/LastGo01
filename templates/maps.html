@@ -282,7 +282,7 @@
         <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
 
-        
+
 
         <script>
             const eponyms = {
@@ -10284,8 +10284,8 @@
                     type: 'geojson',
                     data: eponyms,
                     cluster: true,
-                    clusterMaxZoom: 15, // Max zoom to cluster points on
-                    clusterRadius: 40 // Radius of each cluster when clustering points (defaults to 50)
+                    clusterMaxZoom: 12, // Max zoom to cluster points on
+                    clusterRadius: 35 // Radius of each cluster when clustering points (defaults to 50)
                 });
         
                 map.addLayer({
@@ -10311,7 +10311,7 @@
                         'circle-radius': [
                             'step',
                             ['get', 'point_count'],
-                             9,  //radius 9 at 2-10  
+                            10,  //radius 10 at 2-10  
                             10,  //2-10
                             14,  //radius 14 at 10-20
                             20,  //10-20
