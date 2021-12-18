@@ -130,42 +130,51 @@
             <!-- End of Section -->
 
             <!-- Section -->
-            <section id="section-2">
+            <section id="section-2" class="pt-7 pb-0 bg-blue-light">
                 <div class="container">
                     <div class="row align-items-center text-center">
-                        <div class="col">
-                            <h1 class="text-black mb-2 fs-1 ">Specialties</h1>
-                            <a class="btn btn-primary active"   id="btn_all"    role="button" aria-pressed="true">All</a>
-                            <a class="btn btn-light" id="btn_select" role="button" aria-pressed="true">Options</a>
+                        <div class="col" data-aos="fade-up" id="select3">
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Countries</h1>
+                            <select id="sel" class="selectpicker show-tick"
+                                    data-style="btn-primary" data-header="Search list:" 
+                                    data-width="325px" data-size="6"
+                                    data-aos="zoom-in"
+                                    data-container="body"
+                                    data-live-search="true";">
+                                    <option value=""> -- select -- </option>
+                            </select>
+                            <p></p>
+                            <p></p>
+                            <p></p>
                         </div>
                     </div>
-                    <hr style="height:1px; visibility:hidden">
-                    <form method="POST">
-                        <div class="row align-items-center text-center">
-                            <div class="col" id="selector" style="display:none">
-                                <select multiple id="select1">
-                                    {% for spec in specs %}
-                                        <option> <li>{{ spec }}</li> </option>
-                                    {% endfor %}
-                                </select>
-                            </div>
-                        </div>
-                    </form>
                 </div>
-                <br></br>
-                <br></br>
-                <div class="container">
+                <p></p>
+                <p></p>
+                <hr style="height:1px; visibility:hidden">
+                <form method="POST">
                     <div class="row align-items-center text-center">
-                        <div class="col">
-                            <h1 class="text-black mb-2 fs-1 ">Eponyms</h1>
-                            <select id="select3">
-                            {% for name in names %}
-                                <option> <li>{{ name }}</li> </option>
-                            {% endfor %}
+                        <div class="col" data-aos="fade-up" id="select5" style="display:none"> <!--works-->
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
+                            <select id="sel9" class="selectpicker show-tick"
+                                    data-style="btn-primary" data-header="Search list:" 
+                                    data-width="325px" data-size="6"
+                                    data-aos="zoom-in"
+                                    data-container="body"
+                                    data-live-search="true" onchange="show2(this.value);">
+                                    <option value=""> -- select -- </option>
                             </select>
                         </div>
                     </div>
+                </form>
+                <div class="row align-items-center text-center" id='blurb'>
+                    <div class="lead" id='imgName2'></div>
+                    <p class="lead" id="msg2"></p>
+                    <p class="lead" id="msg3"></p>
                 </div>
+                <br>
+                <br>
+                <br>
             </section>
             <!-- End of Section -->
 
