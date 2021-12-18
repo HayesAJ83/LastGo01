@@ -42,6 +42,7 @@
             gtag('config', 'UA-129313359-1');
         </script>
 
+
         <!-- Theme Stylesheets -->
         <link href="/static/assets/css/theme.css" rel="stylesheet">
 
@@ -57,20 +58,6 @@
         <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js'></script>
         <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css' rel='stylesheet' />
          
-        <!-- Load the `mapbox-gl-geocoder` plugin. -->
-        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
-        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
-
-        <style>
-            body { margin: 0; padding: 0; }
-            #map { position: absolute; height: 280px; width: 364px; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
-            
-            .mapboxgl-popup-content {
-                text-align: center;
-                font-family: 'Open Sans', sans-serif;
-                }
-        </style>
-
 
     </head>
 
@@ -101,8 +88,8 @@
 
         <!-- Main Content -->
         <main class="main minh-100vh">
-            <!-- Section -->
-            <section class="py-0 overflow-hidden text-center" id="section-1">
+              <!-- Section -->
+              <section class="py-0 overflow-hidden text-center" id="section-1">
                 <div class="bg-container overlay parallax" data-rellax-percentage="0.5" style="background-image: url(/static/assets/img/backgrounds/iStock-1270087897_big.jpg)"></div>
                 <div class="container">
                     <div class="row h-100vh justify-content-center align-items-center">
@@ -118,44 +105,48 @@
             <!-- End of Section -->
 
             <!-- Section -->
-            <section id="section-2">
-                <div class="container" style="height:215px">
-                    <div class="row align-items-center text-center">
-                        <div class="col">
-                            <h1 class="text-black mb-2 fs-1" style="height:30px">Categories</h1>
-                        </div>
-                    </div>
-                    <!--<hr style="height:1px; visibility:hidden">-->
-                    <form method="POST">
-                        <div class="row align-items-center text-center">
-                            <div class="col" id="selector">
-                                <select id="select1" class="selectpicker show-tick"
-                                    name="min_multi_select" 
-                                    data-style="btn-primary" data-header="Search list:"
-                                    data-width="340px" data-size="5"
-                                    data-live-search="true">
-                                    <option value=""> -- select -- </option>
-                                </select>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+            <section id="section-2" class="pt-7 pb-0 bg-blue-light">
                 <div class="container">
                     <div class="row align-items-center text-center">
-                        <div class="col" id="select4">
-                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
-                            <select id="SEL2" class="selectpicker show-tick" 
+                        <div class="col" data-aos="fade-up" id="select3">
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Categories</h1>
+                            <select id="sel" class="selectpicker show-tick"
                                     data-style="btn-primary" data-header="Search list:" 
-                                    data-width="340px" data-size="5"
-                                    data-live-search="true" onchange="show2(this.value);">
-                                    
+                                    data-width="325px" data-size="6"
+                                    data-aos="zoom-in"
+                                    data-container="body"
+                                    data-live-search="true";">
+                                    <option value=""> -- select -- </option>
                             </select>
-                            <div class="lead" id='imgName2'></div>
-                            <p class="lead" id="msg2"></p>  
+                            <p></p>
+                            <p></p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
-                <br>
+                <p></p>
+                <p></p>
+                <hr style="height:1px; visibility:hidden">
+                <form method="POST">
+                    <div class="row align-items-center text-center">
+                        <div class="col" data-aos="fade-up" id="select5" style="display:none"> <!--works-->
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
+                            <select id="sel9" class="selectpicker show-tick"
+                                    data-style="btn-primary" data-header="Search list:" 
+                                    data-width="325px" data-size="6"
+                                    data-aos="zoom-in"
+                                    data-container="body"
+                                    data-live-search="true" onchange="show2(this.value);">
+                                    <option value=""> -- select -- </option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+                <div class="row align-items-center text-center" id='blurb'>
+                    <div class="lead" id='imgName2'></div>
+                    <p class="lead" id="msg2"></p>
+                    <p class="lead" id="msg3"></p>
+                </div>
                 <br>
                 <br>
                 <br>
@@ -189,7 +180,6 @@
         </footer>
         <!-- End of Footer -->
 
-
         <!-- Javascripts -->
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -215,6 +205,7 @@
 
         <!-- Load d3.js -->
         <script src="https://d3js.org/d3.v4.js"></script>
+
 
 
 
@@ -2142,7 +2133,7 @@
             whoSearch:["Charles Child", "RN Pugh",],
             where:"London - England",  whereSearch:["London", "England", "UK",],              
             when:"1973",//  
-            disease:["Liver failure","Varices",], 
+            disease:["Liver failure",], 
             ops:["Liver transplant",],
             opsSpec:{'HPB': ['Liver transplant', ],
                      'Transplant': ['Liver transplant', ], 
@@ -4463,7 +4454,7 @@
             where:"Dublin - Ireland",    
             whereSearch:["Dublin", "Ireland",],                 
             when:"1835",  
-            disease:["Autoimmune conditions","Goitre", "Thyroiditis", "Thyrotoxicosis",],   
+            disease:["Autoimmune conditions", "Thyroiditis", "Thyrotoxicosis",],   
             ops:["Thyroidectomy",],
             opsSpec:{'Endocrine': ['Thyroidectomy',], },
             geometry: {type: 'Point', coordinates: [ -6.2559 , 53.3437 ]}, //lng,lat
@@ -5217,7 +5208,7 @@
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/Lentigo_maligna' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
             //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
 
-/// IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII ///
+/// IIIIIIIIIIIIIIIII I I I I I I I I I I I I I I I I I I I I I I I I I I I I ///
 
         //},{
             //type:'Feature',
@@ -5237,26 +5228,26 @@
             //imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             //about:"",//
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
-            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-        },{
-            type:'Feature',
-            ID:1605, 
-            name:"Inokuchi portal shunt",      
-            topic:["HPB",], subtype:["Operations",],
-            who:"Kiyoshi Inokuchi", //whoSearch:["",], 
-            where:"Fukuoka - Japan", //whereSearch:[" ", " ",],               
-            when:"1970",   
-            disease:["GI bleeding","Liver failure","Portal hypertension","Varices",],  
-            ops:["Portal-systemic shunt",],
-            geometry: {type: 'Point', coordinates:[ 130.41557, 33.60892 ]}, //lng,lat
-            properties: { title:"Inokuchi portal shunt", description:'Fukuoka<br>1970'}, 
+            //acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        //},{
+            //type:'Feature',
+            //ID:1602, 
+            //name:"Inokuchi portal shunt",      
+            //topic:["HPB",], subtype:["Operations",],
+            //who:"Inokuchi", //whoSearch:["",], 
+            //where:"Japan", whereSearch:[" ", " ",],               
+            //when:"1970",   
+            //disease:[" ", " "],  
+            //ops:[" ", " ",],
+            //geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+            //properties: { title:"Inokuchi portal shunt", description:'<br>'}, 
             //googlehtz: 0, //search: "   " AND " " [02-Oct-21]
-            refs:"<br>Inokuchi K, Kobayashi M, Kusaba A, Ogawa Y, Saku M, Shiizaki T. New selective decompression of esophageal varices. By a left gastric venous-caval shunt. <i>Arch Surg</i>. 1970; 100(2): 157-62<br>",   
-            jrnls:["Arch Surg","Archives of Surgery",],
-            imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            about:"",//<br><br><br>",
-            URLs:"<br><a href='https://jamanetwork.com/journals/jamasurgery/article-abstract/569291' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <br>",
-            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            //refs:"<br>",   
+            //jrnls:["Arch Surg",],
+            //imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"",//<br><br><br>",
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", //no wiki
+            //acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:1610, 
@@ -5300,7 +5291,7 @@
             URLs:"<br><a href='https://academic.oup.com/bjs/article-abstract/34/133/18/6231219?redirectedFrom=fulltext' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://livesonline.rcseng.ac.uk/client/en_GB/lives/search/detailnonmodal/ent:$002f$002fSD_ASSET$002f0$002fSD_ASSET:378866/one?qu=%22rcs%3A+E006683%22&rt=false%7C%7C%7CIDENTIFIER%7C%7C%7CResource+Identifier' target='_blank' class='btn btn-success' role='button'>RCSEng Link</a> <br><br>",
             acknow:"",
         
-/// JJJJJJJJJJJJJJJJJJJJJJJJJJJJ J J J J J J J J J J J J ///
+/// JJJJJJJJJJJ J J J J J J J J J J J J J J J J J J J J J J J ///
         
         //},{
             //type:'Feature',
@@ -5340,25 +5331,25 @@
             //about:"Brain drain",//<br><br><br>",
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/Jackson-Pratt_drain' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
             //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-        },{
-            type:'Feature',
-            ID:1650, 
-            name:"Jadad scale",      
-            topic:["Academic",], subtype:["Scores",],
-            who:"Alex Jadad", //whoSearch:["",], 
-            where:"Oxford - England - UK", //whereSearch:[" ", " ",],               
-            when:"1996",   
-            disease:"",//["",],  
-            ops:"",//["",],
-            geometry: {type: 'Point', coordinates:[ -1.22144, 51.76512 ]}, //lng,lat
-            properties: { title:"Jadad scale", description:'Oxford<br>1996'}, 
+        //},{
+            //type:'Feature',
+            //ID:1650, 
+            //name:"Jadad scale",      
+            //topic:["Academic",], subtype:["Scores",],
+            //who:"Alex Jadad", //whoSearch:["",], 
+            //where:"Oxford - England - UK", whereSearch:[" ", " ",],               
+            //when:" ",   
+            //disease:[" ", " "],  
+            //ops:[" ", " ",],
+            //geometry: {type: 'Point', coordinates:[ ,  ]}, //lng,lat
+            //properties: { title:"Jadad scale", description:' <br>'}, 
             //googlehtz: 0, //search: "   " AND " " [02-Oct-21]
-            refs:"<br>Jadad AR, Moore RA, Carroll D, Jenkinson C, Reynolds DJ, Gavaghan DJ, McQuay HJ. Assessing the quality of reports of randamized clinial trials: Is blinding necessary? <i>Control Clin Trials</i>. 1996: 17(1): 1-12<br>",   
-            jrnls:["Control Clin Trials","Controlled Clinical Trials",],
-            imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            about:"",//
-            URLs:"<br><a href='https://en.wikipedia.org/wiki/Jadad_scale' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  // https://www.sciencedirect.com/science/article/abs/pii/0197245695001344?via%3Dihub
-            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            //refs:"<br>",   
+            //jrnls:"",//["",]
+            //imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"",//
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/Jadad_scale' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+            //acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:1660, 
@@ -8357,7 +8348,7 @@
             where:"Manhattan - New York - USA",    
             whereSearch:["Manhattan, New York, USA",],                
             when:"1950",   
-            disease:["GI bleeding","Haemorrhage","Liver failure","Shock","Varices"], 
+            disease:["GI bleeding","Haemorrhage","Liver failure","Shock",], 
             ops:["Endoscopy",], 
             geometry: { type: 'Point', coordinates: [ -73.942823, 40.842159 ]}, //long,lat
             properties: { title:"Sengstaken-Blakemore tube", description:'New York<br>1950'},
@@ -10028,13 +10019,14 @@
 
 
 
-
-
         <script>
             $(document)
             .ready(function() {
-            let result1 = eponyms.features
-                .flatMap(item => item.subtype)
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.subtype !== "");
+                });  /// DROP those WITHOUT OPERATIONS
+            let result1 = returnedData
+                .flatMap(item => item.subtype) //"item.topic" gives us SPECIALTIES
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
                 let resultsort1 = result1.sort()
@@ -10046,12 +10038,33 @@
                     el.textContent = opt;
                     el.value = opt;
                     select.appendChild(el);
-	                }
-            console.log()
-                });
+                    }
+            //console.log()   /// This gives us array with all features - when select1 is changed
+            });
+        </script>
 
+        <script>
+            $(document)
+            .ready(function() {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.subtype !== "");
+                });  /// DROP those WITHOUT OPERATIONS
+            let result1 = returnedData
+                .flatMap(item => item.subtype) //"item.ops" gives us OPERATIONS
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
+                let resultSubtypes = result1.sort()
+                var selectSubtypes = document.getElementById("sel");
+                var optionS = resultSubtypes;
+                for(var i = 0; i < optionS.length; i++) {
+                    var opt1 = optionS[i];
+                    var el1 = document.createElement("option");
+                    el1.textContent = opt1;
+                    el1.value = opt1;
+                    selectSubtypes.appendChild(el1);
+                    }
+            });
 
-            ///  DEFAULT_PAGE_1  ///
             $(document)
             .ready(function() {
                 $('#select1').ready(function() {
@@ -10059,56 +10072,70 @@
                             return this.text}).get().join('\',\'') + '\'';
                     var stringArray = (new Function("return [" + value + "];")());
                 });
-            });
+            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
 
-    
-
-        ///  SELECTED_SPECIALTIES_1  ///
-            $(document)
-            .ready(function() {
-            $('#btn_select').on('click', function() {
-                $('#btn_all').removeClass("btn btn-danger active");
-                $('#btn_all').addClass("btn btn-light");
-                $('#btn_select').removeClass("btn btn-light");
-                $('#btn_select').addClass("btn btn-danger active");
-                $('#selector').fadeIn(400);
-                $('#select3').fadeOut(400);
+            let select ="";
+            $("#select1").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
                 
-                let select = "";
-                $("#select1").find('option:selected').each(function() {
-                select += "\'" + $.trim($(this).text()) + "\',";
-                });
-                if (select != "") {
-                    select = select.substr(0);
-                }
-                var stringArray = (new Function( "return [" + select + "];")());
-                function topicFilter2(taxonomy) {
-                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                return eponyms.features.filter(item => {
-                    let subtype = Array.isArray(item.subtype) ? item.subtype : [item.subtype];
-                    return taxonomy.some(med => subtype.includes(med));
+            function topicFilter2(taxonomy) {
+                const returnedData = $.grep(eponyms.features, function(element, index) {
+                    return (element.subtype !== "");
+                    });  /// DROP those WITHOUT OPERATIONS
+                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                return returnedData.filter(item => {
+                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                    return taxonomy.some(med => topic.includes(med));
                     });
-                    }
-                var select2 = topicFilter2(stringArray);
+                }
+                    
+            var selected2 = topicFilter2(stringArray); 
+            console.log(selected2) //gives array of selected specialties eg. [ "Anaesthetics", "Trauma" ]
 
-                if (!select2.length) {var push = "";} 
-                else {
-                    var push = select2.reduce((options, {ID,name}) =>
-                        options += `<option value="${ID}">${name}</option>`);
-                        }
+        </script>
+
+        <script> 
+            /// ALL - specialties
+            /// THIS WORKS FINE
+            $('#sel').on('change', function() {
+                $('#select5').fadeIn(50);
+                let select ="";
+                $("#sel").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
+                console.log(stringArray); //works Array [chosen options]
                 
-                function populateSelect() {
-                    if (!select2.length) {var push = "";}
-                    else {
-                        var push = select2.reduce((options, {ID,name}) =>
-                            options += `<option value="${ID}">${name}</option>`);
-                            }}
+                function topicFilter2(taxonomy) {
+                    const returnedData = $.grep(eponyms.features, function(element, index) {
+                        return (element.ops !== "");
+                        });  /// DROP those WITHOUT OPERATIONS
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return returnedData.filter(item => {
+                        let subtypes = Array.isArray(item.subtype) ? item.subtype : [item.subtype];
+                        return taxonomy.some(med => subtype.includes(med));
+                        });
+                    }
                 
-                populateSelect()
-                $( '#SEL2' ).html(push);
-                show()
-                        }).trigger("change")
-                });
+                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+                console.log(selected2)
+
+                function populateSelect2() {
+                    document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`,
+                        '<option value=""> -- select -- </option>'
+                        );
+                    }
+            
+                populateSelect2()
+                $('#sel9').selectpicker('refresh');
+                $('#sel').on('change', function() {
+                    $('#sel').selectpicker('toggle'); //added to toggle open/close
+                    $('#sel9').selectpicker('refresh');
+                    });
+            });
         </script>
 
         <script>  ///  SELECTED_SPECIALTIES_2  ///
@@ -10117,144 +10144,119 @@
                 $("#select1").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
                     if(select != ""){select = select.substr(0);};
-                var stringArray = (new Function("return [" + select+ "];")());
+                var stringArray = (new Function("return [" + select + "];")());
                 console.log(stringArray); //works Array [chosen options]
                 
                 function topicFilter2(taxonomy) {
+                    const returnedData = $.grep(eponyms.features, function(element, index) {
+                    return (element.subtype !== "");
+                    });  /// DROP those WITHOUT OPERATIONS
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                    return eponyms.features.filter(item => {
-                        let subtype = Array.isArray(item.subtype) ? item.subtype : [item.subtype];
-                        return taxonomy.some(med => subtype.includes(med));
+                    return returnedData.filter(item => {
+                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
                         });
                     }
                 
                 var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-                //console.log(selected2)
+                console.log(selected2)
 
-                function populateSelect2() {
-                    document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
-                        options += `<option value="${ID}">${name}</option>`,
-                        '<option value=""> -- select -- </option>'
-                        );
-                    }
-            
-                populateSelect2()
+                /// NOW GET THE OPERATIONS FRTOM THIS SMALL JSON
+
+                let result10 = selected2
+                    .flatMap(item => item.subtype)
+                    .filter((item, i, arr) => arr.indexOf(item) === i)
+                    //.filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
+                    let resultSubtypes10 = result10.sort()
+                    var selectSubtypes10 = document.getElementById("SEL2");
+                    var optionS10 = resultOps10;
+                    for(var i = 0; i < optionS10.length; i++) {
+                        var opt10 = optionS10[i];
+                        var el10 = document.createElement("option");
+                        el10.textContent = opt10;
+                        el10.value = opt10;
+                        selectSubtypes10.appendChild(el10);
+                        }
                 
-                $('#select4').fadeIn(500);
+                
+                $('#select4').fadeIn(50);
                 $('#SEL2').selectpicker('refresh');
+
                 $('#select1').on('change', function() {
                     $('#select1').selectpicker('toggle'); //added to toggle open/close
                     $('#SEL2').selectpicker('refresh');
                     });
-            });
-                
-           
-            $('#SEL2').change(function() {
-                let select ="";
-                $("#select1").find('option:selected').each(function() {
-                    select += "\'" + $.trim($(this).text()) + "\',";});
-                    if(select != ""){select = select.substr(0);};
-                var stringArray = (new Function("return [" + select+ "];")());
-                
-                function topicFilter2(taxonomy) {
-                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                    return eponyms.features.filter(item => {
-                        let subtype = Array.isArray(item.subtype) ? item.subtype : [item.subtype];
-                        return taxonomy.some(med => subtype.includes(med));
-                        });
-                    }
-                    
-                var selected2 = topicFilter2(stringArray);
-                console.log(selected2)
-                function show(id) {
-                    var msg = document.getElementById('msg');
-                    if (!id) {msg.innerHTML = "";
-                    } else {
-                        for (var i = 0; i < eponyms.features.length; i++) {
-                        if  (Number(id) === eponyms.features[i].ID) {
-                            msg.innerHTML = "<br><br>"+
-                                            'Who'   +":   "+ eponyms.features[i].who.bold()   +"<br>"+
-                                            'Where' +":   "+ eponyms.features[i].where.bold() +
-                                            eponyms.features[i].acknow;
-                                            }}}}
-                }).trigger("change")
-
-
-            $('#select4').change(function() {
-                let select ="";
-                $("#select1").find('option:selected').each(function() {
-                    select += "\'" + $.trim($(this).text()) + "\',";});
-                    if(select != ""){select = select.substr(0);};
-                var stringArray = (new Function("return [" + select+ "];")());
-                
-                function topicFilter2(taxonomy) {
-                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                    return eponyms.features.filter(item => {
-                        let subtype = Array.isArray(item.subtype) ? item.subtype : [item.subtype];
-                        return taxonomy.some(med => subtype.includes(med));
-                        });
-                    }
-                    
-                var selected2 = topicFilter2(stringArray);
-                console.log(selected2)
-                
-                }).trigger("change")
+                });
             
         </script>
 
         <script>
-            function show(id) {
-            var msg = document.getElementById('msg');
-            if (!id) {msg.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.features.length; i++) {
-                if  (Number(id) === eponyms.features[i].ID) {
-                    msg.innerHTML = "<br>"+
-                                    eponyms.features[i].who.bold()   +"<br>"+
-                                    eponyms.features[i].when.bold()  +"<br>"+
-                                    eponyms.features[i].where.bold() +"<br><br>"+
-                                    eponyms.features[i].about +
-                                    eponyms.features[i].refs +
-                                    eponyms.features[i].URLs +
-                                    eponyms.features[i].acknow
-                                    ;}}}}
+
+            function show(id) {   
+                var imgName = document.getElementById('imgName');
+                if (!id) {imgName.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        imgName.innerHTML = eponyms.features[i].imgName
+                                                ;}}}
+                                            $('.imgName').fadeIn('slow');
+
+                var info = document.getElementById('info');
+                if (!id) {imgName.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        info.innerHTML =    "<br>"+
+                                            eponyms.features[i].who.bold()   +"<br>"+
+                                            eponyms.features[i].when.bold()  +"<br>"+
+                                            eponyms.features[i].where.bold() +"<br><br>"+
+                                            eponyms.features[i].about +
+                                            eponyms.features[i].refs +
+                                            eponyms.features[i].URLs +
+                                            eponyms.features[i].acknow
+                                                ;}}}
+                                            }                           
         </script>
 
         <script>
             function show2(id) {
 
-            var imgName2 = document.getElementById('imgName2');
-            if (!id) {imgName2.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.features.length; i++) {
-                if  (Number(id) === eponyms.features[i].ID) {
-                    imgName2.innerHTML = eponyms.features[i].imgName
-                                            ;}}}
-                                        $('.imgName2').fadeIn('slow');
-            
-            var msg2 = document.getElementById('msg2');
-            if (!id) {msg2.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.features.length; i++) {
-                if  (Number(id) === eponyms.features[i].ID) {
-                    msg2.innerHTML = "<br>"+
-                                    eponyms.features[i].who.bold()   +"<br>"+
-                                    eponyms.features[i].when.bold()  +"<br>"+
-                                    eponyms.features[i].where.bold() +"<br><br>"+
-                                    eponyms.features[i].about +
-                                    eponyms.features[i].refs +
-                                    eponyms.features[i].URLs +
-                                    eponyms.features[i].acknow
-                                            ;}}}
-                                        $('.msg2').fadeIn('slow');
-                                        }
+                var imgName2 = document.getElementById('imgName2');
+                if (!id) {imgName2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        imgName2.innerHTML = eponyms.features[i].imgName
+                                                ;}}}
+                
+                var msg2 = document.getElementById('msg2');
+                if (!id) {msg2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg2.innerHTML = "<br>"+
+                                        eponyms.features[i].who.bold()   +"<br>"+
+                                        eponyms.features[i].when.bold()  +"<br>"+
+                                        eponyms.features[i].where.bold() +"<br><br>"
+                                                ;}}}
+                                        
+                var msg3 = document.getElementById('msg3');
+                if (!id) {msg2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg3.innerHTML = 
+                                        eponyms.features[i].about +
+                                        eponyms.features[i].refs +
+                                        eponyms.features[i].URLs +
+                                        eponyms.features[i].acknow
+                                                ;}}}                           
+            }
+
         </script>
 
         <script src="/static/assets/js/theme.js"></script>
 
-          
     </body>
 </html>
-
-
-        
