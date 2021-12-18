@@ -10068,159 +10068,193 @@
 
 
 
-
-
         <script>
             $(document)
             .ready(function() {
-                $('#select1').ready(function() {
-                    let value = $('#select1 option').map(function() {
-                            return this.text}).get().join(',');
-                    $( "p1" ).html( value );
-                });
-            });
-        </script>
-
-        <script>
-            $(document)
-            .ready(function() {
-                $('#select1').on('change', function() {
-                    var select ="";
-                    $("#select1").find('option:selected').each(function() 
-                        {select +=","+$.trim($(this).text());});
-                        if(select != ""){select = select.substr(1);}
-                $( "p1" ).html( select );
-                });
-            });
-        </script>
-
-        <script>
-            $(function() {
-                $('#btn_all').on('click', function() {
-                    $('#btn_all').removeClass("btn btn-light");
-                    $('#btn_all').addClass("btn btn-primary active");
-                    $('#selector').fadeOut(200);
-                    $('#btn_select').removeClass("btn btn-primary active");
-                    $('#btn_select').addClass("btn btn-light");
-                    let value = $('#select1 option')
-                        .map(function() {
-                            return this.text
-                            })
-                        .get().join(',');
-                    $( "p1" ).html( value );
-                    });
-                
-                $('#btn_select').on('click', function() {
-                    $('#btn_all').removeClass("btn btn-primary active");
-                    $('#btn_all').addClass("btn btn-light");
-                    $('#btn_select').removeClass("btn btn-light");
-                    $('#btn_select').addClass("btn btn-primary active");
-                    $('#selector').fadeIn(200);
-                });
-            });
-        </script>
-
-        <script>
-            $('#btn_select').on('click', function() {
-                $('#select1').ready(function() {
-                    var select ="";
-                    $("#select1").find('option:selected').each(function() {
-                        select +=","+$.trim($(this).text());
-                    });
-                    if(select != ""){
-                        select = select.substr(1);
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.disease !== "");
+                });  /// DROP those WITHOUT OPERATIONS
+            let result1 = returnedData
+                .flatMap(item => item.topic) //"item.topic" gives us SPECIALTIES
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
+                let resultsort1 = result1.sort()
+                var select = document.getElementById("select1");
+                var options = resultsort1;
+                for(var i = 0; i < options.length; i++) {
+                    var opt = options[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    select.appendChild(el);
                     }
-                    $( "p1" ).html( select );
+            //console.log()   /// This gives us array with all features - when select1 is changed
+            });
+        </script>
+
+        <script>
+            $(document)
+            .ready(function() {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.disease !== "");
+                });  /// DROP those WITHOUT OPERATIONS
+            let result1 = returnedData
+                .flatMap(item => item.disease) //"item.ops" gives us OPERATIONS
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no ops
+                let resultDis = result1.sort()
+                var selectDis = document.getElementById("sel");
+                var optionS = resultDis;
+                for(var i = 0; i < optionS.length; i++) {
+                    var opt1 = optionS[i];
+                    var el1 = document.createElement("option");
+                    el1.textContent = opt1;
+                    el1.value = opt1;
+                    selectDis.appendChild(el1);
+                    }
+            });
+
+            $(document)
+            .ready(function() {
+                $('#select1').ready(function() {
+                    let value = '\'' + $('#select1 option').map(function() {
+                            return this.text}).get().join('\',\'') + '\'';
+                    var stringArray = (new Function("return [" + value + "];")());
+                });
+            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
+
+            let select ="";
+            $("#select1").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
+                
+            function topicFilter2(taxonomy) {
+                const returnedData = $.grep(eponyms.features, function(element, index) {
+                    return (element.disease !== "");
+                    });  /// DROP those WITHOUT OPERATIONS
+                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                return returnedData.filter(item => {
+                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                    return taxonomy.some(med => topic.includes(med));
+                    });
+                }
+                    
+            var selected2 = topicFilter2(stringArray); 
+            console.log(selected2) //gives array of selected specialties eg. [ "Anaesthetics", "Trauma" ]
+
+        </script>
+
+        <script> 
+            /// ALL - specialties
+            /// THIS WORKS FINE
+            $('#sel').on('change', function() {
+                $('#select5').fadeIn(50);
+                let select ="";
+                $("#sel").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
+                console.log(stringArray); //works Array [chosen options]
+                
+                function topicFilter2(taxonomy) {
+                    const returnedData = $.grep(eponyms.features, function(element, index) {
+                        return (element.disease !== "");
+                        });  /// DROP those WITHOUT OPERATIONS
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return returnedData.filter(item => {
+                        let diseases = Array.isArray(item.disease) ? item.disease : [item.disease];
+                        return taxonomy.some(med => diseases.includes(med));
+                        });
+                    }
+                
+                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+                console.log(selected2)
+
+                function populateSelect2() {
+                    document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`,
+                        '<option value=""> -- select -- </option>'
+                        );
+                    }
+            
+                populateSelect2()
+                $('#sel9').selectpicker('refresh');
+                $('#sel').on('change', function() {
+                    $('#sel').selectpicker('toggle'); //added to toggle open/close
+                    $('#sel9').selectpicker('refresh');
                     });
             });
         </script>
 
         <script>
-            tail.select('#select1', {
-                multiple: true,
-                multiContainer: true,
-                multiSelectAll: true,
-                width: 350,
-            });
-        </script>
-     
-        <script>
-            $('#time').ionRangeSlider({
-            grid: true,
-            min: 1700,
-            max: 2100,
-            from: 2021,
-            prefix: 'Year : ',
-            prettify_separator: '',
-            hide_min_max: true,
-            });
+
+            function show(id) {   
+                var imgName = document.getElementById('imgName');
+                if (!id) {imgName.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        imgName.innerHTML = eponyms.features[i].imgName
+                                                ;}}}
+                                            $('.imgName').fadeIn('slow');
+
+                var info = document.getElementById('info');
+                if (!id) {imgName.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        info.innerHTML =    "<br>"+
+                                            eponyms.features[i].who.bold()   +"<br>"+
+                                            eponyms.features[i].when.bold()  +"<br>"+
+                                            eponyms.features[i].where.bold() +"<br><br>"+
+                                            eponyms.features[i].about +
+                                            eponyms.features[i].refs +
+                                            eponyms.features[i].URLs +
+                                            eponyms.features[i].acknow
+                                                ;}}}
+                                            }                           
         </script>
 
         <script>
-            $(document)
-            .ready(function() {
-                $('#time').on("change", function() {
-                    var $inp = $(this);
-                    var res = $inp.data("from");
-                    $("p2").html( res );
-                });
-            });
+        function show2(id) {
+
+            var imgName2 = document.getElementById('imgName2');
+            if (!id) {imgName2.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.features.length; i++) {
+                if  (Number(id) === eponyms.features[i].ID) {
+                    imgName2.innerHTML = eponyms.features[i].imgName
+                                            ;}}}
+            
+            var msg2 = document.getElementById('msg2');
+            if (!id) {msg2.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.features.length; i++) {
+                if  (Number(id) === eponyms.features[i].ID) {
+                    msg2.innerHTML = "<br>"+
+                                    eponyms.features[i].who.bold()   +"<br>"+
+                                    eponyms.features[i].when.bold()  +"<br>"+
+                                    eponyms.features[i].where.bold() +"<br><br>"
+                                            ;}}}
+                                    
+            var msg3 = document.getElementById('msg3');
+            if (!id) {msg2.innerHTML = "";
+            } else {
+                for (var i = 0; i < eponyms.features.length; i++) {
+                if  (Number(id) === eponyms.features[i].ID) {
+                    msg3.innerHTML = 
+                                    eponyms.features[i].about +
+                                    eponyms.features[i].refs +
+                                    eponyms.features[i].URLs +
+                                    eponyms.features[i].acknow
+                                            ;}}}                           
+        }
+
         </script>
 
-        <script>
-            tail.select('#select2', {
-                width: 340,
-            });
-        </script>
-
-        <script>
-            $(document)
-            .ready(function() {
-                let value = $('#select2').find('option:selected').text();
-                $( "p3" ).html( value );
-            });
-        </script>
-
-        <script>
-            $(document)
-            .ready(function() {
-                $('#select2').change(function() {
-                let value = $(this).find('option:selected').text();
-                $( "p3" ).html( value );
-                });
-            });
-        </script>
-
-        <script>
-            tail.select('#select3', {
-                width: 340,
-            });
-        </script>
-
-        <script>
-            $(document)
-            .ready(function() {
-                let value = $('#select3').find('option:selected').text();
-                $( "p4" ).html( value );
-            });
-        </script>
-
-        <script>
-            $(document)
-            .ready(function() {
-                $('#select3').change(function() {
-                let value = $(this).find('option:selected').text();
-                $( "p4" ).html( value );
-                });
-            });
-        </script>
-
-      
-        
         <!-- Theme Javascripts -->
         <script src="/static/assets/js/theme.js"></script>
-
-
 
         <script>
 
@@ -10383,7 +10417,6 @@
                 });
             });
         </script>
-        
 
     </body>
 </html>
