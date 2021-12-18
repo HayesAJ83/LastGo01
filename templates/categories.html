@@ -10115,7 +10115,7 @@
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return returnedData.filter(item => {
                         let subtypes = Array.isArray(item.subtype) ? item.subtype : [item.subtype];
-                        return taxonomy.some(med => subtype.includes(med));
+                        return taxonomy.some(med => subtypes.includes(med));
                         });
                     }
                 
