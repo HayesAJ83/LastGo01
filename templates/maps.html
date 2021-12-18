@@ -136,7 +136,7 @@
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col" data-aos="fade-up" id="select3">
-                            <h1 class="text-black mb-2 fs-1" style="height:30px">Disease & Symptoms</h1>
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Countries</h1>
                             <select id="sel" class="selectpicker show-tick"
                                     data-style="btn-primary" data-header="Search list:" 
                                     data-width="325px" data-size="6"
@@ -10072,7 +10072,7 @@
             $(document)
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
-                return (element.disease !== "");
+                return (element.country !== "");
                 });  /// DROP those WITHOUT OPERATIONS
             let result1 = returnedData
                 .flatMap(item => item.topic) //"item.topic" gives us SPECIALTIES
@@ -10096,10 +10096,10 @@
             $(document)
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
-                return (element.disease !== "");
-                });  /// DROP those WITHOUT OPERATIONS
+                return (element.country !== "");
+                });  /// DROP those WITHOUT country
             let result1 = returnedData
-                .flatMap(item => item.disease) //"item.ops" gives us OPERATIONS
+                .flatMap(item => item.country) //"item.country" gives us country
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no ops
                 let resultDis = result1.sort()
@@ -10159,12 +10159,12 @@
                 
                 function topicFilter2(taxonomy) {
                     const returnedData = $.grep(eponyms.features, function(element, index) {
-                        return (element.disease !== "");
+                        return (element.country !== "");
                         });  /// DROP those WITHOUT OPERATIONS
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return returnedData.filter(item => {
-                        let diseases = Array.isArray(item.disease) ? item.disease : [item.disease];
-                        return taxonomy.some(med => diseases.includes(med));
+                        let country = Array.isArray(item.country) ? item.country : [item.country];
+                        return taxonomy.some(med => country.includes(med));
                         });
                     }
                 
