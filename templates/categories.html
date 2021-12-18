@@ -10024,7 +10024,7 @@
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
                 return (element.subtype !== "");
-                });  /// DROP those WITHOUT OPERATIONS
+                });  /// DROP those WITHOUT subtypes
             let result1 = returnedData
                 .flatMap(item => item.subtype) //"item.topic" gives us SPECIALTIES
                 .filter((item, i, arr) => arr.indexOf(item) === i)
@@ -10110,7 +10110,7 @@
                 
                 function topicFilter2(taxonomy) {
                     const returnedData = $.grep(eponyms.features, function(element, index) {
-                        return (element.ops !== "");
+                        return (element.subtype !== "");
                         });  /// DROP those WITHOUT OPERATIONS
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return returnedData.filter(item => {
