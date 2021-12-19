@@ -43,6 +43,10 @@
 
             gtag('config', 'UA-129313359-1');
         </script>
+
+        <!-- Typed.JS -->      
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
     </head>
 
     <body>
@@ -87,7 +91,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="move d-none d-lg-block">
                             <a href="#section-2" class="text-white" data-smooth-scroll data-smooth-scroll-hash="false">
                                 <i class="zmdi zmdi-long-arrow-down zmdi-hc-2x"></i>
@@ -112,35 +115,39 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="row justify-content-center text-center mt-3">
-                                <div class="col-6 col-md-4 col-lg-3 mb-5 mb-md-6 px-4 px-lg-6">
+                                <div class="col-6 col-md-4 col-lg-3 mb-5 mb-md-6 px-4 px-lg-4">
                                     <div class="mb-3 p-1 d-flex square rounded-circle bg-blue-light" data-aos="flip-right" data-aos-duration="1000">
                                         <i class="fas fa-database fs-2 fs-md-3 fs-xl-4 d-flex align-self-center mx-auto text-secondary"></i>
                                     </div>
                                     <h6 class="text-uppercase" data-aos="zoom-in" data-aos-delay="000" data-aos-duration="500">Database</h6>
                                 </div>
 
-                                <div class="col-6 col-md-4 col-lg-3 mb-5 mb-md-0 px-4 px-lg-6">
+                                <div class="col-6 col-md-4 col-lg-3 mb-5 mb-md-0 px-4 px-lg-4">
                                     <div class="mb-3 p-1 d-flex square rounded-circle bg-blue-light" data-aos="flip-right" data-aos-delay="100" data-aos-duration="1000">
                                         <i class="fas fa-sliders-h fs-2 fs-md-3 fs-xl-4 d-flex align-self-center mx-auto text-secondary"></i>
                                     </div>
                                     <h6 class="text-uppercase" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="500">Interactive</h6>
                                 </div>
 
-                                <div class="col-6 col-md-4 col-lg-3 mb-5 mb-md-0 px-4 px-lg-6">
+                                <div class="col-6 col-md-4 col-lg-3 mb-5 mb-md-0 px-4 px-lg-4">
                                     <div class="mb-3 p-1 d-flex square rounded-circle bg-blue-light" data-aos="flip-right" data-aos-delay="200" data-aos-duration="1000">
                                         <i class="fas fa-globe fs-2 fs-md-3 fs-xl-4 d-flex align-self-center mx-auto text-secondary"></i>
                                     </div>
                                     <h6 class="text-uppercase" data-aos="zoom-in" data-aos-delay="150" data-aos-duration="500">World Maps</h6>
                                 </div>
 
-                                <div class="col-6 col-md-4 col-lg-3 mb-5 mb-md-0 px-4 px-lg-6">
+                                <div class="col-6 col-md-4 col-lg-3 mb-5 mb-md-0 px-4 px-lg-4">
                                     <div class="mb-3 p-1 d-flex square rounded-circle bg-blue-light" data-aos="flip-right" data-aos-delay="250" data-aos-duration="1000">
                                         <i class="fab fa-wikipedia-w fs-2 fs-md-3 fs-xl-4 d-flex align-self-center mx-auto text-secondary"></i>
                                     </div>
                                     <h6 class="text-uppercase" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="500">Webpage Links</h6>
                                 </div>
-
                             </div>
+                            <div id="typed-strings">
+                                <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+                                <p>It <em>types</em> out sentences.</p>
+                            </div>
+                            <span id="typed"></span>
                         </div>
                     </div>
                 </div>
@@ -228,7 +235,7 @@
                                 </div>
                                 <img src="/static/assets/img/backgrounds/iStock-583857946_A2Z.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover"/>
                             </a>
-                            <h6><a href="/alphabet" class="text-body" data-aos="zoom-in" data-aos-delay="20" data-aos-duration="200">A to Z</a></h6>
+                            <h6><a href="/alphabet" class="text-body" data-aos="zoom-in" data-aos-delay="20" data-aos-duration="200">A to Z - BY SPECIALTY</a></h6>
                         </div>
                     </div>
                 </div>
@@ -312,6 +319,13 @@
                 $('#mdb-preloader').delay(1000).fadeOut(300);
             });
         </script>
+
+        <script>
+            var typed = new Typed('#typed', {
+              stringsElement: '#typed-strings'
+            });
+        </script>
+          
 
         <!-- Theme Javascripts -->
         <script src="/static/assets/js/theme.js"></script>
