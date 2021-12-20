@@ -119,6 +119,15 @@
                             <!--<p class="mb-5 fs-2 text-white font-weight-bold" data-aos="zoom-in" data-aos-delay="100">filter by specialty<br></p>-->
                             <p class="mb-5 fs-1 text-white" data-aos="zoom-in" data-aos-delay="100">find eponym definitions, history,<br>photos, references & weblinks</p>
                             <a href="https://lastgospyre.herokuapp.com/alphabet" class='btn btn-light' role='button'>reload</a>
+
+                            
+                            <div class="banner">
+                                <div class="typed_wrap">
+                                    <h1>We Are <span class="typed"></span></h1>
+                                </div>
+                            </div>
+                            
+
                         </div>
                     </div>
                 </div>
@@ -279,10 +288,10 @@
             googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             refs:"<br>Aaron CD. A sign indicative of chronic appendicitis. <i>JAMA</i>. 1913; 60(5): 350-351<br>",    
             jrnls:["JAMA",],
-            imgName:"<br><img src=\"../static/assets/img/profiles/Charles_Dettie_Aaron.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"",// no clear copyright source for image <br><img src=\"../static/assets/img/profiles/Charles_Dettie_Aaron.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"<br>Aaron's sign, indicitive of chronic appendicitis, is demonstrated by prolonged firm pressure at McBurney's point which produces pain in the epigastric region. In Aaron's 1913 paper, he describes his findings in four patients.<br><br>", 
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-            URLs:"<br><br><a href='https://jamanetwork.com/journals/jama/article-abstract/214191' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://en.wikipedia.org/wiki/Aaron%27s_sign' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <br>",
+            URLs:"<br><br><a href='https://jamanetwork.com/journals/jama/article-abstract/214191' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://en.wikipedia.org/wiki/Aaron%27s_sign' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <br>", //whonamedit?   http://www.whonamedit.com/synd.cfm/341.html
         //},{
             //type:'Feature',
             //ID: 3, 
@@ -317,13 +326,13 @@
             ops:["Thyroidectomy",],
             opsSpec: {'Endocrine':['Thyroidectomy',] },
             geometry: {type: 'Point', coordinates: [ 135.1824, 34.18827 ]}, //lng,lat
-            properties: { title:"Akamizu's criteria", description:'Wakayama<br>2012'},
+            properties: { title:"Akamizu's criteria", description:'Wakayama Medical University<br>2012'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"<br>Akamizu T, Satoh T, Isozaki O, et al. Diagnostic criteria, clinical features, and incidence of thyroid storm based on nationwide surveys. <i>Thyroid</i>. 2012; 22(7): 661-679<br>",   
             jrnls:["Thyroid",], 
             URLs:"<br><a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3387770/pdf/thy.2011.0334.pdf' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a><br>",
-            imgName:"",//"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            about:"", 
+            imgName:"",// Alive - contact him to ask for picture "<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            about:"<br>Diagnostic criteria were defined, as well as two grades of thyroid storm.<br>", 
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         },{ 
             type:'Feature',
@@ -10345,6 +10354,44 @@
 </script>
 
 <script src="/static/assets/js/theme.js"></script>
+
+<script>
+    $(function(){
+	$(".typed").typed({
+		strings: ["Developers.", "Designers.", "People."],
+		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+		stringsElement: null,
+		// typing speed
+		typeSpeed: 30,
+		// time before typing starts
+		startDelay: 1200,
+		// backspacing speed
+		backSpeed: 20,
+		// time before backspacing
+		backDelay: 500,
+		// loop
+		loop: true,
+		// false = infinite
+		loopCount: 5,
+		// show cursor
+		showCursor: false,
+		// character for cursor
+		cursorChar: "|",
+		// attribute to type (null == text)
+		attr: null,
+		// either html or text
+		contentType: 'html',
+		// call when done callback function
+		callback: function() {},
+		// starting callback function before each string
+		preStringTyped: function() {},
+		//callback for every typed string
+		onStringTyped: function() {},
+		// callback for reset
+		resetCallback: function() {}
+	});
+});
+</script>
 
 </body>
 </html>
