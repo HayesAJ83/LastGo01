@@ -79,108 +79,6 @@
                 }
         </style>
 
-        <style>
-            body {
-                background: #34495e;
-                color: #ecf0f1;
-                margin: 0;
-                padding: 0;
-            }
-
-            .banner {
-                display: block;
-                min-height: 200px;
-                width: 100%;
-                position: relative;
-            }
-            .typed_wrap {
-                display: block;
-                border: 4px solid #ecf0f1;
-                width: 290px;
-                height: auto;
-                padding: 30px;
-                
-                /*centers it in the .banner*/
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                -webkit-transform: translate(-50%,-50%);
-                -moz-transform: translate(-50%,-50%);
-                -ms-transform: translate(-50%,-50%);
-                -o-transform: translate(-50%,-50%);
-                transform: translate(-50%,-50%);
-            }
-
-            .typed_wrap h1 {
-                display: inline;
-            }
-
-            /*Add custom cursor so it auto inherits font styles*/
-            .typed::after {
-                content: '|';
-                display: inline;
-                -webkit-animation: blink 0.7s infinite;
-                -moz-animation: blink 0.7s infinite;
-                animation: blink 0.7s infinite;
-            }
-
-            /*Removes cursor that comes with typed.js*/
-            .typed-cursor{
-            opacity: 0;
-                display: none;
-            }
-            /*Custom cursor animation*/
-            @keyframes blink{
-                0% { opacity:1; }
-                50% { opacity:0; }
-                100% { opacity:1; }
-            }
-            @-webkit-keyframes blink{
-                0% { opacity:1; }
-                50% { opacity:0; }
-                100% { opacity:1; }
-            }
-            @-moz-keyframes blink{
-                0% { opacity:1; }
-                50% { opacity:0; }
-                100% { opacity:1; }
-            }
-
-            .btns {
-                display: block;
-                width: 400px;
-                margin: 0;
-                padding: 30px 0 0 30px;
-            }
-            .btns a {
-                display: inline-block;
-                margin-left: 5px;
-            }
-            .btns a:first-child{margin-left:0}
-            .btn {
-                font-family: sans-serif;
-                font-size: 14px;
-                font-weight: 600;
-                color: #ecf0f1;
-                text-decoration: none;
-            }
-            a .btn {
-                cursor: pointer;
-                border: 1.5px solid #ecf0f1;
-                border-radius: 5px;
-                display: inline-block;
-                padding: 10px;
-                list-style-type: none;
-                transition: all .3s;
-            }
-
-            .btn:hover {
-                background: #ecf0f1;
-                color: #34495e;
-            }
-        </style>
-
-
     </head>
 
     <body>
@@ -220,15 +118,6 @@
                             <!--<p class="mb-5 fs-2 text-white font-weight-bold" data-aos="zoom-in" data-aos-delay="100">filter by specialty<br></p>-->
                             <p class="mb-5 fs-1 text-white" data-aos="zoom-in" data-aos-delay="100">find eponym definitions, history,<br>photos, references & weblinks</p>
                             <a href="https://lastgospyre.herokuapp.com/alphabet" class='btn btn-light' role='button'>reload</a>
-
-                            
-                            <div class="banner">
-                                <div class="typed_wrap">
-                                    <h1>We Are <span class="typed"></span></h1>
-                                </div>
-                            </div>
-                            
-
                         </div>
                     </div>
                 </div>
@@ -433,7 +322,7 @@
             jrnls:["Thyroid",], 
             URLs:"<br><a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3387770/pdf/thy.2011.0334.pdf' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a><br>",
             imgName:"",// Alive - contact him to ask for picture "<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            about:"<br>Diagnostic criteria were defined, as well as two grades of thyroid storm.<br>", 
+            about:"<br>Diagnostic criteria were defined, as well as two grades of thyroid storm. <br>Elevation in serum free T3 or free T4 is absolutely required. Signs and symtoms are divided into neurological manifestations and those that are not. The recognised non-neurological signs and symptoms include fever (38 degrees Celcius or hotter), tachycardia (130 bpm or faster), features of cardiac failure or gastrointestinal or liver disturbance.<br>Definite thyrotoxic storm requires elevation in blood thyroid hormone levels and either: 1 feature of neurological disturbace + 1 non-neurological feature, or 3 non-neurological manifestations.<br>Suspected thyrotoxic storm requires the same criteria as those for 'defininte' with the exception that thyroid hormone results are not available or there is no history of thyroid disease, exophthalmos or goitre.<br>", 
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         },{ 
             type:'Feature',
