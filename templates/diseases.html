@@ -210,6 +210,7 @@
 
 
 
+
         <script>
             const eponyms = {
                 'type': 'FeatureCollection',
@@ -233,10 +234,10 @@
             googlehtz:1400, //search: "Aaron sign" AND "Appendicitis" [02-Oct-21]
             refs:"<br>Aaron CD. A sign indicative of chronic appendicitis. <i>JAMA</i>. 1913; 60(5): 350-351<br>",    
             jrnls:["JAMA",],
-            imgName:"<br><img src=\"../static/assets/img/profiles/Charles_Dettie_Aaron.png\" class=\"card-img\" style=\"width:12rem;\">",
-            about:"<br>Aaron's sign, indicitive of chronic appendicitis, is demonstrated by prolonged firm pressure at McBurney's point which produces pain in the epigastric region. In Aaron's 1913 paper, he describes his findings in four patients.<br><br>", 
+            imgName:"",// no clear copyright source for image <br><img src=\"../static/assets/img/profiles/Charles_Dettie_Aaron.png\" class=\"card-img\" style=\"width:12rem;\">",
+            about:"<br>Aaron's sign, indicitive of chronic appendicitis, is demonstrated by prolonged firm pressure at McBurney's point which produces pain in the epigastric region. <br>In Aaron's 1913 paper, he describes his findings in four patients.<br><br>", 
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-            URLs:"<br><br><a href='https://jamanetwork.com/journals/jama/article-abstract/214191' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://en.wikipedia.org/wiki/Aaron%27s_sign' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <br>",
+            URLs:"<br><br><a href='https://jamanetwork.com/journals/jama/article-abstract/214191' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://en.wikipedia.org/wiki/Aaron%27s_sign' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <br>", //whonamedit?   http://www.whonamedit.com/synd.cfm/341.html
         //},{
             //type:'Feature',
             //ID: 3, 
@@ -271,19 +272,19 @@
             ops:["Thyroidectomy",],
             opsSpec: {'Endocrine':['Thyroidectomy',] },
             geometry: {type: 'Point', coordinates: [ 135.1824, 34.18827 ]}, //lng,lat
-            properties: { title:"Akamizu's criteria", description:'Wakayama<br>2012'},
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            properties: { title:"Akamizu's criteria", description:'Wakayama Medical University<br>2012'},
+            googlehtz:5160, //search: "akamizu" AND "criteria" AND "thyroid storm" [20-Dec-21]
             refs:"<br>Akamizu T, Satoh T, Isozaki O, et al. Diagnostic criteria, clinical features, and incidence of thyroid storm based on nationwide surveys. <i>Thyroid</i>. 2012; 22(7): 661-679<br>",   
             jrnls:["Thyroid",], 
             URLs:"<br><a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3387770/pdf/thy.2011.0334.pdf' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a><br>",
-            imgName:"",//"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            about:"", 
+            imgName:"",// Alive - contact him to ask for picture "<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            about:"<br><b>Akamizu's criteria refers to clinical features required for the diagnosis of a thyroid storm (TS)</b>.<br><br>The signs and symptoms are divided into central nervous system (CNS) manifestations and those that are not. The non-CNS signs and symptoms include <b>fever</b> (38 degrees Celcius or hotter), a <b>tachycardia</b> of at least 130 bpm, features of <b>cardiac failure</b>, or features of <b>gastrointestinal-liver disturbance</b>.<br><br>A <b>definite thyrotoxic storm</b> requires elevation in blood thyroid hormone levels plus either: <br>1 feature of CNS disturbace + 1 non-CNS feature, <br>or <br>3 non-CNS manifestations.<br><br>A <b>suspected thyrotoxic storm</b> requires the same criteria as those for defininte TS with the exception that there are no thyroid hormone results available, or there is no history of thyroid disease, exophthalmos or goitre.<br>", 
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         },{ 
             type:'Feature',
             ID: 10, 
             name:"Artery of Adamkiewicz",      
-            topic:["Vascular", "Neurosurgery"], 
+            topic:["Vascular", "Neurosurgery", "Radiology",], 
             subtype:["Anatomy",], 
             who:"Albert Wojciech Adamkiewicz", whoSearch:["Albert W Adamkiewicz",],   
             where:"Kraków - Poland", whereSearch:["Kraków, Poland", "Poland",],                   
@@ -293,11 +294,12 @@
             opsSpec: {'Vascular': ["AAA repair", "Aortic surgery",] },
             geometry: {type: 'Point', coordinates: [ 19.93482 , 50.06114 ]}, //lng,lat
             properties: {title:'Artery of Adamkiewicz', description:'Kraków<br>1881'},
+            googlehtz:35500, //search: "Artery of Adamkiewicz" [20-Dec-21]
             refs:"",  
             jrnls:"",//["",]
             imgName:"<br><img src=\"../static/assets/img/profiles/Adamkiewicz.png\" class=\"card-img\" style=\"width:12rem;\">",
-            about:"<br>The artery of Adamkiewicz is known by other terms, including arteria radicularis magna. This vessel is a major contributor to the anterior spinal artery which gives arterial supply to the lumbar and sacral cord and nerves. The artery of Adamkiewicz arises from intercostal arteries which branch from the thoraco-abdominal aorta.<br>", 
-            acknow:"",
+            about:"<br>The artery of Adamkiewicz is known by other terms, including arteria radicularis magna. This vessel is a major contributor to the anterior spinal artery which gives arterial supply to the lumbar and sacral cord and nerves.<br>The artery of Adamkiewicz arises from intercostal arteries which branch from the thoraco-abdominal aorta.<br>", 
+            acknow:"<hr class='my-4'><i>The image shown of Adamkiewicz is in the public domain and was sourced from Wikipedia.</i>",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Artery_of_Adamkiewicz' target='_blank' class='btn btn-info' role='button'>Wikipedia</a><br>",    
         },{
             type:'Feature',
@@ -317,9 +319,9 @@
             refs:"<br>Addison T. On the constitutional and local effects of disease of the supra-adrenal capsules. London : Samuel Highley, 1855<br>",   
             jrnls:"",//["",]
             URLs:"<br><a href='https://wellcomecollection.org/works/xsmzqpdw/items?canvas=1' target='_blank' class='btn btn-secondary' role='button'>Original Textbook</a> <a href='https://en.wikipedia.org/wiki/Addison%27s_disease' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <br>", //https://archive.org/details/b21298786/page/n1/mode/2up
-            imgName:"",//"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"<br><img src=\"../static/assets/img/profiles/Addison_Thomas.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"", 
-            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
+            acknow:"<hr class='my-4'><i>The image shown of Addison is licenced under the <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>Creative Commons Attribution 4.0 International license</a> and was sourced from Wikipedia.<i>",   
         },{
             type:'Feature',
             ID: 20, 
@@ -337,7 +339,7 @@
             refs:"",  
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/Benjamin_Alcock.png\" class=\"card-img\" style=\"width:12rem;\">", //can't get image
-            about:"<br>Pudendal canal. Benjamin Alcock was at the School of Anatomy at Warren's (now Parnell) Place in Cork.<br>",//, 
+            about:"<br>Alcock's canal is another term for the pudendal canal. The canal was described by Alcock in 1836 when he was at the School of Anatomy at Warren's (now called Parnell Place), in the Irish city of Cork.<br>",//, 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Pudendal_canal' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{
@@ -373,17 +375,17 @@
             country:["USA"], when:"1883",
             ops:["Parathyroidectomy", "Thyroidectomy", "Incisional hernia repair",],
             opsSpec: {'Endocrine': ["Parathyroidectomy","Thyroidectomy"],
-                      'General Surgery': ["Incisional hernia repair"]},
+                      'General Surgery': ["Incisional hernia repair"], },
             disease:"",//["",],
             geometry: {type: 'Point', coordinates: [ -75.199043 , 39.958329 ]},   //long,lat
             properties: {title:"Allis forceps", description:'Philadelphia<br>1883'},
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            googlehtz:32600, //search: "Allis forceps" [02-Oct-21]
             refs:"",  
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Oscar_H_Allis.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/Allis.jpg\" class=\"card-img\" style=\"width:22rem;\">",
             about:"",//, 
-            URLs:"",//"<br><a href='#' class='btn btn-outline-primary' role='button'>original paper</a><br>", //
-            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/Allis_clamp' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
+            acknow:"<hr class='my-4'><i>The image shown of the Allis forceps and Allis the surgeon inventor was sourced from  <a href='https://wellnessrounds.org/2016/10/24/the-tools-we-hold-the-allis-clamp/' target='_blank'>wellnessrounds.org</a></i>",
         },{ 
             type:'Feature',
             ID: 50, 
@@ -1277,7 +1279,7 @@
             who:"John Boey",    
             whoSearch:["John Boey",],
             where:"Pok Fu Lam - Hong Kong", // whereSearch:["Pok Fu Lam, Hong Kong",],              
-            when:"1982", 
+            country:["Hong Kong"], when:"1982", 
             disease:["Peptic ulcer disease",],  
             ops:["Repair perforated ulcer",],
             opsSpec:{'General Surgery': ['Repair perforated ulcer',],
@@ -3867,7 +3869,7 @@
             disease:["Anaemia","GI bleeding","Haemorrhage","Shock",],
             ops:["Endoscopy",],
             opsSpec:{'Oesophagogastric': ['Endoscopy', ], },
-            geometry: {type: 'Point', coordinates: [ -3.1951 , 55.9447 ]}, //lng,lat
+            geometry: {type: 'Point', coordinates: [ -3.19707 , 55.94462 ]}, //lng,lat
             properties: { title:"Forrest classification", description:'Edinburgh<br>1974'},
             refs:"<br>Forrest JAH, Finlayson NDC, Shearman DJC. Endoscopy in gastrointestinal bleeding. <i>Lancet</i>. 1974; 2(7877); 394-397<br>",   
             jrnls:["Lancet",],
@@ -6972,7 +6974,7 @@
             disease:["Hydrocephalus",],
             ops:["Craniotomy","V-P shunt insertion",],  
             opsSpec:"",//{'Endocrine': ['',], },
-            geometry: { type: 'Point', coordinates: [ -3.196602, 55.953594 ]}, //long,lat
+            geometry: { type: 'Point', coordinates: [ -3.19017, 55.94508 ]}, //long,lat
             properties: { title:"Foramen of Monro", description:'Edinburgh<br>1764'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"", 
@@ -9692,7 +9694,7 @@
             when:"1912",  
             disease:["Kidney stones","Liver failure",], 
             ops:["Liver transplant","Nephrolithotomy",],
-            geometry: { type: 'Point', coordinates: [ -3.19036, 55.94534 ]}, //long,lat
+            geometry: { type: 'Point', coordinates: [ -3.19245, 55.94494 ]}, //long,lat
             properties: { title:"Wilson's disease", description:'Edinburgh<br>1912'},   
             refs:"",//"<br><br>" 
             jrnls:"",//["",]
@@ -10015,7 +10017,6 @@
         
         }]}
         </script>
-
 
 
 
