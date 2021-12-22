@@ -121,7 +121,7 @@
                             <p class="mb-5 fs-3 text-white text-uppercase font-weight-bold" data-aos="fade-down" data-aos-duration="1500"><br>Search<br>- World Maps -</p>
                             <p class="mb-5 fs-1 text-white" data-aos="zoom-in" data-aos-delay="100"><b>Find eponym definitions, history,<br>photos, references & weblinks</b></p>
                             <p></p>
-                            <a href="https://lastgospyre.herokuapp.com/maps" class='btn btn-light' role='button'>reload</a>
+                            <a href="https://lastgospyre.herokuapp.com/maps" class='btn btn-light' role='button'>refresh</a>
                         </div>
                     </div>
                 </div>
@@ -243,6 +243,7 @@
 
         <!-- Load d3.js -->
         <script src="https://d3js.org/d3.v4.js"></script>
+
 
 
 
@@ -435,14 +436,15 @@
             ops:["Oesophagectomy",],
             opsSpec: {'Oesophagogastric': ["Oesophagectomy",] },
             disease:"",//["",],n/a
-            geometry: {type: 'Point', coordinates: [ -1.2189, 51.7638 ]}, //long,lat
+            geometry: {type: 'Point', coordinates: [ -1.2189, 51.7638 ]},   //long,lat
             properties: {title:"Allison lung retractor", description:'Oxford<br>1955'},
-            googlehtz:3190, //search: "allison lung retractor" [21-Dec-21]
+            //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
             refs:"", 
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/Allison_Retractor.png\" class=\"card-img\" style=\"width:12rem;\">",
-            about:"<br>The Allison lung retractor is a handheld device used for retracting lung tissue. It has a solid handle and a fixed wire spatula working surface which is covered with a sterile fabric material.<br>", 
-            URLs:"<br><a href='https://www.nds.ox.ac.uk/about-us/our-history/philip-allison' target='_blank' class='btn btn-dark' role='button'>Oxford Obituary for Philip Allison</a><br>",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Philip_Rowland_Allison.png\" class=\"card-img\" style=\"width:12rem;\">",
+            about:"",//<br><br>", 
+            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            URLs:"",//<br><a href='#' class='btn btn-outline-primary' role='button'>original paper</a><br>", //
         },{
             type:'Feature',
             ID: 60, 
@@ -458,13 +460,13 @@
             opsSpec: {'Oesophagogastric': ["Antireflux surgery", "Endoscopy", "Fundoplication",] },
             geometry: {type: 'Point', coordinates: [ -1.5547, 53.8024 ]},   //long,lat
             properties: {title:"Allison repair", description:'Leeds<br>1951'},
-            googlehtz:1700, //search: "Allison repair" AND "reflux" [21-Dec-21]
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"<br>Allison PR. Reflux esophagitis, sliding hiatus hernia, and the anatomy of repair.<i>Surg Gynecol Obstet</i>. 1951; 92(4): 419-431<br>",
             jrnls:["Surg Gynecol Obstet",],
-            imgName:"",//need to source permission for photo  <br><img src=\"../static/assets/img/profiles/Philip_Rowland_Allison.png\" class=\"card-img\" style=\"width:12rem;\">",
-            about:"",
-            URLs:"<br><a href='https://www.nds.ox.ac.uk/about-us/our-history/philip-allison' target='_blank' class='btn btn-dark' role='button'>Oxford Obituary for Philip Allison</a><br>",
-            acknow:"",//<hr class='my-4'><i><i>",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Philip_Rowland_Allison.png\" class=\"card-img\" style=\"width:12rem;\">",
+            about:"",//<br><br><br>", 
+            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            URLs:"",//"<br><a href='#' class='btn btn-outline-primary' role='button'>original paper</a><br>", //no wiki
         },{ 
             type:'Feature',
             ID: 70, 
