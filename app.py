@@ -10,7 +10,7 @@ def index():
 
 
 @app.route('/specialties', methods=['GET', 'POST'])
-def alphabet():
+def specialties():
     return render_template('specialties.html')
 
 
