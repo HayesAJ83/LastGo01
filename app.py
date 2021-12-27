@@ -1,4 +1,3 @@
-import numpy as np
 import os.path
 from flask import Flask, render_template, request, url_for, flash, redirect, json, jsonify, session
 
@@ -9,13 +8,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/sitemap.xml', methods=['GET', 'POST'])
-def sitemap():
-    return render_template('sitemap.xml')
 
-@app.route('/alphabet', methods=['GET', 'POST'])
+@app.route('/specialties', methods=['GET', 'POST'])
 def alphabet():
-    return render_template('alphabet.html')
+    return render_template('specialties.html')
 
 
 @app.route('/categories', methods=['GET', 'POST'])
