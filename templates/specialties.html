@@ -32,20 +32,13 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css">
         <script type="test/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.6.0/papaparse.min.js"></script>
 
-        <!-- Mapbox -->
-        <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
-        <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
-        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
-        <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet"/>
-        
-      
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129313359-1"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+
             gtag('config', 'UA-129313359-1');
         </script>
 
@@ -61,23 +54,7 @@
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" rel="stylesheet"/>
 
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js'></script>
-        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css' rel='stylesheet' />
-         
-        <!-- Load the `mapbox-gl-geocoder` plugin. -->
-        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
-        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
-
-        <style>
-            body { margin: 0; padding: 0; }
-            #map { position: absolute; height: 280px; width: 364px; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
-            
-            .mapboxgl-popup-content {
-                text-align: center;
-                font-family: 'Open Sans', sans-serif;
-                }
-        </style>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">         
 
     </head>
 
@@ -108,86 +85,64 @@
 
         <!-- Main Content -->
         <main class="main minh-100vh">
-            <!-- Section -->
-            <section class="py-0 overflow-hidden text-center" id="section-1">
+              <!-- Section -->
+              <section class="py-0 overflow-hidden text-center" id="section-1">
                 <div class="bg-container overlay parallax" data-rellax-percentage="0.5" style="background-image: url(/static/assets/img/backgrounds/iStock-1336330802.jpg)"></div>
                 <div class="container">
                     <div class="row h-100vh justify-content-center align-items-center">
                         <div class="col">
-                            <p class="mb-5 fs-3 text-white text-uppercase font-weight-bold" data-aos="fade-down" data-aos-duration="1500"><br>Search<br>- Specialties -</p>
-                            <!--<p class="mb-5 fs-2 text-white font-weight-bold" data-aos="zoom-in" data-aos-delay="100">filter by specialty<br></p>-->
-                            <p class="mb-5 fs-1 text-white" data-aos="zoom-in" data-aos-delay="100"><b>Find eponym definitions, history, photos,<br>references & weblinks</b></p>
+                            <p class="mb-5 fs-2 text-white text-uppercase font-weight-bold" data-aos="fade-down" data-aos-duration="1500">Search<br>- Specialties -</p>
+                            <p class="mb-5 fs-1 text-white" data-aos="zoom-in" data-aos-delay="100"><b>Find eponym definitions, history,<br>photos, references & weblinks</b></p>
+                            <p></p>
                             <a href="http://www.surgicalnames.com/specialties" class='btn btn-light' role='button'>refresh</a>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- End of Section -->
-            
+
             <!-- Section -->
             <section id="section-2" class="pt-7 pb-0 bg-blue-light">
-                <div class="container" style="height:215px">
-                    <div class="row align-items-center text-center">
-                        <div class="col" data-aos="flip-down">
-                            <h1 class="text-black mb-2 fs-1" style="height:30px">Specialties</h1>
-                            <button type="button" class="btn btn-primary active" id="btn_all">All</button>
-                            <button type="button" class="btn btn-light" id="btn_select">Select</button>
-                        </div>
-                    </div>
-                    <hr style="height:1px; visibility:hidden">
-                    <form method="POST">
-                        <div class="row align-items-center text-center">
-                            <div class="col" data-aos="zoom-in" id="selector" style="display:none">
-                                <select id="select1" class="selectpicker data-style="btn-white""
-                                    name="min_multi_select" 
-                                    multiple title=" -- specialties -- " 
-                                    data-width="325px"
-                                    multiple data-actions-box="true"
-                                    data-size="6"
-                                    data-container="body"
-                                    multiple data-selected-text-format="count > 3"
-                                    data-style="btn-primary">
-                                </select>
-                            </div>
-                        </div>
-                    </form>
-                </div>
                 <div class="container">
                     <div class="row align-items-center text-center">
                         <div class="col" data-aos="fade-up" id="select3">
-                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
+                            <h1 class="text-black mb-2 fs-1" style="height:30px">Specialties</h1>
                             <select id="sel" class="selectpicker show-tick"
                                     data-style="btn-primary" data-header="Search list:" 
                                     data-width="325px" data-size="6"
                                     data-aos="zoom-in"
                                     data-container="body"
-                                    data-live-search="true" onchange="show(this.value);">
+                                    data-live-search="true";">
                                     <option value=""> -- select -- </option>
                             </select>
-                            <div class="lead" id='imgName'></div>
-                            <p class="lead" id="info"></p>
+                            <p></p>
                             <p></p>
                             <p></p>
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <p></p>
+                <p></p>
+                <hr style="height:1px; visibility:hidden">
+                <form method="POST">
                     <div class="row align-items-center text-center">
-                        <div class="col" data-aos="zoom-in" id="select4" style="display:none"> <!--works-->
+                        <div class="col" data-aos="fade-up" id="select5" style="display:none"> <!--works-->
                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
-                            <select id="SEL2" class="selectpicker show-tick"
+                            <select id="sel9" class="selectpicker show-tick"
                                     data-style="btn-primary" data-header="Search list:" 
                                     data-width="325px" data-size="6"
+                                    data-aos="zoom-in"
                                     data-container="body"
                                     data-live-search="true" onchange="show2(this.value);">
                                     <option value=""> -- select -- </option>
                             </select>
-                            <div class="lead" id='imgName2'></div>
-                            <p class="lead" id="msg2"></p>
-                            <p class="lead" id="msg3"></p>
-                            <br>
                         </div>
                     </div>
+                </form>
+                <div class="row align-items-center text-center" id='blurb'>
+                    <div class="lead" id='imgName2'></div>
+                    <p class="lead" id="msg2"></p>
+                    <p class="lead" id="msg3"></p>
                 </div>
                 <br>
                 <br>
@@ -199,30 +154,29 @@
 
         <!-- Footer -->
         <footer class="footer text-white" style="background-image: url(/static/assets/img/backgrounds/iStock-532331964_op.jpg)">
-        <div class="container d-flex h-100">
-            <div class="row flex-grow-1">
-                <div class="col d-flex flex-column mb-2 mt-3">
-                    <div class="row justify-content-center">
-                        <div class="col-auto">
-                            <br></br>
-                            <a href="#section-1" class="btn btn-secondary" data-aos="zoom-in" data-aos-delay="20" data-aos-duration="500" data-smooth-scroll data-smooth-scroll-hash="false">back to top</a>
+            <div class="container d-flex h-100">
+                <div class="row flex-grow-1">
+                    <div class="col d-flex flex-column mb-2 mt-3">
+                        <div class="row justify-content-center">
+                            <div class="col-auto">
+                                <a href="#section-1" class="btn btn-secondary" data-aos="zoom-in" data-aos-delay="20" data-aos-duration="500" data-smooth-scroll data-smooth-scroll-hash="false">back to top</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-6 col-lg-3">
-                        <h6 class="mb-1 mb-lg-4 text-uppercase"></h6> <!--About-->
-                        <ul class="pt-2 mb-5 fw-light list-unstyled">
-                            <li class="my-1"><a href="" class="text-white"></a></li> <!--Design Team-->
-                            <li class="my-1"><a href="" class="text-white"></a></li> <!--Contact Us-->
-                        </ul>
-                    </div>
-                    <div class="mt-auto d-flex justify-content-between">
-                        <span class="fs--3 fs-lg--2">  &copy; 2021 SurgicalNames.com | Excision Ltd, Scotland, UK</span>
+                        <div class="col-6 col-lg-3">
+                            <h6 class="mb-1 mb-lg-4 text-uppercase"></h6> <!--About-->
+                            <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                <li class="my-1"><a href="" class="text-white"></a></li> <!--Design Team-->
+                                <li class="my-1"><a href="" class="text-white"></a></li> <!--Contact Us-->
+                            </ul>
+                        </div>
+                        <div class="mt-auto d-flex justify-content-between">
+                            <span class="fs--3 fs-lg--2">  &copy; 2021 SurgicalNames.com | Excision Ltd, Scotland, UK</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- End of Footer -->
+        </footer>
+        <!-- End of Footer -->
 
         <!-- Javascripts -->
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -249,7 +203,6 @@
 
         <!-- Load d3.js -->
         <script src="https://d3js.org/d3.v4.js"></script>
-
 
 
 
@@ -10051,324 +10004,245 @@
 
 
 
-<script>
-    $(document)
-    .ready(function() {
-    let result1 = eponyms.features
-        .flatMap(item => item.topic)
-        .filter((item, i, arr) => arr.indexOf(item) === i)
-        let resultsort1 = result1.sort()
-        var select = document.getElementById("select1");
-        var options = resultsort1;
-        for(var i = 0; i < options.length; i++) {
-            var opt = options[i];
-            var el = document.createElement("option");
-            el.textContent = opt;
-            el.value = opt;
-            select.appendChild(el);
-            }
-    console.log()   /// This gives us array with all features
-        });
 
-    $(document)
-    .ready(function() {
-        $('#select1').ready(function() {
-            let value = '\'' + $('#select1 option').map(function() {
-                    return this.text}).get().join('\',\'') + '\'';
-            var stringArray = (new Function("return [" + value+ "];")());
-        });
-    });   /// Generates select1 [specialties] options
-
-    var selected = eponyms.features
-    function populateSelect() {
-        var ele = document.getElementById('sel');
-        selected.forEach(function(b) {
-            ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-        }
-    console.log(selected)
-    populateSelect()  /// Gives eponyms dependent on specilties
-
-    let select ="";
-    $("#select1").find('option:selected').each(function() {
-            select += "\'" + $.trim($(this).text()) + "\',";});
-            if(select != ""){select = select.substr(0);};
-        var stringArray = (new Function("return [" + select + "];")());
-        
-    function topicFilter2(taxonomy) {
-        taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-        return eponyms.features.filter(item => {
-            let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-            return taxonomy.some(med => topic.includes(med));
+        <script>
+            $(document)
+            .ready(function() {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.topic !== "");
+                });  /// DROP those WITHOUT subtypes
+            let result1 = returnedData
+                .flatMap(item => item.topic) //"item.topic" gives us SPECIALTIES
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
+                let resultsort1 = result1.sort()
+                var select = document.getElementById("select1");
+                var options = resultsort1;
+                for(var i = 0; i < options.length; i++) {
+                    var opt = options[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    select.appendChild(el);
+                    }
+            //console.log()   /// This gives us array with all features - when select1 is changed
             });
-        }
-            
-    var selected2 = topicFilter2(stringArray); 
+        </script>
 
-
-///  SELECTED_SPECIALTIES_1  ///
-    $(document)
-    .ready(function() {
-    $('#btn_select').on('click', function() {
-        $('#btn_all').removeClass("btn btn-primary active");
-        $('#btn_all').addClass("btn btn-light");
-        $('#btn_select').removeClass("btn btn-light");
-        $('#btn_select').addClass("btn btn-primary active");
-        $('#selector').fadeIn(50);
-        $('#select3').fadeOut(50);
-        
-        let select = "";
-        $("#select1").find('option:selected').each(function() {
-        select += "\'" + $.trim($(this).text()) + "\',";
-        });
-        if (select != "") {
-            select = select.substr(0);
-        }
-        var stringArray = (new Function( "return [" + select + "];")());
-        function topicFilter2(taxonomy) {
-            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-        return eponyms.features.filter(item => {
-            let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-            return taxonomy.some(med => topic.includes(med));
+        <script>
+            $(document)
+            .ready(function() {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.topic !== "");
+                });  /// DROP those WITHOUT OPERATIONS
+            let result1 = returnedData
+                .flatMap(item => item.topic) //"item.ops" gives us OPERATIONS
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
+                let resultSubtypes = result1.sort()
+                var selectSubtypes = document.getElementById("sel");
+                var optionS = resultSubtypes;
+                for(var i = 0; i < optionS.length; i++) {
+                    var opt1 = optionS[i];
+                    var el1 = document.createElement("option");
+                    el1.textContent = opt1;
+                    el1.value = opt1;
+                    selectSubtypes.appendChild(el1);
+                    }
             });
-            }
-        var select2 = topicFilter2(stringArray);
 
-        if (!select2.length) {var push = "";} 
-        else {
-            var push = select2.reduce((options, {ID,name}) =>
-                options += `<option value="${ID}">${name}</option>`);
+            $(document)
+            .ready(function() {
+                $('#select1').ready(function() {
+                    let value = '\'' + $('#select1 option').map(function() {
+                            return this.text}).get().join('\',\'') + '\'';
+                    var stringArray = (new Function("return [" + value + "];")());
+                });
+            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
+
+            let select ="";
+            $("#select1").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
+                
+            function topicFilter2(taxonomy) {
+                const returnedData = $.grep(eponyms.features, function(element, index) {
+                    return (element.topic !== "");
+                    });  /// DROP those WITHOUT OPERATIONS
+                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                return returnedData.filter(item => {
+                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                    return taxonomy.some(med => topic.includes(med));
+                    });
                 }
-        
-        function populateSelect() {
-            if (!select2.length) {var push = "";}
-            else {
-                var push = select2.reduce((options, {ID,name}) =>
-                    options += `<option value="${ID}">${name}</option>`);
-                    }}
-        
-        populateSelect()
-        $( '#SEL2' ).html(push);
-        show()
-                }).trigger("change")
-        });
-</script>
+                    
+            var selected2 = topicFilter2(stringArray); 
+            console.log(selected2) //gives array of selected specialties eg. [ "Anaesthetics", "Trauma" ]
 
+        </script>
 
+        <script> 
+            /// ALL - specialties
+            /// THIS WORKS FINE
+            $('#sel').on('change', function() {
+                $('#select5').fadeIn(50);
+                let select ="";
+                $("#sel").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
+                console.log(stringArray); //works Array [chosen options]
+                
+                function topicFilter2(taxonomy) {
+                    const returnedData = $.grep(eponyms.features, function(element, index) {
+                        return (element.topic !== "");
+                        });  /// DROP those WITHOUT OPERATIONS
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return returnedData.filter(item => {
+                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
+                        });
+                    }
+                
+                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+                console.log(selected2)
 
-<script>  ///  SELECTED_SPECIALTIES_2  ///
-    $('#select1').on('change', function() {
-        let select ="";
-        $("#select1").find('option:selected').each(function() {
-            select += "\'" + $.trim($(this).text()) + "\',";});
-            if(select != ""){select = select.substr(0);};
-        var stringArray = (new Function("return [" + select + "];")());
-        console.log(stringArray); //works Array [chosen options]
-        
-        function topicFilter2(taxonomy) {
-            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-            return eponyms.features.filter(item => {
-                let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                return taxonomy.some(med => topic.includes(med));
-                });
-            }
-        
-        var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-        //console.log(selected2)
-
-        function populateSelect2() {
-            document.getElementById('SEL2').innerHTML = selected2.reduce((options, {ID,name}) =>
-                options += `<option value="${ID}">${name}</option>`,
-                '<option value=""> -- select -- </option>'
-                );
-            }
-    
-        populateSelect2()
-        
-        $('#select4').fadeIn(50);
-        $('#SEL2').selectpicker('refresh');
-        $('#select1').on('change', function() {
-            $('#select1').selectpicker('toggle'); //added to toggle open/close
-            $('#SEL2').selectpicker('refresh');
-            });
-    });
-        
-   
-    $('#SEL2').change(function() {
-        let select ="";
-        $("#select1").find('option:selected').each(function() {
-            select += "\'" + $.trim($(this).text()) + "\',";});
-            if(select != ""){select = select.substr(0);};
-        var stringArray = (new Function("return [" + select+ "];")());
-        
-        function topicFilter2(taxonomy) {
-            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-            return eponyms.features.filter(item => {
-                let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                return taxonomy.some(med => topic.includes(med));
-                });
-            }
+                function populateSelect2() {
+                    document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`,
+                        '<option value=""> -- select -- </option>'
+                        );
+                    }
             
-        var selected2 = topicFilter2(stringArray);
-        console.log(selected2)
-        function show(id) {
-            var msg = document.getElementById('msg');
-            if (!id) {msg.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.features.length; i++) {
-                if  (Number(id) === eponyms.features[i].ID) {
-                    msg.innerHTML = "<br><br>"+
-                                    'Who'   +":   "+ eponyms.features[i].who.bold()   +"<br>"+
-                                    'Where' +":   "+ eponyms.features[i].where.bold() +
-                                    eponyms.features[i].acknow;
-                                    }}}}
-        }).trigger("change")
-
-
-    $('#select4').change(function() {
-        let select ="";
-        $("#select1").find('option:selected').each(function() {
-            select += "\'" + $.trim($(this).text()) + "\',";});
-            if(select != ""){select = select.substr(0);};
-        var stringArray = (new Function("return [" + select+ "];")());
-        
-        function topicFilter2(taxonomy) {
-            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-            return eponyms.features.filter(item => {
-                let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                return taxonomy.some(med => topic.includes(med));
-                });
-            }
-            
-        var selected2 = topicFilter2(stringArray);
-        console.log(selected2)
-        
-        }).trigger("change")
-    
-</script>
-
-<script>
-///////  RETURN_TO_ALL  ///////
-    $('#btn_all').on('click', function() {
-        $('#btn_all').removeClass("btn btn-light");
-        $('#btn_all').addClass("btn btn-primary active");
-        $('#selector').fadeOut(50);
-        $('#btn_select').removeClass("btn btn-primary active");
-        $('#btn_select').addClass("btn btn-light");
-        $('#select4').fadeOut(50);
-        $('#select1').ready(function() {
-            let value = '\'' + $('#select1 option').map(function() {
-                return this.text}).get().join('\',\'') + '\'';
-            var stringArray = (new Function("return [" + value+ "];")());
+                populateSelect2()
+                $('#sel9').selectpicker('refresh');
+                $('#sel').on('change', function() {
+                    $('#sel').selectpicker('toggle'); //added to toggle open/close
+                    $('#sel9').selectpicker('refresh');
+                    });
             });
-        $('#select3').fadeIn(50);
-    });
-</script>
+        </script>
 
-<script>
+        <script>  ///  SELECTED_SPECIALTIES_2  ///
+            $('#select1').on('change', function() {
+                let select ="";
+                $("#select1").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
+                console.log(stringArray); //works Array [chosen options]
+                
+                function topicFilter2(taxonomy) {
+                    const returnedData = $.grep(eponyms.features, function(element, index) {
+                    return (element.topic !== "");
+                    });  /// DROP those WITHOUT OPERATIONS
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return returnedData.filter(item => {
+                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
+                        });
+                    }
+                
+                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+                console.log(selected2)
 
-    function show(id) {   
-        var imgName = document.getElementById('imgName');
-        if (!id) {imgName.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.features.length; i++) {
-            if  (Number(id) === eponyms.features[i].ID) {
-                imgName.innerHTML = eponyms.features[i].imgName
-                                        ;}}}
-                                    $('.imgName').fadeIn('slow');
+                /// NOW GET THE OPERATIONS FRTOM THIS SMALL JSON
 
-        var info = document.getElementById('info');
-        if (!id) {imgName.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.features.length; i++) {
-            if  (Number(id) === eponyms.features[i].ID) {
-                info.innerHTML =    "<br>"+
-                                    eponyms.features[i].who.bold()   +"<br>"+
-                                    eponyms.features[i].when.bold()  +"<br>"+
-                                    eponyms.features[i].where.bold() +"<br><br>"+
-                                    eponyms.features[i].about +
-                                    eponyms.features[i].refs +
-                                    eponyms.features[i].URLs +
-                                    eponyms.features[i].acknow
-                                        ;}}}
-                                    }                           
-</script>
+                let result10 = selected2
+                    .flatMap(item => item.topic)
+                    .filter((item, i, arr) => arr.indexOf(item) === i)
+                    //.filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
+                    let resultSubtypes10 = result10.sort()
+                    var selectSubtypes10 = document.getElementById("SEL2");
+                    var optionS10 = resultOps10;
+                    for(var i = 0; i < optionS10.length; i++) {
+                        var opt10 = optionS10[i];
+                        var el10 = document.createElement("option");
+                        el10.textContent = opt10;
+                        el10.value = opt10;
+                        selectSubtypes10.appendChild(el10);
+                        }
+                
+                
+                $('#select4').fadeIn(50);
+                $('#SEL2').selectpicker('refresh');
 
-<script>
-    function show2(id) {
+                $('#select1').on('change', function() {
+                    $('#select1').selectpicker('toggle'); //added to toggle open/close
+                    $('#SEL2').selectpicker('refresh');
+                    });
+                });
+            
+        </script>
 
-        var imgName2 = document.getElementById('imgName2');
-        if (!id) {imgName2.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.features.length; i++) {
-            if  (Number(id) === eponyms.features[i].ID) {
-                imgName2.innerHTML = eponyms.features[i].imgName
-                                        ;}}}
-        
-        var msg2 = document.getElementById('msg2');
-        if (!id) {msg2.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.features.length; i++) {
-            if  (Number(id) === eponyms.features[i].ID) {
-                msg2.innerHTML = "<br>"+
-                                eponyms.features[i].who.bold()   +"<br>"+
-                                eponyms.features[i].when.bold()  +"<br>"+
-                                eponyms.features[i].where.bold() +"<br><br>"
-                                        ;}}}
-                                
-        var msg3 = document.getElementById('msg3');
-        if (!id) {msg2.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.features.length; i++) {
-            if  (Number(id) === eponyms.features[i].ID) {
-                msg3.innerHTML = 
-                                eponyms.features[i].about +
-                                eponyms.features[i].refs +
-                                eponyms.features[i].URLs +
-                                eponyms.features[i].acknow
-                                        ;}}}                           
-    }
+        <script>
 
-</script>
+            function show(id) {   
+                var imgName = document.getElementById('imgName');
+                if (!id) {imgName.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        imgName.innerHTML = eponyms.features[i].imgName
+                                                ;}}}
+                                            $('.imgName').fadeIn('slow');
 
-<script src="/static/assets/js/theme.js"></script>
+                var info = document.getElementById('info');
+                if (!id) {imgName.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        info.innerHTML =    "<br>"+
+                                            eponyms.features[i].who.bold()   +"<br>"+
+                                            eponyms.features[i].when.bold()  +"<br>"+
+                                            eponyms.features[i].where.bold() +"<br><br>"+
+                                            eponyms.features[i].about +
+                                            eponyms.features[i].refs +
+                                            eponyms.features[i].URLs +
+                                            eponyms.features[i].acknow
+                                                ;}}}
+                                            }                           
+        </script>
 
-<script>
-    $(function(){
-	$(".typed").typed({
-		strings: ["Developers.", "Designers.", "People."],
-		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
-		stringsElement: null,
-		// typing speed
-		typeSpeed: 30,
-		// time before typing starts
-		startDelay: 1200,
-		// backspacing speed
-		backSpeed: 20,
-		// time before backspacing
-		backDelay: 500,
-		// loop
-		loop: true,
-		// false = infinite
-		loopCount: 5,
-		// show cursor
-		showCursor: false,
-		// character for cursor
-		cursorChar: "|",
-		// attribute to type (null == text)
-		attr: null,
-		// either html or text
-		contentType: 'html',
-		// call when done callback function
-		callback: function() {},
-		// starting callback function before each string
-		preStringTyped: function() {},
-		//callback for every typed string
-		onStringTyped: function() {},
-		// callback for reset
-		resetCallback: function() {}
-	});
-});
-</script>
+        <script>
+            function show2(id) {
 
-</body>
+                var imgName2 = document.getElementById('imgName2');
+                if (!id) {imgName2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        imgName2.innerHTML = eponyms.features[i].imgName
+                                                ;}}}
+                
+                var msg2 = document.getElementById('msg2');
+                if (!id) {msg2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg2.innerHTML = "<br>"+
+                                        eponyms.features[i].who.bold()   +"<br>"+
+                                        eponyms.features[i].when.bold()  +"<br>"+
+                                        eponyms.features[i].where.bold() +"<br><br>"
+                                                ;}}}
+                                        
+                var msg3 = document.getElementById('msg3');
+                if (!id) {msg2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg3.innerHTML = 
+                                        eponyms.features[i].about +
+                                        eponyms.features[i].refs +
+                                        eponyms.features[i].URLs +
+                                        eponyms.features[i].acknow
+                                                ;}}}                           
+            }
+
+        </script>
+
+        <script src="/static/assets/js/theme.js"></script>
+
+    </body>
 </html>
