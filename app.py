@@ -38,6 +38,10 @@ def ops():
 def maps():
     return render_template('maps.html')
 
+@app.route('/sitemap')
+def sitemap():
+    return render_template('sitemap.html')
+
 
 if __name__ == "__main__":
     app.run(Debug=True)
