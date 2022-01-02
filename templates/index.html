@@ -10304,7 +10304,7 @@
             /// ALL - specialties
             /// THIS WORKS FINE
             $('#sel').on('change', function() {
-                //$('#select5').fadeIn(50);
+                $('#select5').fadeIn(50);
                 let select ="";
                 $("#sel").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
@@ -10326,24 +10326,140 @@
                 var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
                 console.log(selected2)
 
-                //function populateSelect2() {
-                //    document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
-                //        options += `<option value="${ID}">${name}</option>`,
-                //        '<option value=""> -- select -- </option>'
-                //        );
-                //    }
+                function populateSelect2() {
+                    document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`,
+                        '<option value=""> -- select -- </option>'
+                        );
+                    }
             
                 populateSelect2()
-                //$('#sel9').selectpicker('refresh');
+                $('#sel9').selectpicker('refresh');
                 $('#sel').on('change', function() {
                     $('#sel').selectpicker('toggle'); //added to toggle open/close
-                    //$('#sel9').selectpicker('refresh');
+                    $('#sel9').selectpicker('refresh');
                     });
             });
         </script>
 
+        <script>  ///  SELECTED_SPECIALTIES_2  ///
+            $('#select1').on('change', function() {
+                let select ="";
+                $("#select1").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
+                console.log(stringArray); //works Array [chosen options]
+                
+                function topicFilter2(taxonomy) {
+                    const returnedData = $.grep(eponyms.features, function(element, index) {
+                    return (element.topic !== "");
+                    });  /// DROP those WITHOUT OPERATIONS
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return returnedData.filter(item => {
+                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
+                        });
+                    }
+                
+                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+                console.log(selected2)
 
-        <!-- Theme Javascripts -->
+                /// NOW GET THE OPERATIONS FRTOM THIS SMALL JSON
+
+                let result10 = selected2
+                    .flatMap(item => item.topic)
+                    .filter((item, i, arr) => arr.indexOf(item) === i)
+                    //.filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
+                    let resultSubtypes10 = result10.sort()
+                    var selectSubtypes10 = document.getElementById("SEL2");
+                    var optionS10 = resultOps10;
+                    for(var i = 0; i < optionS10.length; i++) {
+                        var opt10 = optionS10[i];
+                        var el10 = document.createElement("option");
+                        el10.textContent = opt10;
+                        el10.value = opt10;
+                        selectSubtypes10.appendChild(el10);
+                        }
+                
+                
+                $('#select4').fadeIn(50);
+                $('#SEL2').selectpicker('refresh');
+
+                $('#select1').on('change', function() {
+                    $('#select1').selectpicker('toggle'); //added to toggle open/close
+                    $('#SEL2').selectpicker('refresh');
+                    });
+                });
+            
+        </script>
+
+        <script>
+
+            function show(id) {   
+                var imgName = document.getElementById('imgName');
+                if (!id) {imgName.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        imgName.innerHTML = eponyms.features[i].imgName
+                                                ;}}}
+                                            $('.imgName').fadeIn('slow');
+
+                var info = document.getElementById('info');
+                if (!id) {imgName.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        info.innerHTML =    "<br>"+
+                                            eponyms.features[i].who.bold()   +"<br>"+
+                                            eponyms.features[i].when.bold()  +"<br>"+
+                                            eponyms.features[i].where.bold() +"<br><br>"+
+                                            eponyms.features[i].about +
+                                            eponyms.features[i].refs +
+                                            eponyms.features[i].URLs +
+                                            eponyms.features[i].acknow
+                                                ;}}}
+                                            }                           
+        </script>
+
+        <script>
+            function show2(id) {
+
+                var imgName2 = document.getElementById('imgName2');
+                if (!id) {imgName2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        imgName2.innerHTML = eponyms.features[i].imgName
+                                                ;}}}
+                
+                var msg2 = document.getElementById('msg2');
+                if (!id) {msg2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg2.innerHTML = "<br>"+
+                                        eponyms.features[i].who.bold()   +"<br>"+
+                                        eponyms.features[i].when.bold()  +"<br>"+
+                                        eponyms.features[i].where.bold() +"<br><br>"
+                                                ;}}}
+                                        
+                var msg3 = document.getElementById('msg3');
+                if (!id) {msg2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg3.innerHTML = 
+                                        eponyms.features[i].about +
+                                        eponyms.features[i].refs +
+                                        eponyms.features[i].URLs +
+                                        eponyms.features[i].acknow
+                                                ;}}}                           
+            }
+
+        </script>
+
         <script src="/static/assets/js/theme.js"></script>
 
     </body>
