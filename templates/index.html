@@ -61,9 +61,34 @@
 
 
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
-        <!--<link rel="stylesheet" href="/resources/demos/style.css">-->
+        <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
+        <script>
+            $(document).
+            ready(function() {
+              var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C",
+                "C++",
+                "Java",
+                "JavaScript",
+                "Lisp",
+                "Perl",
+                "PHP",
+                "Python",
+                "Ruby",
+                "Scala",
+                "Scheme"];
+              $( "#tags" ).autocomplete({
+                source: availableTags
+              });
+            } );
+        </script>
 
     </head>
 
@@ -311,40 +336,6 @@
 
         <!-- Load d3.js -->
         <script src="https://d3js.org/d3.v4.js"></script>
-
-
-        <script>
-            $(document).
-            ready(function() {
-              var availableTags = [
-                "ActionScript",
-                "AppleScript",
-                "Asp",
-                "BASIC",
-                "C",
-                "C++",
-                "Clojure",
-                "COBOL",
-                "ColdFusion",
-                "Erlang",
-                "Fortran",
-                "Groovy",
-                "Haskell",
-                "Java",
-                "JavaScript",
-                "Lisp",
-                "Perl",
-                "PHP",
-                "Python",
-                "Ruby",
-                "Scala",
-                "Scheme"
-              ];
-              $( "#tags" ).autocomplete({
-                source: availableTags
-              });
-            } );
-        </script>
 
         <script>
             const eponyms = {
