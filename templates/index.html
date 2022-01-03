@@ -59,6 +59,43 @@
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">         
 
+
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+        <script>
+        $( function() {
+            var availableTags = [
+            "ActionScript",
+            "AppleScript",
+            "Asp",
+            "BASIC",
+            "C",
+            "C++",
+            "Clojure",
+            "COBOL",
+            "ColdFusion",
+            "Erlang",
+            "Fortran",
+            "Groovy",
+            "Haskell",
+            "Java",
+            "JavaScript",
+            "Lisp",
+            "Perl",
+            "PHP",
+            "Python",
+            "Ruby",
+            "Scala",
+            "Scheme"
+            ];
+            $( "#tags" ).autocomplete({
+            source: availableTags
+            });
+        } );
+        </script>
+
     </head>
 
     <body>
@@ -144,6 +181,12 @@
                             <p></p>
                             <p></p>
                         </div>
+
+                        <div class="ui-widget">
+                            <label for="tags">Tags: </label>
+                            <input id="tags">
+                        </div>
+
                     </div>
                     <div class="move d-none d-lg-block">
                         <a href="#section-30" class="text-navy font-weight-bold" data-smooth-scroll data-smooth-scroll-hash="false">
@@ -10394,6 +10437,25 @@
         </script>
 
         <script src="/static/assets/js/theme.js"></script>
+
+
+
+	
+         
+       
+         
+      
+
+
+
+
+
+
+
+
+
+
+
 
 
     </body>
