@@ -243,10 +243,10 @@
         <script src="https://jsuites.net/v4/jsuites.js"></script>
 
         <!-- Load d3.js -->
-        <script src="https://d3js.org/d3.v4.js"></script>
+        <!--<script src="https://d3js.org/d3.v4.js"></script>-->
 
 
-    
+
 
         <script>
             const eponyms = {
@@ -731,7 +731,7 @@
             jrnls:["Radiology",], 
             imgName:"",//"<br><img src=\"../static/assets/img/profiles/Emil_Balthazar.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
-            URLs:"<br><a href='https://pubs.rsna.org/doi/pdf/10.1148/radiology.174.2.2296641' class='btn btn-secondary' role='button'>original paper</a><br><a href='https://en.wikipedia.org/wiki/Acute_pancreatitis#Balthazar_score' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", //no WNI
+            URLs:"<br><a href='https://pubs.rsna.org/doi/pdf/10.1148/radiology.174.2.2296641' class='btn btn-secondary' role='button'>original paper</a> <a href='https://en.wikipedia.org/wiki/Acute_pancreatitis#Balthazar_score' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", //no WNI
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{ 
             type:'Feature',
@@ -962,7 +962,7 @@
             ops:"",//
             opsSpec:"",//{'Plastics': ['', ],},
             geometry: {type: 'MultiPoint', coordinates: [ -96.838889, 32.810278 ]},     //long,lat
-            properties: {title:"Baxter - Parkland formula", description:'Dallas - Texas<br>1968'},   
+            properties: {title:"Baxter - Parkland formula", description:'Parkland Memorial Hospital<br>1968'},   
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
             refs:"<br><p style='font-size: 20px'>Baxter CR, Shires T. Physiological response to crystalloid resuscitation of severe burns. <i>Ann N Y Acad Sci</i>. 1968; 150 (3): 874-894</p>",   
             jrnls:["Ann N Y Acad Sci","Annals of the New York Academy of Sciences",],
@@ -1311,7 +1311,7 @@
             imgName:"<br><img src=\"../static/assets/img/profiles/Herman_Boerhaave.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",//
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Esophageal_rupture' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2800.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
-            acknow:"",//
+            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Boerhaave is in the Public Domain and was sourced from Wikipedia.</i></p>", 
         },{
             type:'Feature',
             ID:345, 
@@ -1502,7 +1502,7 @@
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21] 
             refs:"<br><p style='font-size: 20px'>Brooke BN. The management of an ileostomy, including its complications. <i>Lancet</i>. 1952; 2(6725): 102-104.br></p>",  
             jrnls:["Lancet",], 
-            imgName:"<br><img src=\"../static/assets/img/profiles/Bryan_Nicholas_Brooke.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"",//get new one from  gastroenterology <br><img src=\"../static/assets/img/profiles/Bryan_Nicholas_Brooke.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"",    //
             URLs:"",     //no wiki, no paper access   //no WNI
             acknow:"",   //<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
@@ -1801,7 +1801,7 @@
             imgName:"<br><img src=\"../static/assets/img/profiles/Jean-Francois_Calot.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"", 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Cystohepatic_triangle' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/4023.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
-            acknow:"",//<br><br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image shown of Calot is in the Public Domain and was sourced from Wikipedia.</i></p>",
         },{
             type:'Feature',
             ID:460, 
@@ -2084,7 +2084,7 @@
             imgName:"<br><img src=\"../static/assets/img/profiles/Jean-Martin Charcot.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Charcot%27s_cholangitis_triad ' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2896.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
-            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image shown of Fisher is in the Public Domain and was sourced from Wikipedia.</i></p>",
         },{
             type:'Feature',
             ID:540, 
@@ -2681,7 +2681,7 @@
             who:"Burrill Crohn", whoSearch:["Burrill Crohn",],
             where:"Manhattan - New York - USA", whereSearch:["Manhattan, New York, USA", "New York, USA", "USA",],               
             country:["USA"], when:"1932",
-            disease:["Colitis", "Inflammatory bowel disease","Perianal fistula",],
+            disease:["Abdominal pain", "Colitis", "Inflammatory bowel disease", "Anal fistula",],
             ops:["Appendicectomy","Colonoscopy", "Colectomy", "Small bowel resection", "EUA rectum"],
             opsSpec:{'Colorectal': ['Colectomy','Colonoscopy','EUA rectum','Small bowel resection', ],
                      'General Surgery': ['Appendicectomy','Small bowel resection', ],  },
@@ -2807,7 +2807,7 @@
             whoSearch:["Harvey Cushing",],  
             where:"Boston - Massachusetts - USA",//  whereSearch:["",], 
             country:["USA"], when:"1932", 
-            disease:["Peptic ulcer disease",],  
+            disease:["Abdominal pain","Peptic ulcer disease",],  
             ops:["Endoscopy", "Perforated ulcer repair",],   
             opsSpec:{'Oesophagogastric': ['Endoscopy', 'Perforated ulcer repair', ], },             
             geometry: {type: 'MultiPoint', coordinates: [ -71.1049, 42.3351 ]}, //lng,lat
@@ -2923,8 +2923,8 @@
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"",   
             jrnls:"",//["",]
-            URLs:"<br><a href='https://en.wikipedia.org/wiki/De_Garengeot's_hernia' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",   //no wni
-            imgName:"<br><img src=\"../static/assets/img/profiles/Rene_De_Garengeot.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/De_Garengeot%27s_hernia' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",   //no wni
+            imgName:"",//<br><img src=\"../static/assets/img/profiles/Rene_De_Garengeot.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"<br>Incarceration of the appendix within a femoral hernia.<br>", 
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         //},{
@@ -2965,7 +2965,7 @@
             //googlehtz:1400, //search: " sign" AND "" [02-Oct-21]
             refs:"<br><p style='font-size: 20px'>De Quervain F. Über acute, nichteitrige Thyroiditis. <i>Archiv für Klinische Chirurgie</i>. 1902; 67: 706-714<br></p>",  
             jrnls:["Archiv für Klinische Chirurgie",], 
-            URLs:"<br><a href='https://en.wikipedia.org/wiki/De_Quervain's_thyroiditis' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",   //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/De_Quervain%27s_thyroiditis' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",   //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             imgName:"",//"<img src=\"../static/assets/img/profiles/DeQuervain.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",//<br><br><br>", 
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
@@ -3056,7 +3056,7 @@
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
-            ID:840, 
+            ID:850, 
             name:"Dercum's disease",      
             topic:["General Surgery","Plastics",],  
             subtype:["Pathology",],
@@ -3114,7 +3114,7 @@
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"<br><p style='font-size: 20px'>Devine HB. Basic principles and supreme difficulties of gastric surgery. <i>Surg Gynec Obst</i>. 1925; 40: 1-16<br></p>",   
             jrnls:["Surg Gynecol Obstet","Surgery, Gynecology & Obstetrics",],
-            URLs:"",//"<br><a href='https://en..org/wiki/ ' target='_blank' class='btn btn-secondary' role='button'>  </a><br>", //no wiki,   //no wni
+            URLs:"",//"<br><a href='https:// ' target='_blank' class='btn btn-secondary' role='button'>  </a><br>", //no wiki,   //no wni
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"<br>Exclusion gastroenterostomy. St Vincent's Hospital, Melbourne<br>",//<br><br><br>", 
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
@@ -3135,7 +3135,7 @@
             properties: { title:"Dieulafoy's lesion", description:'Paris<br>1898'},
             //googlehtz:0, //search: "  " AND " " [02-Oct-21]
             refs:"",
-            URLs:"<br><a href='https://en.wikipedia.org/wiki/Dieulafoy's_lesion' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/3118.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/Dieulafoy%27s_lesion' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/3118.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/Dieulafoy.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",// 
@@ -3338,7 +3338,7 @@
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"<br><br><p style='font-size: 20px'>Dupuytren G. Permanent retraction of the fingers, produced by affection of the palmar fascia. <i>Lancet</i>. 1834; 2: 222-225<br></p>",// 
             jrnls:["Lancet",],
-            URLs:"<br><a href='https://en.wikipedia.org/wiki/Dupuytren's_contracture' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/1128.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/Dupuytren%27s_contracture' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/1128.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             imgName:"",//"<img src=\"../static/assets/img/profiles/Dupuytren.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"", 
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
@@ -3357,7 +3357,7 @@
             geometry: {type: 'MultiPoint', coordinates: [ -73.8648, 40.8448 ]}, //lng,lat
             properties: { title:"Duval procedure", description:'New York<br>1954'}, 
             //googlehtz:0, //search: "" AND "" [02-Oct-21]
-            refs:"<br><br><p style='font-size: 20px'>DuVal MK Jr. Caudal pancreatico-jejunostomy for chronic relapsing pancreatitis. <i>Ann Surg</i>. 1954; 140(6): 775-785<br></p>", 
+            refs:"<br><p style='font-size: 20px'>DuVal MK Jr. Caudal pancreatico-jejunostomy for chronic relapsing pancreatitis. <i>Ann Surg</i>. 1954; 140(6): 775-785<br></p>", 
             jrnls:["Ann Surg","Annals of Surgery",],
             URLs:"",//"<br><a href='https://en. . / / ' target='_blank' class='btn btn-secondary' role='button'> </a><br>", //no wiki,  //no wni
             imgName:"",//"<img src=\"../static/assets/img/profiles/Duval.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -3399,7 +3399,7 @@
             geometry: {type: 'MultiPoint', coordinates: [ 8.24435 , 49.99349 ]}, //lng,lat
             properties: { title:"Eckardt score", description:'Mainz<br>1992'}, 
             //googlehtz:0, //search: "" AND "" [02-Oct-21]
-            refs:"<br><br><p style='font-size: 20px'>Eckardt VF, Aignherr C, Bernhard G. Predictors of outcome in patients with achalasia treated by pneumatic dilation. <i>Gastroenterology</i>. 1992; 103(6): 1732-1738<br></p>", 
+            refs:"<br><p style='font-size: 20px'>Eckardt VF, Aignherr C, Bernhard G. Predictors of outcome in patients with achalasia treated by pneumatic dilation. <i>Gastroenterology</i>. 1992; 103(6): 1732-1738<br></p>", 
             jrnls:["Gastroenterology",],
             URLs:"",//"<br><a href='https:// ' target='_blank' class='btn btn-secondary' role='button'></a><br>", //no wiki,  //no wni
             imgName:"",//"<img src=\"../static/assets/img/profiles/Eckart.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -3951,9 +3951,9 @@
             //googlehtz:0, //search: "" AND "" [02-Oct-21] 
             refs:"<br><p style='font-size: 20px'>Fowler GR. A new and improved method of entering the abdominal cavity in the ileocaecal region. <i>Med News</i>. 1900; 76:321-324  <br>Weir RF. An improved operation for acute appendicitis or for quiescent cases with complications. <i>Med News</i>. 1900; 76: 241-242<br></p>",
             jrnls:["Med News",],
-            URLs:"",    //"<br><a href='https://en.wikipedia.org/wiki/ ' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
-            imgName:"<br><img src=\"../static/assets/img/profiles/Fowler_Weir.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            about:"<br>New York surgeons - Fowler in Brooklyn, & Weir in Manhattan.",//<br><br><br>", 
+            URLs:"", //"<br><a href='https://en.wikipedia.org/wiki/ ' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            imgName:"<br><img src=\"../static/assets/img/profiles/Fowler_Weir.png\" class=\"card-img\" style=\"width:16rem;\">", //temporary replacement
+            about:"<br>New York surgeons - Fowler in Brooklyn, & Weir in Manhattan.<br>",
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
@@ -4683,7 +4683,7 @@
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Hartmann%27s_operation' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='http://www.whonamedit.com/synd.cfm/3068.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             imgName:"<br><img src=\"../static/assets/img/profiles/Henri_Hartmann.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"", 
-            acknow:"",
+            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Hartmann was sourced from Wikipedia and is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>", 
         },{
             type:'Feature',
             ID:1410, 
@@ -4706,7 +4706,7 @@
             imgName:"<br><img src=\"../static/assets/img/profiles/Henri_Hartmann.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"",  
             URLs:"<br><a href='http://www.whonamedit.com/synd.cfm/3069.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>", //no wiki //"<br><a href='https://en.wikipedia.org/wiki/ ' target='_blank' class='btn btn-info' role='button'>wikipedia</a>
-            acknow:"", //<br><i>We kindly the above information.</i>",
+            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Hartmann was sourced from Wikipedia and is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>",
         },{
             type:'Feature',
             ID:1420, 
@@ -4872,8 +4872,7 @@
             disease:["Cholecystitis","Gallstones",], 
             ops:["Cholecystectomy",], 
             opsSpec:{'General Surgery': ['Cholecystectomy', ], 
-                     'HPB': ['Cholecystectomy', ], 
-                    },
+                     'HPB': ['Cholecystectomy', ],},
             geometry: {type: 'MultiPoint', coordinates:[ 11.008682, 52.228881 ]}, //lng,lat
             properties: { title:"Spiral valves of Heister", description:'Helmstedt - Germany<br>1721'},   
             //googlehtz:0, //search: "   " AND " " [02-Oct-21]
@@ -4882,7 +4881,7 @@
             imgName:"",//"<img src=\"../static/assets/img/profiles/Lorenz_Heister.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Spiral_valves_of_Heister' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='http://www.whonamedit.com/synd.cfm/3807.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
-            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            acknow:"",//<hr class='my-4'><p style='font-size: 16px'><i>The image shown of Heister is in the Public Domain and was sourced from Wikipedia.</i></p>",
         },{
             type:'Feature',
             ID:1490, 
@@ -5567,7 +5566,7 @@
             imgName:"",//"<img src=\"../static/assets/img/profiles/Karydakis.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
             URLs:"",  //no wiki, no wni  //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
-            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:1730, 
@@ -5642,7 +5641,7 @@
             where:"Kumamoto - Japan",//    whereSearch:["",],                 
             country:["Japan"], when:"1995",  
             disease:["Bowel cancer", "Colorectal cancer",],  
-            ops:"",//["",],
+            ops:["Colectomy",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ 130.72475, 32.80259 ]}, //lng,lat
             properties: { title:"Kikuchi classification", description:'Kumamoto - Japan<br>1995'},    
@@ -5652,6 +5651,7 @@
             URLs:"",//wiki-No, //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",//
+            acknow:"",
         //},{
             //type:'Feature',
             //ID:1760, 
@@ -5711,7 +5711,7 @@
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"<br><p style='font-size: 20px'>Klatskin G. Adenocarcinoma of the hepatic duct at its bifurcation within the porta hepatis: an unusual tumor with distinctive clinical and pathological features. <i>Am J Med</i>. 1965; 38: 241–256<br></p>",//  
             jrnls:["Am J Med","American Journal of Medicine",], 
-            imgName:"<br><img src=\"../static/assets/img/profiles/Klatskin.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"",// from https://medicine.yale.edu/pathology/clinical/surgpath/gi/gi_history/   <br><img src=\"../static/assets/img/profiles/Klatskin.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"<br>Hilar cholangiocarcinoma<br>",//<br><br><br>", 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Klatskin_tumor' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", //no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
@@ -5797,9 +5797,9 @@
             //jrnls:"",//["",]
             //URLs:"", //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             //imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            //about:"",//<br><br><br>",
+            //about:"",
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  https://www.whonamedit.com/synd.cfm/1017.html
-            //acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:1810, 
@@ -5818,9 +5818,9 @@
             imgName:"<br><img src=\"../static/assets/img/profiles/Emil_Theodor_Kocher.png\" class=\"card-img\" style=\"width:12rem;\">",
             refs:"",   //<p style='font-size: 20px'></p>
             jrnls:"",//["",]
-            URLs:"",//wiki-Y  Surgical_incision, //<a href='https://www.whonamedit.com/synd.cfm/1010.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/Surgical_incision' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/1010.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             about:"",
-            acknow:"", 
+            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Kocher is in the Public Domain.</i></p>",
         //},{
             //type:'Feature',
             //ID:1815, 
@@ -6008,12 +6008,12 @@
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ 4.894, 52.368 ]}, //long,lat
             properties: { title:"Lanz incision", description:'Amsterdam<br>1908'},     
-            //googlehtz:0, //search: "  " AND " " [02-Oct-21]
-            refs:"",   
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            refs:"<br><p style='font-size: 20px'>Lanz O. Der McBurney's che punkt. <i>Zentralblatt für Chirurgie</i>. 1908; 35: 185-190<br></p>",
             jrnls:"",//["",]
-            URLs:"",//wiki-Y   Surgical_incision, //wni no //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/Surgical_incision' target='_blank' class='btn btn-info' role='button'>Wikipedia</a><br>",
             imgName:"<br><img src=\"../static/assets/img/profiles/Lanz.png\" class=\"card-img\" style=\"width:12rem;\">",
-            about:"",//<br><br><br>", 
+            about:"",
             acknow:"",
         //},{
             //type:'Feature',
@@ -6691,7 +6691,7 @@
             URLs:"<br><a href='https://en.wikipedia.org/wiki/McBurney%27s_point' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/534.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
             imgName:"<br><img src=\"../static/assets/img/profiles/McBurney.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"",
-            acknow:"",
+            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of McBurney was sourced from Wikipedia and is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>", 
         },{
             type:'Feature',
             ID:2540, 
@@ -7427,7 +7427,7 @@
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"<br><p style='font-size: 20px'>Paget J. On disease of the mammary areola preceding cancer of the mammary gland. <i>St Bartholomew's Hosp Rep</i>. 1874; 10: 87-89<br></p>",   
             jrnls:["St Bartholomew's Hosp Rep",],
-            URLs:"<br><a href='https://en.wikipedia.org/wiki/Paget%27s_disease_of_the_breast' target='_blank' class='btn btn-secondary' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/1148.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/Paget%27s_disease_of_the_breast' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/1148.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             imgName:"",//"<img src=\"../static/assets/img/profiles/Paget.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
@@ -7710,9 +7710,9 @@
             geometry: { type: 'MultiPoint', coordinates: [ 8.688856, 49.402658 ]}, //long,lat
             properties: { title:"Petersen's space", description:'Heideberg - Germany<br>1990'},
             //googlehtz: 0, //search: " " AND " " [02-Oct-21]
-            refs:"",   
+            refs:"<br><p style='font-size: 20px'>Petersen W. Ueber darmveschlingung nach der gastro-enterostomie. <i>Arch Klin Chir</i>. 1900; 62: 94-114</p>", 
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            jrnls:"",//["",]
+            jrnls:["Arch Klin Chir",],
             about:"",
             URLs:"",//wiki-N, //no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
@@ -7822,8 +7822,8 @@
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -73.833745, 40.911061 ]}, //long,lat
             properties: { title:"Ranson score", description:'New York<br>1974'},
-            //googlehtz:0, //search: "   " AND " " [02-Oct-21]
-            refs:"",//"<br>", 
+            //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
+            refs:"<br><p style='font-size: 20px'>Ranson JH, Rifkind KM, Roses DF, Fink SD, Eng K, Spencer FC. Prognostic signs and the role of operative management in acute pancreatitis. <i>Surg Gynecol Obstet</i>. 1974; 139(1): 69-81<br></p>", 
             jrnls:"",//["",]
             imgName:"",//"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"",       
@@ -8435,11 +8435,11 @@
             geometry: { type: 'MultiPoint', coordinates: [ -0.0588, 51.518 ]}, //long,lat
             properties: { title:"Sherren triangle", description:'London<br>1903'},
             //googlehtz: 0, //search: "  " AND "  " [02-Oct-21]
-            refs:"",   
+            refs:"<br><p style='font-size: 20px'>Sherren J. On the occurrence and significance of cutaneous hyperalgesia in appendicitis. <i>Lancet</i>. 1903; 2: 816-821<br></p>", 
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
             jrnls:"",//["",]
-            URLs:"",//wiki?Y/N,  //<a href='https://www.whonamedit.com/synd.cfm/1993.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/Sherren%27s_triangle' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/1993.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{   
             type:'Feature',
@@ -9888,7 +9888,7 @@
             properties: { title:"Yankauer suction catheter tip", description:'New York<br>1907'},        
             refs:"", 
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Yankauer.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"",//need permissions "<br><img src=\"../static/assets/img/profiles/Yankauer.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"<br>Mount Sinai Hospital<br>",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Yankauer_suction_tip' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", //no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             acknow:"",
@@ -10055,6 +10055,8 @@
         
         }]}
         </script>
+
+
 
 
 
