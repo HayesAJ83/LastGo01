@@ -1505,7 +1505,7 @@
             geometry: {type: 'MultiPoint', coordinates: [ 4.836389, 45.758333 ]},  //long,lat
             properties: {title:"Bouveret syndrome", description:'Lyon - France<br>1896'},
             //googlehtz: 0, //search: "  sign" AND " " [02-Oct-21] 
-            refs:"<br>Bouveret L. Sténose du pylore adhérent à la vésicule calculeuse. <i>Rev Med</i>. 1896; 16: 1-16<br>", 
+            refs:"<br><p style='font-size: 20px'>Bouveret L. Sténose du pylore adhérent à la vésicule calculeuse. <i>Rev Med</i>. 1896; 16: 1-16<br></p>", 
             jrnls:["Rev Med",],  
             imgName:"<br><img src=\"../static/assets/img/profiles/Leon_Bouveret.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"", 
@@ -1633,7 +1633,7 @@
             geometry: {type: 'MultiPoint', coordinates: [ 57.50217, -20.15906 ]},     //lng,lat
             properties: {title:"Brown-Séquard syndrome", description:'Port Louis - Mauritius<br>1851'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21] 
-            refs:"<br>Brown-Séquard CE. De la transmission croisée des impressions sensitives par la moelle épinière. <i>C R Soc Biol</i>. 1851; 2: 33-44<br>",
+            refs:"<br><p style='font-size: 20px'>Brown-Séquard CE. De la transmission croisée des impressions sensitives par la moelle épinière. <i>C R Soc Biol</i>. 1851; 2: 33-44<br></p>",
             jrnls:["C R Soc Biol",], 
             imgName:"<br><img src=\"../static/assets/img/profiles/Charles_Brown_Sequard.png\" class=\"card-img\" style=\"width:12rem;\">", 
             about:"",//
@@ -2020,9 +2020,9 @@
             refs:"<br><p style='font-size: 20px'>Carney JA, Stratakis CA. Familial paraganglioma and gastric stromal sarcoma: a new syndrome distinct from the Carney triad. <i>Am J Med Genet</i>. 2002; 108(2): 132-139<br></p>",   
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            about:"",//<br><br><br>", 
+            about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Carney%27s_triad#Carney–Stratakis_syndrome' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",   //Check wni has this correct <a href='http://www.whonamedit.com/synd.cfm/3353.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
-            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:500, 
@@ -2193,7 +2193,7 @@
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"<br><p style='font-size: 20px'>Charlson ME, Pompei P, Ales KL, MacKenzie CR. A new method of classifying prognostic comorbidity in longitudinal studies: Development and validation. <i>J Chronic Dis</i>. 1987; 40(5): 373-383<br></p>",
             jrnls:["J Chronic Dis",], 
-            imgName:"<br><img src=\"../static/assets/img/profiles/Charlson_Mary.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"",//<br><img src=\"../static/assets/img/profiles/Charlson_Mary.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"<br>Manhattan, New York. Clinical Epidemiology Unit, Dept of Medicine, Cornell University Medical College<br>",//<br><br><br>", 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Comorbidity#Charlson_index ' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", //add personal site https://vivo.weill.cornell.edu/display/cwid-mecharl , // no wni
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
@@ -2298,7 +2298,7 @@
             //googlehtz:0, //search: "GIST" AND "" [02-Oct-21]  
             refs:"<br><p style='font-size: 20px'>Choi H, Charnsangavej C, Faria SC, et al. Correlation of computed tomography and positron emission tomography in patients with metastatic gastrointestinal stromal tumor treated at a single institution with imatinib mesylate: Proposal of new computed tomography response criteria. <i>J Clin Oncol</i>. 2007; 25: 1753-1759<br></p>",   
             jrnls:["J Clin Oncol","Journal of Clinical Oncology",],
-            imgName:"<br><img src=\"../static/assets/img/profiles/Choi_Haesun.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"",//<br><img src=\"../static/assets/img/profiles/Choi_Haesun.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"",
             URLs:"",//"<br><a href='https://en.wikipedia.org/wiki/ ' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", //https://faculty.mdanderson.org/profiles/haesun_choi.html,  //no  wni
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>", 
@@ -2333,7 +2333,7 @@
             where:"Vienna - Austria", // whereSearch:[,],              
             country:["Austria"], when:"1876",  
             disease:["Hypocalcaemia",], 
-            ops:["Parathyroidectomy",],
+            ops:["Parathyroidectomy","Thyroidectomy",],
             opsSpec:"",//{' ': [' ', ], },
             geometry: {type: 'MultiPoint', coordinates: [ 16.354139, 48.218629, ]},   //lng,lat
             properties: {title:"Chvostek sign", description:'Vienna<br>1876'},
@@ -2508,8 +2508,8 @@
             geometry: {type: 'MultiPoint', coordinates: [ -1.9395, 52.4529 ]},  //long,lat
             properties: {title:"Collis gastroplasty", description:'Birmingham - England<br>1957'},
             //googlehtz:0, //search: "   " AND " " [02-Oct-21]
-            refs:"", //"<br>  <br>",   
-            jrnls:"",//["",]
+            refs:"<br><p style='font-size: 20px'>Collis JL. An operation of hiatus hernia with short oesophagus. <i>Thorax</i>. 1957; 12: 181-188<br></p>",   
+            jrnls:["Thorax",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/Colles.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",//
             URLs:"",//"<br><a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5743240/pdf/edinbmedsurgj71941-0046.pdf' target='_blank' class='btn btn-secondary' role='button'>original paper</a> <a href='https://en.wikipedia.org/wiki/Colles%27_fracture' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
@@ -2569,10 +2569,9 @@
             //opsSpec:{' ': [' ', ],  },
             //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
             //properties: { title:"Connell stitch", description:' <br> '},
-            //lat:"", long:"",
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            //refs:"",   
-            //jrnls:"",//['',],
+            //refs:"<br><p style='font-size: 20px'>Connell ME. Intestinal anastomosis - by a new method, without plates and with but two knots - either silk or catgut sutures may be used. <i>JAMA</i>. 1893; XXI(5): 150-154<br></p>",    
+            //jrnls:['JAMA',],
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",   //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             //about:"", 
@@ -3062,7 +3061,7 @@
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{
             //type:'Feature',
-            //ID:801, 
+            //ID:815, 
             //name:"Deaver retractor",      
             //topic:[""], 
             //subtype:["Instruments",], 
@@ -3121,7 +3120,7 @@
             refs:"<br><p style='font-size: 20px'>Johnson LF, Demeester TR. Twenty-four-hour pH monitoring of the distal esophagus. A quantitative measure of gastroesophageal reflux. <i>Am J Gastroenterol</i>. 1974; 62(4): 325-332<br></p>", 
             jrnls:["Am J Gastroenterol",],
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Esophageal_pH_monitoring' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //no wni <a href='' target='_blank' class='btn' role='button'></a>
-            imgName:"<br><img src=\"../static/assets/img/profiles/DeMeester.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"",//<br><img src=\"../static/assets/img/profiles/DeMeester.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"", 
             acknow:"",//"<br><i>We kindly acknowledge Miss X FRCS who contributed the above information</i>",
         },{
@@ -3404,7 +3403,7 @@
             geometry: {type: 'MultiPoint', coordinates: [ 144.97461, -37.80731 ]}, //lng,lat
             properties: { title:"Dunhill procedure", description:'Melbourne<br>1919'},
             //googlehtz:0, //search: "" AND "" [02-Oct-21]
-            refs:"<br><br><p style='font-size: 20px'>Dunhill TP. Some considerations on the operation for exophthalmic goitre. <i>Br J Surg</i>. 1919; 7: 195-210<br></p>", 
+            refs:"<br><p style='font-size: 20px'>Dunhill TP. Some considerations on the operation for exophthalmic goitre. <i>Br J Surg</i>. 1919; 7: 195-210<br></p>", 
             jrnls:["Br J Surg", "BJS", "British Journal of Surgery",],
             URLs:"",//"<br><a href='https:// ' target='_blank' class='btn btn-secondary' role='button'>  </a><br>",  //no wiki,  //no wni
             imgName:"",//"<img src=\"../static/assets/img/profiles/Dunhill.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -3427,7 +3426,7 @@
             geometry: {type: 'MultiPoint', coordinates: [ 2.34853, 48.85446 ]}, //lng,lat
             properties: { title:"Dupuytren's contracture", description:'Paris<br>1834'},  
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            refs:"<br><br><p style='font-size: 20px'>Dupuytren G. Permanent retraction of the fingers, produced by affection of the palmar fascia. <i>Lancet</i>. 1834; 2: 222-225<br></p>",// 
+            refs:"<br><p style='font-size: 20px'>Dupuytren G. Permanent retraction of the fingers, produced by affection of the palmar fascia. <i>Lancet</i>. 1834; 2: 222-225<br></p>",// 
             jrnls:["Lancet",],
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Dupuytren%27s_contracture' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/1128.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             imgName:"",//"<img src=\"../static/assets/img/profiles/Dupuytren.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -3469,7 +3468,7 @@
             geometry: {type: 'MultiPoint', coordinates: [ 2.45321, 48.79733 ]}, //lng,lat
             properties: { title:"Duvoux criteria", description:'Paris<br>2012'}, 
             //googlehtz:0, //search: "   " AND "   " [02-Oct-21]
-            refs:"<br><br><p style='font-size: 20px'>Duvoux C, Roudot-Thoraval F, Decaens T et al. Liver transplantation for hepatocellular carcinoma: a model including α-fetoprotein improves the performance of Milan criteria. <i>Gastroenterology</i>. 2012; 143(4): 986-994<br></p>", 
+            refs:"<br><p style='font-size: 20px'>Duvoux C, Roudot-Thoraval F, Decaens T et al. Liver transplantation for hepatocellular carcinoma: a model including α-fetoprotein improves the performance of Milan criteria. <i>Gastroenterology</i>. 2012; 143(4): 986-994<br></p>", 
             jrnls:["Gastroenterology",],
             URLs:"",//"<br><a href='https:// ' target='_blank' class='btn btn-secondary' role='button'> </a><br>", no wiki,  //no wni
             imgName:"",//"<img src=\"../static/assets/img/profiles/Duvoux.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -3534,7 +3533,7 @@
             geometry: {type: 'MultiPoint', coordinates: [ -118.20476 , 34.06018 ]}, //long,lat
             properties: { title:"Edmondson-Steiner grade", description:'Los Angeles<br>1954'}, 
             //googlehtz:0, //search: "" AND "" [02-Oct-21]
-            refs:"<br><br><p style='font-size: 20px'>Edmondson HA, Steiner PE. Primary carcinoma of the liver: a study of 100 cases among 48,900 necropsies. <i>Cancer</i>. 1954; 7(3): 462-503<br></p>",   
+            refs:"<br><p style='font-size: 20px'>Edmondson HA, Steiner PE. Primary carcinoma of the liver: a study of 100 cases among 48,900 necropsies. <i>Cancer</i>. 1954; 7(3): 462-503<br></p>",   
             jrnls:["Cancer",],
             URLs:"",//"<br><a href='https:// ' target='_blank' class='btn btn-secondary' role='button'></a><br>", //no wiki,  //no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -3618,8 +3617,7 @@
             disease:["Lymphoma", "Gastric cancer", "Nasopharyngeal cancer","Splenic rupture",],
             ops:["Endoscopy", "Gastrectomy", "Splenectomy",],   
             opsSpec:{'General Surgery': ['Endoscopy', 'Gastrectomy', 'Splenectomy',], 
-                     'Oesophagogastric': ['Endoscopy', 'Gastrectomy', 'Splenectomy',], 
-                    }, 
+                     'Oesophagogastric': ['Endoscopy', 'Gastrectomy', 'Splenectomy',], }, 
             geometry: {type: 'MultiPoint', coordinates: [ -0.1476, 51.5207 ]}, //lng,lat
             properties: { title:"Epstein-Barr Virus", description:'London<br>1964'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -3647,7 +3645,7 @@
             refs:"",   
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            about:"",//<br><br><br>", 
+            about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Erb's_palsy' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/946.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
@@ -3925,7 +3923,7 @@
             who:"Thomas Fitz-Hugh & Arthur Curtis",    
             where:"Philadelphia - Pennsylvania - USA", whereSearch:["Philadelphia, Pennsylvania, USA",],
             country:["USA"], when:"1934",   
-            disease:["Pelvic inflammatory disease",],  
+            disease:["Pelvic inflammatory disease","Abdominal pain",],  
             ops:"",//["",],
             opsSpec:"",//
             geometry: {type: 'MultiPoint', coordinates: [ -75.19284, 39.94832 ]}, //lng,lat
@@ -4125,8 +4123,8 @@
             opsSpec:{'HPB': ['Pancreatic resection', ], },
             geometry: {type: 'MultiPoint', coordinates: [ -121.456298 , 38.555088 ]}, //long,lat
             properties: { title:"Frey's procedure", description:'Sacramento - California<br>1987'}, 
-            //googlehtz:0, //search: "   " AND " " [02-Oct-21] 
-            refs:"<br>Frey CF, Smith GJ. Description and rationale of a new operation for chronic pancreatitis. <i>Pancreas</i>. 1987; 2(6): 701-707<br>",   
+            //googlehtz:0, //search: "   " AND " " [02-Oct-21]
+            refs:"<br><p style='font-size: 20px'>Frey CF, Smith GJ. Description and rationale of a new operation for chronic pancreatitis. <i>Pancreas</i>. 1987; 2(6): 701-707<br></p>",  
             jrnls:["Pancreas",],
             imgName:"",  //"<img src=\"../static/assets/img/profiles/Frey.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",   
@@ -4209,7 +4207,7 @@
             geometry: {type: 'MultiPoint', coordinates: [ -122.68875, 45.498917 ]}, //long,lat
             properties: { title:"Gambee suture", description:'Portland - Oregan<br>1951'}, 
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            refs:"<br>Gambee LP. A single-layer open intestinal anastomosis applicable to the small as well as the large intestine. <i>West J Surg</i>. 1951; 59: 1-5<br>",  
+            refs:"<br><p style='font-size: 20px'>Gambee LP. A single-layer open intestinal anastomosis applicable to the small as well as the large intestine. <i>West J Surg</i>. 1951; 59: 1-5<br></p>",  
             jrnls:["West J Surg",], 
             URLs:"", // wiki-NO, no wni //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -4812,8 +4810,8 @@
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ -90.26419, 38.63641 ]}, //long,lat
             properties: { title:"Hartmann's solution", description:'St Louis - Missouri<br>1932'},
-            //googlehtz:0, //search: "  sign" AND " " [02-Oct-21]
-            refs:"",  
+            //googlehtz:0, //search: "  sign" AND " " [02-Oct-21] 
+            refs:"<br><p style='font-size: 20px'>Hartmann AF, Senn MJE. Studies in the metabolism of sodium r-lactate. I. Response of normal human subjects to the intravenous injection of sodium r-lactate. <i>J Clin Invest</i>. 1932; 11(2): 327-335<br></p>", 
             jrnls:"",//["",] 
             imgName:"",//"<img src=\"../static/assets/img/profiles/Hodgkin.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"<br>Alexis Frank Hartmann<br>",
@@ -5014,10 +5012,6 @@
             about:"",
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         
-        
-//// DONE TO HERE
-        
-        
         },{
             type:'Feature',
             ID:1500, 
@@ -5071,7 +5065,7 @@
             //geometry: {type: 'MultiPoint', coordinates:[ ,  ]}, //lng,lat
             //properties: { title:"Hinchey classification", description:'Montreal<br>1978'}, 
             //googlehtz: 0, //search: " " AND " " [02-Oct-21]
-            //refs:"<br>",   
+            //refs:"<br>",   Hinchey EJ, Schaal PG, Richards GK. **Treatment of Perforated Diverticular Disease of the Colon**. _Adv Surg_. 1978; 12: 85-109
             //jrnls:"",//["",]
             //imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             //about:"",//
@@ -5090,7 +5084,7 @@
             //geometry: {type: 'MultiPoint', coordinates:[ ,  ]}, //lng,lat
             //properties: { title:"Hirschsprung's disease", description:'Copenhagen<br>1886'}, 
             //googlehtz: 0, //search: " " AND " " [02-Oct-21]
-            //refs:"<br>",   
+            //refs:"<br>",   Hirschsprung H. **Stuhlträgheit neugeborener in folge von dilatation und hypertrophie des colons**. _Jahrb f Kinderh_. 1888; 27: 1-7
             //jrnls:"",//["",]
             //imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             //about:"",//<br>",
@@ -5193,7 +5187,7 @@
             //geometry: {type: 'MultiPoint', coordinates:[ ,  ]}, //lng,lat
             //properties: { title:"Horner's syndrome", description:' <br>'}, 
             //googlehtz: 0, //search: "   " AND " " [02-Oct-21]
-            //refs:"<br>",   
+            //refs:"<br>",   Horner JF. **Über eine form von ptosis**.  _Klin Monatsbl Augenheilk_. 1869; 7: 193-198
             //jrnls:"",//["",]
             //imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             //about:"",//
@@ -5334,7 +5328,7 @@
             //geometry: {type: 'MultiPoint', coordinates:[ ,  ]}, //lng,lat
             //properties: { title:"Imrie score", description:'Glasgow<br>'}, 
             //googlehtz: 0, //search: "   " AND " " [02-Oct-21]
-            //refs:"<br>",   
+            //refs:"<br>",  Blamey SL, Imrie CW, O'Neill J, Gilmour WH, Carter DC. **Prognostic factors in acute pancreatitis**. _Gut_. 1984; 25(12): 1340-1346 
             //jrnls:"",//["",]
             //imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             //about:"",//
@@ -5436,7 +5430,7 @@
             //geometry: {type: 'MultiPoint', coordinates:[ ,  ]}, //lng,lat
             //properties: { title:"Jackson-Pratt drain", description:' <br>'}, 
             //googlehtz: 0, //search: "   " AND " " [02-Oct-21]
-            //refs:"<br>",   
+            //refs:"<br>",   Jackson FE, Pratt RA 3rd. **Technical report: a silicone rubber suction drain for drainage of subdural hematomas**. _Surgery_. 1971; 70(4): 578-579
             //jrnls:"",//["",]
             //imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             //about:"Brain drain",//<br><br><br>",
@@ -5461,14 +5455,6 @@
             about:"",//
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Jadad_scale' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  // https://www.sciencedirect.com/science/article/abs/pii/0197245695001344?via%3Dihub,  //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-       
-       
-//// DONE TO HERE WHONAMEDIT
-
-
-
-
-
        
         },{
             type:'Feature',
@@ -6066,7 +6052,7 @@
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{
             //type:'Feature',
-            //ID:1855, 
+            //ID:1860, 
             //name:"Langer's lines",      
             //topic:["Plastics","General Surgery",], subtype:["Anatomy",],
             //who:"Karl Langer",   
@@ -6087,7 +6073,7 @@
             //acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
-            ID:1860, 
+            ID:1870, 
             name:"Lanz incision",      
             topic:["General Surgery",],  
             subtype:["Incisions",],
@@ -6108,7 +6094,7 @@
             acknow:"",
         //},{
             //type:'Feature',
-            //ID:1865, 
+            //ID:1880, 
             //name:"Nerve of Latarjet",      
             //topic:[""], 
             //subtype:["",], 
@@ -6129,7 +6115,7 @@
             //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         },{
             type:'Feature',
-            ID:1870, 
+            ID:1890, 
             name:"Lauren classification",      
             topic:["Oesophagogastric",], 
             subtype:["Scores"], 
@@ -6143,7 +6129,7 @@
             geometry: {type: 'MultiPoint', coordinates: [ 22.29567, 60.45417 ]}, //long,lat
             properties: { title:"Lauren classification", description:'Turku - Finland<br>1965'},
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
-            refs:"", 
+            refs:"<br><p style='font-size: 20px'>Lauren P. The two histological main types of gastric carcinoma: Diffuse and so-called intestinal-type carcinoma. An attempt at a histo-clinical classification. _Acta Pathol Microbio<br></p>",
             jrnls:"",//["",]
             URLs:"",//wiki-N, wni no //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement 
@@ -6151,7 +6137,7 @@
             acknow:"",
         },{
             type:'Feature',
-            ID:1880, 
+            ID:1900, 
             name:"Le Fort fractures",      
             topic:["Maxillofacial", "Trauma",],  
             subtype:["Scores"],
@@ -6173,7 +6159,7 @@
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
-            ID:1890, 
+            ID:1920, 
             name:"Lembert's suture",      
             topic:["Colorectal", "General Surgery", "HPB", "Oesophagogastric",],  
             subtype:["Techniques"],
@@ -6194,7 +6180,7 @@
             acknow:"",
         },{
             type:'Feature',
-            ID:1900, 
+            ID:1930, 
             name:"Leriche's syndrome",      
             topic:["Vascular",], 
             subtype:["Syndromes"], 
@@ -6207,15 +6193,15 @@
             geometry: {type: 'MultiPoint', coordinates: [ 2.345556, 48.849167 ]}, //lng,lat
             properties: { title:"Leriche's syndrome", description:'Paris<br>1948'},  
             //googlehtz:0, //search: "" AND "" [02-Oct-21]
-            refs:"",  
+            refs:"<br><p style='font-size: 20px'>Leriche R, Morel A. The syndrome of thrombotic obliteration of the aortic bifurcation. <i>Ann Surg</i>. 1948; 127(2): 193-206<br></p>", 
             jrnls:"",//["",]
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Aortoiliac_occlusive_disease' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2747.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             imgName:"",
             about:"",
             acknow:"", 
        
-/// Lhermitte's sign. Jean Lhermitte. id:1920. Neurosurgery
-/// Crypts of Lieberkuhn. id 1940
+/// Lhermitte's sign. Jean Lhermitte. id:1940. Neurosurgery
+/// Crypts of Lieberkuhn. id 1950
        
         },{
             type:'Feature',
@@ -6273,8 +6259,8 @@
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ -73.99419, 40.72911 ]}, //lng,lat
             properties: { title:"Likert scale", description:'New York<br>1932'},
-            //    googlehtz: 0, //search: "  " AND "  " [02-Oct-21]
-            refs:"",
+            //googlehtz: 0, //search: "  " AND "  " [02-Oct-21]
+            refs:"<br><p style='font-size: 20px'>Likert R. A technique for the measurement of attitudes. <i>Arch Psych</i>. 1932; 140: 1-55<br></p>", 
             jrnls:"",//["",] 
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
@@ -6295,7 +6281,7 @@
             geometry: {type: 'MultiPoint', coordinates: [ -97.1384, 49.895 ]}, //lng,lat
             properties: { title:"Lind fundoplication", description:'Winnipeg - Canada<br>1965'},
             //googlehtz: 0, //search: "  " AND "  " [02-Oct-21]
-            refs:"",
+            refs:"<br><p style='font-size: 20px'>Lind JF, Burns CM, MacDougall JT. 'Physiological repair' for hiatus hernia - manometric study. <i>AMA Arch Surg</i>. 1965; 91(2): 233-237<br></p>",  
             jrnls:"",//["",]   
             URLs:"",  //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -6335,7 +6321,7 @@
             //geometry: {type: 'MultiPoint', coordinates:[ ,  ]}, //lng,lat
             //properties: { title:"   ", description:' <br>'}, 
             //googlehtz: 0, //search: "   " AND " " [02-Oct-21]
-            //refs:"<br>",   
+            //refs:"<br>",   Lockwood CB. **The radical cure of femoral and inguinal hernia**. _Lancet_. 1893; 142(3665): 1297-1302
             //jrnls:"",//["",]
             //URLs:"",
             //imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -6734,7 +6720,7 @@
             geometry: { type: 'MultiPoint', coordinates: [  7.764444,  48.580278  ]}, //long,lat
             properties: { title:"Masson's tumor", description:'Strasbourg - France<br>1923'},
             //googlehtz: 0, //search: " " AND " " [02-Oct-21]
-            refs:"",
+            refs:"",  ///  Masson MP. **Hémangioendothéliome végétant intra-vasculaire**. _Bull Mem Soc Anat Paris_. 1923; 93: 517-523
             jrnls:"",//["",]
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Intravascular_papillary_endothelial_hyperplasia' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", //<a href='http://www.whonamedit.com/synd.cfm/1584.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -6910,7 +6896,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ -122.307, 47.64929 ]}, //long,lat
             properties: { title:"Merendino jejunal interposition", description:'Seattle<br>1958'},   
             //googlehtz:0, //search: "  sign" AND " " [02-Oct-21]
-            refs:"",   
+            refs:"",   // Thomas GI, Merendino KA. **Jejunal interposition operation - analysis of thirty-three clinical cases**. _JAMA_. 1958; 168(13): 1759-1766
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/Merendino.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
@@ -6974,7 +6960,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ 138.59419, -34.90751 ]}, //long,lat
             properties: { title:"Miller cuff", description:'Adelaide - Australia<br>1984'},  
             //googlehtz: 0, //search: "   " AND " " [02-Oct-21]
-            refs:"",   
+            refs:"",   ///   Miller JH, Foreman RK, Ferguson L, Faris I. Interposition vein cuff for anastomosis of prosthesis to small artery. _Aust N Z J Surg_. 1984; 54(3): 283-285
             URLs:"",//wiki-Y/N, //no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/Miller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -7146,7 +7132,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ 2.38288, 48.84877 ]}, //long,lat
             properties: { title:"Morel-Lavallée lesion", description:'Paris<br>1863'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            refs:"", 
+            refs:"", ///  Morel-Lavallée VAL. **Decollements traumatiques de la peau et des couches sous jacentes**. _Arch Gen Med_. 1863;1:20-38, 172-200, 300-332.
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
@@ -7211,7 +7197,7 @@
             //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
             //properties: { title:"", description:' <br>1970'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            //refs:"",   
+            //refs:"",  ///  Morton TG. **A peculiar and painful affection of the fourth metatarso-phalangeal articulation**. _Am J Med Sci_. 1876; 71: 37-45 
             //jrnls:"",//["",]
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",//<a href='https://www.whonamedit.com/synd.cfm/2700.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -7319,7 +7305,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ 7.5839, 47.5585 ]}, //long,lat
             properties: { title:"Nissen fundoplication", description:'Basel - Switzerland<br>1956'}, 
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            refs:"",   
+            refs:"",   ///   Nissen R. **Gastropexy and 'fundoplication' in surgical treatment of hiatal hernia**. _Am J Dig Dis_. 1961; 6: 954-961
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
@@ -7364,7 +7350,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ -1.21878, 51.76398 ]}, //long,lat
             properties: { title:"Oakland bleeding score", description:'Oxford - England<br>2018'}, 
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            refs:"",   
+            refs:"",   ///   Oakland K, Guy R, Uberoi R, et al. **Acute lower GI bleeding in the UK: patient characteristics, interventions and outcomes in the first nationwide audit**. _Gut_. 2018; 67(4): 654-662
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
@@ -7406,7 +7392,7 @@
             //geometry: {type: 'MultiPoint', coordinates: [  ,  ]}, //lng,lat
             //properties: { title:"Ogilvie syndrome", description:'London<br> '},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            //refs:"",   
+            //refs:"",   ///   Ogilvie WH. **Large-intestine colic due to sympathetic deprivation**. _Br Med J_. 1948; 2(4579): 671-673
             //jrnls:"",//["",]
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -7449,7 +7435,7 @@
             //properties: { title:"Ortner's syndrome", description:' <br> '},
             //lat:"", long:"",
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            //refs:"",   
+            //refs:"",   ///   Ortner N. **Recurrenslähmung bei Mitralstenose**. _Wien Med Wchnschr_. 1897; 10: 753-755
             //jrnls:"",//["",]
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             //imgName:"<br><img src=\"../static/assets/img/profiles/Norbert_Ortner.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -7537,7 +7523,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ 2.34711, 48.83433 ]}, //long,lat
             properties: { title:"Palmer's point", description:'Paris<br>1974'},   
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            refs:"",//   
+            refs:"",//   Palmer R. **Safety in laparoscopy**. _J Reprod Med_. 1974; 13(1): 1-5
             jrnls:"",//["",]
             URLs:"", //wiki-NO, //no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             imgName:"",//"<img src=\"../static/assets/img/profiles/Palmer.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -7850,7 +7836,7 @@
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Pfannenstiel_incision' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2500.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         
-/// Polya gastrectomy - Budapest, Hungar. 3560.
+/// Polya gastrectomy - Budapest, Hungar. 3560.   Polya E. **Zur Stumpfversorgung nach Magenresektion** _Zentralblatt für Chirurgie_. 1911; 38: 892-894
 /// Potts scissors. 3580.
 
         },{
@@ -7868,7 +7854,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ -4.2339, 55.8646 ]}, //long,lat
             properties: { title:"Pringle maneouver", description:'Glasgow<br>1908'},
             //googlehtz: 0, //search: "   " AND " " [02-Oct-21]
-            refs:"", 
+            refs:"",  ///  Pringle JH. **Notes on the arrest of hepatic hemorrhage due to trauma**. _Ann Surg_. 1908; 48(4): 541-549
             imgName:"",//"<img src=\"../static/assets/img/profiles/Pringle.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             jrnls:"",//["",]  
             about:"", 
@@ -7889,7 +7875,7 @@
             //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
             //properties: { title:"Puestow procedure", description:' <br> '},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            //refs:"",   
+            //refs:"",   Puestow CB, Gillesby WJ. **Retrograde surgical drainage of pancreas for chronic relapsing pancreatitis**. _AMA Arch Surg_. 1958; 76(6): 898-907
             //jrnls:"",//["",]
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -8089,7 +8075,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ -93.23291, 44.97207 ]}, //long,lat
             properties: { title:"Rigler's sign", description:'Minneapolis - Minnesota<br>1941'},
             //googlehtz:0, //search: "   " AND "   " [02-Oct-21]
-            refs:"",  
+            refs:"",  ///   Rigler LG. **Spontaneous pneumoperitoneum:  roentgenologic sign found in the supine position**. _Radiology_. 1941; 37: 604-607
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"", 
@@ -8113,7 +8099,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ -0.133583, 51.524778 ]}, //long,lat
             properties: { title:"Ringer's lactate solution", description:'London<br>1883'}, 
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            refs:"",  
+            refs:"",  /// Ringer S. **A further contribution regarding the influence of the different constituents of the blood on the contraction of the heart**. _J Physiol_. 1883; 4(1): 29-42
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             jrnls:"",//["",]
             about:"", 
@@ -8199,7 +8185,7 @@
         //    properties: { title:"Rockey-Davis incision", description:'  <br>  '},
         //    lat:"45.4989098", long:"-122.6858606",
         //    googlehtz:00, //search: "  " AND "   " [02-Oct-21]
-        //    refs:"",  
+        //    refs:"",  ///   Davis GG. **A transverse incision for the removal of the appendix**. _Ann Surg_. 1906; 43(1): 106-110 & Rockey AE. **Transverse incision in abdominal operations**. _Medical Record (NYC)_. 1905
         //    imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
         //    jrnls:"",//["",]
         //    URLs:"", //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
@@ -8667,7 +8653,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ -3.1358, 55.9215 ]}, //long,lat
             properties: { title:"Skipworth's sign", description:'Edinburgh<br>2011'},
             //googlehtz:0, //search: " " AND "Cancer" [02-Oct-21]
-            refs:"",   //
+            refs:"",   //   Skipworth RJE. **A new clinical sign in ruptured ectopic pregnancy**. _Lancet_. 2011; 378(9809): e27
             jrnls:"",//["",]
             imgName:"",// permission <br><img src=\"../static/assets/img/profiles/Skip.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"",//
@@ -8806,7 +8792,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ -73.95684, 40.764098 ]}, //lng,lat
             properties: { title:"Stewart–Treves syndrome", description:'New York<br>1948'},
             googlehtz: 0, //search: "  " AND "  " [02-Oct-21]
-            refs:"",   
+            refs:"",   ///   Stewart FW, Treves N. **Lymphangiocarcoma in postmastectomy lymphedema; a report of six cases in elephantiasis chirurgica**. _Cancer_. 1948; 1(1): 64-81
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"<br>Memorial Hospital which has since become known as Memorial Sloan Kettering Cancer Center<br>",
@@ -8826,7 +8812,7 @@
             //geometry: { type: 'MultiPoint', coordinates: [  ,  ]}, //lng,lat
             //properties: { title:" ", description:'St Louis - Missouri<br> '},
             //googlehtz:00, //search: " " AND " " [02-Oct-21]
-            //refs:"",  
+            //refs:"",  ///  Strasberg SM, Hertl M, Soper NJ. **An analysis of the problem of biliary injury during laparoscopic cholecystectomy**. _J Am Coll Surg_. 1995; 180(1): 101-125
             //jrnls:"",//["",]
             //imgName:"<img src=\"../static/assets/img/profiles/Steven_Strasberg.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement 
             //about:"",//
@@ -8957,7 +8943,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ -94.6295 , 39.0575 ]}, //lng,lat
             properties: { title:"Thal fundoplication", description:'Kansas<br>1968'},
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
-            refs:"",   
+            refs:"",   ///   Thal AP. **A unified approach to surgical problems of the esophagogastric junction**. _Ann Surg_. 1968; 168(3): 542-550
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"", 
             jrnls:"",//["",]
@@ -8998,12 +8984,15 @@
             geometry: { type: 'MultiPoint', coordinates: [ -2.97772 , 53.39889 ]}, //lng,lat
             properties: { title:"Thomas splint", description:'Liverpool<br>1875'},
             googlehtz: 40300, //search: "Thomas splint" AND "Fracture" [28-Dec-21]
-            refs:"",  
+            refs:"",  ///  Jones R. **Treatment of fractures of the thigh**. _BMJ_. 1914; 2(2816) 1086-1087
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             jrnls:"",//["",]
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Traction_splint' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/3552.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             acknow:"",
+       
+/// Tietze syndrome. Tietze A. **Über eine eigenartige häufung von fällen mit dystrophie der rippenknorpel**. _Berliner Klinische Wochenschrift_. 1921; 58: 829-831
+       
         },{
             type:'Feature',
             ID:4860, 
@@ -9038,7 +9027,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ 133.920698, 34.65016 ]}, //lng,lat
             properties: { title:"Todani classification", description:'Okayama - Japan<br>1977'},
             //googlehtz: 0, //search: " " AND " " [02-Oct-21]
-            refs:"",  
+            refs:"",  ///   Todani T, Watanabe Y, Narusue M, Tabuchi K, Okajima K. **Congenital bile duct cysts: classification, operative procedures, and review of thirty-seven cases including cancer arising from choledochal cyst**. _Am J Surg_. 1977; 134(2): 263-269
             imgName:"", 
             jrnls:"",//["",]
             about:"", 
@@ -9078,7 +9067,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ -73.9609, 40.7736 ]}, //lng,lat
             properties: { title:"Torek operation", description:'New York<br>1913'},
             googlehtz:1380, //search: "Torek operation" [28-Dec-21]
-            refs:"",  
+            refs:"",    ///  Torek F. **The first successful case of resection of the thoracic portion of the oesophagus for carcinoma**. _Surg Gynecol Obstet_. 1913; 16: 614-617
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement 
             about:"<br>Lenox Hill Hospital<br>",  
@@ -9118,7 +9107,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ -4.11633, 50.4167 ]}, //long,lat
             properties: { title:"Travis criteria", description:'Plymouth - England<br>1996'},
             //googlehtz:00, //search: " " AND "  " [02-Oct-21]
-            refs:"",  
+            refs:"",  ///  Travis SPL, Farrant JM, Ricketts C, et al. **Predicting outcome in severe ulcerative colitis**. _Gut_. 1996; 38: 905-910
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement 
             about:"",
@@ -9222,7 +9211,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ -1.261944, 51.760278 ]}, //long,lat
             properties: { title:"Truelove-Witts severity score", description:'Oxford - England<br>1954'},
             //googlehtz: 0, //search: "  " AND "   " [02-Oct-21]
-            refs:"",  
+            refs:"<br><p style='font-size: 20px'>Truelove SC, Witts LJ. Cortisone in ulcerative colitis; preliminary report on a therapeutic trial. <i>Br Med J</i>. 1954; 2(4884): 375-378<br></p>",
             jrnls:"",//["",] 
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",// 
@@ -9590,7 +9579,7 @@
             //geometry: { type: 'MultiPoint', coordinates: [    ,   ]}, //long,lat
             //properties: { title:"Watson fundoplication", description:'   <br> '},
             //googlehtz: 0, //search: "  " AND "  " [02-Oct-21] 
-            //refs:"<br>   ",   
+            //refs:"<br>   ",   //  Watson A. **The role of antireflux surgery combined with fiberoptic endoscopic dilation in peptic esophageal stricture**. _Am J Surg_. 1984; 148(3): 346-349
             //jrnls:"",//["",]
             //imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             //about:"<br><br>",
@@ -9670,7 +9659,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ -98.57195, 29.50816 ]}, //long,lat
             properties: { title:"Weston knot", description:'San Antonio - Texas<br>1991'},
             //googlehtz: 0, //search: "  " AND "  " [02-Oct-21] 
-            refs:"<br>Weston PV. A new clinch knot. <i>Obstet Gynecol</i>. 1991; 78(1): 144-147<br>",   
+            refs:"<br><p style='font-size: 20px'>Weston PV. A new clinch knot. <i>Obstet Gynecol</i>. 1991; 78(1): 144-147<<br></p>", 
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",//<br>     <br>",
@@ -9729,7 +9718,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ -73.98668, 40.69414 ]}, //long,lat
             properties: { title:"Wilcoxon test", description:'New York<br>1945'},  
             jrnls:"",//["",]
-            refs:"", 
+            refs:"",    ///  Wilcoxon F. **Individual comparisons by ranking methods**. _Biometrics Bulletin_. 1945; 1(6): 80-83
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",  
             URLs:"",  ///Wilcoxon_signed-rank_test,  //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
