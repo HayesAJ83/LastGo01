@@ -207,6 +207,7 @@
 
 
 
+
         <script>
             const eponyms = {
                 'type': 'FeatureCollection',
@@ -591,7 +592,7 @@
             disease:["Breast cancer"], 
             ops:["Mastectomy",],  
             opsSpec:{'Breast': ['Mastectomy',] },
-            geometry: { type: 'MultiPoint', coordinates: [ -73.94361, 40.84170 ]}, //lng,lat
+            geometry: { type: 'MultiPoint', coordinates: [ -73.94361, 40.84172 ]}, //lng,lat
             properties: { title:'Auchincloss mastectomy', description:'New York<br>1963'},
             googlehtz:302, //search: "Auchincloss mastectomy" OR ""Auchincloss's mastectomy" [23-Dec-21]
             refs:"<br><p style='font-size: 20px'>Auchincloss H. Significance of location and number of axillary metastases in carcinoma of the breast: A justification for a conservative operation. <i>Ann Surg</i>. 1963; 158: 37-46.<br></p>",  
@@ -1222,7 +1223,7 @@
             ops:"",//[" ",],
             opsSpec:"",//{' ': [' ',], },
             geometry: {type: 'MultiPoint', coordinates: [ -73.95628, 40.76417 ]},  //lng,lat
-            properties: {title:'lumgart staging system', description:'New York<br>1998'},
+            properties: {title:'Blumgart staging system', description:'New York<br>1998'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"<br><p style='font-size: 20px'>Burke EC, Jarnagin WR, Hochwald SN, Pisters PW, Fong Y, Blumgart LH. Hilar Cholangiocarcinoma: patterns of spread, the importance of hepatic resection for curative operation, and a presurgical clinical staging system. <i>Ann Surg</i>. 1998; 228(3): 385-394<br></p>",  
             jrnls:["Ann Surg","Annals of Surgery",],
@@ -1321,7 +1322,7 @@
             //name:"Borchardt's triad",      
             //topic:[""], 
             //subtype:["",], 
-            //who:"", whoSearch:[" ",],    
+            //who:"Borchardt", whoSearch:[" ",],    
             //where:"", whereSearch:["",],           
             //when:"1904",   
             //disease:"",//[" ", " ",],
@@ -1379,9 +1380,26 @@
             about:"", 
             URLs:"<br><a href='https://www.whonamedit.com/synd.cfm/3075.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>", 
             acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Bouveret was sourced from Wikipedia and is licenced under <a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0 1.0</a>.<i></p>",
-        
-///  Bowen's disease. John Templeton Bowen. Plastics. 340.
-        
+        //},{
+            //type:'Feature',
+            //ID:340, 
+            //name:"Bowen's disease",            
+            //topic:["Plastics",], subtype:["Pathology",],                
+            //who:"John Templeton Bowen", //whoSearch:["",],       
+            //where:"", //whereSearch:["",], 
+            //country:[""], when:"", 
+            //disease:["",], 
+            //ops:["",], 
+            //opsSpec:{'': ['',], }, 
+            //geometry: {type: 'MultiPoint', coordinates: [  , ]},  //long,lat
+            //properties: {title:"Bowen's disease", description:"<br>"},
+            //googlehtz: , //search: "Braxton Hicks contractions" [02-Oct-21]
+            //refs:"",
+            //jrnls:"",//["",]
+            //imgName:"",//"<img src=\"../static/assets/img/profiles/John_Braxton_Hicks.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"", 
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
+            //acknow:"",
         },{
             type:'Feature',
             ID:345, 
@@ -1880,8 +1898,7 @@
             ops:["Adrenalectomy","Endoscopy","Gastrectomy",],
             opsSpec:{'Endocrine': ['Adrenalectomy', ],
                      'General Surgery': ['Endoscopy', ], 
-                     'Oesophagogastric': ['Endoscopy', 'Gastrectomy', ],
-                     },
+                     'Oesophagogastric': ['Endoscopy', 'Gastrectomy', ], },
             geometry: {type: 'MultiPoint', coordinates: [ -92.4668, 44.02261 ]}, //lng,lat
             properties: {title:"Carnett's sign", description:'Philadelphia<br>2002'},
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21] 
@@ -1924,8 +1941,7 @@
             disease:["Splenomegaly",],
             ops:["Splenectomy",],
             opsSpec:{'General Surgery': ['Splenectomy', ],
-                     'HPB': ['Splenectomy', ], 
-                    },
+                     'HPB': ['Splenectomy', ], },
             geometry: {type: 'MultiPoint', coordinates: [ -87.850071, 42.309189 ]}, //lng,lat
             properties: { title:"Castell's sign", description:'Great Lakes - Illinois - USA<br>1967'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -2035,7 +2051,7 @@
             ops:["ERCP",],
             opsSpec:{'General Surgery': ['ERCP', ], 
                      'HPB': ['ERCP', ],  },
-            geometry: {type: 'MultiPoint', coordinates: [ 2.36561, 48.8378 ]},            //lng,lat
+            geometry: {type: 'MultiPoint', coordinates: [ 2.36561, 48.8378 ]},  //lng,lat
             properties: {title:"Charcot's triad", description:'Paris<br>1878'},
             //googlehtz:0, //search: "   " AND " " [02-Oct-21]
             refs:"",
@@ -2393,7 +2409,7 @@
             //when:"tbc", 
             //disease:["Hypertension",],
             //ops:["Adrenalectomy",],  
-            //geometry: {type: 'MultiPoint', coordinates: [ -83.73349, 42.28377 ]},            //long,lat
+            //geometry: {type: 'MultiPoint', coordinates: [ -83.73349, 42.28377 ]},      //long,lat
             //properties: {title:"Connshing syndrome", description:'tbc <br>tbc '},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             //refs:"<br> <br>",   
@@ -2604,7 +2620,7 @@
             //disease:"",//["",],  
             //ops:"",//["",],
             //opsSpec:"",//{' ': [' ', ], },
-            //geometry: {type: 'MultiPoint', coordinates: [ , ]},      //long,lat
+            //geometry: {type: 'MultiPoint', coordinates: [ , ]},   //long,lat
             //properties: {title:"", description:'<br>'},
             //refs:"<br><br>",  
             //jrnls:["",],
@@ -3948,7 +3964,7 @@
             disease:"",//["",],  
             ops:["Pancreatic resection",],
             opsSpec:{'HPB': ['Pancreatic resection', ], },
-            geometry: {type: 'MultiPoint', coordinates: [ -73.942823 , 40.842159 ]}, //long,lat
+            geometry: {type: 'MultiPoint', coordinates: [ -73.94283 , 40.8422 ]}, //long,lat
             properties: { title:"Frantz tumour", description:'New York<br>1959'}, 
             //googlehtz:0, //search: " " AND " " [02-Oct-21] 
             refs:"",   
@@ -5402,7 +5418,7 @@
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             //acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
        
-// KKKKKKKKKKKKKK K K K K K K K K K K K K K K K K K K K K K K K K K K K ///////////////////////
+// KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK K K K ///////////////////////
 
         },{
             type:'Feature',
@@ -5890,9 +5906,26 @@
             //about:"",//<br><br><br>",
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/Kirschner_wire' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",
             //acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-        
-
-/// Kulchitsky cells. 3700.
+        //},{
+            //type:'Feature',
+            //ID:3700, 
+            //name:"Kulchitsky cells",            
+            //topic:[" ",], subtype:["",],                
+            //who:"", //whoSearch:["",],       
+            //where:"", //whereSearch:["",], 
+            //country:[""], when:"", 
+            //disease:["",], 
+            //ops:["",], 
+            //opsSpec:{'': ['',], }, 
+            //geometry: {type: 'MultiPoint', coordinates: [  , ]},  //long,lat
+            //properties: {title:"Kulchitsky cells", description:"<br>"},
+            //googlehtz: , //search: "" [02-Oct-21]
+            //refs:"",
+            //jrnls:"",//["",]
+            //imgName:"",//"<img src=\"../static/assets/img/profiles/John_Braxton_Hicks.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"", 
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
+            //acknow:"",
 
 // LLLLLLLLLLLLLL L L L L L L L L L L L L L L L L L L L L L L L L L L L L L L //////////
        
@@ -6067,10 +6100,48 @@
             imgName:"",
             about:"",
             acknow:"", 
-       
-/// Lhermitte's sign. Jean Lhermitte. id:3880. Neurosurgery
-/// Crypts of Lieberkuhn. id 3900
-       
+        //},{
+            //type:'Feature',
+            //ID:3880, 
+            //name:"Lhermitte's sign",      
+            //topic:["Neurosurgery",], 
+            //subtype:[""], 
+            //who:"Jean Lhermitte", // whoSearch:["",], 
+            //where:"", // whereSearch:["",],                 
+            //country:[""], when:"",  
+            //disease:"",//["",], 
+            //ops:["",],
+            //opsSpec:"",//{'Endocrine': ['',], },
+            //geometry: {type: 'MultiPoint', coordinates: [ , ]}, //lng,lat
+            //properties: { title:"Lhermitte's sign", description:'<br>'},  
+            //googlehtz:0, //search: "" AND "" [02-Oct-21]
+            //refs:"<br><p style='font-size: 20px'> <br></p>", 
+            //jrnls:"",//["",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2747.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
+            //imgName:"",
+            //about:"",
+            //acknow:"",
+        //},{
+            //type:'Feature',
+            //ID:3900, 
+            //name:"Crypts of Lieberkuhn",      
+            //topic:["",], 
+            //subtype:[""], 
+            //who:"", // whoSearch:["",], 
+            //where:"", // whereSearch:["",],                 
+            //country:[""], when:"",  
+            //disease:"",//["",], 
+            //ops:["",],
+            //opsSpec:"",//{'Endocrine': ['',], },
+            //geometry: {type: 'MultiPoint', coordinates: [ , ]}, //lng,lat
+            //properties: { title:"Crypts of Lieberkuhn", description:'<br>'},  
+            //googlehtz:0, //search: "" AND "" [02-Oct-21]
+            //refs:"<br><p style='font-size: 20px'> <br></p>", 
+            //jrnls:"",//["",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2747.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
+            //imgName:"",
+            //about:"",
+            //acknow:"",
         },{
             type:'Feature',
             ID:3920, 
@@ -6304,9 +6375,27 @@
             imgName:"",//"<br><img src=\"../static/assets/img/profiles/Hubert_Von_Luschka.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"<br>An accessory bile duct. It has been suggested that the term is no longer used to avoid ambiguity.<br>", 
             acknow:"",
-        
-/// Foramen of Luschka. Neurosurgery. 4140. https://www.whonamedit.com/synd.cfm/2391.html
-        
+        //},{
+            //type:'Feature',
+            //ID:4140, 
+            //name:"Foramen of Luschka",      
+            //topic:["Neurosurgery",], 
+            //subtype:[""], 
+            //who:"", // whoSearch:["",], 
+            //where:"", // whereSearch:["",],                 
+            //country:[""], when:"",  
+            //disease:"",//["",], 
+            //ops:["",],
+            //opsSpec:"",//{'Endocrine': ['',], },
+            //geometry: {type: 'MultiPoint', coordinates: [ , ]}, //lng,lat
+            //properties: { title:"Foramen of Luschka", description:'<br>'},  
+            //googlehtz:0, //search: "" AND "" [02-Oct-21]
+            //refs:"<br><p style='font-size: 20px'> <br></p>", 
+            //jrnls:"",//["",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2391.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
+            //imgName:"",
+            //about:"",
+            //acknow:"",
         },{ 
             type:'Feature',
             ID:4160, 
@@ -6329,7 +6418,7 @@
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Hereditary_nonpolyposis_colorectal_cancer' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2195.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             acknow:"",//<br><i>Mr Jason Ramsingh FRCS is kindly researching this eponym.</i>",
 
-/// MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM M M ///////////////////        
+/// MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM ///////////////////        
         },{
             type:'Feature',
             ID:4180, 
@@ -6372,9 +6461,27 @@
             imgName:"",//"<img src=\"../static/assets/img/profiles/Saul_Mackler.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",//
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-        
-/// Malgaigne's fracture. Joseph-François Malgaigne. 4220.
-        
+        //},{
+            //type:'Feature',
+            //ID:4220, 
+            //name:"Malgaigne's fracture",      
+            //topic:["Neurosurgery",], 
+            //subtype:[""], 
+            //who:"Joseph-François Malgaigne", // whoSearch:["",], 
+            //where:"", // whereSearch:["",],                 
+            //country:[""], when:"",  
+            //disease:"",//["",], 
+            //ops:["",],
+            //opsSpec:"",//{'Endocrine': ['',], },
+            //geometry: {type: 'MultiPoint', coordinates: [ , ]}, //lng,lat
+            //properties: { title:"Malgaigne's fracture", description:'<br>'},  
+            //googlehtz:0, //search: "" AND "" [02-Oct-21]
+            //refs:"<br><p style='font-size: 20px'> <br></p>", 
+            //jrnls:"",//["",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2391.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
+            //imgName:"",
+            //about:"",
+            //acknow:"",
         },{
             type:'Feature',
             ID:4240, 
@@ -6464,8 +6571,28 @@
             about:"",
             acknow:"",
         
-/// Makuuchi incision. GB Liver Adrenal. 4320.
-        
+/// GB Liver Adrenal.
+        //},{
+            //type:'Feature',
+            //ID:4320, 
+            //name:"Makuuchi incision",      
+            //topic:["",], 
+            //subtype:[""], 
+            //who:"", // whoSearch:["",], 
+            //where:"", // whereSearch:["",],                 
+            //country:[""], when:"",  
+            //disease:"",//["",], 
+            //ops:["",],
+            //opsSpec:"",//{'Endocrine': ['',], },
+            //geometry: {type: 'MultiPoint', coordinates: [ , ]}, //lng,lat
+            //properties: { title:"Makuuchi incision", description:'<br>'},  
+            //googlehtz:0, //search: "" AND "" [02-Oct-21]
+            //refs:"<br><p style='font-size: 20px'> <br></p>", 
+            //jrnls:"",//["",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2391.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
+            //imgName:"",
+            //about:"",
+            //acknow:"",
         },{
             type:'Feature',
             ID:4340, 
@@ -7114,7 +7241,7 @@
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Murphy%27s_sign' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2210.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             acknow:"",
 
-/// NNNNNNNNNNNNNNNNN N N N N N N N N N N N N N N N N N N N N N ///////////////////
+/// NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN N N N ///////////////////
 
         },{
             type:'Feature',
@@ -7180,8 +7307,28 @@
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Nissen_fundoplication' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/3078.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>", //
             acknow:"",
 
-/// Noonan's syndrome - bleeding risk - 5000
-
+/// Noonan's syndrome - bleeding risk
+        //},{
+            //type:'Feature',
+            //ID:5000, 
+            //name:"",      
+            //topic:[" "], 
+            //subtype:[" ",], 
+            //who:"", whoSearch:[" ",],    
+            //where:"", whereSearch:["",],           
+            //when:" ",   
+            //disease:[" ", " ",],
+            //ops:[" ", "",],
+            //opsSpec:"",//{'Endocrine': ['',], },
+            //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
+            //properties: { title:"", description:' <br> '},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            //refs:"",   
+            //jrnls:"",//["",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"<br><br>", 
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         },{
             type:'Feature',
             ID:5020, 
@@ -7703,10 +7850,48 @@
             about:"",//
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Pfannenstiel_incision' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2500.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-        
-/// Polya gastrectomy - Budapest, Hungar. 5520.   Polya E. **Zur Stumpfversorgung nach Magenresektion** _Zentralblatt für Chirurgie_. 1911; 38: 892-894
-/// Potts scissors. 5540.
-
+        //},{
+            //type:'Feature',
+            //ID:5520, 
+            //name:"Polya gastrectomy",      
+            //topic:[""], 
+            //subtype:["",], 
+            //who:"Johann Conrad Peyer", whoSearch:[" ",],    
+            //where:"Budapest - Hungary", whereSearch:["",],           
+            //when:"1911",   
+            //disease:["",],
+            //ops:["", "",],
+            //opsSpec:"",//{'Endocrine': ['',], },
+            //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
+            //properties: { title:"Polya gastrectomy", description:' <br> '},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            //refs:"",   //  Polya E. **Zur Stumpfversorgung nach Magenresektion** _Zentralblatt für Chirurgie_. 1911; 38: 892-894
+            //jrnls:"",//["",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",//no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"", 
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
+      //},{
+            //type:'Feature',
+            //ID:5540, 
+            //name:"Potts scissors",      
+            //topic:[""], 
+            //subtype:["",], 
+            //who:"", whoSearch:[" ",],    
+            //where:"", whereSearch:["",],           
+            //when:"",   
+            //disease:["",],
+            //ops:["", "",],
+            //opsSpec:"",//{'Endocrine': ['',], },
+            //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
+            //properties: { title:"", description:' <br> '},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            //refs:"",
+            //jrnls:"",//["",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",//no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"", 
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         },{
             type:'Feature',
             ID:5560, 
@@ -7774,9 +7959,27 @@
             about:"",       
             URLs:"",//"<br><a href='https://en.wikipedia.org/wiki/Acute_pancreatitis#Ranson_score' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <br>", //no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             acknow:"",//"<br><i>We kindly acknowledge Miss X FRCS who contributed the above information.</i>",
-        
-/// Rathke cleft.5620. Martin Rathke. Neurosurgery.
-        
+      //},{
+            //type:'Feature',
+            //ID:5620, 
+            //name:"Rathke cleft",      
+            //topic:["Neurosurgery"], 
+            //subtype:["",], 
+            //who:"Martin Rathke", whoSearch:[" ",],    
+            //where:"", whereSearch:["",],           
+            //when:"",   
+            //disease:["",],
+            //ops:["", "",],
+            //opsSpec:"",//{'Endocrine': ['',], },
+            //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
+            //properties: { title:"Rathke cleft", description:' <br> '},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            //refs:"",
+            //jrnls:"",//["",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",//no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"", 
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",     
         },{
             type:'Feature',
             ID:5640, 
@@ -7819,9 +8022,27 @@
             //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             //about:"", 
             //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
-       
-/// Reed-Sternberg cells. 5680. https://www.whonamedit.com/synd.cfm/995.html
-       
+        //},{
+            //type:'Feature',
+            //ID:5680, 
+            //name:"Reed-Sternberg cells",      
+            //topic:[""], 
+            //subtype:["",], 
+            //who:"Martin Rathke", whoSearch:[" ",],    
+            //where:"", whereSearch:["",],           
+            //when:"",   
+            //disease:["",],
+            //ops:["", "",],
+            //opsSpec:"",//{'': ['',], },
+            //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
+            //properties: { title:"Reed-Sternberg cells", description:' <br> '},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            //refs:"",
+            //jrnls:"",//["",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",//no wni  <a href='https://www.whonamedit.com/synd.cfm/995.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"", 
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",     
         },{
             type:'Feature',
             ID:5700, 
@@ -7949,9 +8170,27 @@
             about:"", 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Pneumoperitoneum#Diagnosis' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='http://www.whonamedit.com/synd.cfm/3666.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-       
-/// Rigler's triad. Gallstones. JAMA. 1941 yr. 5820.  http://www.whonamedit.com/synd.cfm/3667.html
-       
+        //},{
+            //type:'Feature',
+            //ID:5820, 
+            //name:"Rigler's triad",      
+            //topic:[""], 
+            //subtype:["",], 
+            //who:"", whoSearch:[" ",],    
+            //where:"", //whereSearch:["",], country:[""],          
+            //when:"1941",   
+            //disease:["Gallstones",],
+            //ops:["",],
+            //opsSpec:"",//{'Endocrine': ['',], },
+            //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
+            //properties: { title:"Rigler's triad", description:' <br> '},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            //refs:"",   
+            //jrnls:"",//["JAMA",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", //<a href='http://www.whonamedit.com/synd.cfm/3667.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"", 
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         },{
             type:'Feature',
             ID:5840, 
@@ -8080,9 +8319,27 @@
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"", 
             acknow:"",
-
-/// Ross-Yacoub procedure. Cardiothoracics.5960.
-
+        //},{
+            //type:'Feature',
+            //ID:5960, 
+            //name:"Ross-Yacoub procedure",      
+            //topic:["Cardiothoracics"], 
+            //subtype:["",], 
+            //who:"", whoSearch:[" ",],    
+            //where:"", //whereSearch:["",], country:[""],          
+            //when:"1941",   
+            //disease:["",],
+            //ops:["",],
+            //opsSpec:"",//{'': ['',], },
+            //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
+            //properties: { title:"Ross-Yacoub procedure", description:' <br> '},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            //refs:"",   
+            //jrnls:"",//["JAMA",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", //<a href='http://www.whonamedit.com/synd.cfm/3667.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"", 
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         },{   
             type:'Feature',
             ID:5980, 
@@ -8170,7 +8427,7 @@
             about:"",
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         
-/// SSSSSSSSSSSSSSSSSSS S S S S S S S S S S S S S S S S S S S S S S S S S S S //    
+/// SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS //    
 
         },{   
             type:'Feature',
@@ -8193,10 +8450,48 @@
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"<br><p style='font-size: 20px'>A so-called 'Santorinicele', is a cystic dilatation of the dorsal pancreatic duct at the minor papilla.<br></p>",//<br><br><br>", 
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-
-/// Sarin classification. OGD. Liver Tx. 6080.
-/// Savary-Gillard dilator. 6100.
-    
+        //},{
+            //type:'Feature',
+            //ID:6080, 
+            //name:"Sarin classification",      
+            //topic:[""], 
+            //subtype:["",], 
+            //who:"", whoSearch:[" ",],    
+            //where:"", //whereSearch:["",], country:[""],          
+            //when:"",   
+            //disease:["",],
+            //ops:["",],
+            //opsSpec:"",//{'': ['',], },
+            //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
+            //properties: { title:"Sarin classification", description:' <br> '},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            //refs:"",   
+            //jrnls:"",//["",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", //<a href='http://www.whonamedit.com/synd.cfm/3667.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"", //  OGD. Liver Tx.
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
+        //},{
+            //type:'Feature',
+            //ID:6100, 
+            //name:"Savary-Gillard dilator",      
+            //topic:[""], 
+            //subtype:["",], 
+            //who:"", whoSearch:[" ",],    
+            //where:"", //whereSearch:["",], country:[""],          
+            //when:"",   
+            //disease:["",],
+            //ops:["",],
+            //opsSpec:"",//{'': ['',], },
+            //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
+            //properties: { title:"Savary-Gillard dilator", description:' <br> '},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            //refs:"",   
+            //jrnls:"",//["",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", //<a href='http://www.whonamedit.com/synd.cfm/3667.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"", // 
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         //},{
             //type:'Feature',
             //ID:6120, 
@@ -8334,7 +8629,7 @@
             country:["USA"], when:"1950",   
             disease:["GI bleeding","Haemorrhage","Liver failure","Shock","Varices"], 
             ops:["Endoscopy",], 
-            geometry: { type: 'MultiPoint', coordinates: [ -73.942823, 40.842159 ]}, //long,lat
+            geometry: { type: 'MultiPoint', coordinates: [ -73.942824, 40.842163 ]}, //long,lat
             properties: { title:"Sengstaken-Blakemore tube", description:'New York<br>1950'},
             //googlehtz: 0, //search: " " AND " " [02-Oct-21]
             refs:"<br><p style='font-size: 20px'>Sengstaken RW, Blakemore AH. Balloon tamponage for the control of hemorrhage from esophageal varices. <i>Ann Surg</i>. 1950; 131(5): 781-789<br></p>",   
@@ -8343,9 +8638,26 @@
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
             acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-       
-/// Sheehan syndrome. 6260. Obstetrics, Endocrine. http://www.whonamedit.com/synd.cfm/2009.html
-       
+        //},{
+            //type:'Feature',
+            //ID:6260, 
+            //name:"Sheehan syndrome",      
+            //topic:["Endocrine","Obstetrics",], 
+            //subtype:["",], 
+            //who:"", whoSearch:[" ",],    
+            //where:"", whereSearch:["",],           
+            //when:" ",   
+            //disease:["",],
+            //ops:["",],
+            //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
+            //properties: { title:"", description:' <br> '},
+            //googlehtz:0, //search: "Sheehan syndrome" AND " " [02-Oct-21]
+            //refs:"",   
+            //jrnls:"",//["",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/Schwann_cell' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //<a href='http://www.whonamedit.com/synd.cfm/2009.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"", 
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",            
         },{  
             type:'Feature',
             ID:6280, 
@@ -8725,11 +9037,28 @@
             //about:"",//
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/Sturge–Weber_syndrome' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",   //https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1068054/?page=1,  //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             //acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        //},{
+            //type:'Feature',
+            //ID:6660, 
+            //name:"Sylvian fissure",      
+            //topic:[""], 
+            //subtype:["",], 
+            //who:"Franciscus Sylvian", whoSearch:["",],    
+            //where:"Leiden", whereSearch:["",],           
+            //when:"",   
+            //disease:["", "",],
+            //ops:["", "",],
+            //opsSpec:"",//{'': ['',], },
+            //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
+            //properties: { title:"Sylvian fissure", description:' <br> '},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            //refs:"",   
+            //jrnls:"",//["",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/Lateral_sulcus' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"<br><br>", 
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         
-
-/// Sylvian fissure. Leiden. 6660. Franciscus S. wiki-Y Lateral_sulcus
-
-
 /// TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT //////////////////
 
         },{
@@ -8793,9 +9122,27 @@
             jrnls:"",//["",]
             URLs:"<br><a href='https://www.whonamedit.com/synd.cfm/3575.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Tapia is in the Public Domain and was sourced from Wikidata.</i></p>",
-       
-/// Tawara's node. 6740. Cardiothoracics.
-       
+        //},{
+            //type:'Feature',
+            //ID:6740, 
+            //name:"Tawara's node",      
+            //topic:["Cardiothoracics"], 
+            //subtype:["",], 
+            //who:"Franciscus Sylvian", whoSearch:["",],    
+            //where:"Leiden", whereSearch:["",],           
+            //when:"",   
+            //disease:["", "",],
+            //ops:["", "",],
+            //opsSpec:"",//{'': ['',], },
+            //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
+            //properties: { title:"Tawara's node", description:' <br> '},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            //refs:"",   
+            //jrnls:"",//["",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"<br><br>", 
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         },{
             type:'Feature',
             ID:6760, 
@@ -8823,7 +9170,7 @@
             name:"Thiersch operation",     
             topic:["Colorectal",], 
             subtype:["Operations",], 
-            who:"Karl Thiersch",   //    whoSearch:["",],
+            who:"Karl Thiersch",   //whoSearch:["",],
             where:"Leipzig - Germany",                    
             country:["Germany"], when:"1891",   
             disease:["Rectal prolapse",],  
@@ -8858,9 +9205,27 @@
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Traction_splint' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/3552.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             acknow:"",
-       
-/// Tietze syndrome. 6820. Tietze A. **Über eine eigenartige häufung von fällen mit dystrophie der rippenknorpel**. _Berliner Klinische Wochenschrift_. 1921; 58: 829-831
-       
+        //},{
+            //type:'Feature',
+            //ID:6820, 
+            //name:"Tietze syndrome",      
+            //topic:[""], 
+            //subtype:["",], 
+            //who:"", whoSearch:["",],    
+            //where:"", whereSearch:["",],           
+            //when:"",   
+            //disease:["", "",],
+            //ops:["", "",],
+            //opsSpec:"",//{'': ['',], },
+            //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
+            //properties: { title:"", description:' <br> '},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            //refs:"",   //  Tietze A. **Über eine eigenartige häufung von fällen mit dystrophie der rippenknorpel**. _Berliner Klinische Wochenschrift_. 1921; 58: 829-831
+            //jrnls:"",//["",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"<br><br>", 
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         },{
             type:'Feature',
             ID:6840, 
@@ -9041,9 +9406,27 @@
             about:"",//
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Ileocecal_fold' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-       
-/// Traube's space. 7020. Ludwig Traube. https://www.whonamedit.com/synd.cfm/3182.html
-       
+        //},{
+            //type:'Feature',
+            //ID:7020, 
+            //name:"Traube's space",      
+            //topic:[""], 
+            //subtype:["",], 
+            //who:"Ludwig Traube", //whoSearch:["",],    
+            //where:"", whereSearch:["",],           
+            //when:"",   
+            //disease:["", "",],
+            //ops:["", "",],
+            //opsSpec:"",//{'': ['',], },
+            //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
+            //properties: { title:"Traube's space", description:' <br> '},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            //refs:"",   //
+            //jrnls:"",//["",]
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //<a href='https://www.whonamedit.com/synd.cfm/3182.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"<br><br>", 
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         },{
             type:'Feature',
             ID:7040, 
@@ -9564,7 +9947,7 @@
             when:"1954", 
             disease:["Multiple endocrine neoplasia","Pituitary disease","Hyperparathyroidism","Hypercalcaemia",],
             ops:["Pancreas resection","Parathyroidectomy","Transsphenoidal pituitary surgery",],
-            geometry: { type: 'MultiPoint', coordinates: [ -73.942823 , 40.842159 ]}, //long,lat
+            geometry: { type: 'MultiPoint', coordinates: [ -73.94281 , 40.84215 ]}, //long,lat
             properties: { title:"Wermer syndrome", description:'Presbyterian Hospital - New York<br>1954'},
             //googlehtz: 0, //search: "" AND "" [02-Oct-21] 
             refs:"<br><p style='font-size: 20px'>Wermer P. Genetic aspects of adenomatosis of endocrine glands. <i>Am J Med</i>. 1954; 16(3): 363-371<br></p>",   
@@ -9778,7 +10161,7 @@
             country:["Germany"], when:"1891",  
             disease:["Malnutrition",], 
             ops:"",//["",],
-            geometry: { type: 'MultiPoint', coordinates: [ 7.102222 , 50.733889 ]}, //long,lat
+            geometry: { type: 'MultiPoint', coordinates: [ 7.10224 , 50.7339 ]}, //long,lat 7.102222, 50.733889
             properties: { title:"Witzel tunnel technique", description:'Bonn - Germany<br>1891'}, 
             refs:"",// 
             jrnls:"",//["",]
@@ -10023,6 +10406,7 @@
         
         }]}
         </script>
+
 
 
 
