@@ -199,20 +199,6 @@
                         <a class="btn btn-primary" id="link_ops" data-toggle="collapse" href="#collapseExample_Operations" role="button" aria-expanded="false" aria-controls="collapseExample">
                         Operations
                         </a>
-                        <hr style="height:0px; visibility:hidden">
-                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_Diseases" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        Diseases & Symptoms
-                        </a>&nbsp;&nbsp;&nbsp;
-                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_Categories" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        Categories
-                        </a>
-                        <hr style="height:0px; visibility:hidden">
-                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_Maps" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        World Maps
-                        </a>&nbsp;&nbsp;&nbsp;
-                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_Jrnls" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        Journals
-                        </a>
                     </p>
 
                     <div class="collapse" id="collapseExample_Specialties">
@@ -262,6 +248,22 @@
                             <br>
                         </div>
                     </div>
+
+                    <p>
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_Diseases" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Diseases & Symptoms
+                        </a>&nbsp;&nbsp;&nbsp;
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_Categories" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Categories
+                        </a>
+                        <hr style="height:0px; visibility:hidden">
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_Maps" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        World Maps
+                        </a>&nbsp;&nbsp;&nbsp;
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_Jrnls" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Journals
+                        </a>
+                    </p>
 
                     <div class="collapse" id="collapseExample_Diseases">
                         <div class="col">  <!--<div class="card card-body">-->
@@ -10802,16 +10804,16 @@
         var selected2 = topicFilter2(stringArray); 
 
 
-        $(document)
-        .ready(function() {
-        function scrollToAnchor(aid){
-            var aTag = $("a[name='"+ aid +"']");
-            $('html,body').animate({scrollTop: aTag.offset().top},'slow');
-        }
-        $("#link_ops").click(function() {
-            scrollToAnchor('collapseExample_Operations');
-            });
-        });
+       // $(document)
+       // .ready(function() {
+       // function scrollToAnchor(aid){
+       //     var aTag = $("a[name='"+ aid +"']");
+       //     $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+       // }
+       // $("#link_ops").click(function() {
+       //     scrollToAnchor('collapseExample_Operations');
+       //     });
+       // });
 
 
         ///  SELECTED_SPECIALTIES_1  ///
