@@ -196,7 +196,7 @@
                         <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_Specialties" role="button" aria-expanded="false" aria-controls="collapseExample">
                         Specialties
                         </a>&nbsp;&nbsp;&nbsp;
-                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_Operations" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <a class="btn btn-primary" id="link_ops" data-toggle="collapse" href="#collapseExample_Operations" role="button" aria-expanded="false" aria-controls="collapseExample">
                         Operations
                         </a>
                         <hr style="height:0px; visibility:hidden">
@@ -10801,6 +10801,18 @@
             }
                 
         var selected2 = topicFilter2(stringArray); 
+
+
+        $(document)
+        .ready(function() {
+        function scrollToAnchor(aid){
+            var aTag = $("a[name='"+ aid +"']");
+            $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+        }
+        $("#link_ops").click(function() {
+            scrollToAnchor('collapseExample_Operations');
+            });
+        });
 
 
         ///  SELECTED_SPECIALTIES_1  ///
