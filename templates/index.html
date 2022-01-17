@@ -199,9 +199,9 @@
                     <div class="collapse" id="collapseExample_Specialties">
                         <div class="col">  <!--<div class="card card-body">-->
                             <div class="row align-items-center text-center">
-                                <div class="col" data-aos="fade-up" id="select3">
+                                <div class="col" data-aos="fade-up" id="select_specialties">
                                     <!--<h1 class="text-black mb-2 fs-1" style="height:30px">Specialties</h1>-->
-                                    <select id="sel" class="selectpicker show-tick"
+                                    <select id="sel_specialties" class="selectpicker show-tick"
                                             data-style="btn-outline-primary" data-header="Search list:" 
                                             data-width="325px" data-size="6"
                                             data-aos="zoom-in"
@@ -10683,7 +10683,7 @@
         </script>
 
 
-
+        /// Section - A to Z ///
         <script>
         $(document)
         .ready(function() {
@@ -10691,7 +10691,7 @@
             .flatMap(item => item.topic)
             .filter((item, i, arr) => arr.indexOf(item) === i)
             let resultsort1 = result1.sort()
-            var select = document.getElementById("select1");
+            var select = document.getElementById("select_A2Z");
             var options = resultsort1;
             for(var i = 0; i < options.length; i++) {
                 var opt = options[i];
@@ -10705,8 +10705,8 @@
 
         $(document)
         .ready(function() {
-            $('#select1').ready(function() {
-                let value = '\'' + $('#select1 option').map(function() {
+            $('#select_A2Z').ready(function() {
+                let value = '\'' + $('#select_A2Z option').map(function() {
                         return this.text}).get().join('\',\'') + '\'';
                 var stringArray = (new Function("return [" + value+ "];")());
             });
@@ -10722,7 +10722,7 @@
         populateSelect()
 
         let select ="";
-        $("#select1").find('option:selected').each(function() {
+        $("#select_A2Z").find('option:selected').each(function() {
                 select += "\'" + $.trim($(this).text()) + "\',";});
                 if(select != ""){select = select.substr(0);};
             var stringArray = (new Function("return [" + select+ "];")());
@@ -10767,6 +10767,66 @@
                                     
                                         }                           
         </script>
+        /// End Section - A to Z ///
+
+
+        /// Section - Specialties
+        <script>
+            $(document)
+            .ready(function() {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.topic !== "");
+                });  /// DROP those WITHOUT OPERATIONS
+            let result1 = returnedData
+                .flatMap(item => item.topic) //"item.ops" gives us OPERATIONS
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
+                let resultSubtypes = result1.sort()
+                var selectSubtypes = document.getElementById("sel_specialties");
+                var optionS = resultSubtypes;
+                for(var i = 0; i < optionS.length; i++) {
+                    var opt1 = optionS[i];
+                    var el1 = document.createElement("option");
+                    el1.textContent = opt1;
+                    el1.value = opt1;
+                    selectSubtypes.appendChild(el1);
+                    }
+            });
+
+            $(document)
+            .ready(function() {
+                $('#select_specialties').ready(function() {
+                    let value = '\'' + $('#select_specialties option').map(function() {
+                            return this.text}).get().join('\',\'') + '\'';
+                    var stringArray = (new Function("return [" + value + "];")());
+                });
+            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
+
+            let select ="";
+            $("#select_specialties").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
+                
+            function topicFilter2(taxonomy) {
+                const returnedData = $.grep(eponyms.features, function(element, index) {
+                    return (element.topic !== "");
+                    });  /// DROP those WITHOUT OPERATIONS
+                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                return returnedData.filter(item => {
+                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                    return taxonomy.some(med => topic.includes(med));
+                    });
+                }
+                    
+            var selected_specialties = topicFilter2(stringArray); 
+            console.log(selected_specialties) //gives array of selected specialties eg. [ "Anaesthetics", "Trauma" ]
+
+        </script>
+
+
+
+
 
 
 
