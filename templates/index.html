@@ -10858,7 +10858,7 @@
             $('#sel_specialties').on('change', function() {
                 $('#select5').fadeIn(50);
                 let select ="";
-                $("#sel").find('option:selected').each(function() {
+                $("#sel_specialties").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
                     if(select != ""){select = select.substr(0);};
                 var stringArray = (new Function("return [" + select + "];")());
@@ -10867,7 +10867,7 @@
                 function topicFilter2(taxonomy) {
                     const returnedData = $.grep(eponyms.features, function(element, index) {
                         return (element.topic !== "");
-                        });  /// DROP those WITHOUT OPERATIONS
+                        });
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return returnedData.filter(item => {
                         let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
