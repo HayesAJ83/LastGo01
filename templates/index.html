@@ -205,7 +205,7 @@
                                             data-aos="zoom-in"
                                             data-container="body"
                                             data-live-search="true";">
-                                            <option1 value=""> -- select -- </option1>
+                                            <option value=""> -- select -- </option>
                                     </select>
                                     <p></p>
                                     <p></p>
@@ -10681,8 +10681,9 @@
         </script>
 
 
-        /// Section - A to Z ///
+        
         <script>
+        /// Section - A to Z ///
         $(document)
         .ready(function() {
         let result1 = eponyms.features
@@ -10763,13 +10764,15 @@
                                             ;}}}
                                         $('.info').fadeIn('slow');
                                     
-                                        }                           
+                                        }  
+        /// End Section - A to Z ///                         
         </script>
-        /// End Section - A to Z ///
+        
 
 
+        
+        <script> 
         /// Section - Specialties ///
-        <script>
             $(document)
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
@@ -10784,7 +10787,7 @@
                 var optionS = resultSubtypes;
                 for(var i = 0; i < optionS.length; i++) {
                     var opt1 = optionS[i];
-                    var el1 = document.createElement("option1");
+                    var el1 = document.createElement("option");
                     el1.textContent = opt1;
                     el1.value = opt1;
                     selectSubtypes.appendChild(el1);
@@ -10809,7 +10812,7 @@
             function topicFilter2(taxonomy) {
                 const returnedData = $.grep(eponyms.features, function(element, index) {
                     return (element.topic !== "");
-                    });  /// DROP those WITHOUT OPERATIONS
+                    });  
                 taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                 return returnedData.filter(item => {
                     let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
@@ -10820,6 +10823,7 @@
             var selected_specialties = topicFilter2(stringArray); 
             console.log(selected_specialties) //gives array of selected specialties eg. [ "Anaesthetics", "Trauma" ]
 
+        /// End Section - Specialties ///
         </script>
 
 
