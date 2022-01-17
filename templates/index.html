@@ -138,7 +138,7 @@
                             <p>If you have a particular eponym in mind, try searching for it here.</p>
                         </div>
                         <div class="col" data-aos="zoom-in" id="select_A2Z">
-                            <select id="sel" class="selectpicker"
+                            <select id="sel_A2Z" class="selectpicker"
                                     data-style="btn-primary" 
                                     data-width="320px" data-size="4"
                                     data-aos="zoom-in"
@@ -365,7 +365,7 @@
         </main>
         <!-- End of Main Content -->
 
-        
+
         <!-- Footer -->
         <footer class="footer text-white" style="background-image: url(/static/assets/img/backgrounds/iStock-532331964_op.jpg)">
             <div class="container d-flex h-100">
@@ -10703,7 +10703,6 @@
         console.log()
             });
 
-        ///  DEFAULT_PAGE_1  ///
         $(document)
         .ready(function() {
             $('#select1').ready(function() {
@@ -10713,10 +10712,9 @@
             });
         });
 
-        ///  DEFAULT_PAGE_2  ///
         var selected = eponyms.features
         function populateSelect() {
-            var ele = document.getElementById('sel');
+            var ele = document.getElementById('sel_A2Z');
             selected.forEach(function(b) {
                 ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
             }
@@ -10740,6 +10738,9 @@
         var selected2 = topicFilter2(stringArray); 
 
         </script>
+
+
+
 
    
 
@@ -10772,7 +10773,6 @@
 
             populateSelect2()
             
-            $('#select4').fadeIn(50);
             $('#SEL2').selectpicker('refresh');
             $('#select1').on('change', function() {
                 $('#select1').selectpicker('toggle'); //added to toggle open/close
@@ -10780,6 +10780,7 @@
                 });
         });
             
+
 
         $('#SEL2').change(function() {
             let select ="";
