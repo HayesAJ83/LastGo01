@@ -10872,6 +10872,9 @@
         /// End Section - Specialties ///
         </script>
 
+
+
+
         <script> 
             /// ALL - specialties
             /// THIS WORKS FINE
@@ -10913,6 +10916,9 @@
 //                    });
 //            });
         </script>
+
+
+
 
         <script>  ///  SELECTED_SPECIALTIES_2  ///
 //            $('#select1').on('change', function() {
@@ -10969,61 +10975,64 @@
 
 
 
+
+
+<script>
+    $(document)
+    .ready(function() {
+    const returnedData = $.grep(eponyms.features, function(element, index) {
+        return (element.ops !== "");
+        });  /// DROP those WITHOUT OPERATIONS
+    let result1 = returnedData
+        .flatMap(item => item.ops) //"item.ops" gives us OPERATIONS
+        .filter((item, i, arr) => arr.indexOf(item) === i)
+        .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no ops
+        let resultOps = result1.sort()
+        var selectOps = document.getElementById("sel_ops");
+        var optionS = resultOps;
+        for(var i = 0; i < optionS.length; i++) {
+            var opt1 = optionS[i];
+            var el1 = document.createElement("option");
+            el1.textContent = opt1;
+            el1.value = opt1;
+            selectOps.appendChild(el1);
+            }
+    });
+
+    $(document)
+    .ready(function() {
+        $('#select_ops').ready(function() {
+            let value = '\'' + $('#select_ops option').map(function() {
+                    return this.text}).get().join('\',\'') + '\'';
+            var stringArray = (new Function("return [" + value + "];")());
+        });
+    });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
+
+    let select ="";
+    $("#select_ops").find('option:selected').each(function() {
+            select += "\'" + $.trim($(this).text()) + "\',";});
+            if(select != ""){select = select.substr(0);};
+        var stringArray = (new Function("return [" + select + "];")());
         
-<script> 
-    /// Section - Operations ///
-        $(document)
-        .ready(function() {
+    function topicFilter2(taxonomy) {
         const returnedData = $.grep(eponyms.features, function(element, index) {
             return (element.ops !== "");
-            });  /// DROP those WITHOUT ops
-        let result1 = returnedData
-            .flatMap(item => item.ops) //"item.topic" gives us specialties
-            .filter((item, i, arr) => arr.indexOf(item) === i)
-            .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
-            let resultSubtypes = result1.sort()
-            var selectSubtypes = document.getElementById("sel_ops");
-            var optionS = resultSubtypes;
-            for(var i = 0; i < optionS.length; i++) {
-                var opt1 = optionS[i];
-                var el1 = document.createElement("option");
-                el1.textContent = opt1;
-                el1.value = opt1;
-                selectSubtypes.appendChild(el1);
-                }
-        });
-
-        $(document)
-        .ready(function() {
-            $('#select_ops').ready(function() {
-                let value = '\'' + $('#select_ops option').map(function() {
-                        return this.text}).get().join('\',\'') + '\'';
-                var stringArray = (new Function("return [" + value + "];")());
+            });  /// DROP those WITHOUT OPERATIONS
+        taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+        return returnedData.filter(item => {
+            let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+            return taxonomy.some(med => topic.includes(med));
             });
-        });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
-
-        let select ="";
-        $("#select_ops").find('option:selected').each(function() {
-                select += "\'" + $.trim($(this).text()) + "\',";});
-                if(select != ""){select = select.substr(0);};
-            var stringArray = (new Function("return [" + select + "];")());
+        }
             
-        function topicFilter2(taxonomy) {
-            const returnedData = $.grep(eponyms.features, function(element, index) {
-                return (element.topic !== "");
-                });  
-            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-            return returnedData.filter(item => {
-                let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                return taxonomy.some(med => topic.includes(med));
-                });
-            }
-                
-        var selected_specialties = topicFilter2(stringArray); 
-        console.log(selected_specialties) //gives array of selected specialties eg. [ "Anaesthetics", "Trauma" ]
+    var selected_ops = topicFilter2(stringArray); 
+    console.log(selected_ops) //gives array of selected specialties eg. [ "Anaesthetics", "Trauma" ]
 
-    /// End Section - Specialties ///
-    </script>
+</script>
+
+
+
+
 
     <script> 
         /// ALL - specialties
@@ -11068,9 +11077,9 @@
     </script>
 
 <script>  ///  SELECTED_SPECIALTIES_2  ///
-    $('#select1').on('change', function() {
+    $('#select_ops').on('change', function() {
         let select ="";
-        $("#select1").find('option:selected').each(function() {
+        $("#select_ops").find('option:selected').each(function() {
             select += "\'" + $.trim($(this).text()) + "\',";});
             if(select != ""){select = select.substr(0);};
         var stringArray = (new Function("return [" + select + "];")());
