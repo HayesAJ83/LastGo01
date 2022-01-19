@@ -11026,7 +11026,6 @@
                     var stringArray = (new Function("return [" + value + "];")());
                 });
             });
-
             let select ="";
             $("#select_ops").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
@@ -11036,16 +11035,15 @@
             function topicFilter2(taxonomy) {
                 const returnedData = $.grep(eponyms.features, function(element, index) {
                     return (element.ops !== "");
-                    });  /// DROP those WITHOUT OPERATIONS
+                    });
                 taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                 return returnedData.filter(item => {
                     let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
                     return taxonomy.some(med => topic.includes(med));
                     });
                 }
-                    
             var selected2 = topicFilter2(stringArray); 
-            console.log(selected2) //gives array of selected specialties eg. [ "Anaesthetics", "Trauma" ]
+            console.log(selected2)
         </script>
 
         <script> 
@@ -11058,21 +11056,20 @@
                     select += "\'" + $.trim($(this).text()) + "\',";});
                     if(select != ""){select = select.substr(0);};
                 var stringArray = (new Function("return [" + select + "];")());
-                console.log(stringArray); //works Array [chosen options]
+                //console.log(stringArray);
                 
                 function topicFilter2(taxonomy) {
                     const returnedData = $.grep(eponyms.features, function(element, index) {
                         return (element.ops !== "");
-                        });  /// DROP those WITHOUT OPERATIONS
+                        });
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return returnedData.filter(item => {
                         let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
                         return taxonomy.some(med => ops.includes(med));
                         });
                     }
-                
                 var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-                console.log(selected2)
+                //console.log(selected2)
 
                 function populateSelect2() {
                     document.getElementById('sel69').innerHTML = selected2.reduce((options, {ID,name}) =>
@@ -11080,11 +11077,11 @@
                         '<option value=""> -- select -- </option>'
                         );
                     }
-            
                 populateSelect2()
+
                 $('#sel69').selectpicker('refresh');
                 $('#sel3000').on('change', function() {
-                    $('#sel3000').selectpicker('toggle'); //added to toggle open/close
+                    $('#sel3000').selectpicker('toggle');
                     $('#sel69').selectpicker('refresh');
                     });
             });
