@@ -10974,6 +10974,12 @@
 
 
 
+
+
+
+
+
+
 <script>
     $(document)
     .ready(function() {
@@ -11115,6 +11121,9 @@
         
         var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
         console.log(selected2)
+
+        /// NOW GET THE OPERATIONS FRTOM THIS SMALL JSON
+
         let result10 = selected2
             .flatMap(item => item.ops)
             .filter((item, i, arr) => arr.indexOf(item) === i)
@@ -11130,13 +11139,40 @@
                 selectOps10.appendChild(el10);
                 }
         
-        //$('#select4').fadeIn(50);
+        
+        $('#select4').fadeIn(50);
         $('#SEL2').selectpicker('refresh');
+
         $('#select_ops').on('change', function() {
             $('#select_ops').selectpicker('toggle'); //added to toggle open/close
             $('#SEL2').selectpicker('refresh');
             });
         });
+
+//    $('#select4').change(function() {
+//        $('#select5').fadeIn(1500);
+//        let select ="";
+//        $("#select4").find('option:selected').each(function() {
+//            select += "\'" + $.trim($(this).text()) + "\',";});
+//            if(select != ""){select = select.substr(0);};
+//        var stringArray = (new Function("return [" + select+ "];")());
+        
+//        function topicFilter2(taxonomy) {
+//            const returnedData = $.grep(eponyms.features, function(element, index) {
+//            return (element.ops !== "");
+//            });  /// DROP those WITHOUT OPERATIONS
+//            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+//            return returnedData.filter(item => {
+//                let opsSpec = Array.isArray(item.opsSpec) ? item.opsSpec : [item.opsSpec];
+//                return taxonomy.some(med => opsSpec.includes(med));
+//                });
+//            }
+            
+//        var selected2 = topicFilter2(stringArray);
+//        console.log(selected2)
+        
+//        }).trigger("change")
+    
 </script>
 
 
