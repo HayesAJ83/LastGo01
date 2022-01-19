@@ -262,7 +262,7 @@
                             <hr style="height:1px; visibility:hidden">
                                 <form method="POST">
                                     <div class="row align-items-center text-center">
-                                        <div class="col" data-aos="fade-up" id="select5" style="display:none"> <!--works-->
+                                        <div class="col" data-aos="fade-up" id="select15" style="display:none"> <!--works-->
                                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                                             <select id="sel9" class="selectpicker show-tick"
                                                     data-style="btn-primary" data-header="Search list:" 
@@ -296,7 +296,7 @@
                     <div class="collapse" id="collapseExample_Diseases">
                         <div class="col">  <!--<div class="card card-body">-->
                             <div class="row align-items-center text-center">
-                                <div class="col" data-aos="fade-up" id="select_diseases">
+                                <div class="col" data-aos="fade-up" id="select3">
                                     <!--<h1 class="text-black mb-2 fs-1" style="height:30px">Diseases & Symptoms</h1>-->
                                     <select id="sel" class="selectpicker show-tick"
                                             data-style="btn-primary" data-header="Search list:" 
@@ -11052,7 +11052,7 @@
             /// ALL - specialties
             /// THIS WORKS FINE
             $('#sel3000').on('change', function() {
-                $('#select5').fadeIn(50);
+                $('#select15').fadeIn(50);
                 let select ="";
                 $("#sel3000").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
