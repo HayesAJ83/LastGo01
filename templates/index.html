@@ -10977,7 +10977,7 @@
             .ready(function() {
             const returnedData_ops = $.grep(eponyms.features, function(element, index) {
                 return (element.ops !== "");
-                });  /// DROP those WITHOUT OPERATIONS
+                });
             let result_ops = returnedData_ops
                 .flatMap(item => item.topic) //"item.topic" ***THIS IS DIFFERENT***  gives us SPECIALTIES
                 .filter((item, i, arr) => arr.indexOf(item) === i)
@@ -10994,9 +10994,7 @@
                     }
             console.log()
             });
-        </script>
-
-        <script>
+       
             $(document)
             .ready(function() {
             const returnedData_ops2 = $.grep(eponyms.features, function(element, index) {
@@ -11032,18 +11030,17 @@
                     if(select != ""){select = select.substr(0);};
                 var stringArray = (new Function("return [" + select + "];")());
                 
-            function topicFilter2(taxonomy) {
-                const returnedData = $.grep(eponyms.features, function(element, index) {
-                    return (element.ops !== "");
-                    });
-                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                return returnedData.filter(item => {
-                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                    return taxonomy.some(med => topic.includes(med));
-                    });
-                }
-            var selected2 = topicFilter2(stringArray); 
-            //console.log(selected2)
+//            function topicFilter2(taxonomy) {
+//                const returnedData = $.grep(eponyms.features, function(element, index) {
+//                    return (element.ops !== "");
+//                    });
+//                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+//                return returnedData.filter(item => {
+//                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+//                    return taxonomy.some(med => topic.includes(med));
+//                    });
+//                }
+//            var selected2 = topicFilter2(stringArray); 
         </script>
 
         <script> 
