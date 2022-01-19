@@ -190,7 +190,7 @@
                     <p>Explore eponymous surgical terms through these intuitive links.</p>
                     <br>
 
-                    <!--
+                    
                     <p>
                         <a class="btn btn-light" data-toggle="collapse" href="#collapseExample_Specialties" role="button" aria-expanded="false" aria-controls="collapseExample">
                         Specialties
@@ -235,7 +235,7 @@
                             <br>
                             <hr class='my-4'>
                         </div>
-                    </div> -->
+                    </div>
                     
 
 
@@ -10816,55 +10816,55 @@
         
         <script> 
         /// Section - Specialties ///
-//            $(document)
-//            .ready(function() {
-//            const returnedData = $.grep(eponyms.features, function(element, index) {
-//                return (element.topic !== "");
-//                });  /// DROP those WITHOUT topic
-//            let result1 = returnedData
-//                .flatMap(item => item.topic) //"item.topic" gives us specialties
-//                .filter((item, i, arr) => arr.indexOf(item) === i)
-//                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
-//                let resultSubtypes = result1.sort()
-//                var selectSubtypes = document.getElementById("sel_specialties");
-//                var optionS = resultSubtypes;
-//                for(var i = 0; i < optionS.length; i++) {
-//                    var opt1 = optionS[i];
-//                    var el1 = document.createElement("option");
-//                    el1.textContent = opt1;
-//                    el1.value = opt1;
-//                    selectSubtypes.appendChild(el1);
-//                    }
-//            });
+            $(document)
+            .ready(function() {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.topic !== "");
+                });  /// DROP those WITHOUT topic
+            let result1 = returnedData
+                .flatMap(item => item.topic) //"item.topic" gives us specialties
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
+                let resultSubtypes = result1.sort()
+                var selectSubtypes = document.getElementById("sel_specialties");
+                var optionS = resultSubtypes;
+                for(var i = 0; i < optionS.length; i++) {
+                    var opt1 = optionS[i];
+                    var el1 = document.createElement("option");
+                    el1.textContent = opt1;
+                    el1.value = opt1;
+                    selectSubtypes.appendChild(el1);
+                    }
+            });
 
-//            $(document)
-//            .ready(function() {
-//                $('#select_specialties').ready(function() {
-//                    let value = '\'' + $('#select_specialties option').map(function() {
-//                            return this.text}).get().join('\',\'') + '\'';
-//                    var stringArray = (new Function("return [" + value + "];")());
-//                });
-//            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
+            $(document)
+            .ready(function() {
+                $('#select_specialties').ready(function() {
+                    let value = '\'' + $('#select_specialties option').map(function() {
+                            return this.text}).get().join('\',\'') + '\'';
+                    var stringArray = (new Function("return [" + value + "];")());
+                });
+            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
 
-//            let select ="";
-//            $("#select_specialties").find('option:selected').each(function() {
-//                    select += "\'" + $.trim($(this).text()) + "\',";});
-//                    if(select != ""){select = select.substr(0);};
-//                var stringArray = (new Function("return [" + select + "];")());
+            let select ="";
+            $("#select_specialties").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
                 
-//            function topicFilter2(taxonomy) {
-//                const returnedData = $.grep(eponyms.features, function(element, index) {
-//                    return (element.topic !== "");
-//                    });  
-//                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-//                return returnedData.filter(item => {
-//                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-//                    return taxonomy.some(med => topic.includes(med));
-//                    });
-//                }
+            function topicFilter2(taxonomy) {
+                const returnedData = $.grep(eponyms.features, function(element, index) {
+                    return (element.topic !== "");
+                    });  
+                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                return returnedData.filter(item => {
+                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                    return taxonomy.some(med => topic.includes(med));
+                    });
+                }
                     
-//            var selected_specialties = topicFilter2(stringArray); 
-//            console.log(selected_specialties) //gives array of selected specialties eg. [ "Anaesthetics", "Trauma" ]
+            var selected_specialties = topicFilter2(stringArray); 
+            console.log(selected_specialties) //gives array of selected specialties eg. [ "Anaesthetics", "Trauma" ]
 
         /// End Section - Specialties ///
         </script>
@@ -10875,97 +10875,96 @@
         <script> 
             /// ALL - specialties
             /// THIS WORKS FINE
-//            $('#sel_specialties').on('change', function() {
-//                $('#select5').fadeIn(50);
-//                let select ="";
-//                $("#sel_specialties").find('option:selected').each(function() {
-//                    select += "\'" + $.trim($(this).text()) + "\',";});
-//                    if(select != ""){select = select.substr(0);};
-//                var stringArray = (new Function("return [" + select + "];")());
-//                console.log(stringArray); //works Array [chosen options]
+            $('#sel_specialties').on('change', function() {
+                $('#select5').fadeIn(50);
+                let select ="";
+                $("#sel_specialties").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
+                console.log(stringArray); //works Array [chosen options]
                 
-//                function topicFilter2(taxonomy) {
-//                    const returnedData = $.grep(eponyms.features, function(element, index) {
-//                        return (element.topic !== "");
-//                        });
-//                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-//                    return returnedData.filter(item => {
-//                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-//                        return taxonomy.some(med => topic.includes(med));
-//                        });
-//                    }
+                function topicFilter2(taxonomy) {
+                    const returnedData = $.grep(eponyms.features, function(element, index) {
+                        return (element.topic !== "");
+                        });
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return returnedData.filter(item => {
+                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
+                        });
+                    }
                 
-//                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-//                console.log(selected2)
+                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+                console.log(selected2)
 
-//                function populateSelect2() {
-//                    document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
-//                        options += `<option value="${ID}">${name}</option>`,
-//                        '<option value=""> -- select -- </option>'
-//                        );
-//                    }
+                function populateSelect2() {
+                    document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`,
+                        '<option value=""> -- select -- </option>'
+                        );
+                    }
             
-//                populateSelect2()
-//                $('#sel9').selectpicker('refresh');
-//                $('#sel').on('change', function() {
-//                    $('#sel').selectpicker('toggle'); //added to toggle open/close
-//                    $('#sel9').selectpicker('refresh');
-//                    });
-//            });
+                populateSelect2()
+                $('#sel9').selectpicker('refresh');
+                $('#sel').on('change', function() {
+                    $('#sel').selectpicker('toggle'); //added to toggle open/close
+                    $('#sel9').selectpicker('refresh');
+                    });
+            });
         </script>
 
 
 
 
         <script>  ///  SELECTED_SPECIALTIES_2  ///
-//            $('#select1').on('change', function() {
-//                let select ="";
-//                $("#select1").find('option:selected').each(function() {
-//                    select += "\'" + $.trim($(this).text()) + "\',";});
-//                    if(select != ""){select = select.substr(0);};
-//                var stringArray = (new Function("return [" + select + "];")());
-//                console.log(stringArray); //works Array [chosen options]
+            $('#select1').on('change', function() {
+                let select ="";
+                $("#select1").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
+                console.log(stringArray); //works Array [chosen options]
                 
-//                function topicFilter2(taxonomy) {
-//                    const returnedData = $.grep(eponyms.features, function(element, index) {
-//                    return (element.topic !== "");
-//                    });  /// DROP those WITHOUT OPERATIONS
-//                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-//                    return returnedData.filter(item => {
-//                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-//                        return taxonomy.some(med => topic.includes(med));
-//                        });
-//                    }
+                function topicFilter2(taxonomy) {
+                    const returnedData = $.grep(eponyms.features, function(element, index) {
+                    return (element.topic !== "");
+                    });  /// DROP those WITHOUT OPERATIONS
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return returnedData.filter(item => {
+                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
+                        });
+                    }
                 
-//                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-//                console.log(selected2)
+                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+                console.log(selected2)
 
                 /// NOW GET X FROM THIS SMALL JSON
 
-//                let result10 = selected2
-//                    .flatMap(item => item.topic)
-//                    .filter((item, i, arr) => arr.indexOf(item) === i)
-//                    //.filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
-//                    let resultSubtypes10 = result10.sort()
-//                    var selectSubtypes10 = document.getElementById("SEL2");
-//                    var optionS10 = resultOps10;
-//                    for(var i = 0; i < optionS10.length; i++) {
-//                        var opt10 = optionS10[i];
-//                        var el10 = document.createElement("option");
-//                        el10.textContent = opt10;
-//                        el10.value = opt10;
-//                        selectSubtypes10.appendChild(el10);
-//                        }
+                let result10 = selected2
+                    .flatMap(item => item.topic)
+                    .filter((item, i, arr) => arr.indexOf(item) === i)
+                    //.filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
+                    let resultSubtypes10 = result10.sort()
+                    var selectSubtypes10 = document.getElementById("SEL2");
+                    var optionS10 = resultOps10;
+                    for(var i = 0; i < optionS10.length; i++) {
+                        var opt10 = optionS10[i];
+                        var el10 = document.createElement("option");
+                        el10.textContent = opt10;
+                        el10.value = opt10;
+                        selectSubtypes10.appendChild(el10);
+                        }
                 
-                
-//                $('#select4').fadeIn(50);
-//                $('#SEL2').selectpicker('refresh');
+                $('#select4').fadeIn(50);
+                $('#SEL2').selectpicker('refresh');
 
-//                $('#select1').on('change', function() {
-//                    $('#select1').selectpicker('toggle'); //added to toggle open/close
-//                    $('#SEL2').selectpicker('refresh');
-//                    });
-//                });
+                $('#select1').on('change', function() {
+                    $('#select1').selectpicker('toggle'); //added to toggle open/close
+                    $('#SEL2').selectpicker('refresh');
+                    });
+                });
             
         </script>
 
