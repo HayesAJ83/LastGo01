@@ -10742,7 +10742,7 @@
                 el.value = opt;
                 select.appendChild(el);
                 }
-        console.log()
+        //console.log()
             });
 
         $(document)
@@ -10760,24 +10760,24 @@
             selected.forEach(function(b) {
                 ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
             }
-        console.log(selected)
+        //console.log(selected)
         populateSelect()
 
-        let select ="";
-        $("#select_A2Z").find('option:selected').each(function() {
-                select += "\'" + $.trim($(this).text()) + "\',";});
-                if(select != ""){select = select.substr(0);};
-            var stringArray = (new Function("return [" + select+ "];")());
+//        let select ="";
+//        $("#select_A2Z").find('option:selected').each(function() {
+//                select += "\'" + $.trim($(this).text()) + "\',";});
+//                if(select != ""){select = select.substr(0);};
+//            var stringArray = (new Function("return [" + select+ "];")());
             
-        function topicFilter2(taxonomy) {
-            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-            return eponyms.features.filter(item => {
-                let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                return taxonomy.some(med => topic.includes(med));
-                });
-            }
+//        function topicFilter2(taxonomy) {
+//            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+//            return eponyms.features.filter(item => {
+//                let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+//                return taxonomy.some(med => topic.includes(med));
+//                });
+//            }
                 
-        var selected2 = topicFilter2(stringArray); 
+//        var selected2 = topicFilter2(stringArray); 
         </script>
 
         <script>
