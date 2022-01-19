@@ -11121,9 +11121,6 @@
         
         var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
         console.log(selected2)
-
-        /// NOW GET THE OPERATIONS FRTOM THIS SMALL JSON
-
         let result10 = selected2
             .flatMap(item => item.ops)
             .filter((item, i, arr) => arr.indexOf(item) === i)
@@ -11139,10 +11136,8 @@
                 selectOps10.appendChild(el10);
                 }
         
-        
         $('#select4').fadeIn(50);
         $('#SEL2').selectpicker('refresh');
-
         $('#select_ops').on('change', function() {
             $('#select_ops').selectpicker('toggle'); //added to toggle open/close
             $('#SEL2').selectpicker('refresh');
