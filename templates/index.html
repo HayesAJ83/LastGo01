@@ -247,8 +247,8 @@
                     <div class="collapse" id="collapseExample_Operations">
                         <div class="col">  
                             <div class="row align-items-center text-center">
-                                <div class="col" data-aos="fade-up" id="select_ops">
-                                    <select id="sel_ops" class="selectpicker show-tick"
+                                <div class="col" data-aos="fade-up" id="select3">
+                                    <select id="sel" class="selectpicker show-tick"
                                             data-style="btn-primary" data-header="Search list:" 
                                             data-width="325px" data-size="6"
                                             data-aos="zoom-in"
@@ -260,21 +260,21 @@
                             </div>
                             <p></p>
                             <hr style="height:1px; visibility:hidden">
-                            <form method="POST">
-                                <div class="row align-items-center text-center">
-                                    <div class="col" data-aos="fade-up" id="select5" style="display:none">
-                                        <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
-                                        <select id="sel9" class="selectpicker show-tick"
-                                                data-style="btn-primary" data-header="Search list:" 
-                                                data-width="325px" data-size="6"
-                                                data-aos="zoom-in"
-                                                data-container="body"
-                                                data-live-search="true" onchange="show2(this.value);">
-                                                <option value=""> -- select -- </option>
-                                        </select>
+                                <form method="POST">
+                                    <div class="row align-items-center text-center">
+                                        <div class="col" data-aos="fade-up" id="select5" style="display:none"> <!--works-->
+                                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
+                                            <select id="sel9" class="selectpicker show-tick"
+                                                    data-style="btn-primary" data-header="Search list:" 
+                                                    data-width="325px" data-size="6"
+                                                    data-aos="zoom-in"
+                                                    data-container="body"
+                                                    data-live-search="true" onchange="show2(this.value);">
+                                                    <option value=""> -- select -- </option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
                             <div class="row align-items-center text-center" id='blurb'>
                                 <div class="lead" id='imgName2'></div>
                                 <p class="lead" id="msg2"></p>
@@ -10977,6 +10977,33 @@
 
 
 
+
+
+
+<script>
+    $(document)
+    .ready(function() {
+    const returnedData = $.grep(eponyms.features, function(element, index) {
+        return (element.ops !== "");
+        });  /// DROP those WITHOUT OPERATIONS
+    let result1 = returnedData
+        .flatMap(item => item.topic) //"item.topic" gives us SPECIALTIES
+        .filter((item, i, arr) => arr.indexOf(item) === i)
+        .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
+        let resultsort1 = result1.sort()
+        var select = document.getElementById("select1");
+        var options = resultsort1;
+        for(var i = 0; i < options.length; i++) {
+            var opt = options[i];
+            var el = document.createElement("option");
+            el.textContent = opt;
+            el.value = opt;
+            select.appendChild(el);
+            }
+    //console.log()   /// This gives us array with all features - when select1 is changed
+    });
+</script>
+
 <script>
     $(document)
     .ready(function() {
@@ -10988,7 +11015,7 @@
         .filter((item, i, arr) => arr.indexOf(item) === i)
         .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no ops
         let resultOps = result1.sort()
-        var selectOps = document.getElementById("sel_ops");
+        var selectOps = document.getElementById("sel");
         var optionS = resultOps;
         for(var i = 0; i < optionS.length; i++) {
             var opt1 = optionS[i];
@@ -11001,15 +11028,15 @@
 
     $(document)
     .ready(function() {
-        $('#select_ops').ready(function() {
-            let value = '\'' + $('#select_ops option').map(function() {
+        $('#select1').ready(function() {
+            let value = '\'' + $('#select1 option').map(function() {
                     return this.text}).get().join('\',\'') + '\'';
             var stringArray = (new Function("return [" + value + "];")());
         });
     });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
 
     let select ="";
-    $("#select_ops").find('option:selected').each(function() {
+    $("#select1").find('option:selected').each(function() {
             select += "\'" + $.trim($(this).text()) + "\',";});
             if(select != ""){select = select.substr(0);};
         var stringArray = (new Function("return [" + select + "];")());
@@ -11025,61 +11052,57 @@
             });
         }
             
-    var selected_ops = topicFilter2(stringArray); 
-    console.log(selected_ops) //gives array of selected specialties eg. [ "Anaesthetics", "Trauma" ]
+    var selected2 = topicFilter2(stringArray); 
+    console.log(selected2) //gives array of selected specialties eg. [ "Anaesthetics", "Trauma" ]
 
 </script>
 
-
-
-
-
-    <script> 
-        /// ALL - specialties
-        /// THIS WORKS FINE
-        $('#sel_ops').on('change', function() {
-            $('#select5').fadeIn(50);
-            let select ="";
-            $("#sel_ops").find('option:selected').each(function() {
-                select += "\'" + $.trim($(this).text()) + "\',";});
-                if(select != ""){select = select.substr(0);};
-            var stringArray = (new Function("return [" + select + "];")());
-            console.log(stringArray); //works Array [chosen options]
-            
-            function topicFilter2(taxonomy) {
-                const returnedData = $.grep(eponyms.features, function(element, index) {
-                    return (element.topic !== "");
-                    });
-                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                return returnedData.filter(item => {
-                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                    return taxonomy.some(med => topic.includes(med));
-                    });
-                }
-            
-            var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-            console.log(selected2)
-
-            function populateSelect2() {
-                document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
-                    options += `<option value="${ID}">${name}</option>`,
-                    '<option value=""> -- select -- </option>'
-                    );
-                }
+<script> 
+    /// ALL - specialties
+    /// THIS WORKS FINE
+    $('#sel').on('change', function() {
+        $('#select5').fadeIn(50);
+        let select ="";
+        $("#sel").find('option:selected').each(function() {
+            select += "\'" + $.trim($(this).text()) + "\',";});
+            if(select != ""){select = select.substr(0);};
+        var stringArray = (new Function("return [" + select + "];")());
+        console.log(stringArray); //works Array [chosen options]
         
-            populateSelect2()
-            $('#sel9').selectpicker('refresh');
-            $('#sel').on('change', function() {
-                $('#sel').selectpicker('toggle'); //added to toggle open/close
-                $('#sel9').selectpicker('refresh');
+        function topicFilter2(taxonomy) {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.ops !== "");
+                });  /// DROP those WITHOUT OPERATIONS
+            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+            return returnedData.filter(item => {
+                let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
+                return taxonomy.some(med => ops.includes(med));
                 });
-        });
-    </script>
+            }
+        
+        var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+        console.log(selected2)
+
+        function populateSelect2() {
+            document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
+                options += `<option value="${ID}">${name}</option>`,
+                '<option value=""> -- select -- </option>'
+                );
+            }
+    
+        populateSelect2()
+        $('#sel9').selectpicker('refresh');
+        $('#sel').on('change', function() {
+            $('#sel').selectpicker('toggle'); //added to toggle open/close
+            $('#sel9').selectpicker('refresh');
+            });
+    });
+</script>
 
 <script>  ///  SELECTED_SPECIALTIES_2  ///
-    $('#select_ops').on('change', function() {
+    $('#select1').on('change', function() {
         let select ="";
-        $("#select_ops").find('option:selected').each(function() {
+        $("#select1").find('option:selected').each(function() {
             select += "\'" + $.trim($(this).text()) + "\',";});
             if(select != ""){select = select.substr(0);};
         var stringArray = (new Function("return [" + select + "];")());
@@ -11151,6 +11174,10 @@
         }).trigger("change")
     
 </script>
+
+
+
+
 
 
 
