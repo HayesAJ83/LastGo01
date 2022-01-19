@@ -11025,9 +11025,7 @@
                 $('#select_ops').ready(function() {
                     let value = '\'' + $('#select_ops option').map(function() {
                             return this.text}).get().join('\',\'') + '\'';
-                    var stringArray = (new Function("return [" + value + "];")());
-                });
-            });   /// Generates all the select_ops [specialties] options (eg. 'COLORECTAL')
+                    var stringArray = (new Function("return [" + value + "];")()); }); });
 
             let select ="";
             $("#select_ops").find('option:selected').each(function() {
@@ -11037,17 +11035,12 @@
                 
             function topicFilter2(taxonomy) {
                 const returnedData = $.grep(eponyms.features, function(element, index) {
-                    return (element.ops !== "");
-                    });  /// DROP those WITHOUT OPERATIONS
+                    return (element.ops !== ""); });  /// DROP those WITHOUT OPERATIONS
                 taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                 return returnedData.filter(item => {
                     let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                    return taxonomy.some(med => topic.includes(med));
-                    });
+                    return taxonomy.some(med => topic.includes(med)); });
                 }
-                    
-            //var selected2 = topicFilter2(stringArray); 
-            //console.log(selected2) //gives array of eponyms related to selected operation eg. [ "Crohn's", "Treves" ]
         </script>
 
         <script> 
@@ -11063,17 +11056,14 @@
                 
                 function topicFilter2(taxonomy) {
                     const returnedData = $.grep(eponyms.features, function(element, index) {
-                        return (element.ops !== "");
-                        });  /// DROP those WITHOUT OPERATIONS
+                        return (element.ops !== ""); });
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return returnedData.filter(item => {
                         let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
-                        return taxonomy.some(med => ops.includes(med));
-                        });
-                    }
+                        return taxonomy.some(med => ops.includes(med)); }); }
                 
-                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-                console.log(selected2)
+                //var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+                //console.log(selected2)
 
                 function populateSelect2() {
                     document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
