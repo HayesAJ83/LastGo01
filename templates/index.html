@@ -11004,7 +11004,7 @@
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
                 return (element.ops !== "");
-                });  /// DROP those WITHOUT OPERATIONS
+                });
             let result1 = returnedData
                 .flatMap(item => item.ops) //"item.ops" gives us OPERATIONS
                 .filter((item, i, arr) => arr.indexOf(item) === i)
@@ -11028,7 +11028,7 @@
                             return this.text}).get().join('\',\'') + '\'';
                     var stringArray = (new Function("return [" + value + "];")());
                 });
-            });   /// Generates all the select_ops [specialties] options (eg. 'COLORECTAL')
+            });
 
             let select ="";
             $("#select_ops").find('option:selected').each(function() {
@@ -11131,7 +11131,6 @@
                         selectOps10.appendChild(el10);
                         }
                 
-                $('#select4').fadeIn(50);
                 $('#SEL2').selectpicker('refresh');
                 $('#select_ops').on('change', function() {
                     $('#select_ops').selectpicker('toggle'); //added to toggle open/close
