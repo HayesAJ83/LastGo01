@@ -10995,6 +10995,7 @@
                     el.value = opt;
                     select.appendChild(el);
                     }
+            console.log()   /// This gives us array with operations  - when select_ops is changed
             });
         </script>
 
@@ -11047,10 +11048,12 @@
                 }
                     
             var selected2 = topicFilter2(stringArray); 
-            console.log(selected2) //gives array of eponyms related to selected operation eg. [ "Crohn's", "Treves" ]
+            console.log(selected2) //gives array of selected specialties eg. [ "Anaesthetics", "Trauma" ]
+
         </script>
 
         <script> 
+            /// ALL - specialties
             /// THIS WORKS FINE
             $('#sel').on('change', function() {
                 $('#select5').fadeIn(50);
@@ -11091,7 +11094,7 @@
             });
         </script>
 
-        <script>  ///  SELECTED  ///
+        <script>  ///  SELECTED_SPECIALTIES_2  ///
             $('#select_ops').on('change', function() {
                 let select ="";
                 $("#select_ops").find('option:selected').each(function() {
@@ -11102,7 +11105,8 @@
                 
                 function topicFilter2(taxonomy) {
                     const returnedData = $.grep(eponyms.features, function(element, index) {
-                    return (element.ops !== ""); });  /// DROP those WITHOUT OPERATIONS
+                    return (element.ops !== "");
+                    });  /// DROP those WITHOUT OPERATIONS
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return returnedData.filter(item => {
                         let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
@@ -11127,6 +11131,7 @@
                         selectOps10.appendChild(el10);
                         }
                 
+                $('#select4').fadeIn(50);
                 $('#SEL2').selectpicker('refresh');
                 $('#select_ops').on('change', function() {
                     $('#select_ops').selectpicker('toggle'); //added to toggle open/close
