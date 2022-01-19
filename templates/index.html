@@ -10742,7 +10742,6 @@
                 el.value = opt;
                 select.appendChild(el);
                 }
-        //console.log()
             });
 
         $(document)
@@ -10760,24 +10759,8 @@
             selected.forEach(function(b) {
                 ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
             }
-        //console.log(selected)
         populateSelect()
 
-//        let select ="";
-//        $("#select_A2Z").find('option:selected').each(function() {
-//                select += "\'" + $.trim($(this).text()) + "\',";});
-//                if(select != ""){select = select.substr(0);};
-//            var stringArray = (new Function("return [" + select+ "];")());
-            
-//        function topicFilter2(taxonomy) {
-//            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-//            return eponyms.features.filter(item => {
-//                let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-//                return taxonomy.some(med => topic.includes(med));
-//                });
-//            }
-                
-//        var selected2 = topicFilter2(stringArray); 
         </script>
 
         <script>
@@ -10789,7 +10772,6 @@
                 if  (Number(id) === eponyms.features[i].ID) {
                     imgName.innerHTML = eponyms.features[i].imgName
                                             ;}}}
-                                        $('.imgName').fadeIn('slow');
 
             var info = document.getElementById('info');
             if (!id) {imgName.innerHTML = "";
@@ -10805,10 +10787,7 @@
                                         eponyms.features[i].URLs +
                                         eponyms.features[i].acknow
                                             ;}}}
-                                        $('.info').fadeIn('slow');
-                                    
-                                        }  
-        /// End Section - A to Z ///                         
+                                        }                         
         </script>
         
 
@@ -10984,8 +10963,7 @@
                     el_ops.textContent = opt_ops;
                     el_ops.value = opt_ops;
                     select_ops.appendChild(el_ops);
-                    }
-            console.log()
+                    }    /////console.log()
             });
        
             $(document)
