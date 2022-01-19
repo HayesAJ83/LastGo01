@@ -248,7 +248,7 @@
                         <div class="col">  
                             <div class="row align-items-center text-center">
                                 <div class="col" data-aos="fade-up" id="select3">
-                                    <select id="sel3000" class="selectpicker show-tick"
+                                    <select id="sel300" class="selectpicker show-tick"
                                             data-style="btn-primary" data-header="Search list:" 
                                             data-width="325px" data-size="6"
                                             data-aos="zoom-in"
@@ -11005,7 +11005,7 @@
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";});
                 let resultOps = result_ops2.sort()
-                var selectOps = document.getElementById("sel3000");
+                var selectOps = document.getElementById("sel300");
                 var optionS = resultOps;
                 for(var i = 0; i < optionS.length; i++) {
                     var opt1 = optionS[i];
@@ -11014,29 +11014,14 @@
                     el1.value = opt1;
                     selectOps.appendChild(el1);
                     }
-            });
-
-//            $(document)
-//            .ready(function() {
-//                $('#select_ops').ready(function() {
-//                    let value = '\'' + $('#select_ops option').map(function() {
-//                            return this.text}).get().join('\',\'') + '\'';
-//                    var stringArray = (new Function("return [" + value + "];")());
-//                });
-//            });
-//            let select ="";
-//            $("#select_ops").find('option:selected').each(function() {
-//                    select += "\'" + $.trim($(this).text()) + "\',";});
-//                    if(select != ""){select = select.substr(0);};
-//                var stringArray = (new Function("return [" + select + "];")());
-                
+            });                
         </script>
 
         <script> 
-            $('#sel3000').on('change', function() {
+            $('#sel300').on('change', function() {
                 $('#select15').fadeIn(50);
                 let select ="";
-                $("#sel3000").find('option:selected').each(function() {
+                $("#sel300").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
                     if(select != ""){select = select.substr(0);};
 
@@ -11052,7 +11037,7 @@
                         return taxonomy.some(med => ops.includes(med));
                         });
                     }
-                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+                var selected2 = topicFilter2(stringArray);
 
                 function populateSelect2() {
                     document.getElementById('sel69').innerHTML = selected2.reduce((options, {ID,name}) =>
@@ -11063,8 +11048,8 @@
                 populateSelect2()
 
                 $('#sel69').selectpicker('refresh');
-                $('#sel3000').on('change', function() {
-                    $('#sel3000').selectpicker('toggle');
+                $('#sel300').on('change', function() {
+                    $('#sel300').selectpicker('toggle');
                     $('#sel69').selectpicker('refresh');
                     });
             });
