@@ -10975,14 +10975,14 @@
 
 
 
-        <script> //DONT NEED??
+        <script> 
             $(document)
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
                 return (element.ops !== "");
                 });  /// DROP those WITHOUT OPERATIONS
             let result1 = returnedData
-                .flatMap(item => item.topic) //"item.topic" gives us SPECIALTIES
+                .flatMap(item => item.topic) //"item.topic" ***THIS IS DIFFERENT***  gives us SPECIALTIES
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
                 let resultsort1 = result1.sort()
@@ -10995,31 +10995,31 @@
                     el.value = opt;
                     select.appendChild(el);
                     }
-            //console.log()   /// This gives us array with all features - when select_ops is changed
+            console.log()   /// This gives us array with all features - when select_ops is changed
             });
         </script>
 
         <script>
-//            $(document)
-//            .ready(function() {
-//            const returnedData = $.grep(eponyms.features, function(element, index) {
-//                return (element.ops !== "");
-//                });  /// DROP those WITHOUT OPERATIONS
-//            let result1 = returnedData
-//                .flatMap(item => item.ops) //"item.ops" gives us OPERATIONS
-//                .filter((item, i, arr) => arr.indexOf(item) === i)
-//                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no ops
-//                let resultOps = result1.sort()
-//                var selectOps = document.getElementById("sel");
-//                var optionS = resultOps;
-//                for(var i = 0; i < optionS.length; i++) {
-//                    var opt1 = optionS[i];
-//                    var el1 = document.createElement("option");
-//                    el1.textContent = opt1;
-//                    el1.value = opt1;
-//                    selectOps.appendChild(el1);
-//                    }
-//            });
+            $(document)
+            .ready(function() {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.ops !== "");
+                });  /// DROP those WITHOUT OPERATIONS
+            let result1 = returnedData
+                .flatMap(item => item.ops) //"item.ops" gives us OPERATIONS
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no ops
+                let resultOps = result1.sort()
+                var selectOps = document.getElementById("sel");
+                var optionS = resultOps;
+                for(var i = 0; i < optionS.length; i++) {
+                    var opt1 = optionS[i];
+                    var el1 = document.createElement("option");
+                    el1.textContent = opt1;
+                    el1.value = opt1;
+                    selectOps.appendChild(el1);
+                    }
+            });
 
             $(document)
             .ready(function() {
