@@ -264,7 +264,7 @@
                                     <div class="row align-items-center text-center">
                                         <div class="col" data-aos="fade-up" id="select15" style="display:none"> <!--works-->
                                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
-                                            <select id="sel9" class="selectpicker show-tick"
+                                            <select id="sel69" class="selectpicker show-tick"
                                                     data-style="btn-primary" data-header="Search list:" 
                                                     data-width="325px" data-size="6"
                                                     data-aos="zoom-in"
@@ -11075,17 +11075,17 @@
                 console.log(selected2)
 
                 function populateSelect2() {
-                    document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
+                    document.getElementById('sel69').innerHTML = selected2.reduce((options, {ID,name}) =>
                         options += `<option value="${ID}">${name}</option>`,
                         '<option value=""> -- select -- </option>'
                         );
                     }
             
                 populateSelect2()
-                $('#sel9').selectpicker('refresh');
+                $('#sel69').selectpicker('refresh');
                 $('#sel3000').on('change', function() {
                     $('#sel3000').selectpicker('toggle'); //added to toggle open/close
-                    $('#sel9').selectpicker('refresh');
+                    $('#sel69').selectpicker('refresh');
                     });
             });
         </script>
