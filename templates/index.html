@@ -128,7 +128,7 @@
             <!-- End of Section -->
 
             <!-- Section -->
-            <!--
+            
             <section id="section-2">
                 <div class="container text-center">  
                     <div class="row justify-content-center">
@@ -159,7 +159,7 @@
                         </a>
                     </div>
                 </div>
-            </section> -->
+            </section>
             <!-- End of Section -->
 
             <!-- Section -->
@@ -10727,57 +10727,57 @@
         
         <script>
         /// Section - A to Z ///
-//        $(document)
-//        .ready(function() {
-//        let result1 = eponyms.features
-//            .flatMap(item => item.topic)
-//            .filter((item, i, arr) => arr.indexOf(item) === i)
-//            let resultsort1 = result1.sort()
-//            var select = document.getElementById("select_A2Z");
-//            var options = resultsort1;
-//            for(var i = 0; i < options.length; i++) {
-//                var opt = options[i];
-//                var el = document.createElement("option");
-//                el.textContent = opt;
-//                el.value = opt;
-//                select.appendChild(el);
-//                }
-//        console.log()
-//            });
+        $(document)
+        .ready(function() {
+        let result1 = eponyms.features
+            .flatMap(item => item.topic)
+            .filter((item, i, arr) => arr.indexOf(item) === i)
+            let resultsort1 = result1.sort()
+            var select = document.getElementById("select_A2Z");
+            var options = resultsort1;
+            for(var i = 0; i < options.length; i++) {
+                var opt = options[i];
+                var el = document.createElement("option");
+                el.textContent = opt;
+                el.value = opt;
+                select.appendChild(el);
+                }
+        console.log()
+            });
 
-//        $(document)
-//        .ready(function() {
-//            $('#select_A2Z').ready(function() {
-//                let value = '\'' + $('#select_A2Z option').map(function() {
-//                        return this.text}).get().join('\',\'') + '\'';
-//                var stringArray = (new Function("return [" + value+ "];")());
-//            });
-//        });
+        $(document)
+        .ready(function() {
+            $('#select_A2Z').ready(function() {
+                let value = '\'' + $('#select_A2Z option').map(function() {
+                        return this.text}).get().join('\',\'') + '\'';
+                var stringArray = (new Function("return [" + value+ "];")());
+            });
+        });
 
-//        var selected = eponyms.features
-//        function populateSelect() {
-//            var ele = document.getElementById('sel_A2Z');
-//            selected.forEach(function(b) {
-//                ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-//            }
-//        console.log(selected)
-//        populateSelect()
+        var selected = eponyms.features
+        function populateSelect() {
+            var ele = document.getElementById('sel_A2Z');
+            selected.forEach(function(b) {
+                ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+            }
+        console.log(selected)
+        populateSelect()
 
-//        let select ="";
-//        $("#select_A2Z").find('option:selected').each(function() {
-//                select += "\'" + $.trim($(this).text()) + "\',";});
-//                if(select != ""){select = select.substr(0);};
-//            var stringArray = (new Function("return [" + select+ "];")());
+        let select ="";
+        $("#select_A2Z").find('option:selected').each(function() {
+                select += "\'" + $.trim($(this).text()) + "\',";});
+                if(select != ""){select = select.substr(0);};
+            var stringArray = (new Function("return [" + select+ "];")());
             
-//        function topicFilter2(taxonomy) {
-//            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-//            return eponyms.features.filter(item => {
-//                let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-//                return taxonomy.some(med => topic.includes(med));
-//                });
-//            }
+        function topicFilter2(taxonomy) {
+            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+            return eponyms.features.filter(item => {
+                let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                return taxonomy.some(med => topic.includes(med));
+                });
+            }
                 
-//        var selected2 = topicFilter2(stringArray); 
+        var selected2 = topicFilter2(stringArray); 
         </script>
 
         <script>
