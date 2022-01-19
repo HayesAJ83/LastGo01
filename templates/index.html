@@ -10975,22 +10975,22 @@
         <script> 
             $(document)
             .ready(function() {
-            const returnedData = $.grep(eponyms.features, function(element, index) {
+            const returnedData_ops = $.grep(eponyms.features, function(element, index) {
                 return (element.ops !== "");
                 });  /// DROP those WITHOUT OPERATIONS
-            let result1 = returnedData
+            let result_ops = returnedData_ops
                 .flatMap(item => item.topic) //"item.topic" ***THIS IS DIFFERENT***  gives us SPECIALTIES
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
-                let resultsort1 = result1.sort()
-                var select = document.getElementById("select_ops");
-                var options = resultsort1;
-                for(var i = 0; i < options.length; i++) {
-                    var opt = options[i];
-                    var el = document.createElement("option");
-                    el.textContent = opt;
-                    el.value = opt;
-                    select.appendChild(el);
+                let resultsort_ops = result_ops.sort()
+                var select_ops = document.getElementById("select_ops");
+                var options_ops = resultsort_ops;
+                for(var i = 0; i < options_ops.length; i++) {
+                    var opt_ops = options_ops[i];
+                    var el_ops = document.createElement("option");
+                    el_ops.textContent = opt_ops;
+                    el_ops.value = opt_ops;
+                    select_ops.appendChild(el_ops);
                     }
             console.log()   /// This gives us array with operations  - when select_ops is changed
             });
@@ -10999,14 +10999,14 @@
         <script>
             $(document)
             .ready(function() {
-            const returnedData = $.grep(eponyms.features, function(element, index) {
+            const returnedData_ops2 = $.grep(eponyms.features, function(element, index) {
                 return (element.ops !== "");
                 });
-            let result1 = returnedData
-                .flatMap(item => item.ops) //"item.ops" gives us OPERATIONS
+            let result_ops2 = returnedData_ops2
+                .flatMap(item => item.ops)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
-                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no ops
-                let resultOps = result1.sort()
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";});
+                let resultOps = result_ops2.sort()
                 var selectOps = document.getElementById("sel3000");
                 var optionS = resultOps;
                 for(var i = 0; i < optionS.length; i++) {
