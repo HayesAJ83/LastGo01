@@ -10975,28 +10975,28 @@
 
 
 
-        <script>
-            $(document)
-            .ready(function() {
-            const returnedData = $.grep(eponyms.features, function(element, index) {
-                return (element.ops !== "");
-                });  /// DROP those WITHOUT OPERATIONS
-            let result1 = returnedData
-                .flatMap(item => item.topic) //"item.topic" gives us SPECIALTIES
-                .filter((item, i, arr) => arr.indexOf(item) === i)
-                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
-                let resultsort1 = result1.sort()
-                var select = document.getElementById("select_ops");
-                var options = resultsort1;
-                for(var i = 0; i < options.length; i++) {
-                    var opt = options[i];
-                    var el = document.createElement("option");
-                    el.textContent = opt;
-                    el.value = opt;
-                    select.appendChild(el);
-                    }
-            //console.log()   /// This gives us array with all features - when select_ops is changed
-            });
+        <script> //DONT NEED??
+//            $(document)
+//            .ready(function() {
+//            const returnedData = $.grep(eponyms.features, function(element, index) {
+//                return (element.ops !== "");
+//                });  /// DROP those WITHOUT OPERATIONS
+//            let result1 = returnedData
+//                .flatMap(item => item.topic) //"item.topic" gives us SPECIALTIES
+//                .filter((item, i, arr) => arr.indexOf(item) === i)
+//                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
+//                let resultsort1 = result1.sort()
+//                var select = document.getElementById("select_ops");
+//                var options = resultsort1;
+//                for(var i = 0; i < options.length; i++) {
+//                    var opt = options[i];
+//                    var el = document.createElement("option");
+//                    el.textContent = opt;
+//                    el.value = opt;
+//                    select.appendChild(el);
+//                    }
+//            //console.log()   /// This gives us array with all features - when select_ops is changed
+//            });
         </script>
 
         <script>
