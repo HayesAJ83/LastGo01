@@ -11016,31 +11016,20 @@
                     }
             });
 
-            $(document)
-            .ready(function() {
-                $('#select_ops').ready(function() {
-                    let value = '\'' + $('#select_ops option').map(function() {
-                            return this.text}).get().join('\',\'') + '\'';
-                    var stringArray = (new Function("return [" + value + "];")());
-                });
-            });
-            let select ="";
-            $("#select_ops").find('option:selected').each(function() {
-                    select += "\'" + $.trim($(this).text()) + "\',";});
-                    if(select != ""){select = select.substr(0);};
-                var stringArray = (new Function("return [" + select + "];")());
+//            $(document)
+//            .ready(function() {
+//                $('#select_ops').ready(function() {
+//                    let value = '\'' + $('#select_ops option').map(function() {
+//                            return this.text}).get().join('\',\'') + '\'';
+//                    var stringArray = (new Function("return [" + value + "];")());
+//                });
+//            });
+//            let select ="";
+//            $("#select_ops").find('option:selected').each(function() {
+//                    select += "\'" + $.trim($(this).text()) + "\',";});
+//                    if(select != ""){select = select.substr(0);};
+//                var stringArray = (new Function("return [" + select + "];")());
                 
-//            function topicFilter2(taxonomy) {
-//                const returnedData = $.grep(eponyms.features, function(element, index) {
-//                    return (element.ops !== "");
-//                    });
-//                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-//                return returnedData.filter(item => {
-//                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-//                    return taxonomy.some(med => topic.includes(med));
-//                    });
-//                }
-//            var selected2 = topicFilter2(stringArray); 
         </script>
 
         <script> 
