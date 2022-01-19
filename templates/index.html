@@ -248,7 +248,7 @@
                         <div class="col">  
                             <div class="row align-items-center text-center">
                                 <div class="col" data-aos="fade-up" id="select3">
-                                    <select id="sel" class="selectpicker show-tick"
+                                    <select id="sel3000" class="selectpicker show-tick"
                                             data-style="btn-primary" data-header="Search list:" 
                                             data-width="325px" data-size="6"
                                             data-aos="zoom-in"
@@ -11007,7 +11007,7 @@
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no ops
                 let resultOps = result1.sort()
-                var selectOps = document.getElementById("sel");
+                var selectOps = document.getElementById("sel3000");
                 var optionS = resultOps;
                 for(var i = 0; i < optionS.length; i++) {
                     var opt1 = optionS[i];
@@ -11052,10 +11052,10 @@
         <script> 
             /// ALL - specialties
             /// THIS WORKS FINE
-            $('#sel').on('change', function() {
+            $('#sel3000').on('change', function() {
                 $('#select5').fadeIn(50);
                 let select ="";
-                $("#sel").find('option:selected').each(function() {
+                $("#sel3000").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
                     if(select != ""){select = select.substr(0);};
                 var stringArray = (new Function("return [" + select + "];")());
@@ -11084,8 +11084,8 @@
             
                 populateSelect2()
                 $('#sel9').selectpicker('refresh');
-                $('#sel').on('change', function() {
-                    $('#sel').selectpicker('toggle'); //added to toggle open/close
+                $('#sel3000').on('change', function() {
+                    $('#sel3000').selectpicker('toggle'); //added to toggle open/close
                     $('#sel9').selectpicker('refresh');
                     });
             });
