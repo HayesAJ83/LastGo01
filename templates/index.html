@@ -11047,7 +11047,6 @@
         </script>
 
         <script> 
-            /// ALL - specialties
             /// THIS WORKS FINE
             $('#sel3000').on('change', function() {
                 $('#select15').fadeIn(50);
@@ -11055,8 +11054,8 @@
                 $("#sel3000").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
                     if(select != ""){select = select.substr(0);};
+
                 var stringArray = (new Function("return [" + select + "];")());
-                //console.log(stringArray);
                 
                 function topicFilter2(taxonomy) {
                     const returnedData = $.grep(eponyms.features, function(element, index) {
@@ -11069,7 +11068,6 @@
                         });
                     }
                 var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-                //console.log(selected2)
 
                 function populateSelect2() {
                     document.getElementById('sel69').innerHTML = selected2.reduce((options, {ID,name}) =>
@@ -11088,48 +11086,48 @@
         </script>
 
         <script>  ///  SELECTED_SPECIALTIES_2  ///
-            $('#select_ops').on('change', function() {
-                let select ="";
-                $("#select_ops").find('option:selected').each(function() {
-                    select += "\'" + $.trim($(this).text()) + "\',";});
-                    if(select != ""){select = select.substr(0);};
-                var stringArray = (new Function("return [" + select + "];")());
-                console.log(stringArray); //works Array [chosen options]
+//            $('#select_ops').on('change', function() {
+//                let select ="";
+//                $("#select_ops").find('option:selected').each(function() {
+//                    select += "\'" + $.trim($(this).text()) + "\',";});
+//                    if(select != ""){select = select.substr(0);};
+//                var stringArray = (new Function("return [" + select + "];")());
+//                console.log(stringArray);
                 
-                function topicFilter2(taxonomy) {
-                    const returnedData = $.grep(eponyms.features, function(element, index) {
-                    return (element.ops !== "");
-                    });  /// DROP those WITHOUT OPERATIONS
-                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                    return returnedData.filter(item => {
-                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                        return taxonomy.some(med => topic.includes(med));
-                        });
-                    }
+//                function topicFilter2(taxonomy) {
+//                    const returnedData = $.grep(eponyms.features, function(element, index) {
+//                    return (element.ops !== "");
+//                    });
+//                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+//                    return returnedData.filter(item => {
+//                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+//                        return taxonomy.some(med => topic.includes(med));
+//                        });
+//                    }
                 
-                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-                console.log(selected2)
-                let result10 = selected2
-                    .flatMap(item => item.ops)
-                    .filter((item, i, arr) => arr.indexOf(item) === i)
-                    //.filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
-                    let resultOps10 = result10.sort()
-                    var selectOps10 = document.getElementById("SEL2");
-                    var optionS10 = resultOps10;
-                    for(var i = 0; i < optionS10.length; i++) {
-                        var opt10 = optionS10[i];
-                        var el10 = document.createElement("option");
-                        el10.textContent = opt10;
-                        el10.value = opt10;
-                        selectOps10.appendChild(el10);
-                        }
+//                var selected2 = topicFilter2(stringArray);
+//                console.log(selected2)
+//                let result10 = selected2
+//                    .flatMap(item => item.ops)
+//                    .filter((item, i, arr) => arr.indexOf(item) === i)
+//                    //.filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no subtype
+//                    let resultOps10 = result10.sort()
+//                    var selectOps10 = document.getElementById("SEL2");
+//                    var optionS10 = resultOps10;
+//                    for(var i = 0; i < optionS10.length; i++) {
+//                        var opt10 = optionS10[i];
+//                        var el10 = document.createElement("option");
+//                        el10.textContent = opt10;
+//                        el10.value = opt10;
+//                        selectOps10.appendChild(el10);
+//                        }
                 
-                $('#SEL2').selectpicker('refresh');
-                $('#select_ops').on('change', function() {
-                    $('#select_ops').selectpicker('toggle'); //added to toggle open/close
-                    $('#SEL2').selectpicker('refresh');
-                    });
-                });
+//                $('#SEL2').selectpicker('refresh');
+//                $('#select_ops').on('change', function() {
+//                    $('#select_ops').selectpicker('toggle'); //added to toggle open/close
+//                    $('#SEL2').selectpicker('refresh');
+//                    });
+//                });
             
         </script>
 
