@@ -10995,7 +10995,7 @@
                     el.value = opt;
                     select.appendChild(el);
                     }
-            console.log()   /// This gives us array with operations - array select_ops is changed
+            //console.log()   /// This gives us array with operations - array select_ops is changed
             });
         </script>
 
@@ -11092,7 +11092,7 @@
             });
         </script>
 
-        <script>  ///  SELECTED_SPECIALTIES_2  ///
+        <script>  ///  SELECTED  ///
             $('#select_ops').on('change', function() {
                 let select ="";
                 $("#select_ops").find('option:selected').each(function() {
@@ -11128,7 +11128,6 @@
                         selectOps10.appendChild(el10);
                         }
                 
-                //$('#select4').fadeIn(50);
                 $('#SEL2').selectpicker('refresh');
                 $('#select_ops').on('change', function() {
                     $('#select_ops').selectpicker('toggle'); //added to toggle open/close
