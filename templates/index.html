@@ -10728,22 +10728,22 @@
         
         <script>
         /// Section - A to Z ///
-        $(document)
-        .ready(function() {
-        let result1 = eponyms.features
-            .flatMap(item => item.topic)
-            .filter((item, i, arr) => arr.indexOf(item) === i)
-            let resultsort1 = result1.sort()
-            var select = document.getElementById("select_A2Z");
-            var options = resultsort1;
-            for(var i = 0; i < options.length; i++) {
-                var opt = options[i];
-                var el = document.createElement("option");
-                el.textContent = opt;
-                el.value = opt;
-                select.appendChild(el);
-                }
-            });
+//        $(document)
+//        .ready(function() {
+//        let result1 = eponyms.features
+//            .flatMap(item => item.topic)
+//            .filter((item, i, arr) => arr.indexOf(item) === i)
+//            let resultsort1 = result1.sort()
+//            var select = document.getElementById("select_A2Z");
+//            var options = resultsort1;
+//            for(var i = 0; i < options.length; i++) {
+//                var opt = options[i];
+//                var el = document.createElement("option");
+//                el.textContent = opt;
+//                el.value = opt;
+//                select.appendChild(el);
+//                }
+//            });
 
         $(document)
         .ready(function() {
@@ -10754,6 +10754,7 @@
             });
         });
 
+        
         var selected = eponyms.features
         function populateSelect() {
             var ele = document.getElementById('sel_A2Z');
