@@ -10754,13 +10754,16 @@
             });
         });
 
-        var selected = eponyms.features
-        function populateSelect() {
-            var ele99 = document.getElementById('sel_A2Z');
-            selected.forEach(function(b) {
-                ele99.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-            }
-        populateSelect()
+        $(document)
+        .ready(function() {
+            var selected = eponyms.features
+            function populateSelect() {
+                var ele99 = document.getElementById('sel_A2Z');
+                selected.forEach(function(b) {
+                    ele99.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+                }
+            populateSelect()
+        });
 
         </script>
 
