@@ -10738,7 +10738,7 @@
             var options = resultsort1;
             for(var i = 0; i < options.length; i++) {
                 var opt = options[i];
-                var el = document.createElement("option_A2Z");
+                var el = document.createElement("option");
                 el.textContent = opt;
                 el.value = opt;
                 select.appendChild(el);
@@ -10750,7 +10750,7 @@
             $('#select_A2Z').ready(function() {
                 let value = '\'' + $('#select_A2Z option').map(function() {
                         return this.text}).get().join('\',\'') + '\'';
-                var stringArray = (new Function("return [" + value+ "];")());
+                var stringArray = (new Function("return [" + value + "];")());
             });
         });
 
