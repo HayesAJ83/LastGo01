@@ -144,7 +144,7 @@
                                         data-width="320px" data-size="4"
                                         data-aos="zoom-in"
                                         data-container="body"
-                                        data-live-search="true" onchange="show(this.value);">
+                                        data-live-search="true" onchange="show(this.value)">
                                         <option value=""> Search... </option>
                                 </select>
                                 <div class="lead" id='imgName'></div>
@@ -254,7 +254,7 @@
                                             data-width="325px" data-size="6"
                                             data-aos="zoom-in"
                                             data-container="body"
-                                            data-live-search="true";">
+                                            data-live-search="true">
                                             <option value=""> -- select -- </option>
                                     </select>
                                 </div>
@@ -10756,9 +10756,9 @@
 
         var selected = eponyms.features
         function populateSelect() {
-            var ele = document.getElementById('sel_A2Z');
+            var ele99 = document.getElementById('sel_A2Z');
             selected.forEach(function(b) {
-                ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+                ele99.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
             }
         populateSelect()
 
