@@ -10792,7 +10792,7 @@
                     el2.textContent = opt2;
                     el2.value = opt2;
                     }
-                selectSubtypes.appendChild(el1);
+                selectSubtypes.appendChild(el2);
             });
 
             $(document)
@@ -11001,38 +11001,32 @@
 
 
 
-<script>
-    function show(id) {   
-        var imgName = document.getElementById('imgName');
-        if (!id) {imgName.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.features.length; i++) {
-            if  (Number(id) === eponyms.features[i].ID) {
-                imgName.innerHTML = eponyms.features[i].imgName
-                                        ;}}}
-
-        var info = document.getElementById('info');
-        if (!id) {imgName.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.features.length; i++) {
-            if  (Number(id) === eponyms.features[i].ID) {
-                info.innerHTML =    "<br>"+
-                                    eponyms.features[i].who.bold()   +"<br>"+
-                                    eponyms.features[i].when.bold()  +"<br>"+
-                                    eponyms.features[i].where.bold() +"<br><br>"+
-                                    eponyms.features[i].about +
-                                    eponyms.features[i].refs +
-                                    eponyms.features[i].URLs +
-                                    eponyms.features[i].acknow
-                                        ;}}}
-                                    }                         
-    </script>
-    
-
-
-
-
         <script>
+            function show(id) {   
+                var imgName = document.getElementById('imgName');
+                if (!id) {imgName.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        imgName.innerHTML = eponyms.features[i].imgName
+                                                ;}}}
+
+                var info = document.getElementById('info');
+                if (!id) {imgName.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        info.innerHTML =    "<br>"+
+                                            eponyms.features[i].who.bold()   +"<br>"+
+                                            eponyms.features[i].when.bold()  +"<br>"+
+                                            eponyms.features[i].where.bold() +"<br><br>"+
+                                            eponyms.features[i].about +
+                                            eponyms.features[i].refs +
+                                            eponyms.features[i].URLs +
+                                            eponyms.features[i].acknow
+                                                ;}}}
+                                            }                         
+      
         function show2(id) {
 
             var imgName2 = document.getElementById('imgName2');
