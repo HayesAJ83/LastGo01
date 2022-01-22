@@ -10785,9 +10785,9 @@
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
                 let resultSubtypes = result.sort()
                 var selectSubtypes = document.getElementById("sel_specialties");
-                var option = resultSubtypes;
+                var options = resultSubtypes;
                 for(var i = 0; i < option.length; i++) {
-                    var opt = option[i];
+                    var opt = options[i];
                     var el = document.createElement("option");
                     el.textContent = opt;
                     el.value = opt;
