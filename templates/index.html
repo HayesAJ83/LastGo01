@@ -140,7 +140,7 @@
                             </div>
                             <div class="col" id="select_A2Z">
                                 <select id="sel_A2Z"
-                                        data-style="btn-primary" 
+                                        data-style="btn-primary" class="selectpicker"
                                         data-width="320px" data-size="4"
                                         data-aos="zoom-in"
                                         data-container="body"
@@ -10741,15 +10741,15 @@
             .flatMap(item => item.topic)
             .filter((item, i, arr) => arr.indexOf(item) === i)
             let resultsort1 = result1.sort()
-            var select999 = document.getElementById("select_A2Z");
-            var options = resultsort1;
-            for(var i = 0; i < options.length; i++) {
-                var opt = options[i];
-                var el = document.createElement("option");
-                el.textContent = opt;
-                el.value = opt;
-                select.appendChild(el);
+            var select1 = document.getElementById("select_A2Z");
+            var options1 = resultsort1;
+            for(var i = 0; i < options1.length; i++) {
+                var opt1 = options1[i];
+                var el1 = document.createElement("option");
+                el1.textContent = opt1;
+                el1.value = opt1;
                 }
+            select1.appendChild(el1);
             });
 
         $(document)
@@ -10763,11 +10763,11 @@
 
         $(document)
         .ready(function() {
-            var selected69 = eponyms.features
+            var selected = eponyms.features
             function populateSelect() {
-                var ele99 = document.getElementById('sel_A2Z');
-                selected69.forEach(function(b) {
-                    ele99.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+                var ele = document.getElementById('sel_A2Z');
+                selected.forEach(function(b) {
+                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
                 }
             populateSelect()
         });
@@ -10779,20 +10779,20 @@
             const returnedData2 = $.grep(eponyms.features, function(element, index) {
                 return (element.topic !== "");
                 });  /// DROP those WITHOUT topic
-            let result11 = returnedData2
+            let result2 = returnedData2
                 .flatMap(item => item.topic) //"item.topic" gives us specialties
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
-                let resultSubtypes = result11.sort()
+                let resultSubtypes = result2.sort()
                 var selectSubtypes = document.getElementById("sel_specialties");
                 var optionS = resultSubtypes;
                 for(var i = 0; i < optionS.length; i++) {
-                    var opt1 = optionS[i];
-                    var el1 = document.createElement("option");
-                    el1.textContent = opt1;
-                    el1.value = opt1;
-                    selectSubtypes.appendChild(el1);
+                    var opt2 = optionS[i];
+                    var el2 = document.createElement("option");
+                    el2.textContent = opt2;
+                    el2.value = opt2;
                     }
+                selectSubtypes.appendChild(el1);
             });
 
             $(document)
