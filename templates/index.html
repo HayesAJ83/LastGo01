@@ -10737,19 +10737,19 @@
         /// Section - A to Z ///
         $(document)
         .ready(function() {
-        let result1 = eponyms.features
+        let result = eponyms.features
             .flatMap(item => item.topic)
             .filter((item, i, arr) => arr.indexOf(item) === i)
-        let resultsort1 = result1.sort()
-        var select1 = document.getElementById("select_A2Z");
-        var options1 = resultsort1;
-        for(var i = 0; i < options1.length; i++) {
-            var opt1 = options1[i];
-            var el1 = document.createElement("option");
-            el1.textContent = opt1;
-            el1.value = opt1;
+        let resultsort = result.sort()
+        var select = document.getElementById("select_A2Z");
+        var options = resultsort;
+        for(var i = 0; i < options.length; i++) {
+            var opt = options[i];
+            var el = document.createElement("option");
+            el.textContent = opt;
+            el.value = opt;
             }
-        select1.appendChild(el1);
+        select1.appendChild(el);
             });
 
         $(document)
@@ -10917,26 +10917,26 @@
 
 
         <script> 
-//            $(document)
-//            .ready(function() {
-//            const returnedData_ops = $.grep(eponyms.features, function(element, index) {
-//                return (element.ops !== "");
-//                });
-//            let result_ops = returnedData_ops
-//                .flatMap(item => item.topic) //"item.topic" ***THIS IS DIFFERENT***  gives us SPECIALTIES
-//                .filter((item, i, arr) => arr.indexOf(item) === i)
-//                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
-//                let resultsort_ops = result_ops.sort()
-//                var select_ops = document.getElementById("select_ops");
-//                var options_ops = resultsort_ops;
-//                for(var i = 0; i < options_ops.length; i++) {
-//                    var opt_ops = options_ops[i];
-//                    var el_ops = document.createElement("option");
-//                    el_ops.textContent = opt_ops;
-//                    el_ops.value = opt_ops;
-//                    select_ops.appendChild(el_ops);
-//                    }   
-//            });
+            $(document)
+            .ready(function() {
+            const returnedData_ops = $.grep(eponyms.features, function(element, index) {
+                return (element.ops !== "");
+                });
+            let result_ops = returnedData_ops
+                .flatMap(item => item.topic) //"item.topic" ***THIS IS DIFFERENT***  gives us SPECIALTIES
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
+                let resultsort_ops = result_ops.sort()
+                var select_ops = document.getElementById("select_ops");
+                var options_ops = resultsort_ops;
+                for(var i = 0; i < options_ops.length; i++) {
+                    var opt_ops = options_ops[i];
+                    var el_ops = document.createElement("option");
+                    el_ops.textContent = opt_ops;
+                    el_ops.value = opt_ops;
+                    select_ops.appendChild(el_ops);
+                    }   
+            });
        
 //            $(document)
 //            .ready(function() {
