@@ -10749,7 +10749,7 @@
             el.textContent = opt;
             el.value = opt;
             }
-        select1.appendChild(el);
+        select.appendChild(el);
             });
 
         $(document)
@@ -10761,16 +10761,16 @@
             });
         });
 
-        $(document)
-        .ready(function() {
-            var selected = eponyms.features
-            function populateSelect() {
-                var ele = document.getElementById('sel_A2Z');
-                selected.forEach(function(b) {
-                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-                }
-            populateSelect()
-        });
+        //$(document)
+        //.ready(function() {
+        //    var selected = eponyms.features
+        //    function populateSelect() {
+        //        var ele = document.getElementById('sel_A2Z');
+        //        selected.forEach(function(b) {
+        //            ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+        //        }
+        //    populateSelect()
+        //});
         /// Section - A to Z
         
         /// Section - Specialties ///
