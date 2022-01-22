@@ -10771,40 +10771,8 @@
                 }
             populateSelect()
         });
-
-        </script>
-
-        <script>
-        function show(id) {   
-            var imgName = document.getElementById('imgName');
-            if (!id) {imgName.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.features.length; i++) {
-                if  (Number(id) === eponyms.features[i].ID) {
-                    imgName.innerHTML = eponyms.features[i].imgName
-                                            ;}}}
-
-            var info = document.getElementById('info');
-            if (!id) {imgName.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.features.length; i++) {
-                if  (Number(id) === eponyms.features[i].ID) {
-                    info.innerHTML =    "<br>"+
-                                        eponyms.features[i].who.bold()   +"<br>"+
-                                        eponyms.features[i].when.bold()  +"<br>"+
-                                        eponyms.features[i].where.bold() +"<br><br>"+
-                                        eponyms.features[i].about +
-                                        eponyms.features[i].refs +
-                                        eponyms.features[i].URLs +
-                                        eponyms.features[i].acknow
-                                            ;}}}
-                                        }                         
-        </script>
+        /// Section - A to Z
         
-
-
-        
-        <script> 
         /// Section - Specialties ///
             $(document)
             .ready(function() {
@@ -10857,12 +10825,7 @@
             console.log(selected_specialties)
 
         /// End Section - Specialties ///
-        </script>
-
-
-
-
-        <script> 
+       
             /// ALL - specialties
             /// THIS WORKS FINE
             $('#sel_specialties').on('change', function() {
@@ -11037,6 +11000,36 @@
 //            });
         </script>
 
+
+
+
+<script>
+    function show(id) {   
+        var imgName = document.getElementById('imgName');
+        if (!id) {imgName.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.features.length; i++) {
+            if  (Number(id) === eponyms.features[i].ID) {
+                imgName.innerHTML = eponyms.features[i].imgName
+                                        ;}}}
+
+        var info = document.getElementById('info');
+        if (!id) {imgName.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.features.length; i++) {
+            if  (Number(id) === eponyms.features[i].ID) {
+                info.innerHTML =    "<br>"+
+                                    eponyms.features[i].who.bold()   +"<br>"+
+                                    eponyms.features[i].when.bold()  +"<br>"+
+                                    eponyms.features[i].where.bold() +"<br><br>"+
+                                    eponyms.features[i].about +
+                                    eponyms.features[i].refs +
+                                    eponyms.features[i].URLs +
+                                    eponyms.features[i].acknow
+                                        ;}}}
+                                    }                         
+    </script>
+    
 
 
 
