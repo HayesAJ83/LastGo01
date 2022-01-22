@@ -10740,16 +10740,16 @@
         let result1 = eponyms.features
             .flatMap(item => item.topic)
             .filter((item, i, arr) => arr.indexOf(item) === i)
-            let resultsort1 = result1.sort()
-            var select1 = document.getElementById("select_A2Z");
-            var options1 = resultsort1;
-            for(var i = 0; i < options1.length; i++) {
-                var opt1 = options1[i];
-                var el1 = document.createElement("option");
-                el1.textContent = opt1;
-                el1.value = opt1;
-                }
-            select1.appendChild(el1);
+        let resultsort1 = result1.sort()
+        var select1 = document.getElementById("select_A2Z");
+        var options1 = resultsort1;
+        for(var i = 0; i < options1.length; i++) {
+            var opt1 = options1[i];
+            var el1 = document.createElement("option");
+            el1.textContent = opt1;
+            el1.value = opt1;
+            }
+        select1.appendChild(el1);
             });
 
         $(document)
@@ -10786,7 +10786,7 @@
                 let resultSubtypes = result.sort()
                 var selectSubtypes = document.getElementById("sel_specialties");
                 var options = resultSubtypes;
-                for(var i = 0; i < option.length; i++) {
+                for(var i = 0; i < options.length; i++) {
                     var opt = options[i];
                     var el = document.createElement("option");
                     el.textContent = opt;
