@@ -140,7 +140,7 @@
                             </div>
                             <div class="col" id="select_A2Z">
                                 <select id="sel_A2Z"
-                                        data-style="btn-primary" class="selectpicker"
+                                        data-style="btn-primary" 
                                         data-width="320px" data-size="4"
                                         data-aos="zoom-in"
                                         data-container="body"
@@ -6821,7 +6821,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ -71.07283 , 42.33441 ]}, //lng,lat
             properties: { title:"Mallory-Weiss syndrome", description:'Boston<br>1929'},   
             //googlehtz:0, //search: "  " AND "" [02-Oct-21]
-            refs:"<br><p style='font-size: 20px'>Mallory GK, Weiss S. Hemorrhages from lacerations of the cardiac orifice of the  stomach due to vomiting. <i>Am J Med Sci</i>. 1929; 176: 506<br></p>",   
+            refs:"<br><p style='font-size: 20px'>Mallory GK, Weiss S. Hemorrhages from lacerations of the cardiac orifice of the  stomach due to vomiting. <i>Am J Med Sci</i>. 1929; 176: 506<br></p>",   
             jrnls:["Am J Med Sci","American Journal of Medical Sciences"],
             URLs:"<br> <a href='https://en.wikipedia.org/wiki/Mallory–Weiss_syndrome' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='http://www.whonamedit.com/synd.cfm/895.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -10737,21 +10737,20 @@
         /// Section - A to Z ///
         $(document)
         .ready(function() {
-        let result = eponyms.features
+        let result1 = eponyms.features
             .flatMap(item => item.topic)
             .filter((item, i, arr) => arr.indexOf(item) === i)
-        let resultsort = result.sort()
-        var select = document.getElementById("select_A2Z");
-        var options = resultsort;
-        for(var i = 0; i < options.length; i++) {
-            var opt = options[i];
-            var el = document.createElement("option");
-            el.textContent = opt;
-            el.value = opt;
-            select.appendChild(el);
-            }
-        
-        });
+            let resultsort1 = result1.sort()
+            var select999 = document.getElementById("select_A2Z");
+            var options = resultsort1;
+            for(var i = 0; i < options.length; i++) {
+                var opt = options[i];
+                var el = document.createElement("option");
+                el.textContent = opt;
+                el.value = opt;
+                select.appendChild(el);
+                }
+            });
 
         $(document)
         .ready(function() {
@@ -10764,11 +10763,11 @@
 
         $(document)
         .ready(function() {
-            var selected = eponyms.features
+            var selected69 = eponyms.features
             function populateSelect() {
-                var ele = document.getElementById('sel_A2Z');
-                selected.forEach(function(b) {
-                    ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+                var ele99 = document.getElementById('sel_A2Z');
+                selected69.forEach(function(b) {
+                    ele99.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
                 }
             populateSelect()
         });
@@ -10777,23 +10776,23 @@
         /// Section - Specialties ///
             $(document)
             .ready(function() {
-            const returnedData = $.grep(eponyms.features, function(element, index) {
+            const returnedData2 = $.grep(eponyms.features, function(element, index) {
                 return (element.topic !== "");
                 });  /// DROP those WITHOUT topic
-            let result = returnedData
+            let result11 = returnedData2
                 .flatMap(item => item.topic) //"item.topic" gives us specialties
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
-                let resultSubtypes = result.sort()
+                let resultSubtypes = result11.sort()
                 var selectSubtypes = document.getElementById("sel_specialties");
-                var options = resultSubtypes;
-                for(var i = 0; i < options.length; i++) {
-                    var opt = options[i];
-                    var el = document.createElement("option");
-                    el.textContent = opt;
-                    el.value = opt;
+                var optionS = resultSubtypes;
+                for(var i = 0; i < optionS.length; i++) {
+                    var opt1 = optionS[i];
+                    var el1 = document.createElement("option");
+                    el1.textContent = opt1;
+                    el1.value = opt1;
+                    selectSubtypes.appendChild(el1);
                     }
-                selectSubtypes.appendChild(el);
             });
 
             $(document)
@@ -10803,7 +10802,7 @@
                             return this.text}).get().join('\',\'') + '\'';
                     var stringArray = (new Function("return [" + value + "];")());
                 });
-            });   /// Generates select1 [specialties] options (eg. 'COLORECTAL')
+            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
 
             //let select ="";
             //$("#select_specialties").find('option:selected').each(function() {
@@ -10918,26 +10917,26 @@
 
 
         <script> 
-            $(document)
-            .ready(function() {
-            const returnedData_ops = $.grep(eponyms.features, function(element, index) {
-                return (element.ops !== "");
-                });
-            let result_ops = returnedData_ops
-                .flatMap(item => item.topic) //"item.topic" ***THIS IS DIFFERENT***  gives us SPECIALTIES
-                .filter((item, i, arr) => arr.indexOf(item) === i)
-                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
-                let resultsort_ops = result_ops.sort()
-                var select_ops = document.getElementById("select_ops");
-                var options_ops = resultsort_ops;
-                for(var i = 0; i < options_ops.length; i++) {
-                    var opt_ops = options_ops[i];
-                    var el_ops = document.createElement("option");
-                    el_ops.textContent = opt_ops;
-                    el_ops.value = opt_ops;
-                    select_ops.appendChild(el_ops);
-                    }   
-            });
+//            $(document)
+//            .ready(function() {
+//            const returnedData_ops = $.grep(eponyms.features, function(element, index) {
+//                return (element.ops !== "");
+//                });
+//            let result_ops = returnedData_ops
+//                .flatMap(item => item.topic) //"item.topic" ***THIS IS DIFFERENT***  gives us SPECIALTIES
+//                .filter((item, i, arr) => arr.indexOf(item) === i)
+//                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
+//                let resultsort_ops = result_ops.sort()
+//                var select_ops = document.getElementById("select_ops");
+//                var options_ops = resultsort_ops;
+//                for(var i = 0; i < options_ops.length; i++) {
+//                    var opt_ops = options_ops[i];
+//                    var el_ops = document.createElement("option");
+//                    el_ops.textContent = opt_ops;
+//                    el_ops.value = opt_ops;
+//                    select_ops.appendChild(el_ops);
+//                    }   
+//            });
        
 //            $(document)
 //            .ready(function() {
@@ -11002,32 +11001,38 @@
 
 
 
-        <script>
-            function show(id) {   
-                var imgName = document.getElementById('imgName');
-                if (!id) {imgName.innerHTML = "";
-                } else {
-                    for (var i = 0; i < eponyms.features.length; i++) {
-                    if  (Number(id) === eponyms.features[i].ID) {
-                        imgName.innerHTML = eponyms.features[i].imgName
-                                                ;}}}
+<script>
+    function show(id) {   
+        var imgName = document.getElementById('imgName');
+        if (!id) {imgName.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.features.length; i++) {
+            if  (Number(id) === eponyms.features[i].ID) {
+                imgName.innerHTML = eponyms.features[i].imgName
+                                        ;}}}
 
-                var info = document.getElementById('info');
-                if (!id) {imgName.innerHTML = "";
-                } else {
-                    for (var i = 0; i < eponyms.features.length; i++) {
-                    if  (Number(id) === eponyms.features[i].ID) {
-                        info.innerHTML =    "<br>"+
-                                            eponyms.features[i].who.bold()   +"<br>"+
-                                            eponyms.features[i].when.bold()  +"<br>"+
-                                            eponyms.features[i].where.bold() +"<br><br>"+
-                                            eponyms.features[i].about +
-                                            eponyms.features[i].refs +
-                                            eponyms.features[i].URLs +
-                                            eponyms.features[i].acknow
-                                                ;}}}
-                                            }                         
-      
+        var info = document.getElementById('info');
+        if (!id) {imgName.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.features.length; i++) {
+            if  (Number(id) === eponyms.features[i].ID) {
+                info.innerHTML =    "<br>"+
+                                    eponyms.features[i].who.bold()   +"<br>"+
+                                    eponyms.features[i].when.bold()  +"<br>"+
+                                    eponyms.features[i].where.bold() +"<br><br>"+
+                                    eponyms.features[i].about +
+                                    eponyms.features[i].refs +
+                                    eponyms.features[i].URLs +
+                                    eponyms.features[i].acknow
+                                        ;}}}
+                                    }                         
+    </script>
+    
+
+
+
+
+        <script>
         function show2(id) {
 
             var imgName2 = document.getElementById('imgName2');
