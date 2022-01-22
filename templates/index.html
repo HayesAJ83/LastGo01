@@ -10776,23 +10776,23 @@
         /// Section - Specialties ///
             $(document)
             .ready(function() {
-            const returnedData2 = $.grep(eponyms.features, function(element, index) {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
                 return (element.topic !== "");
                 });  /// DROP those WITHOUT topic
-            let result2 = returnedData2
+            let result = returnedData
                 .flatMap(item => item.topic) //"item.topic" gives us specialties
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
-                let resultSubtypes = result2.sort()
+                let resultSubtypes = result.sort()
                 var selectSubtypes = document.getElementById("sel_specialties");
-                var optionS = resultSubtypes;
-                for(var i = 0; i < optionS.length; i++) {
-                    var opt2 = optionS[i];
-                    var el2 = document.createElement("option");
-                    el2.textContent = opt2;
-                    el2.value = opt2;
+                var option = resultSubtypes;
+                for(var i = 0; i < option.length; i++) {
+                    var opt = option[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
                     }
-                selectSubtypes.appendChild(el2);
+                selectSubtypes.appendChild(el);
             });
 
             $(document)
@@ -10802,7 +10802,7 @@
                             return this.text}).get().join('\',\'') + '\'';
                     var stringArray = (new Function("return [" + value + "];")());
                 });
-            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
+            });   /// Generates select1 [specialties] options (eg. 'COLORECTAL')
 
             //let select ="";
             //$("#select_specialties").find('option:selected').each(function() {
