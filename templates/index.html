@@ -10776,14 +10776,14 @@
         /// Section - Specialties ///
             $(document)
             .ready(function() {
-            const returnedData = $.grep(eponyms.features, function(element, index) {
+            const returnedData2 = $.grep(eponyms.features, function(element, index) {
                 return (element.topic !== "");
                 });  /// DROP those WITHOUT topic
-            let result1 = returnedData
+            let result11 = returnedData2
                 .flatMap(item => item.topic) //"item.topic" gives us specialties
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
-                let resultSubtypes = result1.sort()
+                let resultSubtypes = result11.sort()
                 var selectSubtypes = document.getElementById("sel_specialties");
                 var optionS = resultSubtypes;
                 for(var i = 0; i < optionS.length; i++) {
