@@ -141,7 +141,7 @@
                             <div class="col" id="select_A2Z">
                                 <select id="sel_A2Z"
                                         data-style="btn-primary" class="selectpicker"
-                                        data-width="320px" data-size="3"
+                                        data-width="320px" data-size="2"
                                         data-aos="zoom-in"
                                         data-container="body"
                                         data-live-search="true" onchange="show(this.value)">
@@ -10778,14 +10778,14 @@
             .flatMap(item => item.topic)
             .filter((item, i, arr) => arr.indexOf(item) === i)
             let resultsort1 = result1.sort()
-            var select999 = document.getElementById("select_A2Z");
+            //var select999 = document.getElementById("select_A2Z");
             var options = resultsort1;
             for(var i = 0; i < options.length; i++) {
                 var opt = options[i];
                 var el = document.createElement("option");
                 el.textContent = opt;
                 el.value = opt;
-                select.appendChild(el);
+                //select.appendChild(el);
                 }
             });
 
