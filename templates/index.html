@@ -414,6 +414,8 @@
                             <hr class='my-4'>
                         </div>
                     </div>
+
+
                     <p>
                         <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_Jrnls" role="button" aria-expanded="false" aria-controls="collapseExample">
                         Journals
@@ -459,7 +461,6 @@
                             <hr class='my-4'>
                         </div>
                     </div>
-                </div>
             </section>
             <!-- End of Section -->
 
@@ -10833,7 +10834,7 @@
         /// Section - A to Z
         
         /// Section - Specialties ///
-        $(document)
+            $(document)
             .ready(function() {
             const returnedData2 = $.grep(eponyms.features, function(element, index) {
                 return (element.topic !== "");
@@ -10901,6 +10902,7 @@
         /// End Section - Specialties ///
 
         /// Section - Operations ///
+
         $(document)
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
@@ -10990,47 +10992,27 @@
             });
         /// End Section - Operations ///
 
-        /// Section - Diseases /// disease
-        $(document)
+
+
+ /// Section - Diseases /// disease
+ $(document)
             .ready(function() {
-            const returnedData = $.grep(eponyms.features, function(element, index) {
-                return (element.dis !== "");
-                });  /// DROP those WITHOUT OPERATIONS
-            let result1 = returnedData
-                .flatMap(item => item.topic) //"item.topic" gives us SPECIALTIES
+            const returnedData2 = $.grep(eponyms.features, function(element, index) {
+                return (element.topic !== "");
+                });  /// DROP those WITHOUT topic
+            let result11 = returnedData2
+                .flatMap(item => item.topic) //"item.topic" gives us specialties
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
-                let resultsort1 = result1.sort()
-                var select = document.getElementById("select_dis");
-                var options = resultsort1;
-                for(var i = 0; i < options.length; i++) {
-                    var opt = options[i];
-                    var el = document.createElement("option");
-                    el.textContent = opt;
-                    el.value = opt;
-                    }
-                //select.appendChild(el);
-            //console.log()   /// This gives us array with all features - when select1 is changed
-            });
-     
-            $(document)
-            .ready(function() {
-            const returnedData = $.grep(eponyms.features, function(element, index) {
-                return (element.ops !== "");
-                });  /// DROP those WITHOUT OPERATIONS
-            let result1 = returnedData
-                .flatMap(item => item.ops) //"item.ops" gives us OPERATIONS
-                .filter((item, i, arr) => arr.indexOf(item) === i)
-                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no ops
-                let resultOps = result1.sort()
-                var selectOps = document.getElementById("sel_dis");
-                var optionS = resultOps;
+                let resultSubtypes = result11.sort()
+                var selectSubtypes = document.getElementById("sel_dis");
+                var optionS = resultSubtypes;
                 for(var i = 0; i < optionS.length; i++) {
                     var opt1 = optionS[i];
                     var el1 = document.createElement("option");
                     el1.textContent = opt1;
                     el1.value = opt1;
-                    selectOps.appendChild(el1);
+                    selectSubtypes.appendChild(el1);
                     }
             });
 
@@ -11078,11 +11060,11 @@
                     $('#sel969').selectpicker('refresh');
                     });
             });
-        /// End Section - Diseases ///
+        /// End Section - Operations ///
 
 
-        /// Section - Categories /// subtype
-        $(document)
+ /// Section - Categories /// subtype
+ $(document)
             .ready(function() {
             const returnedData2 = $.grep(eponyms.features, function(element, index) {
                 return (element.topic !== "");
