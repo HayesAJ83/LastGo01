@@ -10778,7 +10778,7 @@
             .flatMap(item => item.topic)
             .filter((item, i, arr) => arr.indexOf(item) === i)
             let resultsort1 = result1.sort()
-            //var select999 = document.getElementById("select_A2Z");
+            var select999 = document.getElementById("select_A2Z");
             var options = resultsort1;
             for(var i = 0; i < options.length; i++) {
                 var opt = options[i];
@@ -10829,8 +10829,8 @@
                     var el1 = document.createElement("option");
                     el1.textContent = opt1;
                     el1.value = opt1;
-                    selectSubtypes.appendChild(el1);
                     }
+                selectSubtypes.appendChild(el1);
             });
 
             $(document)
