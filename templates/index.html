@@ -286,9 +286,6 @@
                     </div>
                     
 
-
-
-
                     <p>
                         <a class="btn btn-light" data-toggle="collapse" href="#collapseExample_Diseases" role="button" aria-expanded="false" aria-controls="collapseExample">
                         Diseases & Symptoms
@@ -297,9 +294,9 @@
                     <div class="collapse" id="collapseExample_Diseases">
                         <div class="col">  <!--<div class="card card-body">-->
                             <div class="row align-items-center text-center">
-                                <div class="col" data-aos="fade-up" id="select3">
+                                <div class="col" data-aos="fade-up" id="select_dis">
                                     <!--<h1 class="text-black mb-2 fs-1" style="height:30px">Diseases & Symptoms</h1>-->
-                                    <select id="sel" class="selectpicker show-tick"
+                                    <select id="sel_dis" class="selectpicker show-tick"
                                             data-style="btn-primary" data-header="Search list:" 
                                             data-width="325px" data-size="6"
                                             data-aos="zoom-in"
@@ -307,15 +304,37 @@
                                             data-live-search="true">
                                             <option value=""> -- select -- </option>
                                     </select>
-                                    <p></p>
-                                    <p></p>
-                                    <p></p>
                                 </div>
+                            </div>
+                            <p></p>
+                            <hr style="height:1px; visibility:hidden">
+                                <form method="POST">
+                                    <div class="row align-items-center text-center">
+                                        <div class="col" data-aos="fade-up" id="select515" style="display:none">
+                                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
+                                            <select id="sel696" class="selectpicker show-tick"
+                                                    data-style="btn-primary" data-header="Search list:" 
+                                                    data-width="325px" data-size="6"
+                                                    data-aos="zoom-in"
+                                                    data-container="body"
+                                                    data-live-search="true" onchange="show2(this.value);">
+                                                    <option value=""> -- select -- </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            <div class="row align-items-center text-center" id='blurb'>
+                                <div class="lead" id='imgName2'></div>
+                                <p class="lead" id="msg2"></p>
+                                <p class="lead" id="msg3"></p>
                             </div>
                             <br>
                             <hr class='my-4'>
                         </div>
                     </div>
+
+
+
 
                     <p>
                         <a class="btn btn-light" data-toggle="collapse" href="#collapseExample_Categories" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -10913,6 +10932,75 @@
             });
         /// End Section - Operations ///
 
+
+
+ /// Section - Diseases ///
+ $(document)
+            .ready(function() {
+            const returnedData2 = $.grep(eponyms.features, function(element, index) {
+                return (element.topic !== "");
+                });  /// DROP those WITHOUT topic
+            let result11 = returnedData2
+                .flatMap(item => item.topic) //"item.topic" gives us specialties
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
+                let resultSubtypes = result11.sort()
+                var selectSubtypes = document.getElementById("sel_dis");
+                var optionS = resultSubtypes;
+                for(var i = 0; i < optionS.length; i++) {
+                    var opt1 = optionS[i];
+                    var el1 = document.createElement("option");
+                    el1.textContent = opt1;
+                    el1.value = opt1;
+                    selectSubtypes.appendChild(el1);
+                    }
+            });
+
+            $(document)
+            .ready(function() {
+                $('#select_dis').ready(function() {
+                    let value = '\'' + $('#select_dis option').map(function() {
+                            return this.text}).get().join('\',\'') + '\'';
+                    var stringArray = (new Function("return [" + value + "];")());
+                });
+            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
+
+            $('#sel_dis').on('change', function() {
+                $('#select515').fadeIn(50);
+                let select ="";
+                $("#sel_dis").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
+                
+                function topicFilter2(taxonomy) {
+                    const returnedData = $.grep(eponyms.features, function(element, index) {
+                        return (element.topic !== "");
+                        });
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return returnedData.filter(item => {
+                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
+                        });
+                    }
+                
+                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+
+                function populateSelect2() {
+                    document.getElementById('sel969').innerHTML = selected2.reduce((options, {ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`,
+                        '<option value=""> -- select -- </option>'
+                        );
+                    }
+            
+                populateSelect2()
+                $('#sel969').selectpicker('refresh');
+                $('#sel_dis').on('change', function() {
+                    $('#sel_dis').selectpicker('toggle'); //added to toggle open/close
+                    $('#sel969').selectpicker('refresh');
+                    });
+            });
+        /// End Section - Operations ///
 
 
         </script>  
