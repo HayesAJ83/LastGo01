@@ -141,7 +141,7 @@
                             <div class="col" id="select_A2Z">
                                 <select id="sel_A2Z"
                                         data-style="btn-primary" class="selectpicker"
-                                        data-width="320px" data-size="2"
+                                        data-width="320px" data-size="4"
                                         data-aos="zoom-in"
                                         data-container="body"
                                         data-live-search="true" onchange="show(this.value)">
@@ -390,9 +390,9 @@
                     <div class="collapse" id="collapseExample_Maps">
                         <div class="col">  <!--<div class="card card-body">-->
                             <div class="row align-items-center text-center">
-                                <div class="col" data-aos="fade-up" id="select3">
+                                <div class="col" data-aos="fade-up" id="select_map">
                                     <!--<h1 class="text-black mb-2 fs-1" style="height:30px">Countries</h1>-->
-                                    <select id="sel" class="selectpicker show-tick"
+                                    <select id="sel_map" class="selectpicker show-tick"
                                             data-style="btn-primary" data-header="Search list:" 
                                             data-width="325px" data-size="6"
                                             data-aos="zoom-in"
@@ -420,7 +420,7 @@
                             <div class="row align-items-center text-center">
                                 <div class="col" data-aos="fade-up" id="select_jrnls">
                                     <!--<h1 class="text-black mb-2 fs-1" style="height:30px">Journals</h1>-->
-                                    <select id="sel" class="selectpicker show-tick"
+                                    <select id="sel_jrnls" class="selectpicker show-tick"
                                             data-style="btn-primary" data-header="Search list:" 
                                             data-width="325px" data-size="6"
                                             data-aos="zoom-in"
@@ -10784,8 +10784,7 @@
                 var opt = options[i];
                 var el = document.createElement("option");
                 el.textContent = opt;
-                el.value = opt;
-                //select_A2Z.appendChild(el);
+                el.value = opt;     //select_A2Z.appendChild(el);
                 }
             });
 
@@ -10850,20 +10849,20 @@
                 $("#sel_specialties").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
                     if(select != ""){select = select.substr(0);};
-                var stringArray = (new Function("return [" + select + "];")());
+                var stringArray2 = (new Function("return [" + select + "];")());
                 
                 function topicFilter2(taxonomy) {
-                    const returnedData = $.grep(eponyms.features, function(element, index) {
+                    const returnedData2 = $.grep(eponyms.features, function(element, index) {
                         return (element.topic !== "");
                         });
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                    return returnedData.filter(item => {
+                    return returnedData2.filter(item => {
                         let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
                         return taxonomy.some(med => topic.includes(med));
                         });
                     }
                 
-                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+                var selected2 = topicFilter2(stringArray2); //works for stringArray no brackets
 
                 function populateSelect2() {
                     document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
@@ -10889,7 +10888,7 @@
                 return (element.topic !== "");
                 });  /// DROP those WITHOUT topic
             let result11 = returnedData2
-                .flatMap(item => item.topic) //"item.topic" gives us specialties
+                .flatMap(item => item.ops) //"item.topic" gives us specialties
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
                 let resultSubtypes = result11.sort()
@@ -10900,7 +10899,7 @@
                     var el1 = document.createElement("option");
                     el1.textContent = opt1;
                     el1.value = opt1;
-                    selectSubtypes.appendChild(el1);
+                    //selectSubtypes.appendChild(el1);
                     }
             });
 
@@ -10911,7 +10910,7 @@
                             return this.text}).get().join('\',\'') + '\'';
                     var stringArray = (new Function("return [" + value + "];")());
                 });
-            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
+            });   /// Generates all the select_ops [operations] options (eg. 'COLORECTAL')
 
             $('#sel_ops').on('change', function() {
                 $('#select15').fadeIn(50);
@@ -10927,8 +10926,8 @@
                         });
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return returnedData.filter(item => {
-                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                        return taxonomy.some(med => topic.includes(med));
+                        let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
+                        return taxonomy.some(med => ops.includes(med));
                         });
                     }
                 
