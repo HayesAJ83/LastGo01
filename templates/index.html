@@ -10886,10 +10886,10 @@
         $(document)
             .ready(function() {
             const returnedData2 = $.grep(eponyms.features, function(element, index) {
-                return (element.topic !== "");
+                return (element.ops !== "");
                 });  /// DROP those WITHOUT topic
             let result11 = returnedData2
-                .flatMap(item => item.topic) //"item.topic" gives us specialties
+                .flatMap(item => item.ops) //"item.topic" gives us specialties
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
                 let resultSubtypes = result11.sort()
@@ -10923,12 +10923,12 @@
                 
                 function topicFilter2(taxonomy) {
                     const returnedData = $.grep(eponyms.features, function(element, index) {
-                        return (element.topic !== "");
+                        return (element.ops !== "");
                         });
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return returnedData.filter(item => {
-                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                        return taxonomy.some(med => topic.includes(med));
+                        let topic = Array.isArray(item.ops) ? item.ops : [item.ops];
+                        return taxonomy.some(med => ops.includes(med));
                         });
                     }
                 
@@ -10984,7 +10984,7 @@
             });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
 
             $('#sel_dis').on('change', function() {
-                $('#select515').fadeIn(50);
+                $('#select515').fadeIn(500);
                 let select ="";
                 $("#sel_dis").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
