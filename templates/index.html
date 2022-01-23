@@ -10773,6 +10773,7 @@
         });
         /// Section - A to Z
         
+
         /// Section - Specialties ///
             $(document)
             .ready(function() {
@@ -10841,16 +10842,8 @@
                     $('#sel9').selectpicker('refresh');
                     });
             });
-        </script>  /// End Section - Specialties ///
+        /// End Section - Specialties ///
 
-
-
-
-
-
-
-
-<script>
 
         /// Section - Operations ///
         $(document)
@@ -10883,8 +10876,6 @@
                 });
             });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
 
-
-            /// THIS WORKS FINE
             $('#sel_ops').on('change', function() {
                 $('#select15').fadeIn(50);
                 let select ="";
@@ -10920,98 +10911,76 @@
                     $('#sel9').selectpicker('refresh');
                     });
             });
-        </script>  /// End Section - Specialties ///
+        /// End Section - Operations ///
 
 
 
-</script>
-
-
-
-
-
-
-
-
-
-
-<script>
-    function show(id) {   
-        var imgName = document.getElementById('imgName');
-        if (!id) {imgName.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.features.length; i++) {
-            if  (Number(id) === eponyms.features[i].ID) {
-                imgName.innerHTML = eponyms.features[i].imgName
-                                        ;}}}
-
-        var info = document.getElementById('info');
-        if (!id) {imgName.innerHTML = "";
-        } else {
-            for (var i = 0; i < eponyms.features.length; i++) {
-            if  (Number(id) === eponyms.features[i].ID) {
-                info.innerHTML =    "<br>"+
-                                    eponyms.features[i].who.bold()   +"<br>"+
-                                    eponyms.features[i].when.bold()  +"<br>"+
-                                    eponyms.features[i].where.bold() +"<br><br>"+
-                                    eponyms.features[i].about +
-                                    eponyms.features[i].refs +
-                                    eponyms.features[i].URLs +
-                                    eponyms.features[i].acknow
-                                        ;}}}
-                                    }                         
-    </script>
-    
-
-
+        </script>  
 
 
         <script>
-        function show2(id) {
+            function show(id) {   
+                var imgName = document.getElementById('imgName');
+                if (!id) {imgName.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        imgName.innerHTML = eponyms.features[i].imgName
+                                                ;}}}
 
-            var imgName2 = document.getElementById('imgName2');
-            if (!id) {imgName2.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.features.length; i++) {
-                if  (Number(id) === eponyms.features[i].ID) {
-                    imgName2.innerHTML = eponyms.features[i].imgName
-                                            ;}}}
-            
-            var msg2 = document.getElementById('msg2');
-            if (!id) {msg2.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.features.length; i++) {
-                if  (Number(id) === eponyms.features[i].ID) {
-                    msg2.innerHTML = "<br>"+
-                                    eponyms.features[i].who.bold()   +"<br>"+
-                                    eponyms.features[i].when.bold()  +"<br>"+
-                                    eponyms.features[i].where.bold() +"<br><br>"
-                                            ;}}}
-                                    
-            var msg3 = document.getElementById('msg3');
-            if (!id) {msg2.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.features.length; i++) {
-                if  (Number(id) === eponyms.features[i].ID) {
-                    msg3.innerHTML = 
-                                    eponyms.features[i].about +
-                                    eponyms.features[i].refs +
-                                    eponyms.features[i].URLs +
-                                    eponyms.features[i].acknow
-                ;}}}                           
-            }
+                var info = document.getElementById('info');
+                if (!id) {imgName.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        info.innerHTML =    "<br>"+
+                                            eponyms.features[i].who.bold()   +"<br>"+
+                                            eponyms.features[i].when.bold()  +"<br>"+
+                                            eponyms.features[i].where.bold() +"<br><br>"+
+                                            eponyms.features[i].about +
+                                            eponyms.features[i].refs +
+                                            eponyms.features[i].URLs +
+                                            eponyms.features[i].acknow
+                                                ;}}}
+                                            }                         
+        
+
+            function show2(id) {
+
+                var imgName2 = document.getElementById('imgName2');
+                if (!id) {imgName2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        imgName2.innerHTML = eponyms.features[i].imgName
+                                                ;}}}
+                
+                var msg2 = document.getElementById('msg2');
+                if (!id) {msg2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg2.innerHTML = "<br>"+
+                                        eponyms.features[i].who.bold()   +"<br>"+
+                                        eponyms.features[i].when.bold()  +"<br>"+
+                                        eponyms.features[i].where.bold() +"<br><br>"
+                                                ;}}}
+                                        
+                var msg3 = document.getElementById('msg3');
+                if (!id) {msg2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg3.innerHTML = 
+                                        eponyms.features[i].about +
+                                        eponyms.features[i].refs +
+                                        eponyms.features[i].URLs +
+                                        eponyms.features[i].acknow
+                    ;}}}                           
+                }
         </script>
 
-
-
-
-
-
-
         <script src="/static/assets/js/theme.js"></script>
-
-
-
 
     </body>
 </html>
