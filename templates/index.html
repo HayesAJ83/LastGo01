@@ -10994,7 +10994,7 @@
         $(document)
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
-                return (element.disease !== "");
+                return (element.dis !== "");
                 });  /// DROP those WITHOUT OPERATIONS
             let result1 = returnedData
                 .flatMap(item => item.topic) //"item.topic" gives us SPECIALTIES
@@ -11016,10 +11016,10 @@
             $(document)
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
-                return (element.dis !== "");
+                return (element.ops !== "");
                 });  /// DROP those WITHOUT OPERATIONS
             let result1 = returnedData
-                .flatMap(item => item.disease) //"item.ops" gives us OPERATIONS
+                .flatMap(item => item.ops) //"item.ops" gives us OPERATIONS
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no ops
                 let resultOps = result1.sort()
@@ -11057,8 +11057,8 @@
                         });
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return returnedData.filter(item => {
-                        let disease = Array.isArray(item.disease) ? item.disease : [item.disease];
-                        return taxonomy.some(med => disease.includes(med));
+                        let disease = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
                         });
                     }
                 
