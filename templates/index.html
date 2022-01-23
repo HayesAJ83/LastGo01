@@ -141,7 +141,7 @@
                             <div class="col" id="select_A2Z">
                                 <select id="sel_A2Z"
                                         data-style="btn-primary" class="selectpicker"
-                                        data-width="320px" data-size="4"
+                                        data-width="320px" data-size="3"
                                         data-aos="zoom-in"
                                         data-container="body"
                                         data-live-search="true" onchange="show(this.value)">
@@ -332,10 +332,7 @@
                             <hr class='my-4'>
                         </div>
                     </div>
-
-
-
-
+                
                     <p>
                         <a class="btn btn-light" data-toggle="collapse" href="#collapseExample_Categories" role="button" aria-expanded="false" aria-controls="collapseExample">
                         Categories
@@ -344,25 +341,46 @@
                     <div class="collapse" id="collapseExample_Categories">
                         <div class="col">  <!--<div class="card card-body">-->
                             <div class="row align-items-center text-center">
-                                <div class="col" data-aos="fade-up" id="select_cats">
-                                    <!--<h1 class="text-black mb-2 fs-1" style="height:30px">Categories</h1>-->
-                                    <select id="sel" class="selectpicker show-tick"
+                                <div class="col" data-aos="fade-up" id="select_cat">
+                                    <select id="sel_cat" class="selectpicker show-tick"
                                             data-style="btn-primary" data-header="Search list:" 
                                             data-width="325px" data-size="6"
                                             data-aos="zoom-in"
                                             data-container="body"
                                             data-live-search="true">
-                                            <!--<option value=""> -- select -- </option>-->
+                                            <option value=""> -- select -- </option>
                                     </select>
-                                    <p></p>
-                                    <p></p>
-                                    <p></p>
                                 </div>
+                            </div>
+                            <p></p>
+                            <hr style="height:1px; visibility:hidden">
+                                <form method="POST">
+                                    <div class="row align-items-center text-center">
+                                        <div class="col" data-aos="fade-up" id="select1515" style="display:none">
+                                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
+                                            <select id="sel9696" class="selectpicker show-tick"
+                                                    data-style="btn-primary" data-header="Search list:" 
+                                                    data-width="325px" data-size="6"
+                                                    data-aos="zoom-in"
+                                                    data-container="body"
+                                                    data-live-search="true" onchange="show2(this.value);">
+                                                    <option value=""> -- select -- </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            <div class="row align-items-center text-center" id='blurb'>
+                                <div class="lead" id='imgName2'></div>
+                                <p class="lead" id="msg2"></p>
+                                <p class="lead" id="msg3"></p>
                             </div>
                             <br>
                             <hr class='my-4'>
                         </div>
                     </div>
+
+
+
 
                     <p>
                         <a class="btn btn-light" data-toggle="collapse" href="#collapseExample_Maps" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -10927,7 +10945,7 @@
                 $('#sel69').selectpicker('refresh');
                 $('#sel_ops').on('change', function() {
                     $('#sel_ops').selectpicker('toggle'); //added to toggle open/close
-                    $('#sel9').selectpicker('refresh');
+                    $('#sel69').selectpicker('refresh');
                     });
             });
         /// End Section - Operations ///
@@ -11001,6 +11019,79 @@
                     });
             });
         /// End Section - Operations ///
+
+
+ /// Section - Categories ///
+ $(document)
+            .ready(function() {
+            const returnedData2 = $.grep(eponyms.features, function(element, index) {
+                return (element.topic !== "");
+                });  /// DROP those WITHOUT topic
+            let result11 = returnedData2
+                .flatMap(item => item.topic) //"item.topic" gives us specialties
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
+                let resultSubtypes = result11.sort()
+                var selectSubtypes = document.getElementById("sel_cat");
+                var optionS = resultSubtypes;
+                for(var i = 0; i < optionS.length; i++) {
+                    var opt1 = optionS[i];
+                    var el1 = document.createElement("option");
+                    el1.textContent = opt1;
+                    el1.value = opt1;
+                    selectSubtypes.appendChild(el1);
+                    }
+            });
+
+            $(document)
+            .ready(function() {
+                $('#select_cat').ready(function() {
+                    let value = '\'' + $('#select_cat option').map(function() {
+                            return this.text}).get().join('\',\'') + '\'';
+                    var stringArray = (new Function("return [" + value + "];")());
+                });
+            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
+
+            $('#sel_cat').on('change', function() {
+                $('#select1515').fadeIn(50);
+                let select ="";
+                $("#sel_cat").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
+                
+                function topicFilter2(taxonomy) {
+                    const returnedData = $.grep(eponyms.features, function(element, index) {
+                        return (element.topic !== "");
+                        });
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return returnedData.filter(item => {
+                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
+                        });
+                    }
+                
+                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+
+                function populateSelect2() {
+                    document.getElementById('sel6969').innerHTML = selected2.reduce((options, {ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`,
+                        '<option value=""> -- select -- </option>'
+                        );
+                    }
+            
+                populateSelect2()
+                $('#sel6969').selectpicker('refresh');
+                $('#sel_cat').on('change', function() {
+                    $('#sel_cat').selectpicker('toggle'); //added to toggle open/close
+                    $('#sel6969').selectpicker('refresh');
+                    });
+            });
+        /// End Section - Categories ///
+
+
+
+
 
 
         </script>  
