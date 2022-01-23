@@ -277,8 +277,8 @@
                                 </form>
                             <div class="row align-items-center text-center" id='blurb'>
                                 <div class="lead" id='imgName_ops'></div>
-                                <p class="lead" id="msg2"></p>
-                                <p class="lead" id="msg3"></p>
+                                <p class="lead" id="msg_ops"></p>
+                                <p class="lead" id="msg3_ops"></p>
                             </div>
                             <br>
                             <hr class='my-4'>
@@ -11191,7 +11191,30 @@
                     if  (Number(id) === eponyms.features[i].ID) {
                         imgName2.innerHTML = eponyms.features[i].imgName
                                                 ;}}}
-                    }
+
+                var msg_ops = document.getElementById('msg_ops');
+                if (!id) {msg_ops.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg_ops.innerHTML = "<br>"+
+                                        eponyms.features[i].who.bold()   +"<br>"+
+                                        eponyms.features[i].when.bold()  +"<br>"+
+                                        eponyms.features[i].where.bold() +"<br><br>"
+                                                ;}}}
+                                        
+                var msg3_ops = document.getElementById('msg3_ops');
+                if (!id) {msg3_ops.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg3_ops.innerHTML = 
+                                        eponyms.features[i].about +
+                                        eponyms.features[i].refs +
+                                        eponyms.features[i].URLs +
+                                        eponyms.features[i].acknow
+                    ;}}}                           
+                }
          
         </script>
 
