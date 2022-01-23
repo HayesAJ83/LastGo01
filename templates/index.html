@@ -10956,7 +10956,7 @@
  $(document)
             .ready(function() {
             const returnedData2 = $.grep(eponyms.features, function(element, index) {
-                return (element.topic !== "");
+                return (element.disease !== "");
                 });  /// DROP those WITHOUT topic
             let result11 = returnedData2
                 .flatMap(item => item.disease) //"item.disease" gives us diseases
@@ -10993,7 +10993,7 @@
                 
                 function topicFilter2(taxonomy) {
                     const returnedData = $.grep(eponyms.features, function(element, index) {
-                        return (element.topic !== "");
+                        return (element.disease !== "");
                         });
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return returnedData.filter(item => {
