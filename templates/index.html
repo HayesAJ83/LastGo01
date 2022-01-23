@@ -10849,20 +10849,20 @@
                 $("#sel_specialties").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
                     if(select != ""){select = select.substr(0);};
-                var stringArray2 = (new Function("return [" + select + "];")());
+                var stringArray = (new Function("return [" + select + "];")());
                 
                 function topicFilter2(taxonomy) {
-                    const returnedData2 = $.grep(eponyms.features, function(element, index) {
+                    const returnedData = $.grep(eponyms.features, function(element, index) {
                         return (element.topic !== "");
                         });
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                    return returnedData2.filter(item => {
+                    return returnedData.filter(item => {
                         let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
                         return taxonomy.some(med => topic.includes(med));
                         });
                     }
                 
-                var selected2 = topicFilter2(stringArray2); //works for stringArray no brackets
+                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
 
                 function populateSelect2() {
                     document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
