@@ -269,7 +269,7 @@
                                                     data-width="325px" data-size="6"
                                                     data-aos="zoom-in"
                                                     data-container="body"
-                                                    data-live-search="true" onchange="show2(this.value);">
+                                                    data-live-search="true" onchange="show_ops(this.value);">
                                                     <option value=""> -- select -- </option>
                                             </select>
                                         </div>
@@ -11140,9 +11140,11 @@
                                             eponyms.features[i].URLs +
                                             eponyms.features[i].acknow
                                                 ;}}}
-                                            }                         
-        
+                                            }                                    
+        </script>
 
+
+        <script>
             function show2(id) {
 
                 var imgName1 = document.getElementById('imgName_spec');
@@ -11152,6 +11154,35 @@
                     if  (Number(id) === eponyms.features[i].ID) {
                         imgName1.innerHTML = eponyms.features[i].imgName
                                                 ;}}}
+
+                var msg_spec = document.getElementById('msg_spec');
+                if (!id) {msg2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg_spec.innerHTML = "<br>"+
+                                        eponyms.features[i].who.bold()   +"<br>"+
+                                        eponyms.features[i].when.bold()  +"<br>"+
+                                        eponyms.features[i].where.bold() +"<br><br>"
+                                                ;}}}
+                                        
+                var msg3 = document.getElementById('msg3_spec');
+                if (!id) {msg3_spec.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg3_spec.innerHTML = 
+                                        eponyms.features[i].about +
+                                        eponyms.features[i].refs +
+                                        eponyms.features[i].URLs +
+                                        eponyms.features[i].acknow
+                    ;}}}                           
+                }
+        </script>
+
+
+        <script>
+            function show_ops(id) {
                 
                 var imgName2 = document.getElementById('imgName_ops');
                 if (!id) {imgName2.innerHTML = "";
@@ -11160,32 +11191,10 @@
                     if  (Number(id) === eponyms.features[i].ID) {
                         imgName2.innerHTML = eponyms.features[i].imgName
                                                 ;}}}
-
-                
-                var msg2 = document.getElementById('msg_spec');
-                if (!id) {msg2.innerHTML = "";
-                } else {
-                    for (var i = 0; i < eponyms.features.length; i++) {
-                    if  (Number(id) === eponyms.features[i].ID) {
-                        msg2.innerHTML = "<br>"+
-                                        eponyms.features[i].who.bold()   +"<br>"+
-                                        eponyms.features[i].when.bold()  +"<br>"+
-                                        eponyms.features[i].where.bold() +"<br><br>"
-                                                ;}}}
-                                        
-                var msg3 = document.getElementById('msg3_spec');
-                if (!id) {msg2.innerHTML = "";
-                } else {
-                    for (var i = 0; i < eponyms.features.length; i++) {
-                    if  (Number(id) === eponyms.features[i].ID) {
-                        msg3.innerHTML = 
-                                        eponyms.features[i].about +
-                                        eponyms.features[i].refs +
-                                        eponyms.features[i].URLs +
-                                        eponyms.features[i].acknow
-                    ;}}}                           
-                }
+                    }
+         
         </script>
+
 
         <script src="/static/assets/js/theme.js"></script>
 
