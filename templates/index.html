@@ -10952,14 +10952,14 @@
 
 
 
- /// Section - Diseases ///
+ /// Section - Diseases /// disease
  $(document)
             .ready(function() {
             const returnedData2 = $.grep(eponyms.features, function(element, index) {
                 return (element.topic !== "");
                 });  /// DROP those WITHOUT topic
             let result11 = returnedData2
-                .flatMap(item => item.topic) //"item.topic" gives us specialties
+                .flatMap(item => item.disease) //"item.disease" gives us diseases
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
                 let resultSubtypes = result11.sort()
@@ -10997,8 +10997,8 @@
                         });
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return returnedData.filter(item => {
-                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                        return taxonomy.some(med => topic.includes(med));
+                        let disease = Array.isArray(item.disease) ? item.disease : [item.disease];
+                        return taxonomy.some(med => disease.includes(med));
                         });
                     }
                 
@@ -11021,7 +11021,7 @@
         /// End Section - Operations ///
 
 
- /// Section - Categories ///
+ /// Section - Categories /// subtype
  $(document)
             .ready(function() {
             const returnedData2 = $.grep(eponyms.features, function(element, index) {
