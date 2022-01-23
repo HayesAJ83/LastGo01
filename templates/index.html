@@ -10778,14 +10778,14 @@
             .flatMap(item => item.topic)
             .filter((item, i, arr) => arr.indexOf(item) === i)
             let resultsort1 = result1.sort()
-            var select999 = document.getElementById("select_A2Z");
+            var select_A2Z = document.getElementById("select_A2Z");
             var options = resultsort1;
             for(var i = 0; i < options.length; i++) {
                 var opt = options[i];
                 var el = document.createElement("option");
                 el.textContent = opt;
                 el.value = opt;
-                //select.appendChild(el);
+                //select_A2Z.appendChild(el);
                 }
             });
 
@@ -10800,11 +10800,11 @@
 
         $(document)
         .ready(function() {
-            var selected69 = eponyms.features
+            var selected_A2Z = eponyms.features
             function populateSelect() {
-                var ele99 = document.getElementById('sel_A2Z');
-                selected69.forEach(function(b) {
-                    ele99.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+                var ele_A2Z = document.getElementById('sel_A2Z');
+                selected_A2Z.forEach(function(b) {
+                    ele_A2Z.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
                 }
             populateSelect()
         });
@@ -10829,8 +10829,8 @@
                     var el1 = document.createElement("option");
                     el1.textContent = opt1;
                     el1.value = opt1;
-                    }
-                selectSubtypes.appendChild(el1);
+                    selectSubtypes.appendChild(el1);    
+                }
             });
 
             $(document)
