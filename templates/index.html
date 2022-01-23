@@ -10784,7 +10784,8 @@
                 var opt = options[i];
                 var el = document.createElement("option");
                 el.textContent = opt;
-                el.value = opt;     //select_A2Z.appendChild(el);
+                el.value = opt;
+                //select_A2Z.appendChild(el);
                 }
             });
 
@@ -10888,7 +10889,7 @@
                 return (element.topic !== "");
                 });  /// DROP those WITHOUT topic
             let result11 = returnedData2
-                .flatMap(item => item.ops) //"item.topic" gives us specialties
+                .flatMap(item => item.topic) //"item.topic" gives us specialties
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
                 let resultSubtypes = result11.sort()
@@ -10899,7 +10900,7 @@
                     var el1 = document.createElement("option");
                     el1.textContent = opt1;
                     el1.value = opt1;
-                    //selectSubtypes.appendChild(el1);
+                    selectSubtypes.appendChild(el1);
                     }
             });
 
@@ -10910,7 +10911,7 @@
                             return this.text}).get().join('\',\'') + '\'';
                     var stringArray = (new Function("return [" + value + "];")());
                 });
-            });   /// Generates all the select_ops [operations] options (eg. 'COLORECTAL')
+            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
 
             $('#sel_ops').on('change', function() {
                 $('#select15').fadeIn(50);
@@ -10926,8 +10927,8 @@
                         });
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return returnedData.filter(item => {
-                        let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
-                        return taxonomy.some(med => ops.includes(med));
+                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
                         });
                     }
                 
