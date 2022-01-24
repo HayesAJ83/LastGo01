@@ -11500,7 +11500,7 @@
         </script>
 
         <script>
-            function show_cat(id) {
+            function show_cats(id) {
                 
                 var imgName2 = document.getElementById('imgName_cat');
                 if (!id) {imgName2.innerHTML = "";
@@ -11573,7 +11573,42 @@
 
         </script>
 
+        <script>
+            function show_jrnls(id) {
+                
+                var imgName2 = document.getElementById('imgName_jrnls');
+                if (!id) {imgName2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        imgName2.innerHTML = eponyms.features[i].imgName
+                                                ;}}}
 
+                var msg_jrnls = document.getElementById('msg_jrnls');
+                if (!id) {msg_jrnls.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg_jrnls.innerHTML = "<br>"+
+                                        eponyms.features[i].who.bold()   +"<br>"+
+                                        eponyms.features[i].when.bold()  +"<br>"+
+                                        eponyms.features[i].where.bold() +"<br><br>"
+                                                ;}}}
+                                        
+                var msg3_jrnls = document.getElementById('msg3_jrnls');
+                if (!id) {msg3_jrnls.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg3_jrnls.innerHTML = 
+                                        eponyms.features[i].about +
+                                        eponyms.features[i].refs +
+                                        eponyms.features[i].URLs +
+                                        eponyms.features[i].acknow
+                    ;}}}                           
+                }
+
+        </script>
 
 
         <script src="/static/assets/js/theme.js"></script>
