@@ -392,9 +392,9 @@
                             <hr style="height:1px; visibility:hidden">
                                 <form method="POST">
                                     <div class="row align-items-center text-center">
-                                        <div class="col" data-aos="fade-up" id="select51515" style="display:none">
+                                        <div class="col" data-aos="fade-up" id="selector_map" style="display:none">
                                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
-                                            <select id="sel69696" class="selectpicker show-tick"
+                                            <select id="sel_map2" class="selectpicker show-tick"
                                                     data-style="btn-light" data-header="Search list:" 
                                                     data-width="325px" data-size="6"
                                                     data-aos="zoom-in"
@@ -11081,10 +11081,9 @@
                     $('#sel_dis2').selectpicker('refresh');
                     });
             });
-/// End Section - Diseases ///
+    /// End Section - Diseases ///
 
-
- /// Section - Categories /// subtype
+    /// Section - Categories ///
         $(document)
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
@@ -11172,7 +11171,98 @@
                     $('#sel_cat2').selectpicker('refresh');
                     });
             });
-/// End Section - Categories ///
+    /// End Section - Categories ///
+
+     /// Section - Maps /// country
+     $(document)
+            .ready(function() {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.country !== "");
+                });  /// DROP those WITHOUT OPERATIONS
+            let result1 = returnedData
+                .flatMap(item => item.topic) //"item.topic" gives us SPECIALTIES
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
+                let resultsort1 = result1.sort()
+                var select = document.getElementById("select_map");
+                var options = resultsort1;
+                for(var i = 0; i < options.length; i++) {
+                    var opt = options[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    }
+                //select.appendChild(el);
+            //console.log()   /// This gives us array with all features - when select1 is changed
+            });
+     
+            $(document)
+            .ready(function() {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.country !== "");
+                });  /// DROP those WITHOUT country
+            let result1 = returnedData
+                .flatMap(item => item.country) //"item.ops" gives us OPERATIONS
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no ops
+                let resultOps = result1.sort()
+                var selectOps = document.getElementById("sel_map");
+                var optionS = resultOps;
+                for(var i = 0; i < optionS.length; i++) {
+                    var opt1 = optionS[i];
+                    var el1 = document.createElement("option");
+                    el1.textContent = opt1;
+                    el1.value = opt1;
+                    selectOps.appendChild(el1);
+                    }
+            });
+
+            $(document)
+            .ready(function() {
+                $('#select_map').ready(function() {
+                    let value = '\'' + $('#select_cat option').map(function() {
+                            return this.text}).get().join('\',\'') + '\'';
+                    var stringArray = (new Function("return [" + value + "];")());
+                });
+            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
+
+            $('#sel_map').on('change', function() {
+                $('#selector_map').fadeIn(500);
+                let select ="";
+                $("#sel_map").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
+                
+                function topicFilter2(taxonomy) {
+                    const returnedData = $.grep(eponyms.features, function(element, index) {
+                        return (element.country !== "");
+                        });
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return returnedData.filter(item => {
+                        let country = Array.isArray(item.country) ? item.country : [item.country];
+                        return taxonomy.some(med => country.includes(med));
+                        });
+                    }
+                
+                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+
+                function populateSelect2() {
+                    document.getElementById('sel_map2').innerHTML = selected2.reduce((options, {ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`,
+                        '<option value=""> -- select -- </option>'
+                        );
+                    }
+            
+                populateSelect2()
+                $('#sel_map2').selectpicker('refresh');
+                $('#sel_map').on('change', function() {
+                    $('#sel_map').selectpicker('toggle'); //added to toggle open/close
+                    $('#sel_map2').selectpicker('refresh');
+                    });
+            });
+    /// End Section - Maps ///
+
 
 
 
