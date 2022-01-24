@@ -10908,7 +10908,7 @@
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
                 return (element.ops !== "");
-                });  /// DROP those WITHOUT OPERATIONS
+                }); 
             let result1 = returnedData
                 .flatMap(item => item.topic) //"item.topic" gives us SPECIALTIES
                 .filter((item, i, arr) => arr.indexOf(item) === i)
@@ -10922,19 +10922,17 @@
                     el.textContent = opt;
                     el.value = opt;
                     }
-                //select.appendChild(el);
-            //console.log()   /// This gives us array with all features - when select1 is changed
             });
      
             $(document)
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
                 return (element.ops !== "");
-                });  /// DROP those WITHOUT OPERATIONS
+                }); 
             let result1 = returnedData
-                .flatMap(item => item.ops) //"item.ops" gives us OPERATIONS
+                .flatMap(item => item.ops)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
-                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no ops
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";});
                 let resultOps = result1.sort()
                 var selectOps = document.getElementById("sel_ops");
                 var optionS = resultOps;
@@ -10954,7 +10952,7 @@
                             return this.text}).get().join('\',\'') + '\'';
                     var stringArray = (new Function("return [" + value + "];")());
                 });
-            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
+            });
 
             $('#sel_ops').on('change', function() {
                 $('#select15').fadeIn(500);
@@ -10975,7 +10973,7 @@
                         });
                     }
                 
-                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+                var selected2 = topicFilter2(stringArray);
 
                 function populateSelect2() {
                     document.getElementById('sel69').innerHTML = selected2.reduce((options, {ID,name}) =>
@@ -10998,11 +10996,11 @@
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
                 return (element.disease !== "");
-                });  /// DROP those WITHOUT OPERATIONS
+                });  
             let result1 = returnedData
-                .flatMap(item => item.topic) //"item.topic" gives us SPECIALTIES
+                .flatMap(item => item.topic)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
-                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";});
                 let resultsort1 = result1.sort()
                 var select = document.getElementById("select_dis");
                 var options = resultsort1;
@@ -11012,19 +11010,17 @@
                     el.textContent = opt;
                     el.value = opt;
                     }
-                //select.appendChild(el);
-            //console.log()   /// This gives us array with all features - when select1 is changed
             });
      
             $(document)
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
                 return (element.disease !== "");
-                });  /// DROP those WITHOUT Disease
+                }); 
             let result1 = returnedData
-                .flatMap(item => item.disease) //"item.ops" gives us OPERATIONS
+                .flatMap(item => item.disease)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
-                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no ops
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";});
                 let resultOps = result1.sort()
                 var selectOps = document.getElementById("sel_dis");
                 var optionS = resultOps;
@@ -11044,7 +11040,7 @@
                             return this.text}).get().join('\',\'') + '\'';
                     var stringArray = (new Function("return [" + value + "];")());
                 });
-            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
+            }); 
 
             $('#sel_dis').on('change', function() {
                 $('#selector_dis').fadeIn(500);
@@ -11065,7 +11061,7 @@
                         });
                     }
                 
-                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+                var selected2 = topicFilter2(stringArray);
 
                 function populateSelect2() {
                     document.getElementById('sel_dis2').innerHTML = selected2.reduce((options, {ID,name}) =>
@@ -11088,11 +11084,11 @@
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
                 return (element.subtype !== "");
-                });  /// DROP those WITHOUT OPERATIONS
+                }); 
             let result1 = returnedData
-                .flatMap(item => item.topic) //"item.topic" gives us SPECIALTIES
+                .flatMap(item => item.topic)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
-                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";});
                 let resultsort1 = result1.sort()
                 var select = document.getElementById("select_cat");
                 var options = resultsort1;
@@ -11102,19 +11098,17 @@
                     el.textContent = opt;
                     el.value = opt;
                     }
-                //select.appendChild(el);
-            //console.log()   /// This gives us array with all features - when select1 is changed
             });
      
             $(document)
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
                 return (element.subtype !== "");
-                });  /// DROP those WITHOUT subtype
+                }); 
             let result1 = returnedData
-                .flatMap(item => item.subtype) //"item.ops" gives us OPERATIONS
+                .flatMap(item => item.subtype)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
-                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no ops
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";});
                 let resultOps = result1.sort()
                 var selectOps = document.getElementById("sel_cat");
                 var optionS = resultOps;
@@ -11134,7 +11128,7 @@
                             return this.text}).get().join('\',\'') + '\'';
                     var stringArray = (new Function("return [" + value + "];")());
                 });
-            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
+            });  
 
             $('#sel_cat').on('change', function() {
                 $('#selector_cat').fadeIn(500);
@@ -11155,7 +11149,7 @@
                         });
                     }
                 
-                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+                var selected2 = topicFilter2(stringArray); 
 
                 function populateSelect2() {
                     document.getElementById('sel_cat2').innerHTML = selected2.reduce((options, {ID,name}) =>
@@ -11180,7 +11174,7 @@
                 return (element.country !== "");
                 }); 
             let result1 = returnedData
-                .flatMap(item => item.topic) //"item.topic" needed
+                .flatMap(item => item.topic)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
                 let resultsort1 = result1.sort()
@@ -11192,19 +11186,17 @@
                     el.textContent = opt;
                     el.value = opt;
                     }
-                //select.appendChild(el);
-            //console.log()   /// This gives us array with all features - when select1 is changed
             });
      
             $(document)
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
                 return (element.country !== "");
-                });  /// DROP those WITHOUT country
+                });
             let result1 = returnedData
-                .flatMap(item => item.country) //"item.ops" gives us OPERATIONS
+                .flatMap(item => item.country)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
-                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no ops
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";});
                 let resultOps = result1.sort()
                 var selectOps = document.getElementById("sel_map");
                 var optionS = resultOps;
@@ -11224,7 +11216,7 @@
                             return this.text}).get().join('\',\'') + '\'';
                     var stringArray = (new Function("return [" + value + "];")());
                 });
-            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
+            });  
 
             $('#sel_map').on('change', function() {
                 $('#selector_map').fadeIn(500);
@@ -11268,9 +11260,9 @@
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
                 return (element.jrnls !== "");
-                });  /// DROP those WITHOUT 
+                }); 
             let result1 = returnedData
-                .flatMap(item => item.topic) //"item.topic" gives us SPECIALTIES
+                .flatMap(item => item.topic)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
                 let resultsort1 = result1.sort()
@@ -11282,19 +11274,17 @@
                     el.textContent = opt;
                     el.value = opt;
                     }
-                //select.appendChild(el);
-            //console.log()   /// This gives us array with all features - when select1 is changed
             });
      
             $(document)
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
                 return (element.jrnls !== "");
-                });  /// DROP those WITHOUT jrnls
+                }); 
             let result1 = returnedData
-                .flatMap(item => item.jrnls) //"item.ops" gives us OPERATIONS
+                .flatMap(item => item.jrnls)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
-                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no ops
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";});
                 let resultOps = result1.sort()
                 var selectOps = document.getElementById("sel_jrnls");
                 var optionS = resultOps;
@@ -11314,7 +11304,7 @@
                             return this.text}).get().join('\',\'') + '\'';
                     var stringArray = (new Function("return [" + value + "];")());
                 });
-            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
+            }); 
 
             $('#sel_jrnls').on('change', function() {
                 $('#selector_jrnls').fadeIn(500);
