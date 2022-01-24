@@ -441,7 +441,7 @@
                                     <div class="row align-items-center text-center">
                                         <div class="col" data-aos="fade-up" id="selector_jrnls" style="display:none">
                                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
-                                            <select id="sel_jrnls" class="selectpicker show-tick"
+                                            <select id="sel_jrnls2" class="selectpicker show-tick"
                                                     data-style="btn-light" data-header="Search list:" 
                                                     data-width="325px" data-size="6"
                                                     data-aos="zoom-in"
@@ -11267,7 +11267,7 @@
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
                 return (element.jrnls !== "");
-                });  /// DROP those WITHOUT OPERATIONS
+                });  /// DROP those WITHOUT 
             let result1 = returnedData
                 .flatMap(item => item.topic) //"item.topic" gives us SPECIALTIES
                 .filter((item, i, arr) => arr.indexOf(item) === i)
