@@ -302,9 +302,9 @@
                             <hr style="height:1px; visibility:hidden">
                                 <form method="POST">
                                     <div class="row align-items-center text-center">
-                                        <div class="col" data-aos="fade-up" id="select515" style="display:none">
+                                        <div class="col" data-aos="fade-up" id="selector_dis" style="display:none">
                                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
-                                            <select id="sel696" class="selectpicker show-tick"
+                                            <select id="sel_dis2" class="selectpicker show-tick"
                                                     data-style="btn-light" data-header="Search list:" 
                                                     data-width="325px" data-size="6"
                                                     data-aos="zoom-in"
@@ -11022,7 +11022,7 @@
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
                 return (element.disease !== "");
-                });  /// DROP those WITHOUT OPERATIONS
+                });  /// DROP those WITHOUT Disease
             let result1 = returnedData
                 .flatMap(item => item.disease) //"item.ops" gives us OPERATIONS
                 .filter((item, i, arr) => arr.indexOf(item) === i)
@@ -11049,7 +11049,7 @@
             });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
 
             $('#sel_ops').on('change', function() {
-                $('#select515').fadeIn(500);
+                $('#selector_dis').fadeIn(500);
                 let select ="";
                 $("#sel_dis").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
@@ -11058,7 +11058,7 @@
                 
                 function topicFilter2(taxonomy) {
                     const returnedData = $.grep(eponyms.features, function(element, index) {
-                        return (element.ops !== "");
+                        return (element.disease !== "");
                         });
                     taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
                     return returnedData.filter(item => {
@@ -11070,17 +11070,17 @@
                 var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
 
                 function populateSelect2() {
-                    document.getElementById('sel969').innerHTML = selected2.reduce((options, {ID,name}) =>
+                    document.getElementById('sel_dis2').innerHTML = selected2.reduce((options, {ID,name}) =>
                         options += `<option value="${ID}">${name}</option>`,
                         '<option value=""> -- select -- </option>'
                         );
                     }
             
                 populateSelect2()
-                $('#sel969').selectpicker('refresh');
+                $('#sel_dis2').selectpicker('refresh');
                 $('#sel_dis').on('change', function() {
                     $('#sel_dis').selectpicker('toggle'); //added to toggle open/close
-                    $('#sel969').selectpicker('refresh');
+                    $('#sel_dis2').selectpicker('refresh');
                     });
             });
 /// End Section - Diseases ///
