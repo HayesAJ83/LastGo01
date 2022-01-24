@@ -130,9 +130,9 @@
             <!-- Section -->
             
             <section id="section-2">
-                <div class="container text-center">  
+                <div class="container">  
                     <div class="row justify-content-center">
-                        <div class="col-lg-6">
+                        <div class="col">
                             <div class> 
                                 <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase">A to Z</h3>
                                 <h2 class="mb-5 fw-medium text-secondary text-uppercase">Search</h2>
@@ -759,8 +759,8 @@
             whereSearch:["Cincinnati, Ohio, USA", "Ohio, USA", "USA",], 
             country:["USA"], when:"1952",
             disease:["Rectal prolapse",],
-            ops:["EUA", "Rectal surgery",], 
-            opsSpec: {'Colorectal': ["EUA", "Rectal surgery",] }, 
+            ops:["EUA rectum", "Rectal surgery",], 
+            opsSpec: {'Colorectal': ["EUA ", "Rectal surgery",] }, 
             geometry: {type: 'MultiPoint', coordinates: [ -84.5035, 39.1375 ]},            //lng,lat
             properties: {title:'Altemeier procedure', description:'Cincinnati - Ohio<br>1952'},
             googlehtz:7800, //search: "Altemeier procedure" AND "prolapse" [22-Dec-21]
@@ -948,7 +948,7 @@
             who:"Leopold Auerbach", whoSearch:["Leopold Auerbach",], 
             where:"Wrocław - Poland",   //    whereSearch:["",],       
             country:["Poland"], when:"1863",
-            disease:["Achalasia","Hirschsprung's disease"], 
+            disease:["Achalasia",], 
             ops:["Cardiomyotomy","Endoscopy","Colonoscopy"],  
             opsSpec:{'Oesophagogastric': ['Cardiomyotomy', 'Colonoscopy', 'Endoscopy',] },
             geometry: { type: 'MultiPoint', coordinates: [ 17.033334, 51.113611 ]}, //lng,lat
@@ -1621,7 +1621,7 @@
             where:"Pok Fu Lam - Hong Kong", // whereSearch:["Pok Fu Lam, Hong Kong",],              
             country:["Hong Kong"], when:"1982", 
             disease:["Peptic ulcer disease",],  
-            ops:["Repair perforated ulcer",],
+            ops:["Perforated ulcer repair",],
             opsSpec:{'General Surgery': ['Repair perforated ulcer',],
                      'Oesophagogastric': ['Repair perforated ulcer',], }, 
             geometry: {type: 'MultiPoint', coordinates: [ 114.13115, 22.27006 ]},    //long,lat
@@ -1706,7 +1706,7 @@
             who:"Léon Bouveret", whoSearch:["Léon Bouveret",],
             where:"Lyon - France", //    whereSearch:["Lyon, France",],       
             country:["France"], when:"1896",
-            disease:["Gastric outlet obstruction",],   
+            disease:["Gastric outlet obstruction","Vomiting",],   
             ops:"",//["",],
             opsSpec:"",//{' ': [' ',], }, 
             geometry: {type: 'MultiPoint', coordinates: [ 4.836389, 45.758333 ]},  //long,lat
@@ -1747,7 +1747,7 @@
             where:"London - England", whereSearch:["London, England, UK", "England", "UK",], 
             country:["UK"], when:"1872", 
             disease:["Labour",], 
-            ops:["Caesarean section",], 
+            ops:["C-section / Caesarean section",], 
             opsSpec:{'Obstetrics': ['Caesarean section',], }, 
             geometry: {type: 'MultiPoint', coordinates: [ -0.086944, 51.503333 ]},  //long,lat
             properties: {title:"Braxton Hicks contractions", description:"Guy's Hospital - London<br>1872"},
@@ -2106,7 +2106,7 @@
             where:"Paris - France", whereSearch:["Paris", "France"],                
             country:["France"], when:"1891", 
             disease:["Cholecystitis", "Gallstones", "Jaundice",], 
-            ops:["Cholecystectomy",], 
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",], 
             opsSpec:{'HPB': ['Cholecystectomy', ], },
             geometry: {type: 'MultiPoint', coordinates: [ 2.34099, 48.85135 ]},   //lng,lat
             properties: {title:"Calot's triangle", description:'Paris<br>1891'},
@@ -3508,8 +3508,8 @@
             where:"Lecco - Italy",                   
             whereSearch:["Lecco, Italy", "Italy",],  
             country:["Italy"], when:"1982",  
-            disease:["Gallstones", "Urolithiasis",],
-            ops:["Cholecystectomy",],
+            disease:["Gallstones", "Urinary tract stones",],
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",],
             opsSpec:{'HPB': ['Cholecystectomy', ], },
             geometry: {type: 'MultiPoint', coordinates: [ 9.3901, 45.8532 ]}, //lng,lat
             properties: { title:"Dormia basket", description:'Lecco - Italy<br>1982'},
@@ -3556,7 +3556,7 @@
             where:"Redhill - England",            
             whereSearch:["Redhill, England, UK",],         
             when:"1866",   
-            disease:["Genetic conditions","Kidney stones",],  
+            disease:["Genetic conditions","Urinary tract stones",],  
             ops:"",//["",],
             opsSpec:"",//
             geometry: {type: 'MultiPoint', coordinates: [ -0.166944, 51.222778 ]}, //lng,lat
@@ -4021,7 +4021,7 @@
             whereSearch:["Pittsfield, Massachusetts, USA","Massachusetts", "USA",],
             country:["USA"], when:"2012",   
             disease:["Gallstones","Jaundice",], 
-            ops:["Cholecystectomy",], 
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy"], 
             opsSpec:{'HPB': ['Cholecystectomy', ], },
             geometry: {type: 'MultiPoint', coordinates: [ -73.249344 , 42.459655 ]}, //lng,lat
             properties: { title:"Fanelli catheter", description:'Pittsfield - Massachusetts<br>2012'},
@@ -5030,7 +5030,7 @@
             whereSearch:["Paris", "France",],                
             country:["France"], when:"1891",   
             disease:["Cholecystitis","Gallstones",],  
-            ops:["Cholecystectomy",],
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy"],
             opsSpec:{'General Surgery': ['Cholecystectomy', ], 
                      'HPB': ['Cholecystectomy', ], }, 
             geometry: {type: 'MultiPoint', coordinates: [ 2.3483 , 48.85441 ]}, //lng,lat
@@ -5158,7 +5158,7 @@
             who:"Walter von Heineke & Jan Mikulicz-Radecki",   //whoSearch:["",],
             where:"Germany (Heineke) & Poland (Mikulicz)",  //whereSearch:["",],               
             country:["Germany","Poland",], when:"1886",   
-            disease:["Gastric outlet obstruction",],  
+            disease:["Gastric outlet obstruction","Vomiting",],  
             ops:["Endoscopy", "Oesophagectomy",],
             opsSpec:{'Oesophagogastric': ['Endoscopy', 'Oesophagectomy', ], },
             geometry: {type: 'MultiPoint', coordinates: [ 11.012, 49.5897 ]}, //lng,lat
@@ -5205,7 +5205,7 @@
             where:"Helmstedt - Germany", whereSearch:["Helmstedt, Germany", "Germany",],               
             country:["Germany"], when:"1721",   
             disease:["Cholecystitis","Gallstones",], 
-            ops:["Cholecystectomy",], 
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",], 
             opsSpec:{'General Surgery': ['Cholecystectomy', ], 
                      'HPB': ['Cholecystectomy', ],},
             geometry: {type: 'MultiPoint', coordinates:[ 11.008682, 52.228881 ]}, //lng,lat
@@ -6132,7 +6132,7 @@
             where:"Bern - Switzerland", whereSearch:["Bern, Switzerland",],                 
             country:["Switzerland"], when:"1892",  
             disease:["Cholecystitis",],  
-            ops:["Cholecystectomy",],
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy"],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ 7.4245, 46.9473 ]}, //long,lat
             properties: { title:"Kocher's abdominal incision", description:'Bern - Switzerland<br>1892'},  
@@ -6512,7 +6512,7 @@
             who:"Frederick Li & Joseph Fraumeni", //whoSearch:["",],   
             where:"Bethesda - Maryland - USA", //whereSearch:["",],                 
             country:["USA"], when:"1969",   
-            disease:["Adrenocortical carcinoma", "Breast cancer","Sarcoma",], 
+            disease:["Adrenocortical carcinoma","Adrenal gland tumour","Breast cancer","Sarcoma",], 
             ops:["Mastectomy",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ -77.10775, 38.99955 ]}, //lng,lat
@@ -6680,7 +6680,7 @@
             whereSearch:["Boston, Massachusetts, USA", "Massachusetts", "USA",],           
             country:["USA"], when:"1930",   
             disease:["Cholecystitis","Gallbladder cancer",],  
-            ops:["Cholecystectomy",],
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ -71.07411 , 42.33441 ]}, //lng,lat
             properties: { title:"Lymph node of Lund", description:'Boston<br>1930'},
@@ -6725,7 +6725,7 @@
             whereSearch:["Tübingen, Baden-Württemberg, Germany",],              
             country:["Germany"], when:"1863",   
             disease:["Cholecystitis","Gallstones",],  
-            ops:["Cholecystectomy",],
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ 9.04818 , 48.52771 ]}, //long,lat
             properties: { title:"Ducts of Luschka", description:'Tübingen<br>1863' },
@@ -7376,7 +7376,7 @@
             where:"Córdoba - Argentina",                
             country:["Argentina"], when:"1948",   
             disease:["Cholecystitis","Gallstones", "Jaundice",],  
-            ops:["Cholecystectomy", "ERCP",],
+            ops:["Cholecystectomy", "ERCP","Laparoscopic cholecystectomy",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -64.184648, -31.439673 ]}, //long,lat
             properties: { title:"Mirizzi's syndrome", description:'Córdoba<br>1948'},
@@ -7461,7 +7461,7 @@
             //where:"", whereSearch:["",],           
             //when:"1970",   
             //disease:[" ", " ",],
-            //ops:["Cholecystectomy",],
+            //ops:["Cholecystectomy","Laparoscopic cholecystectomy",],
             //opsSpec:"",//{'Endocrine': ['',], },
             //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
             //properties: { title:"", description:' <br>1970'},
@@ -7590,7 +7590,7 @@
             where:"Chicago - Illinois - USA", //whereSearch:["  ",],                 
             when:"1912",   
             disease:["Cholecystitis",],
-            ops:["Cholecystectomy",],
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -87.621258, 41.846802 ]}, //long,lat
             properties: { title:"Murphy's sign", description:'Chicago - Illinois<br>1912'}, 
@@ -7634,7 +7634,7 @@
             who:"Don Nelson", //whoSearch:[" ",],    
             where:"Boston - Massachusetts - USA", //whereSearch:["",],           
             country:["USA"], when:"1958",   
-            disease:["Cushing's disease","Pituitary disease"],
+            disease:["Pituitary disease",],
             ops:["Adrenalectomy","Transsphenoidal pituitary surgery",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ -71.10448, 42.33572 ]}, //lng,lat
@@ -7784,7 +7784,7 @@
             where:"Nashville - Tennessee - USA",     //whereSearch:["",],            
             country:["USA"], when:"1990", 
             disease:["Jaundice",],    
-            ops:["Cholecystectomy",],
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -86.808967, 36.153745 ]}, //long,lat
             properties: { title:"Olsen-Reddick cholangiography clamp", description:'Nashville<br>1990'},
@@ -8201,7 +8201,7 @@
             where:"Wrocław - Poland",   //    whereSearch:["",],         
             country:["Poland"], when:"1900",   
             disease:["Labour",], 
-            ops:["C-section",],
+            ops:["C-section / Caesarean section",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ 17.034431, 51.113931 ]}, //long,lat
             properties: { title:"Pfannenstiel incision", description:'Wrocław - Poland<br>1900'},
@@ -8691,7 +8691,7 @@
             where:"Marburg - Germany", //whereSearch:["",],
             country:["Germany"], when:"1905",   
             disease:["Cholecystitis",], 
-            ops:["Cholecystectomy",], 
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",], 
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ 8.773611, 50.810833 ]}, //long,lat
             properties: { title:"Rokitansky-Aschoff sinuses", description:'Marburg - Germany<br>1905'},
@@ -8733,7 +8733,7 @@
             where:"Paris - France", whereSearch:["Paris", "France",],              
             country:["France"], when:"1924",   
             disease:"",//["",]
-            ops:["Cholecystectomy",], 
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",], 
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ 2.34121, 48.85074 ]}, //long,lat
             properties: { title:"Rouviere's sulcus", description:'Paris<br>1924'},
@@ -9392,7 +9392,7 @@
             where:"St Louis - Missouri - USA", whereSearch:["Missouri","USA",],                 
             country:["USA"], when:"1995",  
             disease:["Bile duct injury","Cholecystitis",], 
-            ops:["Cholecystectomy",],  
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",],  
             geometry: { type: 'MultiPoint', coordinates: [ -90.264959 , 38.634954 ]}, //lng,lat
             properties: { title:"Strasberg's critical view of safety", description:'St Louis - Missouri<br>1995'},
             //googlehtz: 0, //search: " " AND " " [02-Oct-21]
@@ -10289,7 +10289,7 @@
             who:"Lawrence Weiss", //whoSearch:["Lawrence Weiss",], 
             where:"Stanford - California - USA", whereSearch:[" ",],            
             country:["USA"], when:"1984", 
-            disease:["Adrenocortical carcinoma",], 
+            disease:["Adrenocortical carcinoma","Adrenal gland tumour",], 
             ops:["Adrenalectomy",],
             geometry: { type: 'MultiPoint', coordinates: [ -122.17510, 37.43307 ]}, //long,lat
             properties: { title:"Weiss grade", description:'California - USA<br>1984'},
@@ -10329,7 +10329,7 @@
             who:"Paul Wermer", //whoSearch:["Paul Wermer",], 
             where:"New York - USA", //whereSearch:[" ", " ",],            
             when:"1954", 
-            disease:["Multiple endocrine neoplasia","Pituitary disease","Hyperparathyroidism","Hypercalcaemia",],
+            disease:["Multiple endocrine neoplasia","Pituitary disease","Hyperparathyroidism","Hypercalcaemia","Urinary tract stones","Osteoporosis",],
             ops:["Pancreatic resection","Parathyroidectomy","Transsphenoidal pituitary surgery",],
             geometry: { type: 'MultiPoint', coordinates: [ -73.94281 , 40.84215 ]}, //long,lat
             properties: { title:"Wermer syndrome", description:'Presbyterian Hospital - New York<br>1954'},
@@ -10465,7 +10465,7 @@
             who:"Samuel Wilson", whoSearch:["Samuel Wilson",],            
             where:"Edinburgh - Scotland - UK", //whereSearch:["Edinburgh","UK",],            
             when:"1912",  
-            disease:["Kidney stones","Liver failure","Hypoparathyroidism",], 
+            disease:["Urinary tract stones","Liver failure","Hypoparathyroidism",], 
             ops:["Liver transplant","Nephrolithotomy",],
             geometry: { type: 'MultiPoint', coordinates: [ -3.19245, 55.94494 ]}, //long,lat
             properties: { title:"Wilson's disease", description:'Edinburgh<br>1912'},   
@@ -11350,15 +11350,7 @@
                     $('#sel_jrnls2').selectpicker('refresh');
                     });
             });
-    /// End Section - Journals ///
-
-
-
-
-
-
-
-
+        /// End Section - Journals ///
         </script>  
 
 
