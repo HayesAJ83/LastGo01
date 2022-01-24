@@ -11465,6 +11465,44 @@
         </script>
 
 
+<script>
+    function show_dis(id) {
+        
+        var imgName2 = document.getElementById('imgName_dis');
+        if (!id) {imgName2.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.features.length; i++) {
+            if  (Number(id) === eponyms.features[i].ID) {
+                imgName2.innerHTML = eponyms.features[i].imgName
+                                        ;}}}
+
+        var msg_dis = document.getElementById('msg_dis');
+        if (!id) {msg_dis.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.features.length; i++) {
+            if  (Number(id) === eponyms.features[i].ID) {
+                msg_dis.innerHTML = "<br>"+
+                                eponyms.features[i].who.bold()   +"<br>"+
+                                eponyms.features[i].when.bold()  +"<br>"+
+                                eponyms.features[i].where.bold() +"<br><br>"
+                                        ;}}}
+                                
+        var msg3_dis = document.getElementById('msg3_dis');
+        if (!id) {msg3_dis.innerHTML = "";
+        } else {
+            for (var i = 0; i < eponyms.features.length; i++) {
+            if  (Number(id) === eponyms.features[i].ID) {
+                msg3_dis.innerHTML = 
+                                eponyms.features[i].about +
+                                eponyms.features[i].refs +
+                                eponyms.features[i].URLs +
+                                eponyms.features[i].acknow
+            ;}}}                           
+        }
+ 
+</script>
+
+
         <script src="/static/assets/js/theme.js"></script>
 
     </body>
