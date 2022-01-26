@@ -1816,7 +1816,7 @@
             geometry: {type: 'MultiPoint', coordinates: [ -1.9396, 52.453 ]},     //lng,lat
             properties: {title:"Brooke ileostomy", description:'Birmingham - England<br>1952'},
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21] 
-            refs:"<br><p style='font-size: 20px'>Brooke BN. The management of an ileostomy, including its complications. <i>Lancet</i>. 1952; 2(6725): 102-104.br></p>",  
+            refs:"<br><p style='font-size: 20px'>Brooke BN. The management of an ileostomy, including its complications. <i>Lancet</i>. 1952; 2(6725): 102-104.</p>",  
             jrnls:["Lancet",], 
             imgName:"",//get new one from  gastroenterology <br><img src=\"../static/assets/img/profiles/Bryan_Nicholas_Brooke.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"",    //
@@ -2072,10 +2072,10 @@
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21] 
             refs:"",  
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Cajal.png\" class=\"card-img\" style=\"width:12rem;\">", //
+            imgName:"<br><img src=\"../static/assets/img/profiles/Cajal.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 16px'><i>This image is in the Public Domain.</i></p>", //Wikipedia
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Interstitial_cell_of_Cajal' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",   //wni doesn't have correct cell type
-            acknow:"<p style='font-size: 16px'><i>The image shown of Cajal is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"",
         //},{
             //type:'Feature',
             //ID:430, 
@@ -2114,10 +2114,10 @@
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"",  
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Jean-Francois_Calot.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"<br><img src=\"../static/assets/img/profiles/Jean-Francois_Calot.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 16px'><i>This image is in the Public Domain.</i></p>", //Wikipedia
             about:"", 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Cystohepatic_triangle' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/4023.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
-            acknow:"<p style='font-size: 16px'><i>The image shown of Calot is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"",
         },{
             type:'Feature',
             ID:440, 
@@ -3320,12 +3320,12 @@
             geometry: {type: 'MultiPoint', coordinates: [ 2.34355, 48.8395 ]}, //lng,lat
             properties: { title:"Delorme's procedure", description:'Paris<br>1900'},
             //googlehtz:0, //search: " " AND "  " [02-Oct-21]
-            refs:"<br><p style='font-size: 20px'>Delorme E. Sur le traitment des prolapsus du rectum totaux par l'excision de la muqueuse rectale ou recto-colique. <i>Bull Mem Soc Chir Paris</i>. 1900; 26: 499-518<br></p>",   
+            refs:"<br><p style='font-size: 20px'>Delorme E. Sur le traitment des prolapsus du rectum totaux par l'excision de la muqueuse rectale ou recto-colique. <i>Bull Mem Soc Chir Paris</i>. 1900; 26: 499-518<br></p>",
             jrnls:["Bull Mem Soc Chir Paris",],
             URLs:"<br><a href='http://www.whonamedit.com/synd.cfm/3193.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>",
-            imgName:"<br><img src=\"../static/assets/img/profiles/Edmond_Delorme.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Edmond_Delorme.png\" class=\"card-img\" style=\"width:12rem;\"><hr class='my-4'><p style='font-size: 16px'><i>This image is in the Public Domain.</i></p>",//Wikipédia
             about:"",
-            acknow:"<p style='font-size: 16px'><i>The image shown of Delorme is in the Public Domain and was sourced from Wikipédia.</i></p>",
+            acknow:"",
         },{ 
             type:'Feature',
             ID:960, 
@@ -3985,9 +3985,9 @@
             refs:"",  
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Fallopian_tube' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2636.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Gabriele_Falloppio.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"<br><img src=\"../static/assets/img/profiles/Gabriele_Falloppio.png\" class=\"card-img\" style=\"width:12rem;\"><hr class='my-4'><p style='font-size: 10px'><i>This image is in the Public Domain.</i></p>", //Wikipedia 
             about:"",
-            acknow:"<p style='font-size: 16px'><i>The image shown of Falloppio is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"",
         },{
             type:'Feature',
             ID:1560, 
@@ -11361,9 +11361,9 @@
                     for (var i = 0; i < eponyms.features.length; i++) {
                     if  (Number(id) === eponyms.features[i].ID) {
                         info.innerHTML =    "<br>"+
-                                           "<i>Who:  </i>"  +eponyms.features[i].who.bold()   +"<br>"+
-                                           "<i>When:  </i>" +eponyms.features[i].when.bold()  +"<br>"+
-                                           "<i>Where:  </i>"+eponyms.features[i].where.bold() +"<br><br>"+
+                                           "Who:  "  +eponyms.features[i].who.bold()   +"<br>"+
+                                           "When:  " +eponyms.features[i].when.bold()  +"<br>"+
+                                           "Where:  "+eponyms.features[i].where.bold() +"<br><br>"+
                                             eponyms.features[i].about +
                                             eponyms.features[i].refs +
                                             eponyms.features[i].URLs +
@@ -11389,9 +11389,9 @@
                     for (var i = 0; i < eponyms.features.length; i++) {
                     if  (Number(id) === eponyms.features[i].ID) {
                         msg_spec.innerHTML = "<br>"+
-                        "<i>Who:  </i>"  +eponyms.features[i].who.bold()   +"<br>"+
-                        "<i>When:  </i>" +eponyms.features[i].when.bold()  +"<br>"+
-                        "<i>Where:  </i>"+eponyms.features[i].where.bold() +"<br><br>"
+                        "Who:  "  +eponyms.features[i].who.bold()   +"<br>"+
+                        "When:  " +eponyms.features[i].when.bold()  +"<br>"+
+                        "Where:  "+eponyms.features[i].where.bold() +"<br><br>"
                                                 ;}}}
                                         
                 var msg3 = document.getElementById('msg3_spec');
@@ -11425,9 +11425,9 @@
                     for (var i = 0; i < eponyms.features.length; i++) {
                     if  (Number(id) === eponyms.features[i].ID) {
                         msg_ops.innerHTML = "<br>"+
-                        "<i>Who:  </i>"   +eponyms.features[i].who.bold()   +"<br>"+
-                        "<i>When:  </i>"  +eponyms.features[i].when.bold()  +"<br>"+
-                        "<i>Where:  </i>" +eponyms.features[i].where.bold() +"<br><br>"
+                        "Who:  "   +eponyms.features[i].who.bold()   +"<br>"+
+                        "When:  "  +eponyms.features[i].when.bold()  +"<br>"+
+                        "Where:  " +eponyms.features[i].where.bold() +"<br><br>"
                                                 ;}}}
                                         
                 var msg3_ops = document.getElementById('msg3_ops');
@@ -11462,9 +11462,9 @@
                     for (var i = 0; i < eponyms.features.length; i++) {
                     if  (Number(id) === eponyms.features[i].ID) {
                         msg_dis.innerHTML = "<br>"+
-                        "<i>Who:  </i>"  +eponyms.features[i].who.bold()   +"<br>"+
-                        "<i>When:  </i>" +eponyms.features[i].when.bold()  +"<br>"+
-                        "<i>Where:  </i>"+eponyms.features[i].where.bold() +"<br><br>"
+                        "Who:  "  +eponyms.features[i].who.bold()   +"<br>"+
+                        "When:  " +eponyms.features[i].when.bold()  +"<br>"+
+                        "Where:  "+eponyms.features[i].where.bold() +"<br><br>"
                                                 ;}}}
                                         
                 var msg3_dis = document.getElementById('msg3_dis');
@@ -11499,9 +11499,9 @@
                     for (var i = 0; i < eponyms.features.length; i++) {
                     if  (Number(id) === eponyms.features[i].ID) {
                         msg_cat.innerHTML = "<br>"+
-                        "<i>Who:  </i>"  +eponyms.features[i].who.bold()   +"<br>"+
-                        "<i>When:  </i>" +eponyms.features[i].when.bold()  +"<br>"+
-                        "<i>Where:  </i>"+eponyms.features[i].where.bold() +"<br><br>"
+                        "Who:  "  +eponyms.features[i].who.bold()   +"<br>"+
+                        "When:  " +eponyms.features[i].when.bold()  +"<br>"+
+                        "Where:  "+eponyms.features[i].where.bold() +"<br><br>"
                                                 ;}}}
                                         
                 var msg3_cat = document.getElementById('msg3_cat');
@@ -11536,9 +11536,9 @@
                     for (var i = 0; i < eponyms.features.length; i++) {
                     if  (Number(id) === eponyms.features[i].ID) {
                         msg_map.innerHTML = "<br>"+
-                        "<i>Who:  </i>"  +eponyms.features[i].who.bold()   +"<br>"+
-                        "<i>When:  </i>" +eponyms.features[i].when.bold()  +"<br>"+
-                        "<i>Where:  </i>"+eponyms.features[i].where.bold() +"<br><br>"
+                        "Who:  "  +eponyms.features[i].who.bold()   +"<br>"+
+                        "When:  " +eponyms.features[i].when.bold()  +"<br>"+
+                        "Where:  "+eponyms.features[i].where.bold() +"<br><br>"
                                                 ;}}}
                                         
                 var msg3_map = document.getElementById('msg3_map');
