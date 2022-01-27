@@ -64,9 +64,28 @@
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
 
+        <!-- Mapbox -->
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+        <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet"/>
+        
+        <!-- Load the `mapbox-gl-geocoder` plugin. -->
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
+
+        <style>
+            body { margin: 0; padding: 0; }
+            #map { position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
+            
+            .mapboxgl-popup-content {
+                text-align: center;
+                font-family: 'Open Sans', sans-serif;
+                }
+        </style>
+
     </head>
-
-
 
 
     <body>
@@ -376,6 +395,13 @@
                         </a>
                     </p>
                     <div class="collapse" id="collapseExample_Maps">
+
+                        <div class="container" style="height:380px">
+                            <div class="row align-items-center text-center">
+                                <div id="map" style="width: 92%; height:90%;">
+                            </div>
+                        </div>
+
                         <div class="col">  <!--<div class="card card-body">-->
                             <div class="row align-items-center text-center">
                                 <div class="col" data-aos="fade-up" id="select_map">
@@ -11596,6 +11622,170 @@
 
 
         <script src="/static/assets/js/theme.js"></script>
+
+
+        <script>
+
+            mapboxgl.accessToken = 'pk.eyJ1IjoiYWpoYXllczgzIiwiYSI6ImNrY2pqM2lvMDB4Z24ydG8zdDl0NTYwbTUifQ.2DKVfTAaE77XAXMpDeq_Pg';
+          
+            const bounds = [
+                [-168.9, -60], //southwest coord  [-168.4, -66],
+                [181, 76]  //northeast coord  [180, 85]
+            ]
+
+
+            const map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/dark-v10',
+                //https://api.mapbox.com/styles/v1/ajhayes83/ckvpe3wu534og14p36qyp9rf9.html?title=view&access_token=pk.eyJ1IjoiYWpoYXllczgzIiwiYSI6ImNrY2pqM2lvMDB4Z24ydG8zdDl0NTYwbTUifQ.2DKVfTAaE77XAXMpDeq_Pg&zoomwheel=true&fresh=true#5.96/51.711/-1.737
+                //'mapbox://styles/mapbox/light-v10', //navigation-night-v1 //light-v10 //'/satellite-v9', //'dark-v10',//'mapbox://styles/maryshaffer/cjh6yf7c30apg2sotfzmyf2je',
+                center: [-10, 90], //[10, 90],
+                zoom: -8.0, //-0.52
+                maxBounds: bounds,
+            });
+        
+            // Add the control to the map.
+            map.addControl(
+                new MapboxGeocoder({
+                    accessToken: mapboxgl.accessToken,
+                    mapboxgl: mapboxgl,
+                    })
+            );
+        
+            map.addControl(new mapboxgl.FullscreenControl());
+            map.addControl(new mapboxgl.NavigationControl());
+           
+            map.on('load', () => {
+                // set the 'cluster' option to true. GL-JS will
+                // add the point_count property to your source data.
+                map.addSource('earthquakes', {
+                    type: 'geojson',
+                    data: eponyms,
+                    cluster: true,
+                    clusterMaxZoom: 12, // Max zoom to cluster points on
+                    clusterRadius: 35 // Radius of each cluster when clustering points (defaults to 50)
+                });
+        
+                map.addLayer({
+                    id: 'clusters',
+                    type: 'circle',
+                    source: 'earthquakes',
+                    filter: ['has', 'point_count'],
+                    paint: {
+                        // Use step expressions (https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-step)
+                        // with three steps to implement three types of circles:
+                        //   * Blue, 20px circles when point count is less than 10
+                        //   * Yellow, 30px circles when point count is between 10 and 20
+                        //   * Pink, 40px circles when point count is greater than or equal to 20
+                        'circle-color': [
+                            'step',
+                            ['get', 'point_count'],
+                            '#FFFF00', //blue 51bbd6
+                            10,
+                            '#FFFF00', //yellow #f1f075
+                            15,
+                            '#FFFF00' //red f28cb1// yellow f1f075
+                        ],
+                        'circle-radius': [
+                            'step',
+                            ['get', 'point_count'],
+                            10,  //radius 10 at 2-10  
+                            10,  //2-10
+                            14,  //radius 14 at 10-20
+                            20,  //10-20
+                            18,  //radius 18 at >20
+                        ]
+                    }
+                });
+        
+                map.addLayer({
+                    id: 'cluster-count',
+                    type: 'symbol',
+                    source: 'earthquakes',
+                    filter: ['has', 'point_count'],
+                    layout: {
+                        'text-field': '{point_count_abbreviated}',
+                        'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
+                        'text-size': 11
+                    }
+                });
+        
+                map.addLayer({
+                    id: 'unclustered-point',
+                    type: 'circle',
+                    source: 'earthquakes',
+                    filter: ['!', ['has', 'point_count']],
+                    paint: {
+                        'circle-color': '#FFFF00', //blue 11b4da
+                        'circle-radius': 8,
+                        'circle-stroke-width': 1,
+                        'circle-stroke-color': '#000000'//'#fff'
+                    }
+                });
+        
+                // inspect a cluster on click
+                map.on('click', 'clusters', (e) => {
+                    const features = map.queryRenderedFeatures(e.point, {
+                        layers: ['clusters']
+                    });
+                    const clusterId = features[0].properties.cluster_id;
+                    map.getSource('earthquakes').getClusterExpansionZoom(
+                        clusterId,
+                        (err, zoom) => {
+                            if (err) return;
+        
+                            map.easeTo({
+                                center: features[0].geometry.coordinates,
+                                zoom: zoom
+                            });
+                        }
+                    );
+                });
+        
+                var popup = new mapboxgl.Popup({
+                    closeOnClick: false,
+                    offset: [0, -8]
+                    })
+        
+                // When a click event occurs on a feature in
+                // the unclustered-point layer, open a popup at
+                // the location of the feature, with
+                // description HTML from its properties.
+                map.on('mouseenter', 'unclustered-point', (e) => {
+        
+                    map.getCanvas().style.cursor = 'pointer';
+        
+                    const coordinates = e.features[0].geometry.coordinates.slice();
+                    const mag = e.features[0].properties.title;
+                    const tsunami = e.features[0].properties.description;
+        
+                    // Ensure that if the map is zoomed out such that
+                    // multiple copies of the feature are visible, the
+                    // popup appears over the copy being pointed to.
+                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                    }
+          
+                    popup
+                        .setLngLat(coordinates)
+                        .setHTML(`${mag}<br>${tsunami}`)
+                        .addTo(map);
+                    });
+                
+                map.on('mouseleave', 'unclustered-point', (e) => {
+                    map.getCanvas().style.cursor = '';
+                    popup.remove()
+                });
+        
+                map.on('mouseenter', 'clusters', () => {
+                    map.getCanvas().style.cursor = 'pointer';
+                });
+                map.on('mouseleave', 'clusters', () => {
+                    map.getCanvas().style.cursor = '';
+                });
+            });
+        </script>
+
 
     </body>
 </html>
