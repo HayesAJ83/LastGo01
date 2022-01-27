@@ -129,32 +129,32 @@
 
             <!-- Section -->
             
-            <section id="section-2">
-                <div class="container text-center">  
+            <section id="section-2" class="text-center">
+                <div class="container">  
                     <div class="row justify-content-center">
-                        <div class="col-lg-6">
-                        <div class> 
-                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase">A to Z</h3>
-                            <h2 class="mb-5 fw-medium text-secondary text-uppercase">Search</h2>
-                            <p>If you have a particular eponym in mind, try searching for it here.</p>
-                        </div>
-                        <div class="col" data-aos="zoom-in" id="select_A2Z">
-                            <select id="sel_A2Z" class="selectpicker"
-                                    data-style="btn-primary" 
-                                    data-width="320px" data-size="4"
-                                    data-aos="zoom-in"
-                                    data-container="body"
-                                    data-live-search="true" onchange="show(this.value);">
-                                    <option value=""> Search... </option>
-                            </select>
-                            <div class="lead" id='imgName'></div>
-                            <p class="lead" id="info"></p>
-                            <p></p>
-                            <p></p>
+                        <div class="col">
+                            <div class> 
+                                <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase">A to Z</h3>
+                                <h2 class="mb-5 fw-medium text-secondary text-uppercase">Search</h2>
+                                <p>If you have a particular eponym in mind, try searching for it here.</p>
+                            </div>
+                            <br>
+                            <div class="col" id="select_A2Z">
+                                <select id="sel_A2Z"
+                                        data-style="btn-primary" class="selectpicker"
+                                        data-width="320px" data-size="4"
+                                        data-aos="zoom-in"
+                                        data-container="body"
+                                        data-live-search="true" onchange="show(this.value)">
+                                        <option value=""> Search... </option>
+                                </select>
+                                <P class="lead" id='imgName_A2Z'></P>
+                                <p class="lead" id="info_A2Z"></p>
+                            </div>
                         </div>
                     </div>
                     <div class="move d-none d-lg-block">
-                        <a href="#section-3" class="text-navy font-weight-bold" data-smooth-scroll data-smooth-scroll-hash="false">
+                        <a href="#section-4" class="text-navy font-weight-bold" data-smooth-scroll data-smooth-scroll-hash="false">
                             <i class="zmdi zmdi-long-arrow-down zmdi-hc-2x"></i>
                         </a>
                     </div>
@@ -162,6 +162,7 @@
             </section>
             <!-- End of Section -->
 
+                   
             <!-- Section -->
             <section class="py-5 py-lg-7 bg-primary text-white" id="section-3">
                 <div class="container">
@@ -189,10 +190,8 @@
                     <h2 class="mb-5 fw-medium text-secondary text-uppercase">Explorer</h2>
                     <p>Explore eponymous surgical terms through these intuitive links.</p>
                     <br>
-
-                    <!--
                     <p>
-                        <a class="btn btn-light" data-toggle="collapse" href="#collapseExample_Specialties" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_Specialties" role="button" aria-expanded="false" aria-controls="collapseExample">
                         Specialties
                         </a>
                     </p>
@@ -201,11 +200,11 @@
                             <div class="row align-items-center text-center">
                                 <div class="col" data-aos="fade-up" id="select_specialties">
                                     <select id="sel_specialties" class="selectpicker show-tick"
-                                            data-style="btn-primary" data-header="Search list:" 
+                                            data-style="btn-light" data-header="Search list:" 
                                             data-width="325px" data-size="6"
                                             data-aos="zoom-in"
                                             data-container="body"
-                                            data-live-search="true";">
+                                            data-live-search="true">
                                             <option value=""> -- select -- </option>
                                     </select>
                                 </div>
@@ -217,43 +216,40 @@
                                     <div class="col" data-aos="fade-up" id="select5" style="display:none">
                                         <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                                         <select id="sel9" class="selectpicker show-tick"
-                                                data-style="btn-primary" data-header="Search list:" 
+                                                data-style="btn-light" data-header="Search list:" 
                                                 data-width="325px" data-size="6"
                                                 data-aos="zoom-in"
                                                 data-container="body"
-                                                data-live-search="true" onchange="show2(this.value);">
+                                                data-live-search="true" onchange="show2(this.value)">
                                                 <option value=""> -- select -- </option>
                                         </select>
                                     </div>
                                 </div>
                             </form>
                             <div class="row align-items-center text-center" id='blurb'>
-                                <div class="lead" id='imgName2'></div>
-                                <p class="lead" id="msg2"></p>
-                                <p class="lead" id="msg3"></p>
+                                <div class="lead" id='imgName_spec'></div>
+                                <p class="lead" id="msg_spec"></p>
+                                <p class="lead" id="msg3_spec"></p>
                             </div>
                             <br>
                             <hr class='my-4'>
                         </div>
-                    </div> -->
-                    
-
-
+                    </div>
                     <p>
-                        <a class="btn btn-light" id="link_ops" data-toggle="collapse" href="#collapseExample_Operations" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <a class="btn btn-primary" id="link_ops" data-toggle="collapse" href="#collapseExample_Operations" role="button" aria-expanded="false" aria-controls="collapseExample">
                         Operations
                         </a>
                     </p>
                     <div class="collapse" id="collapseExample_Operations">
                         <div class="col">  
                             <div class="row align-items-center text-center">
-                                <div class="col" data-aos="fade-up" id="select3">
-                                    <select id="sel300" class="selectpicker show-tick"
-                                            data-style="btn-primary" data-header="Search list:" 
+                                <div class="col" data-aos="fade-up" id="select_ops">
+                                    <select id="sel_ops" class="selectpicker show-tick"
+                                            data-style="btn-light" data-header="Search list:" 
                                             data-width="325px" data-size="6"
                                             data-aos="zoom-in"
                                             data-container="body"
-                                            data-live-search="true";">
+                                            data-live-search="true">
                                             <option value=""> -- select -- </option>
                                     </select>
                                 </div>
@@ -262,118 +258,167 @@
                             <hr style="height:1px; visibility:hidden">
                                 <form method="POST">
                                     <div class="row align-items-center text-center">
-                                        <div class="col" data-aos="fade-up" id="select15" style="display:none"> <!--works-->
+                                        <div class="col" data-aos="fade-up" id="select15" style="display:none">
                                             <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
                                             <select id="sel69" class="selectpicker show-tick"
-                                                    data-style="btn-primary" data-header="Search list:" 
+                                                    data-style="btn-light" data-header="Search list:" 
                                                     data-width="325px" data-size="6"
                                                     data-aos="zoom-in"
                                                     data-container="body"
-                                                    data-live-search="true" onchange="show2(this.value);">
+                                                    data-live-search="true" onchange="show_ops(this.value);">
                                                     <option value=""> -- select -- </option>
                                             </select>
                                         </div>
                                     </div>
                                 </form>
                             <div class="row align-items-center text-center" id='blurb'>
-                                <div class="lead" id='imgName2'></div>
-                                <p class="lead" id="msg2"></p>
-                                <p class="lead" id="msg3"></p>
+                                <div class="lead" id='imgName_ops'></div>
+                                <p class="lead" id="msg_ops"></p>
+                                <p class="lead" id="msg3_ops"></p>
                             </div>
                             <br>
                             <hr class='my-4'>
                         </div>
                     </div>
-
-
-
-
                     <p>
-                        <a class="btn btn-light" data-toggle="collapse" href="#collapseExample_Diseases" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_Diseases" role="button" aria-expanded="false" aria-controls="collapseExample">
                         Diseases & Symptoms
                         </a>
                     </p>
                     <div class="collapse" id="collapseExample_Diseases">
                         <div class="col">  <!--<div class="card card-body">-->
                             <div class="row align-items-center text-center">
-                                <div class="col" data-aos="fade-up" id="select3">
-                                    <!--<h1 class="text-black mb-2 fs-1" style="height:30px">Diseases & Symptoms</h1>-->
-                                    <select id="sel" class="selectpicker show-tick"
-                                            data-style="btn-primary" data-header="Search list:" 
+                                <div class="col" data-aos="fade-up" id="select_dis">
+                                    <select id="sel_dis" class="selectpicker show-tick"
+                                            data-style="btn-light" data-header="Search list:" 
                                             data-width="325px" data-size="6"
                                             data-aos="zoom-in"
                                             data-container="body"
-                                            data-live-search="true";">
+                                            data-live-search="true">
                                             <option value=""> -- select -- </option>
                                     </select>
-                                    <p></p>
-                                    <p></p>
-                                    <p></p>
                                 </div>
+                            </div>
+                            <p></p>
+                            <hr style="height:1px; visibility:hidden">
+                                <form method="POST">
+                                    <div class="row align-items-center text-center">
+                                        <div class="col" data-aos="fade-up" id="selector_dis" style="display:none">
+                                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
+                                            <select id="sel_dis2" class="selectpicker show-tick"
+                                                    data-style="btn-light" data-header="Search list:" 
+                                                    data-width="325px" data-size="6"
+                                                    data-aos="zoom-in"
+                                                    data-container="body"
+                                                    data-live-search="true" onchange="show_dis(this.value);">
+                                                    <option value=""> -- select -- </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            <div class="row align-items-center text-center" id='blurb'>
+                                <div class="lead" id='imgName_dis'></div>
+                                <p class="lead" id="msg_dis"></p>
+                                <p class="lead" id="msg3_dis"></p>
                             </div>
                             <br>
                             <hr class='my-4'>
                         </div>
                     </div>
-
                     <p>
-                        <a class="btn btn-light" data-toggle="collapse" href="#collapseExample_Categories" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_Categories" role="button" aria-expanded="false" aria-controls="collapseExample">
                         Categories
                         </a>
                     </p>
                     <div class="collapse" id="collapseExample_Categories">
                         <div class="col">  <!--<div class="card card-body">-->
                             <div class="row align-items-center text-center">
-                                <div class="col" data-aos="fade-up" id="select_cats">
-                                    <!--<h1 class="text-black mb-2 fs-1" style="height:30px">Categories</h1>-->
-                                    <select id="sel" class="selectpicker show-tick"
-                                            data-style="btn-primary" data-header="Search list:" 
+                                <div class="col" data-aos="fade-up" id="select_cat">
+                                    <select id="sel_cat" class="selectpicker show-tick"
+                                            data-style="btn-light" data-header="Search list:" 
                                             data-width="325px" data-size="6"
                                             data-aos="zoom-in"
                                             data-container="body"
-                                            data-live-search="true";">
+                                            data-live-search="true">
                                             <option value=""> -- select -- </option>
                                     </select>
-                                    <p></p>
-                                    <p></p>
-                                    <p></p>
                                 </div>
+                            </div>
+                            <p></p>
+                            <hr style="height:1px; visibility:hidden">
+                                <form method="POST">
+                                    <div class="row align-items-center text-center">
+                                        <div class="col" data-aos="fade-up" id="selector_cat" style="display:none">
+                                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
+                                            <select id="sel_cat2" class="selectpicker show-tick"
+                                                    data-style="btn-light" data-header="Search list:" 
+                                                    data-width="325px" data-size="6"
+                                                    data-aos="zoom-in"
+                                                    data-container="body"
+                                                    data-live-search="true" onchange="show_cats(this.value);">
+                                                    <option value=""> -- select -- </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            <div class="row align-items-center text-center" id='blurb'>
+                                <div class="lead" id='imgName_cat'></div>
+                                <p class="lead" id="msg_cat"></p>
+                                <p class="lead" id="msg3_cat"></p>
                             </div>
                             <br>
                             <hr class='my-4'>
                         </div>
                     </div>
-
                     <p>
-                        <a class="btn btn-light" data-toggle="collapse" href="#collapseExample_Maps" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_Maps" role="button" aria-expanded="false" aria-controls="collapseExample">
                         World Maps
                         </a>
                     </p>
                     <div class="collapse" id="collapseExample_Maps">
                         <div class="col">  <!--<div class="card card-body">-->
                             <div class="row align-items-center text-center">
-                                <div class="col" data-aos="fade-up" id="select3">
-                                    <!--<h1 class="text-black mb-2 fs-1" style="height:30px">Countries</h1>-->
-                                    <select id="sel" class="selectpicker show-tick"
-                                            data-style="btn-primary" data-header="Search list:" 
+                                <div class="col" data-aos="fade-up" id="select_map">
+                                    <select id="sel_map" class="selectpicker show-tick"
+                                            data-style="btn-light" data-header="Search list:" 
                                             data-width="325px" data-size="6"
                                             data-aos="zoom-in"
                                             data-container="body"
-                                            data-live-search="true";">
+                                            data-live-search="true">
                                             <option value=""> -- select -- </option>
                                     </select>
-                                    <p></p>
-                                    <p></p>
-                                    <p></p>
                                 </div>
+                            </div>
+                            <p></p>
+                            <hr style="height:1px; visibility:hidden">
+                                <form method="POST">
+                                    <div class="row align-items-center text-center">
+                                        <div class="col" data-aos="fade-up" id="selector_map" style="display:none">
+                                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
+                                            <select id="sel_map2" class="selectpicker show-tick"
+                                                    data-style="btn-light" data-header="Search list:" 
+                                                    data-width="325px" data-size="6"
+                                                    data-aos="zoom-in"
+                                                    data-container="body"
+                                                    data-live-search="true" onchange="show_map(this.value);">
+                                                    <option value=""> -- select -- </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            <div class="row align-items-center text-center" id='blurb'>
+                                <div class="lead" id='imgName_map'></div>
+                                <p class="lead" id="msg_map"></p>
+                                <p class="lead" id="msg3_map"></p>
                             </div>
                             <br>
                             <hr class='my-4'>
                         </div>
                     </div>
 
+
                     <p>
-                        <a class="btn btn-light" data-toggle="collapse" href="#collapseExample_Jrnls" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_Jrnls" role="button" aria-expanded="false" aria-controls="collapseExample">
                         Journals
                         </a>
                     </p>
@@ -381,25 +426,42 @@
                         <div class="col">  <!--<div class="card card-body">-->
                             <div class="row align-items-center text-center">
                                 <div class="col" data-aos="fade-up" id="select_jrnls">
-                                    <!--<h1 class="text-black mb-2 fs-1" style="height:30px">Journals</h1>-->
-                                    <select id="sel" class="selectpicker show-tick"
-                                            data-style="btn-primary" data-header="Search list:" 
+                                    <select id="sel_jrnls" class="selectpicker show-tick"
+                                            data-style="btn-light" data-header="Search list:" 
                                             data-width="325px" data-size="6"
                                             data-aos="zoom-in"
                                             data-container="body"
-                                            data-live-search="true";">
+                                            data-live-search="true">
                                             <option value=""> -- select -- </option>
                                     </select>
-                                    <p></p>
-                                    <p></p>
-                                    <p></p>
                                 </div>
+                            </div>
+                            <p></p>
+                            <hr style="height:1px; visibility:hidden">
+                                <form method="POST">
+                                    <div class="row align-items-center text-center">
+                                        <div class="col" data-aos="fade-up" id="selector_jrnls" style="display:none">
+                                            <h1 class="text-black mb-2 fs-1" style="height:30px">Eponyms</h1>
+                                            <select id="sel_jrnls2" class="selectpicker show-tick"
+                                                    data-style="btn-light" data-header="Search list:" 
+                                                    data-width="325px" data-size="6"
+                                                    data-aos="zoom-in"
+                                                    data-container="body"
+                                                    data-live-search="true" onchange="show_jrnls(this.value);">
+                                                    <option value=""> -- select -- </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            <div class="row align-items-center text-center" id='blurb'>
+                                <div class="lead" id='imgName_jrnls'></div>
+                                <p class="lead" id="msg_jrnls"></p>
+                                <p class="lead" id="msg3_jrnls"></p>
                             </div>
                             <br>
                             <hr class='my-4'>
                         </div>
                     </div>
-                </div>
             </section>
             <!-- End of Section -->
 
@@ -460,6 +522,13 @@
         <script src="https://d3js.org/d3.v4.js"></script>
 
 
+        <!-- 
+            Sound - Howler.js sound
+            Powerpoint Reveal.js
+            Nice 2d pixi.js
+
+
+        -->
 
         <script>
             const eponyms = {
@@ -547,10 +616,10 @@
             googlehtz:35500, //search: "Artery of Adamkiewicz" [20-Dec-21]
             refs:"",  
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Adamkiewicz.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Adamkiewicz.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>",
             about:"<br><p style='font-size: 20px'>The artery of Adamkiewicz is known by other terms, including arteria radicularis magna. This vessel is a major contributor to the anterior spinal artery which gives arterial supply to the lumbar and sacral cord and nerves.<br>The artery of Adamkiewicz arises from intercostal arteries which branch from the thoraco-abdominal aorta.</p>", 
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image shown of Adamkiewicz is in the Public Domain and was sourced from Wikipedia.</i></p>",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Artery_of_Adamkiewicz' target='_blank' class='btn btn-info' role='button'>Wikipedia</a><a href='https://www.whonamedit.com/synd.cfm/2233.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
+            acknow:"",
         },{
             type:'Feature',
             ID:20, 
@@ -569,9 +638,9 @@
             refs:"<br><p style='font-size: 20px'>Addison T. On the constitutional and local effects of disease of the supra-adrenal capsules. London : Samuel Highley, 1855</p>",   
             jrnls:"",//["",]
             URLs:"<br><a href='https://wellcomecollection.org/works/xsmzqpdw/items?canvas=1' target='_blank' class='btn btn-secondary' role='button'>Original Textbook</a> <a href='https://en.wikipedia.org/wiki/Addison%27s_disease' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/92.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>", //https://archive.org/details/b21298786/page/n1/mode/2up
-            imgName:"<br><img src=\"../static/assets/img/profiles/Addison_Thomas.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"<br><img src=\"../static/assets/img/profiles/Addison_Thomas.jpg\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>",
             about:"", 
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Addison was sourced from Wikipedia and is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>",   
+            acknow:"",   
         },{
             type:'Feature',
             ID:25, 
@@ -633,10 +702,10 @@
             googlehtz:32600, //search: "Allis forceps" [02-Oct-21]
             refs:"",  
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/Allis.jpg\" class=\"card-img\" style=\"width:22rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/Allis.jpg\" class=\"card-img\" style=\"width:22rem;\"><p style='font-size: 10px'><i><br>These images were sourced from <a href='https://wellnessrounds.org/2016/10/24/the-tools-we-hold-the-allis-clamp/' target='_blank'>wellnessrounds.org</a></i></p>",
             about:"",//, 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Allis_clamp' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/183.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of the Allis forceps and Allis the surgeon was sourced from <a href='https://wellnessrounds.org/2016/10/24/the-tools-we-hold-the-allis-clamp/' target='_blank'>wellnessrounds.org</a></i></p>",
+            acknow:"",
         },{ 
             type:'Feature',
             ID:50, 
@@ -654,10 +723,10 @@
             googlehtz:3190, //search: "allison lung retractor" [21-Dec-21]
             refs:"", 
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/Allison_Retractor.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/Allison_Retractor.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>Thanks to Mr Alastair Hayes FRCS for this image.<i></p>",
             about:"<br>The Allison lung retractor is a handheld device used for retracting lung tissue. It has a solid handle and a fixed wire spatula working surface which is covered with a sterile fabric material.<br>",
             URLs:"<br><a href='https://www.nds.ox.ac.uk/about-us/our-history/philip-allison' target='_blank' class='btn btn-dark' role='button'>Obituary</a><br>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>Thanks to Mr Alastair Hayes FRCS for this image of an Allison lung retractor.<i></p>",
+            acknow:"",
         },{
             type:'Feature',
             ID:60, 
@@ -691,17 +760,17 @@
             whereSearch:["Cincinnati, Ohio, USA", "Ohio, USA", "USA",], 
             country:["USA"], when:"1952",
             disease:["Rectal prolapse",],
-            ops:["EUA", "Rectal surgery",], 
-            opsSpec: {'Colorectal': ["EUA", "Rectal surgery",] }, 
+            ops:["EUA rectum", "Rectal surgery",], 
+            opsSpec: {'Colorectal': ["EUA ", "Rectal surgery",] }, 
             geometry: {type: 'MultiPoint', coordinates: [ -84.5035, 39.1375 ]},            //lng,lat
             properties: {title:'Altemeier procedure', description:'Cincinnati - Ohio<br>1952'},
             googlehtz:7800, //search: "Altemeier procedure" AND "prolapse" [22-Dec-21]
             refs:"<br><p style='font-size: 20px'>Altemeier WA, Giuseffi J, Hoxworth P. Treatment of extensive prolapse of the rectum in aged or debilitated patients. <i>AMA Arch Surg</i>. 1952; 62(1): 72-80<br><br>Altemeier WA, Culbertson WR, Alexander JW. One-stage perineal repair of rectal prolapse. Twelve years' experience. <i>Arch Surg</i>. 1964; 89: 6-16<br></p>",   
             jrnls:["Arch Surg","Archives of Surgery","AMA Arch Surg",], 
-            imgName:"<br><img src=\"../static/assets/img/profiles/Altemeier.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Altemeier.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image was sourced from <a href='https://libapps.libraries.uc.edu/liblog/2019/04/a-brief-introduction-of-dr-william-a-altemeier/' target='_blank'>The University of Cincinnati Libraries</a>.<i></p>",
             about:"<br><p style='font-size: 20px'>The operation is a rectosigmoidectomy via a perineal approach.<br><br></p>",//,
             URLs:"<br><a href='https://jamanetwork.com/journals/jamasurgery/article-abstract/562520' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a>", //no wiki   // no WNI
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Altemeier was sourced from <a href='https://libapps.libraries.uc.edu/liblog/2019/04/a-brief-introduction-of-dr-william-a-altemeier/' target='_blank'>The University of Cincinnati Libraries</a>.<i></p>", 
+            acknow:"", 
         },{  
             type:'Feature',
             ID:75, 
@@ -762,10 +831,10 @@
             properties: {title:'Amyand hernia', description:'London<br>1735'},    
             refs:"<br><p style='font-size: 20px'>Amyand C. 1735 VIII. Of an inguinal rupture, with a pin in the appendix coeci, incrusted with stone; and some observations on wounds in the guts. <i>Phil Trans R Soc</i>. 39; 329-342</p>",    
             jrnls:["Phil Trans R Soc","Philosophical Transactions of the Royal Society",],
-            imgName:"<br><img src=\"../static/assets/img/profiles/Claudius_Amyand.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Claudius_Amyand.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image was sourced from <a href='http://www.artnet.com/artists/thomas-gainsborough/portrait-of-claudius-amyand-wearing-a-blue-coat-HLOVu-zP7GB01ksXTrJwBQ2' target='_blank'>Artnet</a>.<i></p>",
             about:"<b><p style='font-size: 20px'>An inguinal hernia in which the appendix is contained within the herniating sac</b>.<br><br>Claudius Amyand reported the case of an 11 year old boy who presented to St. George's Hospital (near Hyde Park Corner at that time) with a discharging fistula between the scrotum and right thigh. <br><br>He describes amputating the perforated appendix by securing a ligature around healthy part of the proximal appendix, and leaving a stump which was returned to the abdomen. The hernia sac was excised, and the fistulous tract was debrided and left open to drain.</p>", 
             URLs:"<br><a href='https://royalsocietypublishing.org/doi/pdf/10.1098/rstl.1735.0071' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://en.wikipedia.org/wiki/Amyand%27s_hernia' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2689.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image shown of Amyand was sourced from <a href='http://www.artnet.com/artists/thomas-gainsborough/portrait-of-claudius-amyand-wearing-a-blue-coat-HLOVu-zP7GB01ksXTrJwBQ2' target='_blank'>Artnet</a>.<br>Thanks to Mr Alastair J Hayes FRCSEd who contributed the above information.<br><i></p>",  //
+            acknow:"<p style='font-size: 16px'><i><br>Thanks to Mr Alastair J Hayes FRCSEd who contributed the above information.<i></p>",
         },{ 
             type:'Feature',
             ID:90, 
@@ -880,7 +949,7 @@
             who:"Leopold Auerbach", whoSearch:["Leopold Auerbach",], 
             where:"Wrocław - Poland",   //    whereSearch:["",],       
             country:["Poland"], when:"1863",
-            disease:["Achalasia","Hirschsprung's disease"], 
+            disease:["Achalasia",], 
             ops:["Cardiomyotomy","Endoscopy","Colonoscopy"],  
             opsSpec:{'Oesophagogastric': ['Cardiomyotomy', 'Colonoscopy', 'Endoscopy',] },
             geometry: { type: 'MultiPoint', coordinates: [ 17.033334, 51.113611 ]}, //lng,lat
@@ -1111,10 +1180,10 @@
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"",// 
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Bassini.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Bassini.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a> and sourced from the <a href='https://wellcomecollection.org/works/b4862ghq' target='_blank'>Wellcome Collection</a><i></p>",
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Edoardo_Bassini' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/3961.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Bassini is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a> and sourced from the <a href='https://wellcomecollection.org/works/b4862ghq' target='_blank'>Wellcome Collection</a><i></p>",   
+            acknow:"",   
         },{ 
             type:'Feature',
             ID:190, 
@@ -1132,10 +1201,10 @@
             //googlehtz: 0, //search: "  " AND " " [02-Oct-21]
             refs:"<br><p style='font-size: 20px'>Buzzard T. Modified incision for removal of the vermiform appendix. Presented by Mr Battle, Clinical Society of London - Clinical Evening. <i>Br Med J</i>. 1895; 2: 1360.<br></p>",   
             jrnls:["Br Med J", "BMJ", "British Medical Journal"],
-            imgName:"<br><img src=\"../static/assets/img/profiles/William_Henry_Battle.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/William_Henry_Battle.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image was sourced from <a href='https://www.findagrave.com/memorial/116479606/william-henry-battle' target='_blank'>Find a Grave®</a>.<i></p>",
             about:"",
             URLs:"<br><a href='https://www.whonamedit.com/synd.cfm/2974.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>",  //"<br><a href='#' target='_blank' class='btn btn-secondary' role='button'></a><br>", //no wiki //https://livesonline.rcseng.ac.uk/client/en_GB/lives/search/detailnonmodal/ent:$002f$002fSD_ASSET$002f0$002fSD_ASSET:376003/one?qu=%22RCS%3A+E003820%22&rt=false%7C%7C%7CIDENTIFIER%7C%7C%7CResource+Identifier,  
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Battle was sourced from <a href='https://www.findagrave.com/memorial/116479606/william-henry-battle' target='_blank'>Find a Grave®</a>.<i></p>",  //
+            acknow:"",  //
         },{ 
             type:'Feature',
             ID:200, 
@@ -1153,10 +1222,10 @@
             //googlehtz:0, //search: " " [02-Oct-21]
             refs:"<br><p style='font-size: 20px'>Battle WH. Abstract of a clinical lecture on femoral hernia. <i>Lancet</i>. 1901; 157: 302-305<br></p>", 
             jrnls:["Lancet",], 
-            imgName:"<br><img src=\"../static/assets/img/profiles/William_Henry_Battle.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/William_Henry_Battle.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image was sourced from <a href='https://www.findagrave.com/memorial/116479606/william-henry-battle' target='_blank'>Find a Grave®</a>.<i></p>",
             about:"",
             URLs:"<br><a href='https://www.sciencedirect.com/science/article/abs/pii/S0140673601713657' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://www.whonamedit.com/synd.cfm/2975.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>", //no wiki  //https://livesonline.rcseng.ac.uk/client/en_GB/lives/search/detailnonmodal/ent:$002f$002fSD_ASSET$002f0$002fSD_ASSET:376003/one?qu=%22RCS%3A+E003820%22&rt=false%7C%7C%7CIDENTIFIER%7C%7C%7CResource+Identifier,
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Battle was sourced from <a href='https://www.findagrave.com/memorial/116479606/william-henry-battle' target='_blank'>Find a Grave®</a>.<i></p>",  //
+            acknow:"",  //
         },{
             type:'Feature',
             ID:210, 
@@ -1175,10 +1244,10 @@
             googlehtz:25200, //search: "Battle's sign" AND "Head" [28-Dec-21]  
             refs:"<br><p style='font-size: 20px'>Battle WH. Three lectures on some points relating to injuries to the head. <i>Br Med J</i>. 1890; 12: 2 (1541): 75-81<br></p>",   
             jrnls:["Br Med J", "BMJ", "British Medical Journal"],
-            imgName:"<br><img src=\"../static/assets/img/profiles/William_Henry_Battle.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/William_Henry_Battle.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image was sourced from <a href='https://www.findagrave.com/memorial/116479606/william-henry-battle' target='_blank'>Find a Grave®</a>.<i></p>",
             about:"",// 
             URLs:"<br><a href='https://www.sciencedirect.com/science/article/abs/pii/S0140673601713657' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://en.wikipedia.org/wiki/Battle%27s_sign' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2976.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>", //https://livesonline.rcseng.ac.uk/client/en_GB/lives/search/detailnonmodal/ent:$002f$002fSD_ASSET$002f0$002fSD_ASSET:376003/one?qu=%22RCS%3A+E003820%22&rt=false%7C%7C%7CIDENTIFIER%7C%7C%7CResource+Identifier,
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Battle was sourced from <a href='https://www.findagrave.com/memorial/116479606/william-henry-battle' target='_blank'>Find a Grave®</a>.<i></p>",  //
+            acknow:"",  //
         },{
             type:'Feature',
             ID:215, 
@@ -1198,8 +1267,8 @@
             jrnls:["Ann N Y Acad Sci","Annals of the New York Academy of Sciences",],
             imgName:"",//"<br><img src=\"../static/assets/img/profiles/Charles_Baxter.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"<br><p style='font-size: 20px'>Parkland Memorial Hospital<br></p>",//<br><br>",
-            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
             URLs:"",//"<br><a href='#' class='btn btn-outline-primary' role='button'>Original Paper</a> <a href='#' class='btn btn-outline-dark' role='button'>Wikipedia Link</a><br>", //no WNI
+            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{
             //type:'Feature',
             //ID:220, 
@@ -1371,9 +1440,9 @@
             refs:"",   
             jrnls:"",//['',],
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Intravenous_regional_anesthesia' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",   //WNI - page is empty - <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
-            imgName:"<br><img src=\"../static/assets/img/profiles/August_Bier.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/August_Bier.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image of Bier is in the Public Domain.</i></p>",
             about:"", 
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Bier is in the Public Domain and was sourced from Wikipedia.</i></p>",   
+            acknow:"",   
         },{
             type:'Feature',
             ID:275, 
@@ -1391,10 +1460,10 @@
             //googlehtz:0, //search: " "  " " [02-Oct-21]
             refs:"<br><p style='font-size: 20px'>Billroth T. Offenes Schreiben an Herrn Dr L Wittelshöfer. <i>Wien Med Wchnschr</i>. 1881; 31: 162-166<br></p>",  
             jrnls:["Wien Med Wchnschr",], 
-            imgName:"<br><img src=\"../static/assets/img/profiles/Theodor_Billroth.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Theodor_Billroth.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>",
             about:"",//
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Billroth_I' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2730.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Billroth is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"",
         },{
             type:'Feature',
             ID:280, 
@@ -1412,10 +1481,10 @@
             //googlehtz:0, //search: " "  " " [02-Oct-21]
             refs:"",//  
             jrnls:"",//["",] 
-            imgName:"<br><img src=\"../static/assets/img/profiles/Theodor_Billroth.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Theodor_Billroth.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>",
             about:"", 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Billroth_II' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2731.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Billroth is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"",
         },{
             type:'Feature',
             ID:285, 
@@ -1520,7 +1589,7 @@
             imgName:"",//<br><img src=\"../static/assets/img/profiles/Bochdalek.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"<br>Czech pathologist<br>", 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Bochdalek_hernia' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/3104.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Bochdalek is in the Public Domain and was sourced from Wikipedia.</i></p>", 
+            acknow:"", 
         },{
             type:'Feature',
             ID:310, 
@@ -1538,10 +1607,10 @@
             googlehtz:91300, //search: "Boerhaave syndrome" [28-Dec-21]
             refs:"",//<br>", 
             jrnls:"",//["",]  
-            imgName:"<br><img src=\"../static/assets/img/profiles/Herman_Boerhaave.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"<br><img src=\"../static/assets/img/profiles/Herman_Boerhaave.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>",
             about:"",//
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Esophageal_rupture' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2800.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Boerhaave is in the Public Domain and was sourced from Wikipedia.</i></p>", 
+            acknow:"", 
         },{
             type:'Feature',
             ID:315, 
@@ -1553,7 +1622,7 @@
             where:"Pok Fu Lam - Hong Kong", // whereSearch:["Pok Fu Lam, Hong Kong",],              
             country:["Hong Kong"], when:"1982", 
             disease:["Peptic ulcer disease",],  
-            ops:["Repair perforated ulcer",],
+            ops:["Perforated ulcer repair",],
             opsSpec:{'General Surgery': ['Repair perforated ulcer',],
                      'Oesophagogastric': ['Repair perforated ulcer',], }, 
             geometry: {type: 'MultiPoint', coordinates: [ 114.13115, 22.27006 ]},    //long,lat
@@ -1638,7 +1707,7 @@
             who:"Léon Bouveret", whoSearch:["Léon Bouveret",],
             where:"Lyon - France", //    whereSearch:["Lyon, France",],       
             country:["France"], when:"1896",
-            disease:["Gastric outlet obstruction",],   
+            disease:["Gastric outlet obstruction","Vomiting",],   
             ops:"",//["",],
             opsSpec:"",//{' ': [' ',], }, 
             geometry: {type: 'MultiPoint', coordinates: [ 4.836389, 45.758333 ]},  //long,lat
@@ -1646,10 +1715,10 @@
             //googlehtz: 0, //search: "  sign" AND " " [02-Oct-21] 
             refs:"<br><p style='font-size: 20px'>Bouveret L. Sténose du pylore adhérent à la vésicule calculeuse. <i>Rev Med</i>. 1896; 16: 1-16<br></p>", 
             jrnls:["Rev Med",],  
-            imgName:"<br><img src=\"../static/assets/img/profiles/Leon_Bouveret.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Leon_Bouveret.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is licenced under <a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0 1.0</a>.<i></p>",
             about:"", 
             URLs:"<br><a href='https://www.whonamedit.com/synd.cfm/3075.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>", 
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Bouveret was sourced from Wikipedia and is licenced under <a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0 1.0</a>.<i></p>",
+            acknow:"",
         //},{
             //type:'Feature',
             //ID:340, 
@@ -1679,7 +1748,7 @@
             where:"London - England", whereSearch:["London, England, UK", "England", "UK",], 
             country:["UK"], when:"1872", 
             disease:["Labour",], 
-            ops:["Caesarean section",], 
+            ops:["C-section / Caesarean section",], 
             opsSpec:{'Obstetrics': ['Caesarean section',], }, 
             geometry: {type: 'MultiPoint', coordinates: [ -0.086944, 51.503333 ]},  //long,lat
             properties: {title:"Braxton Hicks contractions", description:"Guy's Hospital - London<br>1872"},
@@ -1727,10 +1796,10 @@
             googlehtz:364000, //search: "Brodmann area" AND "brain" [28-Dec-21]  
             refs:"",//   
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Korbinian_Brodmann.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Korbinian_Brodmann.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>", //Wikipedia
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki//Brodmann_area' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='http://www.whonamedit.com/synd.cfm/1313.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Brodmann is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"",
         },{
             type:'Feature',
             ID:360, 
@@ -1747,7 +1816,7 @@
             geometry: {type: 'MultiPoint', coordinates: [ -1.9396, 52.453 ]},     //lng,lat
             properties: {title:"Brooke ileostomy", description:'Birmingham - England<br>1952'},
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21] 
-            refs:"<br><p style='font-size: 20px'>Brooke BN. The management of an ileostomy, including its complications. <i>Lancet</i>. 1952; 2(6725): 102-104.br></p>",  
+            refs:"<br><p style='font-size: 20px'>Brooke BN. The management of an ileostomy, including its complications. <i>Lancet</i>. 1952; 2(6725): 102-104.</p>",  
             jrnls:["Lancet",], 
             imgName:"",//get new one from  gastroenterology <br><img src=\"../static/assets/img/profiles/Bryan_Nicholas_Brooke.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"",    //
@@ -1794,7 +1863,7 @@
             imgName:"<br><img src=\"../static/assets/img/profiles/Charles_Brown_Sequard.png\" class=\"card-img\" style=\"width:12rem;\">", 
             about:"",//
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Brown-Séquard_syndrome' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/973.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Brown-Séquard is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"<p style='font-size: 16px'><i>The image of Brown-Séquard is in the Public Domain and was sourced from Wikipedia.</i></p>",
         //},{
             //type:'Feature',
             //ID:375, 
@@ -2003,10 +2072,10 @@
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21] 
             refs:"",  
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Cajal.png\" class=\"card-img\" style=\"width:12rem;\">", //
+            imgName:"<br><img src=\"../static/assets/img/profiles/Cajal.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 16px'><i>This image is in the Public Domain.</i></p>", //Wikipedia
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Interstitial_cell_of_Cajal' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",   //wni doesn't have correct cell type
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image shown of Cajal is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"",
         //},{
             //type:'Feature',
             //ID:430, 
@@ -2038,17 +2107,17 @@
             where:"Paris - France", whereSearch:["Paris", "France"],                
             country:["France"], when:"1891", 
             disease:["Cholecystitis", "Gallstones", "Jaundice",], 
-            ops:["Cholecystectomy",], 
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",], 
             opsSpec:{'HPB': ['Cholecystectomy', ], },
             geometry: {type: 'MultiPoint', coordinates: [ 2.34099, 48.85135 ]},   //lng,lat
             properties: {title:"Calot's triangle", description:'Paris<br>1891'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"",  
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Jean-Francois_Calot.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"<br><img src=\"../static/assets/img/profiles/Jean-Francois_Calot.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>", //Wikipedia
             about:"", 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Cystohepatic_triangle' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/4023.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image shown of Calot is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"",
         },{
             type:'Feature',
             ID:440, 
@@ -2283,10 +2352,10 @@
             //googlehtz:0, //search: " " [02-Oct-21]
             refs:"",   
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Carlos_chagas.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Carlos_chagas.png\" class=\"card-img\" style=\"width:12rem;\"> <p style='font-size: 10px'><i><br>This image is licenced under <a href='https://creativecommons.org/licenses/by-sa/2.0/deed.en' target='_blank'>CC BY-SA 2.0</a>.<i></p>",
             about:"",//
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Chagas_disease ' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/3322.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Chagas was sourced from Wikimedia Commons and is licenced under <a href='https://creativecommons.org/licenses/by-sa/2.0/deed.en' target='_blank'>CC BY-SA 2.0</a>.<i></p>",
+            acknow:"",
         },{
             type:'Feature',
             ID:530, 
@@ -2326,10 +2395,10 @@
             //googlehtz:0, //search: "   " AND " " [02-Oct-21]
             refs:"",
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Jean-Martin Charcot.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"<br><img src=\"../static/assets/img/profiles/Jean-Martin Charcot.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image of Charcot is in the Public Domain.</i></p>",
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Charcot%27s_cholangitis_triad ' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2896.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image shown of Fisher is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"",
         },{
             type:'Feature',
             ID:540, 
@@ -2934,10 +3003,10 @@
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
             refs:"<br><p style='font-size: 20px'>Crohn BB, Ginzburg L, Oppenheimer GD. Regional ileitis. A pathological and clinical entity. <i>JAMA</i>. 1932; 99: 1323-1329<br></p>",   
             jrnls:["JAMA",],
-            imgName:"<br><img src=\"../static/assets/img/profiles/Burrill_Bernard_Crohn.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Burrill_Bernard_Crohn.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10x'><i><br>This image was sourced from <a href='https://pubs.rsna.org/doi/10.1148/rg.262055130' target='_blank'>Radiological Society of North America</a><i>.</p>",
             about:"", 
             URLs:"<br><a href='https://jamanetwork.com/journals/jama/article-abstract/286298' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://en.wikipedia.org/wiki/Crohn%27s_disease' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/1397.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Crohn was sourced from <a href='https://pubs.rsna.org/doi/10.1148/rg.262055130' target='_blank'>Radiological Society of North America</a><i>.</p>",  //fair use
+            acknow:"",  //fair use
         //},{
             //type:'Feature',
             //ID:735, 
@@ -3018,9 +3087,9 @@
             refs:"<br><p style='font-size: 20px'>Cushing HW. The basophil adenomas of the pituitary body and their clinical manifestations (pituitary  basophilism). 1932.<br></p>",   
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Cushing's_disease' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/1770.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Harvey_Cushing.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Harvey_Cushing.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>", // Wikipedia 
             about:"<br>Pituitary ACTH-producing tumour<br>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Cushing was sourced from Wikipedia and is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>",   
+            acknow:"",   
         },{
             type:'Feature',
             ID:765, 
@@ -3041,9 +3110,9 @@
             refs:"",//",
             jrnls:"",//["",]
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Cushing%27s_syndrome' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/1770.html target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
-            imgName:"<br><img src=\"../static/assets/img/profiles/Harvey_Cushing.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"<br><img src=\"../static/assets/img/profiles/Harvey_Cushing.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>", // Wikipedia 
             about:"",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Cushing was sourced from Wikipedia and is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>", 
+            acknow:"", 
         },{
             type:'Feature',
             ID:770, 
@@ -3063,9 +3132,9 @@
             refs:"<br><p style='font-size: 20px'>Cushing H. Peptic ulcers and the interbrain. <i>Surg Gynec Obst</i>. 1932; 55: 1-34<br></p>",
             jrnls:["Surg Gynecol Obstet","Surgery, Gynecology & Obstetrics",],
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Cushing_ulcer' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/982.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
-            imgName:"<br><img src=\"../static/assets/img/profiles/Harvey_Cushing.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"<br><img src=\"../static/assets/img/profiles/Harvey_Cushing.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>", // Wikipedia 
             about:"",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Cushing was sourced from Wikipedia and is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>", 
+            acknow:"", 
        
 /// DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD /////
 
@@ -3150,9 +3219,9 @@
             refs:"",//   
             jrnls:"",//["",]
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Debakey_forceps' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //no wni
-            imgName:"<br><img src=\"../static/assets/img/profiles/DeBakey.png\" class=\"card-img\" style=\"width:12rem;\">", //<br><img src=\"../static/assets/img/profiles/DeBakey_Forceps.png\" class=\"card-img\" style=\"width:12rem;\">
+            imgName:"<br><img src=\"../static/assets/img/profiles/DeBakey.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>", //Wikipedia //<br><img src=\"../static/assets/img/profiles/DeBakey_Forceps.png\" class=\"card-img\" style=\"width:12rem;\">
             about:"",//
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image shown of DeBakey is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"",
         },{
             type:'Feature',
             ID:860, 
@@ -3246,17 +3315,17 @@
             where:"Paris - France", whereSearch:["Paris", "France",],      
             country:["France"], when:"1900",
             disease:["Rectal prolapse",],   
-            ops:["Rectal surgery",],
+            ops:["EUA rectum","Rectal surgery",],
             opsSpec:{'Colorectal': ['Rectal surgery', ], },
             geometry: {type: 'MultiPoint', coordinates: [ 2.34355, 48.8395 ]}, //lng,lat
             properties: { title:"Delorme's procedure", description:'Paris<br>1900'},
             //googlehtz:0, //search: " " AND "  " [02-Oct-21]
-            refs:"<br><p style='font-size: 20px'>Delorme E. Sur le traitment des prolapsus du rectum totaux par l'excision de la muqueuse rectale ou recto-colique. <i>Bull Mem Soc Chir Paris</i>. 1900; 26: 499-518<br></p>",   
+            refs:"<br><p style='font-size: 20px'>Delorme E. Sur le traitment des prolapsus du rectum totaux par l'excision de la muqueuse rectale ou recto-colique. <i>Bull Mem Soc Chir Paris</i>. 1900; 26: 499-518<br></p>",
             jrnls:["Bull Mem Soc Chir Paris",],
             URLs:"<br><a href='http://www.whonamedit.com/synd.cfm/3193.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>",
-            imgName:"<br><img src=\"../static/assets/img/profiles/Edmond_Delorme.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Edmond_Delorme.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>",//Wikipédia
             about:"",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image shown of Delorme is in the Public Domain and was sourced from Wikipédia.</i></p>",
+            acknow:"",
         },{ 
             type:'Feature',
             ID:960, 
@@ -3440,8 +3509,8 @@
             where:"Lecco - Italy",                   
             whereSearch:["Lecco, Italy", "Italy",],  
             country:["Italy"], when:"1982",  
-            disease:["Gallstones", "Urolithiasis",],
-            ops:["Cholecystectomy",],
+            disease:["Gallstones", "Urinary tract stones",],
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",],
             opsSpec:{'HPB': ['Cholecystectomy', ], },
             geometry: {type: 'MultiPoint', coordinates: [ 9.3901, 45.8532 ]}, //lng,lat
             properties: { title:"Dormia basket", description:'Lecco - Italy<br>1982'},
@@ -3488,7 +3557,7 @@
             where:"Redhill - England",            
             whereSearch:["Redhill, England, UK",],         
             when:"1866",   
-            disease:["Genetic conditions","Kidney stones",],  
+            disease:["Genetic conditions","Urinary tract stones",],  
             ops:"",//["",],
             opsSpec:"",//
             geometry: {type: 'MultiPoint', coordinates: [ -0.166944, 51.222778 ]}, //lng,lat
@@ -3916,9 +3985,9 @@
             refs:"",  
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Fallopian_tube' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2636.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Gabriele_Falloppio.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"<br><img src=\"../static/assets/img/profiles/Gabriele_Falloppio.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>", //Wikipedia 
             about:"",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image shown of Falloppio is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"",
         },{
             type:'Feature',
             ID:1560, 
@@ -3953,7 +4022,7 @@
             whereSearch:["Pittsfield, Massachusetts, USA","Massachusetts", "USA",],
             country:["USA"], when:"2012",   
             disease:["Gallstones","Jaundice",], 
-            ops:["Cholecystectomy",], 
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy"], 
             opsSpec:{'HPB': ['Cholecystectomy', ], },
             geometry: {type: 'MultiPoint', coordinates: [ -73.249344 , 42.459655 ]}, //lng,lat
             properties: { title:"Fanelli catheter", description:'Pittsfield - Massachusetts<br>2012'},
@@ -4068,10 +4137,10 @@
             //googlehtz:0, //search: "" AND "" [02-Oct-21] 
             refs:"",   
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Fisher.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"<br><img src=\"../static/assets/img/profiles/Fisher.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>", //Wikipedia replacement
             about:"", 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Fisher%27s_exact_test' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image shown of Fisher is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"",
         },{
             type:'Feature',
             ID:1700, 
@@ -4132,10 +4201,10 @@
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"", 
             jrnls:"",//["",]  
-            imgName:"",// get right picture from italian wikipedia <br><img src=\"../static/assets/img/profiles/Foley.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"",// get right picture from italian wikipedia <br><img src=\"../static/assets/img/profiles/Foley.png\" class=\"card-img\" style=\"width:12rem;\">", <p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p> // Wikipedia
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Foley_catheter' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/3446.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Foley is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"",
         },{
             type:'Feature',
             ID:1760, 
@@ -4242,10 +4311,10 @@
             //googlehtz:0, //search: " " AND " " [02-Oct-21] 
             refs:"",   
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Frantz.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Frantz.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i>This image is in the Public Domain.</i></p>", //and was sourced from Wikipedia
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Solid_pseudopapillary_tumour' target='_blank' class='btn btn-info' role='button'>Wikipedia</a><br>",  //no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Frantz is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"",
         //},{
             //type:'Feature',
             //ID:1860, 
@@ -4948,9 +5017,9 @@
             refs:"<br><p style='font-size: 20px'>Hartmann H. Note sur un procede nouveau d'extirpation des cancers de la partie terminale due colon. <i>Bull Mem Soc Chir Paris</i>. 1923; 49: 1474-1477<br></p>",   
             jrnls:["Bull Mem Soc Chir Paris",],
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Hartmann%27s_operation' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='http://www.whonamedit.com/synd.cfm/3068.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
-            imgName:"<br><img src=\"../static/assets/img/profiles/Henri_Hartmann.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Henri_Hartmann.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>", //wikipedia 
             about:"", 
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Hartmann was sourced from Wikipedia and is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>", 
+            acknow:"", 
         },{
             type:'Feature',
             ID:2500, 
@@ -4962,7 +5031,7 @@
             whereSearch:["Paris", "France",],                
             country:["France"], when:"1891",   
             disease:["Cholecystitis","Gallstones",],  
-            ops:["Cholecystectomy",],
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy"],
             opsSpec:{'General Surgery': ['Cholecystectomy', ], 
                      'HPB': ['Cholecystectomy', ], }, 
             geometry: {type: 'MultiPoint', coordinates: [ 2.3483 , 48.85441 ]}, //lng,lat
@@ -4970,10 +5039,10 @@
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
             refs:"",//  
             jrnls:"",//["",] 
-            imgName:"<br><img src=\"../static/assets/img/profiles/Henri_Hartmann.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Henri_Hartmann.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>", //wikipedia 
             about:"",  
             URLs:"<br><a href='http://www.whonamedit.com/synd.cfm/3069.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>", //no wiki //"<br><a href='https://en.wikipedia.org/wiki/ ' target='_blank' class='btn btn-info' role='button'>wikipedia</a>
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Hartmann was sourced from Wikipedia and is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>",
+            acknow:"",
         },{
             type:'Feature',
             ID:2520, 
@@ -5036,9 +5105,9 @@
             refs:"<p style='font-size: 20px'>Hashimoto H. Zur Kenntnis der lymphomatösen Veränderung der Schilddrüse (Struma lymphomatosa). <i>Archiv für klinische Chirurgie</i>. 1912; 97: 219-248</p>",
             jrnls:["Archiv für Klinische Chirurgie",],
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Hashimoto%27s_thyroiditis' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2199.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
-            imgName:"<br><img src=\"../static/assets/img/profiles/Hakaru_Hashimoto.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"<br><img src=\"../static/assets/img/profiles/Hakaru_Hashimoto.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>", //Wikipedia
             about:"Chronic lymphocytic thyroiditis",//<br>", 
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Hashimoto is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"", //Wikipedia
         },{
             type:'Feature',
             ID:2580, 
@@ -5090,7 +5159,7 @@
             who:"Walter von Heineke & Jan Mikulicz-Radecki",   //whoSearch:["",],
             where:"Germany (Heineke) & Poland (Mikulicz)",  //whereSearch:["",],               
             country:["Germany","Poland",], when:"1886",   
-            disease:["Gastric outlet obstruction",],  
+            disease:["Gastric outlet obstruction","Vomiting",],  
             ops:["Endoscopy", "Oesophagectomy",],
             opsSpec:{'Oesophagogastric': ['Endoscopy', 'Oesophagectomy', ], },
             geometry: {type: 'MultiPoint', coordinates: [ 11.012, 49.5897 ]}, //lng,lat
@@ -5137,7 +5206,7 @@
             where:"Helmstedt - Germany", whereSearch:["Helmstedt, Germany", "Germany",],               
             country:["Germany"], when:"1721",   
             disease:["Cholecystitis","Gallstones",], 
-            ops:["Cholecystectomy",], 
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",], 
             opsSpec:{'General Surgery': ['Cholecystectomy', ], 
                      'HPB': ['Cholecystectomy', ],},
             geometry: {type: 'MultiPoint', coordinates:[ 11.008682, 52.228881 ]}, //lng,lat
@@ -6053,7 +6122,7 @@
             //imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             //about:"",
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  https://www.whonamedit.com/synd.cfm/1017.html
-            //acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Kocher is in the Public Domain.</i></p>",
+            //acknow:"<p style='font-size: 16px'><i>The image of Kocher is in the Public Domain.</i></p>",
         },{
             type:'Feature',
             ID:3560, 
@@ -6064,17 +6133,17 @@
             where:"Bern - Switzerland", whereSearch:["Bern, Switzerland",],                 
             country:["Switzerland"], when:"1892",  
             disease:["Cholecystitis",],  
-            ops:["Cholecystectomy",],
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy"],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ 7.4245, 46.9473 ]}, //long,lat
             properties: { title:"Kocher's abdominal incision", description:'Bern - Switzerland<br>1892'},  
             //googlehtz:0, //search: "  sign" AND " " [02-Oct-21]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Emil_Theodor_Kocher.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Emil_Theodor_Kocher.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>",
             refs:"",   //<p style='font-size: 20px'></p>
             jrnls:"",//["",]
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Surgical_incision' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/1010.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             about:"",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Kocher is in the Public Domain.</i></p>",
+            acknow:"",
         //},{
             //type:'Feature',
             //ID:3580, 
@@ -6094,7 +6163,7 @@
             //imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             //about:"",//<br><br><br>",
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/Kocher%27s_point' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
-            //acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Kocher is in the Public Domain.</i></p>",
+            //acknow:"<p style='font-size: 16px'><i>The image of Kocher is in the Public Domain.</i></p>",
         //},{
             //type:'Feature',
             //ID:3600, 
@@ -6283,9 +6352,9 @@
             refs:"<br><p style='font-size: 20px'>Lanz O. Der McBurney's che punkt. <i>Zentralblatt für Chirurgie</i>. 1908; 35: 185-190<br></p>",
             jrnls:"",//["",]
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Surgical_incision' target='_blank' class='btn btn-info' role='button'>Wikipedia</a><br>",
-            imgName:"<br><img src=\"../static/assets/img/profiles/Lanz.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Lanz.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image of Otto Lanz and Anna Willi is in the Public Domain.</i></p>",
             about:"",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Otto Lanz and Anna Willi is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"", //sourced from Wikipedia
         //},{
             //type:'Feature',
             //ID:3780, 
@@ -6444,7 +6513,7 @@
             who:"Frederick Li & Joseph Fraumeni", //whoSearch:["",],   
             where:"Bethesda - Maryland - USA", //whereSearch:["",],                 
             country:["USA"], when:"1969",   
-            disease:["Adrenocortical carcinoma", "Breast cancer","Sarcoma",], 
+            disease:["Adrenocortical carcinoma","Adrenal gland tumour","Breast cancer","Sarcoma",], 
             ops:["Mastectomy",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ -77.10775, 38.99955 ]}, //lng,lat
@@ -6596,10 +6665,10 @@
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
             refs:"",  
             jrnls:"",//["",] 
-            imgName:"<br><img src=\"../static/assets/img/profiles/Lugol.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"<br><img src=\"../static/assets/img/profiles/Lugol.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i>", //Wikipedia replacement
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Lugol%27s_iodine' target='_blank' class='btn btn-info' role='button'>Wikipedia</a><br>",  //no wni   <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Lugol is in the Public Domain and was sourced from Wikipedia.</i><br><i>Mr Jason Ramsingh FRCS is kindly researching this eponym.</i></p>",
+            acknow:"<br><i>Mr Jason Ramsingh FRCS is kindly researching this eponym.</i></p>",
         },{
             type:'Feature',
             ID:4080, 
@@ -6612,7 +6681,7 @@
             whereSearch:["Boston, Massachusetts, USA", "Massachusetts", "USA",],           
             country:["USA"], when:"1930",   
             disease:["Cholecystitis","Gallbladder cancer",],  
-            ops:["Cholecystectomy",],
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ -71.07411 , 42.33441 ]}, //lng,lat
             properties: { title:"Lymph node of Lund", description:'Boston<br>1930'},
@@ -6657,7 +6726,7 @@
             whereSearch:["Tübingen, Baden-Württemberg, Germany",],              
             country:["Germany"], when:"1863",   
             disease:["Cholecystitis","Gallstones",],  
-            ops:["Cholecystectomy",],
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ 9.04818 , 48.52771 ]}, //long,lat
             properties: { title:"Ducts of Luschka", description:'Tübingen<br>1863' },
@@ -6813,7 +6882,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ -71.07283 , 42.33441 ]}, //lng,lat
             properties: { title:"Mallory-Weiss syndrome", description:'Boston<br>1929'},   
             //googlehtz:0, //search: "  " AND "" [02-Oct-21]
-            refs:"<br><p style='font-size: 20px'>Mallory GK, Weiss S. Hemorrhages from lacerations of the cardiac orifice of the  stomach due to vomiting. <i>Am J Med Sci</i>. 1929; 176: 506<br></p>",   
+            refs:"<br><p style='font-size: 20px'>Mallory GK, Weiss S. Hemorrhages from lacerations of the cardiac orifice of the  stomach due to vomiting. <i>Am J Med Sci</i>. 1929; 176: 506<br></p>",   
             jrnls:["Am J Med Sci","American Journal of Medical Sciences"],
             URLs:"<br> <a href='https://en.wikipedia.org/wiki/Mallory–Weiss_syndrome' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='http://www.whonamedit.com/synd.cfm/895.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -7054,9 +7123,9 @@
             refs:"<br><p style='font-size: 20px'>McBurney C. Experience with early operative inference in cases of disease of the vermiform appendix. <i>NY Med J</i>. 1889; 50: 676-684<br></p>",   
             jrnls:["NY Med J","New York Medical Journal",],
             URLs:"<br><a href='https://en.wikipedia.org/wiki/McBurney%27s_point' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/534.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
-            imgName:"<br><img src=\"../static/assets/img/profiles/McBurney.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/McBurney.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>",
             about:"",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of McBurney was sourced from Wikipedia and is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>", 
+            acknow:"", 
         },{
             type:'Feature',
             ID:4500, 
@@ -7308,14 +7377,14 @@
             where:"Córdoba - Argentina",                
             country:["Argentina"], when:"1948",   
             disease:["Cholecystitis","Gallstones", "Jaundice",],  
-            ops:["Cholecystectomy", "ERCP",],
+            ops:["Cholecystectomy", "ERCP","Laparoscopic cholecystectomy",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -64.184648, -31.439673 ]}, //long,lat
             properties: { title:"Mirizzi's syndrome", description:'Córdoba<br>1948'},
             //googlehtz:0, //search: "   " AND " " [02-Oct-21]
             refs:"<br><p style='font-size: 20px'>Mirizzi PL. Syndrome del conducto hepatico. <i>J Int Chir</i>. 1948; 8: 731-777<br></p>",   
             jrnls:["J Int Chir","Journal International de Chirurgie",],
-            imgName:"<br><img src=\"../static/assets/img/profiles/Pablo_Luis_Mirizzi.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"",//need permissions <br><img src=\"../static/assets/img/profiles/Pablo_Luis_Mirizzi.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Mirizzi%27s_syndrome' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", //<a href='http://www.whonamedit.com/synd.cfm/3587.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             acknow:"",
@@ -7393,7 +7462,7 @@
             //where:"", whereSearch:["",],           
             //when:"1970",   
             //disease:[" ", " ",],
-            //ops:["Cholecystectomy",],
+            //ops:["Cholecystectomy","Laparoscopic cholecystectomy",],
             //opsSpec:"",//{'Endocrine': ['',], },
             //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
             //properties: { title:"", description:' <br>1970'},
@@ -7522,7 +7591,7 @@
             where:"Chicago - Illinois - USA", //whereSearch:["  ",],                 
             when:"1912",   
             disease:["Cholecystitis",],
-            ops:["Cholecystectomy",],
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -87.621258, 41.846802 ]}, //long,lat
             properties: { title:"Murphy's sign", description:'Chicago - Illinois<br>1912'}, 
@@ -7566,7 +7635,7 @@
             who:"Don Nelson", //whoSearch:[" ",],    
             where:"Boston - Massachusetts - USA", //whereSearch:["",],           
             country:["USA"], when:"1958",   
-            disease:["Cushing's disease","Pituitary disease"],
+            disease:["Pituitary disease",],
             ops:["Adrenalectomy","Transsphenoidal pituitary surgery",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ -71.10448, 42.33572 ]}, //lng,lat
@@ -7680,7 +7749,7 @@
             properties: { title:"Sphincter of Oddi", description:'Perugia - Italy<br>1887'}, 
             //googlehtz:0, //search: "  " AND " " [02-Oct-21]
             refs:"", 
-            imgName:"<br><img src=\"../static/assets/img/profiles/Ruggero_Oddi.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"<br><img src=\"../static/assets/img/profiles/Ruggero_Oddi.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>", //temporary replacement
             jrnls:"",//["",]
             about:"<br>The hepatopancreatic sphincter, or also known as Glisson's sphincter.<br>",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Sphincter_of_Oddi' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2709.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
@@ -7716,7 +7785,7 @@
             where:"Nashville - Tennessee - USA",     //whereSearch:["",],            
             country:["USA"], when:"1990", 
             disease:["Jaundice",],    
-            ops:["Cholecystectomy",],
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -86.808967, 36.153745 ]}, //long,lat
             properties: { title:"Olsen-Reddick cholangiography clamp", description:'Nashville<br>1990'},
@@ -8133,7 +8202,7 @@
             where:"Wrocław - Poland",   //    whereSearch:["",],         
             country:["Poland"], when:"1900",   
             disease:["Labour",], 
-            ops:["C-section",],
+            ops:["C-section / Caesarean section",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ 17.034431, 51.113931 ]}, //long,lat
             properties: { title:"Pfannenstiel incision", description:'Wrocław - Poland<br>1900'},
@@ -8302,7 +8371,7 @@
             topic:["Vascular"], 
             subtype:["Syndromes",], 
             who:"Auguste Raynaud", //whoSearch:["",],    
-            where:"Paris", //whereSearch:["",],           
+            where:"Paris - France", //whereSearch:["",],           
             when:"1862",   
             disease:"",//["",]
             ops:["Thoracic sympathectomy",],
@@ -8375,7 +8444,7 @@
             //googlehtz:0, //search: "   " AND " " [02-Oct-21]
             refs:"",//"<br>", 
             jrnls:"",//["",]
-            imgName:"",//"<br><img src=\"../static/assets/img/profiles/Bernhard_Riedel.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"",//"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"",       
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Retropubic_space' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/4083.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             acknow:"",//"<br><i>We kindly acknowledge Miss X FRCS who contributed the above information.</i>",
@@ -8439,9 +8508,9 @@
             //googlehtz:0, //search: "   " AND " " [02-Oct-21]
             refs:"",//"<br>", 
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Bernhard_Riedel.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Bernhard_Riedel.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>",
             about:"",       
-            URLs:"<br><a href='https://www.whonamedit.com/synd.cfm/3240.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>", // wiki-Y/N,
+            URLs:"<br><a href='https://www.whonamedit.com/synd.cfm/3240.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>", // wiki-Y/N
             acknow:"",//"<br><i>We kindly acknowledge Miss X FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
@@ -8460,9 +8529,9 @@
             //googlehtz:0, //search: "   " AND "  " [02-Oct-21]
             refs:"<br><p style='font-size: 20px'>Riedel BMCL. Die chronische, zur Bildung eisenharter Tumoren fuhrende Entzundung der Schilddruse <i>Verhandlungen der deutschen Gesellschaft für Chirurgie</i>. 1896; 25: 101-105<br></p>", 
             jrnls:["Verhandlungen der deutschen Gesellschaft für Chirurgie",],
-            imgName:"<img src=\"../static/assets/img/profiles/Bernhard_Riedel.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"<br><img src=\"../static/assets/img/profiles/Bernhard_Riedel.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>", //temporary replacement
             about:"",         
-            URLs:"<br><a href='https://www.whonamedit.com/synd.cfm/3242.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",  ////wiki-Y/N,
+            URLs:"<br><a href='https://www.whonamedit.com/synd.cfm/3242.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",  ////wiki-Y   Riedel's_thyroiditis
             acknow:"",//<br><i>We kindly acknowledge Miss X FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
@@ -8545,11 +8614,11 @@
             properties: { title:"Arc of Riolan", description:'Paris<br>1649'},
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
             refs:"",  
-            imgName:"<br><img src=\"../static/assets/img/profiles/Jean_Riolan.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"<br><img src=\"../static/assets/img/profiles/Jean_Riolan.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>", //Wikipedia replacement
             about:"",
             jrnls:"",//["",]
             URLs:"",//wiki-Y/N, //no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Riolan is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"",
         },{
             type:'Feature',
             ID:5880, 
@@ -8589,7 +8658,7 @@
             refs:"<br><p style='font-size: 20px'>Rockall TA, Logan RF, Devlin HB, Northfield TC. Risk assessment after acute upper gastrointestinal haemorrhage. <i>Gut</i>. 1996; 38(3): 316-321<br></p>", 
             jrnls:["Gut",],
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Rockall_score' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", //no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
-            imgName:"<br><img src=\"../static/assets/img/profiles/Rockall_Tim.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"",// check permissions <br><img src=\"../static/assets/img/profiles/Rockall_Tim.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"", 
             acknow:"",
         //},{
@@ -8623,7 +8692,7 @@
             where:"Marburg - Germany", //whereSearch:["",],
             country:["Germany"], when:"1905",   
             disease:["Cholecystitis",], 
-            ops:["Cholecystectomy",], 
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",], 
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ 8.773611, 50.810833 ]}, //long,lat
             properties: { title:"Rokitansky-Aschoff sinuses", description:'Marburg - Germany<br>1905'},
@@ -8665,7 +8734,7 @@
             where:"Paris - France", whereSearch:["Paris", "France",],              
             country:["France"], when:"1924",   
             disease:"",//["",]
-            ops:["Cholecystectomy",], 
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",], 
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ 2.34121, 48.85074 ]}, //long,lat
             properties: { title:"Rouviere's sulcus", description:'Paris<br>1924'},
@@ -8738,7 +8807,7 @@
             refs:"<br><p style='font-size: 20px'>Rutgeerts P, Geboes K, Vantrappen G, Beyls J, Kerremans R, Hiele M. Predictability of the postoperative course of Crohn's disease. <i>Gastroenterology</i> 1990; 99 (4): 956-963<br></p>",   
             jrnls:["Gastroenterology",],
             URLs:"",// https://www.gastrojournal.org/article/0016-5085(90)90613-6/pdf?referrer=https%3A%2F%2Fpubmed.ncbi.nlm.nih.gov%2F,  //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
-            imgName:"<br><img src=\"../static/assets/img/profiles/Paul_Rutgeerts.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"", //check permissions  <br><img src=\"../static/assets/img/profiles/Paul_Rutgeerts.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         
@@ -9031,7 +9100,7 @@
             refs:"",  
             URLs:"",//       Shouldice_Hernia_Centre#Work,  //no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Shouldice.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"",// <br><img src=\"../static/assets/img/profiles/Shouldice.png\" class=\"card-img\" style=\"width:12rem;\">",
             about:"",
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{
@@ -9069,6 +9138,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ 11.6016, 48.1376 ]}, //long,lat
             properties: { title:"Siewert-Stein classification", description:'Munich - Germany<br>1996'}, 
             //googlehtz: 0, //search: "Siewert-Stein classification" AND "Cancer" [02-Oct-21]
+            imgName:"",
             refs:"<br><p style='font-size: 20px'>Siewert JR, Stein HJ. Carcinoma of the gastroesophageal junction - classification, pathology and extent of resection. <i>Dis Esophagus</i>. 1996; 9(3): 173-182<br></p>",   
             jrnls:["Dis Esophagus","Diseases of the Esophagus",], 
             URLs:"",//  //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
@@ -9324,7 +9394,7 @@
             where:"St Louis - Missouri - USA", whereSearch:["Missouri","USA",],                 
             country:["USA"], when:"1995",  
             disease:["Bile duct injury","Cholecystitis",], 
-            ops:["Cholecystectomy",],  
+            ops:["Cholecystectomy","Laparoscopic cholecystectomy",],  
             geometry: { type: 'MultiPoint', coordinates: [ -90.264959 , 38.634954 ]}, //lng,lat
             properties: { title:"Strasberg's critical view of safety", description:'St Louis - Missouri<br>1995'},
             //googlehtz: 0, //search: " " AND " " [02-Oct-21]
@@ -9392,11 +9462,11 @@
             properties: { title:"Takayasu's arteritis", description:'Fukuoka - Japan<br>1908'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"", 
-            imgName:"<br><img src=\"../static/assets/img/profiles/Takayasu.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"",//<br><img src=\"../static/assets/img/profiles/Takayasu.png\" class=\"card-img\" style=\"width:12rem;\">",
             jrnls:"",//["",]  
             about:"<br>12th Annual Meeting of the Japan Ophthalmology Society, held in Fukuoka.<br>",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Takayasu%27s_arteritis' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2722.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Treitz is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"",
         },{
             type:'Feature',
             ID:6700, 
@@ -9433,11 +9503,11 @@
             properties: { title:"Tapia syndrome", description:'Madrid<br>1904'}, 
             //googlehtz: 0, //search: " " AND " " [02-Oct-21] 
             refs:"",   
-            imgName:"",// source? <br><img src=\"../static/assets/img/profiles/Antonio_Tapia.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"",// source? <br><img src=\"../static/assets/img/profiles/Antonio_Tapia.png\" class=\"card-img\" style=\"width:12rem;\">", <p style='font-size: 16px'><i>The image of Tapia is in the Public Domain and was sourced from Wikidata.</i></p>
             about:"",//
             jrnls:"",//["",]
             URLs:"<br><a href='https://www.whonamedit.com/synd.cfm/3575.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Tapia is in the Public Domain and was sourced from Wikidata.</i></p>",
+            acknow:"",
         //},{
             //type:'Feature',
             //ID:6740, 
@@ -9677,11 +9747,11 @@
             properties: { title:"Ligament of Treitz", description:'Kraków<br>1853'},
             //googlehtz:0, //search: "   " AND "   " [02-Oct-21]
             refs:"",   
-            imgName:"<br><img src=\"../static/assets/img/profiles/Vaclav_Treitz.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"<br><img src=\"../static/assets/img/profiles/Vaclav_Treitz.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>", //Wikipedia 
             jrnls:"",//["",]
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Suspensory_muscle_of_duodenum' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image of Treitz is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"",
         },{
             type:'Feature',
             ID:6980, 
@@ -9757,7 +9827,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ -0.58172, 44.82401 ]}, //long,lat
             properties: { title:"Trojani grade", description:'Bordeaux - France<br>1984'},
             //googlehtz: 0, //search: "  " AND "   " [02-Oct-21]
-            refs:"<br><p style='font-size: 20px'>Trojani M, Contesso G, Coindre JM, et al. Soft-tissue sarcomas of adults; study of pathological prognostic variables and definition of a histopathological grading system. <i>Int J Cancer</i>. 1984; 33(1): 37-42<br></p>",  
+            refs:"<br><p style='font-size: 20px'>Trojani M, Contesso G, Coindre JM, <i>et al</i>. Soft-tissue sarcomas of adults; study of pathological prognostic variables and definition of a histopathological grading system. <i>Int J Cancer</i>. 1984; 33(1): 37-42<br></p>",  
             jrnls:["Int J Cancer","International Journal of Cancer",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",// 
@@ -9865,9 +9935,9 @@
             refs:"",//  
             jrnls:"",//["",]
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Valsalva_maneuver' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2316.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
-            imgName:"<br><img src=\"../static/assets/img/profiles/Antonio_M_Valsalva.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"<br><img src=\"../static/assets/img/profiles/Antonio_M_Valsalva.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>The line engraving of Valsalva by R.Ceracchi is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>",  // Wikipedia
             about:"",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The line engraving of Valsalva by R.Ceracchi was sourced from Wikipedia and is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>",       
+            acknow:"",    
         },{
             type:'Feature',
             ID:7160, 
@@ -9883,11 +9953,11 @@
             properties: { title:"Sinus of Valsalva", description:'Bologna - Italy<br>1740'},
             //googlehtz: 0, //search: "  " AND "  " [02-Oct-21]
             refs:"",  
-            imgName:"<br><img src=\"../static/assets/img/profiles/Antonio_M_Valsalva.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Antonio_M_Valsalva.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>The line engraving of Valsalva by R.Ceracchi is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>",  // Wikipedia
             jrnls:"",//["",] 
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Aortic_sinus' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2318.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The line engraving of Valsalva by R.Ceracchi was sourced from Wikipedia and is licenced under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>.<i></p>", 
+            acknow:"", 
         },{
             type:'Feature',
             ID:7180, 
@@ -10221,7 +10291,7 @@
             who:"Lawrence Weiss", //whoSearch:["Lawrence Weiss",], 
             where:"Stanford - California - USA", whereSearch:[" ",],            
             country:["USA"], when:"1984", 
-            disease:["Adrenocortical carcinoma",], 
+            disease:["Adrenocortical carcinoma","Adrenal gland tumour",], 
             ops:["Adrenalectomy",],
             geometry: { type: 'MultiPoint', coordinates: [ -122.17510, 37.43307 ]}, //long,lat
             properties: { title:"Weiss grade", description:'California - USA<br>1984'},
@@ -10261,7 +10331,7 @@
             who:"Paul Wermer", //whoSearch:["Paul Wermer",], 
             where:"New York - USA", //whereSearch:[" ", " ",],            
             when:"1954", 
-            disease:["Multiple endocrine neoplasia","Pituitary disease","Hyperparathyroidism","Hypercalcaemia",],
+            disease:["Multiple endocrine neoplasia","Pituitary disease","Hyperparathyroidism","Hypercalcaemia","Urinary tract stones","Osteoporosis",],
             ops:["Pancreatic resection","Parathyroidectomy","Transsphenoidal pituitary surgery",],
             geometry: { type: 'MultiPoint', coordinates: [ -73.94281 , 40.84215 ]}, //long,lat
             properties: { title:"Wermer syndrome", description:'Presbyterian Hospital - New York<br>1954'},
@@ -10397,7 +10467,7 @@
             who:"Samuel Wilson", whoSearch:["Samuel Wilson",],            
             where:"Edinburgh - Scotland - UK", //whereSearch:["Edinburgh","UK",],            
             when:"1912",  
-            disease:["Kidney stones","Liver failure","Hypoparathyroidism",], 
+            disease:["Urinary tract stones","Liver failure","Hypoparathyroidism",], 
             ops:["Liver transplant","Nephrolithotomy",],
             geometry: { type: 'MultiPoint', coordinates: [ -3.19245, 55.94494 ]}, //long,lat
             properties: { title:"Wilson's disease", description:'Edinburgh<br>1912'},   
@@ -10655,7 +10725,7 @@
             properties: {title:"Zollinger-Ellison syndrome", description:'Columbus - Ohio<br>1955'},
             refs:"<br><p style='font-size: 20px'>Zollinger RM, Ellison EH. Primary peptic ulcerations of the jejunum associated with islet cell tumors of the pancreas. <i>Ann Surg</i>. 1955; 142(2): 709-723<br></p>",
             jrnls:["Ann Surg","Annals of Surgery",],
-            imgName:"<br><img src=\"../static/assets/img/profiles/Zollinger_Ellison.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            imgName:"",//permissions "<br><img src=\"../static/assets/img/profiles/Zollinger_Ellison.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
             URLs:"<br><a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1465210/pdf/annsurg01283-0174.pdf' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://www.whonamedit.com/synd.cfm/3074.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
@@ -10675,10 +10745,10 @@
             properties: {title:"Organ of Zuckerkandl", description:'Vienna - Austria<br>1901'},
             refs:"", 
             jrnls:"",//["",]
-            imgName:"<br><img src=\"../static/assets/img/profiles/Emil_Zuckerkandl.png\" class=\"card-img\" style=\"width:12rem;\">",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Emil_Zuckerkandl.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>", //Wikipedia
             about:"",
             URLs:"<br><a href='https://www.whonamedit.com/synd.cfm/3111.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
-            acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image shown of Zuckerkandl is in the Public Domain and was sourced from Wikipedia.</i></p>",
+            acknow:"",
         //},{
             //type:'Feature',
             //ID:7980, 
@@ -10698,7 +10768,7 @@
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",//<a href='https://www.whonamedit.com/synd.cfm/3108.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             //about:"<br>Anatomist, Emil, had a brother, Otto, who was a Urologist, and they discussed anatomy.<br>", 
-            //acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image shown of Zuckerkandl is in the Public Domain and was sourced from Wikipedia.</i></p>",   
+            //acknow:"<p style='font-size: 16px'><i>The image shown of Zuckerkandl is in the Public Domain and was sourced from Wikipedia.</i></p>",   
         //},{
             //type:'Feature',
             //ID:8000, 
@@ -10718,7 +10788,7 @@
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",   //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             //about:"",
-            //acknow:"<hr class='my-4'><p style='font-size: 16px'><i>The image shown of Zuckerkandl is in the Public Domain and was sourced from Wikipedia.</i></p>", 
+            //acknow:"<p style='font-size: 16px'><i>The image shown of Zuckerkandl is in the Public Domain and was sourced from Wikipedia.</i></p>", 
         
         }]}
         </script>
@@ -10726,23 +10796,22 @@
 
         
         <script>
-        /// Section - A to Z ///
+    /// Section - A to Z ///
         $(document)
         .ready(function() {
         let result1 = eponyms.features
             .flatMap(item => item.topic)
             .filter((item, i, arr) => arr.indexOf(item) === i)
             let resultsort1 = result1.sort()
-            var select = document.getElementById("select_A2Z");
+            var select_A2Z = document.getElementById("select_A2Z");
             var options = resultsort1;
             for(var i = 0; i < options.length; i++) {
                 var opt = options[i];
                 var el = document.createElement("option");
                 el.textContent = opt;
                 el.value = opt;
-                select.appendChild(el);
+                //select_A2Z.appendChild(el);
                 }
-        console.log()
             });
 
         $(document)
@@ -10750,255 +10819,123 @@
             $('#select_A2Z').ready(function() {
                 let value = '\'' + $('#select_A2Z option').map(function() {
                         return this.text}).get().join('\',\'') + '\'';
-                var stringArray = (new Function("return [" + value+ "];")());
+                var stringArray = (new Function("return [" + value + "];")());
             });
         });
 
-        var selected = eponyms.features
-        function populateSelect() {
-            var ele = document.getElementById('sel_A2Z');
-            selected.forEach(function(b) {
-                ele.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-            }
-        console.log(selected)
-        populateSelect()
-
-        let select ="";
-        $("#select_A2Z").find('option:selected').each(function() {
-                select += "\'" + $.trim($(this).text()) + "\',";});
-                if(select != ""){select = select.substr(0);};
-            var stringArray = (new Function("return [" + select+ "];")());
-            
-        function topicFilter2(taxonomy) {
-            taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-            return eponyms.features.filter(item => {
-                let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                return taxonomy.some(med => topic.includes(med));
-                });
-            }
-                
-        var selected2 = topicFilter2(stringArray); 
-        </script>
-
-        <script>
-        function show(id) {   
-            var imgName = document.getElementById('imgName');
-            if (!id) {imgName.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.features.length; i++) {
-                if  (Number(id) === eponyms.features[i].ID) {
-                    imgName.innerHTML = eponyms.features[i].imgName
-                                            ;}}}
-                                        $('.imgName').fadeIn('slow');
-
-            var info = document.getElementById('info');
-            if (!id) {imgName.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.features.length; i++) {
-                if  (Number(id) === eponyms.features[i].ID) {
-                    info.innerHTML =    "<br>"+
-                                        eponyms.features[i].who.bold()   +"<br>"+
-                                        eponyms.features[i].when.bold()  +"<br>"+
-                                        eponyms.features[i].where.bold() +"<br><br>"+
-                                        eponyms.features[i].about +
-                                        eponyms.features[i].refs +
-                                        eponyms.features[i].URLs +
-                                        eponyms.features[i].acknow
-                                            ;}}}
-                                        $('.info').fadeIn('slow');
-                                    
-                                        }  
-        /// End Section - A to Z ///                         
-        </script>
+        $(document)
+        .ready(function() {
+            var selected_A2Z = eponyms.features
+            function populateSelect() {
+                var ele_A2Z = document.getElementById('sel_A2Z');
+                selected_A2Z.forEach(function(b) {
+                    ele_A2Z.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+                }
+            populateSelect()
+        });
+    /// Section - A to Z
         
-
-
-        
-        <script> 
-        /// Section - Specialties ///
-//            $(document)
-//            .ready(function() {
-//            const returnedData = $.grep(eponyms.features, function(element, index) {
-//                return (element.topic !== "");
-//                });  /// DROP those WITHOUT topic
-//            let result1 = returnedData
-//                .flatMap(item => item.topic) //"item.topic" gives us specialties
-//                .filter((item, i, arr) => arr.indexOf(item) === i)
-//                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
-//                let resultSubtypes = result1.sort()
-//                var selectSubtypes = document.getElementById("sel_specialties");
-//                var optionS = resultSubtypes;
-//                for(var i = 0; i < optionS.length; i++) {
-//                    var opt1 = optionS[i];
-//                    var el1 = document.createElement("option");
-//                    el1.textContent = opt1;
-//                    el1.value = opt1;
-//                    selectSubtypes.appendChild(el1);
-//                    }
-//            });
-
-//            $(document)
-//            .ready(function() {
-//                $('#select_specialties').ready(function() {
-//                    let value = '\'' + $('#select_specialties option').map(function() {
-//                            return this.text}).get().join('\',\'') + '\'';
-//                    var stringArray = (new Function("return [" + value + "];")());
-//                });
-//            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
-
-//            let select ="";
-//            $("#select_specialties").find('option:selected').each(function() {
-//                    select += "\'" + $.trim($(this).text()) + "\',";});
-//                    if(select != ""){select = select.substr(0);};
-//                var stringArray = (new Function("return [" + select + "];")());
-                
-//            function topicFilter2(taxonomy) {
-//                const returnedData = $.grep(eponyms.features, function(element, index) {
-//                    return (element.topic !== "");
-//                    });  
-//                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-//                return returnedData.filter(item => {
-//                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-//                    return taxonomy.some(med => topic.includes(med));
-//                    });
-//                }
-                    
-//            var selected_specialties = topicFilter2(stringArray); 
-//            console.log(selected_specialties)
-
-        /// End Section - Specialties ///
-        </script>
-
-
-
-
-        <script> 
-            /// ALL - specialties
-            /// THIS WORKS FINE
-//            $('#sel_specialties').on('change', function() {
-//                $('#select5').fadeIn(50);
-//                let select ="";
-//                $("#sel_specialties").find('option:selected').each(function() {
-//                    select += "\'" + $.trim($(this).text()) + "\',";});
-//                    if(select != ""){select = select.substr(0);};
-//                var stringArray = (new Function("return [" + select + "];")());
-//                console.log(stringArray); //works Array [chosen options]
-                
-//                function topicFilter2(taxonomy) {
-//                    const returnedData = $.grep(eponyms.features, function(element, index) {
-//                        return (element.topic !== "");
-//                        });
-//                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-//                    return returnedData.filter(item => {
-//                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-//                        return taxonomy.some(med => topic.includes(med));
-//                        });
-//                    }
-                
-//                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-//                console.log(selected2)
-
-//                function populateSelect2() {
-//                    document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
-//                        options += `<option value="${ID}">${name}</option>`,
-//                        '<option value=""> -- select -- </option>'
-//                        );
-//                    }
-            
-//                populateSelect2()
-//                $('#sel9').selectpicker('refresh');
-//                $('#sel').on('change', function() {
-//                    $('#sel').selectpicker('toggle'); //added to toggle open/close
-//                    $('#sel9').selectpicker('refresh');
-//                    });
-//            });
-        </script>
-
-
-        <script>  ///  SELECTED_SPECIALTIES_2  ///
-//            $('#select1').on('change', function() {
-//                let select ="";
-//                $("#select1").find('option:selected').each(function() {
-//                    select += "\'" + $.trim($(this).text()) + "\',";});
-//                    if(select != ""){select = select.substr(0);};
-//                var stringArray = (new Function("return [" + select + "];")());
-//                console.log(stringArray); //works Array [chosen options]
-                
-//                function topicFilter2(taxonomy) {
-//                    const returnedData = $.grep(eponyms.features, function(element, index) {
-//                    return (element.topic !== "");
-//                    });  /// DROP those WITHOUT OPERATIONS
-//                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-//                    return returnedData.filter(item => {
-//                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-//                        return taxonomy.some(med => topic.includes(med));
-//                        });
-//                    }
-                
-//                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-//                console.log(selected2)
-
-//                let result10 = selected2
-//                    .flatMap(item => item.topic)
-//                    .filter((item, i, arr) => arr.indexOf(item) === i)
-//                    //.filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
-//                    let resultSubtypes10 = result10.sort()
-//                    var selectSubtypes10 = document.getElementById("SEL2");
-//                    var optionS10 = resultOps10;
-//                    for(var i = 0; i < optionS10.length; i++) {
-//                        var opt10 = optionS10[i];
-//                        var el10 = document.createElement("option");
-//                        el10.textContent = opt10;
-//                        el10.value = opt10;
-//                        selectSubtypes10.appendChild(el10);
-//                        }
-                
-//                $('#SEL2').selectpicker('refresh');
-//                $('#select1').on('change', function() {
-//                    $('#select1').selectpicker('toggle'); //added to toggle open/close
-//                    $('#SEL2').selectpicker('refresh');
-//                    });
-//                });
-            
-        </script>
-
-
-
-
-        <script> 
+    /// Section - Specialties ///
             $(document)
             .ready(function() {
-            const returnedData_ops = $.grep(eponyms.features, function(element, index) {
-                return (element.ops !== "");
-                });
-            let result_ops = returnedData_ops
-                .flatMap(item => item.topic) //"item.topic" ***THIS IS DIFFERENT***  gives us SPECIALTIES
+            const returnedData2 = $.grep(eponyms.features, function(element, index) {
+                return (element.topic !== "");
+                });  /// DROP those WITHOUT topic
+            let result11 = returnedData2
+                .flatMap(item => item.topic) //"item.topic" gives us specialties
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
-                let resultsort_ops = result_ops.sort()
-                var select_ops = document.getElementById("select_ops");
-                var options_ops = resultsort_ops;
-                for(var i = 0; i < options_ops.length; i++) {
-                    var opt_ops = options_ops[i];
-                    var el_ops = document.createElement("option");
-                    el_ops.textContent = opt_ops;
-                    el_ops.value = opt_ops;
-                    select_ops.appendChild(el_ops);
-                    }
-            console.log()
+                let resultSubtypes = result11.sort()
+                var selectSubtypes = document.getElementById("sel_specialties");
+                var optionS = resultSubtypes;
+                for(var i = 0; i < optionS.length; i++) {
+                    var opt1 = optionS[i];
+                    var el1 = document.createElement("option");
+                    el1.textContent = opt1;
+                    el1.value = opt1;
+                    selectSubtypes.appendChild(el1);    
+                }
             });
-       
+
             $(document)
             .ready(function() {
-            const returnedData_ops2 = $.grep(eponyms.features, function(element, index) {
-                return (element.ops !== "");
+                $('#select_specialties').ready(function() {
+                    let value = '\'' + $('#select_specialties option').map(function() {
+                            return this.text}).get().join('\',\'') + '\'';
+                    var stringArray = (new Function("return [" + value + "];")());
                 });
-            let result_ops2 = returnedData_ops2
+            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
+
+            $('#sel_specialties').on('change', function() {
+                $('#select5').fadeIn(50);
+                let select ="";
+                $("#sel_specialties").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
+                
+                function topicFilter2(taxonomy) {
+                    const returnedData = $.grep(eponyms.features, function(element, index) {
+                        return (element.topic !== "");
+                        });
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return returnedData.filter(item => {
+                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
+                        });
+                    }
+                
+                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+
+                function populateSelect2() {
+                    document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`,
+                        '<option value=""> -- select -- </option>'
+                        );
+                    }
+            
+                populateSelect2()
+                $('#sel9').selectpicker('refresh');
+                $('#sel_specialties').on('change', function() {
+                    $('#sel_specialties').selectpicker('toggle'); //added to toggle open/close
+                    $('#sel9').selectpicker('refresh');
+                    });
+            });
+    /// End Section - Specialties ///
+
+    /// Section - Operations ///
+
+        $(document)
+            .ready(function() {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.ops !== "");
+                }); 
+            let result1 = returnedData
+                .flatMap(item => item.topic) //"item.topic" gives us SPECIALTIES
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
+                let resultsort1 = result1.sort()
+                var select = document.getElementById("select_ops");
+                var options = resultsort1;
+                for(var i = 0; i < options.length; i++) {
+                    var opt = options[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    }
+            });
+     
+            $(document)
+            .ready(function() {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.ops !== "");
+                }); 
+            let result1 = returnedData
                 .flatMap(item => item.ops)
                 .filter((item, i, arr) => arr.indexOf(item) === i)
                 .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";});
-                let resultOps = result_ops2.sort()
-                var selectOps = document.getElementById("sel300");
+                let resultOps = result1.sort()
+                var selectOps = document.getElementById("sel_ops");
                 var optionS = resultOps;
                 for(var i = 0; i < optionS.length; i++) {
                     var opt1 = optionS[i];
@@ -11007,17 +10944,23 @@
                     el1.value = opt1;
                     selectOps.appendChild(el1);
                     }
-            });                
-        </script>
+            });
 
-        <script> 
-            $('#sel300').on('change', function() {
-                $('#select15').fadeIn(50);
+            $(document)
+            .ready(function() {
+                $('#select_ops').ready(function() {
+                    let value = '\'' + $('#select_ops option').map(function() {
+                            return this.text}).get().join('\',\'') + '\'';
+                    var stringArray = (new Function("return [" + value + "];")());
+                });
+            });
+
+            $('#sel_ops').on('change', function() {
+                $('#select15').fadeIn(500);
                 let select ="";
-                $("#sel300").find('option:selected').each(function() {
+                $("#sel_ops").find('option:selected').each(function() {
                     select += "\'" + $.trim($(this).text()) + "\',";});
                     if(select != ""){select = select.substr(0);};
-
                 var stringArray = (new Function("return [" + select + "];")());
                 
                 function topicFilter2(taxonomy) {
@@ -11030,6 +10973,7 @@
                         return taxonomy.some(med => ops.includes(med));
                         });
                     }
+                
                 var selected2 = topicFilter2(stringArray);
 
                 function populateSelect2() {
@@ -11038,66 +10982,620 @@
                         '<option value=""> -- select -- </option>'
                         );
                     }
+            
                 populateSelect2()
-
                 $('#sel69').selectpicker('refresh');
-                $('#sel300').on('change', function() {
-                    $('#sel300').selectpicker('toggle');
+                $('#sel_ops').on('change', function() {
+                    $('#sel_ops').selectpicker('toggle'); //added to toggle open/close
                     $('#sel69').selectpicker('refresh');
                     });
             });
-        </script>
+    /// End Section - Operations ///
 
+    /// Section - Diseases /// disease
+        $(document)
+            .ready(function() {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.disease !== "");
+                });  
+            let result1 = returnedData
+                .flatMap(item => item.topic)
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";});
+                let resultsort1 = result1.sort()
+                var select = document.getElementById("select_dis");
+                var options = resultsort1;
+                for(var i = 0; i < options.length; i++) {
+                    var opt = options[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    }
+            });
+     
+            $(document)
+            .ready(function() {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.disease !== "");
+                }); 
+            let result1 = returnedData
+                .flatMap(item => item.disease)
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";});
+                let resultOps = result1.sort()
+                var selectOps = document.getElementById("sel_dis");
+                var optionS = resultOps;
+                for(var i = 0; i < optionS.length; i++) {
+                    var opt1 = optionS[i];
+                    var el1 = document.createElement("option");
+                    el1.textContent = opt1;
+                    el1.value = opt1;
+                    selectOps.appendChild(el1);
+                    }
+            });
 
+            $(document)
+            .ready(function() {
+                $('#select_dis').ready(function() {
+                    let value = '\'' + $('#select_dis option').map(function() {
+                            return this.text}).get().join('\',\'') + '\'';
+                    var stringArray = (new Function("return [" + value + "];")());
+                });
+            }); 
 
+            $('#sel_dis').on('change', function() {
+                $('#selector_dis').fadeIn(500);
+                let select ="";
+                $("#sel_dis").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
+                
+                function topicFilter2(taxonomy) {
+                    const returnedData = $.grep(eponyms.features, function(element, index) {
+                        return (element.disease !== "");
+                        });
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return returnedData.filter(item => {
+                        let disease = Array.isArray(item.disease) ? item.disease : [item.disease];
+                        return taxonomy.some(med => disease.includes(med));
+                        });
+                    }
+                
+                var selected2 = topicFilter2(stringArray);
+
+                function populateSelect2() {
+                    document.getElementById('sel_dis2').innerHTML = selected2.reduce((options, {ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`,
+                        '<option value=""> -- select -- </option>'
+                        );
+                    }
+            
+                populateSelect2()
+                $('#sel_dis2').selectpicker('refresh');
+                $('#sel_dis').on('change', function() {
+                    $('#sel_dis').selectpicker('toggle'); //added to toggle open/close
+                    $('#sel_dis2').selectpicker('refresh');
+                    });
+            });
+    /// End Section - Diseases ///
+
+    /// Section - Categories ///
+        $(document)
+            .ready(function() {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.subtype !== "");
+                }); 
+            let result1 = returnedData
+                .flatMap(item => item.topic)
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";});
+                let resultsort1 = result1.sort()
+                var select = document.getElementById("select_cat");
+                var options = resultsort1;
+                for(var i = 0; i < options.length; i++) {
+                    var opt = options[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    }
+            });
+     
+            $(document)
+            .ready(function() {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.subtype !== "");
+                }); 
+            let result1 = returnedData
+                .flatMap(item => item.subtype)
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";});
+                let resultOps = result1.sort()
+                var selectOps = document.getElementById("sel_cat");
+                var optionS = resultOps;
+                for(var i = 0; i < optionS.length; i++) {
+                    var opt1 = optionS[i];
+                    var el1 = document.createElement("option");
+                    el1.textContent = opt1;
+                    el1.value = opt1;
+                    selectOps.appendChild(el1);
+                    }
+            });
+
+            $(document)
+            .ready(function() {
+                $('#select_cat').ready(function() {
+                    let value = '\'' + $('#select_cat option').map(function() {
+                            return this.text}).get().join('\',\'') + '\'';
+                    var stringArray = (new Function("return [" + value + "];")());
+                });
+            });  
+
+            $('#sel_cat').on('change', function() {
+                $('#selector_cat').fadeIn(500);
+                let select ="";
+                $("#sel_cat").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
+                
+                function topicFilter2(taxonomy) {
+                    const returnedData = $.grep(eponyms.features, function(element, index) {
+                        return (element.subtype !== "");
+                        });
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return returnedData.filter(item => {
+                        let subtype = Array.isArray(item.subtype) ? item.subtype : [item.subtype];
+                        return taxonomy.some(med => subtype.includes(med));
+                        });
+                    }
+                
+                var selected2 = topicFilter2(stringArray); 
+
+                function populateSelect2() {
+                    document.getElementById('sel_cat2').innerHTML = selected2.reduce((options, {ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`,
+                        '<option value=""> -- select -- </option>'
+                        );
+                    }
+            
+                populateSelect2()
+                $('#sel_cat2').selectpicker('refresh');
+                $('#sel_cat').on('change', function() {
+                    $('#sel_cat').selectpicker('toggle'); //added to toggle open/close
+                    $('#sel_cat2').selectpicker('refresh');
+                    });
+            });
+    /// End Section - Categories ///
+
+    /// Section - Maps ///
+     $(document)
+            .ready(function() {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.country !== "");
+                }); 
+            let result1 = returnedData
+                .flatMap(item => item.topic)
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
+                let resultsort1 = result1.sort()
+                var select = document.getElementById("select_map");
+                var options = resultsort1;
+                for(var i = 0; i < options.length; i++) {
+                    var opt = options[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    }
+            });
+     
+            $(document)
+            .ready(function() {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.country !== "");
+                });
+            let result1 = returnedData
+                .flatMap(item => item.country)
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";});
+                let resultOps = result1.sort()
+                var selectOps = document.getElementById("sel_map");
+                var optionS = resultOps;
+                for(var i = 0; i < optionS.length; i++) {
+                    var opt1 = optionS[i];
+                    var el1 = document.createElement("option");
+                    el1.textContent = opt1;
+                    el1.value = opt1;
+                    selectOps.appendChild(el1);
+                    }
+            });
+
+            $(document)
+            .ready(function() {
+                $('#select_map').ready(function() {
+                    let value = '\'' + $('#select_map option').map(function() {
+                            return this.text}).get().join('\',\'') + '\'';
+                    var stringArray = (new Function("return [" + value + "];")());
+                });
+            });  
+
+            $('#sel_map').on('change', function() {
+                $('#selector_map').fadeIn(500);
+                let select ="";
+                $("#sel_map").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
+                
+                function topicFilter2(taxonomy) {
+                    const returnedData = $.grep(eponyms.features, function(element, index) {
+                        return (element.country !== "");
+                        });
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return returnedData.filter(item => {
+                        let country = Array.isArray(item.country) ? item.country : [item.country];
+                        return taxonomy.some(med => country.includes(med));
+                        });
+                    }
+                
+                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+
+                function populateSelect2() {
+                    document.getElementById('sel_map2').innerHTML = selected2.reduce((options, {ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`,
+                        '<option value=""> -- select -- </option>'
+                        );
+                    }
+            
+                populateSelect2()
+                $('#sel_map2').selectpicker('refresh');
+                $('#sel_map').on('change', function() {
+                    $('#sel_map').selectpicker('toggle'); //added to toggle open/close
+                    $('#sel_map2').selectpicker('refresh');
+                    });
+            });
+    /// End Section - Maps ///
+
+    /// Section - Journals /// jrnls
+         $(document)
+            .ready(function() {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.jrnls !== "");
+                }); 
+            let result1 = returnedData
+                .flatMap(item => item.topic)
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
+                let resultsort1 = result1.sort()
+                var select = document.getElementById("select_jrnls");
+                var options = resultsort1;
+                for(var i = 0; i < options.length; i++) {
+                    var opt = options[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    }
+            });
+     
+            $(document)
+            .ready(function() {
+            const returnedData = $.grep(eponyms.features, function(element, index) {
+                return (element.jrnls !== "");
+                }); 
+            let result1 = returnedData
+                .flatMap(item => item.jrnls)
+                .filter((item, i, arr) => arr.indexOf(item) === i)
+                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";});
+                let resultOps = result1.sort()
+                var selectOps = document.getElementById("sel_jrnls");
+                var optionS = resultOps;
+                for(var i = 0; i < optionS.length; i++) {
+                    var opt1 = optionS[i];
+                    var el1 = document.createElement("option");
+                    el1.textContent = opt1;
+                    el1.value = opt1;
+                    selectOps.appendChild(el1);
+                    }
+            });
+
+            $(document)
+            .ready(function() {
+                $('#select_jrnls').ready(function() {
+                    let value = '\'' + $('#select_jrnls option').map(function() {
+                            return this.text}).get().join('\',\'') + '\'';
+                    var stringArray = (new Function("return [" + value + "];")());
+                });
+            }); 
+
+            $('#sel_jrnls').on('change', function() {
+                $('#selector_jrnls').fadeIn(500);
+                let select ="";
+                $("#sel_jrnls").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
+                
+                function topicFilter2(taxonomy) {
+                    const returnedData = $.grep(eponyms.features, function(element, index) {
+                        return (element.jrnls !== "");
+                        });
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return returnedData.filter(item => {
+                        let jrnls = Array.isArray(item.jrnls) ? item.jrnls : [item.jrnls];
+                        return taxonomy.some(med => jrnls.includes(med));
+                        });
+                    }
+                
+                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+
+                function populateSelect2() {
+                    document.getElementById('sel_jrnls2').innerHTML = selected2.reduce((options, {ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`,
+                        '<option value=""> -- select -- </option>'
+                        );
+                    }
+            
+                populateSelect2()
+                $('#sel_jrnls2').selectpicker('refresh');
+                $('#sel_jrnls').on('change', function() {
+                    $('#sel_jrnls').selectpicker('toggle'); //added to toggle open/close
+                    $('#sel_jrnls2').selectpicker('refresh');
+                    });
+            });
+        /// End Section - Journals ///
+        </script>  
 
 
         <script>
-        function show2(id) {
+            function show(id) {   
+                var imgName = document.getElementById('imgName_A2Z');
+                if (!id) {imgName.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        imgName.innerHTML = eponyms.features[i].imgName
+                                                ;}}}
 
-            var imgName2 = document.getElementById('imgName2');
-            if (!id) {imgName2.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.features.length; i++) {
-                if  (Number(id) === eponyms.features[i].ID) {
-                    imgName2.innerHTML = eponyms.features[i].imgName
-                                            ;}}}
-            
-            var msg2 = document.getElementById('msg2');
-            if (!id) {msg2.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.features.length; i++) {
-                if  (Number(id) === eponyms.features[i].ID) {
-                    msg2.innerHTML = "<br>"+
-                                    eponyms.features[i].who.bold()   +"<br>"+
-                                    eponyms.features[i].when.bold()  +"<br>"+
-                                    eponyms.features[i].where.bold() +"<br><br>"
-                                            ;}}}
-                                    
-            var msg3 = document.getElementById('msg3');
-            if (!id) {msg2.innerHTML = "";
-            } else {
-                for (var i = 0; i < eponyms.features.length; i++) {
-                if  (Number(id) === eponyms.features[i].ID) {
-                    msg3.innerHTML = 
-                                    eponyms.features[i].about +
-                                    eponyms.features[i].refs +
-                                    eponyms.features[i].URLs +
-                                    eponyms.features[i].acknow
-                ;}}}                           
-            }
+                var info = document.getElementById('info_A2Z');
+                if (!id) {imgName.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        info.innerHTML =    "<br>"+
+                                           "Who:  "  +eponyms.features[i].who.bold()   +"<br>"+
+                                           "When:  " +eponyms.features[i].when.bold()  +"<br>"+
+                                           "Where:  "+eponyms.features[i].where.bold() +"<br><br>"+
+                                            eponyms.features[i].about +
+                                            eponyms.features[i].refs +
+                                            eponyms.features[i].URLs +
+                                            eponyms.features[i].acknow
+                                                ;}}}
+                                            }                                    
+        </script>
+
+        <script>
+            function show2(id) {
+
+                var imgName1 = document.getElementById('imgName_spec');
+                if (!id) {imgName1.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        imgName1.innerHTML = eponyms.features[i].imgName
+                                                ;}}}
+
+                var msg_spec = document.getElementById('msg_spec');
+                if (!id) {msg2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg_spec.innerHTML = "<br>"+
+                        "Who:  "  +eponyms.features[i].who.bold()   +"<br>"+
+                        "When:  " +eponyms.features[i].when.bold()  +"<br>"+
+                        "Where:  "+eponyms.features[i].where.bold() +"<br><br>"
+                                                ;}}}
+                                        
+                var msg3 = document.getElementById('msg3_spec');
+                if (!id) {msg3_spec.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg3_spec.innerHTML = 
+                                        eponyms.features[i].about +
+                                        eponyms.features[i].refs +
+                                        eponyms.features[i].URLs +
+                                        eponyms.features[i].acknow
+                    ;}}}                           
+                }
+        </script>
+
+        <script>
+            function show_ops(id) {
+                
+                var imgName2 = document.getElementById('imgName_ops');
+                if (!id) {imgName2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        imgName2.innerHTML = eponyms.features[i].imgName
+                                                ;}}}
+
+                var msg_ops = document.getElementById('msg_ops');
+                if (!id) {msg_ops.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg_ops.innerHTML = "<br>"+
+                        "Who:  "   +eponyms.features[i].who.bold()   +"<br>"+
+                        "When:  "  +eponyms.features[i].when.bold()  +"<br>"+
+                        "Where:  " +eponyms.features[i].where.bold() +"<br><br>"
+                                                ;}}}
+                                        
+                var msg3_ops = document.getElementById('msg3_ops');
+                if (!id) {msg3_ops.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg3_ops.innerHTML = 
+                                        eponyms.features[i].about +
+                                        eponyms.features[i].refs +
+                                        eponyms.features[i].URLs +
+                                        eponyms.features[i].acknow
+                    ;}}}                           
+                }
+         
+        </script>
+
+        <script>
+            function show_dis(id) {
+                
+                var imgName2 = document.getElementById('imgName_dis');
+                if (!id) {imgName2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        imgName2.innerHTML = eponyms.features[i].imgName
+                                                ;}}}
+
+                var msg_dis = document.getElementById('msg_dis');
+                if (!id) {msg_dis.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg_dis.innerHTML = "<br>"+
+                        "Who:  "  +eponyms.features[i].who.bold()   +"<br>"+
+                        "When:  " +eponyms.features[i].when.bold()  +"<br>"+
+                        "Where:  "+eponyms.features[i].where.bold() +"<br><br>"
+                                                ;}}}
+                                        
+                var msg3_dis = document.getElementById('msg3_dis');
+                if (!id) {msg3_dis.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg3_dis.innerHTML = 
+                                        eponyms.features[i].about +
+                                        eponyms.features[i].refs +
+                                        eponyms.features[i].URLs +
+                                        eponyms.features[i].acknow
+                    ;}}}                           
+                }
+        
+        </script>
+
+        <script>
+            function show_cats(id) {
+                
+                var imgName2 = document.getElementById('imgName_cat');
+                if (!id) {imgName2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        imgName2.innerHTML = eponyms.features[i].imgName
+                                                ;}}}
+
+                var msg_cat = document.getElementById('msg_cat');
+                if (!id) {msg_cat.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg_cat.innerHTML = "<br>"+
+                        "Who:  "  +eponyms.features[i].who.bold()   +"<br>"+
+                        "When:  " +eponyms.features[i].when.bold()  +"<br>"+
+                        "Where:  "+eponyms.features[i].where.bold() +"<br><br>"
+                                                ;}}}
+                                        
+                var msg3_cat = document.getElementById('msg3_cat');
+                if (!id) {msg3_cat.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg3_cat.innerHTML = 
+                                        eponyms.features[i].about +
+                                        eponyms.features[i].refs +
+                                        eponyms.features[i].URLs +
+                                        eponyms.features[i].acknow
+                    ;}}}                           
+                }
+        
+        </script>
+
+        <script>
+            function show_map(id) {
+                
+                var imgName2 = document.getElementById('imgName_map');
+                if (!id) {imgName2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        imgName2.innerHTML = eponyms.features[i].imgName
+                                                ;}}}
+
+                var msg_map = document.getElementById('msg_map');
+                if (!id) {msg_map.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg_map.innerHTML = "<br>"+
+                        "Who:  "  +eponyms.features[i].who.bold()   +"<br>"+
+                        "When:  " +eponyms.features[i].when.bold()  +"<br>"+
+                        "Where:  "+eponyms.features[i].where.bold() +"<br><br>"
+                                                ;}}}
+                                        
+                var msg3_map = document.getElementById('msg3_map');
+                if (!id) {msg3_map.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg3_map.innerHTML = 
+                                        eponyms.features[i].about +
+                                        eponyms.features[i].refs +
+                                        eponyms.features[i].URLs +
+                                        eponyms.features[i].acknow
+                    ;}}}                           
+                }
+
+        </script>
+
+        <script>
+            function show_jrnls(id) {
+                
+                var imgName2 = document.getElementById('imgName_jrnls');
+                if (!id) {imgName2.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        imgName2.innerHTML = eponyms.features[i].imgName
+                                                ;}}}
+
+                var msg_jrnls = document.getElementById('msg_jrnls');
+                if (!id) {msg_jrnls.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg_jrnls.innerHTML = "<br>"+
+                                        "Who: "  +eponyms.features[i].who.bold()   +"<br>"+
+                                        "When: " +eponyms.features[i].when.bold()  +"<br>"+
+                                        "Where: "+eponyms.features[i].where.bold() +"<br><br>"
+                                                ;}}}
+                                        
+                var msg3_jrnls = document.getElementById('msg3_jrnls');
+                if (!id) {msg3_jrnls.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        msg3_jrnls.innerHTML = 
+                                        eponyms.features[i].about +
+                                        eponyms.features[i].refs +
+                                        eponyms.features[i].URLs +
+                                        eponyms.features[i].acknow
+                    ;}}}                           
+                }
+
         </script>
 
 
-
-
-
-
-
         <script src="/static/assets/js/theme.js"></script>
-
-
-
 
     </body>
 </html>
