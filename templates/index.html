@@ -649,7 +649,7 @@
             jrnls:"",//["",]
             imgName:"<br><img src=\"../static/assets/img/profiles/Adamkiewicz.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>",
             about:"<br><p style='font-size: 20px'>The artery of Adamkiewicz is known by other terms, including arteria radicularis magna. This vessel is a major contributor to the anterior spinal artery which gives arterial supply to the lumbar and sacral cord and nerves.<br>The artery of Adamkiewicz arises from intercostal arteries which branch from the thoraco-abdominal aorta.</p>", 
-            URLs:"<br><a href='https://en.wikipedia.org/wiki/Artery_of_Adamkiewicz' target='_blank' class='btn btn-info' role='button'>Wikipedia</a><a href='https://www.whonamedit.com/synd.cfm/2233.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/Artery_of_Adamkiewicz' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2233.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             acknow:"",
         },{
             type:'Feature',
@@ -11274,7 +11274,7 @@
                 function populateSelect2() {
                     document.getElementById('sel_map2').innerHTML = selected2.reduce((options, {ID,name}) =>
                         options += `<option value="${ID}">${name}</option>`,
-                        '<option value=""> -- select country -- </option>'
+                        '<option value=""> -- select -- </option>'
                         );
                     }
             
@@ -11634,8 +11634,8 @@
             mapboxgl.accessToken = 'pk.eyJ1IjoiYWpoYXllczgzIiwiYSI6ImNrY2pqM2lvMDB4Z24ydG8zdDl0NTYwbTUifQ.2DKVfTAaE77XAXMpDeq_Pg';
           
             const bounds = [
-                [-172, -65], //southwest coord  [-168.4, -66],
-                [179.2, 84]  //northeast coord  [180, 85]
+                [-172, -66], //southwest coord  [-168.4, -66],
+                [179.2, 85]  //northeast coord  [180, 85]
             ]
 
             const map = new mapboxgl.Map({
