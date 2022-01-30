@@ -76,8 +76,8 @@
         <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
 
         <style>
-            body { margin: 0; padding: 30; }
-            #map { position: absolute; top: 0; bottom: 0; left: 0; width: 50%;  }
+            body { margin: 0; padding: 0; }
+            #map { position: absolute; top: 0; bottom: 0; width: 50%;  }
             
             .mapboxgl-popup-content {
                 text-align: center;
@@ -431,8 +431,10 @@
                                 <p class="lead" id="msg3_map"></p>
                             </div>
                             <br>
-                            <div class="row align-items-center text-center" style="height:280px" id='mapz'></div>
-                                <div id="map"></div>
+                            <div class="row align-items-center text-center" style="height:260px" id='mapz'></div>
+                                <div class="col" data-aos="fade-up" id="mapz4ever">
+                                    <div id="map"></div>
+                                </div>
                             </div>
                             <br>
                             <hr class='my-4'>
