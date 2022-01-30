@@ -77,7 +77,7 @@
 
         <style>
             body { margin: 0; padding: 0; }
-            #map { position: absolute; top: 0; bottom: 0; max-width: 480px; }
+            #map { position: absolute; top: 0; bottom: 0; max-width: 460px; }
             
             .mapboxgl-popup-content {
                 text-align: center;
@@ -398,13 +398,15 @@
                         <div class="col d-flex flex-column mb-2 mt-3">
                             <div class="row justify-content-center">
                                 <!--<hr style="height:5px; visibility:hidden">-->
-                                <div style="height:320px" id='map'></div>
+                                <div style="height:310px" id='map'></div>
                             </div>
                         </div>
                         <br><br>
                         <br><br><br>
                         <br><br><br>
                         <br><br><br>
+                        <br>
+                        <!--<hr style="height:5px; visibility:hidden">-->
                         <div class="col d-flex flex-column mb-2 mt-3"> 
                             <div class="row align-items-center text-center">
                                 <div class="col" data-aos="fade-up" id="select_map">
@@ -11633,7 +11635,7 @@
           
             const bounds = [
                 [-170, -65], //southwest coord  [-168.4, -66],
-                [179, 84]  //northeast coord  [180, 85]
+                [179, 86]  //northeast coord  [180, 85]
             ]
 
             const map = new mapboxgl.Map({
