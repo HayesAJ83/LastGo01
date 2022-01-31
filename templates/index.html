@@ -250,7 +250,6 @@
                                 <p class="lead" id="msg_spec"></p>
                                 <p class="lead" id="msg3_spec"></p>
                             </div>
-                            
                             <hr class='my-4'>
                         </div>
                     </div>
@@ -295,7 +294,6 @@
                                 <p class="lead" id="msg_ops"></p>
                                 <p class="lead" id="msg3_ops"></p>
                             </div>
-                            
                             <hr class='my-4'>
                         </div>
                     </div>
@@ -340,7 +338,6 @@
                                 <p class="lead" id="msg_dis"></p>
                                 <p class="lead" id="msg3_dis"></p>
                             </div>
-                            
                             <hr class='my-4'>
                         </div>
                     </div>
@@ -385,7 +382,6 @@
                                 <p class="lead" id="msg_cat"></p>
                                 <p class="lead" id="msg3_cat"></p>
                             </div>
-                            
                             <hr class='my-4'>
                         </div>
                     </div>
@@ -440,7 +436,6 @@
                                 <p class="lead" id="msg_map"></p>
                                 <p class="lead" id="msg3_map"></p>
                             </div>
-                            
                             <hr class='my-4'>
                         </div>
                     </div>
@@ -487,7 +482,6 @@
                                 <p class="lead" id="msg_jrnls"></p>
                                 <p class="lead" id="msg3_jrnls"></p>
                             </div>
-                            
                             <hr class='my-4'>
                         </div>
                     </div>
@@ -1572,13 +1566,16 @@
                      'Oesophagogastric': ['Endoscopy',], },
             geometry: {type: 'MultiPoint', coordinates: [ -4.2914, 55.875 ]},    //long,lat
             properties: {title:"Blatchford score", description:'Glasgow<br>2000'},  
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            googlehtz:23000, //search: "Blatchford score" AND "Bleeding" [31-Jan-22]
             refs:"<br><p style='font-size: 20px'>Blatchford O, Murray WR, Blatchford M. A risk score to predict need for treatment for upper gastrointestinal haemorrhage. <i>Lancet</i>. 2000; 356(9238): 1318-1321<br></p>", 
             jrnls:["Lancet",],  
             imgName:"",//"<br><img src=\"../static/assets/img/profiles/Oliver_Blatchford.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Glasgow-Blatchford_score' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",    //no WNI
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        
+/// Blumgart anastomosis
+        
         },{
             type:'Feature',
             ID:300, 
@@ -1593,7 +1590,7 @@
             opsSpec:"",//{' ': [' ',], },
             geometry: {type: 'MultiPoint', coordinates: [ -73.95628, 40.76417 ]},  //lng,lat
             properties: {title:'Blumgart staging system', description:'New York<br>1998'},
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            googlehtz:36900, //search: ""Blumgart" AND "Stage" AND "Cholangiocarcinoma"" [31-Jan-22]
             refs:"<br><p style='font-size: 20px'>Burke EC, Jarnagin WR, Hochwald SN, Pisters PW, Fong Y, Blumgart LH. Hilar Cholangiocarcinoma: patterns of spread, the importance of hepatic resection for curative operation, and a presurgical clinical staging system. <i>Ann Surg</i>. 1998; 228(3): 385-394<br></p>",  
             jrnls:["Ann Surg","Annals of Surgery",],
             imgName:"",//"<br><img src=\"../static/assets/img/profiles/Leslie_Blumgart.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -1613,7 +1610,7 @@
             ops:"",//["",],
             geometry: {type: 'MultiPoint', coordinates: [ 14.42385, 50.08709 ]},    //long,lat
             properties: {title:"Bochdalek hernia", description:'Prague<br>1848'}, 
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            googlehtz:82200, //search: "Bochdalek hernia" [02-Oct-21]
             refs:"",// 
             jrnls:"",//["",] 
             imgName:"",//<br><img src=\"../static/assets/img/profiles/Bochdalek.png\" class=\"card-img\" style=\"width:12rem;\">",
@@ -1634,7 +1631,7 @@
             opsSpec:{'Oesophagogastric': ['Endoscopy', 'Thoracotomy',], }, 
             geometry: {type: 'MultiPoint', coordinates: [ 4.489233, 52.161376 ]},  //long,lat
             properties: {title:"Boerhaave syndrome", description:'Leiden - Netherlands<br>1724'}, 
-            googlehtz:91300, //search: "Boerhaave syndrome" [28-Dec-21]
+            googlehtz:113000, //search: "Boerhaave syndrome" [31-Jan-22] [91300,28-Dec-21]
             refs:"",//<br>", 
             jrnls:"",//["",]  
             imgName:"<br><img src=\"../static/assets/img/profiles/Herman_Boerhaave.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>",
@@ -1651,13 +1648,13 @@
             whoSearch:["John Boey",],
             where:"Pok Fu Lam - Hong Kong", // whereSearch:["Pok Fu Lam, Hong Kong",],              
             country:["Hong Kong"], when:"1982", 
-            disease:["Peptic ulcer disease",],  
+            disease:["Abdominal pain","Peptic ulcer disease",],  
             ops:["Perforated ulcer repair",],
             opsSpec:{'General Surgery': ['Repair perforated ulcer',],
                      'Oesophagogastric': ['Repair perforated ulcer',], }, 
             geometry: {type: 'MultiPoint', coordinates: [ 114.13115, 22.27006 ]},    //long,lat
             properties: {title:"Boey score", description:'Hong Kong<br>1982'},
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            googlehtz:3890, //search: "Boey score" AND "Ulcer" [31-Jan-22]
             refs:"<br><p style='font-size: 20px'>Boey J, Wong J, Ong GB. A prospective study of operative risk factors in perforated duodenal ulcers. <i>Ann Surg</i>. 195(3): 265-269<br></p>", 
             jrnls:["Ann Surg","Annals of Surgery",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/John_Boey.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement  
@@ -1678,7 +1675,7 @@
             opsSpec:"",//{'': ['', '',], }, 
             geometry: {type: 'MultiPoint', coordinates: [ 2.3409, 48.8513 ]},    //long,lat
             properties: {title:"Bogros' space", description:'Paris<br>1823'},
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            googlehtz:2900, //search: "Bogros' space" AND "inguinal" [31-Jan-22]
             refs:"",//"<br>  <br>", 
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/John_Boey.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement  
@@ -1721,7 +1718,7 @@
             opsSpec:{'Oesophagogastric': ['Gastrectomy',], }, 
             geometry: {type: 'MultiPoint', coordinates: [ 8.85145, 53.10743 ]},    //long,lat
             properties: {title:"Borrmann type", description:'Bremen - Germany<br>1926'},
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            googlehtz:27400, //search: "Borrmann type" AND "Stomach OR Gastric" [31-Jan-22]
             refs:"<br><p style='font-size: 20px'>Borrmann R. Geschwülste des Magens und Duodenums. In: Borchardt H, Borrmann R, Christeller E, et al., editors. Verdauungsschlauch: Erster Teil Rachen und Tonsillen, Speiseröhre Magen und Darm, Bauchfell. Vienna: Springer; 1926. pp. 812–1054.<br></p>",
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/John_Boey.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement  
@@ -1742,7 +1739,7 @@
             opsSpec:"",//{' ': [' ',], }, 
             geometry: {type: 'MultiPoint', coordinates: [ 4.836389, 45.758333 ]},  //long,lat
             properties: {title:"Bouveret syndrome", description:'Lyon - France<br>1896'},
-            //googlehtz: 0, //search: "  sign" AND " " [02-Oct-21] 
+            googlehtz:17500, //search: "Bouveret syndrome" AND "Stomach OR Gastric" [31-Jan-22] 
             refs:"<br><p style='font-size: 20px'>Bouveret L. Sténose du pylore adhérent à la vésicule calculeuse. <i>Rev Med</i>. 1896; 16: 1-16<br></p>", 
             jrnls:["Rev Med",],  
             imgName:"<br><img src=\"../static/assets/img/profiles/Leon_Bouveret.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is licenced under <a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0 1.0</a>.<i></p>",
@@ -1782,7 +1779,7 @@
             opsSpec:{'Obstetrics': ['Caesarean section',], }, 
             geometry: {type: 'MultiPoint', coordinates: [ -0.086944, 51.503333 ]},  //long,lat
             properties: {title:"Braxton Hicks contractions", description:"Guy's Hospital - London<br>1872"},
-            googlehtz:256000, //search: "Braxton Hicks contractions" [02-Oct-21]
+            googlehtz:469000, //search: "Braxton Hicks" AND "contractions" [31-Jan-22]
             refs:"",
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/John_Braxton_Hicks.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -1803,7 +1800,7 @@
                      'Plastics': ['Wide local excision',],  }, 
             geometry: {type: 'MultiPoint', coordinates: [ -77.05057, 38.90126 ]},  //long,lat
             properties: {title:"Breslow thickness", description:'Washington DC<br>1970'},
-            //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
+            googlehtz:111000, //search: "Breslow thickness" AND "Melanoma" [31-Jan-22]
             refs:"<br><p style='font-size: 20px'>Breslow A. Thickness, cross-sectional areas and depth of invasion in the prognosis of cutaneous melanoma. <i>Ann Surg</i>. 1970; 172(5): 902-908<br></p>",   
             jrnls:["Ann Surg","Annals of Surgery",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/Alexander_Breslow.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -1823,7 +1820,7 @@
             opsSpec:{'Neurosurgery': ['Craniotomy',], }, 
             geometry: {type: 'MultiPoint', coordinates: [ 13.393333, 52.518056 ]}, //lng,lat
             properties: {title:"Brodmann area", description:'Berlin<br>1908'},
-            googlehtz:364000, //search: "Brodmann area" AND "brain" [28-Dec-21]  
+            googlehtz:364000, //search: "Brodmann area" AND "Brain" [28-Dec-21]  
             refs:"",//   
             jrnls:"",//["",]
             imgName:"<br><img src=\"../static/assets/img/profiles/Korbinian_Brodmann.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image is in the Public Domain.</i></p>", //Wikipedia
@@ -1845,7 +1842,7 @@
                      'General Surgery': ['Colectomy','Stoma',],    },
             geometry: {type: 'MultiPoint', coordinates: [ -1.9396, 52.453 ]},     //lng,lat
             properties: {title:"Brooke ileostomy", description:'Birmingham - England<br>1952'},
-            //googlehtz:0, //search: "  " AND "  " [02-Oct-21] 
+            googlehtz:18700, //search: "Brooke ileostomy" [31-Jan-22] 
             refs:"<br><p style='font-size: 20px'>Brooke BN. The management of an ileostomy, including its complications. <i>Lancet</i>. 1952; 2(6725): 102-104.</p>",  
             jrnls:["Lancet",], 
             imgName:"",//get new one from  gastroenterology <br><img src=\"../static/assets/img/profiles/Bryan_Nicholas_Brooke.png\" class=\"card-img\" style=\"width:12rem;\">",
@@ -1866,7 +1863,7 @@
             opsSpec:"",//
             geometry: {type: 'MultiPoint', coordinates: [ -81.26692, 35.71388 ]},     //lng,lat
             properties: {title:"Broselow tape", description:'North Carolina - USA<br>1985'},
-            //googlehtz: 0, //search: "Broselow tape" [02-Oct-21]
+            googlehtz: 47000, //search: "Broselow tape" [31-Jan-22]
             refs:"",   
             jrnls:"",//["",]
             imgName:"",  //"<img src=\"../static/assets/img/profiles/James_Broselow.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -1887,7 +1884,7 @@
             opsSpec:"",//
             geometry: {type: 'MultiPoint', coordinates: [ 57.50217, -20.15906 ]},     //lng,lat
             properties: {title:"Brown-Séquard syndrome", description:'Port Louis - Mauritius<br>1851'},
-            //googlehtz:0, //search: " " AND " " [02-Oct-21] 
+            googlehtz:37400, //search: "Brown-Séquard syndrome" [31-Jan-22] 
             refs:"<br><p style='font-size: 20px'>Brown-Séquard CE. De la transmission croisée des impressions sensitives par la moelle épinière. <i>C R Soc Biol</i>. 1851; 2: 33-44<br></p>",
             jrnls:["C R Soc Biol",], 
             imgName:"<br><img src=\"../static/assets/img/profiles/Charles_Brown_Sequard.png\" class=\"card-img\" style=\"width:12rem;\">", 
@@ -1929,7 +1926,7 @@
             opsSpec:"",//{'': ['',],},
             geometry: {type: 'MultiPoint', coordinates: [ 8.706389, 49.410278 ]}, //lng,lat
             properties: {title:"Brunner's glands", description:'Heideberg - Germany<br>1687'},
-            //googlehtz:0, //search: " " AND " " [02-Oct-21] 
+            googlehtz:43100, //search: "Brunner's glands" AND "Duodenum" [31-Jan-22] 
             refs:"",//"<br><br>",
             jrnls:"",//["",]
             imgName:"",//<br><img src=\"../static/assets/img/profiles/Charles_Brown_Sequard.png\" class=\"card-img\" style=\"width:12rem;\">", 
@@ -1949,7 +1946,7 @@
             ops:"",//["",],
             geometry: {type: 'MultiPoint', coordinates: [ -73.95396, 40.76469 ]}, //lng,lat
             properties: { title:"Buck's fascia", description:'New York<br>1848'},
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            googlehtz:27400, //search: "Buck's fascia" AND "Penis" [31-Jan-22]
             refs:"<br><p style='font-size: 20px'>Buck G. A new feature in the anatomical structure of the genito-urinary organs not hitherto described. <i>Transact Am Med Assoc</i>. 1848; 1: 367-372<br></p>",   
             jrnls:['Transact Am Med Assoc',],
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Buck%27s_fascia' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",   //no wni
