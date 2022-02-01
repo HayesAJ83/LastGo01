@@ -1238,7 +1238,7 @@
             who:"William Battle",  whoSearch:["William Battle",], 
             where:"London - UK",  whereSearch:["London, England, UK",], country:["UK"],      
             when:"1901",
-            disease:["Groin hernia","Groin pain",],   
+            disease:["Femoral hernia", "Groin hernia","Groin pain",],   
             ops:["Femoral hernia repair",],
             opsSpec:{'General Surgery': ['Femoral hernia repair',],},
             geometry: {type: 'MultiPoint', coordinates: [ -0.1188, 51.49891 ]},     //long,lat
@@ -3258,7 +3258,7 @@
             who:"Rene de Garengeot", whoSearch:["Rene de Garengeot",],    
             where:"Paris - France", whereSearch:["Paris, France",],           
             country:["France"], when:"1731",   
-            disease:["Appendicitis", "Hernia",],
+            disease:["Appendicitis", "Femoral hernia", "Hernia",],
             ops:["Appendicectomy", "Inguinal hernia repair",],
             opsSpec:{'General Surgery': ['Appendicectomy', 'Inguinal hernia repair', ], },
             geometry: {type: 'MultiPoint', coordinates: [ 2.34117, 48.85078 ]}, //lng,lat
@@ -4247,6 +4247,7 @@
             opsSpec:{'Oesophagogastric': ['Endoscopy', ], },
             geometry: {type: 'MultiPoint', coordinates: [ -3.19707 , 55.94462 ]}, //lng,lat
             properties: { title:"Forrest classification", description:'Edinburgh<br>1974'},
+            //googlehtz:0, //search: " " AND " " [02-Oct-21]
             refs:"<br><p style='font-size: 20px'>Forrest JAH, Finlayson NDC, Shearman DJC. Endoscopy in gastrointestinal bleeding. <i>Lancet</i>. 1974; 2(7877); 394-397<br></p>",   
             jrnls:["Lancet",],
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Forrest_classification' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
@@ -4264,7 +4265,7 @@
             where:"Paris - France", 
             whereSearch:["Paris", "France",],                    
             country:["France"], when:"1883",  
-            disease:["Sepsis",], 
+            disease:["Gangrene", "Sepsis",], 
             ops:["Debridement",],
             opsSpec:{'Urology': ['Debridement', ], },
             geometry: {type: 'MultiPoint', coordinates: [ 2.333333 , 48.866667 ]}, //long,lat
@@ -4518,7 +4519,7 @@
             who:"Henri Becquerel", //whoSearch:[" ",],    
             where:"Paris - France", //whereSearch:["",],           
             when:"1901",
-            disease:["Thyroid cancer","Thyrotoxicosis",],
+            disease:["Thyroid cancer", "Thyrotoxicosis",],
             ops:["Thyroidectomy",],
             geometry: {type: 'MultiPoint', coordinates: [ 2.209 , 48.713 ]}, //lng,lat
             properties: { title:"Gigabecquerel (GBq)", description:'École Polytechnique - Paris<br>1901'},
@@ -4543,7 +4544,7 @@
             geometry: { type: 'MultiPoint', coordinates: [ 10.15934, 36.80678 ]}, //long,lat
             properties: { title:"Gharbi classification", description:'Tunis Children’s Hospital<br>1981'},
             //googlehtz: 0, //search: "  " AND "   " [02-Oct-21]
-            refs:"<br><p style='font-size: 20px'>Gharbi HA, Hassine W, Brauner MW et al. Ultrasound examination of the hydatic liver. <i>Radiology</i>. 1981; 139(2): 459-463<br></p>",  
+            refs:"<br><p style='font-size: 20px'>Gharbi HA, Hassine W, Brauner MW, <i>et al</i>. Ultrasound examination of the hydatic liver. <i>Radiology</i>. 1981; 139(2): 459-463<br></p>",  
             jrnls:["Radiology",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"<br>5 stages. Tunis Children’s Hospital, now called Hospital Children Béchir Hamza.<br>",// 
@@ -4745,7 +4746,7 @@
             //type:'Feature',
             //ID:2220, 
             //name:"Gorlin syndrome",      
-            //topic:[""], 
+            //topic:["Plastics"], 
             //subtype:["",], 
             //who:"Robert J Gorlin", //whoSearch:[" ",],    
             //where:"Minnessta", whereSearch:["",],  country:["USA"],         
@@ -4800,7 +4801,7 @@
                      'Oesophagogastric': ['Endoscopy', 'Perforated ulcer repair',], },
             geometry: {type: 'MultiPoint', coordinates: [ -79.3888, 43.6585 ]}, //lng,lat
             properties: { title:"Graham patch", description:'Toronto<br>1937'},
-            //googlehtz:0, //search: "" AND "" [02-Oct-21]
+            googlehtz:5740, //search: "Graham patch" AND "Ulcer" [01-Feb-22]
             refs:"<br><p style='font-size: 20px'>Graham R. The treatment of perforated duodenal ulcers. <i>Surg Gynecol Obstet</i>. 1937; 64: 235-238<br></p>",// 
             jrnls:["Surg Gynecol Obstet","Surgery, Gynecology & Obstetrics",], 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Graham_patch' target='_blank' class='btn btn-info' role='button'>Wikipedia</a><br>", //no wni 
@@ -4844,7 +4845,7 @@
             opsSpec:{'Endocrine': ['Thyroidectomy',], },
             geometry: {type: 'MultiPoint', coordinates: [ -6.2559 , 53.3437 ]}, //lng,lat
             properties: { title:"Graves' disease", description:'Dublin<br>1835'},
-            //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
+            googlehtz:4200000, //search: "Graves disease" [01-Feb-22]
             refs:"<br><p style='font-size: 20px'>Graves RJ. Clinical Lectures. <i>Lon Med Surg J</i>. 1835; 7: 516-517<br></p>", 
             jrnls:["Lon Med Surg J",],  
             imgName:"",// check permissions <br><img src=\"../static/assets/img/profiles/Robert_J_Graves.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -4866,7 +4867,7 @@
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ -1.6195, 54.9793 ]}, //lng,lat
             properties: { title:"Grey Turner's sign", description:'Newcastle<br>1919'},
-            //googlehtz:0, //search: "   " AND " " [02-Oct-21]
+            googlehtz:10600, //search: "Grey Turner's sign" AND "Pancreatitis" [01-Feb-22]
             refs:"<br><p style='font-size: 20px'>Grey Turner G. Local discoloration of the abdominal wall as a sign of acute pancreatitis. <i>Br J Surg</i>. 1919; 394-395<br></p>",   
             jrnls:["Br J Surg", "BJS", "British Journal of Surgery",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -4887,7 +4888,7 @@
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ -118.40873, 34.07158 ]}, //lng,lat
             properties: { title:"Guedel airway", description:'Beverly Hills<br>1933'}, 
-            //googlehtz:0, //search: "" AND "" [02-Oct-21] 
+            googlehtz:132000, //search: "Guedel airway" [01-Feb-22] 
             refs:"<br><p style='font-size: 20px'>Guedel AE. A nontraumatic pharyngeal airway. <i>JAMA</i>. 1933; 100(23): 1862<br></p>",   
             jrnls:["JAMA",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -4910,7 +4911,7 @@
             opsSpec:{'Oesophagogastric': ['Endoscopy',], }, 
             geometry: {type: 'MultiPoint', coordinates: [ -74.00068 , 40.73646 ]}, //lng,lat
             properties: { title:"Gurvits syndrome", description:'New York<br>2007'},
-            //googlehtz:0, //search: "" AND "" [02-Oct-21]
+            googlehtz:3820, //search: "Gurvits syndrome" [01-Feb-22]
             refs:"<br><p style='font-size: 20px'>Gurvits GE, Shapsis A, Lau N, Gualtieri N, Robilotti JG. Acute esophageal necrosis: A rare syndrome. <i>J Gastroenterol</i>. 2007; 42(1): 29-38<br></p>",  
             jrnls:["J Gastroenterol",], 
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -4931,7 +4932,7 @@
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ -93.26238, 44.97217 ]}, //lng,lat
             properties: { title:"Gustilo Anderson classification", description:'Minneapolis - Minnesota<br>1976'}, 
-            //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
+            googlehtz:18900, //search: "Gustilo Anderson classification" AND "Fracture" [01-Feb-22]
             refs:"<br><p style='font-size: 20px'>Gustilo RB, Anderson JT. Prevention of infection in the treatment of one thousand and twenty-five open fractures of long bones: retrospective and prospective analyses. <i>J Bone Joint Surg Am</i>. 1976; 58(4): 453-458<br></p>",  
             jrnls:["J Bone Joint Surg Am",], 
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -4955,7 +4956,7 @@
             opsSpec:{'Colorectal': ['Colectomy', 'Colonoscopy', ], }, 
             geometry: {type: 'MultiPoint', coordinates: [ -89.86147, 35.12919 ]}, //lng,lat
             properties: { title:"Haggitt classification", description:'Memphis - Tennessee<br>1985'},
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            googlehtz:1260, //search: "Haggitt classification" AND "Polyp" [01-Feb-22]
             refs:"<br><p style='font-size: 20px'>Haggitt RC, Glotzbach RE, Soffer EE, Wruble LD. Prognostic factors in colorectal carcinomas arising in adenomas: implications for lesions removed by endoscopic polypectomy. <i>Gastroenterology</i>. 1985; 89(2): 328-336<br></p>",  
             jrnls:["Gastroenterology",], 
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Colorectal_polyp' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
@@ -5017,7 +5018,7 @@
             ops:["Transsphenoidal pituitary surgery",],
             geometry: {type: 'MultiPoint', coordinates: [ -73.564, 45.526 ]}, //lng,lat
             properties: { title:"Hardy classification", description:'Montreal<br>1976'},
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            googlehtz:7780, //search: "Hardy classification" AND "Pituitary" [01-Feb-22]
             refs:"<br><p style='font-size: 20px'>Hardy J, Vezina JL. Transsphenoidal neurosurgery of intracranial neoplasm. <i>Adv Neurol</i>. 1976; 15: 261–73<br></p>",   
             jrnls:['Adv Neurol','Advances in Neurology',],
             URLs:"",//"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
@@ -5103,7 +5104,7 @@
             whereSearch:["Bristol, England", "UK",],              
             when:"1980",  
             disease:["Colitis", "Inflammatory bowel disease",],   
-            ops:"",//["",],
+            ops:["Colectomy","Small bowel resection"],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ -2.5963, 51.459 ]}, //lng,lat
             properties: { title:"Harvey-Bradshaw index", description:'Bristol - England<br>1980'},
@@ -5169,7 +5170,6 @@
             //ops:["", "",],
             //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
             //properties: { title:"Heimlich manoeuvre", description:' <br> '},
-            //lat:"", long:"",
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
             //refs:"",   
             //jrnls:"",//["",]
@@ -5191,6 +5191,7 @@
             opsSpec:{'Oesophagogastric': ['Endoscopy', 'Oesophagectomy', ], },
             geometry: {type: 'MultiPoint', coordinates: [ 11.012, 49.5897 ]}, //lng,lat
             properties: { title:"Heineke–Mikulicz pyloroplasty", description:'Erlangen - Germany<br>1886'}, 
+            googlehtz:7850, //search: "Heineke–Mikulicz pyloroplasty" [01-Feb-22]
             refs:"",   
             jrnls:"",//["",]
             URLs:"<br><a href='https://www.whonamedit.com/synd.cfm/2085.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
@@ -5216,7 +5217,7 @@
                      'Trauma': ['Splenectomy', ], },
             geometry: {type: 'MultiPoint', coordinates:[ 17.033333, 51.113611 ]}, //lng,lat
             properties: { title:"Heinz bodies", description:'Wrocław - Poland<br>1890'}, 
-            //googlehtz:0, //search: "   " AND " " [02-Oct-21]
+            googlehtz:83100, //search: "Heinz bodies" AND "Blood" [01-Feb-22]
             refs:"",  
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/Robert_Heinz.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -5238,7 +5239,7 @@
                      'HPB': ['Cholecystectomy', ],},
             geometry: {type: 'MultiPoint', coordinates:[ 11.008682, 52.228881 ]}, //lng,lat
             properties: { title:"Spiral valves of Heister", description:'Helmstedt - Germany<br>1721'},   
-            //googlehtz:0, //search: "   " AND " " [02-Oct-21]
+            googlehtz:6120, //search: "Spiral valves of Heister" [01-Feb-22]
             refs:"",   
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/Lorenz_Heister.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -5258,7 +5259,7 @@
             opsSpec:{'Oesophagogastric': ['Endoscopy', 'Cardiomyotomy', ], },
             geometry: {type: 'MultiPoint', coordinates:[ 12.3778663, 51.3387758 ]}, //lng,lat
             properties: { title:"Heller cardiomyotomy", description:'Leipzig - Germany<br>1914'}, 
-            //googlehtz: 0, //search: "" AND "" [02-Oct-21]
+            googlehtz:10300, //search: "Heller cardiomyotomy" OR "Heller's cardiomyotomy" [01-Feb-22]
             refs:"<br><p style='font-size: 20px'>Heller E. Extramuköse cardiaplastik bein chronischen Cardiospasmus mit dilatation des Oesophagus. <i>Mitt Grenzgeb Med Chir</i>. 1913; 27: 141-149<br></p>",   
             jrnls:["Mitt Grenzgeb Med Chir",],
             URLs:"",//no wni   <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
@@ -5278,7 +5279,7 @@
             ops:["Inguinal hernia repair",],
             geometry: {type: 'MultiPoint', coordinates:[ 9.935278, 49.788056 ]}, //lng,lat
             properties: { title:"Hesselbach's triangle", description:'Germany<br>1806'}, 
-            //googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+            googlehtz: 155000, //search: "Hesselbach's triangle" AND "Inguinal" [01-Feb-22]
             refs:"",
             jrnls:"",//["",],
             URLs:"<br><a href='https://wellcomecollection.org/works/d7nvyfnx/items?canvas=1' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://en.wikipedia.org/wiki/Inguinal_triangle' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='http://www.whonamedit.com/synd.cfm/3216.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
@@ -5299,13 +5300,13 @@
             ops:"",//["",],
             geometry: {type: 'MultiPoint', coordinates: [ -122.33117, 47.62716 ]}, //lng,lat
             properties: { title:"Hickman line", description:'Seattle<br>1979'},
-            //googlehtz: 0, //search: "  sign" AND " " [02-Oct-21]
+            googlehtz:17500, //search: "Hickman line" AND "Vein OR Venous" [01-Feb-22]
             refs:"<br><p style='font-size: 20px'>Hickman RO, Buckner CD, Clift RA, Sanders JE, Stewart P, Thomas ED. A modified right atrial catheter for access to the venous system in marrow transplant recipients. <i>Surg Gynecol Obstet</i>. 1979; 148(6): 871-875<br></p>",   
             jrnls:["Surg Gynecol Obstet","Surgery, Gynecology & Obstetrics",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/Robert_Hickman.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Hickman_line' target='_blank' class='btn btn-info' role='button'>Wikipedia</a><br>", //no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
-            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{
             //type:'Feature',
             //ID:2740, 
@@ -5345,6 +5346,10 @@
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/Hinchey_Classification' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",//<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{
+
+/// Hirase classification. 1997. Yuichi Hirase. Japan. Fingertip amputation.
+
+
             //type:'Feature',
             //ID:2780, 
             //name:"Hirschsprung's disease",      
@@ -5372,21 +5377,21 @@
             who:"Wilhelm His Jr", whoSearch:["Wilhelm His Jr",],
             where:"Berlin - Germany", whereSearch:["Berlin", "Germany",],                
             country:["Germany"], when:"1906",   
-            disease:["Dyspepsia","GERD / GORD","Reflux",],
-            ops:["Antireflux surgery", "Cardiomyotomy", "Endoscopy", "Fundoplication"],
+            disease:["Dyspepsia", "GERD / GORD", "Reflux",],
+            ops:["Antireflux surgery", "Cardiomyotomy", "Endoscopy", "Fundoplication",],
             geometry: {type: 'MultiPoint', coordinates: [ 13.3935, 52.5181 ]}, //lng,lat
             properties: { title:"Angle of His", description:'Berlin<br>1906'},
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            googlehtz:5850000, //search: "Angle of His" AND "Stomach" [01-Feb-22]
             refs:"",   
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/His.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Angle_of_His' target='_blank' class='btn btn-info' role='button'>Wikipedia</a><br>", //no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
-            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:2820, 
-            name:"Hjortsjö's crook",      
+            name:"Hjortsjö crook",      
             topic:["HPB",],
             subtype:["Anatomy",],  
             who:"CH Hjortsjö",    
@@ -5397,8 +5402,8 @@
             disease:"",//["",],  n/a
             ops:["Hepatectomy",],
             geometry: {type: 'MultiPoint', coordinates: [ 13.20178 , 55.71113 ]}, //long,lat
-            properties: { title:"Hjortsjö's crook", description:'Lund<br>1951'},
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            properties: { title:"Hjortsjö crook", description:'Lund<br>1951'},
+            googlehtz:503, //search: "Hjortsjö crook" AND "Liver" [01-Feb-22]
             refs:"<br><p style='font-size: 20px'>Hjortsjo CH. The topography of the intrahepatic duct systems. <i>Acta Anat (Basel)</i>. 1951; 11(4): 599-615</p>",   
             jrnls:["Acta Anat (Basel)","Acta Anatomica",],
             URLs:"",//no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
@@ -5420,7 +5425,7 @@
             ops:["Lymph node biopsy",],
             geometry: {type: 'MultiPoint', coordinates: [ -0.087 , 51.5031 ]}, //long,lat
             properties: { title:"Hodgkin's lymphoma", description:'London<br>1832'},
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            googlehtz:19400000, //search: "Hodgkin's lymphoma" OR "Hodgkin lymphoma" [01-Feb-22]
             refs:"",  
             jrnls:"",//["",] 
             imgName:"",//"<img src=\"../static/assets/img/profiles/Hodgkin.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -5520,13 +5525,13 @@
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ -118.27188 , 34.10839 ]}, //long,lat
             properties: { title:"Hudson mask", description:'Los Angeles<br>1956'}, 
-            //googlehtz: 0, //search: " " AND " " [02-Oct-21]
+            googlehtz:35100, //search: "Hudson mask" AND "Oxygen" [01-Feb-22]
             refs:"",   
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/Hudson.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
             URLs:"",  //no wiki, no wni   //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
-            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{
             //type:'Feature',
             //ID:2960, 
@@ -5610,7 +5615,7 @@
         },{
             type:'Feature',
             ID:3040, 
-            name:"Inokuchi portal shunt",      
+            name:"Inokuchi shunt",      
             topic:["HPB",], subtype:["Operations",],
             who:"Kiyoshi Inokuchi", //whoSearch:["",], 
             where:"Fukuoka - Japan", //whereSearch:[" ", " ",],               
@@ -5619,7 +5624,7 @@
             ops:["Portal-systemic shunt",],
             geometry: {type: 'MultiPoint', coordinates:[ 130.41557, 33.60892 ]}, //TOO CLOSE TO ANOTHER //lng,lat
             properties: { title:"Inokuchi portal shunt", description:'Fukuoka<br>1970'}, 
-            //googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+            googlehtz:413, //search: "Inokuchi shunt" AND "Portal" [01-Feb-22]
             refs:"<br><p style='font-size: 20px'>Inokuchi K, Kobayashi M, Kusaba A, Ogawa Y, Saku M, Shiizaki T. New selective decompression of esophageal varices. By a left gastric venous-caval shunt. <i>Arch Surg</i>. 1970; 100(2): 157-62<br></p>",   
             jrnls:["Arch Surg","Archives of Surgery",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -5627,9 +5632,16 @@
             URLs:"<br><a href='https://jamanetwork.com/journals/jamasurgery/article-abstract/569291' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <br>", //no wni   <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
+
+///Ishikawa classification for fingertip amputation. Kozo Ishikawa. Plastics. googlehtz:539. "Ishikawa classification" AND "Finger"
+///////Ishikawa K, Ogawa Y, Soeda H, Yoshida Y. A new classification of the amputation level for the distal part of the fingers. <i>J Jpn Soc Microsurg</i>. 1990; 3: 54–62
+
+
+///Ishikawa classification. Cavernous sinus. googlehtz:702. "Ishikawa classification" AND "Cavernous"
+
             type:'Feature',
             ID:3060, 
-            name:"Ishikawa classification",      
+            name:"Ishikawa classification for pancreatic cancer",      
             topic:["HPB",],
             subtype:["Scores"],  
             who:"Osamu Ishikawa",    
@@ -5640,13 +5652,13 @@
             ops:["Pancreatic resection",],
             geometry: {type: 'MultiPoint', coordinates: [ 135.509, 34.64656 ]}, //lng,lat
             properties: { title:"Ishikawa classification", description:'Osaka - Japan<br>1992'},     
-            //googlehtz: 0, //search: "   " AND " " [02-Oct-21]
-            refs:"<br><p style='font-size: 20px'>Ishikawa O, Ohigashi H, Imaoka S et al. Preoperative indications for extended pancreatectomy for locally advanced pancreas cancer involving the portal vein. <i>Ann Surg</i>. 1992; 215(3): 231-236<br></p>",   
+            googlehtz:932, //search: "Ishikawa classification" AND "Pancreatic OR Pancreas" [01-Feb-22]
+            refs:"<br><p style='font-size: 20px'>Ishikawa O, Ohigashi H, Imaoka S, <i>et al</i>. Preoperative indications for extended pancreatectomy for locally advanced pancreas cancer involving the portal vein. <i>Ann Surg</i>. 1992; 215(3): 231-236<br></p>",   
             jrnls:["Ann Surg","Annals of Surgery",],
             URLs:"",//wiki-N, no wni  //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             imgName:"",//"<img src=\"../static/assets/img/profiles/Ishikawa.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
-            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:3080, 
@@ -5661,7 +5673,7 @@
             ops:["Endoscopy", "Oesophagectomy", "Thoracotomy",],  
             geometry: {type: 'MultiPoint', coordinates: [ -0.07379, 51.6128 ]}, //lng,lat
             properties: { title:"Ivor Lewis oesophagectomy", description:'London<br>1946'}, 
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            googlehtz:51700, //search: "Ivor Lewis oesophagectomy" OR "Ivor Lewis esophagectomy" [01-Feb-22]
             refs:"<br><p style='font-size: 20px'>Lewis I. The surgical treatment of carcinoma of the oesophagus; with special reference to a new operation for growths of the middle third. <i>Br J Surg</i>. 1946; 34: 18-31.<br></p>",   
             jrnls:["Br J Surg", "BJS", "British Journal of Surgery",],
             imgName:"",// need permissions <br><img src=\"../static/assets/img/profiles/Ivor_Lewis.png\" class=\"card-img\" style=\"width:12rem;\">",
@@ -5721,14 +5733,13 @@
             ops:"",//["",],
             geometry: {type: 'MultiPoint', coordinates:[ -1.22144, 51.76512 ]}, //lng,lat
             properties: { title:"Jadad scale", description:'Oxford<br>1996'}, 
-            //googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+            googlehtz:138000, //search: "Jadad scale" AND "Trial" [01-Feb-22]
             refs:"<br><p style='font-size: 20px'>Jadad AR, Moore RA, Carroll D, Jenkinson C, Reynolds DJ, Gavaghan DJ, McQuay HJ. Assessing the quality of reports of randamized clinial trials: Is blinding necessary? <i>Control Clin Trials</i>. 1996: 17(1): 1-12<br></p>",   
             jrnls:["Control Clin Trials","Controlled Clinical Trials",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",//
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Jadad_scale' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  // https://www.sciencedirect.com/science/article/abs/pii/0197245695001344?via%3Dihub,  //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-       
         },{
             type:'Feature',
             ID:3160, 
@@ -5742,7 +5753,7 @@
             ops:["C-spine fracture fixation",],
             geometry: {type: 'MultiPoint', coordinates: [ -2.26453 , 53.48352 ]}, //lng,lat
             properties: { title:"Jefferson fracture", description:'Manchester<br>1919'},
-            //googlehtz:0, //search: "  sign" AND " " [02-Oct-21]
+            googlehtz:33300, //search: "Jefferson fracture" AND "Spine" [01-Feb-22]
             refs:"<br><p style='font-size: 20px'>Jefferson G. Fracture of the atlas vertebra. Report of four cases, and a review of those previously recorded. <i>Br J Surg</i>. 1919; 7: 407-422<br></p>",   
             jrnls:["Br J Surg", "BJS", "British Journal of Surgery",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/Jefferson.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -5807,7 +5818,7 @@
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             //acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
        
-// KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK K K K ///////////////////////
+// KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK ///////////////////////
 
         },{
             type:'Feature',
@@ -5821,10 +5832,10 @@
             when:"1958", 
             disease:"",//["",],
             ops:"",//["",],  
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ -121.70557, 37.679827 ]}, //lng,lat
             properties: { title:"Kaplan-Meier curve", description:'California (Kaplan)<br>1958'},
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            googlehtz:501000, //search: "Kaplan-Meier curve" AND "Survival" [01-Feb-22]
             refs:"<br><p style='font-size: 20px'>Kaplan EL, Meier P. Nonparametric estimation from incomplete observations. <i>JASA</i>. 1958; 53(282): 457-481<br></p>",
             jrnls:["JASA","Journal of the American Statistical Association",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -5865,10 +5876,10 @@
             when:"1948",   
             disease:"",//["",], 
             ops:"",//["",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ -73.956842, 40.764096 ]}, //lng,lat
             properties: { title:"Karnofsky performance scale", description:'New York<br>1948'},    
-            //googlehtz: 0, //search: "   " AND " " [02-Oct-21]
+            googlehtz:106000, //search: "Karnofsky performance scale" [01-Feb-22]
             refs:"<br><p style='font-size: 20px'>Karnofsky DA, Abelmann WH, Craver LF, Burchenal JH. The use of the nitrogen mustards in the palliative treatment of carcinoma. With particular reference to bronchogenic carcinoma. <i>Cancer</i>. 1948; 1(4): 634-656<br></p>",   
             jrnls:["Cancer",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -5910,7 +5921,7 @@
             opsSpec:"",//{'': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ 23.75373, 37.97851 ]}, //lng,lat
             properties: { title:"Karydakis procedure", description:'Athens<br>1973'},   
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            //googlehtz:0, //search: " " AND " " [02-Oct-22]
             refs:"", 
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/Karydakis.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -5928,7 +5939,7 @@
             country:["Japan"], when:"1951",   
             disease:["Biliary atresia","Jaundice",],  
             ops:"",//["",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ 140.87441, 38.25365 ]}, //lng,lat
             properties: { title:"Kasai procedure", description:'Sendai - Japan<br>1951'}, 
             //googlehtz:0, //search: "   " AND " " [02-Oct-21] 
@@ -5973,7 +5984,7 @@
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ 16.35849 , 48.21772 ]}, //lng,lat
             properties: { title:"Kierner classification", description:'Vienna<br>1998'}, 
-            //googlehtz:0, //search: "   " AND " " [02-Oct-21] 
+            googlehtz:125, //search: "Kierner classification" AND "Nerve" [01-Feb-22] 
             refs:"<br><p style='font-size: 20px'>Kierner AC, Aigner M, Burian M. The external branch of the superior laryngeal nerve: its topographical anatomy as related to surgery of the neck. <i>Arch Otolaryngol Head Neck Surg</i>. 1998; 124(3): 301-303<br></p>", 
             jrnls:["Arch Otolaryngol Head Neck Surg",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/Kierner.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -6160,8 +6171,8 @@
             where:"Bern - Switzerland", whereSearch:["Bern, Switzerland",],                 
             country:["Switzerland"], when:"1892",  
             disease:["Cholecystitis",],  
-            ops:["Cholecystectomy","Laparoscopic cholecystectomy"],
-            opsSpec:"",//{'Endocrine': ['',], },
+            ops:["Cholecystectomy", "Laparoscopic cholecystectomy"],
+            opsSpec:"",//{'': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ 7.4245, 46.9473 ]}, //long,lat
             properties: { title:"Kocher's abdominal incision", description:'Bern - Switzerland<br>1892'},  
             //googlehtz:0, //search: "  sign" AND " " [02-Oct-21]
@@ -6222,7 +6233,7 @@
             country:["Greece"], when:"1912",  
             disease:["Lymphoedema",], 
             ops:"",//["",], 
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'Vascular': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ 23.75432, 37.97974 ]}, //long,lat
             properties: { title:"Kondoleon operation", description:'Athens<br>1912'},  
             //googlehtz:00, //search: "  " AND " " [02-Oct-21]
@@ -6243,7 +6254,7 @@
             country:["Germany"], when:"1896",  
             disease:"",//["",],
             ops:"",//["",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'Gynaecology': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ 8.773611, 50.810833 ]}, //long,lat
             properties: { title:"Krunkenberg tumour", description:'Marburg - Germany<br>1896'},    
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
@@ -6264,7 +6275,7 @@
             country:["Japan"], when:"1996",  
             disease:"",//["",],
             ops:"",//["",], 
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'Colorectal': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ 140.15268, 39.68682 ]}, //long,lat
             properties: { title:"Kudo classification", description:'Akita - Japan<br>1996'},   
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
@@ -6316,7 +6327,7 @@
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             //acknow:"",
 
-// LLLLLLLLLLLLLL L L L L L L L L L L L L L L L L L L L L L L L L L L L L L L //////////
+// LLLLLLLLLLLLLLLLLLLLLLLL //////////
        
         },{
             type:'Feature',
@@ -6333,7 +6344,7 @@
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ 13.37659, 52.52571 ]}, //long,lat
             properties: { title:"Islets of Langerhans", description:'Berlin<br>1869'},
-            //googlehtz:00, //search: " " AND " " [02-Oct-21]
+            googlehtz:1070000, //search: "Islets of Langerhans" [01-Feb-22]
             refs:"",  
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -6370,9 +6381,9 @@
             who:"Otto Lanz", whoSearch:["Otto Lanz",], 
             where:"Amsterdam - Netherlands", whereSearch:["Amsterdam, Netherlands",],                 
             country:["Netherlands"], when:"1908",  
-            disease:["Appendicitis",],  
+            disease:["Abdominal pain", "Appendicitis",],  
             ops:["Appendicectomy",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'General Surgery': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ 4.894, 52.368 ]}, //long,lat
             properties: { title:"Lanz incision", description:'Amsterdam<br>1908'},     
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -6418,7 +6429,7 @@
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ 22.29567, 60.45417 ]}, //long,lat
             properties: { title:"Lauren classification", description:'Turku - Finland<br>1965'},
-            //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
+            googlehtz:61400, //search: "Lauren classification" AND "Gastric OR Stomach" [01-Feb-22]
             refs:"<br><p style='font-size: 20px'>Lauren P. The two histological main types of gastric carcinoma: Diffuse and so-called intestinal-type carcinoma. An attempt at a histo-clinical classification. <i>Acta Pathol Microbiol Scand</i>. 1965; 64: 31-49<br></p>",
             jrnls:"",//["",]
             URLs:"<br><a href='https://onlinelibrary.wiley.com/doi/epdf/10.1111/apm.1965.64.1.31' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a>",  //wiki-N, wni no //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
@@ -6437,7 +6448,7 @@
             country:["France"], when:"1901",   
             disease:["Head injury",],  
             ops:"",//["",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'Maxillofacial': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ 3.07301 , 50.63166 ]}, //lng,lat
             properties: { title:"Le Fort fractures", description:'Lille - France<br>1901'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -6479,7 +6490,7 @@
             country:["France"], when:"1948",  
             disease:"",//["",], 
             ops:["Aortic surgery",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'Vascular': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ 2.345556, 48.849167 ]}, //lng,lat
             properties: { title:"Leriche's syndrome", description:'Paris<br>1948'},  
             //googlehtz:0, //search: "" AND "" [02-Oct-21]
@@ -6566,7 +6577,7 @@
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ -118.24377, 34.0522 ]}, //lng,lat
             properties: { title:"Lichtenstein hernia repair", description:'Los Angeles<br>1989'},
-            //googlehtz:  0, //search: "  " AND "  " [02-Oct-21]
+            googlehtz:17600, //search: "Lichtenstein hernia repair" [01-Feb-22]
             refs:"<br><p style='font-size: 20px'>Lichtenstein IL, Shulman AG, Amid PK, Montllor MM. The tension-free hernioplasty. <i>Am J Surg</i>. 1989; 157(2): 188-193<br></p>",   
             jrnls:["Am J Surg",],
             URLs:"",//wiki-Y/N?, //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
@@ -6655,7 +6666,7 @@
             //imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             //about:"",//
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
-            //acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{
             //type:'Feature',
             //ID:4040, 
@@ -6675,7 +6686,7 @@
             //imgName:"",//"<img src=\"../static/assets/img/profiles/Erns_Heller.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             //about:"",//
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
-            //acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            //acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:4060, 
@@ -6709,7 +6720,7 @@
             country:["USA"], when:"1930",   
             disease:["Cholecystitis","Gallbladder cancer",],  
             ops:["Cholecystectomy","Laparoscopic cholecystectomy",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'HPB': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ -71.07411 , 42.33441 ]}, //lng,lat
             properties: { title:"Lymph node of Lund", description:'Boston<br>1930'},
             lat:"42.33441", long:"-71.07411",
@@ -6732,7 +6743,7 @@
             country:["USA"], when:"1944",   
             disease:["Burns",],  
             ops:"",//["",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'Plastics': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ -71.073131 , 42.335119 ]}, //lng,lat
             properties: { title:"Lund & Browder chart", description:'Boston<br>1944'},
             //googlehtz: 0, //search: " " AND " " [02-Oct-21]
@@ -6754,7 +6765,7 @@
             country:["Germany"], when:"1863",   
             disease:["Cholecystitis","Gallstones",],  
             ops:["Cholecystectomy","Laparoscopic cholecystectomy",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ 9.04818 , 48.52771 ]}, //long,lat
             properties: { title:"Ducts of Luschka", description:'Tübingen<br>1863' },
             //googlehtz: 0, //search: " " AND " " [02-Oct-21]
@@ -6796,7 +6807,7 @@
             country:["USA"], when:"1966",   
             disease:["Bowel cancer", "Colorectal cancer",], 
             ops:"",//["",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -95.9744 , 41.24342 ]}, //lng,lat
             properties: { title:"Lynch syndrome", description:'Omaha - Nebraska<br>1966'},
             //googlehtz: 0, //search: "  " AND "  " [02-Oct-21]
@@ -6827,7 +6838,7 @@
             URLs:"", //wiki-Y/N, no wni //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",//
-            acknow:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            acknow:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:4200, 
@@ -6840,7 +6851,7 @@
             country:["USA"], when:"1952",   
             disease:["Oesophageal rupture",],  
             ops:["Thoracotomy",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -87.61356 , 41.84138 ]}, //lng,lat
             properties: { title:"Mackler's triad", description:'Chicago<br>1952'},
             //googlehtz: 0, //search: " " AND " " [02-Oct-21]
@@ -6861,7 +6872,7 @@
             //country:[""], when:"",  
             //disease:"",//["",], 
             //ops:["",],
-            //opsSpec:"",//{'Endocrine': ['',], },
+            //opsSpec:"",//{'Neurosurgery': ['',], },
             //geometry: {type: 'MultiPoint', coordinates: [ , ]}, //lng,lat
             //properties: { title:"Malgaigne's fracture", description:'<br>'},  
             //googlehtz:0, //search: "" AND "" [02-Oct-21]
@@ -6875,18 +6886,18 @@
             type:'Feature',
             ID:4240, 
             name:"Mallampati score",     
-            topic:["Anaesthetics",], subtype:["Scores",], 
+            topic:["Anaesthetics","ENT",], subtype:["Scores",], 
             who:"S Rao Mallampati", whoSearch:["S Rao Mallampati",],           
             where:"Boston - Massachusetts - USA",    
             whereSearch:["Boston, Massachusetts, USA", "Massachusetts", "USA",],              
             country:["USA"], when:"1985",   
             disease:["Airway obstruction",], 
             ops:["Tracheostomy",], 
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'ENT': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -71.07287 , 42.33444 ]}, //lng,lat
             properties: { title:"Mallampati score", description:'Boston<br>1985'},   
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            refs:"<br><p style='font-size: 20px'>Mallampati SR, Gatt SP, Gugino LD, et al. A clinical sign to predict difficult tracheal intubation: a prospective study. <i>Can Anaesth Soc J</i>. 1985; 32(4): 429-434.<br></p>",   
+            googlehtz:47600, //search: "Mallampati score" AND "Airway" [01-Feb-22]
+            refs:"<br><p style='font-size: 20px'>Mallampati SR, Gatt SP, Gugino LD, <i>et al</i>. A clinical sign to predict difficult tracheal intubation: a prospective study. <i>Can Anaesth Soc J</i>. 1985; 32(4): 429-434.<br></p>",   
             jrnls:["Can Anaesth Soc J","Canadian Anaesthetists' Society journal",],
             URLs:"<br> <a href='https://en.wikipedia.org/wiki/Mallampati_score' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <br>",  //no wni  <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             imgName:"",//"<img src=\"../static/assets/img/profiles/Mallampati.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -6905,10 +6916,10 @@
             country:["USA"], when:"1929",   
             disease:["Alcohol dependence","Anaemia","GI bleeding","Hypovolaemia","Shock",],  
             ops:["Endoscopy",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -71.07283 , 42.33441 ]}, //lng,lat
             properties: { title:"Mallory-Weiss syndrome", description:'Boston<br>1929'},   
-            //googlehtz:0, //search: "  " AND "" [02-Oct-21]
+            googlehtz:75300, //search: "Mallory-Weiss syndrome" [01-Feb-22]
             refs:"<br><p style='font-size: 20px'>Mallory GK, Weiss S. Hemorrhages from lacerations of the cardiac orifice of the  stomach due to vomiting. <i>Am J Med Sci</i>. 1929; 176: 506<br></p>",   
             jrnls:["Am J Med Sci","American Journal of Medical Sciences"],
             URLs:"<br> <a href='https://en.wikipedia.org/wiki/Mallory–Weiss_syndrome' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='http://www.whonamedit.com/synd.cfm/895.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
@@ -6926,8 +6937,8 @@
             whereSearch:["Caen, France", "France",],
             country:["France"], when:"1994",  
             disease:["Oesophageal cancer", "Gastric cancer",],  
-            ops:["Oesophagectomy","Gastrectomy"], 
-            opsSpec:"",//{'Endocrine': ['',], },
+            ops:["Oesophagectomy", "Gastrectomy"], 
+            opsSpec:"",//{'Oesophagogastric': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -0.3541 , 49.20387 ]}, //lng,lat
             properties: { title:"Mandard tumour regression grade", description:'Caen - France<br>1994'},
             //googlehtz: 0, //search: " " AND " " [02-Oct-21]
@@ -6949,7 +6960,7 @@
             country:["USA"], when:"1947", 
             disease:"",//["",],
             ops:"",//["",],    
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -83.01479, 40.0015 ]}, //lng,lat
             properties: { title:"Mann-Whitney U test", description:'Columbus - Ohio<br>1947'},  
             //googlehtz: 0, //search: "   " AND " " [02-Oct-21]
@@ -6995,7 +7006,7 @@
             when:"1955",  
             disease:["Caustic burns",],  
             ops:["Endoscopy",], 
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'Oesophagogastric': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ 28.03199, -26.18986 ]}, //long,lat
             properties: { title:"Marchand caustic stricture grading", description:'Johannesburg<br>1955'},
             //googlehtz: 0, //search: "  sign" AND " " [02-Oct-21]
@@ -7035,7 +7046,7 @@
             who:"George Markle IV",   //whoSearch:["George B Markle",],
             where:"Carlsbad - New Mexico",  //whereSearch:["Carlsbad, New Mexico",],              
             when:"1973",  
-            disease:["Appendicitis",],  
+            disease:["Abdominal pain", "Appendicitis",],  
             ops:["Appendicectomy",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -104.2578, 32.44171 ]}, //long,lat
@@ -7093,18 +7104,18 @@
             type:'Feature',
             ID:4440, 
             name:"Masson's tumor",      
-            topic:["ENT", "General Surgery","Orthopaedics","Plastics","Vascular",],  
+            topic:["ENT", "General Surgery", "Orthopaedics", "Plastics", "Vascular",],  
             subtype:[" ",],
             who:"M Pierre Masson",   //whoSearch:["Pierre Masson",],
             where:"Strasbourg - France",  //whereSearch:[" ",],              
             country:["France"], when:"1923",  
             disease:"",//["",],  
             ops:"",//["",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [  7.764444,  48.580278  ]}, //long,lat
             properties: { title:"Masson's tumor", description:'Strasbourg - France<br>1923'},
             //googlehtz: 0, //search: " " AND " " [02-Oct-21]
-            refs:"",  ///  Masson MP. **Hémangioendothéliome végétant intra-vasculaire**. _Bull Mem Soc Anat Paris_. 1923; 93: 517-523
+            refs:"",  ///  Masson MP. Hémangioendothéliome végétant intra-vasculaire. <i>Bull Mem Soc Anat Paris</i>. 1923; 93: 517-523
             jrnls:"",//["",]
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Intravascular_papillary_endothelial_hyperplasia' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", //<a href='http://www.whonamedit.com/synd.cfm/1584.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -7121,11 +7132,11 @@
             country:["USA"], when:"1975",   
             disease:["Trauma",],  
             ops:"",//["Exploratory laparotomy",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -95.39497, 29.71108 ]}, //long,lat
             properties: { title:"Mattox maneuver", description:'Houston<br>1975'}, 
             //googlehtz:0, //search: "   " AND " " [02-Oct-21] 
-            refs:"<br><p style='font-size: 20px'>Mattox KL, McCollum WB, Beall AC Jr, et al. Management of penetrating injuries of the suprarenal aorta. <i>J Trauma</i>. 1975; 15(9): 808-815<br></p>",   
+            refs:"<br><p style='font-size: 20px'>Mattox KL, McCollum WB, Beall AC Jr, <i>et al</i>. Management of penetrating injuries of the suprarenal aorta. <i>J Trauma</i>. 1975; 15(9): 808-815<br></p>",   
             jrnls:["J Trauma",],
             URLs:"",//wiki-Y  Exploratory_laparotomy  // no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             imgName:"",//"<img src=\"../static/assets/img/profiles/Mattoux.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -7141,9 +7152,9 @@
             whoSearch:["Charles McBurney",],      
             where:"Manhattan - New York - USA", country:["USA"],        
             when:"1889",   
-            disease:["Abdominal pain","Appendicitis",],  
+            disease:["Abdominal pain", "Appendicitis",],  
             ops:["Appendicectomy",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -73.986535, 40.769543 ]}, //long,lat
             properties: { title:"McBurney's point", description:'New York<br>1889'}, 
             //googlehtz:0, //search: "  " AND " " [02-Oct-21]
@@ -7164,8 +7175,8 @@
             where:"Manchester - England",  
             whereSearch:["Manchester, England, UK",],        
             when:"1950", 
-            disease:["Groin hernia","Groin pain",],   
-            ops:["Femoral hernia repair","Groin hernia repair",], 
+            disease:["Groin hernia", "Femoral hernia", "Groin pain",],   
+            ops:["Femoral hernia repair", "Groin hernia repair",], 
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -2.22084, 53.48229 ]}, //long,lat
             properties: { title:"McEvedy's femoral hernia repair", description:'Manchester - England<br>1950'}, 
@@ -7188,7 +7199,7 @@
             when:"2001",  
             disease:["Airway obstruction", "Hypoxia",],   
             ops:["Tracheostomy",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -3.19429, 55.95348 ]}, //long,lat
             properties: { title:"McGrath laryngoscope", description:'Edinburgh<br>2001'},  
             //googlehtz: 0, //search: " " AND " " [02-Oct-21]
@@ -7204,8 +7215,7 @@
             name:"McKeown oesophagectomy",      
             topic:["Oesophagogastric"], subtype:["Operations",], 
             who:"K McKeown", whoSearch:["K McKeown",], 
-            where:"Durham - England",   
-            whereSearch:["Durham, England, UK",],                 
+            where:"Durham - England", //whereSearch:["Durham, England, UK",],                 
             when:"1969",   
             disease:["Oesophageal cancer",], 
             ops:["Oesophagectomy",], 
@@ -7232,7 +7242,7 @@
             when:"1948",   
             disease:["Groin hernia","Groin pain",],  
             ops:["Groin hernia repair",],
-            opsSpec:"",//{' ': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -97.40804, 42.87302 ]}, //long,lat
             properties: { title:"McVay hernia repair", description:'Yankton - South Dakota<br>1948'},    
             //googlehtz:0, //search: " " AND "  " [02-Oct-21]
@@ -7340,7 +7350,7 @@
             country:["Australia"], when:"1984",   
             disease:["Peripheral vascular disease",],  
             ops:["Fem-Distal bypass",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'Vascular': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ 138.59419, -34.90751 ]}, //long,lat
             properties: { title:"Miller cuff", description:'Adelaide - Australia<br>1984'},  
             //googlehtz: 0, //search: "   " AND " " [02-Oct-21]
@@ -7384,7 +7394,7 @@
             when:"1937",   
             disease:["Anaemia","GI bleeding","Haemorrhoids","Haemorrhage","Shock",],
             ops:["Haemorrhoidectomy",],  
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -0.32011, 51.57594 ]}, //long,lat
             properties: { title:"Milligan Morgan haemorrhoidectomy", description:'London<br>1937'},  
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -7405,7 +7415,7 @@
             country:["Argentina"], when:"1948",   
             disease:["Cholecystitis","Gallstones", "Jaundice",],  
             ops:["Cholecystectomy", "ERCP","Laparoscopic cholecystectomy",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -64.184648, -31.439673 ]}, //long,lat
             properties: { title:"Mirizzi's syndrome", description:'Córdoba<br>1948'},
             //googlehtz:0, //search: "   " AND " " [02-Oct-21]
@@ -7425,7 +7435,7 @@
             where:"Gurgaon - India", whereSearch:["Gurgaon, India",],                 
             country:["India"], when:"2007",   
             ops:"",//["",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             disease:"",//["",]
             geometry: { type: 'MultiPoint', coordinates: [ 77.09136, 28.49458 ]}, //long,lat
             properties: { title:"Mishra's knot", description:'Gurgaon - India<br>2007'}, 
@@ -7448,7 +7458,7 @@
             when:"1824", 
             disease:["Head injury",],  
             ops:["Craniotomy",], 
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -3.19012, 55.94537 ]}, //long,lat
             properties: { title:"Monro-Kellie doctrin", description:'Edinburgh<br>1824'}, 
             //googlehtz:0, //search: "  " AND "   " [02-Oct-21]
@@ -7467,9 +7477,9 @@
             who:"Alexander Monro", whoSearch:["Alexander Monro",],
             where:"Edinburgh - Scotland - UK", //    whereSearch:["",],                 
             when:"1764",   
-            disease:["Hydrocephalus",],
-            ops:["Craniotomy","V-P shunt insertion",],  
-            opsSpec:"",//{'Endocrine': ['',], },
+            disease:["Coma", "Hydrocephalus",],
+            ops:["Craniotomy", "V-P shunt insertion",],  
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -3.19017, 55.94508 ]}, //long,lat
             properties: { title:"Foramen of Monro", description:'Edinburgh<br>1764'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -7512,7 +7522,7 @@
             country:["France"], when:"1863",   
             disease:["Trauma",],
             ops:["Amputation",],  
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ 2.38288, 48.84877 ]}, //long,lat
             properties: { title:"Morel-Lavallée lesion", description:'Paris<br>1863'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -7535,7 +7545,7 @@
             country:["Italy"], when:"1761",   
             disease:["Diaphragmatic hernia","Hernia",],  
             ops:"",//["",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ 11.8871, 45.4039 ]}, //long,lat
             properties: { title:"Morgagni hernia", description:'Padua - Italy<br>1761'}, 
             //googlehtz: 0, //search: "   " AND "  " [02-Oct-21]
@@ -7556,7 +7566,7 @@
             when:"1900", 
             disease:"",//["",] 
             ops:"",//["",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -1.6192, 54.979 ]}, //long,lat
             properties: { title:"Morrison's pouch", description:'Newcastle - England<br>1900'}, 
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -7617,9 +7627,9 @@
             who:"John Murphy", whoSearch:["John Murphy",], 
             where:"Chicago - Illinois - USA", //whereSearch:["  ",],                 
             when:"1912",   
-            disease:["Abdominal pain","Cholecystitis",],
-            ops:["Cholecystectomy","Laparoscopic cholecystectomy",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            disease:["Abdominal pain", "Cholecystitis",],
+            ops:["Cholecystectomy", "Laparoscopic cholecystectomy",],
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -87.621258, 41.846802 ]}, //long,lat
             properties: { title:"Murphy's sign", description:'Chicago - Illinois<br>1912'}, 
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -7630,7 +7640,7 @@
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Murphy%27s_sign' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2210.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             acknow:"",
 
-/// NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN N N N ///////////////////
+/// NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN ///////////////////
 
         },{
             type:'Feature',
@@ -7641,9 +7651,9 @@
             who:"Albert Narath", whoSearch:["Albert Narath",], 
             where:"Utrecht - Netherlands", //whereSearch:["  ",],                 
             country:["Netherlands"], when:"1899",   
-            disease:["Femoral hernia",],
-            ops:"",//["",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            disease:["Groin hernia", "Femoral hernia", "Groin pain",],   
+            ops:["Femoral hernia repair", "Groin hernia repair",], 
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ 5.122338, 52.090263 ]}, //long,lat
             properties: { title:"Narath's femoral hernia", description:'Utrecht - Netherlands<br>1899'}, 
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
@@ -7663,7 +7673,7 @@
             where:"Boston - Massachusetts - USA", //whereSearch:["",],           
             country:["USA"], when:"1958",   
             disease:["Pituitary disease",],
-            ops:["Adrenalectomy","Transsphenoidal pituitary surgery",],
+            ops:["Adrenalectomy",  "Transsphenoidal pituitary surgery",],
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: {type: 'MultiPoint', coordinates: [ -71.10448, 42.33572 ]}, //lng,lat
             properties: { title:"Nelson syndrome", description:'Harvard Medical School - Boston<br>1958'},
@@ -7684,12 +7694,12 @@
             where:"Basel - Switzerland", //whereSearch:["  ",],                 
             country:["Switzerland"], when:"1956",   
             disease:["Dyspepsia","GERD / GORD","Reflux",],
-            ops:["Antireflux surgery","Fundoplication",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            ops:["Antireflux surgery", "Fundoplication",],
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ 7.5839, 47.5585 ]}, //long,lat
             properties: { title:"Nissen fundoplication", description:'Basel - Switzerland<br>1956'}, 
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            refs:"",   ///   Nissen R. **Gastropexy and 'fundoplication' in surgical treatment of hiatal hernia**. _Am J Dig Dis_. 1961; 6: 954-961
+            googlehtz:433000, //search: "Nissen fundoplication" [01-Feb-22]
+            refs:"<br><p style='font-size: 20px'>Nissen R. Gastropexy and 'fundoplication' in surgical treatment of hiatal hernia. <i>Am J Dig Dis</i>. 1961; 6: 954-961<br></p>",  
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
@@ -9504,7 +9514,7 @@
             where:"London - England - UK", 
             country:["UK"],                   
             when:"1942",   
-            disease:["Groin hernia","Groin pain",],  
+            disease:["Femoral hernia", "Groin hernia", "Groin pain",],  
             ops:"",//["",],
             geometry: { type: 'MultiPoint', coordinates: [ -0.1632, 51.4423 ]}, //lng,lat
             properties: { title:"Tanner slide repair", description:'London<br>1942'},
