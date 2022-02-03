@@ -7524,7 +7524,7 @@
             topic:["Orthopaedics","Plastics","Trauma",],  
             subtype:["Pathology",],
             who:"Victor Morel-Lavallée", //whoSearch:["   ",],
-            where:"Paris - France", //    whereSearch:["",],                 
+            where:"Paris - France", //whereSearch:["",],                 
             country:["France"], when:"1863",   
             disease:["Trauma",],
             ops:["Amputation",],  
@@ -7532,8 +7532,8 @@
             geometry: { type: 'MultiPoint', coordinates: [ 2.38288, 48.84877 ]}, //long,lat
             properties: { title:"Morel-Lavallée lesion", description:'Paris<br>1863'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            refs:"", ///  Morel-Lavallée VAL. **Decollements traumatiques de la peau et des couches sous jacentes**. _Arch Gen Med_. 1863;1:20-38, 172-200, 300-332.
-            jrnls:"",//["",]
+            refs:"<br><p style='font-size: 20px'>Morel-Lavallée VAL. Decollements traumatiques de la peau et des couches sous jacentes. <i>Arch Gen Med</i>. 1863; 1:20-38, 172-200, 300-332<br></p>", 
+            jrnls:["Arch Gen Med",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Degloving' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/4160.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
@@ -7591,7 +7591,7 @@
             //who:"", whoSearch:[" ",],    
             //where:"", whereSearch:["",],           
             //when:" ",   
-            //disease:[" "," ",],
+            //disease:["","",],
             //ops:["",],
             //opsSpec:"",//{'': ['',], },
             //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
@@ -7612,7 +7612,7 @@
             //who:"", whoSearch:[" ",],    
             //where:"", whereSearch:["",],           
             //when:"",   
-            //disease:["Burns",],
+            //disease:["Burns","Hypovolaemia",],
             //ops:["",],
             //opsSpec:"",//{'Endocrine': ['',], },
             //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
@@ -7829,7 +7829,7 @@
             country:["USA"], when:"1990", 
             disease:["Jaundice",],    
             ops:["Cholecystectomy","Laparoscopic cholecystectomy",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -86.808967, 36.153745 ]}, //long,lat
             properties: { title:"Olsen-Reddick cholangiography clamp", description:'Nashville<br>1990'},
             googlehtz:720, //search: "olsen-reddick clamp" OR "olsen clamp" AND "cholangiogram" [02-Feb-22]
@@ -7875,7 +7875,7 @@
             when:"2013",   
             disease:["Paraganglionoma", "Pheochromocytoma",],
             ops:["Adrenalectomy",],
-            //opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec: {'Endocrine': ['Adrenalectomy',], },
             geometry: {type: 'MultiPoint', coordinates: [ -77.10080, 39.00230 ]}, //lng,lat
             properties: { title:"Pacak-Zhuang syndrome", description:'National Institutes of Health<br>2013'},
             googlehtz:2740, //search: "Pacak-Zhuang syndrome" [02-Feb-22]
@@ -7891,8 +7891,8 @@
             //name:"Paget's disease of bone",      
             //topic:["Orthopaedics"], 
             //subtype:["Pathology",], 
-            //who:"", whoSearch:[" ",],    
-            //where:"", whereSearch:["",],           
+            //who:"James Paget", //whoSearch:[" ",],    
+            //where:"London - England", //whereSearch:["",],           
             //when:" ",   
             //disease:[" ", " ",],
             //ops:[" ", "",],
@@ -7917,7 +7917,7 @@
             when:"1874",
             disease:["Breast cancer",], 
             ops:["Mastectomy",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -0.10024, 51.51759 ]}, //long,lat
             properties: { title:"Paget's disease of breast", description:'London<br>1874'},   
             googlehtz:557000, //search: "Paget's disease" AND "Breast OR Nipple" [03-Feb-22]
@@ -7937,7 +7937,7 @@
             where:"Paris - France", whereSearch:["Paris, France", "France",],                
             country:["France"], when:"1974", 
             ops:"",//["",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             disease:"",//["",]
             geometry: { type: 'MultiPoint', coordinates: [ 2.34711, 48.83433 ]}, //long,lat
             properties: { title:"Palmer's point", description:'Paris<br>1974'},   
@@ -7961,7 +7961,7 @@
             country:["USA"], when:"1924",
             disease:["Lung cancer",],
             ops:"",//["",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -75.19361, 39.95009 ]}, //long,lat
             properties: { title:"Pancoast tumor", description:'Philadelphia<br>1924'},  
             googlehtz:104000, //search: "Pancoast tumor OR tumour" AND "Lung" [03-Feb-22]
@@ -8001,8 +8001,8 @@
             who:"James Parkinson", whoSearch:["James Parkinson",],
             where:"London - England", //whereSearch:["",],                
             when:"1817",   
-            disease:"",//["",]
-            ops:"",//["",],
+            disease:"",//["Parkinson's disease",]
+            ops:"",//["",], ??Deep brain stimulator
             opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -0.08125, 51.5277 ]}, //long,lat
             properties: { title:"Parkinson's disease", description:'London<br>1817'},
@@ -8165,7 +8165,7 @@
             where:"Philadelphia - Pennsylvania - USA",   //whereSearch:["",],                 
             country:["USA"], when:"1890",
             ops:"",//["",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             disease:"",//["",]
             geometry: { type: 'MultiPoint', coordinates: [ -75.1923, 39.947454 ]}, //long,lat
             properties: { title:"Penrose drain", description:'Philadelphia<br>1890'},
@@ -8180,7 +8180,7 @@
             //type:'Feature',
             //ID:5440, 
             //name:"Petelin forceps",      
-            //topic:["",],  
+            //topic:["General Surgery","Laparoscopic Surgery"],  
             //subtype:["Instruments"],
             //who:"Joseph Petelin", whoSearch:["Joseph Petelin",],
             //where:"Leawood - Kansas - USA", //whereSearch:["",], country:["USA"],                
@@ -8197,7 +8197,7 @@
             type:'Feature',
             ID:5460, 
             name:"Petersen's space",      
-            topic:["Bariatrics","Laparoscopic Surgery"],  
+            topic:["Bariatrics", "Laparoscopic Surgery"],  
             subtype:["Anatomy",],
             who:"Walther Petersen", //whoSearch:["",],   
             where:"Heideberg - Germany",  //whereSearch:["",],              
@@ -8224,7 +8224,7 @@
             //where:"", whereSearch:["",],           
             //when:" ",   
             //disease:["Intussuception",],
-            //ops:["", "",],
+            //ops:["Small bowel resection",],
             //opsSpec:"",//{'Endocrine': ['',], },
             //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
             //properties: { title:"Peyer's patch", description:' <br> '},
@@ -8376,7 +8376,7 @@
             country:["USA"], when:"1974",
             disease:["Acute pancreatitis",],
             ops:"",//["",],
-            opsSpec:"",//{'Endocrine': ['',], },
+            opsSpec:"",//{'': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -73.833745, 40.911061 ]}, //long,lat
             properties: { title:"Ranson score", description:'New York<br>1974'},
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
