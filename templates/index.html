@@ -157,6 +157,7 @@
                                 <h2 class="mb-5 fw-medium text-secondary text-uppercase">Search</h2>
                                 <p>If you have a particular eponym in mind, try searching for it here.</p>
                                 <audio id="audio" src="https://app.box.com/shared/static/j9jix5nhuddqfiw4zq7390ob7y9asl7f.mp3"></audio>
+                                <input type="button" value="PLAY" onclick="play()">
                             </div>
                             <br>
                             <div class="col" id="select_A2Z">
@@ -10873,11 +10874,14 @@
             populateSelect()
         });
 
-        var audio = document.getElementById('audio');
+        $(document)
+        .ready(function() {
+            var audio = document.getElementById('audio');
 
-        function play() {
-            audio.play();
-        }
+            function play() {
+                audio.play();
+            }
+        });
 
     /// Section - A to Z
         
