@@ -1316,10 +1316,10 @@
             //topic:["Endocrine",], 
             //subtype:["Physiology",], 
             //who:"Arnold Beckman", whoSearch:["Arnold Beckman",],    
-            //where:"", whereSearch:["",],           
+            //where:"California - USA", whereSearch:["",],           
             //when:"1935",   
-            //disease:["",],
-            //ops:["",],
+            //disease:["Thyroid cancer",],
+            //ops:["Thyroidectomy",],
             //opsSpec:{'': ['',],},
             //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
             //properties: { title:"Beckman method", description:'   <br> '},
@@ -1328,7 +1328,7 @@
             //jrnls:"",//['',],
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            //about:"Arnold Orville Beckman", 
+            //about:"<b>Arnold Orville Beckman<b>", 
             //acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         //},{
             //type:'Feature',
@@ -11693,8 +11693,8 @@
             mapboxgl.accessToken = 'pk.eyJ1IjoiYWpoYXllczgzIiwiYSI6ImNrY2pqM2lvMDB4Z24ydG8zdDl0NTYwbTUifQ.2DKVfTAaE77XAXMpDeq_Pg';
           
             const bounds = [
-                [-173, -66], //southwest coord  [-172, -65],
-                [179.2, 85]  //northeast coord  [179.2, 84]
+                [-173, -65], //southwest coord  [-172, -65],
+                [179.2, 84]  //northeast coord  [179.2, 84]
             ]
 
             const map = new mapboxgl.Map({
@@ -11754,9 +11754,9 @@
                             ['get', 'point_count'],
                             10,  //radius 10 at 2-10  
                             10,  //2-10
-                            14,  //radius 14 at 10-20
+                            15,  //radius 15 at 10-20
                             20,  //10-20
-                            18,  //radius 18 at >20
+                            20,  //radius 18 at >20
                         ]
                     }
                 });
