@@ -172,8 +172,8 @@
                                 </select>
                                 <P class="lead" id='imgName_A2Z'></P>
                                 <p class="lead" id="info_A2Z"></p>
-                                <!--<audio id="audio" src="https://app.box.com/shared/static/j9jix5nhuddqfiw4zq7390ob7y9asl7f.mp3"></audio>
-                                <input type="button" value="PLAY" onclick="play()">-->
+                                <audio id="audio"></audio>
+                                <input data-style="btn-primary" onclick="play(this.value)">
                             </div>
                         </div>
                     </div>
@@ -868,8 +868,9 @@
             imgName:"<br><img src=\"../static/assets/img/profiles/Claudius_Amyand.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image was sourced from <a href='http://www.artnet.com/artists/thomas-gainsborough/portrait-of-claudius-amyand-wearing-a-blue-coat-HLOVu-zP7GB01ksXTrJwBQ2' target='_blank'>Artnet</a>.<i></p>",
             about:"<b><p style='font-size: 20px'>An inguinal hernia in which the appendix is contained within the herniating sac</b>.<br><br>Claudius Amyand reported the case of an 11 year old boy who presented to St. George's Hospital (near Hyde Park Corner at that time) with a discharging fistula between the scrotum and right thigh. <br><br>He describes amputating the perforated appendix by securing a ligature around healthy part of the proximal appendix, and leaving a stump which was returned to the abdomen. The hernia sac was excised, and the fistulous tract was debrided and left open to drain.</p>", 
             URLs:"<br><a href='https://royalsocietypublishing.org/doi/pdf/10.1098/rstl.1735.0071' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://en.wikipedia.org/wiki/Amyand%27s_hernia' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2689.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
-            acknow:"<p style='font-size: 16px'><i><br>Thanks to Mr Alastair J Hayes FRCSEd who contributed the above information.<i></p>",
-            sound:"", examFav:"",
+            acknow:"<p style='font-size: 14px'><i><br>Thanks to Mr Alastair Hayes FRCSEd who contributed the above information.<i></p>",
+            sound:"<audio id='audio' src='https://app.box.com/shared/static/j9jix5nhuddqfiw4zq7390ob7y9asl7f.mp3'></audio><br><input value='Amyand Hernia'>", 
+            examFav:["General Surgery"],
         },{ 
             type:'Feature',
             ID:90, 
@@ -11447,7 +11448,7 @@
                                                 ;}}}
 
                 var info = document.getElementById('info_A2Z');
-                if (!id) {imgName.innerHTML = "";
+                if (!id) {info.innerHTML = "";
                 } else {
                     for (var i = 0; i < eponyms.features.length; i++) {
                     if  (Number(id) === eponyms.features[i].ID) {
@@ -11475,7 +11476,7 @@
                                                 ;}}}
 
                 var msg_spec = document.getElementById('msg_spec');
-                if (!id) {msg2.innerHTML = "";
+                if (!id) {msg_spec.innerHTML = "";
                 } else {
                     for (var i = 0; i < eponyms.features.length; i++) {
                     if  (Number(id) === eponyms.features[i].ID) {
@@ -11485,7 +11486,7 @@
                         "Where:  "+eponyms.features[i].where.bold() +"<br><br>"
                                                 ;}}}
                                         
-                var msg3 = document.getElementById('msg3_spec');
+                var msg3_spec = document.getElementById('msg3_spec');
                 if (!id) {msg3_spec.innerHTML = "";
                 } else {
                     for (var i = 0; i < eponyms.features.length; i++) {
@@ -11682,6 +11683,19 @@
                     ;}}}                           
                 }
 
+        </script>
+
+        <script>
+            function play(id) {
+
+                var audio = document.getElementById('audio');
+                if (!id) {audio.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        audio.innerHTML = eponyms.features[i].sound
+                                                ;}}}
+                }
         </script>
 
 
