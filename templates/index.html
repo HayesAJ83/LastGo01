@@ -399,7 +399,7 @@
                         <div class="col d-flex flex-column mb-2 mt-3">
                             <div class="row justify-content-center">
                                 <!--<hr style="height:5px; visibility:hidden">-->
-                                <div style="height:320px" id='map'></div>
+                                <div style="height:305px" id='map'></div>
                             </div>
                         </div>
                         <br><br><br><br><br>
@@ -10222,26 +10222,27 @@
             about:"<br>The collective term of 'von Hippel-Lindau disease' can be traced to the Neurological Institute of New York coined by neuroradiologist Cornelius G Dyke and colleagues in 1936. Eugen von Hippel in Germany first noted the eye manifestations and later, in Sweden, Lindau noted other aspects of the condition.<br>",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Von_Hippel–Lindau_disease' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='http://www.whonamedit.com/synd.cfm/2057.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             acknow:"", sound:"", examFav:"",
-        //},{
-            //type:'Feature',
-            //ID:7360, 
-            //name:"Von Recklinghausen disease",      
-            //topic:[" ",], 
-            //subtype:[" ",], 
-            //who:"Friedrick von  Recklinghausen ", //whoSearch:["   ", "   "], 
-            //where:"  ", whereSearch:[" ", " ",],            
-            //when:"1891", 
-            //disease:["",], 
-            //ops:"",//["",],
-            //geometry: { type: 'MultiPoint', coordinates: [   ,  ]}, //long,lat
-            //properties: { title:" ", description:'Von Recklinghausen disease<br>1891'},
-            //googlehtz: 0, //search: "  " AND "  " [02-Oct-21] 
-            //refs:"<br>   ",   
-            //jrnls:"",//["",]
-            //imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            //about:"<br>NF1<br>",
-            //URLs:"<br><a href='https://en.wikipedia.org/wiki/Neurofibromatosis_type_I' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/1207.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
-            //acknow:"", sound:"", examFav:"",
+        },{
+            type:'Feature',
+            ID:7360, 
+            name:"Von Recklinghausen disease",      
+            topic:["Endocrine",], 
+            subtype:["Pathology",], 
+            who:"Friedrick von Recklinghausen ", //whoSearch:["   ", "   "], 
+            where:"Strasbourg - Germany", //whereSearch:[" ", " ",],      
+            country:["Germany",],       
+            when:"1891", 
+            disease:"",//["",], 
+            ops:"",//["",],
+            geometry: { type: 'MultiPoint', coordinates: [ 7.764444 , 48.580278 ]}, //long,lat
+            properties: { title:"Von Recklinghausen disease", description:'Von Recklinghausen disease<br>1891'},
+            googlehtz:150000, //search: "Von Recklinghausen disease" [05-Feb-22] 
+            refs:"",//"<br>   ",   
+            jrnls:"",//["",]
+            imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            about:"<br>Neurofibromatosis type 1 (NF1) used to be called Von Recklinghausen disease.<br>",
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/Neurofibromatosis_type_I' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/1207.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
+            acknow:"", sound:"", examFav:"",
 
 /// WWWWWWWWWWWWWWWWWWWWWWWWWWWW W W W W W W W W W W W /////////////
 
@@ -11692,8 +11693,8 @@
             mapboxgl.accessToken = 'pk.eyJ1IjoiYWpoYXllczgzIiwiYSI6ImNrY2pqM2lvMDB4Z24ydG8zdDl0NTYwbTUifQ.2DKVfTAaE77XAXMpDeq_Pg';
           
             const bounds = [
-                [-173, -68], //southwest coord  [-172, -65],
-                [179.2, 87]  //northeast coord  [179.2, 84]
+                [-173, -66], //southwest coord  [-172, -65],
+                [179.2, 85]  //northeast coord  [179.2, 84]
             ]
 
             const map = new mapboxgl.Map({
