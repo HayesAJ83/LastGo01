@@ -11187,7 +11187,7 @@
             type:'Feature',
             ID:7260, 
             name:"Virchow's triad",      
-            topic:["Orthopaedics","Trauma","HPB","Colorectal","Oesophagogastric","Anaesthetics","Breast","General Surgery","Cardiothoracics","Vascular","Neurosurgery",], 
+            topic:["Orthopaedics","Trauma","HPB","Colorectal","Oesophagogastric","Anaesthetics","General Surgery","Cardiothoracics","Vascular","Neurosurgery",], 
             subtype:["Concepts",], 
             who:"Rudolph Virchow", //whoSearch:["Rudolph Virchow",], 
             where:"Berlin - Germany", //whereSearch:[" ", " ",],            
@@ -11982,8 +11982,6 @@
         
         <script>
     /// Section - A to Z ///
-        //$(document)
-        //.ready(function() {
         let result1 = eponyms.features
             .flatMap(item => item.topic)
             .filter((item, i, arr) => arr.indexOf(item) === i)
@@ -11995,30 +11993,23 @@
                 var el = document.createElement("option");
                 el.textContent = opt;
                 el.value = opt;
-                //select_A2Z.appendChild(el);
                 }
-            //});
-
-        //$(document)
-        //.ready(function() {
-            $('#select_A2Z').ready(function() {
-                let value = '\'' + $('#select_A2Z option').map(function() {
-                        return this.text}).get().join('\',\'') + '\'';
-                var stringArray = (new Function("return [" + value + "];")());
-            });
-        //});
-
-        $(document)
-        .ready(function() {
-            var selected_A2Z = eponyms.features
-            function populateSelect() {
-                var ele_A2Z = document.getElementById('sel_A2Z');
-                selected_A2Z.forEach(function(b) {
-                    ele_A2Z.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
-                }
-            populateSelect()
+        
+        $('#select_A2Z').ready(function() {
+            let value = '\'' + $('#select_A2Z option').map(function() {
+                    return this.text}).get().join('\',\'') + '\'';
+            var stringArray = (new Function("return [" + value + "];")());
         });
 
+        //(document).ready(function() {
+        var selected_A2Z = eponyms.features
+        function populateSelect() {
+            var ele_A2Z = document.getElementById('sel_A2Z');
+            selected_A2Z.forEach(function(b) {
+                ele_A2Z.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
+            }
+        populateSelect()
+        //});
        
        // var audio = document.getElementById('audio');
        // function play() {
