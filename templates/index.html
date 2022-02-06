@@ -12016,7 +12016,6 @@
     /// Section - A to Z
         
     /// Section - Specialties ///
-            //$(document).ready(function() {
             const returnedData2 = $.grep(eponyms.features, function(element, index) {
                 return (element.topic !== "");
                 });  /// DROP those WITHOUT topic
@@ -12034,7 +12033,6 @@
                     el1.value = opt1;
                     selectSubtypes.appendChild(el1);    
                 }
-            //});
 
             $(document)
             .ready(function() {
@@ -12083,91 +12081,80 @@
     /// End Section - Specialties ///
 
     /// Section - Operations ///
-        $(document)
-            .ready(function() {
-            const returnedData = $.grep(eponyms.features, function(element, index) {
-                return (element.ops !== "");
-                }); 
-            let result1 = returnedData
-                .flatMap(item => item.topic) //"item.topic" gives us SPECIALTIES
-                .filter((item, i, arr) => arr.indexOf(item) === i)
-                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
-                let resultsort1 = result1.sort()
-                var select = document.getElementById("select_ops");
-                var options = resultsort1;
-                for(var i = 0; i < options.length; i++) {
-                    var opt = options[i];
-                    var el = document.createElement("option");
-                    el.textContent = opt;
-                    el.value = opt;
-                    }
-            });
+        const returnedData = $.grep(eponyms.features, function(element, index) {
+            return (element.ops !== "");
+            }); 
+        let result1 = returnedData
+            .flatMap(item => item.topic) //"item.topic" gives us SPECIALTIES
+            .filter((item, i, arr) => arr.indexOf(item) === i)
+            .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";}); //removes no topic
+            let resultsort1 = result1.sort()
+            var select = document.getElementById("select_ops");
+            var options = resultsort1;
+            for(var i = 0; i < options.length; i++) {
+                var opt = options[i];
+                var el = document.createElement("option");
+                el.textContent = opt;
+                el.value = opt;   }
      
-            $(document)
-            .ready(function() {
-            const returnedData = $.grep(eponyms.features, function(element, index) {
-                return (element.ops !== "");
-                }); 
-            let result1 = returnedData
-                .flatMap(item => item.ops)
-                .filter((item, i, arr) => arr.indexOf(item) === i)
-                .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";});
-                let resultOps = result1.sort()
-                var selectOps = document.getElementById("sel_ops");
-                var optionS = resultOps;
-                for(var i = 0; i < optionS.length; i++) {
-                    var opt1 = optionS[i];
-                    var el1 = document.createElement("option");
-                    el1.textContent = opt1;
-                    el1.value = opt1;
-                    selectOps.appendChild(el1);
-                    }
+        const returnedData = $.grep(eponyms.features, function(element, index) {
+            return (element.ops !== "");
+            }); 
+        let result1 = returnedData
+            .flatMap(item => item.ops)
+            .filter((item, i, arr) => arr.indexOf(item) === i)
+            .filter(el => {return el != null && el != '' && el != ' ' && el != "" && el != " ";});
+            let resultOps = result1.sort()
+            var selectOps = document.getElementById("sel_ops");
+            var optionS = resultOps;
+            for(var i = 0; i < optionS.length; i++) {
+                var opt1 = optionS[i];
+                var el1 = document.createElement("option");
+                el1.textContent = opt1;
+                el1.value = opt1;
+                selectOps.appendChild(el1); }
+
+        $('#select_ops').ready(function() {
+            let value = '\'' + $('#select_ops option').map(function() {
+                    return this.text}).get().join('\',\'') + '\'';
+            var stringArray = (new Function("return [" + value + "];")());
             });
 
-            $(document)
-            .ready(function() {
-                $('#select_ops').ready(function() {
-                    let value = '\'' + $('#select_ops option').map(function() {
-                            return this.text}).get().join('\',\'') + '\'';
-                    var stringArray = (new Function("return [" + value + "];")());
-                });
-            });
-
-            $('#sel_ops').on('change', function() {
-                $('#select15').fadeIn(500);
-                let select ="";
-                $("#sel_ops").find('option:selected').each(function() {
-                    select += "\'" + $.trim($(this).text()) + "\',";});
-                    if(select != ""){select = select.substr(0);};
-                var stringArray = (new Function("return [" + select + "];")());
-                
-                function topicFilter2(taxonomy) {
-                    const returnedData = $.grep(eponyms.features, function(element, index) {
-                        return (element.ops !== "");
-                        });
-                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                    return returnedData.filter(item => {
-                        let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
-                        return taxonomy.some(med => ops.includes(med));
-                        });
-                    }
-                
-                var selected2 = topicFilter2(stringArray);
-
-                function populateSelect2() {
-                    document.getElementById('sel69').innerHTML = selected2.reduce((options, {ID,name}) =>
-                        options += `<option value="${ID}">${name}</option>`,
-                        '<option value=""> -- select -- </option>'
-                        );
-                    }
+        $('#sel_ops').on('change', function() {
+            $('#select15').fadeIn(500);
+            let select ="";
+            $("#sel_ops").find('option:selected').each(function() {
+                select += "\'" + $.trim($(this).text()) + "\',";});
+                if(select != ""){select = select.substr(0);};
+            var stringArray = (new Function("return [" + select + "];")());
             
-                populateSelect2()
-                $('#sel69').selectpicker('refresh');
-                $('#sel_ops').on('change', function() {
-                    $('#sel_ops').selectpicker('toggle'); //added to toggle open/close
-                    $('#sel69').selectpicker('refresh');
+            function topicFilter2(taxonomy) {
+                const returnedData = $.grep(eponyms.features, function(element, index) {
+                    return (element.ops !== "");
                     });
-            });
+                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                return returnedData.filter(item => {
+                    let ops = Array.isArray(item.ops) ? item.ops : [item.ops];
+                    return taxonomy.some(med => ops.includes(med));
+                    });
+                }
+                
+            var selected2 = topicFilter2(stringArray);
+
+            function populateSelect2() {
+                document.getElementById('sel69').innerHTML = selected2.reduce((options, {ID,name}) =>
+                    options += `<option value="${ID}">${name}</option>`,
+                    '<option value=""> -- select -- </option>'
+                    );
+                }
+            
+            populateSelect2()
+            $('#sel69').selectpicker('refresh');
+            $('#sel_ops').on('change', function() {
+                $('#sel_ops').selectpicker('toggle'); //added to toggle open/close
+                $('#sel69').selectpicker('refresh');
+                });
+        });
     /// End Section - Operations ///
 
     /// Section - Diseases /// disease
