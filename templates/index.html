@@ -106,8 +106,8 @@
         <header class="spyre-navbar navbar navbar-expand-lg bg-secondary navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff">
             <div class="container">
                 <a class="navbar-brand mr-lg-5 mr-xl-7" href=" ">
-                    <img src="/static/assets/img/SurgicalNames_2022.png" class="d-none d-lg-block" alt="SurgicalNames" width="183" />
-                    <img src="/static/assets/img/SurgicalNames_2022.png" class="d-block d-lg-none" alt="SurgicalNames" width="150" />
+                    <img src="/static/assets/img/SurgicalNames.png" class="d-none d-lg-block" alt="SurgicalNames" width="183" />
+                    <img src="/static/assets/img/SurgicalNames.png" class="d-block d-lg-none" alt="SurgicalNames" width="150" />
                 </a>
                 <span class="navbar-text flex-fill d-none d-md-inline-block">
                     Contact : ahayes@SurgicalNames.com
@@ -892,26 +892,28 @@
             about:"",
             URLs:"<br><a href='http://www.survivorlibrary.com/library/surgical_diagnosis_and_treatment-vol_3_1921.pdf' class='btn btn-secondary' target='_blank' role='button'>original textbook - see page 243</a><br>", // no WNI
             acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-        },{ 
-            type:'Feature',
-            ID:95, 
-            name:"Apley's grinding test",      
-            topic:["Orthopaedics",],  
-            subtype:["Signs",],
-            who:"Alan Graham Apley",  //whoSearch:["",], 
-            where:"Woking - England - UK",  //whereSearch:["",],       
-            when:"1959", country:["UK"],
-            disease:["Knee pain", "Meniscal injury",], 
-            ops:["Arthroscopy",],  
-            geometry: { type: 'MultiPoint', coordinates: [ -0.60614 , 51.30796 ]}, //lng,lat
-            properties: { title:"Apley's grinding test", description:'Rowley Bristow Hospital - Pyrford<br>1959'},
-            googlehtz:6420, //search: "Apley's grind test" OR "Apley's compression test" [05-Feb-22]
-            refs:"<br><p style='font-size: 20px'>Apley's System of Orthopaedics and Fractures. 1st Edition. 1959.</p>",  
-            jrnls:"",//["",] 
-            imgName:"",
-            about:"", 
-            acknow:"", sound:"", examFav:["Orthopaedics",],//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-            URLs:"",//"<br><a href='#www.google.co.uk' class='btn btn-outline-primary' role='button'>original paper</a><br>", //  //no WNI   Apley_grind_test
+        //},{ 
+            //type:'Feature',
+            //ID:95, 
+            //name:"Apley's grind test",      
+            //topic:["Orthopaedics",],  
+            //subtype:[" ",],
+            //who:"Alan Graham Apley",  //whoSearch:["",], 
+            //where:"",  //whereSearch:["",],       
+            //when:"",
+            //disease:"",//[" "], 
+            //ops:"",//["",],  
+            //geometry: { type: 'MultiPoint', coordinates: [ , ]}, //lng,lat
+            //properties: { title:'', description:'replace_where<br>replace_when'},
+            //googlehtz: 0, //search: " " AND " " [02-Oct-21]
+            //refs:"",  
+            //jrnls:"",//["",] 
+            //imgName:"",
+            //about:"", 
+            //acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            //URLs:"",//"<br><a href='#www.google.co.uk' class='btn btn-outline-primary' role='button'>original paper</a><br>", //  //no WNI
+            //sound:"", examFav:"",
+            //examFav:"",
         },{ 
             type:'Feature',
             ID:100, 
@@ -1054,7 +1056,7 @@
             topic:["General Surgery", "HPB",],  
             subtype:["Scores"],
             who:"Emil Balthazar", whoSearch:["Emil Balthazar",],
-            where:"Manhattan - New York", //whereSearch:["Manhattan", "New York", "USA",], 
+            where:"Manhattan - New York - USA", whereSearch:["Manhattan", "New York", "USA",], 
             country:["USA"], when:"1990",
             disease:["Acute pancreatitis",],
             ops:["Pancreatic necrosectomy",], 
@@ -1075,7 +1077,7 @@
             topic:["Oesophagogastric",],  
             subtype:["Operations",],
             who:"Frederic Bancroft", whoSearch:["Frederic Bancroft",],
-            where:"Manhattan - New York", whereSearch:["Manhattan", "New York", "USA",],  
+            where:"Manhattan - New York - USA", whereSearch:["Manhattan", "New York", "USA",],  
             country:["USA"], when:"1932",
             disease:["Peptic ulcer disease",],  
             ops:["Endoscopy", "Gastrectomy",],
@@ -1098,7 +1100,7 @@
             //subtype:[" ",],
             //who:"Barnard",  //whoSearch:["",], 
             //where:"",  //whereSearch:["",],       
-            //when:"", country:[""],
+            //when:"",
             //disease:"",//[" "], 
             //ops:"",//["",],  
             //geometry: { type: 'MultiPoint', coordinates: [ , ]}, //lng,lat
@@ -1142,7 +1144,7 @@
             subtype:["Pathology",],
             who:"Caspar Bartholin", whoSearch:["Caspar Bartholin",],  
             where:"Copenhagen - Denmark", whereSearch:["Copenhagen", "Denmark",], 
-            country:["Denmark"], when:"1677",
+            when:"1677",
             disease:["Abscess", "Sepsis"],
             ops:["Incision & drainage",], 
             opsSpec:{'Gynaecology': ['Incision & drainage',],},
@@ -1161,7 +1163,8 @@
             //name:"Bartholin duct",      
             //topic:["ENT","Maxillofacial"],  
             //subtype:["Anatomy",],
-            //who:"Bartholin",  //whoSearch:["",],  
+            //who:"Bartholin",  
+            //whoSearch:["",],  
             //where:"Copenhagen, Denmark",                    
             //whereSearch:["Copenhagen", "Denmark",], 
             //when:"1678",
@@ -1240,7 +1243,7 @@
             refs:"<br><p style='font-size: 20px'>Buzzard T. Modified incision for removal of the vermiform appendix. Presented by Mr Battle, Clinical Society of London - Clinical Evening. <i>Br Med J</i>. 1895; 2: 1360.<br></p>",   
             jrnls:["Br Med J", "BMJ", "British Medical Journal"],
             imgName:"<br><img src=\"../static/assets/img/profiles/William_Henry_Battle.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image was sourced from <a href='https://www.findagrave.com/memorial/116479606/william-henry-battle' target='_blank'>Find a Grave®</a>.<i></p>",
-            about:"<br>A lower right paramedian incision.<br>",
+            about:"A lower right paramedian incision",
             URLs:"<br><a href='https://www.whonamedit.com/synd.cfm/2974.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>",  //"<br><a href='#' target='_blank' class='btn btn-secondary' role='button'></a><br>", //no wiki //https://livesonline.rcseng.ac.uk/client/en_GB/lives/search/detailnonmodal/ent:$002f$002fSD_ASSET$002f0$002fSD_ASSET:376003/one?qu=%22RCS%3A+E003820%22&rt=false%7C%7C%7CIDENTIFIER%7C%7C%7CResource+Identifier,  
             acknow:"", sound:"", examFav:"",  //
         },{ 
@@ -1357,7 +1360,7 @@
             subtype:["Operations",],
             who:"Hans Beger",    
             whoSearch:["Hans Beger",],
-            where:"Ulm - Germany",                 
+            where:"Ulm - Baden-Württemberg - Germany",                 
             whereSearch:["Ulm, Baden-Württemberg, Germany",], 
             country:["Germany"], when:"1972",
             disease:["Chronic pancreatitis",],   
@@ -2618,7 +2621,7 @@
             topic:["Plastics",],  
             subtype:["Scores"],
             who:"Wallace Clark Jr", whoSearch:["Wallace Clark Jr",],
-            where:"Boston - USA",      
+            where:"Boston - Massachusetts - USA",      
             whereSearch:["Boston, Massachusetts, USA", "USA",], country:["USA"],             
             when:"1973",  
             disease:["Melanoma",], 
@@ -3018,7 +3021,7 @@
             topic:["HPB","Paediatrics","Transplant",],
             subtype:["Syndromes"],  
             who:"John Crigler & Victor Najjar",    
-            where:"Boston - USA", whereSearch:["Boston, Massachusetts, USA",], 
+            where:"Boston - Massachusetts - USA", whereSearch:["Boston, Massachusetts, USA",], 
             country:["USA"], when:"1952", 
             disease:["Jaundice",],  
             ops:["Liver transplant",],
@@ -3121,7 +3124,7 @@
             name:"Cushing's disease",      
             topic:["Endocrine","Neurosurgery",], subtype:["Pathology",],
             who:"Harvey Cushing", whoSearch:["Harvey Cushing",], 
-            where:"Boston - USA",  
+            where:"Boston - Massachusetts - USA",  
             country:["USA"], when:"1932",
             disease:["Hypertension", "Obesity", "Pituitary disease"],  
             ops:["Transsphenoidal pituitary surgery",],
@@ -3143,7 +3146,7 @@
             subtype:["Syndromes",], 
             who:"Harvey Cushing",  
             whoSearch:["Harvey Cushing",],  
-            where:"Boston - USA",//  whereSearch:["",], 
+            where:"Boston - Massachusetts - USA",//  whereSearch:["",], 
             country:["USA"], when:"1932", 
             disease:["Adrenal gland tumour",],  
             ops:["Adrenalectomy",],     
@@ -3166,7 +3169,7 @@
             subtype:["Pathology",], 
             who:"Harvey Cushing",  
             whoSearch:["Harvey Cushing",],  
-            where:"Boston - USA",//  whereSearch:["",], 
+            where:"Boston - Massachusetts - USA",//  whereSearch:["",], 
             country:["USA"], when:"1932", 
             disease:["Abdominal pain","Peptic ulcer disease",],  
             ops:["Endoscopy", "Perforated ulcer repair",],   
@@ -6367,8 +6370,6 @@
             //sound:"", examFav:"", 
 
 // LLLLLLLLLLLLLLLLLLLLLLLL //////////
-
-/// Lachman test.  Ortho
        
         },{
             type:'Feature',
@@ -6762,7 +6763,7 @@
             subtype:["Anatomy",], 
             who:"Fred Lund",  
             whoSearch:["Fred Lund",],  
-            where:"Boston - USA",         
+            where:"Boston - Massachusetts - USA",         
             whereSearch:["Boston, Massachusetts, USA", "Massachusetts", "USA",],           
             country:["USA"], when:"1930",   
             disease:["Cholecystitis","Gallbladder cancer",],  
@@ -6786,7 +6787,7 @@
             subtype:["Equipment",], 
             who:"Charles Lund & NC Browder",  
             whoSearch:["Charles Lund", "NC Browder",],          
-            where:"Boston - USA",  whereSearch:["Boston, Massachusetts, USA",],              
+            where:"Boston - Massachusetts - USA",  whereSearch:["Boston, Massachusetts, USA",],              
             country:["USA"], when:"1944",   
             disease:["Burns",],  
             ops:"",//["",],
@@ -6935,7 +6936,7 @@
             name:"Mallampati score",     
             topic:["Anaesthetics","ENT",], subtype:["Scores",], 
             who:"S Rao Mallampati", whoSearch:["S Rao Mallampati",],           
-            where:"Boston - USA",    
+            where:"Boston - Massachusetts - USA",    
             whereSearch:["Boston, Massachusetts, USA", "Massachusetts", "USA",],              
             country:["USA"], when:"1985",   
             disease:["Airway obstruction",], 
@@ -6958,7 +6959,7 @@
             subtype:["Syndromes",],   
             who:"Kenneth Mallory & Soma Weiss",   
             whoSearch:["Kenneth Mallory", "Soma Weiss",],
-            where:"Boston - USA",   
+            where:"Boston - Massachusetts - USA",   
             whereSearch:["Boston, Massachusetts, USA", "Massachusetts", "USA",],                  
             country:["USA"], when:"1929",   
             disease:["Alcohol dependence","Anaemia","GI bleeding","Hypovolaemia","Shock",],  
@@ -7276,9 +7277,6 @@
             about:"",
             URLs:"",//wiki-Y/N, //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             acknow:"", sound:"", examFav:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-        
-/// McMurray test. Orthopaedics
-        
         },{
             type:'Feature',
             ID:4560, 
@@ -7720,7 +7718,7 @@
             topic:["Endocrine","Neurosurgery",], 
             subtype:["Syndromes",], 
             who:"Don Nelson", //whoSearch:[" ",],    
-            where:"Boston - USA", //whereSearch:["",],           
+            where:"Boston - Massachusetts - USA", //whereSearch:["",],           
             country:["USA"], when:"1958",   
             disease:["Pituitary disease",],
             ops:["Adrenalectomy",  "Transsphenoidal pituitary surgery",],
@@ -7809,7 +7807,7 @@
             where:"Oxford - England - UK", //whereSearch:["  ",],                 
             when:"2018",   
             disease:["GI bleeding","Haemorrhage","Shock",],
-            ops:["Colectomy",], 
+            ops:["Colectomy","Stoma",], 
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -1.21878, 51.76398 ]}, //long,lat
             properties: { title:"Oakland bleeding score", description:'Oxford - England<br>2018'}, 
@@ -8022,7 +8020,7 @@
             topic:["General Surgery","HPB","Oesophagogastric",],  
             subtype:["Pathology"],
             who:"Alwin Pappenheimer Jr.", whoSearch:["Alwin M Pappenheimer",],  
-            where:"Boston - USA", whereSearch:["Boston, Massachusetts, USA",],
+            where:"Boston - Massachusetts - USA", whereSearch:["Boston, Massachusetts, USA",],
             country:["USA"], when:"1944",   
             disease:["Asplenia",],  
             ops:["Splenectomy",],
