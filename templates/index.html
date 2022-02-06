@@ -106,8 +106,8 @@
         <header class="spyre-navbar navbar navbar-expand-lg bg-secondary navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff">
             <div class="container">
                 <a class="navbar-brand mr-lg-5 mr-xl-7" href=" ">
-                    <img src="/static/assets/img/SurgicalNames.png" class="d-none d-lg-block" alt="SurgicalNames" width="183" />
-                    <img src="/static/assets/img/SurgicalNames.png" class="d-block d-lg-none" alt="SurgicalNames" width="150" />
+                    <img src="/static/assets/img/SurgicalNames_2022.png" class="d-none d-lg-block" alt="SurgicalNames" width="183" />
+                    <img src="/static/assets/img/SurgicalNames_2022.png" class="d-block d-lg-none" alt="SurgicalNames" width="150" />
                 </a>
                 <span class="navbar-text flex-fill d-none d-md-inline-block">
                     Contact : ahayes@SurgicalNames.com
@@ -892,28 +892,26 @@
             about:"",
             URLs:"<br><a href='http://www.survivorlibrary.com/library/surgical_diagnosis_and_treatment-vol_3_1921.pdf' class='btn btn-secondary' target='_blank' role='button'>original textbook - see page 243</a><br>", // no WNI
             acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-        //},{ 
-            //type:'Feature',
-            //ID:95, 
-            //name:"Apley's grind test",      
-            //topic:["Orthopaedics",],  
-            //subtype:[" ",],
-            //who:"Alan Graham Apley",  //whoSearch:["",], 
-            //where:"",  //whereSearch:["",],       
-            //when:"",
-            //disease:"",//[" "], 
-            //ops:"",//["",],  
-            //geometry: { type: 'MultiPoint', coordinates: [ , ]}, //lng,lat
-            //properties: { title:'', description:'replace_where<br>replace_when'},
-            //googlehtz: 0, //search: " " AND " " [02-Oct-21]
-            //refs:"",  
-            //jrnls:"",//["",] 
-            //imgName:"",
-            //about:"", 
-            //acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-            //URLs:"",//"<br><a href='#www.google.co.uk' class='btn btn-outline-primary' role='button'>original paper</a><br>", //  //no WNI
-            //sound:"", examFav:"",
-            //examFav:"",
+        },{ 
+            type:'Feature',
+            ID:95, 
+            name:"Apley's grinding test",      
+            topic:["Orthopaedics",],  
+            subtype:["Signs",],
+            who:"Alan Graham Apley",  //whoSearch:["",], 
+            where:"Woking - England - UK",  //whereSearch:["",],       
+            when:"1959", country:["UK"],
+            disease:["Knee pain", "Meniscal injury",], 
+            ops:["Arthroscopy",],  
+            geometry: { type: 'MultiPoint', coordinates: [ -0.60614 , 51.30796 ]}, //lng,lat
+            properties: { title:"Apley's grinding test", description:'Rowley Bristow Hospital - Pyrford<br>1959'},
+            googlehtz:6420, //search: "Apley's grind test" OR "Apley's compression test" [05-Feb-22]
+            refs:"<br><p style='font-size: 20px'>Apley's System of Orthopaedics and Fractures. 1st Edition. 1959.</p>",  
+            jrnls:"",//["",] 
+            imgName:"",
+            about:"", 
+            acknow:"", sound:"", examFav:["Orthopaedics",],//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+            URLs:"",//"<br><a href='#www.google.co.uk' class='btn btn-outline-primary' role='button'>original paper</a><br>", //  //no WNI   Apley_grind_test
         },{ 
             type:'Feature',
             ID:100, 
@@ -1056,7 +1054,7 @@
             topic:["General Surgery", "HPB",],  
             subtype:["Scores"],
             who:"Emil Balthazar", whoSearch:["Emil Balthazar",],
-            where:"Manhattan - New York - USA", whereSearch:["Manhattan", "New York", "USA",], 
+            where:"Manhattan - New York", //whereSearch:["Manhattan", "New York", "USA",], 
             country:["USA"], when:"1990",
             disease:["Acute pancreatitis",],
             ops:["Pancreatic necrosectomy",], 
@@ -1077,7 +1075,7 @@
             topic:["Oesophagogastric",],  
             subtype:["Operations",],
             who:"Frederic Bancroft", whoSearch:["Frederic Bancroft",],
-            where:"Manhattan - New York - USA", whereSearch:["Manhattan", "New York", "USA",],  
+            where:"Manhattan - New York", whereSearch:["Manhattan", "New York", "USA",],  
             country:["USA"], when:"1932",
             disease:["Peptic ulcer disease",],  
             ops:["Endoscopy", "Gastrectomy",],
@@ -1100,7 +1098,7 @@
             //subtype:[" ",],
             //who:"Barnard",  //whoSearch:["",], 
             //where:"",  //whereSearch:["",],       
-            //when:"",
+            //when:"", country:[""],
             //disease:"",//[" "], 
             //ops:"",//["",],  
             //geometry: { type: 'MultiPoint', coordinates: [ , ]}, //lng,lat
@@ -1144,7 +1142,7 @@
             subtype:["Pathology",],
             who:"Caspar Bartholin", whoSearch:["Caspar Bartholin",],  
             where:"Copenhagen - Denmark", whereSearch:["Copenhagen", "Denmark",], 
-            when:"1677",
+            country:["Denmark"], when:"1677",
             disease:["Abscess", "Sepsis"],
             ops:["Incision & drainage",], 
             opsSpec:{'Gynaecology': ['Incision & drainage',],},
@@ -1163,8 +1161,7 @@
             //name:"Bartholin duct",      
             //topic:["ENT","Maxillofacial"],  
             //subtype:["Anatomy",],
-            //who:"Bartholin",  
-            //whoSearch:["",],  
+            //who:"Bartholin",  //whoSearch:["",],  
             //where:"Copenhagen, Denmark",                    
             //whereSearch:["Copenhagen", "Denmark",], 
             //when:"1678",
@@ -1243,7 +1240,7 @@
             refs:"<br><p style='font-size: 20px'>Buzzard T. Modified incision for removal of the vermiform appendix. Presented by Mr Battle, Clinical Society of London - Clinical Evening. <i>Br Med J</i>. 1895; 2: 1360.<br></p>",   
             jrnls:["Br Med J", "BMJ", "British Medical Journal"],
             imgName:"<br><img src=\"../static/assets/img/profiles/William_Henry_Battle.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image was sourced from <a href='https://www.findagrave.com/memorial/116479606/william-henry-battle' target='_blank'>Find a Grave®</a>.<i></p>",
-            about:"A lower right paramedian incision",
+            about:"<br>A lower right paramedian incision.<br>",
             URLs:"<br><a href='https://www.whonamedit.com/synd.cfm/2974.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>",  //"<br><a href='#' target='_blank' class='btn btn-secondary' role='button'></a><br>", //no wiki //https://livesonline.rcseng.ac.uk/client/en_GB/lives/search/detailnonmodal/ent:$002f$002fSD_ASSET$002f0$002fSD_ASSET:376003/one?qu=%22RCS%3A+E003820%22&rt=false%7C%7C%7CIDENTIFIER%7C%7C%7CResource+Identifier,  
             acknow:"", sound:"", examFav:"",  //
         },{ 
@@ -1360,7 +1357,7 @@
             subtype:["Operations",],
             who:"Hans Beger",    
             whoSearch:["Hans Beger",],
-            where:"Ulm - Baden-Württemberg - Germany",                 
+            where:"Ulm - Germany",                 
             whereSearch:["Ulm, Baden-Württemberg, Germany",], 
             country:["Germany"], when:"1972",
             disease:["Chronic pancreatitis",],   
@@ -2621,7 +2618,7 @@
             topic:["Plastics",],  
             subtype:["Scores"],
             who:"Wallace Clark Jr", whoSearch:["Wallace Clark Jr",],
-            where:"Boston - Massachusetts - USA",      
+            where:"Boston - USA",      
             whereSearch:["Boston, Massachusetts, USA", "USA",], country:["USA"],             
             when:"1973",  
             disease:["Melanoma",], 
@@ -2663,21 +2660,21 @@
             ID:605, 
             name:"Lymph node of Cloquet",      
             topic:["General Surgery","Plastics",], 
-            subtype:" ", 
+            subtype:["Anatomy"], 
             who:"Jules Cloquet", whoSearch:["Jules Cloquet",],
             where:"Paris - France", whereSearch:["Paris", "France",],              
             country:["France"], when:"1819", 
-            disease:"",//["",], 
-            ops:"",//["",],
+            disease:["Lymphoedema",], 
+            ops:["Groin dissection",],
             opsSpec:"",//{' ': [' ', ], },
             geometry: {type: 'MultiPoint', coordinates: [ 2.368333, 48.874722 ]},   //lng,lat
             properties: {title:"Lymph node of Cloquet", description:'Paris<br>1819'}, 
-            //googlehtz:0, //search: "   " AND " " [02-Oct-21]
+            googlehtz:12300, //search: "Lymph node of Cloquet" OR "Cloquet's node" [06-Feb-22]
             refs:"",//"<br>  <br>",  
             jrnls:"",//["",] 
             imgName:"",//"<img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            about:"",//
-            URLs:"",//"<br><a href='https://' target='_blank' class='btn btn-secondary' role='button'>original paper</a><br>", // wiki Inguinal_lymph_nodes,   //no specific wni
+            about:"<br>Deep inguinal lymph node. Also known as Rosenmüller's node.<br>",//
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/Inguinal_lymph_nodes' target='_blank' class='btn btn-info' role='button'>Wikipedia</a>",  //no specific wni
             acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
@@ -2688,12 +2685,12 @@
             who:"Ralph Cloward", whoSearch:["Ralph Cloward",],
             where:"Honolulu - Hawaii - USA", whereSearch:["Honolulu, Hawaii, USA",], 
             country:["USA"], when:"1958", 
-            disease:"",//["",],  
-            ops:"",//["",],
+            disease:["Arm pain", "Cervical disc disease", "Headache", "Neck pain",],  
+            ops:["Anterior cervical discectomy and fusion (ACDF)",],
             opsSpec:"",//{' ': [' ', ], },
             geometry: {type: 'MultiPoint', coordinates: [ -157.860278, 21.309167 ]},   //lng,lat
             properties: {title:"Cloward operation", description:'Honolulu<br>1958'}, 
-            //googlehtz:0, //search: "   " AND " " [02-Oct-21]
+            googlehtz:1640, //search: "Cloward operation" AND "Spine" [06-Feb-22]
             refs:"<br><p style='font-size: 20px'>Cloward RB. The anterior approach for removal of ruptured cervical disks. <i>J Neurosurg</i>. 1958; 15(6): 602-617<br></p>",  
             jrnls:["J Neurosurg",], 
             imgName:"",//"<img src=\"../static/assets/img/profiles/Ralph_Cloward.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -2711,37 +2708,36 @@
             disease:"",//["",] na
             ops:"",//["",] na
             opsSpec:"",//{' ': [' ', ], },
-            geometry: {type: 'MultiPoint', coordinates: [ -3.19899 , 51.44803 ]},            //long,lat
+            geometry: {type: 'MultiPoint', coordinates: [ -3.19899 , 51.44803 ]},   //long,lat
             properties: {title:'Cochrane collaboration', description:'Cardiff<br>1993'},
-            //googlehtz:00, //search: "  " AND "" [02-Oct-21]
+            googlehtz:6850000, //search: "Cochrane collaboration" [06-Feb-22]
             refs:"",     
             jrnls:"",//["",]
             imgName:"",//"<img src=\"../static/assets/img/profiles/Archie_Cochrane.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Cochrane_(organisation)' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",   //no wni <a href='' target='_blank' class=' ' role='button'>Cochrane website</a>
-            acknow:"", sound:"", examFav:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-        //},{
-            //type:'Feature',    
-            //ID:625, 
-            //name:"Collard anastomosis",      
-            //topic:["",],  
-            //subtype:[""],
-            //who:"Collard", whoSearch:[" ",],
-            //where:"", // whereSearch:[,],              
-            //when:"",  
-            //disease:["",], 
-            //ops:["",],
-            //opsSpec:{' ': [' ', ], },
-            //geometry: {type: 'MultiPoint', coordinates: [   ,  ]},   //lng,lat
-            //properties: {title:" ", description:'Vienna<br>1876'},
-            //googlehtz:0, //search: "   " AND " " [02-Oct-21]  
-            //refs:"<br> <br>",   
-            //jrnls:[" ",],
-            //imgName:"",//"<img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            //about:"",//<br><br><br>",
-            //URLs:"",//"<br><a href='https://en.wikipedia.org/wiki/ ' target='_blank' class='btn btn-secondary' role='button'>Wikipedia</a><br>",  //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
-            //acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-            //sound:"", examFav:"",
+            acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        },{
+            type:'Feature',    
+            ID:625, 
+            name:"Collard anastomosis",   
+            topic:["Oesophagogastric"],   
+            subtype:["Techniques",],   
+            who:"Jean-Marie Collard", whoSearch:[" ",],
+            where:"Brussels - Belgium", // whereSearch:[,],              
+            country:["Belgium"], when:"1998",  
+            disease:["Oesophageal cancer",],
+            ops:["Endoscopy", "Oesophagectomy", "Thoracotomy",],
+            opsSpec:"",//{' ': [' ', ], },
+            geometry: {type: 'MultiPoint', coordinates: [ 4.61563 , 50.66984 ]},   //lng,lat
+            properties: {title:"Collard anastomosis", description:'Louvain Medical School - Brussels<br>1998'},
+            googlehtz:467, //search: "Collard anastomosis" AND "Esophagus OR Oesophagus" [06-Feb-22]  
+            refs:"<br><p style='font-size: 20px'>Collard JM, Romagnoli R, Goncette L, Otte JB, Kestens PJ. Terminalized semimechanical side‐to‐side suture technique for cervical esophagogastrostomy.<i>Ann Thorac Surg</i>. 1998; 65: 814-817<br></p>",  
+            jrnls:["Ann Thorac Surg",],
+            imgName:"",//"<img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            about:"<br>A side‐to‐side anastomosis using a linear stapler.<br>",
+            URLs:"",//"<br><a href='https://en.wikipedia.org/wiki/ ' target='_blank' class='btn btn-secondary' role='button'>Wikipedia</a><br>",  //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> //https://pubmed.ncbi.nlm.nih.gov/9527220/
+            acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
             type:'Feature',
             ID:630, 
@@ -2861,34 +2857,34 @@
             opsSpec:"",//{'': ['', ],  },
             geometry: {type: 'MultiPoint', coordinates: [ -0.08691, 51.50336 ]}, //lng,lat
             properties: { title:"Inguinal ligament of Cooper", description:'London<br>1804'},
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
+            googlehtz:6300, //search: "Inguinal ligament of Cooper" [06-Feb-22]
             refs:"",   
             jrnls:"",//['',],
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Pectineal_ligament' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/911.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
             imgName:"",//"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"<br>The pectineal ligament.<br>", 
             acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
-        //},{
-            //type:'Feature',
-            //ID:675, 
-            //name:"Cooper's suspensory ligaments",      
-            //topic:["Breast"], 
-            //subtype:["Anatomy",], 
-            //who:"Astley Cooper", //whoSearch:["",],    
-            //where:"London", //whereSearch:["",], country:["UK"],          
-            //when:"1840",   
-            //disease:["", "",],
-            //ops:["", "",],
-            //opsSpec:{'': ['', ],  },
-            //geometry: {type: 'MultiPoint', coordinates: [ -0.086944, 51.503333 ]}, //lng,lat
-            //properties: { title:"Cooper's suspensory ligaments", description:'London<br>1840'},
-            //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            //refs:"",   
-            //jrnls:"",//['',],
-            //URLs:"<br><a href='https://en.wikipedia.org/wiki/Cooper%27s_ligaments' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/3342.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
-            //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            //about:"", 
-            //acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
+        },{
+            type:'Feature',
+            ID:675, 
+            name:"Cooper's suspensory ligaments",      
+            topic:["Breast"], 
+            subtype:["Anatomy",], 
+            who:"Astley Cooper", //whoSearch:["",],    
+            where:"London", //whereSearch:["",], country:["UK"],          
+            when:"1840",   
+            disease:["Breast cancer",],
+            ops:["Mastopexy", "Mastectomy",],
+            opsSpec:"",//{'': ['', ],  },
+            geometry: {type: 'MultiPoint', coordinates: [ -0.086944, 51.503333 ]}, //lng,lat
+            properties: { title:"Cooper's suspensory ligaments", description:'London<br>1840'},
+            googlehtz:1680, //search: "Cooper's suspensory ligaments", [06-Feb-22]
+            refs:"",   
+            jrnls:"",//['',],
+            URLs:"<br><a href='https://en.wikipedia.org/wiki/Cooper%27s_ligaments' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/3342.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
+            imgName:"",//"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            about:"",//<br><br>", 
+            acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         },{
             type:'Feature',
             ID:680, 
@@ -2941,12 +2937,12 @@
             who:"Ludwig Courvoisier",  whoSearch:["Ludwig Courvoisier",],  
             where:"Basel - Switzerland",whereSearch:["Basel, Switzerland",],        
             country:["Switzerland"], when:"1890", 
-            disease:["Pancreatic cancer",],
-            ops:"",//["",], 
+            disease:["Pancreatic cancer","Jaundice",],
+            ops:["ERCP", "Pancreatic resection",],
             opsSpec:"",//{'': ['', ],  },
             geometry: {type: 'MultiPoint', coordinates: [ 7.58314, 47.56093 ]},      //long,lat
             properties: {title:"Courvoisier's law", description:'Basel - Switzerland<br>1890'},
-            //googlehtz:0, //search: "  " AND "  " [02-Oct-21] 
+            googlehtz:10300, //search: "Courvoisier's law" AND "Jaundice" [06-Feb-22] 
             refs:"",   
             jrnls:"",//['',],
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -2956,7 +2952,7 @@
         },{
             type:'Feature',
             ID:710, 
-            name:"Cowden's disease",      
+            name:"Cowden syndrome",      
             topic:["Colorectal","Endocrine","Gynaecology","Plastics",],
             subtype:["Syndromes"],  
             who:"Kenneth Lloyd & Macey Dennis",    
@@ -2968,7 +2964,7 @@
                      'Endocrine': ['Thyroidectomy', ], },
             geometry: {type: 'MultiPoint', coordinates: [ -80.6572, 41.11386 ]},      //long,lat
             properties: {title:"Cowden's disease", description:'Youngstown - Ohio<br>1963'},
-            //googlehtz:0, //search: "   " AND " " [02-Oct-21]
+            googlehtz:284000, //search: "Cowden disease" OR "Cowden syndrome" [06-Feb-22]
             refs:"<br><p style='font-size: 20px'>Lloyd KM 2nd, Dennis M. Cowden's disease: A possible new symptom complex with multiple system involvement. <i>Ann Intern Med</i>. 1963; 58: 136-142.<br></p>",  
             jrnls:["Ann Intern Med",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/Cowden.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -2992,7 +2988,7 @@
             refs:"<br><p style='font-size: 20px'>Cox LJ, Schuessler RB, D'Agostino JH, et al. The surgical treatment of atrial fibrillation. III. Development of a definitive surgical procedure. <i>J Thorac Cardiovasc Surg</i>. 1991; 101(4): 569-583.<br></p>",  
             jrnls:["J Thorac Cardiovasc Surg",],
             imgName:"",//"<img src=\"../static/assets/img/profiles/Cox.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            about:"",//<br><br><br>",
+            about:"",//<br>",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Cox_maze_procedure' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //no wni
             acknow:"", sound:"", examFav:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",       
         //},{
@@ -3021,7 +3017,7 @@
             topic:["HPB","Paediatrics","Transplant",],
             subtype:["Syndromes"],  
             who:"John Crigler & Victor Najjar",    
-            where:"Boston - Massachusetts - USA", whereSearch:["Boston, Massachusetts, USA",], 
+            where:"Boston - USA", whereSearch:["Boston, Massachusetts, USA",], 
             country:["USA"], when:"1952", 
             disease:["Jaundice",],  
             ops:["Liver transplant",],
@@ -3062,7 +3058,7 @@
             //topic:["Neurosurgery","Endocrine",], subtype:["Pathology",],
             //who:"AC Crooke", //whoSearch:["",], 
             //where:"London", whereSearch:[" ", " ",],               
-            //when:"1935",   
+            //country:["UK"], when:"1935",   
             //disease:["PitNET",],  
             //ops:"",//["",],
             //opsSpec:{'': ['', ], },
@@ -3072,7 +3068,7 @@
             //refs:"<br>Crooke AC. A change in the basophil cells of the pituitary gland common to conditions which exhibit the syndrome attributed to basophil adenomas. <i>J Pathol Bacteriol</i>. 1935; 41: 339-349<br>",   
             //jrnls:["J Pathol Bacteriol",],
             //imgName:"",//"<img src=\"../static/assets/img/profiles/" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            //about:"ACTH-secreting adenoma. Crooke's hyaline change",//<br><br><br>",
+            //about:"<br>ACTH-secreting adenoma. Crooke's hyaline change<br>",
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", no wiki,  //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             //acknow:"", sound:"", examFav:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         },{
@@ -3095,8 +3091,26 @@
             imgName:"",//"<img src=\"../static/assets/img/profiles/Cullen.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",//
             acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-       
-/// Curie (Ci). Pierre Currie. year 1910. wiki /Curie_(unit)
+        //},{
+            //type:'Feature',
+            //ID:745, 
+            //name:"Curie (Ci)",      
+            //topic:[" "," ",], subtype:[" ",],
+            //who:"Pierre Currie", //whoSearch:["",], 
+            //where:" ", whereSearch:[" ", " ",],               
+            //when:"1910",   
+            //disease:[" ",],  
+            //ops:"",//["",],
+            //opsSpec:{'': ['', ], },
+            //geometry: {type: 'MultiPoint', coordinates:[  , ]}, //lng,lat
+            //properties: { title:" ", description:' <br>1910'}, 
+            //googlehtz: 0, //search: " " AND " " [02-Oct-21]
+            //refs:"",//"<br><i></i><br>",   
+            //jrnls:"",//["",],
+            //imgName:"",//"<img src=\"../static/assets/img/profiles/" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
+            //about:"<br><br>",
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/Curie_(unit)' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>", no wiki,  //<a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
+            //acknow:"", sound:"", examFav:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
        
         },{
             type:'Feature',
@@ -3124,7 +3138,7 @@
             name:"Cushing's disease",      
             topic:["Endocrine","Neurosurgery",], subtype:["Pathology",],
             who:"Harvey Cushing", whoSearch:["Harvey Cushing",], 
-            where:"Boston - Massachusetts - USA",  
+            where:"Boston - USA",  
             country:["USA"], when:"1932",
             disease:["Hypertension", "Obesity", "Pituitary disease"],  
             ops:["Transsphenoidal pituitary surgery",],
@@ -3146,7 +3160,7 @@
             subtype:["Syndromes",], 
             who:"Harvey Cushing",  
             whoSearch:["Harvey Cushing",],  
-            where:"Boston - Massachusetts - USA",//  whereSearch:["",], 
+            where:"Boston - USA",//  whereSearch:["",], 
             country:["USA"], when:"1932", 
             disease:["Adrenal gland tumour",],  
             ops:["Adrenalectomy",],     
@@ -3169,7 +3183,7 @@
             subtype:["Pathology",], 
             who:"Harvey Cushing",  
             whoSearch:["Harvey Cushing",],  
-            where:"Boston - Massachusetts - USA",//  whereSearch:["",], 
+            where:"Boston - USA",//  whereSearch:["",], 
             country:["USA"], when:"1932", 
             disease:["Abdominal pain","Peptic ulcer disease",],  
             ops:["Endoscopy", "Perforated ulcer repair",],   
@@ -6370,6 +6384,8 @@
             //sound:"", examFav:"", 
 
 // LLLLLLLLLLLLLLLLLLLLLLLL //////////
+
+/// Lachman test.  Ortho
        
         },{
             type:'Feature',
@@ -6763,7 +6779,7 @@
             subtype:["Anatomy",], 
             who:"Fred Lund",  
             whoSearch:["Fred Lund",],  
-            where:"Boston - Massachusetts - USA",         
+            where:"Boston - USA",         
             whereSearch:["Boston, Massachusetts, USA", "Massachusetts", "USA",],           
             country:["USA"], when:"1930",   
             disease:["Cholecystitis","Gallbladder cancer",],  
@@ -6787,7 +6803,7 @@
             subtype:["Equipment",], 
             who:"Charles Lund & NC Browder",  
             whoSearch:["Charles Lund", "NC Browder",],          
-            where:"Boston - Massachusetts - USA",  whereSearch:["Boston, Massachusetts, USA",],              
+            where:"Boston - USA",  whereSearch:["Boston, Massachusetts, USA",],              
             country:["USA"], when:"1944",   
             disease:["Burns",],  
             ops:"",//["",],
@@ -6936,7 +6952,7 @@
             name:"Mallampati score",     
             topic:["Anaesthetics","ENT",], subtype:["Scores",], 
             who:"S Rao Mallampati", whoSearch:["S Rao Mallampati",],           
-            where:"Boston - Massachusetts - USA",    
+            where:"Boston - USA",    
             whereSearch:["Boston, Massachusetts, USA", "Massachusetts", "USA",],              
             country:["USA"], when:"1985",   
             disease:["Airway obstruction",], 
@@ -6959,7 +6975,7 @@
             subtype:["Syndromes",],   
             who:"Kenneth Mallory & Soma Weiss",   
             whoSearch:["Kenneth Mallory", "Soma Weiss",],
-            where:"Boston - Massachusetts - USA",   
+            where:"Boston - USA",   
             whereSearch:["Boston, Massachusetts, USA", "Massachusetts", "USA",],                  
             country:["USA"], when:"1929",   
             disease:["Alcohol dependence","Anaemia","GI bleeding","Hypovolaemia","Shock",],  
@@ -7277,6 +7293,9 @@
             about:"",
             URLs:"",//wiki-Y/N, //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             acknow:"", sound:"", examFav:"",//<br><br><br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+        
+/// McMurray test. Orthopaedics
+        
         },{
             type:'Feature',
             ID:4560, 
@@ -7718,7 +7737,7 @@
             topic:["Endocrine","Neurosurgery",], 
             subtype:["Syndromes",], 
             who:"Don Nelson", //whoSearch:[" ",],    
-            where:"Boston - Massachusetts - USA", //whereSearch:["",],           
+            where:"Boston - USA", //whereSearch:["",],           
             country:["USA"], when:"1958",   
             disease:["Pituitary disease",],
             ops:["Adrenalectomy",  "Transsphenoidal pituitary surgery",],
@@ -7807,7 +7826,7 @@
             where:"Oxford - England - UK", //whereSearch:["  ",],                 
             when:"2018",   
             disease:["GI bleeding","Haemorrhage","Shock",],
-            ops:["Colectomy","Stoma",], 
+            ops:["Colectomy",], 
             opsSpec:"",//{'Endocrine': ['',], },
             geometry: { type: 'MultiPoint', coordinates: [ -1.21878, 51.76398 ]}, //long,lat
             properties: { title:"Oakland bleeding score", description:'Oxford - England<br>2018'}, 
@@ -8020,7 +8039,7 @@
             topic:["General Surgery","HPB","Oesophagogastric",],  
             subtype:["Pathology"],
             who:"Alwin Pappenheimer Jr.", whoSearch:["Alwin M Pappenheimer",],  
-            where:"Boston - Massachusetts - USA", whereSearch:["Boston, Massachusetts, USA",],
+            where:"Boston - USA", whereSearch:["Boston, Massachusetts, USA",],
             country:["USA"], when:"1944",   
             disease:["Asplenia",],  
             ops:["Splenectomy",],
