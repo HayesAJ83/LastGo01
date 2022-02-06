@@ -11982,8 +11982,8 @@
         
         <script>
     /// Section - A to Z ///
-        $(document)
-        .ready(function() {
+        //$(document)
+        //.ready(function() {
         let result1 = eponyms.features
             .flatMap(item => item.topic)
             .filter((item, i, arr) => arr.indexOf(item) === i)
@@ -11997,16 +11997,16 @@
                 el.value = opt;
                 //select_A2Z.appendChild(el);
                 }
-            });
+            //});
 
-        $(document)
-        .ready(function() {
+        //$(document)
+        //.ready(function() {
             $('#select_A2Z').ready(function() {
                 let value = '\'' + $('#select_A2Z option').map(function() {
                         return this.text}).get().join('\',\'') + '\'';
                 var stringArray = (new Function("return [" + value + "];")());
             });
-        });
+        //});
 
         $(document)
         .ready(function() {
