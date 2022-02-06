@@ -11988,20 +11988,18 @@
             let resultsort1 = result1.sort()
             var select_A2Z = document.getElementById("select_A2Z");
             var options = resultsort1;
-            for(var i = 0; i < options.length; i++) {
-                var opt = options[i];
-                var el = document.createElement("option");
-                el.textContent = opt;
-                el.value = opt;
-                }
+            for(var i = 0; i < options.length; i++) 
+                {   var opt = options[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;  }
         
         $('#select_A2Z').ready(function() {
             let value = '\'' + $('#select_A2Z option').map(function() {
                     return this.text}).get().join('\',\'') + '\'';
             var stringArray = (new Function("return [" + value + "];")());
-        });
+            });
 
-        //(document).ready(function() {
         var selected_A2Z = eponyms.features
         function populateSelect() {
             var ele_A2Z = document.getElementById('sel_A2Z');
@@ -12009,7 +12007,6 @@
                 ele_A2Z.innerHTML += '<option value="' + b.ID + '">' + b['name'] + '</option>';})
             }
         populateSelect()
-        //});
        
        // var audio = document.getElementById('audio');
        // function play() {
@@ -12019,8 +12016,7 @@
     /// Section - A to Z
         
     /// Section - Specialties ///
-            $(document)
-            .ready(function() {
+            //$(document).ready(function() {
             const returnedData2 = $.grep(eponyms.features, function(element, index) {
                 return (element.topic !== "");
                 });  /// DROP those WITHOUT topic
@@ -12038,7 +12034,7 @@
                     el1.value = opt1;
                     selectSubtypes.appendChild(el1);    
                 }
-            });
+            //});
 
             $(document)
             .ready(function() {
@@ -12087,7 +12083,6 @@
     /// End Section - Specialties ///
 
     /// Section - Operations ///
-
         $(document)
             .ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
