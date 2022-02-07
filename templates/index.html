@@ -12136,48 +12136,49 @@
                 selectSubtypes.appendChild(el1);    
             }
     
-        $('#select_specialties').ready(function() {
-            let value = '\'' + $('#select_specialties option').map(function() {
-                    return this.text}).get().join('\',\'') + '\'';
-            var stringArray = (new Function("return [" + value + "];")());
-        });
-        /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
+            //$(document).ready(function() {
+            $('#select_specialties').ready(function() {
+                let value = '\'' + $('#select_specialties option').map(function() {
+                        return this.text}).get().join('\',\'') + '\'';
+                var stringArray = (new Function("return [" + value + "];")());
+            });
+            //});   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
 
-        $('#sel_specialties').on('change', function() {
-            $('#select5').fadeIn(50);
-            let select ="";
-            $("#sel_specialties").find('option:selected').each(function() {
-                select += "\'" + $.trim($(this).text()) + "\',";});
-                if(select != ""){select = select.substr(0);};
-            var stringArray = (new Function("return [" + select + "];")());
-            
-            function topicFilter2(taxonomy) {
-                const returnedData = $.grep(eponyms.features, function(element, index) {
-                    return (element.topic !== "");
-                    });
-                taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
-                return returnedData.filter(item => {
-                    let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
-                    return taxonomy.some(med => topic.includes(med));
-                    });
-                }
-            
-            var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
-
-            function populateSelect2() {
-                document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
-                    options += `<option value="${ID}">${name}</option>`,
-                    '<option value=""> -- select -- </option>'
-                    );
-                }
-        
-            populateSelect2()
-            $('#sel9').selectpicker('refresh');
             $('#sel_specialties').on('change', function() {
-                $('#sel_specialties').selectpicker('toggle'); //added to toggle open/close
+                $('#select5').fadeIn(50);
+                let select ="";
+                $("#sel_specialties").find('option:selected').each(function() {
+                    select += "\'" + $.trim($(this).text()) + "\',";});
+                    if(select != ""){select = select.substr(0);};
+                var stringArray = (new Function("return [" + select + "];")());
+                
+                function topicFilter2(taxonomy) {
+                    const returnedData = $.grep(eponyms.features, function(element, index) {
+                        return (element.topic !== "");
+                        });
+                    taxonomy = Array.isArray(taxonomy) ? taxonomy : [taxonomy];
+                    return returnedData.filter(item => {
+                        let topic = Array.isArray(item.topic) ? item.topic : [item.topic];
+                        return taxonomy.some(med => topic.includes(med));
+                        });
+                    }
+                
+                var selected2 = topicFilter2(stringArray); //works for stringArray no brackets
+
+                function populateSelect2() {
+                    document.getElementById('sel9').innerHTML = selected2.reduce((options, {ID,name}) =>
+                        options += `<option value="${ID}">${name}</option>`,
+                        '<option value=""> -- select -- </option>'
+                        );
+                    }
+            
+                populateSelect2()
                 $('#sel9').selectpicker('refresh');
-                });
-        });
+                $('#sel_specialties').on('change', function() {
+                    $('#sel_specialties').selectpicker('toggle'); //added to toggle open/close
+                    $('#sel9').selectpicker('refresh');
+                    });
+            });
     /// End Section - Specialties ///
 
     /// Section - Operations ///
@@ -12221,13 +12222,13 @@
                     }
             });
 
-            
+            //$(document).ready(function() {
                 $('#select_ops').ready(function() {
                     let value = '\'' + $('#select_ops option').map(function() {
                             return this.text}).get().join('\',\'') + '\'';
                     var stringArray = (new Function("return [" + value + "];")());
                 });
-            
+            //});
 
             $('#sel_ops').on('change', function() {
                 $('#select15').fadeIn(500);
