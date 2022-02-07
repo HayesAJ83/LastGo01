@@ -1097,7 +1097,7 @@
         },{
             type:'Feature',
             ID:122, 
-            name:"Bailey & Love's short practice of surgery",      
+            name:"Bailey & Love's texbook",      
             topic:["Academic", "General Surgery",], 
             subtype:["Textbooks",], 
             who:"Hamilton Bailey & Robert Love", //whoSearch:[" ",],    
@@ -1112,7 +1112,7 @@
             jrnls:"",//["",]
             URLs:"",//"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>   //Henry_Hamilton_Bailey   //Robert Love - Aubiturary https://livesonline.rcseng.ac.uk/client/en_GB/lives/search/detailnonmodal/ent:$002f$002fSD_ASSET$002f0$002fSD_ASSET:378880/one?qu=%22rcs%3A+E006697%22&rt=false%7C%7C%7CIDENTIFIER%7C%7C%7CResource+Identifier
             imgName:"",//"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            about:"", 
+            about:"<br>Bailey & Love's short practice of surgery<br>", 
             acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         },{
             type:'Feature',
@@ -12074,14 +12074,13 @@
                 selectSubtypes.appendChild(el1);    
             }
     
-            $(document)
-            .ready(function() {
-                $('#select_specialties').ready(function() {
-                    let value = '\'' + $('#select_specialties option').map(function() {
-                            return this.text}).get().join('\',\'') + '\'';
-                    var stringArray = (new Function("return [" + value + "];")());
-                });
-            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
+            //$(document).ready(function() {
+            $('#select_specialties').ready(function() {
+                let value = '\'' + $('#select_specialties option').map(function() {
+                        return this.text}).get().join('\',\'') + '\'';
+                var stringArray = (new Function("return [" + value + "];")());
+            });
+            //});   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
 
             $('#sel_specialties').on('change', function() {
                 $('#select5').fadeIn(50);
@@ -12121,7 +12120,7 @@
     /// End Section - Specialties ///
 
     /// Section - Operations ///
-        $(document).ready(function() {
+        //$(document).ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
                 return (element.ops !== "");
                 }); 
@@ -12138,7 +12137,7 @@
                     el.textContent = opt;
                     el.value = opt;
                     }
-            });
+        //});
      
             $(document)
             .ready(function() {
