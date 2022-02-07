@@ -12136,13 +12136,14 @@
                 selectSubtypes.appendChild(el1);    
             }
     
-            //$(document).ready(function() {
-            $('#select_specialties').ready(function() {
-                let value = '\'' + $('#select_specialties option').map(function() {
-                        return this.text}).get().join('\',\'') + '\'';
-                var stringArray = (new Function("return [" + value + "];")());
-            });
-            //});   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
+            $(document)
+            .ready(function() {
+                $('#select_specialties').ready(function() {
+                    let value = '\'' + $('#select_specialties option').map(function() {
+                            return this.text}).get().join('\',\'') + '\'';
+                    var stringArray = (new Function("return [" + value + "];")());
+                });
+            });   /// Generates all the select1 [specialties] options (eg. 'COLORECTAL')
 
             $('#sel_specialties').on('change', function() {
                 $('#select5').fadeIn(50);
