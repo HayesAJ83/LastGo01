@@ -591,15 +591,15 @@
             //name:"Abbey pain scale",      
             //topic:["Anaesthetics"], 
             //subtype:["",], 
-            //who:"", whoSearch:[" ",],    
-            //where:"", whereSearch:["",],           
-            //when:"",   
+            //who:"Jennifer Abbey", whoSearch:[" ",],    
+            //where:"Queensland - Australia", whereSearch:["",],           
+            //country:["Australia"], when:"",   
             //disease:["",],
             //ops:["",],
             //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
             //properties: { title:"Abbey pain scale", description:' <br> '},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            //refs:"",   
+            //refs:"",  // The Abbey pain scale: a 1-minute numerical indicator for people with end-stage dementia 
             //jrnls:"",//["",]
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
@@ -934,23 +934,23 @@
             URLs:"",//"<br><a href='#www.google.co.uk' class='btn btn-outline-primary' role='button'>original paper</a><br>", //  //no WNI   Apley_grind_test
         //},{
             //type:'Feature',
-            //ID:, 
+            //ID:98, 
             //name:"Apley's textbook",      
-            //topic:[""], 
+            //topic:["Orthopaedics",], 
             //subtype:["Textbooks",], 
-            //who:"", whoSearch:[" ",],    
-            //where:"", whereSearch:["",],           
-            //when:"",   
+            //who:"Graham Apley", whoSearch:[" ",],    
+            //where:"Surrey - UK", whereSearch:["",],           
+            //country:["UK"], when:"1959",   
             //disease:["",],
             //ops:["",],
-            //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
-            //properties: { title:"", description:' <br> '},
+            //geometry: {type: 'MultiPoint', coordinates: [ -0.60619 , 51.30791 ]}, //lng,lat
+            //properties: { title:"Apley's textbook", description:'Rowley Bristow Orthopaedic Hospital<br>1959'},
             //googlehtz:0, //search: " " AND " " [02-Oct-21]
-            //refs:"",   
+            //refs:"",   // A System of Orthopaedics and Fractures. London: Butterworth & Co. (Publishers) Ltd.
             //jrnls:"",//["",]
             //URLs:"<br><a href='https://en.wikipedia.org/wiki/' target='_blank' class='btn btn-info' role='button'>wikipedia</a><br>",  //no wni <a href='' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a>
             //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            //about:"", 
+            //about:"<br>Apley's system of Orthopaedics and Fractures<br>", 
             //acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
         },{ 
             type:'Feature',
@@ -997,7 +997,7 @@
             acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
         //},{
             //type:'Feature',
-            //ID:, 
+            //ID:108, 
             //name:"Argyle shunt",      
             //topic:[""], 
             //subtype:["",], 
@@ -12083,7 +12083,7 @@
 
         
         <script>
-    /// Section - A to Z ///
+        /// Section - A to Z ///
         let result1 = eponyms.features
             .flatMap(item => item.topic)
             .filter((item, i, arr) => arr.indexOf(item) === i)
@@ -12110,14 +12110,14 @@
             }
         populateSelect()
        
-       // var audio = document.getElementById('audio');
-       // function play() {
-       //     audio.play();
-       // }
+        // var audio = document.getElementById('audio');
+        // function play() {
+        //     audio.play();
+        // }
 
-    /// Section - A to Z
+        /// Section - A to Z
         
-    /// Section - Specialties ///
+        /// Section - Specialties ///
         const returnedData2 = $.grep(eponyms.features, function(element, index) {
             return (element.topic !== "");
             });  /// DROP those WITHOUT topic
@@ -12180,9 +12180,11 @@
                     $('#sel9').selectpicker('refresh');
                     });
             });
-    /// End Section - Specialties ///
+        /// End Section - Specialties ///
+        </script>
 
-    /// Section - Operations ///
+        <script>
+        /// Section - Operations ///
         $(document).ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
                 return (element.ops !== "");
