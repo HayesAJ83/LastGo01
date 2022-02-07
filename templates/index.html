@@ -12185,7 +12185,7 @@
 
         <script>
         /// Section - Operations ///
-        $(document).ready(function() {
+        //$(document).ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
                 return (element.ops !== "");
                 }); 
@@ -12202,10 +12202,9 @@
                     el.textContent = opt;
                     el.value = opt;
                     }
-            });
+            //});
      
-            $(document)
-            .ready(function() {
+            //$(document).ready(function() {
             const returnedData = $.grep(eponyms.features, function(element, index) {
                 return (element.ops !== "");
                 }); 
@@ -12223,7 +12222,7 @@
                     el1.value = opt1;
                     selectOps.appendChild(el1);
                     }
-            });
+            //});
 
             //$(document).ready(function() {
                 $('#select_ops').ready(function() {
