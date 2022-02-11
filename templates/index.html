@@ -171,6 +171,7 @@
                                         <option value=""> Search... </option>
                                 </select>
                                 <P class="lead" id='imgName_A2Z'></P>
+                                <P class="lead" id='Sound_A2Z'></P>
                                 <p class="lead" id="info_A2Z"></p>
                                 <!--<audio id="audio"></audio>
                                 <input data-style="btn-primary" onclick="play(this.value)">-->
@@ -888,7 +889,8 @@
             about:"<b><p style='font-size: 20px'>An inguinal hernia in which the appendix is contained within the herniating sac</b>.<br><br>Claudius Amyand reported the case of an 11 year old boy who presented to St. George's Hospital (near Hyde Park Corner at that time) with a discharging fistula between the scrotum and right thigh. <br><br>He describes amputating the perforated appendix by securing a ligature around healthy part of the proximal appendix, and leaving a stump which was returned to the abdomen. The hernia sac was excised, and the fistulous tract was debrided and left open to drain.</p>", 
             URLs:"<br><a href='https://royalsocietypublishing.org/doi/pdf/10.1098/rstl.1735.0071' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://en.wikipedia.org/wiki/Amyand%27s_hernia' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2689.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             acknow:"<p style='font-size: 14px'><i><br>Thanks to Mr Alastair Hayes FRCSEd who contributed the above information.<i></p>",
-            sound:"<audio id='audio' src='https://app.box.com/shared/static/j9jix5nhuddqfiw4zq7390ob7y9asl7f.mp3'></audio><br><input value='Amyand Hernia'>", 
+            sound:"<button id='play'>Healing_02.mp3</button><br><audio id='audio' preload='auto src='http://www.sousound.com/music/healing/healing_02.mp3'>",
+                //sound:"<audio id='audio' src='https://app.box.com/shared/static/j9jix5nhuddqfiw4zq7390ob7y9asl7f.mp3'></audio><br><input value='Amyand Hernia'>", 
             examFav:["General Surgery"],
         },{ 
             type:'Feature',
@@ -1256,24 +1258,23 @@
             //type:'Feature',    
             //ID:175, 
             //name:"Barton's fracture",      
-            //topic:[" "],  
-            //subtype:[" ",],
-            //who:" ",  //whoSearch:["",],  
-            //where:"",                    
-            //whereSearch:[" ",], 
-            //when:"1678",
+            //topic:["Orthopaedics"],  
+            //subtype:["Pathology",],
+            //who:"John Rhea Barton",  //whoSearch:["",],  
+            //where:" ",  //whereSearch:[" ",], 
+            //when:"1838",
             //disease:"",//[""],
             //ops:"",//["",],
             //opsSpec:{' ': [' ',],},  
             //geometry: {type: 'MultiPoint', coordinates: [  ,  ]},     //long,lat
-            //properties: {title:"", description:'  -  <br> '},  
+            //properties: {title:"Barton's fracture", description:'<br>1838'},  
             //googlehtz: 0, //search: " " AND " " [02-Oct-21]
             //refs:"<br><br>",   
             //jrnls:"",//['',], n/a
             //imgName:"",
             //about:"",//Wrist fracture.
             //acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
-            //URLs:"<br><a href='https://en.wikipedia.org/wiki/Major_sublingual_duct' target='_blank' class='btn btn-secondary' role='button'>Wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/3319.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
+            //URLs:"<br><a href='https://en.wikipedia.org/wiki/Barton's_fracture' target='_blank' class='btn btn-secondary' role='button'>Wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/3319.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
         },{
             type:'Feature',
             ID:180, 
@@ -1492,7 +1493,7 @@
             //type:'Feature',
             //ID:, 
             //name:"Bell's palsy",      
-            //topic:["Neurosurgery","Plastics",], 
+            //topic:["Neurosurgery", "Plastics",], 
             //subtype:["",], 
             //who:"Charles Bell", //whoSearch:["   ",],    
             //where:"", whereSearch:["",],           
@@ -1581,11 +1582,11 @@
             who:"Hugh Bentall", whoSearch:["Hugh Bentall",],
             where:"London - England", whereSearch:["London, England, UK",],    
             country:["UK"], when:"1968",
-            disease:["Aortic root disease", "Marfan's syndrome",],   
+            disease:["Aortic root disease",],   
             ops:["Aortic surgery", "Cardiac valve surgery",],   
             opsSpec:{'Cardiothoracics': ['Aortic surgery', 'Cardiac valve surgery',],
                      'Vascular': ['Aortic surgery',],  },
-            geometry: {type: 'MultiPoint', coordinates: [ -0.2369, 51.5163 ]},    //long,lat
+            geometry: {type: 'MultiPoint', coordinates: [ -0.2369 , 51.5163 ]},    //long,lat
             properties: {title:"Bentall procedure", description:'London<br>1968'}, 
             googlehtz:77000, //search: ""Bentall procedure" AND "Heart"" [31-Jan-22]
             refs:"<br><p style='font-size: 20px'>Bentall H, De Bono A. A technique for complete replacement of the ascending aorta. <i>Thorax</i>. 1968; 23(4): 338-339<br></p>", 
@@ -3339,7 +3340,7 @@
             //googlehtz:0, //search: "  " AND "  " [02-Oct-21]
             refs:"<br><p style='font-size: 20px'>Crohn BB, Ginzburg L, Oppenheimer GD. Regional ileitis. A pathological and clinical entity. <i>JAMA</i>. 1932; 99: 1323-1329<br></p>",   
             jrnls:["JAMA",],
-            imgName:"<br><img src=\"../static/assets/img/profiles/Burrill_Bernard_Crohn.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10x'><i><br>This image was sourced from <a href='https://pubs.rsna.org/doi/10.1148/rg.262055130' target='_blank'>Radiological Society of North America</a><i>.</p>",
+            imgName:"<br><img src=\"../static/assets/img/profiles/Burrill_Bernard_Crohn.png\" class=\"card-img\" style=\"width:12rem;\"><p style='font-size: 10px'><i><br>This image was sourced from <a href='https://pubs.rsna.org/doi/10.1148/rg.262055130' target='_blank'>Radiological Society of North America</a><i>.</p>",
             about:"", 
             URLs:"<br><a href='https://jamanetwork.com/journals/jama/article-abstract/286298' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://en.wikipedia.org/wiki/Crohn%27s_disease' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/1397.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>",
             acknow:"", sound:"", examFav:"",  //fair use
@@ -5337,6 +5338,9 @@
             //imgName:"<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             //about:"MEN2B", 
             //acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",    
+        
+/// Grabb & Smith's Plastic Surgery
+
         //},{
             //type:'Feature',
             //ID:2340, 
@@ -5382,6 +5386,9 @@
             imgName:"",//"<img src=\"../static/assets/img/profiles/profile-03.jpg\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
             about:"",
             acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>", 
+      
+/// Grant's atlas
+
         //},{
             //type:'Feature',
             //ID:2380, 
@@ -5426,6 +5433,9 @@
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Graves%27_disease' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://icd.who.int/browse11/l-m/en#/http://id.who.int/icd/entity/713028385' target='_blank' class='btn btn-dark' role='button'>ICD11 - 5A02.0</a> <br>", //no wni 
             acknow:"", sound:"", examFav:"",//<hr class='my-4'><p style='font-size: 16px'><i>The image of Graves was sourced from Wikipedia and is licenced under <a href='https://creativecommons.org/licenses/by-sa/4.0/' target='_blank'>CC BY-SA 4.0</a>.<i></p>", 
+       
+/// Greenberg's handbook of neurosurgery. 1990. Cincinnati Ohio.
+
         },{
             type:'Feature',
             ID:2420, 
@@ -9933,6 +9943,8 @@
         
 /// SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS /// 
 
+/// Sabiston's textbook of surgery. 1936.
+
         },{   
             type:'Feature',
             ID:6060, 
@@ -10082,6 +10094,7 @@
             acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>", 
        
 /// Scheuermann's disease. Spine. wiki /Scheuermann's_disease
+/// Schein's common sense emergency abdominal surgery. 
        
         //},{
             //type:'Feature',
@@ -10411,6 +10424,9 @@
             about:"",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Snellen_chart' target='_blank' class='btn btn-info' role='button'>wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2339.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",
+      
+/// Snell's clinical neuroanatomy
+
         //},{
             //type:'Feature',
             //ID:6490, 
@@ -11630,6 +11646,9 @@
             about:"<br>MEN1<br>",
             URLs:"<br><a href='https://en.wikipedia.org/wiki/Multiple_endocrine_neoplasia_type_1' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='https://www.whonamedit.com/synd.cfm/2959.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a><br>",
             acknow:"", sound:"", examFav:["General Surgery", "Neurosurgery",],
+      
+/// Wheeless' Textbook of Orthopaedics.
+      
         },{
             type:'Feature',
             ID:7560, 
@@ -11867,10 +11886,10 @@
             //ID:7800, 
             //name:"Woodruff's plexus",      
             //topic:["ENT",],  
-            //subtype:["Anatomy"],
-            //who:"Woodruff",   //    whoSearch:[" ",],
-            //where:"",  //    whereSearch:["",],               
-            //when:"",   
+            //subtype:["Anatomy",],
+            //who:"George H Woodruff",   //    whoSearch:[" ",],
+            //where:"Joliet - Illinois",  //    whereSearch:["",],               
+            //when:"1949",   
             //disease:["Epistaxis","Nosebleed",],  
             //geometry: { type: 'MultiPoint', coordinates: [ ,  ]}, //long,lat
             //properties: { title:"Woodruff's plexus", description:'<br>'},
@@ -12041,9 +12060,9 @@
             //type:'Feature',
             //ID:7980, 
             //name:"Zuckerkandl's retrorenal fascia",      
-            //topic:[""], 
-            //subtype:["",], 
-            //who:"Emil & Otto Zuckerkandl", whoSearch:["Emil Zuckerkandl",],    
+            //topic:["Urology"], 
+            //subtype:["Anatomy",], 
+            //who:"Emil & Otto Zuckerkandl", //whoSearch:["Emil Zuckerkandl",],    
             //where:"Vienna", whereSearch:["",],           
             //when:"1883",   
             //disease:[" ", " ",],
@@ -12061,12 +12080,12 @@
             //type:'Feature',
             //ID:8000, 
             //name:"Tubercle of Zuckerkandl",      
-            //topic:[""], 
-            //subtype:["",], 
+            //topic:["Endocrine"], 
+            //subtype:["Anatomy",], 
             //who:"Emil Zuckerkandl", whoSearch:["Emil Zuckerkandl",],    
             //where:"Vienna", whereSearch:["",],           
             //when:" ",   
-            //disease:[" ", " ",],
+            //disease:"",//[" ", " ",],
             //ops:["Thyroidectomy", "Parathyroidectomy",],
             //geometry: {type: 'MultiPoint', coordinates: [   ,  ]}, //lng,lat
             //properties: { title:"", description:'Vienna<br> '},
@@ -12618,6 +12637,18 @@
         </script>  
 
         <script>
+            var playBtn = document.getElementById('play');
+            var stopBtn = document.getElementById('stop');
+
+            var playSound = function() {
+                audio.play();
+            };
+
+            playBtn.addEventListener('click', playSound, false);
+            stopBtn.addEventListener('click', function(){audio.pause()}, false);
+        </script>
+
+        <script>
             function show(id) {   
                 var imgName = document.getElementById('imgName_A2Z');
                 if (!id) {imgName.innerHTML = "";
@@ -12626,6 +12657,15 @@
                     if  (Number(id) === eponyms.features[i].ID) {
                         imgName.innerHTML = eponyms.features[i].imgName
                                                 ;}}}
+
+                var Sound = document.getElementById('Sound_A2Z');
+                if (!id) {Sound.innerHTML = "";
+                } else {
+                    for (var i = 0; i < eponyms.features.length; i++) {
+                    if  (Number(id) === eponyms.features[i].ID) {
+                        Sound.innerHTML = eponyms.features[i].Sound
+                                                ;}}}
+
 
                 var info = document.getElementById('info_A2Z');
                 if (!id) {info.innerHTML = "";
