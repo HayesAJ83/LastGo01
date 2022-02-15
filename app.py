@@ -8,6 +8,9 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/beta', methods=['GET', 'POST'])
+def beta():
+    return render_template('index_beta.html')
 
 #@app.route('/specialties', methods=['GET', 'POST'])
 #def specialties():
@@ -24,11 +27,9 @@ def index():
 #@app.route('/operations', methods=['GET', 'POST'])
 #def ops():
 #    return render_template('ops.html')
-
-
-@app.route('/maps', methods=['GET', 'POST'])
-def maps():
-    return render_template('maps.html')
+#@app.route('/maps', methods=['GET', 'POST'])
+#def maps():
+#    return render_template('maps.html')
 
 @app.route('/sitemap')
 def sitemap():
