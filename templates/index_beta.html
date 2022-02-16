@@ -557,6 +557,15 @@
        
 
         <script>
+            var countYz = $.ajax({
+                url: "https://gist.githubusercontent.com/HayesAJ83/LastGo01/static/database/kyCounties.geojson",
+                dataType: "json",
+                success: console.log("CountYz data successfully loaded!"),
+                error: function(xhr) {
+                    alert(xhr.statusText)
+                }
+            })
+
             var counties = $.ajax({
                 url: "https://gist.githubusercontent.com/maptastik/df8e483d5ac1c6cae3dc4a7c02ea9039/raw/9cd46849bddcfa90aab240772a12275408d6d8d0/kyCounties.geojson",
                 dataType: "json",
