@@ -1,21 +1,45 @@
-    {
-        "type":      "FeatureCollection",
-        "features":[{   
-        "type":       "Feature",
-        "ID":         1, 
-        "name":       "Aaron sign",                 
-        "topic":      ["General Surgery"],
-        "subtype":    ["Signs"],                  
-        "who":        "Charles Dettie Aaron",          
-        "where":      "Detroit - Michigan - USA",  
-        "opsSpec":    {"General Surgery": ["Appendicectomy"] },
-        "geometry":   {"type": "MultiPoint", "coordinates": [ -83.0571, 42.35211] },
-        "properties": {"title":"Aaron sign", "description":"Detroit<br>1913"},
-        "imgName":    "",
-        "about":      "<p style='font-size: 20px'>Aaron's sign, indicitive of chronic appendicitis, is demonstrated by prolonged firm pressure at McBurney's point which produces pain in the epigastric region. <br>Aaron describes his findings in four patients.<br></p>", 
-        "examFav":    "",
-        "URLs":       "<br><a href='https://jamanetwork.com/journals/jama/article-abstract/214191' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://en.wikipedia.org/wiki/Aaron%27s_sign' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='http://www.whonamedit.com/synd.cfm/341.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>"
-    }
+{"type": "FeatureCollection", "features":[
+{"type":"Feature",
+    "ID":         1,     
+    "name":       "Aaron sign",       
+    "topic":      ["General Surgery"],    
+    "subtype":    ["Signs"],           
+    "who":        "Charles Dettie Aaron",          
+    "where":      "Detroit - Michigan - USA",  
+    "opsSpec":    {"General Surgery": ["Appendicectomy"] },
+    "geometry":   {"type": "MultiPoint", "coordinates": [ -83.0571, 42.35211] },
+    "properties": {"title":"Aaron sign", "description":"Detroit<br>1913"},
+    "imgName":    "",
+    "about":      "<p style='font-size: 20px'>Aaron's sign, indicitive of chronic appendicitis, is demonstrated by prolonged firm pressure at McBurney's point which produces pain in the epigastric region. <br>Aaron describes his findings in four patients.<br></p>", 
+    "examFav":    "",
+    "URLs":       "<br><a href='https://jamanetwork.com/journals/jama/article-abstract/214191' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a> <a href='https://en.wikipedia.org/wiki/Aaron%27s_sign' target='_blank' class='btn btn-info' role='button'>Wikipedia</a> <a href='http://www.whonamedit.com/synd.cfm/341.html' target='_blank' class='btn btn-light' role='button'>Whonamedit?</a> <br>"
+},
+{"type":"Feature",
+    "ID":           10, 
+    "name":         "Akamizu's criteria",      
+    "topic":        ["Endocrine"], 
+    "subtype":      ["Scores"], 
+    "who":          "Takashi Akamizu",      "whoSearch":    ["Takashi Akamizu"],    
+    "where":        "Wakayama - Japan",     "whereSearch":  ["Japan"],           
+    "country":      ["Japan"], 
+    "when":         "2012",   
+    "disease":      ["Thyrotoxicosis"],
+    "ops":          ["Thyroidectomy"],
+    "opsSpec":      {"Endocrine":["Thyroidectomy"] },
+    "geometry":     {"type":    "MultiPoint",   "coordinates": [ 135.1824, 34.18827 ]},
+    "properties":   {"title":   "Akamizu's criteria", "description":"Wakayama Medical University<br>2012" },
+    "googlehtz":    5160, 
+    "search":       ["'akamizu' AND 'criteria' AND 'thyroid storm' [20-Dec-21]"],
+    "refs":         "<br><p style='font-size: 16px'>Akamizu T, Satoh T, Isozaki O, et al. Diagnostic criteria, clinical features, and incidence of thyroid storm based on nationwide surveys. <i>Thyroid</i>. 2012; 22(7): 661-679</p>",   
+    "jrnls":        ["Thyroid"], 
+    "URLs":         "<br><a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3387770/pdf/thy.2011.0334.pdf' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a><br>",
+    "imgName":      "",   
+    "about":        "<br><p style='font-size: 18px'>Akamizu's criteria refers to clinical features required for the diagnosis of a thyroid storm (TS)</b>.<br><br>The signs and symptoms are divided into central nervous system (CNS) manifestations and those that are not. The non-CNS signs and symptoms are <b>fever</b>, <b>tachycardia</b> (>130 bpm), <b>cardiac failure</b>, & <b>gastrointestinal-liver disturbance</b>.<br><br>A <b>definite thyrotoxic storm</b> requires elevation in blood thyroid hormone levels plus either: <br>1 feature of CNS disturbace + 1 non-CNS feature, <br><i>or</i> <br>3 non-CNS manifestations.<br><br>A <b>suspected thyrotoxic storm</b> requires the same criteria as those for defininte TS with the exception that there are no thyroid hormone results available, or there is no history of thyroid disease, exophthalmos or goitre.</p>", 
+    "acknow":       "", 
+    "sound":        "", 
+    "examFav":      "",
+    "notes":        "Alive - contact him to ask for picture"
+}
 
- ]}
+]}
 
