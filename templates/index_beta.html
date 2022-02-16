@@ -560,10 +560,8 @@
             var countYz = $.ajax({
                 url: "https://gist.githubusercontent.com/HayesAJ83/LastGo01/static/database/kyCounties.geojson",
                 dataType: "json",
-                success: console.log("CountYz data successfully loaded!"),
-                error: function(xhr) {
-                    alert(xhr.statusText)
-                }
+                success: console.log("CountYz data successfully loaded!!!"),
+                //error: function(xhr) { alert(xhr.statusText)}
             })
 
             var counties = $.ajax({
