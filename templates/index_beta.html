@@ -558,7 +558,7 @@
 
         <script>
             var countYz = $.ajax({
-                url: "https://gist.githubusercontent.com/HayesAJ83/LastGo01/static/database/eponyms.geojson",
+                url: "https://gist.githubusercontent.com/HayesAJ83/LastGo01/static/database/kyCounties.geojson",
                 dataType: "json",
                 success: console.log("Eponyms data successfully loaded!") 
                 //error: function(xhr) { alert(xhr.statusText)}
@@ -12770,15 +12770,15 @@
         </script>  
 
         <script>
-            var playBtn = document.getElementById('play');
-            var stopBtn = document.getElementById('stop');
+            //var playBtn = document.getElementById('play');
+            // stopBtn = document.getElementById('stop');
 
-            var playSound = function() {
-                audio.play();
-            };
+            //var playSound = function() {
+            //    audio.play();
+            //};
 
-            playBtn.addEventListener('click', playSound, false);
-            stopBtn.addEventListener('click', function(){audio.pause()}, false);
+            //playBtn.addEventListener('click', playSound, false);
+            //stopBtn.addEventListener('click', function(){audio.pause()}, false);
         </script>
 
         <script>
