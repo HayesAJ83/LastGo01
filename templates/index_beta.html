@@ -564,6 +564,9 @@
                 //error: function(xhr) { alert(xhr.statusText)}
             })
             //console.log(countYz)
+            $.when(countYz).done(function() {
+                console.log(JSON.stringify(countYz))
+            });
 
             var counties = $.ajax({
                 url: "https://gist.githubusercontent.com/maptastik/df8e483d5ac1c6cae3dc4a7c02ea9039/raw/9cd46849bddcfa90aab240772a12275408d6d8d0/kyCounties.geojson",
@@ -574,7 +577,7 @@
                 }
             })
             $.when(counties).done(function() {
-                console.log(JSON.stringify(counties))
+                //console.log(JSON.stringify(counties))
                 var map = L.map('map')
                     .setView([37.857507, -85.632935], 7);
     
