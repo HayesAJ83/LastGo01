@@ -574,7 +574,7 @@
                 }
             })
             $.when(counties).done(function() {
-                console.log(counties)
+                console.log(JSON.stringify(counties))
                 var map = L.map('map')
                     .setView([37.857507, -85.632935], 7);
     
