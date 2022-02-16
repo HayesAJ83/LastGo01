@@ -558,10 +558,9 @@
 
         <script>
             var countYz = $.ajax({
-                url: "https://gist.githubusercontent.com/HayesAJ83/LastGo01/static/database/kyCounties.geojson",
+                url: "https://gist.githubusercontent.com/HayesAJ83/LastGo01/static/database/eponyms.geojson",
                 headers: { 'Access-Control-Allow-Origin': 'https://www.surgicalnames.com' },
-                //dataType: "json",
-                dataType: "jsonp",
+                dataType: "json",
                 success: console.log("Eponyms data successfully loaded!"),
                 //error: function(xhr) { alert(xhr.statusText)}
             })
@@ -579,7 +578,7 @@
                 }
             })
             $.when(counties).done(function() {
-                //console.log(JSON.stringify(counties))
+                console.log(JSON.stringify(counties))
                 var map = L.map('map')
                     .setView([37.857507, -85.632935], 7);
     
@@ -689,7 +688,7 @@
             jrnls:["Thyroid",], 
             URLs:"<br><a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3387770/pdf/thy.2011.0334.pdf' target='_blank' class='btn btn-secondary' role='button'>Original Paper</a><br>", // no WNI
             imgName:"",// Alive - contact him to ask for picture "<br><img src=\"../static/assets/img/profiles/.png\" class=\"card-img\" style=\"width:12rem;\">", //temporary replacement
-            about:"<br><b><p style='font-size: 20px'>Akamizu's criteria refers to clinical features required for the diagnosis of a thyroid storm (TS)</b>.<br><br>The signs and symptoms are divided into central nervous system (CNS) manifestations and those that are not. The non-CNS signs and symptoms are <b>fever</b>, <b>tachycardia</b> (>130 bpm), <b>cardiac failure</b>, & <b>gastrointestinal-liver disturbance</b>.<br><br>A <b>definite thyrotoxic storm</b> requires elevation in blood thyroid hormone levels plus either: <br>1 feature of CNS disturbace + 1 non-CNS feature, <br><i>or</i> <br>3 non-CNS manifestations.<br><br>A <b>suspected thyrotoxic storm</b> requires the same criteria as those for defininte TS with the exception that there are no thyroid hormone results available, or there is no history of thyroid disease, exophthalmos or goitre.</p>", 
+            about:"<br><p style='font-size: 20px'>Akamizu's criteria refers to clinical features required for the diagnosis of a thyroid storm (TS)</b>.<br><br>The signs and symptoms are divided into central nervous system (CNS) manifestations and those that are not. The non-CNS signs and symptoms are <b>fever</b>, <b>tachycardia</b> (>130 bpm), <b>cardiac failure</b>, & <b>gastrointestinal-liver disturbance</b>.<br><br>A <b>definite thyrotoxic storm</b> requires elevation in blood thyroid hormone levels plus either: <br>1 feature of CNS disturbace + 1 non-CNS feature, <br><i>or</i> <br>3 non-CNS manifestations.<br><br>A <b>suspected thyrotoxic storm</b> requires the same criteria as those for defininte TS with the exception that there are no thyroid hormone results available, or there is no history of thyroid disease, exophthalmos or goitre.</p>", 
             acknow:"", sound:"", examFav:"",//<br><i>We kindly acknowledge Miss XX FRCS who contributed the above information.</i>",   
         },{ 
             type:'Feature',
