@@ -78,7 +78,7 @@
         <!-- max-width: 405px  -->
         <style>
             body { margin: 0; padding: 0; }
-            #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+            #map { position: absolute; top: 0; bottom: 0; max-width: 408px; }
             
             .mapboxgl-popup-content {
                 text-align: center;
@@ -553,16 +553,19 @@
         <!-- Load d3.js -->
         <script src="https://d3js.org/d3.v4.js"></script>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+       
+
         <script>
             var counties = $.ajax({
-              url:"https://gist.githubusercontent.com/maptastik/df8e483d5ac1c6cae3dc4a7c02ea9039/raw/9cd46849bddcfa90aab240772a12275408d6d8d0/kyCounties.geojson",
-              dataType: "json",
-              success: console.log("County data successfully loaded."),
-              error: function (xhr) {
-                alert(xhr.statusText)
-              }
+                url: "https://gist.githubusercontent.com/maptastik/df8e483d5ac1c6cae3dc4a7c02ea9039/raw/9cd46849bddcfa90aab240772a12275408d6d8d0/kyCounties.geojson",
+                dataType: "json",
+                success: console.log("County data successfully loaded."),
+                error: function(xhr) {
+                    alert(xhr.statusText)
+                }
             })
-            // Specify that this code should run once the county data request is complete
             $.when(counties).done(function() {
                 var map = L.map('map')
                     .setView([37.857507, -85.632935], 7);
@@ -572,9 +575,10 @@
                     subdomains: 'abcd',
                     maxZoom: 19
                 }).addTo(map);
+                // Add requested external GeoJSON to map
+                var kyCounties = L.geoJSON(counties.responseJSON).addTo(map);
             });
         </script>
-
 
         <!-- 
             Sound - Howler.js sound
