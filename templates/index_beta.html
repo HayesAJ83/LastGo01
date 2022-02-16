@@ -74,10 +74,11 @@
         <!-- Load the `mapbox-gl-geocoder` plugin. -->
         <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
         <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
-
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+        <!-- max-width: 405px  -->
         <style>
             body { margin: 0; padding: 0; }
-            #map { position: absolute; top: 0; bottom: 0; max-width: 405px; }
+            #map { position: absolute; top: 0; bottom: 0; width: 100%; }
             
             .mapboxgl-popup-content {
                 text-align: center;
@@ -443,6 +444,8 @@
                                 <p class="lead" id="msg3_map"></p>
                             </div>
                             <hr class='my-4'>
+                            <br>
+                            <div id="map"></div>
                         </div>
                     </div>
 
@@ -549,6 +552,28 @@
 
         <!-- Load d3.js -->
         <script src="https://d3js.org/d3.v4.js"></script>
+
+        <script>
+            var counties = $.ajax({
+              url:"https://gist.githubusercontent.com/maptastik/df8e483d5ac1c6cae3dc4a7c02ea9039/raw/9cd46849bddcfa90aab240772a12275408d6d8d0/kyCounties.geojson",
+              dataType: "json",
+              success: console.log("County data successfully loaded."),
+              error: function (xhr) {
+                alert(xhr.statusText)
+              }
+            })
+            // Specify that this code should run once the county data request is complete
+            $.when(counties).done(function() {
+                var map = L.map('map')
+                    .setView([37.857507, -85.632935], 7);
+    
+                var basemap = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+                    subdomains: 'abcd',
+                    maxZoom: 19
+                }).addTo(map);
+            });
+        </script>
 
 
         <!-- 
