@@ -559,8 +559,9 @@
         <script>
             var countYz = $.ajax({
                 url: "https://gist.githubusercontent.com/HayesAJ83/LastGo01/static/database/kyCounties.geojson",
-                headers: {  'Access-Control-Allow-Origin': 'https://www.surgicalnames.com' },
-                dataType: "json",
+                headers: { 'Access-Control-Allow-Origin': 'https://www.surgicalnames.com' },
+                //dataType: "json",
+                dataType: "jsonp",
                 success: console.log("Eponyms data successfully loaded!"),
                 //error: function(xhr) { alert(xhr.statusText)}
             })
